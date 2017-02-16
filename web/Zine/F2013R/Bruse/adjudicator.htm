@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<TITLE>DP F2013R: Creating an Adjudicator</TITLE>
+<!-- ---------------------Header---------------------------------- -->
+<!-- ------------------------------------------------------------- -->
+<!---- Authored by  ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Created on September 23, 2006 ---->
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton2.gif" align="left" border="0"></a>
+<a href="/Zine/F2013R/"><img src="/Zine/Common/toF2013R.gif" align="right" border="0"></a>
+<br clear="all">
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<CENTER>
+<H1>CREATING AN ADJUDICATOR</H1>
+<h2>by Martin Bruse</h2>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+</CENTER>
+<p>
+<TABLE WIDTH="95%" BORDER="0" ALIGN="CENTER">
+<TR>
+<TD ALIGN="JUSTIFY">
+<h2>Introduction</h2>
+<p>If you search the internet for <b>Diplomacy</b> adjudicators, you won’t find that many. You may find more than you expected, but many of them are in an unfinished state. They may not pass today’s standards when it comes to tests, or they simply don’t handle all the rules of the game.</p>
+<p>The bulk of the working and tested adjudicators I found were quite old, usually heavily tied in to a specific mode of access, such as email, and extremely complex code wise.</p>
+<p>Here, I will try to justify why I built one of my own (<strong><a href="https://github.com/zond/godip">https://github.com/zond/godip</a></strong>), as well as do my best to explain what it means and something about how I went about to get it done. It may or may not serve as help for others intending to do the same.</p>
+<h2>A Diplomacy adjudicator</h2>
+<p>My first impression of the inner workings of <b>Diplomacy</b> adjudicators was very wrong.</p>
+<p>I had the idea that board games are simple, at least when it comes to their rules and interpretation, compared to modern computer games. Making a chess playing program may be hard, but making a program that adjudicates chess shouldn’t be that hard &#8212; it just has to calculate what happens when you enter a certain move.</p>
+<p>Little did I know that when adjudicating <b>Diplomacy</b>, there are actually a slew of more or less tricky computer sciency problems you have to solve, and a very intricate network of interdependencies to get it to work as intended.
+You need to properly handle the fact that while a province may only contain one unit, this unit may be positioned by one of several coasts. In essence, the nodes of the map network are provinces, but the edges of the network don’t connect provinces, they connect coasts.</p>
+<p>On top of this messy data structure problem, you want to add some way to define variant rules. This makes it necessary to decide exactly how, and to what extent, variants can be allowed to differ from the original rules.
+Then come the types of units, and their relationship to different aspects of the map. What units can move along what routes or be contained by what provinces? And, of course, what variant support can you provide without completely exploding the level of complexity of the underlying map representation?</p>
+<p>Then, to top it all off, comes the actual adjudication. If you have tried to adjudicate <b>Diplomacy</b> by hand you know something of the dependencies inherent in the simultaneous adjudication of all the orders of a single movement phase.</p>
+<p>Much of the manual adjudication is based on rules of thumb, where everyone is aware of the common set of rules they are based on, and what to fall back on when the heuristics fail. But sometimes, you still reach situations where odd conflicts and paradoxes arise, and you focus a few minutes of intense speculation on the reasonable outcome of the situation in question.
+All of this combined makes a quite interesting software development problem.</p>
+<h2>Reasons</h2>
+<p>Why would anyone build a <b>Diplomacy</b> adjudicator? This is a valid question, as there already exists widely used, and reasonably bug-free, software that does basically the same thing.</p>
+<p>I have several answers.</p>
+<p>Firstly, I wanted something that would integrate seamlessly with <a href="http://golang.org/">my new favorite programming language: Go</a>. I also wanted something that wouldn’t require interfacing via strange network protocols or custom file formats. Last, but not least, I wanted something that I knew would pass all the modern day tests mentioned below.</p>
+<h2>Prior art</h2>
+<p>Before I started out actually writing my adjudicator, I studied existing ones extensively.</p>
+<p>I started out looking at the source code of <strong><a href="http://www.njudge.org/">njudge</a></strong>, but found that it was more or less impossible for me to understand what was happening in there.</p>
+<p>Fortunately, the DPjudge team have gracefully published <a href="http://www.floc.net/dpjudge/?page=Algorithm">their algorithm</a>, and even though I ended up not using that method, it was very educating. I found that all the states and exceptions in the procedure scared me, and I recalled when I built Droidippy and grubbed around in the source of <strong><a href="http://jdip.sourceforge.net/">jDip</a></strong> which used a similar algorithm, that the code for that kind of iterative algorithm could become horribly complex.</p>
+<p>So I started looking for alternatives, and stumbled upon <i><a href="/Zine/S2009M/Kruijswijk/DipMath_Chp1.htm">The Math of Adjudication</a></i> from this same zine, and immediately fell in love with the promised simplicity of the basic adjudication algorithm. I even found ruby-diplomacy and <a href="https://github.com/ruby-diplomacy/ruby-adjudicator">the underlying adjudicator</a>, which used the Kruijswijk algorithm to adjudicate, and I often went back to it when hunting bugs in my code.</p>
+<h2>Baby steps</h2>
+<p>As one could expect, when trying to implement a documented algorithm, I began by building the core functionality of the Kruijswijk algorithm: The resolve function. A simple enough matter, though some translation from C to Go was necessary.</p>
+<p>Problems began to arise when I started working on the different adjudication functions. There is one for each order (move, hold, support, et cetera), and they are supposed to completely encapsulate everything the order requires to resolve successfully. Sounds simple enough, but there are lots of caveats, from the relatively simple to more complex ones. An example of the simple ones is the fact that the adjudicate function must never directly adjudicate a dependent order, but instead call the resolve function, which in turn adjudicates dependent orders and keeps track of paradoxes and cycles. An example of a more complex requirement is the principle that the adjudicate function should not call resolve unnecessarily, because some order types will in those cases create dependency graphs unresolvable by the original algorithm.</p>
+<p>Nevertheless, I jumped right in and started implementing the bare bones of Hold and Move orders.</p>
+<p>To test the proper functioning of my algorithm and orders, however, I had to create some kind of test suite. Fortunately, someone had already been there and done that. The same Lucas Kruijswijk, who created the algorithm I was implementing, had already created <a href="http://web.inter.nl.net/users/L.B.Kruijswijk/">a fairly complete set of Diplomacy Adjudicator Test Cases, the DATC</a>.</p>
+<p>At the above address they are delivered in a somewhat machine-unfriendly format, but I knew that the jDip team, fortunately, had already created a nicely machine parseable format for all of the cases I wanted to implement (and more), so I just went and and implemented a simple parser for their DATC format.</p>
+<p>Suddenly I had a torrent of test errors.</p>
+<h2>Down the rabbit hole</h2>
+<p>Of course I had made many mistakes, everywhere from the intricacies of the Move order, to the simple elegance of the recursive resolve function. I learned a whole lot about the <b>Diplomacy</b> rules, about the causes for dependency paradoxes, and what the algorithm could and couldn’t do.</p>
+<p>I started a long email conversation with Lucas Kruijswijk, where he showed an impressive amount of patience guiding me through the errors in my reasoning and clarified how my implementation of certain order dependencies broke the basic requirements of his minimalistic and beautiful algorithm.</p>
+<p>The test cases began to pass, a few at a time. Often a fix of one test case would break another case, and many long evenings were spent hunting elusive bugs.</p>
+<p>After about a gazillion hours I was beginning to get the basic rules working. Non-paradoxical and common order combinations were resolved to the satisfaction of DATC, and I was getting close to complete DATC compliance.
+But some cases were still impossible to solve properly, and after talking about them with Lucas Kruijswijk we found that some odd cases were not perfectly resolved by the Kruijswijk algorithm.</p>
+<p>More specifically, the cases where convoy paradoxes are caused by multiple units attacking the convoying fleet will cause multiple cycles in the recursion without being properly solved by the backup rules.</p>
+<p>Depending on which of the attacking orders were resolved first, the algorithm sometimes gave the correct answer, and ‘works sometimes’ is the worst kind of bug.</p>
+<h2>Improved implementation</h2>
+<p>I had already experienced a bit of vertigo translating from C, a very low level language with an extremely small set of built in features, to Go, quite a high level language with a great deal of built in features. Now, I figured, why limit myself to the scope of what is easy to do in portable C, when I have the entire set of Go features at my fingertips?</p>
+<p>I spent one feverish day (I actually had a cold and literally ran a fever at the time) trying to improve the implementation of the algorithm, in order to remove the annoying sensitivity to multiple cycles in the dependency graph.</p>
+<p>After having reformulated the mathematics behind the algorithm in a sturdier and more Go friendly way, using Go-native data types and structures, I started tweaking the order in which the different conditions in the algorithm interacted, and what conditions I used. Finally, I realized that if I avoided making any resolution decisions while any order in the dependency graph was in a state of guessing, I suddenly avoided the entire problem.
+Now, no decisions were made until the entire recursion unwinded and no more guesses remained.</p>
+<p>All the DATC tests passed!</p>
+<h2>Tests, tests, tests</h2>
+<p>At this point, for some reason, I thought the adjudicator was finished. I just wanted to verify the code against the thousands of finished games in Droidippy. A minor detail, obviously.
+<p>After having exported all the old games in Droidippy to a nice text format, created a parser from that format to the internal representation of godip, and glued it all together in a test suite, I saw that not one or two, but hundreds of games failed to adjudicate the same way in godip as in the jDip based engine of Droidippy.</p>
+<p>I spent hours and hours going over the tests and my code and painstakingly fixing the problems &#8212; often again causing errors in other tests, either in the DATC or in my Droidippy based tests.</p>
+<p>For the first 500 or so games, I stumbled upon all the bugs that I had gradually fixed in my version of jDip, and actually had to rewrite the test games to accurately reflect the desired outcome of their orders.</p>
+<p>Then, I mainly found bugs in godip. The games I tested against evidently, and in hindsight obviously, contained lots of situations not covered by the DATC cases.</p>
+<p>The really interesting part, though, was the last 4000 or so games I tested against. Here, I mainly found bugs in jDip. These were bugs previously unknown to me, where jDip didn’t adjudicate exactly as expected or wanted.</p>
+<p>Most of the flaws were relatively minor, but it was still nice to see how my brainchild was able to find problems in the fancy jDip project!</p>
+<p>At last, I had a well tested adjudicator, in an easy to use library, and written in my favorite language.</p>
+<p>Now, I just have to rewrite Droidippy from scratch&#8230;</p>
+<blockquote><i><b>About Martin:</b> Martin Bruse is an avid computer hobbyist and the creator of Droidippy, a dippy game for Android phones, which he has written about <a href="/Zine/F2012M/Bruse/droidippy.htm">in an earlier article</a>. You can find Droidippy at <strong><a href="https://play.google.com/store/apps/details?id=cx.ath.troja.droidippy">https://play.google.com/store/apps/details?id=cx.ath.troja.droidippy</a></strong></i></blockquote>
+<BR><BR><TABLE>
+<TBODY>
+<TR vAlign=bottom>
+<TD><A href="mailto:zondolfin@gmail.com"><IMG
+src="/Zine/Common/letter.gif" border=0></A> </TD>
+<TD><STRONG>Martin Bruse<BR>(<a href="mailto:zondolfin@gmail.com">zondolfin@gmail.com</a>)</STRONG>
+</TD></TR></TBODY></TABLE>
+<P>
+<I>If you wish to e-mail feedback on this article to the author, and clicking
+on the envelope above does not work for you, feel free to use the <A
+href="/Zine/F2013R/Common/DearDP.html">"<B>Dear
+DP...</B>"</A> mail interface.</I>
+</table><P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton2.gif" align="left" border="0"></a>
+<a href="/Zine/F2013R/"><img src="/Zine/Common/toF2013R.gif" align="right" border="0"></a>
+</BODY></HTML>
+<!--
+-->

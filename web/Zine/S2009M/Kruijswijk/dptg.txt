@@ -1,0 +1,2148 @@
+--------------------------------------------------------------------------
+
+THE DIPLOMACY PLAYER'S TECHNICAL GUIDE
+
+By Kristie Black, Thaddeus Black (ed.), Brandon Clarke, Bob Dengler,
+Bogdan Florescu, Cait Glasson, Manus Hand, David Lawler, Gary Pennington,
+Ray Setzer, Simon Szykman, Tarzan and Sandy Wible, October, 1998. 
+
+The Diplomacy Player's Technical Guide lies in the public domain. 
+Diplomacy is the Avalon Hill Game Company's trademark for its game of
+international intrigue, which game is copyright 1976 by Avalon Hill. 
+Avalon Hill belongs to Hasbro [http://www.hasbro.com/]. 
+
+--------------------------------------------------------------------------
+
+INTRODUCTION
+
+Diplomacy merits such a body of game laws as chess has: one that is clean,
+clear, consistent, comprehensible, conventional, concrete, concise,
+complete, discrete, finite, playable, unambiguous, standard, traditional,
+elegant, firm, precise and logically whole.  The Guide, read in
+conjunction with your Diplomacy rulebook, sets that body of game laws
+forth. 
+
+The contents of the Guide supersede rulebook language on a number of
+technical points.  Read carefully.  Especially Chapters I and II.
+
+The Guide's fourteen chapters track the fourteen chapters of Games
+Research's 1971 and Avalon Hill's 1976 and 1982 Diplomacy rulebooks.  Yet
+it matters not which edition of the rulebook you own, nor in which
+language; any legitimate edition, dated 1971 or later, in any language,
+will do.  When you have both read your rulebook and mastered this
+Technical Guide, you will then understand the laws of Diplomacy in
+absolutely standard form.  This is true, regardless of which rulebook
+edition you own. 
+
+The Guide alone, however, does not define Diplomacy.  It is intended for
+Diplomacy players who already have read and understood the rulebooks that
+came with their Diplomacy sets.  You'll need your rulebook.  If you do not
+yet own a Diplomacy set, why, Diplomacy is the best board game ever drawn
+on a game board; go to the game shop, buy a set, set it up, study the
+rulebook, read the Guide, gather six hardy opponents, raise your standard
+of battle, and go to war.  Good luck in battle, warrior. 
+
+--------------------------------------------------------------------------
+
+I.  PLAYERS AND COUNTRIES
+
+Seven players play the standard game of Diplomacy.  An eighth person
+serves as gamesmaster, or GM. 
+
+At the start of the game, each player secretly submits to the GM a
+preference list, ranking the seven Great Powers in the order the player
+prefers them.  A player may group together on his list Powers he prefers
+equally; an example: France; [Germany, Italy or Austria]; [England or
+Russia]; Turkey.  A player may list fewer than seven Powers if he wishes; 
+he may even list none.  Or, instead of listing Powers, he may secretly
+request a Random Power.  To write nothing is as to write a list of zero
+Powers, which is not the same as specifically to request a Random Power. 
+
+The GM secretly reviews the lists.  To any player who has specifically
+requested a Random Power, the GM at once randomly assigns a Power.  Then,
+taking the remaining lists one by one, in random order of players, the GM
+awards each player the player's top choice from among the Powers still
+available.  Where grouped Powers are equally top choice, the GM awards one
+of the available top choices randomly; in the example above, had France,
+Italy and Russia already been taken, the GM would award either Austria or
+Germany.  Where the list lists fewer than seven Powers, and all the Powers
+listed have already been taken, the GM awards nothing; he discards the
+list and moves on to the next player.  After awarding Powers to all the
+other players, the GM assigns randomly the Powers left over to the players
+left over. 
+
+Unlike with orders, the GM does not reveal preference lists, not even
+after he has assigned the countries.  Nor does he reveal details, such as
+whose list he has read first.  He merely reports which player will
+represent each Great Power.
+
+Where no GM is available, naturally, the players must reveal their lists
+openly to one another, just as they would reveal their orders -- yet the
+procedure otherwise runs exactly the same way. 
+
+A Diplomacy tournament may prefer to employ an alternate method of country
+assignment, as appropriate to the tournament's format and circumstance.
+
+--------------------------------------------------------------------------
+
+II.  OBJECT OF THE GAME
+
+In Diplomacy, naturally, as in almost any other game, the players may
+agree to end the game when and how they see fit to end it.  Such
+agreements lie beyond the scope of this Technical Guide, though, so we
+will speak no further of them here.  This chapter tells when and how the
+game ends by rule. 
+
+A player wins the game when his Great Power controls the requisite number
+of supply centers.  How many pieces the Great Power actually has on the
+board does not matter; it's the centers that count. 
+
+The game ends in a draw when seven consecutive years' ends have each seen
+no one capture any supply center, or when thirty-five game years have
+ended with no victor.  All players who still own supply centers share
+equally in the draw. 
+
+A Diplomacy tournament may prefer to give an alternate game-ending rule,
+as appropriate to the tournament's format and circumstance. 
+
+When the game ends by rule, whether in victory or draw, the ending year
+skips the meaningless final adjustments.  Supply centers get captured, as
+usual, and then the game ends right there; no one writes adjustment orders
+in that last year. 
+
+                                 *  *  *
+
+If you want to compare from game to game, there are many scoring formats
+-- some zero-sum, others not.  Here is one example of a zero-sum format: 
+
+        GAME RESULTS
+        Win         +360
+        2-way draw  +150
+        3-way draw   +80
+        4-way draw   +45
+        5-way draw   +24
+        6-way draw   +10
+        7-way draw  zero
+        Loss         -60
+
+--------------------------------------------------------------------------
+
+III.  SHORT GAME
+
+The standard game of Diplomacy has no Short Game. 
+
+--------------------------------------------------------------------------
+
+IV.  DIPLOMACY
+
+Diplomacy's diplomacy lies beyond the scope of this Technical Guide. 
+
+--------------------------------------------------------------------------
+
+V.  UNDERLYING ECONOMIC STRUCTURE OF THE GAME (SUPPLY CENTERS)
+
+The supply centers within a Great Power's home borders, the ones the Power
+controls at game's start, are the Power's "home supply centers"; the
+supply centers within no Great Power's home borders, the ones that no
+Power controls at game's start, are not home supply centers at all. 
+
+A supply center may fall under the control of various foreign Powers as
+the game progresses, but whose home supply center it is, if anyone's --
+that never changes. 
+
+--------------------------------------------------------------------------
+
+VI.  THE BOARD AND SET
+
+The laws of Diplomacy do not care how many or how few physical playing
+pieces your Diplomacy set includes.  Nothing in the laws of Diplomacy
+forbids Austria, for example, from fielding seventeen armies at the same
+time. 
+
+Seventy-six separate spaces divide up the entire board.  Unlike on a
+chessboard, where diagonal spaces can meet at a single point, on the
+Diplomacy board there are no point-meetings; all the spaces meet along
+lines.  Iceland, Ireland, Sicily, Cyprus, the Caspian Sea, Lake Ladoga and
+all the other places not specifically named on the map are not spaces and
+are not part of the game. 
+
+Switzerland is impassable and lies out of play.  The other seventy-five
+spaces come in only two kinds: provinces and bodies of water. 
+
+The provinces of Bulgaria, Spain and St. Petersburg each have two coasts. 
+A fleet that sails in along one coast may not then sail out from the other
+coast, having passed overland through the body of the province!  The fleet
+may only sail out from the coast along which it came in, to a space
+adjacent along that coast. 
+
+If a fleet could sail to either coast of a two-coast province, then, of
+course, the fleet's order to sail must name one coast or the other. 
+
+A fleet next to a two-coast province can support an action anywhere in the
+province, even an action on the far coast!  (The converse, though, is not
+true: a fleet in a two-coast province can't support an action off the far
+coast, because the action occurs in a space to which the fleet couldn't
+even move.) 
+
+A fleet in a two-coast province does occupy the whole province, just as an
+army there would.  It's the spaces that matter, not the coasts.  Even the
+following sort of thing would just be an ordinary head-to-head standoff:
+English Fleet Portugal to Spain (north coast); French Fleet Spain (south
+coast) to Portugal. 
+
+Armies, naturally, don't care about coasts. 
+
+Sweden, Denmark, Kiel and Constantinople are ordinary one-coast provinces. 
+A fleet that sails in one side may, on another move, freely sail out the
+other side.  Fleets in these provinces, though, like fleets in any other
+land provinces, may not convoy. 
+
+There are a few other spots on the map that sometimes confuse Diplomacy
+players; let's discuss them briefly.  The Mid-Atlantic does border, among
+other spaces, North Africa, the Western Mediterranean and both coasts of
+Spain.  Norway does border St. Petersburg.  Kiel does border the Baltic
+Sea.  Denmark, perhaps the most confusing space of them all, does border
+both Kiel and Sweden; an army in Denmark could march to either.  Denmark
+also borders the Helgoland Bight, the North Sea, the Skagerrak and the
+Baltic Sea.  Denmark does not border Berlin.  Spain does not border North
+Africa.  Finland (which, incidentally, is a Russian province in Diplomacy) 
+does not border Livonia.  The only body of water the Baltic Sea borders is
+the Gulf of Bothnia.  The Black Sea borders no bodies of water at all,
+only land provinces.  Constantinople borders three land provinces; an army
+there could march to any of the three. 
+
+--------------------------------------------------------------------------
+
+VII.  THE MOVE ORDER AND THE MECHANICS OF WRITING ORDERS
+
+A unit may be ordered to do only one thing on each move. 
+
+An army may be ordered 
+
+  o  to hold,
+  o  to move (directly),
+  o  to move by convoy,
+  o  to support a hold, or
+  o  to support a move.
+
+A fleet may be ordered 
+
+  o  to hold,
+  o  to move (directly),
+  o  to convoy,
+  o  to support a hold, or
+  o  to support a move.
+
+An order to hold names only the unit holding.  Any unit may hold. 
+Examples: Army Galicia holds; Fleet Bulgaria (south coast) holds. 
+
+The words "move" and "attack" mean the same thing in Diplomacy. 
+
+An order to move (directly) names the unit moving and the target space. 
+If it's a fleet moving to a province with two coasts, then the order also
+names the target coast (if it fails to name the target coast, when the
+fleet could sail to either coast, then the order is illegal).  Examples of
+direct moves: Army Galicia to Silesia; Fleet Mid-Atlantic to Spain (south
+coast).
+
+A unit may attempt to move (directly) to an adjacent space only.  Even
+certain adjacent spaces may be forbidden; for example, Army Berlin may not
+move to the Baltic Sea.  Your rulebook explains the matter clearly,
+though, so we will speak no further of it here. 
+
+An illegal move order, whether direct or by convoy, is as a hold order,
+except that, because it is a move order, a unit so ordered may receive no
+support to hold.  Examples: Army Tyrolia to Switzerland; Army Bohemia to
+Burgundy; Fleet Tuscany to Venice; Army Berlin to the Baltic Sea; Fleet
+Black Sea to Switzerland.  Nothing prevents a player, incidentally, from
+purposely ordering a unit to a forbidden space (Switzerland is always a
+good choice) to guarantee that the unit receives no support.
+
+No unit may move to the space it already stands in, whether the move be
+direct or by convoy.
+
+Chapter XII addresses the order to move by convoy, and also the convoy
+order itself.  Chapter IX addresses the two kinds of support order. 
+
+--------------------------------------------------------------------------
+
+VIII.  CONFLICTS
+
+This chapter sets forth the orderly way to execute conflicting orders on
+the Diplomacy board.  The procedure is detailed, laborious, complete and
+correct.  While, in actual play, we will not really need to follow the
+full procedure most of the time, nevertheless, the procedure is complete
+and correct and will never lead us astray.  Employ it at need. 
+
+The reader will want to review his rulebook and read the Guide's Chapters
+VII, XII and IX before attempting this difficult Chapter VIII for the
+first time.  He will then find this chapter's detailed step-by-step
+adjudication procedure easiest at first to learn indirectly, after the
+manner of the following plan: the summary (just below); the note before
+Step 1; Step 4; the note before Step 14; the note before Step 15; Step 18; 
+Step 19 (the most important step); Step 20; the example after Step 20; 
+Step 3; the note before Step 15 (again); Step 15; Step 16; Step 17; the
+examples after Step 17; the note before Step 14 (again); the note before
+Step 1 (again); Step 2; the note before Step 5; Step 6; Step 7; Step 8.
+Having learned these more important parts in the recommended order, the
+reader will then find it practical to learn the entire procedure, reading
+this Chapter VIII straight through from beginning to end. 
+
+This chapter is indeed lengthy and dense, yet provides many useful
+instructional examples.  It will greatly assist the reader in
+comprehending some of the more difficult parts of the chapter if he
+actually sets up a few units on his game board and just tries the
+instructions and examples out.  To do so is suggested.  To neglect to do
+so probably would not be wise. 
+
+The properly-prepared reader need not feel overly intimidated by this
+important chapter's length.  Much of the length is in the many useful
+examples given.  Also, while some of the chapter's steps, especially Steps
+4, 18 and 19, come frequently into actual play, many of the steps,
+especially Steps 1, 5 and 9 through 14, rarely if ever come into actual
+play, and, while philosophically interesting, need not necessarily be
+learned at all until needed.  The philosophically-interested reader,
+nevertheless, will naturally wish to learn the entire procedure.  So will
+the expert GM.  And the curious reader will naturally wish to explore. 
+Let the reader therefore learn part or all, as suits his need and desire. 
+
+                                 *  *  *
+
+The procedure, in summary: 
+
+1.  Cancel inconsistent convoys.
+2.  List the convoys and their fleets.
+3.  Cancel inconsistent supports.
+4.  Let direct attacks cut support.
+5.  Identify convoy subversion.
+6.  Disrupt convoys.
+7.  Cancel disrupted convoys' convoyed moves.
+8.  Let convoyed attacks cut support.
+9.  If useful, return to Step 5.
+10. Break circles of subversion.
+11. Repeat Steps 5 through 9.
+12. Resolve unconfused circles of subversion.
+13. Resolve confused circles of subversion.
+14. Let rings of attack advance.
+15. Identify head-to-head battles.
+16. Resolve unbalanced head-to-head battles.
+17. Resolve balanced head-to-head battles.
+18. List targets of attack.
+19. Fight ordinary battles.
+20. Return to Step 18 if any attacks remain unresolved.
+
+The procedure, in detail: 
+
+                                 *  *  *
+
+Steps 1 through 13 address two matters: convoys and the cutting of
+support.  See Chapter XII for background on convoys, Chapter IX for
+background on support, and your rulebook for background on both. 
+
+The topic of Diplomacy convoys, considered in all its facets, is
+undeniably a complex one.  And a confusing.  Prior to 1982, Diplomacy
+rulebooks had included a basically correct but sometimes ambiguous convoy
+rule.  Since 1982, Diplomacy rulebooks have included a basically
+unambiguous but sometimes incorrect convoy rule.  Here you will find the
+correct, unambiguous rule: Steps 1 through 13 correctly adjudicate even
+the toughest convoy knot.
+
+                                 *  *  *
+
+1.  Cancel inconsistent convoys.
+
+Neither an army nor a fleet alone can complete a convoy.  Naturally not. 
+A convoy needs both an army and a fleet.  Always one army.  At least one
+fleet.  The army and the fleets must cooperate; that is, the army and the
+fleets must have orders, respectively, to move by convoy and to convoy,
+and must agree as to which army is to be convoyed to which target
+province.
+
+The cooperating fleet or fleets must lay at least one unbroken route from
+the army to its target, a route that does not pass through the same body
+of water twice.  Where the cooperating fleet or fleets lay no such route,
+or where there are no cooperating fleets, cancel the entire convoy: cancel
+both the army's move order and the fleets' convoy orders. 
+
+Cancel a fleet's convoy order where the army to be convoyed refuses to
+cooperate.
+
+Where more fleets than necessary cooperate in a convoy, the convoyed army
+may find two or more alternate convoy routes available to it.  This is
+acceptable, but an army prefers, if possible, to be convoyed by its own
+countrymen only -- that is, only by fleets belonging to the same Great
+Power the army belongs to.  (This does not mean that an army prefers to be
+convoyed by fewer foreigners rather than more -- only that it prefers to
+be convoyed by zero foreigners, if possible; if impossible, then the army
+sees two foreigners as no worse than one.)  For this reason, if there are
+sufficient cooperating countryman-fleets to complete the convoy without
+foreign fleets' help, then exclude all foreign fleets from the convoy,
+cancelling the foreigners' convoy orders.
+
+(Multiple convoy routes, incidentally, are no insurance for a convoy but
+rather are a danger to it.  The reason is that, if any of the routes is
+disrupted, then the the entire convoy is disrupted and the convoyed army
+may not move.  See Step 7.) 
+
+After refusing foreign cooperation if possible, an army may find that it
+has an extra cooperating fleet it could not use even if it wanted to. 
+This is a fleet that is not part of any remaining route the army could
+follow to its target.  The fleet's convoy order is superfluous; cancel it.
+
+This Step 1 cares only that orders to convoy and to move by convoy are
+properly consistent, that convoys trace correct routes, and that foreign
+cooperation is declined where possible.  It does not care whether a
+convoying fleet is under attack, nor whether some unit contests the
+convoy's target province.  It also does not care about support of any
+kind.
+
+An army with a cancelled move order holds normally, except that it can
+receive no support to hold.  A fleet with a cancelled convoy order holds
+entirely normally; it cannot convoy anything, of course, but may still
+receive support to hold from another unit. 
+
+An annotated example:
+
+        RUSSIA
+        Army Rumania to Ankara.
+        Fleet Black Sea convoys A. Rumania to Ank..
+        F. Both. convoys German A. Livonia to Swe..  [cancelled]
+
+        TURKEY
+        Fleet Armenia to the Black Sea.
+        Fleet Const. supports F. Armenia to Black.
+        Army Albania to Smyrna.
+        Fleet Aegean convoys A. Albania to Smyrna.
+
+        AUSTRIA
+        F. E.Med. convoys Turk. A. Alb. to Smyrna.
+
+        ITALY
+        F. Ionian convoys Turk. A. Alb. to Smyrna.
+        Army Naples to Spain.                        [cancelled]
+        Fleet Tyrrhenian convoys A. Nap. to Spain.   [cancelled]
+
+        FRANCE
+        Fleet Gulf of Lyon holds.
+
+        GERMANY
+        Army Livonia to Sweden.
+        Fleet Baltic convoys A. Livonia to Sweden.
+
+        ENGLAND
+        Army Sweden holds.
+        Army London to Belgium.
+        Fleet North Sea convoys A. London to Belg..
+        Fleet Engl. Ch. convoys A. London to Belg..
+        Fleet N.Atl. convoys A. London to Clyde.     [cancelled]
+        Fleet Nwg. Sea convoys A. London to Belg..   [cancelled]
+        Fleet Irish Sea convoys A. London to Belg..  [cancelled]
+
+The Russian Army Rumania and Fleet Black Sea form a convoy to Ankara.  The
+Turkish attack eventually will disrupt the convoy, of course, in Step 6
+below, but this Step 1 doesn't mind the Turkish attack.
+
+Because the French Fleet Gulf of Lyon declines to cooperate, there is no
+Italian convoy.  (This does not mean, incidentally, that the Italian
+orders are illegal.  Viewed individually, they are possible and therefore
+legal.  They would be illegal if there were no French fleet, though.  See
+Chapter XII.)
+
+The German Army Livonia and Fleet Baltic Sea form a convoy to Sweden.  The
+English defense in Sweden eventually will stand the convoyed attack off,
+of course, in Step 19 below, but this Step 1 doesn't mind the English
+defense.  The convoy excludes the Russian Fleet Gulf of Bothnia because
+the German army has an all-German convoy route available to it.  If there
+were no German fleet, of course, then the convoy would include the Russian
+fleet, instead.  If both fleets were Russian or both were German, then the
+convoy would include both fleets. 
+
+The Turkish Army Albania, the Italian Fleet Ionian Sea, the Austrian Fleet
+Eastern Mediterranean and the Turkish Fleet Aegean Sea together form a
+convoy to Smyrna.  This convoy features four distinct convoy routes, none
+of which is all-Turkish: Ionian-Aegean, Ionian-Eastern-Med,
+Ionian-Aegean-Eastern-Med and Ionian-Eastern-Med-Aegean.  Were the Fleet
+Ionian Sea Turkish rather than Italian, the Ionian-Aegean route would be
+all-Turkish, so the convoy would exclude the Austrian fleet. 
+
+The English Army London, Fleet North Sea and Fleet English Channel
+together form a convoy to Belgium.  This convoy features four distinct
+convoy routes: North Sea, English Channel, North-Sea-English-Channel and
+English-Channel-North-Sea.  If the English Fleet North Atlantic would
+cooperate, the convoy also would include the three English Fleets North
+Atlantic, Norwegian Sea and Irish Sea, and would feature two additional
+convoy routes, one looping each direction about the Isle of Britain,
+giving the complete convoy a total of six routes and five fleets.  Since
+the Fleet North Atlantic will not cooperate, however, the convoy excludes
+the three extra fleets.
+
+                                 *  *  *
+
+2.  List the convoys and their fleets.
+
+Make a list of all convoys not cancelled by Step 1.  Name each convoy
+after the space the convoyed army starts from.  List with each convoy
+the convoying fleets.
+
+The convoy list for Step 1's example:
+
+        GM'S CONVOY LIST
+        Rumania:    Black Sea.
+        Albania:    Ionian Sea; Aegean Sea; Eastern Mediterranean.
+        Livonia:    Baltic Sea.
+        London:     North Sea; English Channel.
+
+The order in which the convoys are listed does not matter.  The order in
+which each convoy's fleets are listed also does not matter.  Notice that
+the Albania and London convoys each include more fleets than really are
+needed to complete the convoy, but that the Livonia convoy includes no
+extra fleet. 
+
+A convoy list's purpose is to keep track of the various convoys on the
+board through the complex steps that follow.  If a convoy is cancelled
+(see Step 7), the GM simply strikes the entire convoy from the list.
+
+                                 *  *  *
+
+3.  Cancel inconsistent supports.
+
+Cancel supports to hold where the unit supported attempts to move.  Cancel
+supports to move where the unit supported fails to attempt to move, or
+where it does indeed attempt to move, but to a space different than the
+space the support is given to. 
+
+A unit ordered to move cannot receive support to hold under any
+circumstance, not even if the move order has been cancelled or is illegal. 
+Accordingly, if any such support to hold is offered, cancel it now.
+
+A cancelled supporter holds normally.  It no longer gives any support, of
+course, but may still receive support to hold from another unit.  The
+cancelled supporter counts strictly as a holding unit, never again as a
+supporting unit, from now all the way till procedure's end.  (This same
+principle, incidentally, applies whenever any step of the procedure cuts
+or cancels an order.  From the time an order is cut or cancelled until
+procedure's end, the unit with the cut or cancelled order counts strictly
+as a holding unit.) 
+
+An annotated example:
+
+        FRANCE
+        Army Burgundy to Munich.
+        Army Paris supports A. Burgundy to hold.     [cancelled]
+
+        GERMANY
+        Army Holland to Switzerland.                 [illegal]
+
+        ENGLAND
+        F. North Sea supp. German A. Hol. to hold.   [cancelled]
+
+        AUSTRIA
+        Fleet Trieste holds.
+        Army Serbia supports F. Trieste to Albania.  [cancelled]
+
+        RUSSIA
+        Army Sevastopol holds.
+        Army Moscow supports A. Sevastopol to hold.
+        Army Prussia to Silesia.
+        Army Warsaw supports A. Prussia to Silesia.
+        Army Ukraine supports A. Warsaw to hold.
+
+                                 *  *  *
+
+4.  Let direct attacks cut support.
+
+With only two exceptions (we'll discuss these in a moment), let any
+direct, non-convoyed attack against any supporter cut the supporter's
+support.  A cut support is a cancelled support; it has no further effect
+once it has been cut.
+
+The two exceptions -- 
+
+A.  No support-cutter can cut a countryman's support.  For example,
+there's no support-cut here: 
+
+        GERMANY
+        Army Munich holds.
+
+        AUSTRIA
+        Army Silesia to Munich.
+        Army Tyrolia supports Army Silesia to Munich.
+        Army Trieste to Tyrolia.
+
+B.  The target of an attack cannot cut support for that attack.  That
+is, if
+
+        X to Z
+        Y supports X to Z
+        Z to Y
+
+then the support is not cut.  (Some other attacker, some Unit W, may cut
+the support, but Unit Z can't cut it, at least not here in Step 4.)  For
+example, there's no support cut here: 
+
+        AUSTRIA
+        Army Silesia to Munich.
+        Army Tyrolia supports Army Silesia to Munich.
+
+        GERMANY
+        Army Munich to Tyrolia.
+
+If, however, a Unit W were added to the example -- Italian Army Venice to
+Tyrolia -- then the support would indeed be cut. 
+
+(Actually, we'll see later that, even if there is no Unit W, Unit Z may
+still be able to cut the support -- by dislodging the supporter -- but
+that happens in a later step, not yet.) 
+
+This Step 4 lets only direct, non-convoyed attacks cut support.  Convoyed
+attacks cut support in Step 8.
+
+                                 *  *  *
+
+Step 5 below introduces the difficult concept of convoy subversion.  Steps
+5 and 10 explain the concept in complete technical detail, yet the reader
+may find it helpful, before he dives into the detail, to view an overall
+picture.
+
+An example or two will serve to paint the picture.  These examples make no
+attempt fully to explain convoy subversion; they mean only to motivate the
+topic (for the full explanation, see Steps 5 and 10 below). 
+
+The first example: 
+
+        TURKEY
+        Army Greece to Apulia.
+        Fleet Ionian Sea convoys Army Greece to Apulia.
+        Fleet Tunis supports Fleet Ionian Sea to hold.
+
+        ITALY
+        Fleet Naples to the Ionian Sea.
+        Fleet Tyrrhenian Sea supports Fleet Naples to the Ionian Sea.
+
+        FRANCE
+        Army Spain to Tunis.
+        Fleet Western Mediterranean convoys Army Spain to Tunis.
+
+To adjudicate the Turkish convoy correctly, we must first consider the
+French convoy's action.  If we let the Turkish convoy go first, we would
+get a false result on the board.  This is where the concept of convoy
+subversion comes in.  The French convoy subverts the Turkish convoy.  The
+Turkish convoy, being subverted, waits patiently and does nothing until
+after the subverting French convoy has acted.  (Caution: recent rulebooks,
+at the time of this writing, handle this example incorrectly; if your
+rulebook is a recent one, dated 1982 or later, then let it not confuse
+you.)
+
+The second example: 
+
+        ENGLAND
+        Army London to Belgium.
+        Fleet North Sea convoys Army London to Belgium.
+
+        FRANCE
+        Fleet English Channel to the North Sea.
+        Fleet Belgium supports Fleet English Channel to the North Sea.
+
+        GERMANY
+        Fleet Denmark to the North Sea.
+        Fleet Holland supports Fleet Denmark to the North Sea.
+
+The English convoy subverts itself, making it impossible for us to decide
+by any normal means whether the convoy goes through. 
+
+Steps 5 through 13 below correctly resolve all possible convoy scenarios,
+including the two above.  To do so in an orderly manner, they employ the
+concept of convoy subversion.  Step 5 explains the technical basics of
+convoy subversion.  Step 10 magnifies certain technical specifics. 
+
+                                 *  *  *
+
+5.  Identify convoy subversion.
+
+Note which convoys on the convoy list presently subvert which.
+
+Subversion is an indirect effect that one convoy has on another.  One
+convoy subverts another, not by attacking directly, but rather by
+attacking a certain vulnerable supporter, threatening to cut the support. 
+
+Two kinds of supporter make a convoy vulnerable to subversion:
+
+(i)  A supporter that supports one of the convoy's convoying fleets to
+hold makes the convoy vulnerable to subversion.  That is, Convoy X is
+vulnerable at P when
+
+        X to Z
+        Y convoys X to Z
+        P supports Y to hold
+
+(ii)  A supporter that supports an attack against one of the convoy's
+convoying fleets makes the convoy vulnerable to subversion.  That is,
+Convoy X is vulnerable at Q when
+
+        X to Z
+        Y convoys X to Z
+        W to Y
+        Q supports W to Y
+
+With only three exceptions (we'll discuss these in a moment), a convoyed
+attack against either kind of vulnerable supporter -- against a P or a Q
+-- subverts the target convoy.  (Notice that only a convoyed attack can
+subvert a convoy; direct attacks do not subvert.) 
+
+The three exceptions --
+
+A.  If the vulnerable supporter is a countryman of the convoyed attacker
+that threatens it, then (because there is no real threat) there is no
+subversion.  For example, because Fleet London and Army Picardy are
+countrymen, there is no subversion here:
+
+        GERMANY
+        Army Holland to Norway.
+        Fleet North Sea convoys Army Holland to Norway.
+
+        ENGLAND
+        Fleet London supports German Fleet North Sea to hold.
+        Army Picardy to London.
+
+        FRANCE
+        Fleet English Channel convoys English Army Picardy to London.
+
+B.  (This exception is relevant only if the GM already has done Step 10.) 
+The attacking convoy cannot be Futile.  If it is, then there is no
+subversion. 
+
+C.  (This exception also is relevant only if the GM already has done Step
+10.)  The target convoy can neither be Futile nor Indomitable.  If it is,
+then there is no subversion. 
+
+There can be no subversion, of course, unless both the attacking convoy
+and the target convoy are still on the convoy list (see Steps 2 and 7). 
+Even if both convoys are still on the list, if the vulnerable support
+through which the subversion is done has already been cancelled or cut,
+then, naturally, because no attack against the supporter can further
+influence the target convoy, there is no subversion.
+
+A convoy may indeed subvert itself.
+
+An annotated example:
+
+        TURKEY
+        Army Greece to Tunis.
+        Fleet Ionian Sea convoys Army Greece to Tunis.
+        Army North Africa supports Army Greece to Tunis.
+        Fleet Constantinople to the Black Sea.
+        Fleet Ankara supports Fleet Constantinople to the Black Sea.
+        Army Smyrna supports Fleet Ankara to hold.
+
+        RUSSIA
+        Army Rumania to Ankara.
+        Fleet Black Sea convoys Army Rumania to Ankara.
+        Fleet Brest supports French Fleet Mid-Atlantic to hold.
+
+        GERMANY
+        Fleet Denmark to the North Sea.
+        Fleet Norway supports Fleet Denmark to the North Sea.
+
+        ENGLAND
+        Army Edinburgh to Norway.
+        Fleet Norwegian Sea convoys Army Edinburgh to Norway.
+        Fleet Clyde supports Fleet Norwegian Sea to hold.
+        Fleet Irish Sea to the North Atlantic.
+
+        FRANCE
+        Army Gascony to Clyde.
+        Fleet Mid-Atlantic convoys Army Gascony to Clyde.
+        Fleet North Atlantic convoys Army Gascony to Clyde.
+        Army Holland to Brest.
+        Fleet North Sea convoys Army Holland to Brest.
+        Fleet English Channel convoys Army Holland to Brest.
+        Fleet Spain (south coast) supports Fleet Mid-Atlantic to hold.
+
+        ITALY
+        Army Piedmont to Spain.
+        Fleet Gulf of Lyon convoys Army Piedmont to Spain.
+        Fleet Tuscany supports Fleet Gulf of Lyon to hold.
+        Fleet Naples to the Ionian Sea.
+
+        AUSTRIA
+        Army Tunis to Tuscany.
+        Fleet Tyrrhenian Sea convoys Army Tunis to Tuscany.
+        Army Bulgaria to Smyrna.
+        Fleet Aegean Sea convoys Army Bulgaria to Smyrna.
+        Fleet Eastern Mediterranean convoys Army Bulgaria to Smyrna.
+        Fleet Albania to the Ionian Sea.
+        Fleet Adriatic supports Fleet Albania to the Ionian Sea.
+ 
+        GM'S CONVOY LIST
+        Rumania:    Black Sea.        [subverts itself]   [subverted]
+        Bulgaria:   Aegean; E.Med.
+        Greece:     Ionian Sea.
+        Tunis:      Tyrrhenian Sea.   [subverts Pied.]
+        Piedmont:   Gulf of Lyon.     [subverts Gascony]  [subverted]
+        Gascony:    N.Atl.; M.Atl..   [subverts Edin.]    [subvtd. twice]
+        Edinburgh:  Norwegian Sea.    [subverts Holland]  [subverted]
+        Holland:    Nth.S.; Eng.Ch..  [subverts Gascony]  [subverted]
+
+Notice that Edinburgh, Holland and Gascony form a closed circle of
+subversion.  Notice also that, were Fleet Brest French rather than
+Russian, Holland could not subvert Gascony.
+
+On the other side of the board, notice that the Bulgaria convoy has an
+extra, unneeded cooperating fleet in the Eastern Med.  Were this extra
+fleet dislodged, the entire Bulgaria convoy would be disrupted (see Steps
+1 and 7). 
+
+Steps 6, 7, 8 and 9 extend this example. 
+
+                                 *  *  *
+
+6.  Disrupt convoys.
+
+Excepting fleets in subverted convoys, resolve the set of attacks against
+each fleet presently on the convoy list, according to the standard
+instructions for resolving attacks, given in Step 19 below. 
+
+This Step 6 resolves attacks only against convoying fleets that belong to
+unsubverted convoys, not against any other units, nor against empty
+spaces.  Any fleets not presently on the convoy list are not convoying
+fleets; this Step 6 does not resolve attacks against them. 
+
+Working further on Step 5's example, this Step 6 finds four convoying
+fleets under attack: the Turkish Fleet Ionian Sea, the Russian Fleet Black
+Sea and the French Fleets North Atlantic and North Sea.  The latter three
+fleets, however, all belong to subverted convoys, so we resolve only the
+attack against the Turkish fleet.  There, the Austrian attack overcomes
+the rival Italian attack two to one, then defeats the Turkish defense two
+to one to advance into the Ionian Sea, dislodging the Turkish defender. 
+(It is instructive to note, incidentally, that, had Italy had an extra
+fleet in the Eastern Mediterranean to support the Italian attack, then the
+Italian attack would have stood the Austrian attack off two to two, and
+the Turkish convoy would have survived unharmed, never actually having had
+to defend.) 
+
+                                 *  *  *
+
+7.  Cancel disrupted convoys' convoyed moves.
+
+If Step 6 above has dislodged any convoying fleet, then the fleet's entire
+convoy is disrupted: cancel the army-move the fleet was supposed to convoy
+and strike the entire convoy from the convoy list.  The disrupted convoy
+is indeed no longer a convoy. 
+
+Alternate convoy routes cannot act as insurance.  Generally speaking,
+where an army has two convoy routes available to it, the disruption of
+either route disrupts the entire convoy -- so, unless a player actually
+wants to increase the danger to his own convoy, he will normally provide
+only one route.  Can an opponent slyly join a convoy, providing an
+unwanted alternate route?  Under most circumstances, no.  See Step 1 for a
+detailed explanation. 
+
+Working further on Step 5's example, this Step 7 finds that the convoying
+Turkish Fleet Ionian Sea has been dislodged.  Accordingly, this Step 7
+cancels the Turkish Army Greece's move order and strikes the entire Greece
+convoy from the convoy list. 
+
+                                 *  *  *
+
+8.  Let convoyed attacks cut support.
+
+With only three exceptions (we'll discuss these in a moment), let any
+convoyed attack against any supporter cut the supporter's support.  A cut
+support is a cancelled support; it has no further effect once it has been
+cut.
+
+The three exceptions --
+
+A.  No support-cutter can cut a countryman's support. 
+
+B.  No subverted support-cutter can cut a support at the present time. 
+That is, if the convoy carrying the support-cutter is presently subverted,
+then, for now, there is no support-cut. 
+
+C.  (This exception is relevant only if the GM already has done Step 10.) 
+No Futile support-cutter can ever cut a support.  That is, if the convoy
+carrying the support-cutter is Futile, then there is no support-cut. 
+
+Notice that the first exception is the same as in Step 4 but that the
+other exceptions are not.  Specifically, notice that Step 4's second
+exception does not apply here. 
+
+A convoy no longer on the convoy list, of course, is no longer a convoy
+and therefore cannot cut any support (see Steps 2 and 7). 
+
+Working further on Step 5's example, this Step 8 lets the Austrian Army
+Bulgaria cut the Turkish Army Smyrna's support and lets the Austrian Army
+Tunis cut the Italian Fleet Tuscany's support.  It does not let any other
+convoyed attack cut support, however, because all the other convoyed
+attacks that could cut support presently remain subverted. 
+
+                                 *  *  *
+
+9.  If useful, return to Step 5. 
+
+If Steps 6, 7 and 8 have disrupted any convoy or cut any support, then
+return to the top of Step 5 now, to repeat Steps 5 through 8.  Perform the
+5-6-7-8-9 loop as many times as needed, until the loop can do nothing
+further.
+
+Working further on Step 5's example --
+
+We observe that Steps 6, 7 and 8 have indeed acted, so we loop back to the
+top of Step 5.
+
+Step 5 finds that, because Fleet Tuscany no longer is a vulnerable
+supporter, Tunis no longer subverts the Piedmont.  Steps 6 and 7 find
+three convoying fleets still under attack, but all three still belong to
+subverted convoys, so Steps 6 and 7 can do nothing with them.  Step 8 lets
+the Italian Army Piedmont cut the French Fleet Spain (south coast)'s
+support.  Arriving back here at Step 9, we observe that Step 8 has again
+indeed acted, so we loop back again to the top of Step 5.
+
+Step 5 finds that, because the French Fleet Spain (south coast) no longer
+is a vulnerable supporter, the Piedmont no longer subverts Gascony.  But
+Holland still subverts Gascony, so Steps 6 and 7 still can do nothing.
+Step 8 also can do nothing.  Arriving back here at Step 9, we observe that
+the 5-6-7-8-9 loop has now evidently done all it can do, so we leave the
+loop and proceed to the top of Step 10.
+
+                                 *  *  *
+
+If any convoy subversion remains on the board after the 5-6-7-8-9 loop
+above has done all it can do, then it will have to be either of a convoy
+subverting itself (Convoy X subverts Convoy X) or of some larger closed
+circle of subversion (Convoy X subverts Convoy Y subverts Convoy X, or
+Convoy X subverts convoy Y subverts Convoy Z subverts Convoy X, or some
+even larger circle).  There may be more than one independent circle, of
+course, but Steps 5 through 9 will have eliminated any non-circular
+subversion. 
+
+An important feature of the circular geometry is that every convoy that
+remains subverted will itself subvert exactly one other convoy.  Or
+perhaps subvert itself, instead.  A related feature is that any subverted
+convoy will be subverted once only; multiple subversion can no longer be. 
+Steps 10 through 13 depend on these features. 
+
+                                 *  *  *
+
+10.  Break circles of subversion. 
+
+For each convoy that remains subverted, identify the one vulnerable
+supporter through which the subversion is done, then ask the following two
+questions: 
+
+A.  If the one support survived intact, would the convoy then be
+disrupted? 
+
+B.  Were the one support cut, would the convoy then be disrupted?
+
+(A convoy is disrupted when one or more of its convoying fleets is
+dislodged.  Refer to Steps 6 and 7 above and Step 19 below.)
+
+The convoy remains subverted only if the answers are no and yes or yes and
+no. 
+
+(i)  If the answers are yes and yes -- that is, if nothing can save the
+convoy -- then the convoy is Futile.  Futility has two consequences: the
+Futile convoy can no longer cut any support or threaten to cut any
+support, so can no longer subvert any other convoy, nor even subvert
+itself; and the Futile convoy ceases to be subverted and, indeed, becomes
+immune to any further subversion.
+
+(ii)  If the answers are no and no -- that is, if the convoy is in no
+danger -- then the convoy is Indomitable.  Indomitability has one
+consequence: the Indomitable convoy ceases to be subverted and, indeed,
+becomes immune to further subversion.  (If an Indomitable convoy has been
+subverting itself, then the subversion ceases.  Nothing especially
+prevents an Indomitable convoy, though, from continuing to subvert another
+convoy.) 
+
+(iii)  If the answers are no and yes -- that is, if only the saving of the
+support can save the convoy -- then the convoy is Confused.  Confusion has
+no direct consequence, but may play a role in Steps 12 and 13 below.
+Unlike Futility and Indomitability, Confusion does not save a convoy from
+subversion. 
+
+(iv)  If the answers are yes and no -- that is, if only the cutting of the
+support can save the convoy -- then no special adjective applies to the
+convoy.  This case also does not save the convoy from subversion. 
+
+A Futile or Indomitable convoy, being unsubvertible, gives Step 11 below a
+chink, so to speak, to dig into a circle of subversion and to pry one
+convoy out at a time, eventually resolving the entire circle.  All Step 11
+needs is one Futile or Indomitable convoy to break the circle open and
+clean it up.  If this Step 10 cannot find any such Futile or Indomitable
+chink in the circle, though, then Step 11 will not be able to touch the
+circle, but will have to leave it for Steps 12 and 13 to resolve by
+indirect means. 
+
+An annotated example:
+
+        TURKEY
+        Fleet Constantinople to the Black Sea.
+        Fleet Ankara supports Fleet Constantinople to the Black Sea.
+        Fleet Armenia supports Fleet Constantinople to the Black Sea.
+
+        RUSSIA
+        Army Rumania to Ankara.
+        Fleet Black Sea convoys Army Rumania to Ankara.
+
+        AUSTRIA
+        Fleet Albania to the Adriatic Sea.
+        Fleet Trieste supports Fleet Albania to the Adriatic Sea.
+
+        ITALY
+        Army Apulia to Trieste.
+        Fleet Adriatic convoys Army Apulia to Trieste.
+        Fleet Venice supports Fleet Adriatic to hold.
+
+        ENGLAND
+        Fleet Irish Sea to the English Channel.
+        Fleet Yorkshire to the North Sea.
+        Fleet Edinburgh supports Fleet Yorkshire to the North Sea.
+        Fleet London supports Fleet Yorkshire to the North Sea.
+
+        FRANCE
+        Army Picardy to London.
+        Fleet English Channel convoys Army Picardy to London.
+        Fleet Belgium supports Fleet English Channel to hold.
+
+        GERMANY
+        Army Norway to Belgium.
+        Fleet North Sea convoys Army Norway to Belgium.
+
+        GM'S CONVOY LIST
+        Rumania:    Black Sea.        [had subvtd. self]  [Futile]
+        Apulia:     Adriatic Sea.     [had subvtd. self]  [Indomitable]
+        Picardy:    English Channel.  [had subvtd. Nwy.]  [Indomitable]
+        Norway:     North Sea.        [had subvtd. Pic.]  [Futile]
+
+All four convoys escape subversion, two by being Futile and two by being
+Indomitable.  The Rumania convoy is Futile because, even if it could cut
+the one Turkish support, the Turkish attack would still disrupt the
+convoy.  The Apulia convoy is Indomitable because it would survive even if
+Fleet Trieste's support remained in force.  The Picardy convoy is
+Indomitable because it would survive even if the Norway convoy cut its
+Belgian support.  The Norway convoy is Futile because the English attack
+would still disrupt it even if the Picardy convoy cut the one English
+support.
+
+A second annotated example:
+
+        TURKEY
+        Fleet Constantinople to the Black Sea.
+        Fleet Ankara supports Fleet Constantinople to the Black Sea.
+        Fleet Bulgaria (east coast) to the Black Sea.
+        Fleet Armenia supports Fleet Bulgaria (e.c.) to the Black Sea.
+
+        RUSSIA
+        Army Rumania to Ankara.
+        Fleet Black Sea convoys Army Rumania to Ankara.
+
+        AUSTRIA
+        Fleet Albania to the Adriatic Sea.
+        Fleet Trieste supports Fleet Albania to the Adriatic Sea.
+
+        ITALY
+        Army Apulia to Trieste.
+        Fleet Adriatic convoys Army Apulia to Trieste.
+
+        ENGLAND
+        Fleet Irish Sea to the English Channel.
+        Fleet Wales supports Fleet Irish Sea to the English Channel.
+        Fleet Yorkshire to the North Sea.
+        Fleet London supports Fleet Yorkshire to the North Sea.
+
+        FRANCE
+        Army Picardy to London.
+        Fleet English Channel convoys Army Picardy to London.
+        Fleet Belgium supports Fleet English Channel to hold.
+
+        GERMANY
+        Army Norway to Belgium.
+        Fleet North Sea convoys Army Norway to Belgium.
+
+        GM'S CONVOY LIST
+        Rumania:    Black Sea.        [subverts itself]   [Confused]
+        Apulia:     Adriatic Sea.     [subverts itself]   [merely subvtd.]
+        Picardy:    English Channel.  [subverts Norway]   [Confused]
+        Norway:     North Sea.        [subverts Picardy]  [merely subvtd.]
+
+None of the four convoys escapes subversion.  Two of the four are
+Confused.  The Rumania convoy is Confused because it survives only if it
+fails to cut Fleet Ankara's support.  The Picardy convoy is Confused
+because it survives only if the Norway convoy fails to cut Fleet Belgium's
+support.  Such convoy knots cannot be solved directly; Steps 12 and 13
+solve them indirectly.
+
+Steps 12 and 13 extend this second example.
+
+                                 *  *  *
+
+11.  Repeat Steps 5 through 9.
+
+If Step 10 has found at least one Futile or Indomitable convoy, then
+return to Step 5 now, to perform the 5-6-7-8-9 loop as many times as
+needed, until that loop can have no further effect.  When the loop can
+have no further effect, continue with Step 12 rather than Step 10. 
+
+This Step 11 cleans up any circles of subversion that Step 10, by finding
+Futile and Indomitable convoys, has been able to break.  If any circles
+remain after Step 11, they will be unbreakable circles.  Steps 12 and 13
+below indirectly resolve such unbreakable circles. 
+
+An annotated example:
+
+        TURKEY
+        Fleet Constantinople to the Black Sea.
+        Fleet Ankara supports Fleet Constantinople to the Black Sea.
+        Fleet Bulgaria (east coast) to the Black Sea.
+        Fleet Armenia supports Fleet Bulgaria (e.c.) to the Black Sea.
+        Fleet Naples to the Tyrrhenian Sea.
+        Fleet Ionian Sea supports Fleet Naples to the Tyrrhenian Sea. 
+
+        RUSSIA
+        Army Rumania to Ankara.
+        Fleet Black Sea convoys Army Rumania to Ankara.
+        Fleet Livonia supports German Fleet Baltic Sea to hold.
+
+        AUSTRIA
+        Fleet Albania to the Adriatic Sea.
+        Fleet Trieste supports Fleet Albania to the Adriatic Sea.
+
+        ITALY
+        Army Apulia to Trieste.
+        Fleet Adriatic Sea convoys Army Apulia to Trieste.
+        Army Rome to Tunis.
+        Fleet Tyrrhenian Sea convoys Army Rome to Tunis.
+        Fleet Tuscany supports Fleet Tyrrhenian Sea to hold.
+
+        ENGLAND
+        Fleet Yorkshire to the North Sea.
+        Fleet London supports Fleet Yorkshire to the North Sea.
+        Fleet Irish Sea to the English Channel.
+        Army North Africa to Tuscany.
+        Fleet Western Mediterranean convoys Army North Africa to Tuscany.
+        Fleet Gulf of Lyon convoys Army North Africa to Tuscany.
+        Fleet Tunis supports Fleet Western Mediterranean to hold.
+
+        FRANCE
+        Army Picardy to London.
+        Fleet English Channel convoys Army Picardy to London.
+        Fleet Belgium supports Fleet English Channel to hold.
+        Fleet Marseilles to the Gulf of Lyon.
+        Fleet Spain (south coast) supports Fleet Marseilles to Lyon.
+
+        GERMANY
+        Army Norway to Belgium.
+        Fleet North Sea convoys Army Norway to Belgium.
+        Army Sweden to Livonia.
+        Fleet Baltic Sea convoys Army Sweden to Livonia.
+
+        GM'S CONVOY LIST
+        Rumania:    Black Sea.        [subverts itself]   [Confused]
+        Apulia:     Adriatic Sea.     [subverts itself]   [merely subvtd.]
+        Rome:       Tyrrhenian Sea.   [had subvtd. NAf.]
+        N.Afr.:     W.Med.; Lyon.     [had subvtd. Rome]  [Futile]
+        Picardy:    English Channel.  [subverts Norway]   [Indomitable]
+        Norway:     North Sea.        [had subvtd. Pic.]  [merely subvtd.]
+        Sweden:     Baltic Sea.       [had subvtd. self]  [Indomitable]
+
+Step 10 finds five circles of subversion: Rumania; Apulia; 
+Rome-North-Africa; Picardy-Norway; Sweden.  It cannot find any chinks in
+the Rumania and Apulia circles, but it can and does find Futile or
+Indomitable convoys in each of the Rome-North-Africa, Picardy-Norway and
+Sweden circles.  We will not expect this Step 11 to do anything with the
+former two circles, but we will expect it fully to resolve the latter
+three.  Step 11 notes that Step 10 has indeed broken some circles, so it
+sends us up to the top of Step 5 to begin cleaning the broken circles up.
+
+Step 5 finds Rumania, Apulia and Norway to remain subverted.  North
+Africa, Picardy and Sweden escape subversion because Futile and
+Indomitable convoys cannot be subverted.  Rome escapes subversion only
+because North Africa, being Futile, cannot subvert it.  (Were there no
+French Fleet Spain, then North Africa, being Indomitable, could indeed
+subvert Rome.  Rome would then be Confused.)  Steps 6 and 7 disrupt North
+Africa, striking North Africa from the convoy list.  Steps 6 and 7 try to
+disrupt Picardy and Rome, too, but fail.  Since Picardy, Rome and Sweden
+are neither subverted nor Futile, Step 8 lets Army Picardy cut Fleet
+London's support, lets Army Rome cut Fleet Tunis' support and lets Army
+Sweden cut Fleet Livonia's support.  Step 9 loops back to the top of Step
+5.
+
+Step 5 finds only Rumania and Apulia to remain subverted.  Norway escapes
+subversion because its formerly vulnerable support in London has now been
+cut.  Steps 6 and 7 try and fail to disrupt Norway.  Since Norway is
+neither subverted nor Futile, Step 8 lets Army Norway cut Fleet Belgium's
+support.  Step 9 loops back to the top of Step 5. 
+
+Step 5 finds only Rumania and Apulia to remain subverted.  Steps 6, 7 and
+8 can do nothing.  Step 9 observes that the 5-6-7-8-9 loop has now
+evidently done all it can do, so it breaks out of the loop and proceeds
+directly to the top of Step 12.
+
+Notice how this Step 11 has exploited the chinks in the Picardy-Norway and
+Rome-North-Africa circles to break them open and resolve them. 
+
+A second annotated example:
+
+        FRANCE
+        Army Wales to Brest.
+        Fleet English Channel convoys Army Wales to Brest.
+        Fleet Belgium supports Fleet English Channel to hold.
+        Army Gascony to Edinburgh.
+        Fleet Mid-Atlantic convoys Army Gascony to Edinburgh.
+        Fleet North Atlantic convoys Army Gascony to Edinburgh.
+        Fleet Norwegian Sea convoys Army Gascony to Edinburgh.
+
+        GERMANY
+        Army Norway to Belgium.
+        Fleet North Sea convoys Army Norway to Belgium.
+
+        ENGLAND
+        Fleet Yorkshire to the North Sea.
+        Fleet Edinburgh supports Fleet Yorkshire to the North Sea.
+        Fleet Picardy to the English Channel.
+        Fleet Irish Sea to the Mid-Atlantic.
+        Fleet Brest supports Fleet Irish Sea to the Mid-Atlantic.
+
+        ITALY
+        Fleet North Africa to the Mid-Atlantic. 
+        Fleet Western Med. supports Fleet N. Africa to the Mid-Atlantic.
+
+        GM'S CONVOY LIST
+        Wales:      English Channel.  [subverts Gascony]  [Indomitable]
+        Gascony:    MAt; NAt; Nwg.    [subverts Norway]   [Confused]
+        Norway:     North Sea.        [had subvtd. Wal.]  [merely subvtd.]
+
+Step 10 finds the one large Wales-Gascony-Norway circle of subversion.  It
+finds a chink in the circle at Wales, finding that convoy Indomitable.  We
+will therefore expect this Step 11 fully to resolve the circle.  Step 11
+notes that Step 10 has indeed broken a circle, so it sends us up to top of
+Step 5 to begin cleaning the broken circle up. 
+
+Step 5 finds Gascony and Norway to remain subverted.  Wales escapes
+subversion because Indomitable convoys cannot be subverted.  Steps 6 and 7
+let the English Fleet Picardy try and fail to disrupt the Wales convoy,
+but, because Gascony and Norway remain subverted, Steps 6 and 7 cannot yet
+resolve the attacks against the Mid-Atlantic and the North Sea.  Since
+Wales is neither subverted nor Futile, Step 8 lets the French Army Wales
+cut the English support at Brest.  Step 9 loops back to the top of Step 5. 
+
+Step 5 finds only Norway to remain subverted.  Gascony escapes subversion
+because its formerly vulnerable support at Brest has now been cut.  Steps
+6 and 7 let the Italian attack disrupt the now-unsubverted Gascony convoy.
+Since the Gascony convoy has now been disrupted, Step 8 cannot let Army
+Gascony cut any support.  Step 9 loops back to the top of Step 5.
+
+Step 5 finds no convoy to remain subverted.  Norway escapes subversion
+because its formerly vulnerable support at Edinburgh is now no longer
+under convoyed attack.  Steps 6 and 7 let the English Fleet Yorkshire
+disrupt the now-unsubverted Norway convoy.  Step 8 therefore refuses to
+let Army Norway cut Fleet Belgium's support.  Step 9 loops back to the top
+of Step 5. 
+
+Step 5 finds no convoy to remain subverted.  Steps 6 and 7 can no longer
+find any unsubverted convoy to disrupt.  Step 8 can do nothing.  Step 9
+observes that the 5-6-7-8-9 loop has now evidently done all it can do, so
+it breaks out of the loop and proceeds directly to the top of Step 12. 
+
+Notice how this Step 11 has exploited the chink in the
+Wales-Gascony-Norway circle to break it open and to pry one convoy at a
+time off the broken end, thus to clean the entire circle up.  Notice also
+how the procedure could not tell the fate of the Belgian support until the
+procedure had travelled all the way around the circle, so to speak -- but
+how this was okay because, as it happened, the Belgian support didn't
+matter, anyway.  Had the support mattered, there would have been no chink;
+Step 11 would not have been able to touch the circle, which would have had
+to wait for Step 13 indirectly to resolve it. 
+
+Step 13 extends this second example.
+
+                                 *  *  *
+
+12.  Resolve unconfused circles of subversion. 
+
+If all a circle's convoys remain subverted, but none of the circle's
+convoys is Confused (see Step 10), then this Step 12 resolves the impasse
+by letting all the circle's convoys be disrupted.  Cancel the convoyed
+move of every convoy in the circle.  Then, among the fleets of the
+circle's convoys, identify all the convoying fleets that are under attack. 
+Resolve the set of attacks against each of the convoying fleets, according
+to the standard instructions for resolving attacks, given in Step 19
+below.  Then strike all the circle's convoys from the convoy list. 
+
+Working on Step 10's (not Step 11's) second example, this Step 12 finds
+three unbreakable circles of subversion: Rumania; Apulia; Picardy-Norway.
+The Rumania and Picardy-Norway circles both contain Confused convoys, so
+this Step 12 addresses only the Apulia circle.  It cancels the Italian
+Army Apulia's move, lets the Austrian Fleet Albania dislodge the Italian
+Fleet Adriatic, and strikes the Apulia convoy from the convoy list. 
+
+                                 *  *  *
+
+13.  Resolve confused circles of subversion. 
+
+If all a circle's convoys remain subverted, and one or more of the
+circle's convoys is Confused (see Steps 10 and 12), then this Step 13
+resolves the impasse as a grand standoff.  Cancel the convoyed move of
+every convoy in the circle.  Cancel also all attacks against the circle's
+convoying fleets.  Then strike all the circle's convoys from the convoy
+list.
+
+Working further on Step 10's second example, this Step 13 finds two
+remaining circles of subversion: Rumania; Picardy-Norway.  It cancels the
+moves of the Russian Army Rumania, the French Army Picardy and the German
+Army Norway, then cancels the attacks by the Turkish Fleets Constantinople
+and Bulgaria (east coast) and the English Fleets Irish Sea and Yorkshire,
+then strikes all three convoys from the convoy list.  The Ankara, London
+and Belgium supports survive uncut.  It's a grand stand-off: the convoying
+fleets survive undislodged but the vulnerable supports are not cut and the
+convoys do not go through. 
+
+Shifting our attention to Step 11's second example and adding the
+following fleet to that example yields the convoy list below: 
+
+        ENGLAND
+        Fleet London supports Fleet Picardy to the English Channel.
+
+        GM'S CONVOY LIST
+        Wales:      English Channel.  [subverts Gascony]  [Confused]
+        Gascony:    MAt; NAt; Nwg.    [subverts Norway]   [Confused]
+        Norway:     North Sea.        [subverts Wales]    [merely subvtd.]
+
+This Step 13 finds the one large Wales-Gascony-Norway circle of
+subversion.  As the reader may verify, Step 11 above is unable to crack
+this circle.  Step 12 cannot resolve it because it includes Confused
+convoys.  This Step 13 therefore cancels the moves of all three convoyed
+armies, but also cancels the attacks by the Italian Fleet North Africa and
+the English Fleets Irish Sea, Yorkshire and Picardy.  It then strikes all
+three convoys from the convoy list.  The Brest, Edinburgh and Belgium
+supports survive uncut.
+
+                                 *  *  *
+
+Steps 4 and 8 are the only chances to cut support simply by attacking the
+supporter.  Thus, any supports that remain intact at this point in the
+procedure are safe from being cut, unless and until the supporter actually
+gets dislodged (which could happen in Step 19 below).
+
+Steps 1 through 13, in addition to being concerned with the cutting of
+supports, have largely been concerned with the proper handling of convoy
+situations.  In the steps below, the convoying fleets themselves don't
+really matter any longer; the convoys have gone through, so to speak, and,
+if any convoying fleet were going to be dislodged or any convoy were going
+to be cancelled, it would have been, already, in Steps 6 and 7 (or
+possibly 12 and 13) above.  Note that this does not mean that the convoyed
+attacks necessarily will succeed; they can still be stood off, just as any
+attack can be.  If stood off, a convoyed attacker is stood off all the way
+back to the land province it came from. 
+
+(It is interesting to notice the progression in Steps 1 through 13 above
+-- how the steps generally have dealt with progressively unlikelier convoy
+scenarios, until finding the last possible scenario in Step 13, a scenario
+so unlikely that the chance the reader ever will see it arise naturally in
+a game seems small.  Steps 14 through 20 below, by contrast, will be seen
+to follow an opposite progression in movement and combat scenarios; the
+steps generally will deal with progressively likelier movement and combat
+scenarios, until finding in Steps 18 through 20 the general scenario that
+almost certainly occurs every season.) 
+
+                                 *  *  *
+
+14.  Let rings of attack advance.
+
+What is a ring of attack?  A ring of attack is three or more units, each
+attacking the next, to form a closed circle of attack.  An example: 
+
+        GERMANY
+        Army Munich to Bohemia.
+
+        AUSTRIA
+        Army Bohemia to Tyrolia.
+        Army Tyrolia to Munich.
+
+Two units may form a ring of attack, but only if at least one of the two
+attacks by convoy; otherwise, it's not a ring but just an ordinary
+head-to-head battle. 
+
+Ordinarily, all the units in a ring of attack just advance, but an extra
+attacker can interfere, breaking the ring.  Let's add an extra attacker to
+our example: 
+
+        ITALY
+        Army Venice to Tyrolia.
+
+Handle each ring of attack in the following way -- 
+
+First identify all the target spaces in the ring where an extra attacker
+interferes.  (In our example, Tyrolia is the only interference space.) 
+Cancel all but the single strongest attack against each interference
+space.  Where two attacks tie for strongest, cancel all the attacks -- and
+make a note that the target space was the site of a standoff on the move. 
+
+If the ring of attack has survived intact, with all the ring's attacks
+surviving any interference, then let all the ring's attackers advance in
+their ring now.  If interference has broken any part of the ring, though,
+then do nothing further with the ring at this time; the broken ring is
+indeed no longer a ring. 
+
+In our example, both attacks against Tyrolia (Austrian Army Bohemia to
+Tyrolia; Italian Army Venice to Tyrolia) get cancelled.  No one interferes
+with the other two attacks (Austrian Army Tyrolia to Munich; German Army
+Munich to Bohemia); they both survive this Step 14.  But the interference
+has broken the ring, so we do nothing further with the ring at this time;
+we expect Steps 18 and 19 below to resolve the two surviving attacks. 
+
+Let's add a fifth unit to our example: 
+
+        AUSTRIA
+        Army Trieste supports Army Bohemia to Tyrolia.
+
+What do we do now?  Since the Austrian Army Bohemia now has the single
+strongest attack on Tyrolia, we cancel only the interfering Venetian
+attack.  The ring has survived intact, so we just let all three of the
+ring's attackers advance at this time. 
+
+                                 *  *  *
+
+The instructions for the final six steps, below, are technical and dense,
+but particularly important to understand correctly.  Five thorough
+examples are provided, one for Step 17 alone, two for Steps 15 through 17
+together, one for Step 18 alone, and one for Steps 18 through 20 together. 
+It is strongly suggested that the first-time reader of this Technical
+Guide actually set the pieces up on his game board and play through the
+examples; failure to do so is likely to lead only to confusion.  It is
+also suggested that the first-time reader learn Steps 18 through 20 first,
+and then return to learn Steps 15 through 17.  Of course, if the reader
+has not yet read and understood his rulebook, then he will want to do that
+first, for, without that background, he cannot reasonably expect to
+understand correctly this Technical Guide.
+
+                                 *  *  * 
+
+15.  Identify head-to-head battles.
+
+Two units, each attacking the other directly, without convoy, make a
+head-to-head battle.  If outside attackers attack either or both of the
+two head-to-head units, then they are part of the battle, too.
+
+Make a list of all the head-to-head battles on the board.  Note on the
+list, for each of the battles, whether the battle is balanced or
+unbalanced. 
+
+What, precisely, makes a head-to-head battle balanced or unbalanced? 
+
+A head-to-head battle is balanced if the two head-to-head units each
+attack the other with equal strength, or if they are countrymen (that is,
+if both belong to the same Great Power).  Otherwise, with one possible
+exception, the head-to-head battle is unbalanced.  The one exception:
+support given by the weaker unit's countrymen to the stronger unit's 
+attack cannot unbalance the battle.
+
+(If this seems confusing, then here's how it all looks from a player's
+point of view.  If you provide support for an attack on your own
+countryman, that support will be counted only up to the point where it
+balances the battle.  You can never unbalance a battle against your own
+countryman.  In other words, you can never dislodge, or provide useful
+support for someone else to dislodge, one of your own units.)
+
+An example: 
+
+        AUSTRIA
+        Fleet Ionian Sea to the Aegean Sea.
+        Fleet Eastern Mediterranean supports Fleet Ionian to the Aegean.
+        Fleet Adriatic Sea supports Turkish Fleet Aegean to the Ionian.
+        Fleet Albania supports Turkish Fleet Aegean to the Ionian.
+        Fleet Greece supports Turkish Fleet Aegean to the Ionian.
+
+        TURKEY
+        Fleet Aegean Sea to the Ionian Sea.
+        Fleet Smyrna supports Austrian Fleet Ionian to the Aegean.
+        Fleet Constantinople to the Aegean Sea.
+
+        ITALY
+        Fleet Naples to the Ionian Sea.
+        Fleet Apulia supports Fleet Naples to the Ionian.
+        Fleet Tyrrhenian Sea supports Fleet Naples to the Ionian.
+        Fleet Tunis supports Fleet Naples to the Ionian.
+
+        RUSSIA
+        Fleet Black Sea to Constantinople.
+
+The Turkish attack beats the Austrian attack four to three -- but the
+Turkish attack has Austrian support, without which it could not beat the
+Austrian attack.  The battle therefore balances three to three.  Is the
+Turkish attack therefore only three strong?  No.  Even though the Austrian
+supporters refuse to unbalance the battle against their own Austrian
+countryman, they still make the Turkish attack fully four strong -- strong
+enough to stand the Italian attack off in Steps 16 and 17 below. 
+
+(It is instructive to note that, had Fleets Greece and Albania been French
+rather than Austrian, the battle would still have balanced three to three.
+But had Fleet Adriatic Sea been French, too, then the battle would have
+unbalanced four to three, in favor of the Turkish attack.  Had the two
+head-to-head Fleets Aegean Sea and Ionian Sea both been Turkish, though,
+then the battle would have balanced regardless of the number and country
+of the supports.)
+
+The two outside attacks, by the Italian Fleet Naples and the Turkish Fleet
+Constantinople, have no influence on whether we classify the battle as
+balanced or unbalanced, but they do indeed belong to the battle and may
+very well, as we shall see, have an important effect on the battle's
+outcome.  The head-to-head battle excludes the Russian attack, though,
+since its target Constantinople is neither of the battle's two
+head-to-head spaces (the Russian attack, just as any other ordinary
+attack, must wait for Steps 18 and 19 to resolve it).
+
+Step 16 below will resolve the unbalanced battles; Step 17 below, the
+balanced. 
+
+                                 *  *  *
+
+16.  Resolve unbalanced head-to-head battles.
+
+Begin an unbalanced head-to-head battle by resolving the attacks against
+the weaker head-to-head unit's space, per the standard instructions given
+in Step 19 below.  Let all attacks against the weaker unit's space join in
+the fight, including any outside attacks.  Let the defender receive no
+support to hold.  If the head-to-head attack beats the outside attacks,
+and then also beats the defense, then let the head-to-head attacker
+advance, dislodging the defender and cancelling the defender's move order;
+the head-to-head battle is over (if there are any outside attacks against
+the now-empty space the head-to-head attacker started from, then Steps 18
+and 19 below will handle them, but the dislodged head-to-head defender
+will take no part in that battle and will have no effect at all on the
+now-empty space). 
+
+However, if the defender survives undislodged, or if it is dislodged by an
+outside attack, then proceed to resolve the attacks against the stronger
+head-to-head unit's space, per the standard instructions given in Step 19
+below.  Let all attacks against the stronger's space join in the fight,
+including any outside attacks.  Let the weaker head-to-head unit join in
+the fight, even if the weaker has been dislodged.  Let the stronger, now
+the defender, receive no support to hold.  If the weaker, now an attacker,
+has strength sufficient to stand all other attacks against the stronger's
+space off, then cancel all attacks against the stronger's space; let the
+stronger survive undislodged.  (In fact, even if the weaker has strength
+sufficient to dislodge the stronger, still cancel even the weaker's
+attack, and still let the stronger hold safely; the weaker head-to-head
+unit in an unbalanced battle cannot ever dislodge the stronger, no matter
+how strong the weaker's attack.)  If an outside attack beats all other
+attacks against the stronger's space, though, and then also beats the
+defense, then let the outside attack advance normally, dislodging the
+defense. 
+
+(The weaker head-to-head unit in an unbalanced head-to-head battle is
+never permitted to dislodge the stronger.  Does this mean that the
+weaker's attack is meaningless?  No.  The weaker's attack may suffice to
+stand off an outside attack, saving the stronger from dislodgement.  This
+is true even if the weaker has been dislodged by an outside attack.  If,
+however, the weaker has been dislodged by the stronger's attack, then the
+weaker's attack is indeed rendered meaningless; it has no effect
+whatsoever on the space the stronger attacked from.) 
+
+                                 *  *  *
+
+17.  Resolve balanced head-to-head battles.
+
+Balanced head-to-head battles go a little differently than unbalanced
+ones.  The key to understanding the balanced head-to-head battle is to
+understand that neither of the two head-to-head units may move.  (Does
+this mean that the two head-to-head attacks have no effect?  On the
+contrary.  Either head-to-head attack, or both, may save its target from
+outside dislodgement.)
+
+Divide a balanced head-to-head battle into two halves: one half including
+the attacks against one head-to-head space; the other half including the
+attacks against the other head-to-head space.  Let each half's defender
+hold without any support to hold. 
+
+An example of a balanced head-to-head battle:
+
+        AUSTRIA
+        Army Galicia to Warsaw.
+
+        RUSSIA
+        Army Warsaw to Galicia.
+
+        TURKEY
+        Army Rumania to Galicia.
+
+        ENGLAND
+        Army Livonia to Warsaw.
+
+        GERMANY
+        Army Prussia to Warsaw.
+        Army Silesia supports Army Prussia to Warsaw.
+
+One half of the battle:
+
+        RUSSIA
+        Army Warsaw holds.
+
+        AUSTRIA
+        Army Galicia to Warsaw.
+
+        ENGLAND
+        Army Livonia to Warsaw.
+
+        GERMANY
+        Army Prussia to Warsaw.
+        Army Silesia supports Army Prussia to Warsaw.
+
+The other half of the battle:
+
+        AUSTRIA
+        Army Galicia holds.
+
+        RUSSIA
+        Army Warsaw to Galicia.
+
+        TURKEY
+        Army Rumania to Galicia.
+
+Resolve each half of a balanced head-to-head battle separately, according,
+with one exception, to the standard instructions given in Step 19 below.
+The one exception: where the single strongest attack in a half-battle is
+the head-to-head attack, cancel even the head-to-head attack; the defender
+is safe.  Neither head-to-head attacker in a balanced battle may dislodge
+the other. 
+
+In the example, the Austrian attack is not strong enough to stop the
+German attack from dislodging the Russian Army Warsaw.  The German
+advances into Warsaw; no one else moves.
+
+                                 *  *  *
+
+In our example head-to-head battle given in Step 15 (not Step 17) above,
+in the half-battle over the Aegean Sea, the Austrian head-to-head attack
+beats the outside attack from Constantinople three to one, then beats the
+defense in the Aegean Sea two to one (not three to one; while the Turkish
+support does count against the outside Turkish attack from Constantinople,
+it does not count against the Turkish defense in the Aegean Sea).  Because
+the battle is balanced, though, the Austrian may not advance in truth, and
+the Turk is not dislodged.  Only if the battle were unbalanced in the
+Austrian's favor would the Austrian have a chance to advance. 
+
+In the half-battle over the Ionian Sea, the Turkish head-to-head attack
+and the outside Italian attack stand one another off four to four, leaving
+the Austrian defender untouched.  (It is instructive to note that, had the
+Italian Fleet Tunis, instead of supporting the main Italian attack, made
+its own attack against the Ionian Sea, then the Turkish head-to-head
+attack would have beaten the pair of outside Italian attacks four to three
+to one, yet still would have failed one to one to beat the Austrian
+defense in the Ionian Sea.  Not that it would have mattered: since the
+battle is balanced, the Turk would not have been allowed to advance,
+anyway.  Had the Austrian Fleets Albania and Greece simply held, however
+-- had only the Austrian Fleet Adriatic Sea supported the Turkish attack
+against the pair of outside Italian attacks -- then the head-to-head
+battle would have balanced two to two, but the outside Italian attack from
+Naples would have beat the rival Turkish and Italian attacks three to two
+to one, and then would have overcome the Austrian defense in the Ionian
+Sea three to one.  The Italian Fleet Naples would then have advanced in
+truth, dislodging the Austrian defense.)
+
+A second example may help further to illustrate the head-to-head battle: 
+
+        GERMANY
+        Fleet Denmark to the North Sea.
+        Fleet Helgoland Bight supports Fleet Denmark to the North Sea.
+
+        FRANCE
+        Fleet Belgium to the North Sea.
+        Fleet Holland supports Fleet Belgium to the North Sea.
+        Fleet English Channel supports Fleet Belgium to the North Sea.
+
+        ENGLAND
+        Fleet North Sea to Denmark.
+        Fleet Skagerrak supports Fleet North Sea to Denmark.
+
+        RUSSIA
+        Army Livonia to Denmark.
+        Fleet Baltic Sea convoys Army Livonia to Denmark.
+        Army Sweden supports Army Livonia to Denmark.
+
+The head-to-head battle is balanced two to two.  The French attack beats
+the German attack three to two, then advances into the North Sea three to
+one against the English defense.  The Russian attack, by itself, would now
+beat the German defense two to one, advancing into Denmark -- except that
+the dislodged English fleet's attack still counts; it stands the Russian
+attack off, two to two, thus saving the German Fleet Denmark from
+dislodgement. 
+
+(It is instructive to note that, had the French Fleet English Channel
+supported the German move from Denmark to the North Sea, the battle would
+have turned out rather differently.  The head-to-head battle would have
+unbalanced three to two in the German's favor.  The German attack on the
+North Sea would have beat the French attack on the North Sea three to two,
+then advanced, dislodging the English fleet there three to one.  What is
+more, the German advance would have cancelled the English attack on
+Denmark, leaving Denmark completely open for the Russian to convoy into,
+unopposed, in Step 19 below.) 
+
+This concludes the matter of head-to-head battles. 
+
+                                 *  *  * 
+
+18.  List targets of attack. 
+
+(A thorough example illustrating Steps 18 through 20 is provided at the
+end of Step 20's instructions.  Feel free to refer to it.) 
+
+Make a target list of all spaces under attack.  Consider only attacks that
+remain as yet unresolved; that is, ignore moves that already have advanced
+or that we already have cancelled.  List the target spaces whether they
+are empty or occupied, whether they are each the targets of one move or
+several.  However, strike from the list, at least for now, any space where
+there's a unit trying to move out of the space (Step 20 will eventually
+deal with the occupied space, but we've got to give the occupying unit a
+fair chance to move out of there before we prosecute the attack against
+it). 
+
+An example: 
+
+        ITALY
+        Army Rome to Venice.
+        Army Venice to Trieste.
+        Fleet Naples to the Ionian Sea.
+
+        AUSTRIA
+        Army Vienna to Trieste.
+        Army Budapest supports Army Vienna to Trieste.
+        Fleet Trieste to Albania.
+
+        RUSSIA
+        Army Norway holds.
+
+        ENGLAND
+        Fleet North Sea to Norway.
+
+        GERMANY
+        Fleet Helgoland Bight to the North Sea.
+        Fleet Denmark supports Fleet Helgoland Bight to the North Sea.
+
+There are six target spaces: Venice, Trieste, the Ionian Sea, Albania,
+Norway and the North Sea.  Three of the six, however -- Venice, Trieste
+and the North Sea -- contain units with unresolved orders to move, so we
+strike those three spaces from the target list for now, leaving only the
+Ionian Sea, Albania and Norway.  Does this mean that the attacks against
+Venice, Trieste and the North Sea will never be resolved?  No; they'll
+eventually be resolved -- Step 20 will see to that -- but we cannot
+resolve them properly, can we, until we know whether Venice, Trieste and
+the North Sea are going to be empty or occupied! 
+
+Step 19 below will resolve the attacks against the three listed spaces: 
+the Ionian Sea, Albania and Norway.  Then Step 20 will send us back here
+to Steps 18 and 19, to list Trieste and the North Sea, and then to resolve
+the attacks against those spaces.  Then Step 20 will send us back here to
+Steps 18 and 19, again, to list Venice, and then to resolve the attack
+against that space.  So we must run three times through the 18-19-20 loop,
+in this example, to complete the adjudication.  This is the correct order
+of things, ensuring that every attack has its proper resolution in turn. 
+
+                                 *  *  *
+
+19.  Fight ordinary battles.
+
+For each space on the target list --
+
+Identify the single strongest attack against the target space -- that is,
+the attack with the most support to move.  (Where there is only one
+attack, that one, naturally, is the single strongest.) 
+
+Cancel all attacks against the target but the single strongest. 
+
+Where two or more attacks tie for strongest, no attack is single
+strongest, so cancel all the attacks, strong and weak.  If the target
+space is occupied, then simply let the occupying defender hold.  If the
+target space is empty, then leave it empty, and make a note that the space
+was left vacant due to a standoff on the move (at retreat time, we'll need
+to remember that there was a standoff here).
+
+If a countryman of the single strongest attacker -- that is, a unit
+belonging to the same Great Power the attacker belongs to -- occupies the
+target space, then cancel even the one attack; the defender is safe.  No
+attacker may dislodge a countryman. 
+
+If the target space is empty, then simply let the single strongest
+attacker, if there is one, advance.
+
+If a unit foreign to the single strongest attacker occupies the target
+space, then ask, is the one attack stronger than the defense? -- that is,
+does the one attack have more support to move than the defense has support
+to hold?  If the one attack is stronger than the defense, then, with one
+possible exception (we'll discuss this in a moment), let the attack
+advance, dislodging the defense.  If the one attack is merely equal,
+though, or if it is weaker, then let the defense hold safely; cancel even
+the one attack.
+
+The one exception: when the defender's own countryman supports the single
+strongest attack, this support does not count against the defense; it
+counts only against other attackers in the struggle for single strongest
+attack.  No supporter may directly help to dislodge its own countryman. 
+(The converse, though, does not apply.  Support to the defense counts
+regardless of country.) 
+
+No dislodged unit can ever give support; therefore, if a dislodged
+defender happens to be giving any support to anyone, cut that support now. 
+
+                                 *  *  *
+
+20.  Return to Step 18 if any attacks remain unresolved.
+
+If any move on the board remains unresolved, then return to the top of
+Step 18 now, to repeat Steps 18 and 19.  Perform the 18-19-20 loop as many
+times as needed to resolve all the moves on the board.  Notice that,
+because Step 14 above has either resolved or broken any rings of attack,
+and because Steps 15, 16 and 17 above have resolved any head-to-head
+battles, the 18-19-20 loop is guaranteed to resolve all the moves on the
+board within a finite number of iterations. 
+
+                                 *  *  *
+
+A thorough example illustrating Steps 18 through 20 might be helpful.  Get
+your game board out and set this one up: 
+
+        TURKEY
+        Fleet Tunis holds.
+
+        AUSTRIA
+        Fleet Western Mediterranean to Tunis.
+        Army North Africa supports Fleet Western Mediterranean to Tunis.
+        Fleet Ionian Sea supports Turkish Fleet Tunis to hold.
+
+        ITALY
+        Fleet Tyrrhenian Sea to the Western Mediterranean.
+        Army Marseilles supports French Fleet Gascony to Spain.
+
+        FRANCE
+        Fleet Spain (south coast) to the Western Mediterranean.
+        Fleet Mid-Atlantic supports Fleet Spain (south coast) to W. Med.
+        Fleet Gulf of Lyon supports Italian Fleet Tyrrhenian to W. Med.
+        Fleet Gascony to Spain (north coast).
+
+        GERMANY
+        Fleet Bothnia supports English Army Finland to St. Petersburg.
+        Army Prussia to Warsaw.
+        Army Silesia supports Army Prussia to Warsaw.
+        Army Berlin to Prussia.
+
+        RUSSIA
+        Army Warsaw holds.
+        Fleet St. Petersburg (south coast) to the Gulf of Bothnia.
+        Fleet Barents Sea supports English Army Finland to St. Petersburg.
+        Army Livonia to St. Petersburg.
+        Army Moscow supports Army Livonia to St. Petersburg.
+
+        ENGLAND
+        Army Finland to St. Petersburg.
+        Fleet Skagerrak to Sweden.
+
+In the example, before we even reach Step 18, the Russian Fleet St. 
+Petersburg has tried up in Step 4 to cut the support given by the German
+Fleet Gulf of Bothnia, but the German support remains intact because it
+supports an attack against St. Petersburg itself. 
+
+We begin Step 18 by listing target spaces: Sweden, Warsaw, Prussia, Tunis,
+the Western Mediterranean, Spain, the Gulf of Bothnia and St. Petersburg.
+Because Prussia, the Western Mediterranean, Spain and St. Petersburg each
+contain a unit with an unresolved order to move, we remove these four
+spaces from the target list, leaving only Sweden, Warsaw, Tunis and the
+Gulf of Bothnia on the list.  We proceed now, with Step 19, to resolve the
+attacks against each of the four target spaces that remain on the list. 
+
+Sweden:  The English attack is the single strongest attack against Sweden
+(in fact, it is the only attack against Sweden).  Since Sweden is empty,
+we just let the attacker advance. 
+
+Warsaw:  The German attack is the single strongest attack against Warsaw
+(in fact, it is the only attack against Warsaw).  As single strongest
+attack, it beats the Russian defense two to one, advancing into Warsaw and
+dislodging the defense.
+
+Tunis:  The Austrian attack is the single strongest attack against Tunis
+(in fact, it is the only attack against Tunis).  As single strongest
+attack, it fails two to two to beat the Turkish defense.  The Turkish
+defender holds safely.  The Austrian attacker is left standing, without
+any support to hold, in the Western Med.
+
+The Gulf of Bothnia:  The Russian attack is the single strongest attack
+against the Gulf of Bothnia (in fact, it is the only attack against the
+Gulf of Bothnia).  As single strongest attack, it fails one to one to beat
+the German defense.  The Russian attacker is left standing, without any
+support to hold, in St. Petersburg, on the south coast. 
+
+We have now exhausted our target list, so we proceed to Step 20 where we
+observe that several attacks still remain unresolved.  We loop back,
+accordingly, to the top of Step 18. 
+
+We begin Step 18 again as before, listing target spaces: Prussia, the
+Western Mediterranean, Spain and St. Petersburg.  Because Spain still
+contains a unit with an unresolved order to move, we remove that space
+from the target list, leaving only Prussia, the Western Mediterranean and
+St. Petersburg on the list.  We proceed now, with Step 19, to resolve the
+attacks against each of the three target spaces that remain on the list. 
+
+Prussia:  The German attack is the single strongest attack against Prussia
+(in fact, it is the only attack against Prussia).  Since Prussia is empty,
+we just let the attacker advance.
+
+The Western Mediterranean:  The Austrian fleet here has failed in an
+attempt to move, so must now attempt to hold without support.  There are,
+however, not one but two attacks against the space.  The two attacks tie
+for single strongest, two to two.  Either attack, by itself, would have
+dislodged the Austrian fleet two to one, but, since neither attack is
+single strongest, we cancel them both.  The Austrian defender holds
+safely, never having actually had to defend.  (It is instructive to note,
+however, that, had the Austrian defender been trying to give support
+rather than to move, then the support would not have survived Step 4
+above.  Either or both attacks would have cut it.) 
+
+St. Petersburg:  The English attack from Finland beats the Russian attack
+from Livonia three to two, so we cancel the Russian attack, leaving only
+the English attack as single strongest.  The support by the Russian Fleet
+Barents Sea to the English attack did indeed count against the rival
+Russian attack from Livonia, but it does not count against the Russian
+defense in St. Petersburg.  Still, with the help of the German support,
+the English attack succeeds, advancing against the defense two to one. 
+(It is instructive to note that, had there been one additional unit in the
+example -- Russian Fleet Baltic Sea supports Fleet St. Petersburg (south
+coast) to the Gulf of Bothnia -- then the Russian Fleet St. Petersburg
+would have advanced into the Gulf of Bothnia, dislodging the German fleet
+there and cutting the German support.  Then the English attack on St. 
+Petersburg would merely have stood off the Russian attack on that space,
+two to two, leaving St. Petersburg an empty standoff zone.) 
+
+We have now exhausted our target list, so we proceed to Step 20 where we
+observe that the attack on Spain still remains unresolved.  We loop back,
+accordingly, to the top of Step 18. 
+
+We begin Step 18 again as before, listing the target spaces: this time,
+Spain only.  We proceed, with Step 19, to resolve the attack against that
+one space. 
+
+Spain:  The French fleet here has failed in an attempt to move, so must
+now attempt to hold without support.  The attack from Gascony is the
+single strongest (and, in fact, the only).  Fleet Gascony would advance
+two to one, except that the defender in Spain is a countryman.  We simply
+cancel the attack, regardless of how strong it is.  (It is instructive to
+note that, had Army Marseilles been French rather than Italian and Fleet
+Gascony Italian rather than French, then the attack from Gascony would
+still have failed, but for a different reason.  The reason: the French
+support would not have counted against the French defense in Spain, so the
+Italian attack would have failed one to one.  Of course, had both Fleet
+Gascony and Army Marseilles been Italian, then the attack would have
+advanced two to one, dislodging the French defense.) 
+
+At this point, no attack remains unresolved, so that's the end of the
+procedure. 
+
+--------------------------------------------------------------------------
+
+IX.  THE SUPPORT ORDER
+
+As Chapter VII has noted, there exist two distinct kinds of support order: 
+the support to hold and the support to move.  A support order cannot be
+both; it must be one or the other. 
+
+A unit giving support, whether support to hold or to move, must have the
+ability to move without convoy to the target space for that support, if it
+were unopposed by other units; otherwise, the support is illegal.  (Coasts
+don't matter, only spaces.  Accordingly, though Fleet Spain (south coast) 
+could not support Fleet Gascony to hold, Fleet Gascony could indeed
+support Fleet Spain (south coast) to hold, or even support Fleet Portugal
+to move to the south coast of Spain.)  In a support to move, the target
+space is the space the mover moves to, not the space it moves from; thus,
+Army Moscow could support Army Warsaw to hold or Army Galicia to Warsaw,
+but could not support Army Warsaw to Galicia. 
+
+An order to support a hold names only the unit supporting and the unit
+supported; it does not say specifically what the unit supported is doing. 
+A hold-support can actually give support whether the supported unit holds,
+supports or convoys, so long as that unit does not attempt to move.  For
+example, the following suffices to support Fleet North Sea against attack,
+whether Fleet North Sea holds, supports or convoys: Fleet Edinburgh
+supports Fleet North Sea to hold.
+
+An order to support a move names the unit supporting, the unit moving and
+the target space of the move.  It does not say whether the move is direct
+or by convoy, though, nor does it name a target coast.  For example, the
+following suffices to support either a direct move or a move by convoy: 
+Fleet Gascony supports Army Marseilles to Spain.  And the following
+suffices to support a fleet moving to either coast: Fleet Gascony supports
+Fleet Portugal to Spain.  If a support tries to include information on
+convoys or coasts, then that is just extra information that the GM
+disregards.
+
+One cannot legally order a unit to support an illegal move; thus, one
+cannot legally order Army Ukraine to support Army Paris to Moscow. 
+
+Support may indeed be given to a foreign unit.  Examples: Russian Fleet
+Edinburgh supports French Fleet North Sea to hold; English Fleet Gascony
+supports Italian Army Marseilles to Spain. 
+
+No unit may support itself, neither to hold nor to move.  No unit may
+support an attack against itself, either (that is, Army Munich may not
+support Army Silesia to Munich). 
+
+Support may not be ordered at retreat time, only at movement time. 
+
+--------------------------------------------------------------------------
+
+X.  CUTTING SUPPORT
+
+This Technical Guide has much to say about the cutting of support, but all
+of that is said in Chapter VIII above.  The only additional remark would
+be that there is no support-cutting at retreat time, because there is no
+support at retreat time. 
+
+--------------------------------------------------------------------------
+
+XI.  RETREATS
+
+A dislodged unit may not retreat to any space which is occupied, nor to a
+space which was left vacant due to a standoff during that turn.  A unit
+dislodged by a direct, non-convoyed attack may not retreat to the space
+its attacker came from.  If no place is available for retreat, the
+dislodged unit is destroyed; its marker is removed from the board at the
+end of the move, before the players even write their retreats. 
+
+A player may choose to disband a unit, removing it from play, rather than
+to retreat it.  If two or more units are ordered to retreat to the same
+space, they are all disbanded.  Retreats may neither be convoyed nor
+supported. 
+
+Examples of retreat orders: Army Galicia retreats to Silesia; Fleet
+Mid-Atlantic retreats to Spain (south coast); Army Rome disbands. 
+
+--------------------------------------------------------------------------
+
+XII.  THE CONVOY ORDER
+
+Your rulebook explains the basic concept of the convoy; this chapter
+presumes that the basic concept is familiar to you. 
+
+An order to move by convoy names the army moving and the target land
+province, but does not mention any coasts; an example: Army Naples to
+Spain.  The order ordinarily need not specifically say that the move is by
+convoy; if, however, the target is adjacent, then the order must indeed
+specifically say, or the direct move is assumed; that is, if Army
+Rumania wishes to move to Sevastopol by convoy, then it must say so: Army
+Rumania to Sevastopol by convoy. 
+
+An order to convoy names the convoying fleet, the convoyed army and the
+target province of the army's move, but does not mention any coasts; an
+example: Fleet Gulf of Lyon convoys Army Naples to Spain.
+
+One can legally order neither an army to move by convoy nor a fleet to
+convoy if there exists no possible complete convoy chain to carry the army
+to its destination; thus, if the Skagerrak stands vacant, then one can
+legally order neither Army Sweden to move to Yorkshire nor Fleet North Sea
+to convoy Army Sweden to Yorkshire.  One cannot legally order a fleet to
+convoy if the fleet could not possibly take part in the convoy; thus, if
+the Western Mediterranean stands vacant, then one cannot legally order
+Fleet Mid-Atlantic to convoy Army Naples to Spain.  No convoy chain can
+pass through the same body of water twice; as a consequence, one can never
+legally order Fleet Irish Sea to convoy Army Naples to Spain.  One cannot
+legally order an army to move to the space it already occupies, neither
+directly nor by convoy. 
+
+Only fleets in bodies of water may convoy.  A fleet in a land province may
+not convoy, not even if the province is Denmark, Kiel or Constantinople. 
+
+A fleet may indeed convoy a foreign army; an example: German Fleet English
+Channel convoys English Army London to Picardy.  And two or more fleets
+need not be countrymen to form a convoy chain together; an example:
+Austrian Fleet Tyrrhenian Sea convoys Italian Army Naples to Spain;
+Italian Fleet Gulf of Lyon convoys Army Naples to Spain. 
+
+There are neither convoys nor moves by convoy at retreat time, only at
+movement time. 
+
+--------------------------------------------------------------------------
+
+XIII.  GAINING AND LOSING UNITS
+
+At the end of the Fall season, after all moves and retreats, any unit that
+occupies a supply center that its country does not already control
+captures that center for its country.  The capturing country then
+continues to control the center until another country captures the center
+at the end of a future Fall season, even if the center is left empty in
+the meantime, even if another country's unit is in the space at the end of
+a Spring season.
+
+To end the game year, after the capture of supply centers, the players
+adjust.  A player who has fewer centers than units on the board must
+remove the excess units only.  A player who has more centers than units on
+the board may build enough new units to make up the difference.  A player
+who has equal numbers of centers and units, though, doesn't adjust at all. 
+
+A removing player may choose freely which of his units to remove, but he
+must remove the exact number required, neither more nor fewer. 
+
+When a removing player fails to order sufficient removals, the GM removes
+further units to meet the required number.  He removes first the units
+that stand most distant from home.  To measure the distance from home, an
+army counts the smallest number of moves it would have to make to reach a
+home center in its own country, if it were the only unit on the board and
+if it had the fictional ability to enter both bodies of water and land
+provinces (but not Switzerland); a Russian army in Constantinople, for
+example, would stand two spaces distant from home.  A fleet measures the
+distance from home a little differently: it counts the smallest number of
+legal fleet-moves it would have to make to reach a home center in its own
+country, if it were the only unit on the board, but with no fictional
+ability; a Russian fleet on the south coast of Bulgaria, for example,
+would stand three spaces distant from home.  It does not matter for this
+purpose, incidentally, whether a foreign Power controls the nearest home
+center; in the examples, the Russian army and the Russian fleet could
+still trace routes to Sevastopol, even if Turkey presently controlled that
+center. 
+
+When an army and a fleet stand equally distant from home, the GM removes
+the fleet before the army.  When two units of the same kind stand equally
+distant from home, the GM removes first the unit that stands in the space
+whose name comes earlier in English-language alphabetical order.  The
+correct English-language alphabetical order, according to Oxford and
+Webster alike: Adriatic Sea, Aegean Sea, Albania, Ankara, Apulia, Armenia,
+Baltic Sea, Barents Sea, Belgium, Berlin, Black Sea, Bohemia, Gulf of
+Bothnia, Brest, Budapest, Bulgaria, Burgundy, Clyde, Constantinople,
+Denmark, Eastern Mediterranean, Edinburgh, English Channel, Finland,
+Galicia, Gascony, Greece, Helgoland Bight, Holland, Ionian Sea, Irish Sea,
+Kiel, Liverpool, Livonia, London, Gulf of Lyon, Marseilles, Mid-Atlantic
+Ocean, Moscow, Munich, Naples, North Africa, North Atlantic Ocean, North
+Sea, Norway, Norwegian Sea, Paris, Picardy, Piedmont, Portugal, Prussia,
+Rome, Ruhr, Rumania, St. Petersburg, Serbia, Sevastopol, Silesia,
+Skagerrak, Smyrna, Spain, Sweden, Syria, Trieste, Tunis, Tuscany, Tyrolia,
+Tyrrhenian Sea, Ukraine, Venice, Vienna, Wales, Warsaw, Western
+Mediterranean, Yorkshire. 
+
+Turning now from the topic of removals to the topic of builds -- 
+
+A building player, in contrast to a removing player, may, if he wishes,
+build fewer new units than he is entitled to; he may even build none.  He
+may not just build anywhere, though.  He may build a new unit only in his
+own home supply center in his own home country -- and only if the center
+is vacant and is presently under his control.  A building player, of
+course, may not build two units in the same center at the same time -- not
+even fleets on opposite coasts of St. Petersburg. 
+
+A build in an inland center may naturally be a new army only, never a new
+fleet.  A build in a coastal center, though, may be either a new army or a
+new fleet, whichever the builder has ordered.  A Russian build in St.
+Petersburg -- the only coastal home center with two coasts -- may be a new
+army, a new fleet on the south coast, or a new fleet on the north coast,
+whichever the Russian builder has ordered. 
+
+Examples of adjustment orders: Turkey removes Army Albania; Russia builds
+Fleet St. Petersburg (north coast). 
+
+--------------------------------------------------------------------------
+
+XIV.  MISCELLANEOUS
+
+The standard game of Diplomacy is played by seven players, neither more
+nor fewer. 
+
+--------------------------------------------------------------------------
+
+

@@ -1,0 +1,269 @@
+<TITLE>
+DP S1995R: Analyzing S1995M "dippouch"
+</TITLE>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1995R/"><IMG align=right SRC="/Zine/Common/toS1995R.gif" border=0></A>
+<BR><BR><HR>
+<IMG align=left hspace=10 height=190 SRC="/Zine/Common/Loeb.gif">
+<H2>Danny Loeb</H2>
+<h1>Computer Interpretation<BR> of
+Diplomacy Openings </h1>
+<h2>The Observation Module applied<BR>to Spring 1995 in "dippouch"</h2>
+<HR>
+As an example of the use of the observation module described in
+<A HREF="Observe.html">the article devoted to it elsewhere in this issue</A>,
+and as a source of practical advice for potential "investors,"
+let us apply the observation module to the <a href =
+"/Zine/S1995M/Game/GameMap.html">results
+of the first turn of the game "dippouch"</a>, as shown in the first issue
+of this magazine.
+<h2>General Comments about Spring 1901</h2>
+In the <a href= "/Zine/S1995M/Loeb/DPP_Open.html">previous
+issue of this magazine</a>, I discussed how an <a href =
+"/Zine/S1995R/Library/Openings.html">opening
+book</a> (such as the one published in this issue of Diplomatic Pouch)
+can be used to select a good opening.
+<p>
+Similarly, looking up your opponents openings in such a book gives you
+a good idea about kind of alliances they are likely to indicate.
+For example, in the game "dippouch," here is a brief summary of each
+country's opening. Click on the country's name for full details.
+<ul>
+<li> <b><a href="/Zine/S1995R/Library/Austria.html#aus-balgam-bud">Austria</a></b>. Balkan Gambit, Budapest
+Variation.        Pro-Italy. Could be used against Russia or Turkey.
+<li> <b><a href="/Zine/S1995R/Library/England.html#eng-play2">England</a></b>. Wales Opening, Southern
+Opening.        Anti-France.
+<li> <b><a href="/Zine/S1995R/Library/France.html#fra-burgundy">France</a></b>. Burgundy Opening. Basically
+defensive.
+<li><b><a href="/Zine/S1995R/Library/Germany.html#ger-blitz-hol">Germany</a></b>. Blitzkreig Opening, Holland
+Variation. Defensive.        Possibly anti-French.
+<li><b><a href="/Zine/S1995R/Library/Italy.html#itl-lepanto">Italy</a></b>. Lepanto <b>if convoy in
+Fall</b>. Usually        pro-Austria, anti-Turkey.
+<li><b><a href="/Zine/S1995R/Library/Russia.html#rus-ta">Russia</a></b>. Turkish Attack.
+Usually just what it sounds like.
+<li><b><a href="/Zine/S1995R/Library/Turkey.html#tur-bosph">Turkey</a></b>. Variant of Bosphorus opening
+(inferior, as it
+doesn't allow a build in Ank in case of Sev-Bla).
+Anti-Italy.
+</ul>
+The openings library supplemented perhaps by a systematic search of
+games containing similar openings can occasionally give clues as to
+what kind of tell-tale moves to look for in Fall 1901 as well!
+<p>
+However, we hope that our diplomat's general operating procedures will
+be robust enough to work well in all phases <b>including Spring
+1901</b>. Thus, we plan to use the normal observation routine even in
+Spring 1901 as described below. It is interesting however to use the
+openings library as a tool by which to judge the performance of the
+Observation Module.
+<p>
+One of the inputs of the Observation Module is the Friendliness Matrix
+produced in the previous season. Since this doesn't yet exist in
+Spring 1901, it must be invented. Below we take the all zero matrix as
+a default, however there are other possibilities.
+<ul>
+<li> Adjust the matrix in function of the pre-Spring 1901 negotation.
+<li> Use a predetermined matrix which compensates for "unjust." For
+example, moves by Germany and France towards the lowlands are
+considered by the observation module to be tantamount to
+attacks on each other. Similarly, Turkey, Austria, and Russia's
+moves to the Balkans are considered "aggressive."
+<li> Use a predetermined matrix to take take into account long term
+interests which the diplomat could otherwise not fathom. For
+example, Italy and Austria can often obtain a good short-term
+gain by stabbing each other. However, their long-term interest
+is often served by working together.
+</ul>
+<h2>Conversion to DPP Protocol</h2>
+Using a conversion program developed in LCS by Per Westling and
+myself, Diplomacy Adjudicator (judge) results can be directly
+converted to the DPP protocol language which is understood by the Bordeaux
+diplomat.
+First, I saved the results in a file called "dippouch".
+Then, I load the package in LCS
+<pre>% lcs
+LCS Project - CNRS/LAAS - 1992
+lcs version 3.1,  created 6-10-1992
+val it = () : unit
+- use "convert.pw.sml";
+.....
+convert.pw.sml file loaded
+val it = () : unit
+- val s = convert "dippouch";
+val s =
+"ORD (SPR 101)
+((AUS AMY BUD) MTO SER VLD) ((AUS AMY VIE) MTO BUD VLD) ((AUS FLT TRI) MTO ALB VLD)
+((ENG AMY LVP) MTO WAL VLD) ((ENG FLT EDI) MTO NTH VLD) ((ENG FLT LON) MTO ENG VLD)
+((FRA AMY MAR) MTO SPA VLD) ((FRA AMY PAR) MTO BUR VLD) ((FRA FLT BRE) MTO MAO VLD)
+((GER AMY BER) MTO KIE VLD) ((GER AMY MUN) MTO RUH VLD) ((GER FLT KIE) MTO HOL VLD)
+((ITA AMY ROM) MTO APU VLD) ((ITA AMY VEN) HLD VLD) ((ITA FLT NAP) MTO ION VLD)
+((RUS AMY MOS) MTO SEV VLD) ((RUS AMY WAR) MTO UKR VLD) ((RUS FLT SEV) MTO BLA VLD) ((RUS FLT (STP SCS)) MTO BOT VLD)
+((TUR AMY CON) MTO BUL VLD) ((TUR AMY SMY) MTO ANK VLD) ((TUR FLT ANK) MTO CON VLD)
+EOM" :
+string</pre>
+<h2>Observation Module</h2>
+We then load the observation module implemented in LCS by Arnaud
+Moulard and Christophe Moustier.
+<pre>- needs "load_all";
+........
+- observer nullMat77 (detail (ref2ord s));
+val it =
+([[0.0, ~0.104166666666667, 0.9375, 3.9625, 0.0625, ~6.92083333333333,   ~1.57083333333333],
+[~0.104166666666667, 0.0, ~8.9, ~3.775, 0.345833333333333,   0.0541666666666667, ~0.0458333333333333],
+[0.9375, ~8.9, 0.0, ~5.70416666666667, ~6.82916666666667, ~0.8375,   ~0.879166666666667],
+[3.9625, ~3.775, ~5.70416666666667, 0.0, ~4.95416666666667,   ~1.25833333333333, 5.1875],
+[0.0625, 0.345833333333333, ~6.82916666666667, ~4.95416666666667, 0.0,   ~3.6, ~6.875],
+[~6.92083333333333, 0.0541666666666667, ~0.8375, ~1.25833333333333,   ~3.6, 0.0, ~11.8416666666667],
+[~1.57083333333333, ~0.0458333333333333, ~0.879166666666667, 5.1875,   ~6.875, ~11.8416666666667, 0.0]],
+[["AUS", "ITA"], ["ENG"], ["FRA"], ["GER", "RUS"], ["TUR"]]) :
+real list list * string list list</pre>
+Or again
+<pre>        A     E     F     G     I     T     R
+A        -0.1  +0.9  +4.0  +5.1  -5.9  -1.6
+E  -0.1        -8.9  -3.8  +0.0   0.0  -0.0
+F  +0.9  -8.9        -5.9  -0.0  +0.0  -1.1
+G  +4.0  -3.8  -5.9        +2.1  -0.4  +5.0
+I  +5.1  +0.0  -0.0  +2.1        -2.1  +0.1
+T  -5.9   0.0  +0.0  -0.4  -2.1       -12.0
+R  -1.6  -0.0  -1.1  +5.0  +0.1 -12.0</pre>
+The results from only one turn of play do not yet show very strong
+relationships between the players. However, the computer considers
+England and France, and Russia and Turkey  to be at war, and Austria
+and Italy, and Russia and Germany to be  allies.
+<p>
+These results are based on the simple analysis of the results
+described below. In particular, none of the press or negotiations were
+taken into account.
+<h2>How were these numbers generated</h2>
+Many factors did not come into play...
+<ul>
+<li> <b>Violation of Specific Agreements</b>.
+No agreements were used in the above computation.
+If they had, then a positive entry would have been made for
+each treaty respected (such as that between France-Italy) and a
+negative entry for each treaty violated (such as that between
+France-England).
+<li> <b>Coordinated Moves</b>.
+No coordinated moves (supports or convoys) were made this season.
+<li> <b>Attacks</b>.
+There were no conflicts this season.
+<li> <b>History</b>. The all zero matrix was used to represent the
+history of the game, since this is the first season of the
+game. In practice, some other matrix might be used in order to
+give the diplomat a prejudice to consider that certain
+countries might be allied together.
+</ul>
+The one important factor which came up in the calculations was the
+following.
+<ul>
+<li> <b>Movement</b>. All distances are computed with respect to
+current supply centers using the filter above.
+<ul>
+<li> AUS BUD-SER moved towards Turkey -2
+<li> AUS VIE-BUD moved away from France +1, Germany +2, and
+towards Turkey -1
+<li> AUS TRI-ALB moved away from Italy +7, towards Turkey -1.
+<li> ENG LVP-WAL is <b>not</b> counted as moving towards France,
+since the observation module does not take possible
+convoys into account.
+<li> ENG EDI-NTH moved towards Germany -2 and France -2.
+<li> ENG LON-ECH moves towards France -7.
+<li> FRA MAR-SPA moves away from Austria 1, Germany 2, Italy 2.
+<li> FRA PAR-BUR moves towards Austria -1, Germany -7, Italy
+-1, Russia -1
+<li> FRA BRE-MAO moves towards Italy -1
+<li> GER BER-KIE moves away from Russia 2
+<li> GER MUN-RUH moves away from Austria 2, Italy 2, Russia 2
+<li> GER KIE-HOL moves towards England -2, France -1
+<li> ITA ROM-APU is distance neutral
+<li> ITA NAP-ION moves towards Austria -2, Turkey -2
+<li> RUS MOS-SEV moves towards Austria -2, Turkey -2, aways
+from Germany 1
+<li> RUS WAR-UKR moves away from Germany 2, towards Turkey -1
+<li> RUS SEV-BLA moves towards Turkey -7
+<li> RUS (STP SCS)-BOT	moves towards Germany -2
+<li> TUR CON-BUL moves towards Austria -2, Italy -1, Russia
+-2
+<li> TUR SMY-ANK is distance neutral
+<li> TUR ANK-CON moves towards Italy -1
+</ul>
+giving the following totals
+<pre>        A     E     F     G     I     T     R
+A               1     2     7    -4
+E              -9    -2
+F                    -5                -1
+G   2    -2    -1           2           4
+I  -2                            -2
+T  -2                      -2          -2
+R  -2                            -10</pre>
+<li> <b>Symmetry</b> This matrix is symmetrized giving
+<pre>        A     E     F     G     I     T     R
+A               1     4     5    -6    -2
+E              -9    -4
+F   1    -9          -6                -1
+G   4    -4    -6           2           5
+I   5                 2          -2
+T  -6                      -2         -12
+R  -2          -1     5         -12</pre>
+<li> <b>Transitivity</b>. Finally, we added 0.004167 times the
+sqaure of the matrix to the original matrix.
+</ul>
+<h2>Parameters</h2>
+The following is a list of parameters used by the observation module
+and their default values used in this example. Actual optimal values
+can only be found through extensive testing (self-play).
+<ul>
+<li> <b>Transitivity factor
+</b> = 20.0
+<li> <b> Old friendliness
+</b> = 70%
+<li> <b> Bounce
+</b> = 5.0
+<li> <b> Cut support
+</b> = 10.0
+<li> <b> Intent support
+</b> = 6.0
+<li> <b> Disrupt convoy
+</b> = 10.0
+<li> <b> Failed
+</b> = 2.0
+<li> <b> No move
+</b> = 0.5
+<li> <b> No such order
+</b> = 3.0
+<li> <b> Retreat
+</b> = 20.0
+<li> <b> Valid
+</b> = 13.0
+<li> <b> Distance Filter </b>
+<ul> <li> distance 0 = 30,
+<li> distance 1 = 10,
+<li> distance 2 = 3,
+<li> distance 3 = 1,
+<li> distance 4 or more = 0.
+</ul>
+<li> <b> Limit Ally
+</b> = 5.0
+<li> <b> Limit Enemy
+</b> = -7.0
+</dl>
+<hr>
+<B>
+Danny Loeb<BR>
+Universite de Bordeaux I<BR>
+(<A HREF="mailto:loeb@delanet.com">loeb@delanet.com</A>)
+</B>
+<P>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the mail address above does not work for you, feel free to use the "<b>Dear
+DP...</b>" mail interface, which is <A HREF="/Zine/S1995R/Common/DearDP.html">located
+here...</A>.</i>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1995R/"><IMG align=right SRC="/Zine/Common/toS1995R.gif" border=0></A>
+<BR><BR>
+</body>
+</html>
+<!--
+-->

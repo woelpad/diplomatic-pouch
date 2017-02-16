@@ -1,0 +1,33 @@
+TD.up {color: black; background-color: lime}
+TD.up A:link {color: red; text-decoration: none}
+TD.prev {color: black; background-color: aqua}
+TD.prev A:link {color: blue; text-decoration: none}
+TD.next {color: black; background-color: #FFCC00}
+TD.next A:link {color: red; text-decoration: none}
+TD.links {background-color: #FFFF99}
+TD.links A:link {color: red; text-decoration: none}
+TD.red {background-color: #FFCCCC}
+TD.red A:link {color: red; text-decoration: none}
+P.tiny {font-size: 8pt; line-height:0.5}
+OL.None {list-style-type: none}
+
+/*Body basics*/
+BODY {background-color: #FFFBF0}
+/*BODY {background-color: #FFABCD}*/
+A:link {color: red; text-decoration: none}
+A:active {color:#0000FF; text-decoration: none}
+A:visited {color:#800080; text-decoration: none}
+H1 {Color: red; text-align: center}
+H2 {Color: teal}
+H3 {Color: blue; font-style: italic}
+.new {Color: red;}
+.title {color: blue; font-weight: bold; font-size: large; background-color: 
+silver}
+.header {color: black; font-weight: bold}
+P.ind {text-indent:1em}
+OL OL B {color: orange}
+OL OL {color: blue}
+DT { font-weight: bold; color: green}
+TH { background-color: #FFABCD; border-style: solid; border-color: red; 
+border-width: thin;
+     color: black}

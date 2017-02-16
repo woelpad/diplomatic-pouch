@@ -1,0 +1,956 @@
+<html>
+<head>
+   <title>DP W2000A: Geographical Destiny Revisited
+</title>
+</head>
+<BODY bgcolor=white>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W2000A/"><IMG align=right SRC="/Zine/Common/toW2000A.gif" border=0></A>
+<BR clear=both><HR>
+<H1 align=center>Geographical Destiny Revisited</H1>
+<H3 align=center><I>Ole R Tuft</I></H3>
+<HR>
+<P><BR>In his excellent article "Geography is Destiny", published in the fall 
+1999 edition of The Zine, Paul D. Windsor invented the term "fear factor". For 
+an explanation of the term, I refer to his article (and strongly suggest reading 
+it before reading any further). Combining the fear factor with tempo counts and 
+other geographical considerations, he arrives at a number of conclusions, some 
+of which are at odds with conventional wisdom in Diplomacy. </P>
+<P>Explaining his rationale behind calculating the fear factors, he says: "I 
+stuck with home SC’s to keep analysis reasonably simple. I don’t think that 
+trying to introduce "naturals" or other SC’s into the fear factor analysis would 
+change the results significantly." Intuitivly, one might agree. After all, if 
+one power’s shortest route to victory does run through another power’s home 
+SC’s, the inclusion of other SC’s will not change that fact. But at the same 
+time, one has the nagging feeling that something is not right. How is it 
+possible that Austria’s fear of Germany should be greater than his fear of 
+Turkey? How could Germany’s fear of Italy be bigger than his fear of England? 
+Our experience contradicts heavily with some of these findings. The fear factors 
+in "Geography is Destiny" (The row for fear projection has been added by me. 
+England's fear of Russia and Austria's fear of Turkey has been adjusted in 
+accordance with Windsor's own "Swiftest route to victory"):</P></FONT>
+<TABLE border=1 borderColor=#000000 cellPadding=2 cellSpacing=2 width=536>
+  <TBODY>
+  <TR>
+    <TD bgColor=#c0c0c0 rowSpan=2 vAlign=top width=56><I><B><FONT 
+      color=#ffffff size=2>
+      <P align=center><BR></FONT><FONT color=#000000 
+      size=2>Power</FONT></B></I></P></TD>
+    <TD bgColor=#c0c0c0 colSpan=7 vAlign=top width=371><I><B><FONT 
+      color=#ffffff size=2>
+      <P align=center></FONT><FONT color=#000000 size=2>Fear factor 
+      from…</FONT></B></I></P></TD>
+    <TD bgColor=#c0c0c0 rowSpan=2 vAlign=top width=85><I><B><FONT 
+      color=#ffffff size=2>&nbsp;
+      <P></FONT><FONT color=#000000 size=2>Fear 
+  perceived</FONT></B></I></P></TD></TR>
+  <TR>
+    <TD bgColor=#ff0000 vAlign=top width=45><FONT color=#ffffff 
+      size=2><I><B>Austria</B></I></FONT></TD>
+    <TD bgColor=#0000ff vAlign=top width=53><FONT color=#ffffff 
+      size=2><I><B>England</B></I></FONT></TD>
+    <TD bgColor=#00ffff vAlign=top width=46><FONT color=#000000 
+      size=2><I><B>France</B></I></FONT></TD>
+    <TD bgColor=#000000 vAlign=top width=56><FONT color=#ffffff 
+      size=2><I><B>Germany</B></I></FONT></TD>
+    <TD bgColor=#00ff00 vAlign=top width=31><I><B><FONT color=#000000 
+      size=2>Italy</FONT></B></I></TD>
+    <TD bgColor=#ffffff vAlign=top width=47><I><B><FONT color=#000000 
+      size=2>Russia</FONT></B></I></TD>
+    <TD bgColor=#ffff00 vAlign=top width=45><I><B><FONT color=#000000 
+      size=2>Turkey</FONT></B></I></TD></TR>
+  <TR>
+    <TD bgColor=#ff0000 vAlign=top width=56><FONT color=#ffffff 
+      size=2><I><B>Austria</B></I></FONT></TD>
+    <TD bgColor=#ff0000 vAlign=top width=45><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>-</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=53><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>0</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=46><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>3</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=56><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>11</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=31><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>13</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=47><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>11</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=45><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>8</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=85><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>46</FONT></B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#0000ff vAlign=top width=56><FONT color=#ffffff 
+      size=2><I><B>England</B></I></FONT></TD>
+    <TD bgColor=#0000ff vAlign=top width=45><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>0</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=53><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>-</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=46><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>10</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=56><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>6</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=31><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>0</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=47><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>6</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=45><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>0</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=85><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>22</FONT></B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#00ffff vAlign=top width=56><FONT 
+      size=2><I><B>France</B></I></FONT></TD>
+    <TD bgColor=#00ffff vAlign=top width=45><FONT size=2><I><B>
+      <P align=center>3</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=53><FONT size=2><I><B>
+      <P align=center>9</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=46><FONT size=2><I><B>
+      <P align=center>-</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=56><FONT size=2><I><B>
+      <P align=center>11</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=31><FONT size=2><I><B>
+      <P align=center>4</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=47><FONT size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=45><FONT size=2><I><B>
+      <P align=center>2</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=85><FONT size=2><I><B>
+      <P align=center>29</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#000000 vAlign=top width=56><FONT color=#ffffff 
+      size=2><I><B>Germany</B></I></FONT></TD>
+    <TD bgColor=#000000 vAlign=top width=45><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>10</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=53><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>7</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=46><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>10</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=56><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>-</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=31><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>10</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=47><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>11</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=45><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>3</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=85><FONT size=2><I><B>
+      <P align=center><FONT color=#ffffff>51</FONT></B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#00ff00 vAlign=top width=56><FONT 
+      size=2><I><B>Italy</B></I></FONT></TD>
+    <TD bgColor=#00ff00 vAlign=top width=45><FONT size=2><I><B>
+      <P align=center>12</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=53><FONT size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=46><FONT size=2><I><B>
+      <P align=center>10</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=56><FONT size=2><I><B>
+      <P align=center>7</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=31><FONT size=2><I><B>
+      <P align=center>-</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=47><FONT size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=45><FONT size=2><I><B>
+      <P align=center>7</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=85><FONT size=2><I><B>
+      <P align=center>36</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#ffffff vAlign=top width=56><FONT 
+      size=2><I><B>Russia</B></I></FONT></TD>
+    <TD bgColor=#ffffff vAlign=top width=45><FONT size=2><I><B>
+      <P align=center>11</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=53><FONT size=2><I><B>
+      <P align=center>5</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=46><FONT size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=56><FONT size=2><I><B>
+      <P align=center>10</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=31><FONT size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=47><FONT size=2><I><B>
+      <P align=center>-</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=45><FONT size=2><I><B>
+      <P align=center>11</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=85><FONT size=2><I><B>
+      <P align=center>37</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#ffff00 vAlign=top width=56><FONT 
+      size=2><I><B>Turkey</B></I></FONT></TD>
+    <TD bgColor=#ffff00 vAlign=top width=45><FONT size=2><I><B>
+      <P align=center>8</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=53><FONT size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=46><FONT size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=56><FONT size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=31><FONT size=2><I><B>
+      <P align=center>6</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=47><FONT size=2><I><B>
+      <P align=center>11</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=45><FONT size=2><I><B>
+      <P align=center>-</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=85><FONT size=2><I><B>
+      <P align=center>26</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width=56><I><B><FONT color=#000000 
+      size=2>Fear projected</FONT></B></I></TD>
+    <TD bgColor=#ff0000 vAlign=top width=45><FONT size=2><I><B>
+      <P align=center><BR>45</B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=53><FONT size=2><I><B>
+      <P align=center><BR>21</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=46><FONT size=2><I><B>
+      <P align=center><BR>33</B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=56><FONT size=2><I><B>
+      <P align=center><BR><FONT color=#ffffff>45</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=31><FONT size=2><I><B>
+      <P align=center><BR>33</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=47><FONT size=2><I><B>
+      <P align=center><BR>39</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=45><FONT size=2><I><B>
+      <P align=center><BR>31</B></I></FONT></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width=85><FONT size=2><I><B>
+      <P align=center><BR>-</B></I></FONT></P></TD></TR></TBODY></TABLE><FONT 
+face=Arial>
+<P>Does A Bud go to Serbia rather than towards Munich only because we are 
+playing a non-optimal game? Of course not, we send it towards Serbia because 
+Serbia is empty and can be taken with a flick of the wrist. The same cannot be 
+said of Munich, and here we are at the heart of the matter: The fear factors 
+calculated by Windsor are "timeless", assuming that every center is equally 
+easy/difficult to occupy. In S1901, this is hardly the case. </P>
+<P>Assuming that it is rational (and not just "conventional wisdom") to go after 
+one’s "naturals", we must investigate the impact of this to get a clearer 
+picture of what’s going on, because it really does makes a difference. While a 
+move such as A Bud-Ser does not change the distance between Austrian and German 
+home centers, it alters the distance between Austrian units and Turkish home 
+centers (and, when including naturals, the distance between Austrian and Turkish 
+(and Russian) centers (Serbia and Bulgaria)), and with this, not only does the 
+swiftest way to victory change, but also the fear factors..</P><I><B>
+<P>Peeking into the future (1901)</P></B></I>
+<P>If we are to include "naturals" and other SC’s in the analysis, an attempt 
+must be made to construct a map according to how it might look after the 
+respective powers have aquired (or tried to aquire) their naturals (one might 
+think of it as a tiny collection of possible situations after the 1901 builds). 
+Many simplifications and assumptions must be made, some numbers must be taken 
+out of thin air while others are collected from other sources ("A Statistical 
+Look at 1901" by The Scribe, Spring 1998 issue of The Zine). 
+<UL>
+  <LI>Austria is assumed to taken Serbia and Greece. 
+  <LI>England is assumed to have Norway (50% chance of taking it with a fleet 
+  and 50% chance of taking it with an army), and to have a fleet in the North 
+  Sea. 
+  <LI>France is assumed to have taken Spain and Portugal (possibility of sc of 
+  Spain ignored). 
+  <LI>Germany is assumed to have taken Denmark and Holland (fleet/army 
+  possibilities ignored). 
+  <LI>Italy is assumed to have taken Tunis (50% chance of taking it with a 
+  fleet, 50% chance of taking it with an army, 50% chance of there being an 
+  Italian fleet in the Ionian Sea). 
+  <LI>Russia is assumed to have a 70% chance of taking Sweden (the remaining 30% 
+  represents the fleet being in the Gulf of Bothnia) and a 75% chance of taking 
+  Rumania (38% of the time taking it with an army, 37% of the time with a 
+  fleet)(Rumania is assumed to be vacant 25% of the time). 
+  <LI>Turkey is assumed to have taken Bulgaria. 
+  <LI>Belgium is assumed to be vacant 25% of the time, the remaining 75% being 
+  split equally between England, France and Germany (Germany and France 
+  occupying Belgium with armies, England split 12.5%/12.5% between fleet/army 
+  occupation). </LI></UL>
+<P>Of the countless possibilities that is not accounted for in this least, the 
+most glaring omission might be moves to highly important, disputed provinces 
+such as Galicia, The Black Sea, The English Channel etc. Surely one cannot 
+attempt to picture 1901 more or less accuratly without these? What will be 
+attempted is to analyse the impact of powers going after their naturals, not all 
+the various ways of which they may be going after each other’s throats. Moves to 
+such highly DMZ'd provinces fall in the throat-cutting cathegory and generally 
+does not represent attempts by powers to grab neutrals. Besides, the frequency 
+of such moves are much more likely to be affected both by trends and 
+"conventional wisdom" than moves aimed at grabbing empty neutrals, which ought 
+to be guided by nothing but rationality. The postulated presence of an English 
+fleet in the North Sea, and the chance of an Italian fleet in the Ionian 
+<EM>are</EM> included, because they are highly probable moves that represent 
+steps towards aquiring naturals, steps that causes a significant change in the 
+tempi required to reach other powers' centers (which cannot be said of e.g. 
+moves to Ruhr or Ukraine). Armed with these assumptions and ignoring all other 
+possible moves, we will build a "swiftest route to victory" for each of the 
+powers, following the example of Paul Windsor:</P></FONT>
+<TABLE border=1 borderColor=#000000 cellPadding=2 cellSpacing=2 width=734>
+  <TBODY>
+  <TR>
+    <TD bgColor=#c0c0c0 colSpan=5 vAlign=top width="100%"><FONT size=2><I><B>
+      <P align=center>Swiftest route to victory</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width="10%"><FONT size=2><I><B>
+      <P align=center>Power</B></I></FONT></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="15%"><FONT size=2><I><B>
+      <P align=center>1 tempo</B></I></FONT></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="30%"><FONT size=2><I><B>
+      <P align=center>2 tempi</B></I></FONT></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="31%"><FONT size=2><I><B>
+      <P align=center>3 tempi</B></I></FONT></P></TD>
+    <TD bgColor=#c0c0c0 vAlign=top width="14%"><FONT size=2><I><B>
+      <P align=center>4 tempi</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#ff0000 vAlign=top width="10%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>Austria</B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width="15%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>Bul, Rum, Ven</B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width="30%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>Smy, Con, Sev, War, Rom, Nap, Mun, 
+    Tun</B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width="31%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>Ank, Mos, Mar, Ber, Kie</B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width="14%">&nbsp;</TD></TR>
+  <TR>
+    <TD bgColor=#0000ff vAlign=top width="10%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>England</B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width="15%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>Stp, Swe, Hol, Den, Bel (75%)</B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width="30%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>Bre, Mos (50%), Kie, Mun (12.5%), Mar (12.5%), Par 
+      (12.5%)</B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width="31%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>War (50%), Mos (50%) Ber, Mun (87.5%), Par (87.5%), Mar 
+      (87.5%), Spa, Por</B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width="14%">&nbsp;</TD></TR>
+  <TR>
+    <TD bgColor=#00ffff vAlign=top width="10%"><FONT size=2><I><B>
+      <P align=center>France</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width="15%"><FONT size=2><I><B>
+      <P align=center>Hol (25%)</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width="30%"><FONT size=2><I><B>
+      <P align=center>Lon, Bel (75%), Ven, Mun, Kie (25%)</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width="31%"><FONT size=2><I><B>
+      <P align=center>Kie (75%), Hol (75%), Ber, Lvp, Edi, Nwy, Den, Rom, Nap, 
+      Tun, Tri</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width="14%">&nbsp;</TD></TR>
+  <TR>
+    <TD bgColor=#000000 vAlign=top width="10%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>Germany</B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width="15%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>Bel (75%), Swe</B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width="30%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>Par, Mar, Bre (25%), Lon, Edi, Nwy, War, Ven, Tri, 
+      Vie</B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width="31%"><FONT color=#ffffff 
+      size=2><I><B>
+      <P align=center>Bre (75%), Lvp, Spa, Stp, Mos, Bud, Ser, Rum, 
+      Rom</B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width="14%">&nbsp;</TD></TR>
+  <TR>
+    <TD bgColor=#00ff00 vAlign=top width="10%"><FONT size=2><I><B>
+      <P align=center>Italy</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width="15%"><FONT size=2><I><B>
+      <P align=center>Tri, Gre (50%)</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width="30%"><FONT size=2><I><B>
+      <P align=center>Mar, Spa (50%), Ser, Gre (50%), Smy (50%), Con (50%), Vie, 
+      Bud, Mun</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width="31%"><FONT size=2><I><B>
+      <P align=center>Spa (50%), Por (50%), Bre (50%), Smy (50%), Con (50%), Ank 
+      (50%), Bul, Rum, Ber, Kie </B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width="14%">&nbsp;</TD></TR>
+  <TR>
+    <TD bgColor=#ffffff vAlign=top width="10%"><FONT size=2><I><B>
+      <P align=center>Russia</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width="15%"><FONT size=2><I><B>
+      <P align=center>Nwy, Bul (75%), Ser (38%), Bud (38%), Den 
+      (70%)</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width="30%"><FONT size=2><I><B>
+      <P align=center>Ber, Mun, Kie, Vie, Ser (62%), Bud (62%), Tri (38%), Gre 
+      (38%), Con, Ank, Smy, Bul (25%), Den (30%)</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width="31%"><FONT size=2><I><B>
+      <P align=center>Hol (70%), Edi, Lon (70%), Bel (70%), Tri (62%), Gre 
+      (62%), Ven (38%)</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width="14%">&nbsp;</TD></TR>
+  <TR>
+    <TD bgColor=#ffff00 vAlign=top width="10%"><FONT size=2><I><B>
+      <P align=center>Turkey</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width="15%"><FONT size=2><I><B>
+      <P align=center>Rum, Ser, Gre</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width="30%"><FONT size=2><I><B>
+      <P align=center>Bud, Sev, Tri</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width="31%"><FONT size=2><I><B>
+      <P align=center>Mos, War, Vie, Nap, Tun, Ven</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width="14%"><FONT size=2><I><B>
+      <P align=center>StP, Rom, Mun, 
+Ber</B></I></FONT></P></TD></TR></TBODY></TABLE><FONT face=Arial>
+<P>Every power has been "alotted" 3 tempi to expand (Though Russia could reach 
+18 centers&nbsp; in only 2 tempi, why should it be punished for its 
+flexibility?), Turkey one extra tempo (without which it would not reach 18 
+centers). The possibility of England taking Sev has been deemed too far-fetched 
+and Sev has not been included in the English list. </P>
+<P>Using Windsor’s system of assigning values to centers (whereby a center that 
+can be reached in 1 tempo is given a value of 5, 2 tempi is valued at 4 etc), 
+and giving equal weight to home SC’s and naturals (a power looking to count up18 
+centers does not differentiate, and so neither will we), we calculate the fear 
+factors:</P></FONT>
+<TABLE border=1 borderColor=#000000 cellPadding=2 cellSpacing=2 width=583>
+  <TBODY>
+  <TR>
+    <TD bgColor=#c0c0c0 rowSpan=2 vAlign=top width=64>
+      <P align=center><I><B><FONT color=#ffffff face=Arial size=2>&nbsp;</P>
+      <P align=center></FONT><FONT color=#000000 face=Arial 
+      size=2>Power</FONT></B></I></P></TD>
+    <TD bgColor=#c0c0c0 colSpan=7 vAlign=top width=399><I><B><FONT 
+      color=#ffffff face=Arial size=2>
+      <P align=center></FONT><FONT color=#400040 face=Arial size=2>Fear factor 
+      from…</FONT></B></I></P></TD>
+    <TD bgColor=#c0c0c0 rowSpan=2 vAlign=top width=96><I><B><FONT 
+      color=#ffffff face=Arial size=2><BR></FONT><FONT color=#400040 face=Arial 
+      size=2>Fear perceived</FONT></B></I></TD></TR>
+  <TR>
+    <TD align=middle bgColor=#ff0000 vAlign=top width=46><FONT color=#ffffff 
+      face=Arial size=2><I><B>Austria</B></I></FONT></TD>
+    <TD align=middle bgColor=#0000ff vAlign=top width=60><FONT color=#ffffff 
+      face=Arial size=2><I><B>England</B></I></FONT></TD>
+    <TD align=middle bgColor=#00ffff vAlign=top width=52><I><B><FONT 
+      color=#400040 face=Arial size=2>France</FONT></B></I></TD>
+    <TD align=middle bgColor=#000000 vAlign=top width=62><FONT color=#ffffff 
+      face=Arial size=2><I><B>Germany</B></I></FONT></TD>
+    <TD align=middle bgColor=#00ff00 vAlign=top width=35><I><B><FONT 
+      color=#400040 face=Arial size=2>Italy</FONT></B></I></TD>
+    <TD align=middle bgColor=#ffffff vAlign=top width=46><I><B><FONT 
+      color=#400040 face=Arial size=2>Russia</FONT></B></I></TD>
+    <TD align=middle bgColor=#ffff00 vAlign=top width=50><I><B><FONT 
+      color=#400040 face=Arial size=2>Turkey</FONT></B></I></TD></TR>
+  <TR>
+    <TD bgColor=#ff0000 vAlign=top width=64><FONT color=#ffffff face=Arial 
+      size=2><I><B>Austria</B></I></FONT></TD>
+    <TD bgColor=#ff0000 vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>-</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>0</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=52><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>3</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=62><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>14</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=35><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>21.5</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>19.5</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=50><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>21</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=96><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>79</FONT></B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#0000ff vAlign=top width=64><FONT color=#ffffff face=Arial 
+      size=2><I><B>England</B></I></FONT></TD>
+    <TD bgColor=#0000ff vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>0</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>-</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=52><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>13.8</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=62><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>15.9</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=35><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>0</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>10.6</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=50><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>0</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=96><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>40.3</FONT></B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#00ffff vAlign=top width=64><FONT face=Arial 
+      size=2><I><B>France</B></I></FONT></TD>
+    <TD bgColor=#00ffff vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center>3</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center>17.2</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=52><FONT face=Arial size=2><I><B>
+      <P align=center>-</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=62><FONT face=Arial size=2><I><B>
+      <P align=center>15.2</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=35><FONT face=Arial size=2><I><B>
+      <P align=center>10.5</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center>0.5</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=50><FONT face=Arial size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=96><FONT face=Arial size=2><I><B>
+      <P align=center>46.4</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#000000 vAlign=top width=64><FONT color=#ffffff face=Arial 
+      size=2><I><B>Germany</B></I></FONT></TD>
+    <TD bgColor=#000000 vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>10</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>21.1</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=52><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>17.3</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=62><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>-</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=35><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>10</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>19.2</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=50><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>4</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=96><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>78.7</FONT></B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#00ff00 vAlign=top width=64><FONT face=Arial 
+      size=2><I><B>Italy</B></I></FONT></TD>
+    <TD bgColor=#00ff00 vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center>17</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=52><FONT face=Arial size=2><I><B>
+      <P align=center>13</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=62><FONT face=Arial size=2><I><B>
+      <P align=center>7</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=35><FONT face=Arial size=2><I><B>
+      <P align=center>-</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center>1.1</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=50><FONT face=Arial size=2><I><B>
+      <P align=center>11</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=96><FONT face=Arial size=2><I><B>
+      <P align=center>49.1</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#ffffff vAlign=top width=64><FONT face=Arial 
+      size=2><I><B>Russia</B></I></FONT></TD>
+    <TD bgColor=#ffffff vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center>14.8</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center>13.5</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=52><FONT face=Arial size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=62><FONT face=Arial size=2><I><B>
+      <P align=center>15.8</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=35><FONT face=Arial size=2><I><B>
+      <P align=center>2.3</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center>-</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=50><FONT face=Arial size=2><I><B>
+      <P align=center>15.8</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=96><FONT face=Arial size=2><I><B>
+      <P align=center>62.2</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#ffff00 vAlign=top width=64><FONT face=Arial 
+      size=2><I><B>Turkey</B></I></FONT></TD>
+    <TD bgColor=#ffff00 vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center>16</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=52><FONT face=Arial size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=62><FONT face=Arial size=2><I><B>
+      <P align=center>0</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=35><FONT face=Arial size=2><I><B>
+      <P align=center>10.5</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center>16.8</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=50><FONT face=Arial size=2><I><B>
+      <P align=center>-</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=96><FONT face=Arial size=2><I><B>
+      <P align=center>43.3</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width=64><I><B><FONT color=#400040 
+      face=Arial size=2>Fear projected</FONT></B></I></TD>
+    <TD bgColor=#ff0000 vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center><BR><FONT color=#ffffff>60.8</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center><BR><FONT color=#ffffff>51.8</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=52><FONT face=Arial size=2><I><B>
+      <P align=center><BR>47.1</B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=62><FONT face=Arial size=2><I><B>
+      <P align=center><BR><FONT color=#ffffff>67.9</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=35><FONT face=Arial size=2><I><B>
+      <P align=center><BR>54.8</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center><BR>67.8</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=50><FONT face=Arial size=2><I><B>
+      <P align=center><BR>51.8</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=96><FONT face=Arial size=2><I><B>
+      <P align=center><BR>-</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#c0c0c0 vAlign=top width=64><I><B><FONT color=#400040 
+      face=Arial size=2>Net fear<BR>Projected-<BR>Perceived</FONT></B></I></TD>
+    <TD bgColor=#ff0000 vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center><BR><FONT color=#ffffff>-18.8</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center><BR><FONT color=#ffffff>+11.5</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=52><FONT face=Arial size=2><I><B>
+      <P align=center><BR>+0.7</B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=62><FONT face=Arial size=2><I><B>
+      <P align=center><BR><FONT color=#ffffff>-11.1</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=35><FONT face=Arial size=2><I><B>
+      <P align=center><BR>+5.7</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=46><FONT face=Arial size=2><I><B>
+      <P align=center><BR>+5.5</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=50><FONT face=Arial size=2><I><B>
+      <P align=center><BR>+8.5</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=96><FONT face=Arial size=2><I><B>
+      <P align=center><BR>-</B></I></FONT></P></TD></TR></TBODY></TABLE><FONT 
+face=Arial>
+<P>Not surprisingly, the "primal" central powers Austria and Germany fares 
+poorly. While it’s a close race in fear perceived, Germany projects more (most, 
+in fact) fear and does better in terms of net fear, but both powers are far 
+behind the rest of the field in this respect, reflecting their difficult 
+strategical situation. While their fear of each other is considerable, it is 
+nonetheless clearly overridden by fear of other neighbours. The inclusion of 
+other SC’s reveals England to be power most feared by Germany and Austria’s fear 
+of Turkey is now as great as his fear of Italy.</P>
+<P>The two witches obviously doesn’t have the same appetite for centers as the 
+central powers (and Russia), but as they are subject to only half the amount of 
+fear, they emerge as the clear winners in terms of net fear. This is as 
+expected, taken their superior strategical position. The struggle for the Balkan 
+SC’s brings Turkey’s fear of Austria into light, while complications in 
+Scandinavia drives England’s fear of Russia up.</P>
+<P>Russia has a capacity for destruction as great as Germany’s, and coupled with 
+the fear-shrinking geographical vastness of Russia it results in a markable net 
+"positive" fear.</FONT><FONT size=2> </FONT><FONT face=Arial>Germany and Turkey 
+is slightly more feared than Austria, but England is not very far behind. 
+Haven’t we often seen the rot of the Russian empire start in the north?</P>
+<P>The numbers for France may seem surprising. Barely managing to reach a 
+positive net fear, it’s projected fear is the least of all the powers. This is 
+partly explained by the fact that while most powers close the distance to their 
+neighbours (and their naturals) in taking their naturals, France does not do so 
+in tying up the Iberian SC’s. Thusly, the other powers increases their projected 
+fear more than France does. Likewise, they are subjected to more fear, while 
+France keeps the perceived fear down, almost on the level of the witches. 
+Perhaps the lack of projected fear is one of the keys to French success, with 
+the other powers preferring to concentrate against neighbours that appear more 
+threatening? After all, none of the powers seem to look at France as their 
+biggest threat.</P>
+<P>Italy benefits hugely from the inclusion of the neutral SC’s, giving it a 
+host of targets beside the easily-reached Austrian centers. Combined with the 
+lack of manouver towards Italy by other powers, Italy ends up with a nice net 
+projected fear. Is this indication of Italian strength nothing but an illusion? 
+Italy is always a special case, but Italy anno 1901 is truly special. With his 
+home SC’s like a castle not likely to come under attack, he at most leaves A Ven 
+for defense and engages in whatever endeavor pleases him. Centrally placed, 
+Italy has a long reach, from Turkey to Portugal and deep into Germany. That some 
+of those provinces are very hard to get at is not sufficently accounted for in 
+these numbers, neither is the strategical horrors that may follow if Italy 
+attempts to grab the most accessible centers. For a broader discussion of Italy, 
+see "Geography is Destiny". </P><I><B>
+<P>Relationships at a glance?</P></B></I>
+<P>Just how compatible are the various powers? Let’s use the information in the 
+table for the swiftest route to victory and try to find out. If one power covets 
+a large number of the centers listed for another power, the percentage of 
+compatability will be low (percentages in "Shortest route to victory" are 
+ignored).</P></FONT>
+<DIV align=left>
+<TABLE border=1 borderColor=#000000 cellPadding=2 cellSpacing=2 width=477>
+  <TBODY>
+  <TR>
+    <TD bgColor=#c0c0c0 rowSpan=2 vAlign=top width=58>
+      <P align=center><I><B><FONT color=#ffffff face=Arial size=2>&nbsp;</P>
+      <P align=center></FONT><FONT color=#400040 face=Arial 
+      size=2>Power</FONT></B></I></P></TD>
+    <TD bgColor=#c0c0c0 colSpan=7 vAlign=top width=403><I><B><FONT 
+      color=#ffffff face=Arial size=2>
+      <P align=center></FONT><FONT color=#400040 face=Arial size=2>Total mutual 
+      fear/fear relationship/compatability</FONT></B></I></P></TD></TR>
+  <TR>
+    <TD align=middle bgColor=#ff0000 vAlign=top width=49><FONT color=#ffffff 
+      face=Arial size=2><I><B>Austria</B></I></FONT></TD>
+    <TD align=middle bgColor=#0000ff vAlign=top width=56><FONT color=#ffffff 
+      face=Arial size=2><I><B>England</B></I></FONT></TD>
+    <TD align=middle bgColor=#00ffff vAlign=top width=44><I><B><FONT 
+      color=#000000 face=Arial size=2>France</FONT></B></I></TD>
+    <TD align=middle bgColor=#000000 vAlign=top width=60><FONT color=#ffffff 
+      face=Arial size=2><I><B>Germany</B></I></FONT></TD>
+    <TD align=middle bgColor=#00ff00 vAlign=top width=53><I><B><FONT 
+      color=#000000 face=Arial size=2>Italy</FONT></B></I></TD>
+    <TD align=middle bgColor=#ffffff vAlign=top width=45><I><B><FONT 
+      color=#000000 face=Arial size=2>Russia</FONT></B></I></TD>
+    <TD align=middle bgColor=#ffff00 vAlign=top width=48><I><B><FONT 
+      color=#000000 face=Arial size=2>Turkey</FONT></B></I></TD></TR>
+  <TR>
+    <TD bgColor=#ff0000 vAlign=top width=58><FONT face=Arial size=2><I><B>
+      <P align=center><BR><FONT 
+    color=#ffffff>Austria</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=49><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff><BR>-</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=56><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>0 
+      <BR>(0)<BR>71%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=44><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>6<BR>(0)<BR>57%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>24<BR>(-4)<BR>43%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=53><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>38.5<BR>(-4.5)<BR>14%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=45><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>34.3<BR>(-4.7)<BR>19%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#ff0000 vAlign=top width=48><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>37<BR>(-5)<BR>10%</FONT></B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#0000ff vAlign=top width=58><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+    color=#ffffff><BR>England</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=49><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>0<BR>(0)<BR>68%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=56><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff><BR>-</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=44><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>31<BR>(+3.4)<BR>21%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>37<BR>(+5.2)<BR>5%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=53><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>0<BR>(0)<BR>68%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=45><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>24.1<BR>(+2.9)<BR>32%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#0000ff vAlign=top width=48><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>0<BR>(0)<BR>74%</FONT></B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#00ffff vAlign=top width=58><FONT face=Arial size=2><I><B>
+      <P align=center><BR>France</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=49><FONT face=Arial size=2><I><B>
+      <P align=center>6<BR>(0)<BR>55%</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=56><FONT face=Arial size=2><I><B>
+      <P align=center>31<BR>(-3.4)<BR>30%</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=44><FONT face=Arial size=2><I><B>
+      <P align=center><BR>-</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center>32.5<BR>(+1.9)<BR>15%</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=53><FONT face=Arial size=2><I><B>
+      <P align=center>23.5<BR>(+2.5)<BR>40%</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=45><FONT face=Arial size=2><I><B>
+      <P align=center>0.5<BR>(-0.5)<BR>45%</B></I></FONT></P></TD>
+    <TD bgColor=#00ffff vAlign=top width=48><FONT face=Arial size=2><I><B>
+      <P align=center>0<BR>(0)<BR>65%</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#000000 vAlign=top width=58><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+    color=#ffffff><BR>Germany</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=49><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>24<BR>(+4)<BR>50%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=56><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff>37<BR>(-5.2)<BR>25% 
+      </FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=44><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>32.5<BR>(-1.9)<BR>29%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center><FONT color=#ffffff><BR>-</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=53><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>17<BR>(-3)<BR>50%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=45><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>35<BR>(-4.4)<BR>25%</FONT></B></I></FONT></P></TD>
+    <TD bgColor=#000000 vAlign=top width=48><FONT face=Arial size=2><I><B>
+      <P align=center><FONT 
+      color=#ffffff>4<BR>(-4)<BR>54%</FONT></B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#00ff00 vAlign=top width=58><FONT face=Arial size=2><I><B>
+      <P align=center><BR>Italy</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=49><FONT face=Arial size=2><I><B>
+      <P align=center>38.5<BR>(+4.5)<BR>14%</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=56><FONT face=Arial size=2><I><B>
+      <P align=center>0<BR>(0)<BR>71%</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=44><FONT face=Arial size=2><I><B>
+      <P align=center>23.5<BR>(-2.5)<BR>43%</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center>17<BR>(+3)<BR>43%</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=53><FONT face=Arial size=2><I><B>
+      <P align=center><BR>-</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=45><FONT face=Arial size=2><I><B>
+      <P align=center>3.4<BR>(-1.2)<BR>33%</B></I></FONT></P></TD>
+    <TD bgColor=#00ff00 vAlign=top width=48><FONT face=Arial size=2><I><B>
+      <P align=center>21.5<BR>(+0.5)<BR>24%</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#ffffff vAlign=top width=58><FONT face=Arial size=2><I><B>
+      <P align=center><BR>Russia</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=49><FONT face=Arial size=2><I><B>
+      <P align=center>34.3<BR>(+4.7)<BR>32%</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=56><FONT face=Arial size=2><I><B>
+      <P align=center>24.1<BR>(-2.9)<BR>48%</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=44><FONT face=Arial size=2><I><B>
+      <P align=center>0.5<BR>(+0.5)<BR>56%</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center>35<BR>(+4.4)<BR>28%</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=53><FONT face=Arial size=2><I><B>
+      <P align=center>3.4<BR>(+1.2)<BR>44%</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=45><FONT face=Arial size=2><I><B>
+      <P align=center><BR>-</B></I></FONT></P></TD>
+    <TD bgColor=#ffffff vAlign=top width=48><FONT face=Arial size=2><I><B>
+      <P align=center>32.6<BR>(+1)<BR>32%</B></I></FONT></P></TD></TR>
+  <TR>
+    <TD bgColor=#ffff00 vAlign=top width=58><FONT face=Arial size=2><I><B>
+      <P align=center><BR>Turkey</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=49><FONT face=Arial size=2><I><B>
+      <P align=center>37<BR>(+5)<BR>5%</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=56><FONT face=Arial size=2><I><B>
+      <P align=center>0<BR>(0)<BR>75%</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=44><FONT face=Arial size=2><I><B>
+      <P align=center>0<BR>(0)<BR>65%</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=60><FONT face=Arial size=2><I><B>
+      <P align=center>4<BR>(+4)<BR>57%</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=53><FONT face=Arial size=2><I><B>
+      <P align=center>21.5<BR>(-0.5)<BR>20%</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=45><FONT face=Arial size=2><I><B>
+      <P align=center>32.6<BR>(-1)<BR>15%</B></I></FONT></P></TD>
+    <TD bgColor=#ffff00 vAlign=top width=48><FONT face=Arial size=2><I><B>
+      <P align=center>-</B></I></FONT></P></TD></TR></TBODY></TABLE></DIV><FONT 
+face=Arial><U>
+<P>Austria</U><B> </B>is a mess… Not only is it surrounded by neighbours that 
+all have a strategical edge over it, but most of the relationships with those 
+neighbours have a low compatability as well. Accepting the friendship of Germany 
+seems a good choice, as the two have good compatability and this will cut some 
+of the pressure. Russia appears to be the best potential buddy among the three 
+Balkan brawlers. Turkey looks a hopeless choice, it is in fact the most shaky 
+relationship possible in Diplomacy, with a combined compatablity of only 15%. 
+Peace with Italy is a must, but the relationship is unlikely to last, being the 
+second most unstable on the board with a combined compatability of 28%. </P><U>
+<P>England</U> has some pleasant choices. It can accept working short-term with 
+Germany, knowing that the relationship is horribly one-sided strategically (as 
+bas as Turkey/Austria) and that the route to glory goes through Germany’s guts. 
+Or it can side with the more compatible France, still having the strategical 
+edge. Coaxing Italy into attacking one of the two seems a good idea, as Italy is 
+unlikely to get in England’s way. Ignoring the threats poised by Germany and 
+France while going after Russia early in the game cannot be recommended without 
+serious diplomatic framework and G/F conflict. </P><U>
+<P>France</U> sees England as being the most compatible among the westerners, 
+but may choose the strategically sounder relationship with Germany, altough 
+Germany is likely to reap the biggest harvest from this partnership if France 
+doesn’t demand some donations (Germany rating it at 29%, France at 15%). France 
+seems little concerned with Italy as long as the latter stays away from the 
+French centers, seeing Italy almost as compatible as Russia.</P><U>
+<P>Germany</U>, being centrally located, has access to centers that is out of 
+England’s reach and accordingly, while recognizing its strategical akwardness, 
+has a more optimistic opinion about the compatability of the relationship, 
+putting it on par with one with Russia. From the German view, France is clearly 
+the best bet among the powers in the west/north, being strategically more equal 
+and slightly more compatible. Compared to Austria, even the powers seen as least 
+compatible by Germany have a higher compatability than any of Austria's Balkan 
+neighbours.</P><U>
+<P>Italy</U> should have little doubt about its dream partner: England. Among 
+the eastern triplet, Russia is as expected the most compatible, but at 33% it 
+signals that Italy may encounter some "friendly" competition at some point. 
+Austria is bound to end up on the Italian menu, but whether it will it be 
+breakfast, lunch or dinner is likely to depend on the bigger picture. Italy’s 
+strategical edge will dissapate quickly if it goes veering off while leaving a 
+healthy Austria behind. While Turkey seems more likely to come Italy’s way than 
+France, France seems more likely to succeed, with its positional edge over 
+Italy. </P><U>
+<P>Russia</U> seems to enjoy an advantage over Germany, who is the power seen as 
+both the most feared and incompatible. Austria and Turkey looks equally 
+compatible, with Austria being the easiest to bring down. Baring the 
+traditionally one-sidedness of a Juggernaut in mind (expressed by Russia rating 
+the relationship at 32%, Turkey at 15%), it is surprising that numbers indicate 
+that Russia’s best bet may be to side with Austria. In the north, war with 
+England seems to be disadvantagous, and England is actually seen as more 
+compatible (but far more dangerous) than Italy, who meanwhile is a good partner 
+in crime for the Balkans. Naturally, France is the most compatible 
+partner.</P><U>
+<P>Turkey</U>’s view of Austria exactly mirrors England’s view of Germany – a 
+power that must be overrun, but a useful short-term partner because it is 
+strategically inferior. Russia is easier to work with, but conflict seems 
+difficult to avoid, and Russia will gain the greater spoils. Italy will probably 
+have to be engaged at some point too, but there seems to be potential for mutual 
+existence, both seeing the relationship as being farely equal.</P>
+<P>Looking over these relationships, one is stricken by a similarity between 
+France and Russia that could be another key in understanding the success of 
+these two powers: Their neighbours find it hard to cooperate. In the northwest, 
+both powers borders England and Germany. In the southwest, France has an Italian 
+neighbour that is tied up with Austria, while Russia faces Austria and Turkey in 
+the southeast. Another peculiarity that is to Austrian comfort is that all of 
+its neighbours have some reason to keep Austria alive (at least for a while) – 
+Russia and Turkey because Austria seems to be their best partner in an alliance, 
+and Italy because of Turkey (and, to some extent, Russia).</P><I><B>
+<P>Disputed "truths"</P></B></I>
+<P>At the end of "Geography is Destiny", Windsor challenges a number of 
+conventional principles, which will be discussed: 
+<UL>
+  <LI>"A/T is a poor alliance (<I>it appears to be better for both powers than 
+  allying with Russia</I>)." As it is the least compatible (and one of the most 
+  one-sided) of all alliances, one could hardly call it "good", at least not for 
+  Austria, who seems to be better off allying with Russia. </LI></UL>
+<UL>
+  <LI>"R/T is a good alliance (<I>it certainly is good for Russia, but why 
+  should Turkey be so ready to aid and abet the superior growth potential of the 
+  neighbour which constitutes its greatest threat?</I>)." Austria seems to be as 
+  large a threat to Turkey as Russia is, but even if Russia is easier to work 
+  with, Turkey’s best option could be to ally short-term with the strategically 
+  inferior Austria. And could it be that R/A is an even better choice for Russia 
+  than R/T? </LI></UL>
+<UL>
+  <LI>"Germany should prefer allying with France (<I>when allying with England 
+  would appear to provide the better leverage against two powers Germany fears 
+  more than England</I>)." England does seem to be the power most feared by 
+  Germany, and the alliance with England is strategically horrible for Germany. 
+  France does seem a much better choice. However, the combined fear factors of 
+  Russia and France <B>are</B> sobering and suggests that Germany should be very 
+  vary of getting in bed with France if Russia is going strong. Also, there is a 
+  possibility that Germany’s superior growth in an alliance with England could 
+  enable him to cover his turf. The best climate for an attack on France would 
+  be with Italy joining in and England tied up north with Russia. </LI></UL>
+<UL>
+  <LI>"Germany and Austria are natural allies (<I>when each appears to have a 
+  natural interest in the other's home centers</I>)." They certainly do, but 
+  they are well-compatible powers, and the fear they face from their other 
+  respective neighbors far outrank their fear of each other. This suggests that 
+  their energies are better spent elsewhere, at least in the first stages of the 
+  game. </LI></UL>
+<UL>
+  <LI>"Germany and Russia are natural enemies (<I>geography indicates that A/G/R 
+  is another "triangle" contest in the game, so why should two members of that 
+  triangle always automatically foreclose the idea of allying against the 
+  interests of the third -- and others in the game?</I>)." In terms of fear and 
+  compatibility, Russia actually seems a better partner than England for 
+  Germany, but Germany wouldn’t enjoy a better growth rate in this alliance and 
+  still seems strategically worse off. At the same time, Germany is the power 
+  seen as both the most feared and least compatible by Russia. They could take 
+  on England in the north, but my guess is that Germany should be careful in 
+  doing this unless France is under pressure from Italy (or allied with 
+  England). With Germany’s view of England in mind, bouncing Russia in Sweden 
+  should by no means be automatic. Germany should have little interest in 
+  joining an attack on Austria, and while Austria would like to work with 
+  Russia, taking on Germany should have a low priority. </LI></UL>
+<UL>
+  <LI>"Germany is a western power and should initially focus on the west 
+  (<I>when his cumulative Fear Factor among eastern powers is greater than among 
+  western</I>)." Including neutral SC’s into the equation seems to place Germany 
+  firmly in the west, or rather – the northwest, as his two biggest worries 
+  seems to be England and Russia. </LI></UL>
+<P>Given that grabbing one’s naturals is rational, and not just another piece of 
+conventional wisdom, it would seem that many of these findings supports the 
+latter.</P></FONT>
+<P>
+<TABLE>
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD><A href="mailto:olertu@hotmail.com"><img SRC="/Zine/Common/letter.gif" BORDER=0 ></A> </TD>
+    <TD><STRONG>Ole R Tuft<BR>(olertu@hotmail.com)</STRONG> 
+</TD></TR></TBODY></TABLE>
+<p><i>If you wish to e-mail feedback on this article to the author, click
+on the letter above. If that does not work, feel free to use the
+<a href="/Zine/W2000A/Common/DearDP.html">"<b>Dear
+DP...</b>"</a> mail interface.</i>
+<p>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W2000A/"><IMG align=right SRC="/Zine/Common/toW2000A.gif" border=0></A>
+<BR clear=both>
+</BODY>
+</HTML>
+<!--
+-->

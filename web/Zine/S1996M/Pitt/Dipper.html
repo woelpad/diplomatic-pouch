@@ -1,0 +1,424 @@
+<TITLE>
+DP S1996M: The Big Dipper -- Payola
+</TITLE>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1996M/"><IMG align=right SRC="/Zine/Common/toS1996M.gif" border=0></A>
+<BR clear=both><HR>
+<! ---------------- THE BIG DIPPER MASTHEAD ---------------- >
+<table cellspacing=5>
+<td>
+<IMG align=left width=190 height=150 hspace=10 SRC="/Zine/Common/BigDip.gif">
+<td>
+<H2><i>
+Pitt Crandlemire
+</i></H2>
+<H1>
+The<BR>
+Big<BR>
+Dipper
+</H1>
+</table>
+<! --------------------------------------------------------- >
+<HR>
+<h2 align=center>
+The Payola Variant -- Put Up or Shut Up
+</H2>
+This issue, I'm going to continue examining interesting variants which are
+implemented on the Internet judges (or, if not fully implemented, at least
+supported in some fashion).  One of the newest, and most enjoyable, variants
+is Payola.  I had the good fortune to playtest this "pay for play" variant
+in the eponymous game 'payola' on the USEF judge, and I am also GMing the
+ongoing game 'arnold' on the same judge.  The variant has been revised and
+updated several times since its inception and is now very robust.  Payola
+can be implemented as an adjunct to any other variant; one of the best
+(though most demanding on the GM) is the Tin Can variant combining the Blind
+variant with Payola.  You haven't lived until you've tried to bribe units
+you can't see and aren't even sure exist...
+<P>
+The single focal point for all Payola games is the Website
+<a href=/dpjudge/payola>Payola Place</a> (part of
+The Pouch's Web- and Email-based
+<a href=/dpjudge>DPjudge</a>).
+<P>
+(Disclaimer:  neither the fact that Payola is the brainchild of this
+publication's august editor nor the fact that I owe him large sums of money
+and he recently sent a few "friends" to visit me at my home has anything
+whatsoever to do with the fact that I'm discussing Payola or any nice
+comments I might make...honest.)
+<H3>Overview</H3>
+The basic thrust of the Payola variant is simple: you have to bribe units
+to perform actions.  If yours is the highest bribe, the unit will perform
+the order you give.  If you bid too low, you lose control of the unit.  You
+can make offers to any unit on the board; yours as well as your allies' and
+enemies'.  By the same token, they can make offers to yours with results
+that may not be pleasing to you...  The bribing process only applies to
+movement phases.  Retreats and adjustments are handled in the normal fashion.
+<H3>Income</H3>
+Your bribes are made in silver pieces (AgP) and come from the bank account
+maintained for you by the GM.  You accrue monies to your account by virtue
+of the supply centers you own.  Deposits are made to your account once a
+year, after the Winter Adjustment phase.  There are two sub-variants of
+Payola which determine how money is accrued.  In the original, Fixed Income
+sub-variant, you earn 7 AgP for each SC you own.  In the newer (and more
+common) Diminishing Returns sub-variant, you earn 17 AgP for your first SC,
+16 for the second, 15 for the third, and so on.  Thus, in the Fixed Income
+sub-variant, England starts with 21 AgP, while he'd start with 48 AgP in the
+Diminishing Returns sub-variant.  However, as England grows to, for example,
+10 SC's in the Fixed Income sub-variant, he grows at a steady 7 AgP per SC
+rate for a total of 70 AgP income, while he'd receive proportionately less
+per SC in the Diminishing Returns sub-variant, receiving a total of 125 AgP
+at 10 SC's.
+<H3>Bribing</H3>
+Now that you have money, you have to spend it in order to make more money.
+The neat trick of the Payola variant is that you get to bribe your
+opponents' units, too.  Or, at least you get to try...
+<P>
+In the original variant, bribes were simple -- I'll pay you this much to do
+this order.  That worked well enough but it was somewhat limited.  So, Manus
+spake and lo! different types of bribes were bestowed upon us.  Now we
+could really get tricky.  The format of the bribe offer is:
+<blockquote><tt>
+<strong>&lt;Amount of AgP&gt; &lt;Bribe Type identifier&gt; &lt;Order&gt;</strong>
+</tt></blockquote>
+The various types of bribes are:
+<UL>
+<LI>Affirmative Bribe: I'll pay you to do this order.
+The bribe type identifier for this type of offer is
+'<tt><strong>:</strong></tt>'
+<LI>Negative Bribe: I'll pay you to do anything except this order.
+Type identifier is
+'<tt><strong>!</strong></tt>'
+<LI>Move Bribe: I'll pay you to do this order or any other order which is
+<strong>not</strong> a Hold, Support, or Convoy.
+Type identifier is
+'<tt><strong>></strong></tt>'
+<LI>Hold Bribe: I'll pay you to do this order or any other order which is
+<strong>not</strong> a movement order.
+Type identifier is
+'<tt><strong>@</strong></tt>'
+<LI>Gift Bribe: I'll pay you to do this order or any other order you feel like
+doing.  Type identifier is
+'<tt><strong>*</strong></tt>'
+</UL>
+<H3>Order Resolution</H3>
+Okay, so now you know how to earn money and how to spend it.  How do the units
+decide what to do?  Simple.  Bribe offers are submitted as press to the GM
+and he runs them through an adjudication program. The adjudicator compares
+all offers, combines multiple offers from different players for the same
+order (e.g. if France and England both offer <tt>F&#160;ENG</tt> 6 AgP to move
+to <tt>NTH</tt>, the
+total offer is 12 AgP), determines which offers are the highest, and then
+issues appropriate orders to the units.  These orders are sent to the judge
+and processed as normal (keep in mind that just because a unit accepts an
+offer to perform a certain order doesn't mean that the order will succeed
+when all orders are processed -- in the example above, <tt>F&#160;ENG</tt>
+may try to go to <tt>NTH</tt> but it could still bounce with another unit
+trying to go there).  This
+process of sending offers to the GM as press and running them through the
+adjudicator is being automated and will soon (we hope) be handled directly
+by the judge.
+<P>
+The above is a brief overview of the Payola variant, and while it covers the
+essential points, the interested reader is encouraged to take a look at the
+<a href="/Zine/W1995A/Payola">official rules of the variant</a>, which were
+published in the Winter 1995 Adjustment issue of the Zine.
+<H3>Strategy Tips</H3>
+Now that the mechanics of the variant are clear (they are clear, right?),
+I'm sure you're all waiting with bated breath (and, phew!, some of you
+should change the bait!) for ideas on How to Baffle your Enemies and
+Impress your Allies (tm).  Well, far be it from me to disappoint you.
+Keep in mind, however, that Payola is a relatively new variant and I make no
+claims to an exhaustive analysis.  Anyway, here goes.
+<H3>What's the Point of all Those Different Types of Bribes?</H3>
+The Affirmative bribe is simple and straightforward.  It works best when
+there is only one thing you want a unit to do and you are sure you have
+enough cash to make it happen.  It is the most commonly used bribe, both for
+your units and those of your opponents.
+<P>
+<center>
+<table cellpadding=5 border>
+<caption><strong>Affirmative Bribe Example</caption>
+<tr><th>England<td><tt>5 : F ENG H
+<tr><th>France<td><tt>2 : F ENG - LON
+<tr><th>Germany<td><tt>2 : F ENG - LON
+</table></center>
+<P>
+England's greater expenditure on the affirmative bribe ensures that
+<tt>F ENG</tt> will hold.
+<P>
+The Negative bribe is also simple and straightforward.  It is used when you
+don't care what a unit does as long as it doesn't do the one thing that will
+mess up your plans.  It works best when the unit you're trying to bribe is
+also likely to be offered multiple bribes from other players, ensuring that
+your negative bribe will be enough to put one of those over the top.
+<P>
+<center>
+<table cellpadding=5 border>
+<caption><strong>Negative Bribe Example</caption>
+<tr><th>England<td><tt>5 : F NTH - ENG<BR>6 ! F BRE - ENG
+<tr><th>France<td><tt>8 : F BRE - ENG
+<tr><th>Germany<td><tt>3 : F BRE S A BEL - PIC
+</table></center><P>
+England's negative bribe to <tt>F BRE</tt> was sufficient to ensure that
+Germany's offer succeeded even though England may have had no idea what
+Germany's order was.
+<P>
+The Move bribe is a bit more complicated but not extremely so.  It is used
+primarily when you want to prevent a unit from holding, convoying, giving
+support, or receiving support.  If you have a wish to invade an occupied
+space, bribing the unit which is currently there to move out (allowing you
+to move in without support) is an effective tack.  Again, this bribe type
+is most effective when the unit
+you're bribing is likely to be receiving multiple offers and yours works to
+favor the bribe type you want.
+<P>
+<center>
+<table cellpadding=5 border>
+<caption><strong>Move Bribe Example</caption>
+<tr><th>England<td><tt>4 > F ENG - BRE
+<tr><th>France<td><tt>8 : F ENG C A BRE - LON
+<tr><th>Germany<td><tt>5 : F ENG - MAO
+</table></center><P>
+England's move bribe was sufficient to ensure that <tt>ENG</tt> did not
+convoy <tt>BRE&#160;-&#160;LON</tt>.  It did not succeed in ordering
+<tt>ENG&#160;-&#160;BRE</tt>, however, since Germany's was an
+affirmative type offer for
+<TT>ENG&#160;-&#160;MAO</tt>, which was the order that
+<tt>F&#160;ENG</tt> would have received.
+Also, note that England would have failed in stopping the convoy if Germany
+had instead offered
+<tt>4&#160;:&#160;F&#160;ENG&#160;S&#160;A&#160;BEL&#160;-&#160;PIC</tt>
+since that would not have been a movement offer by Germany.
+<P>
+The Hold bribe is sort of like the move bribe, except in reverse.  It is
+used when you don't care what the unit does so long as it doesn't move.
+There are times when you very much need a unit to stay where it is, either
+to gain control of a supply center, hold a line, or to receive support.
+As with negative and move bribes, it works best when the unit is receiving
+multiple conflicting offers and your hold bribe is designed to favor the
+success of the bribe type you desire.
+<P>
+<center>
+<table cellpadding=5 border>
+<caption><strong>Hold Bribe Example</caption>
+<tr><th>England<td><tt>4 @ F ENG - BRE
+<tr><th>France<td><tt>8 : F ENG - LON
+<tr><th>Germany<td><tt>5 : F ENG S A PIC - BRE
+</table></center><P>
+England's hold bribe coupled with Germany's support bribe ensure that
+<tt>ENG</tt> does not move to
+<tt>LON</tt>.  Since Germany's bribe will earn the unit nine pieces of silver
+and England's would earn it only four, <tt>ENG</tt>
+will be supporting <tt>PIC</tt> to <tt>BRE</tt>.  Note, however, that even
+if England's offer had been for a greater amount than Germany's offer
+individually, ENG would still end up supporting <tt>PIC</tt> to <tt>BRE</tt>
+since the affirmative bribe offered by Germany does not add its amount to any
+order other than the offer listed, but the hold bribe does.
+<p>
+The Gift bribe, at first glance, appears to be sort of silly and have no
+practical use.  However, in reality, it functions as a proxy order and can
+be extremely useful in no-press games or in any game where proxy is not
+otherwise enabled.
+<P>
+<center>
+<table cellpadding=5 border>
+<caption><strong>Gift Bribe Example</caption>
+<tr><th>England<td><tt>2 : F BRE - PIC
+<tr><th>France<td><tt>1 * F BRE - ENG
+<tr><th>Germany<td><tt>2 : F BRE - MAO
+</table></center><P>
+Both the English and the German offer have a total value
+of 3 AgP (since the French silver piece will be given no matter what), so
+what will <tt>F&#160;BRE</tt> do?  Well, that depends on how the
+owner of the fleet in Brest (let's say it's France) set his
+"acceptance list."  And what is an acceptance list?  Each player must submit a
+acceptance list at the start of the game and may update it at any time.
+The acceptance list is submitted in the same
+format as a <tt>SET PREFERENCE</tt> command, and it is used to break
+ties on offers.  If
+France's acceptance list was set to <tt>FEGIATR</tt>, England's offer would take
+preference over Germany's and the unit will be ordered to move to Picardy.
+<H3>But How Much Should I Spend?</H3>
+Yeah, I know, you've got all this money and great plans for spending it, but
+you don't know how much to spend now and how much to save for later.  If you
+spend too much now, you'll end up with too little at crunch time.  If you
+spend too little now, you'll have lots later but nothing useful to spend it
+on.  In order to decide how to spend, you need to keep two things in mind.
+<P>
+First, you and everybody else will be getting more money each year or, rather,
+you will if you still hold any SC's.  Thus, your primary goal is still the
+same -- get those SC's.  If you save 5 AgP's this year but fail to get the
+extra SC that would have earned you an additional 10 AgP's, you haven't
+spent wisely.  When in doubt about spending a few extra AgP's, ask yourself
+if spending them will take or protect an SC.  If so, spend them.
+<P>
+Second, the amount of money in circulation.  You can never know exactly how
+much money is in circulation except prior to the first turn.  However, if
+you pay close attention to how much you have to spend in order to
+successfully bribe your own units, how your attempted bribes of other units
+are accepted or rejected, and how much others spend to bribe your units, you
+can get a very good sense of how much your opponents are spending every
+turn.  This, in turn, gives you an idea of total cash still in circulation,
+as well as the current bid break points.
+<P>
+<center>
+<table cellpadding=5 border>
+<caption><strong>Expenditure Example</caption>
+<tr><th>You started last turn with...<td>40 AgP
+<tr><th>For your own three units, you bid an average of...<td>5 AgP
+<tr><th>For your own units, your success was...<td>2 out of 3
+<tr><th>For two opposing units, you bid an average of...<td>5 AgP
+<tr><th>For opposing units, your success was...<td>1 out of 2
+<tr><th>Money paid by other(s) to your rebellious unit was....<td>7 AgP
+<tr><th>So you offered a total of....<td>25 AgP
+<tr><th>And ended up spending....<td>15 AgP
+</table></center>
+<P>
+From this, you can reasonably determine that
+<ul>
+<LI>Your 40 AgP is about average (maybe a little less than average) for
+all bank balances at the start of last turn,
+<LI>Five silver pieces is a little low for bid break points, while six or
+seven AgP is about right and eight AgP should work on just about anything,
+and
+<LI>At least some of the other players now have less money than they did
+(since two of your offers were rejected).
+</ul>
+A general rule of thumb in the early game is to spend everything you have,
+every year.  This is particularly important when lots of unclaimed SC's are
+up for grabs and will probably be cheaper to get than when they are owned by
+someone else.  A corollary to this rule is to spend half of everything you
+have in the Spring, and half in the Fall.  One common error is to spend just
+a little in the Spring with the intention of spending big in the Fall.  The
+problem with this is that you can't spend usefully in the Fall if you're not
+in a position to take any SC's.  Spring phase is actually more critical than
+Fall because you must have a dominant position after the Spring in order to
+be effective in taking SC's in the Fall.
+<H3>Overspending (or Living Happily Beyond Your Means)</H3>
+One interesting rule which is very important to note:  you are allowed to
+make bribe offers for more than the amount you have in the bank.  The reason
+for doing this is to allow you to anticipate the fact that some of your
+bribes may be too low to be accepted.  If you bid too low on one bribe, all
+of the funds targeted for that bribe will sit idle during that phase.  On
+the other hand, if you assume that some bribes will fail and you feel able
+to guess the amount of those which will fail (if not the specific offers),
+you can still make large bribes for all units to ensure that those that
+succeed will be the highest bid.  For example, examine these two different
+sets of English offers:
+<P>
+<center>
+<table cellpadding=5 border>
+<tr><th colspan=2>English account balance: 21 AgP
+<tr><th>Offer Set 1<th>Offer Set 2
+<tr><td><tt>6 : F ENG - NTH<BR>
+5 : F LON S F ENG - NTH<BR>
+5 : F HEL H<BR>
+5 : F WAL - ENG
+<td><tt>7 : F ENG - NTH<BR>
+7 : F LON S F ENG - NTH<BR>
+7 : F HEL H<BR>
+7 : F WAL - ENG
+</table></center>
+<P>
+In the first example, England has spent exactly what he has in his account.
+If all of his offers are the highest bids, he's in good shape.  However, if
+one of them fails, he has lost the use of those funds for that turn and,
+since he didn't allocate extra funds for the other offers, he increases the
+chances that they will also be too low and will fail, as well.
+<P>
+In the second example, England has overspent, assuming that one of his
+offers will fail.  If he's right that exactly one of them is doomed to failure,
+he still uses all of his available funds and is more likely to be the high
+bidder on the other offers since he has spent more on them.  Unfortunately,
+if he's wrong and all of his offers are accepted, he will overdraw his account
+and all offers will be reduced one silver piece at a time until they are low
+enough to not overdraw his account.  In this case, his offers
+would first be reduced from 7 AgP each to 6 AgP each, and then all the units
+would look again to decide if this is still the best offer on the table.  If
+so, the Englishman would still overdraw his account (paying four bribes of
+six silver pieces each), so they would all be reduced yet again, now down
+to five silver pieces each.  <strong>All</strong> offers
+are reduced equally, not just enough of them to get below your bank balance;
+that's the penalty for guessing wrong.
+<H3>The Power of One</H3>
+Have you ever found yourself wishing in a standard game that you could
+control just <em>one</em> of your enemy's units?  Just make that <em>one</em>
+unit do your bidding because it would bollix up <strong>all</strong> his
+plans?  Well, in Payola you can do just that.  This one factor changes the
+entire strategic concept of the
+game.  It is critically important that you consider this point when planning
+your offense and defense.  For example, examine the following position:
+<P>
+<table cellpadding=3>
+<tr><td><img src=map1.gif>
+<td>
+Normally, Russia would be in a world of hurt, but in Payola, all the Russian
+player needs to do is control the German <tt>A&#160;SIL</tt>.  If he is able
+to get that unit to <tt>HOLD</tt>, none of Germany's other armies are going
+anywhere.  Better yet, if Russia can be sure he controls <tt>SIL</tt>, he also
+need only control <tt>F&#160;LVN</tt>, not <tt>A&#160;WAR</tt>.
+If <tt>A&#160;SIL</tt> and <tt>F&#160;LVN</tt> both <tt>HOLD</tt>, then
+<tt>A&#160;WAR</tt> can roam without concern for Warsaw's safety.
+<P>
+Germany, on the other hand, must not only control <tt>SIL</tt>, he must also
+control <tt>WAR</tt> and <tt>BER</tt>.  Although his position is tactically
+superior, the mercenary effect of bribes in Payola puts him at a significant
+strategic disadvantage.  He'll need a large bank account to roll over Russia
+from this position.
+</table><P>
+Two interesting side-effects develop from the ability to control key opposing
+units (and your opponents' ability to control yours).  Let's take a look at
+these.
+<P>
+First, since your own units can be used against your interests if you don't
+control them, it is often wise to waive builds.  If a new unit will not
+immediately assist in gaining and holding SC's and if its presence could be
+used to block your desired movements, don't build it.  For example, examine
+the following position:
+<P>
+<table cellpadding=3>
+<td><img src=map2.gif>
+<td>
+If Turkey has a build pending, he should waive it.  If we assume that he
+desires to take Sevastopol, any build in Ankara (his only available home SC)
+could be
+used against him by blocking <tt>SMY&#160;-&#160;ARM</tt>.  If he builds in
+Ankara, he needs to control <strong>both</strong> <tt>SMY</tt> and <tt>ANK</tt>
+to ensure he gets <tt>ARM</tt>.  If he waives the build, he needs to control
+only one unit to achieve the same goal.  Since he'll be
+trying to control the units from the same limited supply of funds and since
+the extra unit doesn't really help him take or defend an SC, he can save
+money by waiving the build so that he doesn't have to spend to control the
+extra unit.
+</table><P>
+Second, there are no stalemate lines in Payola.  Since any unit will act on the
+highest bid, no unit can be trusted to hold a stalemate line.  The net
+result of this effect is that Payola games are much more likely to end
+in solo victories.  <em>[Editor's note:  at
+the time of this writing, every Payola game ever played has ended in a solo
+victory.]</em>
+<H3>Conclusion</H3>
+Well, there you have it.  A (not so) brief and (not so) thorough examination
+of the Payola variant.  In case my fondness for the variant hasn't been made
+clear yet, let me tell you that I've been playing in at least one Payola
+variant game ever since the variant's inception.  I've yet to hear any
+significant negative feedback and I've noted that most players who try it
+once will return for further Payola games at the first opportunity.  I strongly
+encourage you to give it a try.
+<P>
+'Til next time, I remain,
+<P>
+<strong>Pitt Crandlemire<BR>
+The Big Dipper<BR>
+(<a href=mailto:pittc@syncon.com>pittc@syncon.com</a>)</strong>
+<P>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the mail address above does not work for you, feel free to use the
+<A HREF="/Zine/S1996M/Common/DearDP.html">"<b>Dear DP...</b>"</A> mail interface.</i>
+<hr>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1996M/"><IMG align=right SRC="/Zine/Common/toS1996M.gif" border=0></A>
+<BR clear=both>
+<!--
+-->

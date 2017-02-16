@@ -1,0 +1,241 @@
+<html>
+<head>
+<title>DP F1995M: Help Wanted</title>
+</head>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1995M/"><IMG align=right SRC="/Zine/Common/toF1995M.gif" border=0></A>
+<BR><BR><HR>
+<IMG align=left height=165 hspace=10 SRC="/Zine/Common/Loeb.gif">
+<h1>Diplomacy Programming Project:<br>Call for Volunteers</h1>
+<H2><i>Danny Loeb</i></H2>
+<P>
+<hr>
+<p>
+<h2><a name="dpp">Diplomacy Programming Project</a></h2> 
+<b>Key Words</b>: Jeux, programmation paralle`le, intelligence
+artificielle, architecture, diplomacy, alpha-beta, ne'gociation,
+semantique
+<br>
+<b>Software</b>: LCS, C
+<ul>
+  <li> Test recent work on strategy finder using diplomatic
+       constraints from observation module. Tests may be done against
+       humans, and/or in self-play mode using the Diplomat Interface.
+  <li> Improve front end of strategy finder and observation module in
+       order to make such testing easier. Incorporate  the strategy
+       finder in the Judge (Diplomacy Adjudicator)?     
+  <li> Make observation module an LCS agent (instead of a mere
+       function) so that it can access the Strategy Finder to detect
+       violation of general agreements.
+  <li> Write negotiation module including ambassador agents for each
+       country, and a process that manages the relations between
+       existing agreements.   
+</ul>  
+<a href="dpp/table.of.contents.html"><b>References</b></a>
+<hr>
+<h2><a name="sgi">Small Games Interface and Player</a></h2>
+<b>Key Words</b>: Jeux, arbres, graphes, acyclique, interface, recursion,
+intelligence artificielle 
+<p>
+Certain situations in real-life
+are much better modeled by multi-player interactions than by simple
+two-player interactions. Thus, the 
+theoretical and practical study of multi-player games is of
+fundamental importance.
+The theory of multiplayer games is much more complicated
+(and unexplored) in that the diverse players may have incentives to 
+communicate and even collaborate.
+<p>
+A matricial theory of multiplayer games is fairly well developed. 
+ However, it 
+supposes that the players enter into negotiations in order to conclude
+binding accords.
+<p>
+On the other hand, combinatorial multiplayer games (as described by
+labeled 
+abstract trees) have  been relatively unexplored. (See however the
+work of  Propp, Straffin and  Li.) In this model, a player wins and all
+of the others lose. We can longer suppose that the players have the
+possibility of negotiating. 
+<p>
+The sets of players who can force a victory forms a <b>maximal
+intersecting family</b>. We can thus classify multiplayer games
+by M. I. F.'s. This classifications is somewhat unsatisfactory (the vast
+majority of games with a fixed odd number of players form a single
+class). We thus introduce the notion of stable
+coalitions. These 
+coalitions can force a victory, and  despite the fact that this
+victory can not be ``shared'' (as in matricial games), each member of
+the coalition has an incentive to follow the common strategy.
+<p>
+As compared to the case of two-player combinatorial games, we are
+confronted here with an 
+embarrassing wealth of conflicting classification schemes. Before
+spending considerable effort
+classifying particular multi-player games, we must choose the most
+appropriate system of classification among the many alternatives.
+<p>
+We propose to continue our research on multiplayer games along two
+main axes.
+<ul>
+  <li> First, to continue our theoretical research on the properties
+       of these classifications.  For example, all of the models of
+       multiplayer combinatorial games studied so far give a value to
+       a subgametree of a given node independent of the sequence of
+       moves required to attain that node. Can more realistic play be
+       achieved using the history of play? (See
+       <href="#class">below</a>.) 
+  <li> Second, practical human-machine simulations can be made in
+       order to determine which systems of classification given rise
+       to human play? Also, we may study the interactions of simulated
+       players based on different systems of axioms? Finally, we will
+       study the role of communication and negotiation in multi-player
+       situations?   
+</ul>
+These simulation will be based on the following previous experience:
+<ul>
+  <li> <b>Diplomacy Programming Project</b>.
+The <a
+href="dpp/table.of.contents.html">Diplomacy Programming Project</a>
+hopes to design programs using the 
+results of combinatorial game theory, matricial game theory, and
+artificial intelligence that play
+diplomacy and actually negotiate with each other.
+A Diplomat interface has been written in  LCS. It launches
+game playing 
+programs written in any language and open windows for human players.
+The Diplomat Interface then accepts orders, transmits messages
+from one player to another, and distributes results. Diplomats
+are being developed in C and LCS for use with the Diplomat
+Interface. (See <href="#dpp"> below.)
+  <li> <b>Metagame</b> B. Pell 
+       has completed a thesis 
+on <b>Metagame</b>. Computer game research has not resulted
+in a measure of progress in artificial intelligences. Chess programs
+perform strongly using methods different from those used by humans,
+and not easily applied to even similar games. Pell proposed a new
+measure by which programs would be written to play arbitrary games
+given a specification of their rules in Prolog.
+  <li> <b>Symbolic Algebra Package</b>.  Wolfe wrote a symbolic
+       algebra programming package in  C which
+manipulates game trees, and performs most of the 
+useful mappings in the theory of combinatorial games.  The package is
+invaluable in analyzing combinatorial games, 
+generating and testing hypotheses, and motivating the theory.
+This package is for the combinatorial game theorist what a
+spreadsheet is for an accountant, saving the mathematician from routine,
+but important, and often complex calculations. Combinatorial game
+theorists around the world have found many applications for this
+package and are constantly developing new functionalities.  For
+example, Mu"ller and  Garcia have added new graphical interface
+capabilities. 
+</ul>
+We propose to write a <b>Small Games Interface</b> which will open
+channels of  
+communication between computer <b>small game players</b> and/or human
+players as does the Diplomat Interface. The rules of the game to be
+played will be generated and transmitted in the form of a labeled
+abstract tree containing at most several thousand nodes. 
+<p>
+Wolfe's symbolic tree manipulating tools could then be used to apply the
+recursive rewrite rules found in the various combinatorial theories of
+multi-player games under development. These theories along with the
+diplomacy programming project negotiating protocols would form the
+strategic basis of a computer <b>Small Games Player</b>. 
+<p>
+Thus, the work proposed is divided into two parts:
+<ul>
+  <li> <b>Small Games Interface</b>. A program is needed to test
+       theories regarding small multiplayer 
+games. A multiplayer game is defined by its ``game tree,'' actually a   
+labelled acyclic graphs. The game trees in question here will have at
+most a few thousand nodes. 
+The Small Games Interface program (SGI) must generate random (reduced) game
+trees or accept as input known games and generate their reduced game
+trees. The SGI must accept input from computer game players (which are
+programs written in an arbitrary language), or human players (via a
+graphical interface). 
+The SGI must keep each player apprised of the rules of the game and
+the progress of the game. The SGI accepts moves from players and acts
+are ``referee''. Optionally, the SGI should allow certain types of
+communication between players.
+The program should be easily maintainable so as to add additional
+``known'' game and better graphical interfaces. The interface used by
+the computer players should be as simple and as unrestrictive as
+possible in order to fascilate the comparison of large numbers of
+algorithms.
+  <li> <b>Small Games Players</b>. 
+The small game player (SGP) is designed to work in conjunction with
+the small game interface described above. The SGP takes as input the
+game tree of a small multiplayer game and the history of the game.
+Given a position in which the SGP must move, it classifies the
+``types'' of the various options according to one of the many formulae
+given in ``Stable Winning Coaltions'' by Daniel Loeb. (e.g. the set of
+(stable) winning coalitions of a position can be computed recursively
+from the sets of (stable) winning coalitions of the various options.) 
+Given a system of classification, an order of preference among the
+types, and a method of breaking ties (possibly involving the history
+of the game), the SGP submits an appropriate move.
+Different methods should be compared systematically using the small
+game interface. Experiments involving communication between players
+may be invisaged.
+</ul>
+<hr>
+<h2><name = "class">The'orie des Jeux a` Plusieurs Joueurs</a></h2>
+<b>Key Words</b>: Mathe'matiques, Jeux Combinatoires
+<p>
+Recent work on combinatorial multi-player games has led to the
+discovery of various method of classification. Either by what sets of
+players form a "winning coallition" or "stable winning coallitions"
+There are many open questions.
+<ul>
+   <li> Given two games of known types, what types are possible for
+	the sum of these games. This problem has been solved for 2 and
+	3 players. (eg: a 2nd player win plus another 2nd player win
+	is never a 2nd player win). What happens with 4 players? Or
+	with 3 players using stable winning coallitions.
+   <li> 3 player <b>impartial</b> games have further been classified
+	by Jim Propp into equivalence classes under the addition of
+	games. Can this  be done using the notion of stability or with
+	4 players?
+   <li> Probabilistic models have calculated the probability of a
+	"random" game being of a given type for 3 or 4 players. With
+	formal calculation programs such as Maple, 5 player solutions
+	should be possible.
+   <li> Jurg Nievergelt suggested generalizing Stable Winning
+	Coalitions to non-winner take all situations. 
+</ul>	
+<b>References:</b> 
+<ol>
+  <li> J. Conway, ``On Numbers and Games'', Academic Press, 1976.
+  <li>  E. Berlekamp, J. Conway, et R. Guy, ``Winning Ways for your
+       mathematical plays, Volume I: Games in General,'' Academic
+       Press, 1972.} 
+  <li> D. Loeb, <a href="http://www.labri.u-bordeaux.fr/Equipe/CombAlg/membre/loeb/london">Challenges in Playing
+       Multiplayer Games</a>. 
+  <li> S.-Y. R. Li, N-person Nim and N-person Moore's games,}
+       Internat. J. Game Theory <b>7</b> (1978) 31--36. 
+  <li> J. G. Propp, Three-Person Impartial Games.
+  <li> P. D. Straffin, Jr., Three-person winner-take-all games with
+       McCarthy's revenge rule, College J. Math. 
+       <b>16</b> (1985) 386--394.
+  <li> D. Loeb, <a href="http://www.labri.u-bordeaux.fr/Equipe/CombAlg/membre/loeb/stable">Stable Winning Coalitions</a>.
+</ol>
+<p><hr>
+<A HREF="http://www.labri.u-bordeaux.fr/~loeb/"><B>Danny Loeb<BR></A>
+University of Bordeaux<br>
+(<A HREF="mailto:loeb@delanet.com">loeb@delanet.com</A>)</B>
+<P>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the mail address above does not work for you, feel free to use the "<b>Dear
+DP...</b>" mail interface, which is <A HREF="/Zine/F1995M/Common/DearDP.html">located
+here...</A>.</i>
+<hr>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1995M/"><IMG align=right SRC="/Zine/Common/toF1995M.gif" border=0></A>
+<BR><BR>
+</body>
+</html>
+<!--
+-->

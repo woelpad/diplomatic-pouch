@@ -1,0 +1,688 @@
+<html>
+<head>
+<title>DP W1999A: EIDRaS Explained</title>
+</head>
+<body bgcolor=white>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1999A/"><IMG align=right SRC="/Zine/Common/toW1999A.gif" border=0></A>
+<BR clear=both>
+<hr>
+<center>
+<h1>
+EIDRaS Explained</h1></center>
+<H3 align=center><i>by Robert Steinke</i></H3>
+<hr WIDTH="100%"></center>
+<p>The <a href=/armada>ARMADA Diplomacy club</a> has decided to use EIDRaS as its player ranking
+system. A well known platitude in the publishing business is that
+every equation in a document cuts the readership in half. The original
+EIDRaS article was rather equation heavy, and in an effort to familiarize
+ARMADA members with the system I wrote this explanation. The end of the
+article discusses some differences between the originally published EIDRaS
+system, and how it will be implemented as the ARMADA ranking system.
+<p>The EIDRaS system is based on an assumption and some math. The
+assumption is that if you knew the exact skill, represented by the rating,
+of each player in a game you should be able to guess the expected result
+of that game. This is useful for rating players because players doing
+better than expected might be rated too low, and
+players that do worse than expected might be rated too high.
+So the ratings can be adjusted to be more accurate after every game.
+If a player's rating is correct they will sometimes do better than expected
+and sometimes worse so their rating should stabilize around the correct
+value.
+<p>The first job is to mathematically score the result of a game.
+<p>Score = players / winners (for players that won)
+<br>Score = 0 (for players that lost)
+<p>In traditional Diplomacy, there are seven points to be gotten in each
+game, but the equations are generalized for variants with any number of
+players. The points are shared evenly among the winners. The
+losers get no points. I'll be using the example from the original
+EIDRaS paper to illustrate. Here it is again:
+<br>
+<center><table BORDER COLS=5 WIDTH="80%" >
+<tr>
+<td>
+<center><b>Name</b></center>
+</td>
+<td>
+<center><b>Initial Rating</b></center>
+</td>
+<td>
+<center><b>After ABC draw</b></center>
+</td>
+<td>
+<center><b>After D solo</b></center>
+</td>
+<td>
+<center><b>After ABCD draw</b></center>
+</td>
+</tr>
+<tr>
+<td>
+<center>A</center>
+</td>
+<td>
+<center>1300</center>
+</td>
+<td>
+<center>1319</center>
+</td>
+<td>
+<center>1290</center>
+</td>
+<td>
+<center>1299</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>B</center>
+</td>
+<td>
+<center>1000</center>
+</td>
+<td>
+<center>1032</center>
+</td>
+<td>
+<center>1015</center>
+</td>
+<td>
+<center>1135</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>C</center>
+</td>
+<td>
+<center>800</center>
+</td>
+<td>
+<center>837</center>
+</td>
+<td>
+<center>826</center>
+</td>
+<td>
+<center>850</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>D</center>
+</td>
+<td>
+<center>1400</center>
+</td>
+<td>
+<center>1366</center>
+</td>
+<td>
+<center>1475</center>
+</td>
+<td>
+<center>1471</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>E</center>
+</td>
+<td>
+<center>900</center>
+</td>
+<td>
+<center>888</center>
+</td>
+<td>
+<center>875</center>
+</td>
+<td>
+<center>864</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>F</center>
+</td>
+<td>
+<center>1100</center>
+</td>
+<td>
+<center>1082</center>
+</td>
+<td>
+<center>1064</center>
+</td>
+<td>
+<center>1047</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>G</center>
+</td>
+<td>
+<center>1200</center>
+</td>
+<td>
+<center>1177</center>
+</td>
+<td>
+<center>1156</center>
+</td>
+<td>
+<center>1135</center>
+</td>
+</tr>
+</table></center>
+<p>And here are the scores achieved by each player in each game:
+<br>
+<center><table BORDER COLS=4 WIDTH="80%" >
+<tr>
+<td>
+<center><b>Name</b></center>
+</td>
+<td>
+<center><b>Score From</b>
+<br><b>ABC draw</b></center>
+</td>
+<td>
+<center><b>Score From</b>
+<br><b>D solo</b></center>
+</td>
+<td>
+<center><b>Score From</b>
+<br><b>ABCD draw</b></center>
+</td>
+</tr>
+<tr>
+<td>
+<center>A</center>
+</td>
+<td>
+<center>7/3</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>7/4</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>B</center>
+</td>
+<td>
+<center>7/3</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>7/4</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>C</center>
+</td>
+<td>
+<center>7/3</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>7/4</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>D</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>7</center>
+</td>
+<td>
+<center>7/4</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>E</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>0</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>F</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>0</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>G</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>0</center>
+</td>
+</tr>
+</table></center>
+<p>The scores by themselves don't mean very much. The important thing
+is the comparison of score with expected score. The expected score
+formula is probably the most complicated in the paper so I'll start with
+something simpler. Each player gets a number which is related to
+their rating. We add up the numbers of all the players to find a
+<br>total number for the game. The fraction of the 7 available points
+that we expect each player to get is equal to the fraction of their number
+into the total number.
+<p><b>Expected Score = number of points available * (player's number /
+sum of all players' numbers)</b>
+<p>For seven players with the same rating they would each expect 1 point
+meaning a seven-way draw. Anyone who does better than a 7-way draw
+will raise their rating. Anyone who does worse will drop. The
+equation looks complicated because the player's number is calculated by
+this formula:
+<p><b>Player's number = e^(0.002 * players rating)</b>
+<p>An exponential function is chosen so that if a very highly rated player
+wins a low rated game, or a low rated player loses a highly rated game
+there will be very little effect on their rating. Getting back to
+the example, we can now calculate the expected score for each player in
+the first game.
+<br>
+<center><table BORDER COLS=5 WIDTH="80%" >
+<tr>
+<td>
+<center><b>Name</b></center>
+</td>
+<td>
+<center><b>Initial Rating</b></center>
+</td>
+<td>
+<center><b>Player's Number</b></center>
+</td>
+<td>
+<center><b>Fraction of Total</b></center>
+</td>
+<td>
+<center><b>Expected Score</b></center>
+</td>
+</tr>
+<tr>
+<td>
+<center>A</center>
+</td>
+<td>
+<center>1300</center>
+</td>
+<td>
+<center>13.46</center>
+</td>
+<td>
+<center>.197</center>
+</td>
+<td>
+<center>1.38</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>B</center>
+</td>
+<td>
+<center>1000</center>
+</td>
+<td>
+<center>7.39</center>
+</td>
+<td>
+<center>.108</center>
+</td>
+<td>
+<center>0.76</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>C</center>
+</td>
+<td>
+<center>800</center>
+</td>
+<td>
+<center>4.95</center>
+</td>
+<td>
+<center>.072</center>
+</td>
+<td>
+<center>0.51</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>D</center>
+</td>
+<td>
+<center>1400</center>
+</td>
+<td>
+<center>16.44</center>
+</td>
+<td>
+<center>.241</center>
+</td>
+<td>
+<center>1.68</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>E</center>
+</td>
+<td>
+<center>900</center>
+</td>
+<td>
+<center>6.05</center>
+</td>
+<td>
+<center>.089</center>
+</td>
+<td>
+<center>0.62</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>F</center>
+</td>
+<td>
+<center>1100</center>
+</td>
+<td>
+<center>9.03</center>
+</td>
+<td>
+<center>.132</center>
+</td>
+<td>
+<center>0.92</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>G</center>
+</td>
+<td>
+<center>1200</center>
+</td>
+<td>
+<center>11.02</center>
+</td>
+<td>
+<center>.161</center>
+</td>
+<td>
+<center>1.13</center>
+</td>
+</tr>
+<tr>
+<td colspan=2>
+<center><b>Total of Column:</b></center>
+</td>
+<td>
+<center><b>68.34</b></center>
+</td>
+<td>
+<center><b>1.00</b></center>
+</td>
+<td>
+<center><b>7.00</b></center>
+</td>
+</tr>
+</table></center>
+<p>Only players A, D, and G are expected to get better than a 7-way draw.
+The other players won't lose much rating if they lose the game. After
+the first game when A, B, and C draw we calculate the difference between
+each player's score and expected score.
+<br>
+<center><table BORDER COLS=4 WIDTH="80%" >
+<tr>
+<td>
+<center><b>Name</b></center>
+</td>
+<td>
+<center><b>Score</b></center>
+</td>
+<td>
+<center><b>Expected Score</b></center>
+</td>
+<td>
+<center><b>Difference</b></center>
+</td>
+</tr>
+<tr>
+<td>
+<center>A</center>
+</td>
+<td>
+<center>2.33</center>
+</td>
+<td>
+<center>1.38</center>
+</td>
+<td>
+<center>0.95</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>B</center>
+</td>
+<td>
+<center>2.33</center>
+</td>
+<td>
+<center>0.76</center>
+</td>
+<td>
+<center>1.57</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>C</center>
+</td>
+<td>
+<center>2.33</center>
+</td>
+<td>
+<center>0.51</center>
+</td>
+<td>
+<center>1.82</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>D</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>1.68</center>
+</td>
+<td>
+<center>-1.68</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>E</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>0.62</center>
+</td>
+<td>
+<center>-0.62</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>F</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>0.92</center>
+</td>
+<td>
+<center>-0.92</center>
+</td>
+</tr>
+<tr>
+<td>
+<center>G</center>
+</td>
+<td>
+<center>0</center>
+</td>
+<td>
+<center>1.13</center>
+</td>
+<td>
+<center>-1.13</center>
+</td>
+</tr>
+<tr>
+<td>
+<center><b>Total of Column</b></center>
+</td>
+<td>
+<center>6.99</center>
+</td>
+<td>
+<center>7.00</center>
+</td>
+<td>
+<center>-0.01
+<br>(rounding error)</center>
+</td>
+</tr>
+</table></center>
+<p>From the difference column we can make some qualitative judgements about
+changes in rating. C should gain about twice as much rating as A
+gains (+37 vs. +19.) D should lose a little more rating than B gains
+(-34 vs. +32.) The difference is actually multiplied by a factor
+of 20. How do we decide this rating change factor? It is more
+or less arbitrary. A large factor will allow players to move
+quickly to their correct rating, but a small factor will make the ratings
+more stable once players are rated correctly. The answer is to make
+the factor large at first, but decrease as a player plays more games. Even
+old players need rating mobility so there is a base factor which
+<br>is increased by a multiple for a player's first games.
+<center>
+<p><b>rating change factor = max(50 * base factor / (games played + 5), base factor)</b></center>
+<p>A new player in his first rated game will change his rating by ten
+times the base factor. After twenty games it will be twice the base,
+and after forty five games it will be the base.
+<p>The base factor is determined by provisional ratings and press.
+Games with full press are more accurate demonstrations of skill and should
+create larger changes in rating. Press is given these values: partial
+20, broadcast 15, no-press 10. A player's rating is considered provision
+for his or her first seven games. Provisional players'
+<br>ratings are probably not accurate so their opponents' ratings should
+change by less.
+<p><b>base factor = max(press value * fraction of non-provisional opponents</b>
+<br><b>
+,press value * 1/3)</b>
+<p>For example, if you are playing against six opponents and one of them
+is provisionally rated then your base factor is 5/6 the press factor. This
+can never go lower than 1/3 of the press factor so that games with all
+newbies will still affect their ratings.
+<h3>
+Implementing EIDRaS for ARMADA</h3>
+The ARMADA club will be starting a brand new EIDRaS rating ladder. Only
+ARMADA members will be rated, and only ARMADA sanctioned games will be
+used to calculate the ratings. Every ARMADA member will be started
+with a provisional score of 1000, and as of this writing, the first ARMADA
+sanctioned email games are being played.
+<p>The first decision we made with the ARMADA rating system is that different
+variants should have completely different rating ladders as skill with
+one variant does not necessarily imply skill with another. We felt that
+this applies to different press settings too. So the main ARMADA rating
+ladder will only count games played with the original rules, and different
+rating change factors for different press settings are removed. A
+factor of 20 will be used for all games.
+<p>The ARMADA rating system will still use the EIDRaS rules to modify the
+base factor for provisionally rated players. Any non-ARMADA rated
+player participating in an ARMADA sanctioned game will be deemed to have
+a provisional rating of 1000.
+<p>The original EIDRaS article also gave rules for games where a replacement
+player is required. First, the country is deemed to have been played
+by a player whose rating is the average of the ratings of players who played
+that country weighted by the number of turns each played. Then the
+rating change is divided between the players in the
+<br>ratio of number of turns played, except that a player who abandons
+a position cannot increase rating to discourage abandonments. For
+the ARMADA ladder we hope that we will not have too many abandonments,
+and those will be in good faith that a player really cannot continue playing
+such as going on vacation, etc. So we have decided to use the time
+weighted average system, but allow abandoning players to share in positive
+rating changes.
+<p>Look for the ARMADA Rating ladder at <a href="/armada/">http://www.diplom.org/armada/</a>,
+and we will keep the pouch updated as to the successes and troubles we
+encounter using this system.
+<table>
+<tr VALIGN=BOTTOM>
+<td><a href="mailto:steinker@cs.colorado.edu"><img SRC="/Zine/Common/letter.gif" BORDER=0 ></a></td>
+<td><b>Robert Steinke</b>
+<br><b>(steinker@cs.colorado.edu)</b></td>
+</tr>
+</table>
+<p><i>If you wish to e-mail feedback on this article to the author, and
+clicking on the envelope above does not work for you, feel free to use
+the
+<a href="/Zine/W1999A/Common/DearDP.html">"<b>Dear DP...</b>"</a> mail interface.</i>
+<p>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1999A/"><IMG align=right SRC="/Zine/Common/toW1999A.gif" border=0></A>
+<BR clear=both>
+</BODY>
+</HTML>
+<!--
+-->

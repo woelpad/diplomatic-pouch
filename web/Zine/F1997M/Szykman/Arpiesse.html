@@ -1,0 +1,517 @@
+<TITLE>
+DP F1997M: Arpiesse Diplomacy
+</TITLE>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1997M/"><IMG align=right SRC="/Zine/Common/toF1997M.gif" border=0></A>
+<BR clear=all>
+<img src="/Common/purpledot.gif" height=2 width=100%>
+<table cellpadding=5>
+<tr><th><a href="anna.html"><img height=120 border=0
+src="anna.jpg"><br><h5>About this picture</h5></a>
+<th><font color=purple><H1>
+Arpiesse Diplomacy</h1></font>
+<H2><i>Simon Szykman</i></H2>
+</table>
+<HR><!img src="../../../Common/purpledot.gif" height=2 width=100%>
+<H3>Introduction</H3>
+<P>
+The idea for this variant is based on a simple but significant
+deviation from the standard adjudication rules.  In standard Diplomacy,
+attacks are transitive.  In other words, if one attack can defeat
+a second, and the second attack can defeat a third, then the first
+attack defeats the third.  In logical terms, this can be expressed
+something like:
+<P>
+<center>
+<tt>a &gt; b, b &gt; c --&gt; a &gt; c<br>(where
+&quot;--&gt;&quot; means &quot;implies&quot;)</tt>
+</center>
+<P>
+In Arpiesse Diplomacy, attacks are <b>not</b> transitive, so that it
+is possible to have a set of attacks where <tt>a&nbsp;&gt;&nbsp;b,
+b&nbsp;&gt;&nbsp;c, and c&nbsp;&gt;&nbsp;a</tt>.  Such a set of attacks would not
+be consistent with the standard rules, but they can occur in Arpiesse
+Diplomacy.
+<P>
+In order to make adjudication possible, each unit in Arpiesse
+Diplomacy is assigned a color -- either red, purple or silver.
+The bulk of the rules of Arpiesse Diplomacy dictate the way attacks
+are adjudicated based on the color of the units involved.  There are actually
+few rules, but they can result in all sorts of interesting cases,
+so a number of examples will be given.  These rules cover as many
+cases as I could think up.  It is possible that there is some
+case that I missed, so if you note any instances that are not
+covered by the rules, or any rules that contradict one another,
+please let me know.
+<P>
+Some people might find it odd to use colors since game pieces
+already have colors. This shouldn't really matter, since I don't
+expect that anyone playing this variant would go and add colors
+to game pieces.  More likely, the &quot;colors&quot; for each
+of the units would be recorded on paper.  The alternative would
+have been to use some label other than colors, but that would
+still require some way of recording the label for each unit.
+I find that picturing units with a certain color makes
+it easier to play out a combination of orders in my head, while
+picturing a &quot;rug&quot; army attacking a &quot;phone&quot;
+army that is supported by a &quot;ski&quot; fleet is pretty meaningless.
+If you find some alternative set of three labels preferable,
+feel free to substitute them for the colors.  The rules will work
+just as well.
+<P>
+These simple modifications to the rules make for new (hopefully
+interesting) dynamics.  By changing the way attacks are adjudicated,
+they affect strategy quite a bit.  The tactical game can be quite
+different as well.  Succesful set up of attacks and use of
+the support order will differ considerably from the standard game, and
+the traditional way of setting up stalemate lines won't work.
+Playing out various situations, even mentally, will bring out some of these
+differences.
+<p>
+<H3>Rules for Arpiesse Diplomacy</H3>
+<dl>
+<dt>
+<B>I.  Initial Game Setup</B>
+<dd>The initial unit types and locations
+are the same as in standard Diplomacy.  All initial units are red.  Units
+that are built in Winter phases during the game can be of any color.  If
+a player forgets to specify a color for a build, the defaul color is red.
+<P>
+<dt><B>II.  Superiority of Colors</B>
+<dd>In order to create the non-transitivity of attacks, each color is given
+<I>superiority</I> over one of the other colors as follows:
+<P>
+<center>
+<table border>
+<tr><th>Color<th>Is Superior To<th>Is Inferior To
+<tr><th>Red<th>Silver<th>Purple
+<tr><th>Purple<th>Red<th>Silver
+<tr><th>Silver<th>Purple<th>Red
+</table>
+</center>
+<P>
+Two units of the same color are said to be <I>equivalent</I>
+to one another.
+<P>
+Or, put another way:
+<p align=center><tt>
+R &lt; P, P &lt; S, S &lt; R, R = R, S = S, P = P
+</tt></p>
+<P>
+(If you can figure out where the name for Arpiesse Diplomacy came
+from, it will be easy to remember the order of precedence without
+referring to the rules.  If you can't and want to know, drop me
+an e-mail and ask.)
+<P>
+<dt><B>III.  Equivalent Attacks</B>
+<dd>Attacks among equivalent units are adjudicated exactly the same way as
+in standard Diplomacy.  When units of like color are involved, the strength
+of an attack, including support(s) for the attacker and defender, determines
+whether or not the attack is successful.
+<blockquote>
+<a name="E1">
+<b>Example 1:</b>
+<table>
+<tr><th valign=top align=left>
+Italy:
+<td><tt>Red A Ven -&gt; Tri<br>Red F Adr S Red A Ven -&gt; Tri
+<tr><th valign=top align=left>
+Austria:
+<td><tt>Red A Tri HOLDS
+<tr><th valign=top align=left>
+Result:
+<td>This is an equivalent attack, so the attack of strength
+2 defeats the defense of strength 1.  The Italian move to Tri succeeds
+and the Austrian unit in Tri is dislodged.
+</table>
+</blockquote>
+<P>
+<dt><B>IV.  Support Among Equivalent Units</B>
+<dd>Support orders for equivalent units are adjudicated exactly the same way
+as in standard Diplomacy.
+<P>
+<dt><B>V.  Non-Equivalent Attacks</B>
+<dd>
+<i>(Note that in all the examples for this section of the rules, while
+the attacks are made by one unit against a non-equivalent unit, the supports
+given to the attacker and defender all come from equivalent units; that is, in
+these examples, all units that receive support are supported by
+units of the same color.  This is because there is an additional
+set of rules [in section VI] that govern support of units by
+non-equivalent units.)</i>
+<P>
+For attacks among non-equivalent units:
+<OL>
+<LI>An attack by a unit that is superior to any and all other units that are
+either attacking or defending the attacked location always succeeds,
+regardless of the strength of the attack.
+<blockquote>
+<B>Example 2:</B>
+<table>
+<tr><th valign=top align=left>
+Germany:
+<td><tt>Red A Pru -&gt; War
+<tr><th valign=top align=left>
+Russia:
+<td><tt>Silver A War HOLDS<br>Silver A Mos S A War
+<tr><th valign=top align=left>
+Austria:
+<td><tt>Silver A Boh -&gt; War<br>Silver A Gal S A Boh -&gt; War<br>
+Silver A Ukr S A Boh -&gt; War
+<tr><th valign=top align=left>
+Result:
+<td>The German attack on War is a superior attack and succeeds
+regardless of strength. In other words, the attack succeeds even
+though Russia is defending with strength 2 while Germany is only
+attacking with strength 1.  Similarly, the Austrian attack fails,
+regardless of strength, because the German attack is a superior
+attack.  Had the German unit not been involved, this would be
+an equivalent attack and Austria would succeed as per the standard
+rules.
+</table>
+</blockquote>
+<LI>Conversely, a defense of a location that is made by a unit superior to
+all units that are attacking the location always succeeds, regardless of
+the strength of the defense.
+<blockquote>
+<B>Example 3:</B>
+<table>
+<tr><th valign=top align=left>
+England:
+<td><tt>Purple F Nth HOLDS
+<tr><th valign=top align=left>
+France:
+<td><tt>Red F Bel -&gt; Nth<br>Red F Eng S F Bel -&gt; Nth
+<tr><th valign=top align=left>
+Result:
+<td>The English fleet remains in Nth because the inferior
+attack fails regardless of strength.
+</table>
+</blockquote>
+<LI>Superiority/inferiority of attacks/defenses is adjudicated
+<i>before</i> units are dislodged; once an attack has failed, it cannot
+then succeed.  If you think about it, this rule follows from the
+simultaneity of adjudication in the standard rules.  [The rule is made
+explicit in order to address the situation in the example below.]
+<blockquote>
+<B>Example 4:</B>
+<table>
+<tr><th valign=top align=left>
+Austria:
+<td><tt>Purple A Rum HOLDS
+<tr><th valign=top align=left>
+Russia:
+<td><tt>Silver A Sev -&gt; Rum
+<tr><th valign=top align=left>
+Turkey:
+<td><tt>Red F Bla -&gt; Rum
+<tr><th valign=top align=left>
+Result:
+<td>The Russian move to Rum succeeds because it is a superior
+attack.  The Turkish move to Rum fails because it is an inferior
+attack and once failed it cannot later succeed.  Therefore it
+is <B>incorrect</B> to reason that the Austrian unit is dislodged
+due to the Russian move, and given the Russian and Turkish moves
+to Rum the Turkish move should succeed because the Red Turkish
+fleet is superior to the Silver Russian Army.
+</table>
+</blockquote>
+<LI>The no-self-dislodgement rule applies, even if the attack on
+one's own unit is a superior attack.
+Neither may a support for an attack cause (that is, be <i>necessary</i>
+to cause) the dislodgement of a unit owned by the same power as the
+supporting unit.
+<blockquote>
+<B>Example 5:</B>
+<table>
+<tr><th valign=top align=left>
+Turkey:
+<td><tt>Red A Bul HOLDS <br>Purple A Con -&gt; Bul
+<tr><th valign=top align=left>
+Result:
+<td>Although the attack on Bul is a superior attack, it fails
+because an attack may not dislodge a unit belonging the same power.
+</table>
+</blockquote>
+<LI>If there are two or more equivalent attacks of equal strength into
+an occupied location, the beleaguered garrison rule applies even
+if the attacking units are superior to the one that occupies the space.
+This, too, is a logical extension of
+the standard rules, but it is made explicit for completeness.
+<blockquote>
+<B>Example 6:</B>
+<table>
+<tr><th valign=top align=left>
+England:
+<td><tt>Silver A Bel HOLDS
+<tr><th valign=top align=left>
+France:
+<td><tt>Red A Bur -&gt; Bel<br>Red A Pic S A Bur -&gt; Bel
+<tr><th valign=top align=left>
+Germany:
+<td><tt>Red A Ruh -&gt; Bel<br>Red A Hol S A Ruh -&gt; Bel
+<tr><th valign=top align=left>
+Result:
+<td>Despite the fact that the French and German units are superior
+to the English unit, due to the beleaguered garrison rule the
+English unit is not dislodged because the attacks into Bel are
+of equal strength and bounce.
+</table>
+</blockquote>
+<LI>If a combination of attacks cannot be resolved logically due
+to a paradox or &quot;looping&quot;, then all attacks fail.
+<blockquote>
+<B>Example 7:</B>
+<table>
+<tr><th valign=top align=left>
+Italy:
+<td><tt>Purple A Ven -&gt; Tri
+<tr><th valign=top align=left>
+Turkey:
+<td><tt>Red A Ser -&gt; Tri<br>Red A Alb S Red A Ser -&gt; Tri
+<tr><th valign=top align=left>
+Austria:
+<td><tt>Silver A Tyr -&gt; Tri<br>
+Silver A Bud S A Tyr -&gt; Tri<br>
+Silver A Bud S A Tyr -&gt; Tri
+<tr><th valign=top align=left>
+Result:
+<td>
+The Italian attack is superior to the Turkish attack, the Turkish attack
+is superior to the Austrian attack, and the Austrian attack is superior to
+the Italian attack (the superiority of an attack is unaffected by supports
+and associated attack strengths).  These attacks cannot be resolved so all
+attacks fail. Love that non-transitivity.
+</table>
+</blockquote>
+</OL>
+<P>
+<dt><B>VI.  Support Among Non-Equivalent Units</B>
+<dd>
+<OL>
+<LI>As in standard Diplomacy, a unit receiving support moves or
+defends with its own strength plus that of all (uncut) supporting
+units.  In Arpiesse Diplomacy, if a unit receives support from
+a superior unit, it moves or defends with the superior color
+<b><i>as well as</i></b> its own color.
+<blockquote>
+<B>Example 8:</B>
+<table>
+<tr><th valign=top align=left>
+Russia:
+<td><tt>Red A Sil HOLDS<br>Purple A War S A Sil<br>Silver A Pru S A Sil
+<tr><th valign=top align=left>
+Result:
+<td>Because the unit in Sil is receiving support from a superior
+unit in War, it defends as a Red and Purple unit.  It does not
+receive the color Silver from the army in Pru because that unit
+is not a superior unit.
+</table>
+</blockquote>
+<LI>A unit may <B>not</B> obtain an <i>inferior</i> color through support,
+even if the support comes from a superior unit.
+<blockquote>
+<B>Example 9:</B>
+<table>
+<tr><th valign=top align=left>
+England:
+<td><tt>Purple F Lon S F Nth<br>Red F Nth S F Eng<br>Silver F Eng HOLDS
+<tr><th valign=top align=left>
+Result:
+<td>The unit in Nth is receiving support from a superior unit,
+and therefore defends with that unit's color as well as its own
+(i.e., Red and Purple).  The Silver unit in Eng is also receiving
+support from a superior unit.  However, it cannot receive the
+color Purple to defend with, even though it is receiving support
+from a superior unit, because Purple is an inferior color for
+the Silver unit.  Eng can only receive the superior color, Red
+in this case, and therefore the fleet in Eng defends as Silver
+and Red, but not Purple.
+</table>
+</blockquote>
+<LI>Just as a unit that offers support in standard Diplomacy does
+not give up its own defensive strength to order the support, in
+Arpiesse Diplomacy a unit that supports another unit does not
+give up its color by doing so.
+<LI>In standard Diplomacy, if a unit receives support for an attack
+and that attack fails, the unit defends its own location against attack
+with its own strength but not the strength of any support it had received
+for its failed attack.  Similarly, in Arpiesse Diplomacy,
+if a unit receives support for an attack and that attack fails, it defends
+its original location against attack with <b>only its own</b> strength and
+color.  Any colors obtained through support for the attack are not available
+for defensive purposes.
+</OL>
+<P>
+<dt><B>VII.  Cutting Support</B>
+<dd>The cutting of support is handled as in standard Diplomacy with the
+exception that an inferior unit <B>cannot</B> cut support ordered by a
+superior unit.  The cutting of support affects (that is, nullifies) both the
+increase in attack/defense strength <b>and</b> the passing of a color from
+a superior unit (if applicable) as described in Rule VI.
+<P>
+<dt><B>VIII.  Resolving Multi-Color Attacks and Defenses</B>
+<dd>
+<OL>
+<LI>A unit attacking or defending with multiple colors can be thought of
+as making multiple attacks or defenses, each with one color, and each having
+the full strength of itself and its (uncut) supports (that is, its strength
+is <b>not</b> divided up among these theoretically separate attacks, each
+by a different color).
+<LI>To dislodge a unit that is holding with multiple colors, an attacking
+unit must make an attack
+that defeats <b>each and every one</b> of the holding unit's defenses.
+<li>This is <b>not</b> the same as saying that a defending unit must be
+able to <i>defend</i> against each of the <i>attacking</i> unit's attacks
+(which would make it easier for an attack to succeed).  The burden to
+succeed is on the attacker, not the defender.
+<li>This is also <b>not</b> the same as saying that a defending unit must
+be able to defend against <b>any one</b> of the attacking unit's attacks (which
+would make it harder for an attack to succeed).
+</OL>
+<P>
+<dt><B>IX.  Resolving Multi-Color Attacks by Multiple Units</B>
+<dd>
+When two or more units attempt to enter an empty province attacking
+with multiple colors, each unit can, as before, be thought to be making
+multiple attacks each with one color.
+<OL>
+<LI>If each of a unit's attacks can defeat each of the other attacking
+units' attacks, the first unit succeeds in entering the empty space.
+<LI>Also, if each of a unit's attacks can beat <i>or tie</i> each of the
+other attacking units' attacks, the first unit still succeeds in entering
+the empty space.  (Note that at least one of the unit's attacks must beat,
+rather than tie, those of the other units, since if they all tie, a standoff
+results.)
+<LI>If the above rules cannot be logically or consistently resolved (for
+example, if more than one unit satisfies the above rules and successfully
+attacks the same space) or if a paradox of any sort results, all attacks fail
+and a standoff results.
+</OL>
+When two or more units attempt to enter an occupied province, attacking
+with multiple colors, but the unit occupying the provice successfully
+moves out of that province, the province should be considered empty and
+the above rules apply.  If the unit occupying the provice is holding,
+or fails to leave the province, the province is considered to be occupied
+and the following rules apply:
+<OL>
+<LI>To enter the space, a unit must first be able to successfully attack that
+space as if it were an empty space, according to the rules given above.
+<LI>That unit must <b>also</b> be able to successfully dislodge the
+defending unit according to the rules in Section IX.  Note that this
+order is important: first, a single unit must be able to move in as if the
+space were empty and <b>then</b> it must be able to dislodge the unit
+occupying the province.  This is <b>not</b> the same as saying that units
+must be able to dislodge a defending unit and then any units that can do so
+must be able to attack as if the space were empty.  In some cases, an attack
+that would succeed one way would fail the other, so be sure to consider
+the correct ordering.
+<li>Once again, If the above rules cannot be logically or consistently
+resolved or if a paradox of any sort results, all attacks fail and
+a standoff results.
+</ol>
+<P>
+<dt><B>X.  The Retreat Order</B>
+<dd>Retreats are handled as in standard Diplomacy, with the exception that if
+two or more units are ordered to retreat to the same space, then if one unit
+is superior to the other(s), the retreat for the superior unit succeeds and
+only the inferior unit or units are disbanded.
+<P>
+<dt><B>XI.  The Convoy Order</B>
+<dd>Convoys are handled as in standard Diplomacy.  A fleet need not be a
+certain color in order to convoy any particular army.
+<P>
+<dt><B>XII.  Optional "Color Exchange" Rule</B>
+<dd>A Summer phase is added between the Spring and Fall phases.  During
+the Summer phase, each unit may submit an <B>exchange</B> order,
+of the form:
+<p align=center><tt>&quot;Unit-1&nbsp;exchange with Unit-2&quot;<br>
+(any non-ambiguous syntax is acceptable, such as omitting the word
+&quot;with&quot; or using &quot;Exch&quot; or &quot;X&quot; rather than
+&quot;exchange&quot;).</tt></p>
+If and only if two units submit the same exchange order for one another,
+and if the two units are located such that <I>either one</I> could support
+the other's <tt>HOLD</tt> order (even if <i>both</i> can't support each other's
+<tt>HOLD</tt> orders) then the two units switch colors.
+Note that it is not necessary for either unit to actually support
+a <tt>HOLD</tt> order before or after the exchange -- it must merely
+be possible for one to do so.
+<blockquote>
+<B>Example 10:</B>
+<table>
+<tr><th valign=top align=left>
+Italy:
+<td><tt>Purple F Adr X A Tri
+<tr><th valign=top align=left>
+Austria:
+<td><tt>Silver A Tri X F Adr
+<tr><th valign=top align=left>
+Result:
+<td>The units in Tri and Adr both have submitted an order
+for the same exchange.  Since the fleet in Adr is located such
+that it could support Tri to HOLD, the units exchange colors even
+though the army in Tri cannot support the fleet which is located
+in a body of water.
+</table>
+<p>
+<B>Example 11:</B>
+<table>
+<tr><th valign=top align=left>
+Russia:
+<td><tt>Red F StP(SC) X F Nwy
+<tr><th valign=top align=left>
+<td><tt>England: Purple F Nwy X F StP(SC)
+<tr><th valign=top align=left>
+Result:
+<td>Although the fleet in StP(SC) cannot support the fleet
+in Nwy to HOLD, the fleet in Nwy can support the fleet in StP(SC)
+to hold, so the units exchange colors.
+</table>
+<p>
+<B>Example 12:</B>
+<table>
+<tr><th valign=top align=left>
+France:
+<td><tt>Red F Gas X F Mar<br>Silver F Mar X F Gas
+<tr><th valign=top align=left>
+Result:
+<td>Although the Mar and Gas fleets are adjacent to one another,
+neither fleet can support the other to <tt>HOLD</tt> so the exchange order
+is not valid.  If either unit had been an army, the exchange would succeed.
+</table>
+</blockquote>
+</dl>
+<p>
+<i>[Note:  In the rules above, I haven't provided quite as many examples as I
+wanted to, particularly in sections VIII and IX.
+I'll plan on adding some more examples next week.  If you have any
+opinions or feedback (good or bad) I'd be interested in hearing from you.
+And if you are interested in trying a game of Arpiesse Diplomacy,
+let me know.  If I get seven players, I'll start a game, though I suspect
+the adjudication will be quite a challenge.]</i>
+<p>
+<table>
+<tr valign="bottom">
+<td><A HREF="mailto:simon@diplom.org"><IMG src="/Zine/Common/letter.gif"
+border="0"></A>
+</td>
+<td>
+<strong>Simon Szykman<br>
+(simon@diplom.org)</strong>
+</td>
+</tr>
+</table>
+<p><em>If you wish to e-mail feedback on this article
+to the author,
+click on the letter or envelope above.  If that does not work, feel
+free to use the <A HREF="/Zine/F1997M/Common/DearDP.html">"<strong>Dear
+DP...</strong>"</A> mail interface.</em>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1997M/"><IMG SRC="/Zine/Common/toF1997M.gif" border=0 ALIGN=right></A>
+<br clear=both>
+</body>
+</html>
+<!--
+-->

@@ -1,0 +1,221 @@
+<HEAD>
+   <TITLE>DP F1999R: Eliminating the Paradox</TITLE>
+</HEAD>
+<BODY bgcolor=white>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1999R/"><IMG align=right SRC="/Zine/Common/toF1999R.gif" border=0></A>
+<BR clear=both><HR>
+<!--
+Here is the paradox article.  This is the basic setup.  Towards the
+end, you will see the place where there will be links to a discussion
+of Rule 1 over Rule 2 and the discussion for Rule 2 over Rule 1.
+I will be writing the one for Rule 2 over Rule 1.  I'll try to get it
+to you tomorrow.  It won't be very long.  I'm basically going to take
+the email message I sent you the first time around and smooth it out 
+a bit.
+Also, you will notice that I didn't actually say anywhere in the text
+which of us came up with which rule.  That was intentional... part of
+the mystery.  You'll see at the end that the page that comes up after
+their final vote will reveal which was which.
+- Simon
+-->
+<H1 align=center>Eliminating the Paradox in Diplomacy</H1>
+<H2 align=center><i>By Simon Szykman and Manus Hand</i></h2>
+<HR>
+<H3>What's Up Here?</H3>
+Back during their input into the development of the Diplomacy Player's
+Technical Guide, the issue of how to adjudicate convoys came up, in
+particular as it related to paradoxical situations.  Both Simon Szykman and 
+Manus Hand had their own opinions about it.  Time passed....
+<p>
+More recently, Manus dropped Simon a note, bringing up the topic again,
+with a proposal.
+<!--
+saying he had come up with
+a way of eliminating paradoxes that had not (to his knowledge) been
+proposed before.  
+-->
+<p>
+Simon examined Manus' proposed rule, and replied with a rule of his
+own which he had always had in mind to use should a paradoxical situation 
+arise in a game he was running (it never did get used, as paradoxes are
+extremely uncommon situations).  This rule also eliminated paradoxes,
+but in a different way and therefore resulting in a different outcome.
+<p>
+They now present these ideas for scrutiny by and for comment from the
+Diplomacy community.
+<p>
+<!--
+They felt it was important to solicit a "gut reaction" before actually
+presenting
+-->
+Here are
+the two proposed rules and the point/counter-point exchange
+between Simon and Manus.  Consider the following situation (a 
+slight modification on the traditional Pandin's paradox):
+<p>
+<center>
+<table border>
+<tr><th rowspan=5><img src=paradox.gif>
+<th>Unit
+<th>Order
+<tr>
+<td>English Fleet Wales<br>
+    English Fleet London
+<td><tt>F Wal - ENG<br>
+    F Lon S F Wal - ENG
+<tr>
+<td>French Army Brest<br>               
+    French Fleet English Channel<br>    
+    French Army Yorkshire           
+<td><tt>A Bre - ENG - Lon<br> 
+    F ENG C A Bre - Lon<br> 
+    A Yor S A Bre - Lon
+<tr>
+<td>German Fleet Belgium<br>
+    German Fleet North Sea         
+<td><tt>F Bel - ENG<br>
+    F NTH S F Bel - ENG 
+<tr><td colspan=2>&nbsp;
+</table>
+</center>
+<p>
+If you adjudicate this situation according to the Diplomacy rules,
+you will find that it leads to a paradox.  If the convoy to London
+fails, England and Germany have equally-well supported attacks on
+the English Channel, therefore there is a standoff.  This, in turn,
+means that the Channel fleet is not dislodged, and
+therefore the convoy succeeds, cutting the support ordered by London.
+This causes Wal to lose support, eliminating the standoff in the Channel,
+allowing the German attack on the English Channel to succeed, dislodging
+the fleet there, and disrupting the convoy.  This means that Brest does
+not attack London, reinstating the support given by London, causing a
+standoff, allowing the convoy to succeed, which cuts support... and so on
+and so on.
+<p>
+Why does this happen? Because there
+is an inconsistency in the Diplomacy rules that makes it impossible
+to adjudicate this situation without a paradox.  Or, put slightly 
+differently, there is no one single result that is consistent with the 
+combination of rules on convoys, support, and support-cutting.
+<p>
+So how to eliminate the paradox?  Simple.  Add a rule that forbids
+paradoxes from happening.  But you can't just add a rule that says
+"Paradoxes are forbidden" because such a rule would not tell you <i>how</i>
+the above (currently paradoxical) situation should be adjudicated.
+You need to come up with a rule that allows players to determine
+a single outcome for that situation.
+<p>
+Okay.  Before we actually talk about specific paradox-eliminating rules,
+let's assume for a moment that we live in a world where such a rule 
+exists.  Okay?  There is no paradox.  Say it out loud.
+"There is no paradox."  Good.  The question is, since we have (in this
+imaginary world) a set of
+Diplomacy rules that does not result in a paradox for the above orders,
+what does the board look like after they are adjudicated?
+Here are two possibilities:
+<p>
+<center>
+<table>
+<tr>
+<th>Resolution 1
+<th bgcolor=red rowspan=6>&nbsp;
+<th>Resolution 2
+<tr><th><table border=4><tr><th><img src=rule1.gif></th></tr></table>
+	<th><table border=4><tr><th><img src=rule2.gif></th></tr></table>
+<tr>
+<td><tt>English Fleet Wales
+<td><tt>English Fleet Wales
+<br>English Fleet London
+<tr>
+<td><tt>French Army London<br>               
+    French Fleet English Channel<br>    
+    French Army Yorkshire           
+<td><tt>French Army Brest<br>               
+    French Fleet English Channel<br>    
+    French Army Yorkshire   
+<tr>
+<td><tt>German Fleet Belgium<br>
+    German Fleet North Sea         
+<td><tt>German Fleet Belgium<br>
+    German Fleet North Sea  
+<tr>
+<td valign=top>Summary: The French convoy succeeds, dislodging
+<br>and destroying the English fleet in London.
+<!--
+Support from London is not cut.
+	<br>This allows a standoff in the Channel.
+	<br>This allows the French convoy to succeed,
+	<br>destroying the English fleet in London.
+	<br>(London's support, <i>despite the dislodge,</i> is uncut.)
+-->
+<td valign=top>Summary: No change in position
+</table>
+</center>
+<p>
+Before discussing any actual rules, Simon and Manus
+want to get a gut reaction to the situation from readers.  So please
+click on one of the buttons below to proceed to the rules and discussion.
+Note that you may not be 100% satisfied with either outcome, because 
+this situation is one in which there fundamentally is no possible outcome
+that is completely consistent with all the Diplomacy rules.  So we are
+not asking for absolute satisfaction... just which seems more right (or
+less wrong).  If you absolutely just cannot make up your mind, you can
+click the third button.  Regardless of how you answer now, you will be
+asked again after the discussion and will have the opportunity to change
+your mind.  
+<P>
+<center>
+<table>
+<tr>
+<th>
+<form method=post action=resolve.cgi>
+<input type=hidden name=vote value=1>
+<input type=submit value="I Like Resolution 1">
+</form>
+<th>
+<form method=post action=resolve.cgi>
+<input type=hidden name=vote value=2>
+<input type=submit value="I Like Resolution 2">
+</form>
+<th>
+<form method=post action=resolve.cgi>
+<input type=hidden value=0>
+<input type=submit value="I Can't Decide">
+</form>
+</table>
+</center>
+</form>
+<P>
+<table>
+<tr valign="bottom">
+<td><A HREF="mailto:manus@diplom.org"><IMG src="/Zine/Common/letter.gif" border="0"></A>
+</td>
+<td>
+<strong>Manus Hand<br>
+(manus@diplom.org)</strong>
+</td>
+</tr>
+<tr valign="bottom">
+<td><A HREF="mailto:simon@diplom.org"><IMG src="/Zine/Common/letter.gif" border="0"></A>
+</td>
+<td>
+<strong>Simon Szykman<br>
+(simon@diplom.org)</strong>
+</td>
+</tr>
+</table>
+<p>
+<i>If you wish to e-mail feedback on this article to the authors, and clicking
+on an envelope above does not work for you, feel free to use the
+<A HREF="/Zine/F1999R/Common/DearDP.html">
+"<b>Dear DP...</b>"</A> mail interface.</i>
+<p>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1999R/"><IMG align=right SRC="/Zine/Common/toF1999R.gif" border=0></A>
+<BR clear=both>
+</BODY>
+</HTML>
+<!--
+-->

@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>DP S2009M: The Math of Adjudication</title>
+<!-- Authored by Lucas B. Kruijswijk -->
+<!-- Published on the Pouch Zine with permissions -->
+<!-- Created on March 6, 2008 -->
+</head><body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+<br clear="all">
+<hr size="1" width="100%" align="center" style="color: GRAY">
+<center>
+<h1>The Math of Adjudication</h1>
+<h2>by Lucas Kruijswijk</h2>
+<hr size="1" width="100%" align="center" style="color: GRAY; margin-bottom: 15px">
+</center>
+<table width="95%" align="center" border="0">
+<tbody><tr>
+<td align="justify">
+<h2>A simple recursive algorithm that works for most cases</h2>
+<p>The great thing about using the equations-based analysis is that it removes the risk
+of being tripped up by the interpretation of the rulebook while constructing an algorithm.
+The interpretation has to do with the definition of the equations, but any follow up is
+a matter of mathematics! So we have gained freedom in reasoning, and we can look at
+different approaches. </p>
+<p>First of all we want to know whether an order is already resolved. This means that
+during adjudication, an order is in one of the following states: SUCCEEDS, FAILS, or
+UNRESOLVED.</p>
+<p>The UNRESOLVED state might not be used in algorithms that are not derived from equations
+(such as the <a href="dptg.txt">DPTG</a>), or at least not so explicitly. These algorithms
+process the orders in a specific sequence; and the sequence guarantees that when an order
+is processed, any prerequisites are resolved first. They often follow the principle that
+a move order succeeds until a reason is found for it to fail, and a support order succeeds
+until it is found to have been cut. This approach requires the construction of a correct
+sequence. However, in the choice of our algorithm, we don't want to be restricted
+in this way.</p>
+<p>With the UNRESOLVED state, an obvious approach for an algorithm is to make a simple
+recursive function for resolving an order:</p>
+<div style="margin: 0px 0px 5px 40px"><i>If the state of the order is not UNRESOLVED, then
+return.</i></div>
+<div style="margin: 0px 0px 5px 40px"><i>If the order is UNRESOLVED, look if the resolution
+of the order is dependent on the resolution of other orders.</i></div>
+<div style="margin: 0px 0px 5px 40px"><i>If so, resolve those orders first, by calling the
+function in recursion.</i></div>
+<div style="margin: 0px 0px 5px 40px"><i>When all dependencies are resolved, adjudicate the
+original order given the equations.</i></div>
+<div style="margin: 0px 0px 5px 40px"><i>Set the state of the order according to the
+adjudication result (so it is no longer UNRESOLVED).</i></div>
+<p>The complete algorithm initializes the states of all orders to UNRESOLVED, and then
+calls the function for every order.</p>
+<p>For example, suppose we have the following simple situation:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure8.png" width="242" height="113" alt="Figure 8" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">France:
+A par -> bre
+F bre -> mao</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 8.</i></center>
+<p>Initially both orders are assigned the UNRESOLVED state. If we start resolving the
+Paris order, then we need to know the <i>attack strength</i> of the unit in Paris and the
+<i>hold strength</i> of the Brest area. For this, we need to know whether the <i>move</i> of the
+Brest unit is successful. So we try to resolve the Brest order in recursion. Since
+this order is not dependent on any other orders, it can be adjudicated directly,
+with a positive result. After this, the adjudication of the Paris order can be completed.</p>
+<p>This simple recursive algorithm using the UNRESOLVED state works fine for most
+situations. However, things get complicated when dealing with a circular movement or
+convoy paradox. In these cases, the described simple recursive algorithm will enter
+an endless recursive loop. This means that the algorithm cannot handle all situations.</p>
+<p>Actually, the circular movement and convoy paradoxes are not the real problem. If
+those situations were the only difficulty, then the simple recursive algorithm could
+easily be adapted, such that it recognizes when it enters an endless loop (that is,
+when in recursion the recursive function is called for the second time for the
+same order). In such cases, the orders in the cyclic dependency should be
+passed to the backup procedure, which determines whether it is a circular
+dependency or a convoy paradox and adjudicates accordingly.</p>
+<p>However, it is not that easy. The really problematic situations are those that
+have a cyclic dependency, but for which the number of resolutions that respect the
+equations is nevertheless exactly one. These situations always consist of a
+circular movement or elements of a convoy paradox, supplemented with additional
+units and orders. For instance, consider a circular movement with one of the
+units supported, as shown below:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure9.png" width="159" height="263" alt="Figure 9" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">England:
+F nwg -> nth
+Germany:
+F ska Supports F nth -> nwy
+F nth -> nwy
+Russia:
+F nwy -> nwg</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 9.</i></center>
+<p>Normally, a circular movement will have two valid resolutions that respect the
+equations (if the circular movement rule is not considered). Either all units fail
+to move, or all units succeed in moving. However, in the situation above, a
+resolution where all units fail to move is incorrect, because the German fleet in
+the North Sea should always succeed in its move. (thanks to the support from the
+fleet in Skagerrak).</p>
+<p>Similarly, if the fleet in Skagerrak were to move to the North Sea, all units
+would bounce. A resolution with all moving fleets advancing would be inconsistent.</p>
+<p>In the following example, there would be a convoy paradox if the Russians did not
+intervene:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure10.png" width="300" height="241" alt="Figure 10" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">England:
+A edi -> swe
+F nth Convoys edi -> swe
+F ska Convoys edi -> swe
+Germany:
+F den -> ska
+F swe Supports den -> ska
+Russia:
+F nwg -> nth
+F nwy Supports nwg -> nth</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 10.</i></center>
+<p>Without the Russian orders, there are two resolutions that respect the equations.
+The first will advance the fleet in Denmark and disrupt the convoy as consequence,
+while the second is a successful convoy that cuts the support in Sweden. But with
+the Russian orders this all becomes irrelevant, because the Russian orders disrupt
+the convoy in any case.</p>
+<p>Other ways for Russia to take away the paradoxical aspect of the scene are to
+support the fleet in Denmark, or to cut the support in Sweden (both can be done with
+the fleet in Norway). An alternative convoy path could also be ordered, but the
+geography in this particular example does not allow it.</p>
+<p>The feature that all these situations have in common is that the equations contain
+a cyclic dependency, while the number of resolutions for the equations is still
+exactly one. And because there is only one resolution, we want to find this resolution.
+Passing the situation to the backup rule would give the wrong results. These
+situations jeopardize the simple recursive algorithm.</p>
+<p>One possibility for dealing with these cyclic dependencies is to try to recognize
+the different situations, and adjudicate those special cases separately. This has been
+done in many older adjudicators, and since the possibilities are limited this is
+certainly possible.</p>
+<p>For a circular movement situation this does not sound very difficult. The only thing
+that has to be done is to check whether there is unit outside the circle that disrupts
+the circular movement with enough support. If so, the bouncing unit part of the
+circular movement fails, and all the other orders are adjudicated normally. If
+there is no unit that disrupts the circular movement, then all units advance, and
+units that support a movement within the circle are irrelevant. Although this
+sounds simple, remember that the additional unit may come by convoy, or that one
+of the crucial supports may be cut by a convoy.</p>
+<p>It is far more complex to recognize the convoys correctly. The <a href="dptg.txt">DPTG</a>
+has described this approach in detail, and uses the notion of subverted convoys, with
+subcategories: futile convoys, indomitable convoys, and confused convoys.</p>
+<p>To avoid this complexity, we can look for a generic method of handling cyclic
+dependencies. A generic method may sound more difficult, but there are only a few
+requirements for such a generic algorithm:</p>
+<ul>
+<li>It must handle the equations and their dependencies.</li>
+<li>If there is a cyclic dependency with one exclusive resolution, it must
+choose that single resolution.</li>
+<li>If there is cyclic dependency which does not have one exclusive resolution,
+it must pass the situation to the backup rule.</li>
+</ul>
+<p>This doesn't look impossible. In the next chapter we will look at one such
+approach, and in the last chapter we will look at an approach that is close to
+the simple recursive algorithm.</p>
+<p><a href="DipMath_Chp2.htm">PREV</a> - <a href="DipMath_Chp4.htm">NEXT</a></p>
+<br><br><table>
+<tbody>
+<tr valign="bottom">
+<td><a href="mailto:editor@diplom.org"><img src="/Zine/Common/letter.gif" border="0"></a> </td>
+<td><strong>Lucas Kruijswijk<br>(<a href="mailto:L.B.Kruijswijk@inter.nl.net">L.B.Kruijswijk@inter.nl.net</a>)</strong>
+</td></tr></tbody></table>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the envelope above does not work for you, feel free to use the <a href="/Zine/S2009M/Common/DearDP.html">"<b>Dear
+DP...</b>"</a> mail interface.</i>
+</td></tr></tbody></table>
+<hr size="1" width="100%" align="center" style="color: GRAY; margin-top: 15px">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+</body></html>
+<!--
+-->

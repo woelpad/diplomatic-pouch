@@ -1,0 +1,273 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>DP S2009M: The Math of Adjudication</title>
+<!-- Authored by Lucas B. Kruijswijk -->
+<!-- Published on the Pouch Zine with permissions -->
+<!-- Created on March 6, 2008 -->
+</head><body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+<br clear="all">
+<hr size="1" width="100%" align="center" style="color: GRAY">
+<center>
+<h1>The Math of Adjudication</h1>
+<h2>by Lucas Kruijswijk</h2>
+<hr size="1" width="100%" align="center" style="color: GRAY; margin-bottom: 15px">
+</center>
+<table width="95%" align="center" border="0">
+<tbody><tr>
+<td align="justify">
+<h2>Two proofs about the Diplomacy rules</h2>
+<p>As said earlier, the interpretation of the official rulebook is encoded in the
+equations, while any follow up is a matter of mathematics. In this chapter we will
+prove two properties of the rules.</p>
+<p>But first, I have to introduce the notion of a &#x201c;dependency graph&#x201d;. If
+we look again at figure 9:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure9.png" width="159" height="263" alt="Figure 9" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">England:
+F nwg -> nth
+Germany:
+F ska Supports F nth -> nwy
+F nth -> nwy
+Russia:
+F nwy -> nwg</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 9 repeated.</i></center>
+<p>Then we can make a directed graph between the dependencies of the orders:</p>
+<center><img src="figure11.png" alt="Figure 11"/></center>
+<center><i>Figure 11.</i></center>
+<p>The arrows no longer represent <i>moves</i>, but <i>dependencies</i>. Resolving the North
+Sea order depends on both on the resolution of Norway and on the resolution of the
+support order of Skagerrak. This is shown by the two arrows originating from <i>nth</i>.</p>
+<p>Some people might like to draw dependency arrows in the opposite direction: however,
+this way the dependency arrows have the same direction as the movement, and in the case
+of the simple recursive algorithm, recursion is entered in the direction of the arrow.</p>
+<p>In the dependency graphs we only look at the real <i>move</i>, <i>support</i> and
+<i>convoy orders</i>. The equations do also have other values &#x2014;
+<i>attack strength</i>, <i>hold strength</i>, and so on &#x2014; but those are shortcut in
+the graph.</p>
+<p>In case of the convoy paradox of figure 7:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure7.png" width="352" height="146" alt="Figure 7" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">Turkey:
+F aeg -> ion
+F gre Supports F aeg -> ion
+Italy:
+A tun -> gre
+F ion Convoys A tun -> gre</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 7 repeated.</i></center>
+<p>The dependencies are as follows:</p>
+<center><img src="figure12.png" alt="Figure 12"/></center>
+<center><i>Figure 12.</i></center>
+<p>Although the army in Tunis plays a major role in this convoy paradox, the resolution
+of the Tunis order is not part of the cyclic dependency. In resolving the support order
+of Fleet Greece it is important to know whether the fleet in the Ionian Sea will start
+the convoying operation or not, but the success or failure of the Tunis order is
+irrelevant.</p>
+<p>This example shows that there is a subtle difference between a dependency on the
+<i>existence</i> of an order and a dependency on the <i>resolution</i> of an order. The
+existence of the Tunis order may cut the support in Greece as a result, but the
+resolution of the Tunis order is of no importance for that matter.</p>
+<p>This subtle difference occurs also in much simpler situations. Consider
+the bounce situation of figure 6:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure6.png" width="270" height="155" alt="Figure 6" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px;  font-size: 15px">Germany:
+A ber -> sil
+A mun Supports ber -> sil
+Russia:
+A war -> sil
+Austria:
+A boh -> sil</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 6 repeated.</i></center>
+<p>If we remove the move orders for Berlin and Warsaw from the order set, then the army
+in Bohemia could advance. So the resolution of the Bohemia order depends on the
+existence of the Berlin and Warsaw orders. However, if we look at the equations,
+then we see that the resolutions of the Berlin and Warsaw orders are of no importance
+to the resolution of the Bohemia order. To adjudicate the Bohemia order we need to
+calculate the <i>attack strength</i> of the Bohemia unit and the <i>prevent strength</i>
+of both the army in Berlin and the army in Warsaw. The <i>prevent strength</i> of the
+Berlin unit is dependent on the success of the <i>support</i> of Munich. For those
+calculations we do not need to know the success or failure of any <i>move</i>. As a
+result, the dependency graph is (surprisingly) as follows:</p>
+<center><img src="figure13.png" alt="Figure 13"/></center>
+<center><i>Figure 13.</i></center>
+<p>The dependency graph indicates (correctly) that after resolving Munich, any of the
+orders Berlin, Bohemia or Warsaw can be adjudicated.</p>
+<p>Having established the concept of a dependency graph, we now want to
+prove the following:</p>
+<div style="margin: 0px 0px 5px 40px"><b>THEOREM I</b>
+<p>No order can be part of two different cycles of dependencies.</p></div>
+<p>This means that an order set with the following dependency graph cannot exist:</p>
+<center><img src="figure14.png" alt="Figure 14"/></center>
+<center><i>Figure 14.</i></center>
+<p>Both <i>x</i> and <i>y</i> are part of a cycle with <i>p</i> and a cycle with <i>q</i>,
+which violates the theorem.</p>
+<p>To prove this theorem, we have to distinguish between 6 types of orders, which are
+listed in the following table:</p>
+<table align="center" border="1" cellpadding="2">
+<tbody><tr style="color: white;" bgcolor="red">
+<th><i>Type</i></th>
+<th><i>Description</i></th>
+<th><i>Direct or indirect<br/>dependent on</i></th>
+</tr>
+<tr style="color: white;" bgcolor="blue">
+<td>A</td>
+<td>A move order, not part of a head to head
+battle, with at the destination another unit with a move order.</td>
+<td>A, B, C, D, E, F</td>
+</tr>
+<tr style="color: white;" bgcolor="blue">
+<td>B</td>
+<td>A move order, attacking a fleet with a convoy order.</td>
+<td>B, E, F</td>
+</tr>
+<tr style="color: white;" bgcolor="blue">
+<td>C</td>
+<td>Any other move order.</td>
+<td>B, E, F</td>
+</tr>
+<tr style="color: white;" bgcolor="blue">
+<td>D</td>
+<td>A support order, supporting a move with at the
+destination an unit attacking the support. </td>
+<td>B, C, E, F</td>
+</tr>
+<tr style="color: white;" bgcolor="blue">
+<td>E</td>
+<td>Any other support order.</td>
+<td>B, E, F</td>
+</tr>
+<tr style="color: white;" bgcolor="blue">
+<td>F</td>
+<td>A convoy order.</td>
+<td>B, E, F</td>
+</tr>
+</tbody></table>
+<p>The dependencies in the last column list the type of orders on which the resolution
+of the order can depend directly or indirectly.</p>
+<p>The set of support orders is split between orders of type D and orders of type E.
+The purpose for this split is to distinguish between orders that are subject to the
+dislodgement rule (a support is cut when it is dislodged), and those that are not.
+Formally, the dislodge rule would still apply for orders of type E: however, the rule
+is not relevant for that type, since the support is already cut by the simple fact
+that the unit is being attacked by the unit that may dislodge.</p>
+<p>Again, remember the difference between a dependency on the existence of an order
+and the resolution of an order. Support orders of type E can be cut due to the
+<i>existence</i> of an order of type C, but cannot depend on the <i>resolution</i> of
+an order of type C.</p>
+<p>The detailed proof of each of the dependencies can be derived from the equations and
+is left as an exercise for the reader.</p>
+<p>When we have a situation on the board, we mark every dependency and every order that
+is in a cycle. We cannot remove the unmarked orders from the scene, because those orders
+can play a role in the adjudication of the marked orders in various ways.</p>
+<p>If we observe the dependencies, then the marked orders (connected by marked
+dependencies) form pockets (islands) that consist entirely of orders of type A, or a
+mixture of B, E and F.</p>
+<p>Still, a single pocket may contain an order that is part of multiple cycles. For a
+pocket that consists only of orders of type A, it is rather clear that these orders
+form one circular movement, with all orders in one cycle. The same counts for a pocket
+with orders of type B, E and F, because a movement of type B can only disrupt one
+convoy, a support of type E can only support one unit, and a convoy of type F can
+only convoy one unit.</p>
+<p>Although the above reasoning may look obvious, it gave me a headache to get the
+right arguments. The tricky part is that the orders that can influence the order of
+the row are written down in the third column of the table. Thus, an order of type
+B, E, or F can only be influenced by the resolution of an order of type B, E or F.
+However, to prove that a pocket of B, E and F orders cannot have orders that are part
+of multiple cycles, we look at the dependencies in the opposite direction (the
+influence of the order).</p>
+<p>Thus, the overall proof consists first of limiting the scope to pockets of certain
+types of orders, and second of proving that those pockets constitute a single cycle.
+For the convoy paradoxes, in the second step we look at the dependencies in the
+opposite direction.</p>
+<p>This ends the proof of Theorem I.</p>
+<p>Theorem I implies that if we have a cycle, then any order on which the cycle
+depends, can be resolved first. Consider the dependency graph based on figure 9 drawn
+in figure 11:</p>
+<center><img src="figure11.png" alt="Figure 11"/></center>
+<center><i>Figure 11 repeated.</i></center>
+<p>We maybe could extend the situation and make the success of the Skagerrak order
+dependent on other orders. However, we could never make the resolution of the
+Skaggerak order dependent, directly or indirectly, on North Sea, Norway, or
+Norwegian Sea. If so, the North Sea order would be in the cycle <i>nth-nwy-nwg</i>
+and in another cycle with <i>ska</i>. This violates theorem I.
+<p>This is true in general, meaning that in case of a cycle, all orders on which
+the cycle depends can be resolved first. This counts even when the orders on which
+the cycle depends contain an independent cycle. Consider the following dependency
+relationship:</p>
+<center><img src="figure15.png" alt="Figure 15"/></center>
+<center><i>Figure 15.</i></center>
+<p>In such a situation, the <i>pqr</i> cycle can be resolved first, resolving all
+orders on which the <i>xyz</i> cycle depends. The dependency relationship of this
+figure does not violate theorem I, because every order is part of at most one cycle.
+Nevertheless, this situation cannot occur with the standard rules. The proof is left
+as exercise for the reader. Of course, a variant rule might introduce this kind
+of situation, but that does not concern us for now.</p>
+<p>Given the fact that any order on which a cycle depends can be resolved first, we
+want to prove:</p>
+<div style="margin: 0px 0px 5px 40px"><b>THEOREM II</b>
+<p>In case of the following conditions:</p>
+<ul>
+<li>There is a cycle;</li>
+<li>All other orders on which the resolution of one or more orders in the cycle
+depends, and which are not part of the cycle itself, are resolved;</li>
+<li>The cycle has a unique resolution.</li>
+</ul>
+<p>Then there is at least one order in the cycle that can be resolved
+based only on partial information.</p></div>
+<p>We prove this by contradiction. That is, we assume:</p>
+<ul>
+<li>There is a cycle;</li>
+<li>All other orders on which the resolution of one or more orders in the
+cycle depends, and which are not part of the cycle itself, are resolved.</li>
+<li>The cycle has a unique resolution;</li>
+<li>None of the orders can be resolved based only on partial information.</li>
+</ul>
+<p>Back to the dependency graph of figure 11:</p>
+<center><img src="figure11.png" alt="Figure 11"/></center>
+<center><i>Figure 11 repeated.</i></center>
+<p>If the resolution of the order to Fleet Skagerrak makes the order to Fleet Norway
+irrelevant for purposes of resolving the order to Fleet North Sea (which is the case
+when this graph is based on the situation of figure 9), then the order of the North
+Sea can be adjudicated based on partial information. This means that if we respect
+the assumption that none of the orders in the cycle can be resolved with only
+partial information, the cycle may depend on other orders, but that those other
+orders may not make the dependencies on the orders within the cycle irrelevant.</p>
+<p>This restricts the dependency relations within the cycle. Suppose we have a
+direct <i>x&#x2192;y</i> dependency in the cycle. Since <i>y</i> must be relevant for <i>x</i>,
+a different value for <i>y</i> must mean a different value for <i>x</i> (note this is
+only true because <i>y</i> is limited to two values). This means that <i>x</i> has the
+same resolution as <i>y</i> (<i>x</i> fails when <i>y</i> fails and <i>x</i> succeeds
+when <i>y</i> succeeds) or <i>x</i> has the opposite resolution of <i>y</i> (<i>x</i>
+fails when <i>y</i> succeeds and <i>x</i> succeeds when <i>y</i> fails).</p>
+<p>From the initial assumption we know that there is one exclusive resolution. From
+the restricted dependency relations, it follows that the opposite of the resolution
+must also be a resolution respecting the equations. But this contradicts the assumption
+that there is a single resolution. And this proves Theorem II.</p>
+<p>Theorems I and II together prove that an algorithm that can make decisions based
+on partial information will find the unique resolution for a cyclic dependency.</p>
+<p><a href="DipMath_Chp4.htm">PREV</a> - <a href="DipMath_Chp6.htm">NEXT</a></p>
+<br><br><table>
+<tbody>
+<tr valign="bottom">
+<td><a href="mailto:editor@diplom.org"><img src="/Zine/Common/letter.gif" border="0"></a> </td>
+<td><strong>Lucas Kruijswijk<br>(<a href="mailto:L.B.Kruijswijk@inter.nl.net">L.B.Kruijswijk@inter.nl.net</a>)</strong>
+</td></tr></tbody></table>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the envelope above does not work for you, feel free to use the <a href="/Zine/S2009M/Common/DearDP.html">"<b>Dear
+DP...</b>"</a> mail interface.</i>
+</td></tr></tbody></table>
+<hr size="1" width="100%" align="center" style="color: GRAY; margin-top: 15px">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+</body></html>
+<!--
+-->

@@ -1,0 +1,431 @@
+<TITLE>DP S1997M: Diplomacy Paradoxes</TITLE>
+<BODY BGCOLOR=white>
+<A HREF=/Zine/><IMG align=left SRC=/Zine/Common/DPbutton.gif></A>
+<A HREF=/Zine/S1997M/><IMG align=right SRC=/Zine/Common/toS1997M.gif></A>
+<BR clear=both><HR>
+<!center>
+<table cellpadding=5>
+<tr><th><img height=120 src=/Zine/Common/Schwarz.jpg>
+<th><H1>Diplomacy Paradoxes</H1><H2><i>Andy Schwarz</i></H2>
+</table>
+<!/center>
+<H3>Introduction</H3>
+As far as I can tell, all Diplomacy paradoxes stem from non-simultaneity
+introduced into what is an otherwise simultaneous game.  In particular,
+these paradoxes arise when the success of one type of move is made
+contingent on the success of another move <b>during the same turn</b>.  Not
+all contingent movement is rife with paradox, of course.  Successful
+movement of a unit is in some sense contingent on the success or failure of
+other units.  In Spring 1901, <tt>A&nbsp;Mar-Pie</tt> will fail if
+<tt>A&nbsp;Ven-Pie</tt> is also ordered, but will succeed otherwise.  However,
+the resolution of these events <b>is</b> simultaneous, in that we don't look
+at whether <tt>A&nbsp;Ven-Pie</tt> succeeds <i>before</i> deciding the fate
+of <tt>A&nbsp;Mar</tt>.
+<P>
+However, any rule in Diplomacy -- like the dislodgment rule for disrupting
+convoys or the various Suez Canal control rules in Colonial Diplomacy --
+which make the success of one unit's actions contingent on the <b>success</b>
+of some other event during the same season will kill simultaneity and
+introduce room for paradox.  This is a subtle distinction, which I may not
+be making clear enough, but consider the famous convoy paradoxes, such as
+Pandin's Paradox, which all rely on the issue of whether the convoyed units
+can cut the very support needed to ensure the success of their convoys, to
+beleaguer a garrison, and so on.  If the fleet is disrupted, the convoy fails,
+making the army's move contingent on the success of the convoy move.
+Unlike a bounce resolution, we now have to see if the convoy succeeds
+before we can move the convoyed army.  So, if we decide it does succeed and
+transport the army across the water, it can have an impact on the
+adjudication we had to perform to determine if the convoy succeeded.  This
+is what I mean my non-simultaneous contingency.
+<P>
+Since the Diplomacy convoy has been repeatedly analyzed, I would like to cite
+two new milieu in which the rules introduce non-simultaneous contingency and how
+that leads to paradox. From Colonial Diplomacy, I'll use the Suez Canal rule as
+an example. And from Machiavelli, I'll discuss the Sicilian Straits rule  (known
+as the "Piombino/Sicilian Straits" rule in the first edition of Machiavelli).
+<P>
+<H3>Part 1: Schwarz's Suez Paradox</H3>
+Consider the following rules from Hasbro's Colonial Diplomacy:
+<blockquote><i>
+"9.31 You must have a unit in Egypt the entire turn in order to use the canal"
+<p>
+"9.33 The unit in Egypt may have an attack order so long as it results in a
+standoff and the unit in Egypt stays in Egypt."
+</i></blockquote>
+Clearly, this introduces non-simultaneous contingency.  The attack may be
+ordered but it must result in a stand off, meaning we need to resolve the
+move from Egypt before we can determine the success or failure of a move
+through the canal.  This opens the door for what I modestly have named
+Schwarz's Suez Paradox.  For example,
+<P>
+<center><table border>
+<tr><th><img src=colmap1.gif>
+<tr><td valign=top><pre>
+England: Army Egypt -> Mecca.
+England: Army Syria SUPPORT Army Egypt -> Mecca.
+Turkey: Army Arabia-Mecca.
+Turkey: Fleet Red Sea SUPPORT Army Arabia -> Mecca.
+</table></center><P>
+If the unit in Egypt were not required to stay put by rule 9.33, this would
+be easily resolved; the Med-Red move would cut the Red Sea's support and
+Egypt would move to Mecca having two strength to Arabia's one.
+<P>
+However, by rule 9.33 and rule 9.31, we know that this easy resolution
+would result in the Mediterranean fleet <b>not</b> being able to use the Suez
+Canal because that would allow the unit in Egypt to leave, violating 9.31,
+and thus <b>not</b> preventing the attack on the Red Sea fleet.
+<P>
+So, then the Red Sea's support is <b>not</b> cut, which means both Egypt and
+Arabia move to Mecca with strength of two, resulting in a standoff.
+<P>
+Which, by Rule 9.33, means the move from the Mediterranean Sea to the Red Sea
+<b>is</b> legal, which means the support <b>is</b> cut, which means the
+Egyptian move succeeds, which means the support is <b>not</b> cut, <i>ad
+infinitum</i>.
+<P>
+But it gets worse!
+<blockquote><i>
+"9.36 If a superior force dislodges the unit controlling Egypt, a fleet
+ordered to use the canal will be prevented from doing so."
+</i></blockquote>
+Again, we've introduced non-simultaneous contingency.  Just like a convoy's
+dislodgment determining the success or failure of a convoyed armies move,
+now the dislodgment of a unit in Egypt determines the success or failure of
+a "Suezing" units move.  This creates the Schwarz-Woo Paradox, found by
+Andy Schwarz (me), with assistance from Alexander K. ("Smiley") Woo.
+Consider the following:
+<P>
+<center><table border>
+<tr><th><img src=colmap2.gif>
+<tr><td><pre>
+Russia: Fleet Mediterranean Sea -> Red Sea.
+Russia: Fleet Egypt Hold.
+England: Army Sudan -> Egypt
+England: Fleet Red Sea SUPPORT Army Sudan -> Egypt.
+Turkey: Army Syria-Egypt.
+Turkey: Army Mecca SUPPORT Army Syria -> Egypt.
+</table></center><P>
+If we ignore the 9.36 rule, the move by the Mediterranean fleet cuts the
+support of the English fleet in the Red Sea on Egypt, making the Sudan army
+attack with a strength of one and thus allowing the Turkish assault, with
+strength two to succeed.  This of course, dislodges Egypt.  However, now we
+need to
+consider rule 9.36, which says that dislodging Egypt invalidates
+<tt>F&nbsp;Med-Red</tt>.
+So the support of Red Sea is <b>not</b> cut, which means both England and
+Turkey attack with strength two, which invokes the beleaguered garrison rule,
+meaning Egypt is <b>not</b> dislodged.  So, thus we <b>should</b> allow the
+<tt>Med-Red</tt>
+order to go through after all, which in effect, dislodges Egypt.  Once again,
+repeat <i>ad infinitum</i>.
+<P>
+One solution for these two paradoxes is to add a rule which says that a
+"Suezing" unit cannot cut support of a unit in the Red Sea (or Med Sea) that is
+supporting an action in or into Egypt.  This is how the convoy paradox was
+removed in standard Diplomacy (saying that a convoyed unit does not cut the
+support of any unit supporting an action into a body of water), but the result
+is that one can interpret this to mean that even if the Red Sea is
+<b>dislodged</b> its
+support is not cut.  For an example of this, consider the same set up as
+above, but now add an additional Russian Fleet in Eritrea:
+<P>
+<center><table border>
+<tr><th><img src=colmap3.gif>
+<tr><td><pre>
+Russia: Fleet Mediterranean Sea -> Red Sea.
+Russia: Fleet Egypt Hold.
+Russia: Fleet Eritrea SUPPORT Fleet Mediterranean Sea -> Red Sea.
+England: Army Sudan -> Egypt
+England: Fleet Red Sea SUPPORT Army Sudan -> Egypt.
+Turkey: Army Syria-Egypt.
+Turkey: Army Mecca SUPPORT Army Syria -> Egypt.
+</table></center><P>
+If you don't prevent Suezing units from cutting support of units in the
+Red or Med Seas, the paradoxes will remain, but if we do interpret it this
+way, we get a "Ghost Ship" problem where a dislodged fleet ends up adding
+valid support, which is unsavory from an intuitive point of view.  In the
+above adjudication, for example, a blanket prohibition on Suezing fleets
+cutting support would mean that <tt>Med-Red</tt> succeeds and dislodges the
+English fleet in the Red Sea but that the dislodged Red Sea fleet still provides
+support for the move from Sudan into Egypt.  Otherwise, we're back in a
+paradoxical loop.
+<H3>Part 2: Schwarz's Straits Paradox</H3>
+Machiavelli has a similar problem.  Although Avalon Hill's second edition
+removes the straits around Piombino (from which this example
+is derived), the Sicilian Straits at Messina remains (and the Judge's
+implementation still use the first edition), so this has more than just
+curiosity value.
+<P>
+The First Edition Rules state:
+<blockquote><i>
+Piombino: This province includes the offshore island of Elba.  A  fleet in
+this province controls the straits between the mainland  and the island.
+An army unit in this province does not control  the straits.  The straits
+are not a separate sea, but are part  of the Eastern Tyrrhenian Sea.  If
+they are not controlled by  a Fleet unit in Piombino, a hostile Fleet could
+move directly  from Pisa to the Eastern Tyrrhenian Sea or vice versa, or
+transport an army from one to the other.
+<P>
+Sicily: A fleet in Messina similarly controls the straits between Messina
+and Otranto.  As long as there is a fleet in Messina, no hostile fleet
+could move directly from the Gulf of Naples to the Messina and Otranto.  As
+long as there is a fleet in Messina, no hostile fleet could move directly
+from the Gulf of Naples to the Ionian Sea or vice versa.
+<P>
+If a fleet successfully advances into Piombino or Messina in the same turn
+as a hostile fleet attempts to use the straits, the movement  through the
+straits is blocked.  As long as a fleet unit is in the controlling
+province, no other player's units may use the straits  without the
+controlling player's permission.  If a player wishes to  allow another
+player to use the straits, he must include an "alliance  power" command
+with his movement orders.
+</i></blockquote>
+The second ediion rules run as follows:
+<blockquote><i>
+Also, a Fleet (not an Army) in Messina controls the straits between
+Messina and Otranto.  As long as there is a Fleet in Messina, no enemy
+fleet may advance from the Ionian Sea to the Gulf of Naples, or vice versa,
+or convoy an Army through one of these seas to the other.
+</i></blockquote>
+Notice again how this rule introduces non-simultaneous contingency, namely
+the status of any unit "using" either strait (for movement or support) is
+contingent on who <b>ends</b> the turn in the critical space.  Focusing on
+Piombino, consider Schwarz's Straits Paradox:
+<P>
+<center><table border>
+<tr><th><img src=machmap1.gif>
+<tr><td><pre>
+France: Fleet Pisa SUPPORT Fleet Piombino -> Eastern Tyrrhenian Sea.  (*blocked*)
+France: Fleet Piombino -> Eastern Tyrrhenian Sea.
+Naples: Fleet Eastern Tyrrhenian Sea Hold.
+Naples: Fleet Sienna -> Piombino.
+</pre>
+(The term blocked is used by the judge to indicate that an otherwise legal
+move is disallowed because the unit in question did not have permission
+from the owner of the critical space for controlling the Straits).
+</table></center><P>
+Note that <b>Naples</b> owns Piombino because it gets control of it during
+the course of the turn, as proper according the second paragraph above.
+However, if
+Naples has control of the Straits, then Pisa is effectively blocked from
+supporting into East Tyrrhenian Sea, because Pisa and the Eastern Tyrrhenian
+Sea are only contiguous if the player is allied with the Piombino owner.
+This is why the Pisan order is marked as <tt>(*blocked*)</tt>, indicating Pisa
+was <b>not</b> granted permission to use the straits for support.  So, in
+theory, the move by France from Piombino <b>ought</b> to have failed, since
+its support was blocked/invalidated.  But in that case,
+<tt>F&nbsp;Sienna-Piombino</tt> would bounce,
+leaving Piombino in French hands.  Of course, that would make the support
+by Pisa valid, dislodging the ETS fleet, and vacating Piombino, thus allowing
+Sienna into Piombino.  But that would invalidate the support, killing the
+attack, and so on, <i>ad infinitum</i>.  The Classic "Non-Simultaneity Paradox"
+is seen here in all its glory.
+<P>
+In response to this paradox (which really came up in a judge game I was
+moderating), Charlie Eldred,
+posed a different sort of paradox arising from the same set of rules.  All
+of the paradoxes I have discussed until now involve loops of inconsistent
+logic.  Jamie Dreier, Professor of Philosophy at Brown University and an
+all-star Diplomacy player, makes the analogy with the liars paradox:
+<blockquote>
+L:      This sentence, L, is false.
+</blockquote>
+The adjudication of a Diplomacy (or Machiavelli) turn is akin to
+determining which of a series of statements are true (moves succeed) and
+which are false (moves fail).  Statement L cannot be properly adjudicated.
+Assume it is true, then it is false (it says it is false, after all).  But
+if it is false, then it is true.  Jamie calls this an ungrounded and
+paradoxical statement.  This is the Schwarz's Suez paradox (and the
+Pandin's Paradox and the rest) in a nutshell.
+<P>
+However, following S. Kripke's landmark paper, "Outline of a Theory of
+Truth," Jamie offers up a second type of paradox (or quasi-paradox) which
+is ungrounded but not (technically) paradoxical.  For example, consider the
+following statement:
+<blockquote>
+T:      This sentence, T, is true.
+</blockquote>
+On the surface, it seems simple enough.  If it is true, then it is true.
+<i>Viola.</i>  Except, what if we say it is false?  Then it is also false.
+So it
+is ungrounded (we have no other way to determine if it is true or false)
+but it is not paradoxical, because once we assume it is true (or false) it
+remains true (or false).
+<P>
+The Eldred Piombino Paradox is this sort of quasi-paradox (an ungrounded,
+non-paradoxical move with two equally valid adjudications), as seen below:
+<P>
+<center><table border>
+<tr><th><img src=machmap2.gif>
+<tr><td><pre>
+France: Fleet Pisa -> Eastern Tyrrhenian Sea. (*blocked*????)
+France: Fleet Piombino SUPPORT Fleet Pisa -> Eastern Tyrrhenian Sea.
+Naples: Fleet Sienna -> Piombino.
+Naples Fleet Eastern Tyrrhenian Sea SUPPORT Fleet Sienna -> Piombino
+</table></center><P>
+The move Sienna to Piombino cuts the Piombino fleets support of Pisa-ETS,
+without question.
+<P>
+If we assume Piombino is successfully dislodged by the supported attack
+from Sienna, then the support of ETS is not cut, and the Piombino fleet is
+legally dislodged, fully consistent with our assumption of dislodgment.
+<P>
+But if we say ETS's support <b>is</b> cut by Pisa, then Piombino is not
+dislodged, cutting the support by ETS, again fully consistent with the
+assumptions of cut support.
+<P>
+So, rather than creating an infinite and unresolvable loop (a paradox),
+Charlie has created two equally valid solutions, which are contradictory
+(an ungrounded statement).
+<P>
+Nonetheless, both the Schwarz's Straits paradox and the Eldred Piombino
+Quasi-Paradox are the result of a non-simultaneous contingency, in this
+case who <b>ends</b> the turn in Piombino (or similarly, in Messina for the
+Sicilian version).
+<H3>Part 3: What Do We Do?</H3>
+I think that introducing more conditional, non-simultaneous moves into Diplomacy
+via Colonial's Suez (in addition to the long-standing convoys) was a step in the
+wrong direction.
+Removing such moves, as we've seen in the removal of the
+Piombino Straits rule with the release of the second edition of Machiavelli (but
+which sadly remains in the Sicilian Straits), is the correct approach.
+The rule on using
+the Suez canal (or the Sicilian Straits) should be something to the effect of:
+"To use or permit the use of the Suez canal (Sicilian Straits), a power must
+start the turn with a unit in Egypt (Messina)."
+That's it -- no
+rules on bouncing or having to stay in Egypt the whole turn.  The can of
+worms that the current rules open is far worse than any benefits of perceived
+realism.  By making use in Fall conditional only on the status at the end
+of Spring retreats (Colonial actually uses years rather than seasons, but you
+get the idea) or Spring moves conditional only on the status at the end of
+winter, you do not introduce non-simultaneity/contingency, and thus you
+avoid paradoxes like the Schwarz Suez and the Schwarz-Woo.   Ditto on the
+Schwarz Straits and the Eldred Piombino.
+<P>
+The only other solution is to live with the paradoxes, which is often phrased as
+"All units involved hold." However, try neatly defining "all units involved" and
+you need an algorithm that boggles my mind, though it does exist. My feeling is
+that we are stuck with convoy issues because the game is over 35 years old and
+convoys have been there since 1959. But, we ought to root out the Suez evil
+while the game is still young, and fix things in Machiavelli while the second
+edition is still hot off the press.   Heck, if we can add a land bridge to
+Sakhalin, we can change the Suez rule a tiny bit, replacing 9.31 with "You must
+have a unit in Egypt at the start of the turn in order to use the canal" and
+eliminating 9.33, 9.36, and perhaps the now innocuous but unneeded 9.37.
+<P>
+By the way, when I first brought the Suez paradox to the attention of
+Avalon Hill, they seemed ready to make a quick fix via <i>The General</i>.
+However, after Smiley and I developed the second paradox, AH told me they
+had gone back to the designer to rework things, and a pronouncement would
+eventually follow.
+<P>
+Has anyone had seen such a pronouncement? I have not.
+<H3>Part 4: The Trans-Siberian Railroad</H3>
+In case anyone was wondering about the Trans-Siberian
+Railroad rule in Colonial Diplomacy, here's a short analysis:
+<P>
+Rule 9.23 begins by saying "A unit using the TSR may only be transported to
+an unoccupied province."  If we interpret this to mean that it is not even
+valid to order a unit on the TSR to attempt to enter a space that **began**
+the turn as occupied, then I do not think the TSR order will create
+paradoxes, because since TSR units are never allowed to reach an SC that is
+occupied, it is impossible to use TSRs to cut support, dislodge other
+untis, or to support a beleaguered garrison, which are the main causes of
+paradoxes through non-simultaneous contigency.
+<P>
+Assuming my interpretation of 9.23 is correct and TSR units can't be
+ordered to spaces that begin the turn as occupied, then the TSR rule
+basically just makes the TSR unit get to make a series of mini-moves
+contingent only on the success of its <b>own</b> previous mini-moves.
+Therefore, it is possible that the TSR has avoided the pitfalls of the
+Suez Canal.
+<P>
+However, it has been pointed out to me that Avalon Hill (in <i>The General</i>,
+Volume 30, Number 4) has clarified that TSR units <b>can</b> attempt to
+enter occupied
+provinces in the hope that they become unoccupied as the turn moves on.
+This would normally open up some interesting paradoxes.  Consider the
+simple:
+<pre>
+China: Army Krasnoyarsk -> Mongolia.
+China: Army Mongolia -> Irkutsk.
+Russia: Army Omsk TSR Irkutsk
+</pre>
+This normally would allow for a paradox:  If Omsk bounces Mongolia-Irkutsk,
+then Krasnoyarsk cannot leave and so the TSR cnnot go through, so it does
+not bounce Irkutsk, so Krasnoyarsk <b>can</b> leave, so it does go through,
+so it bounces, so Kra stays, so the TSR move fails, etc.
+<P>
+However, and very wisely I might add, Avalon Hill added the following
+proviso and example:
+<blockquote><i>
+9.25 - A curious example of this rule applies if an enemy unit attacks
+from one province to antoher along the line of the TSR at the same time
+that a Russian unit is railed through these provinces in the same
+dircetion, such as:
+<p>
+Russia - A VLA-TSR-OMSK
+<P>
+China A KRA-OMSK
+<P>
+This results in a standoff in Omsk.  The Chinese unit stays in
+Krasnoyarsk and the Russian unit stays in Irkutsk.  The theory being that
+Krasnoyarsk is left empty by the Chinese at the same time the Russian
+unit moves through.  Thus both units attack Omsk ands cause a standoff.
+</i></blockquote>
+In other words, the very <b>attempt</b> (and not the success) of a unit to
+leave a space is enough for the TSR to be allowed to <b>try</b> to get through.
+Notice that by linking the success of the TSR's attempt to move to attempted
+movement, rather than successful movement, rule 9.25 turns non-simultaneous
+contigent movement into standard Diplomacy movement.  By 9.25, in my
+example above, the TSR is allowed to try its luck in Irkutsk and it fails,
+bouncing Mongolia, which bounces Krasnoyarsk and no one moves.  Paradox
+avoided.
+<P>
+However, while I think that this successfully avoid paradoxes, it creates a
+situation where I unit can jump over a foreigner on the TSR, or so it
+seems.  Consider the Avalon Hill example in rule 9.25, but with a slight
+twist:
+<pre>
+Russia: Army Irkutsk TSR Omsk.
+Russia: Army Perm SUPPORT Army Irkutsk TSR Omsk.
+China: Army Krasnoyarsk -> Omsk.
+</PRE>
+As far as I can tell, this is a fully legal move and Russia's Irkutsk army is
+allowed to try for Omsk because China tried to vacate Krasnoyask.  And now,
+Russia has legal support (it is legal to support a TSR'ing unit into a
+vacant square, just not to support an TSR'ed attack on a unit), so Russia
+<b>gets</b> Omsk.  So Krasnoyark stays in place and the Russian has leap-frogged
+over the Chinese unit on the TSR route.  And if you scoff at this and say
+that's ridiculous, that the general rule of no leapfrogging has precedence,
+remember if you try to resolve this without that 9.25 interpretation, you
+trade this silly result for a paradox without any resolution. Which is
+better: ridiculous consistency or non-ridiculous unresolvability?
+<P>
+Finally, let me add an interesting side effect of this rule.  In the
+sitution above, if China had ordered its army in Krasnoyarsk to hold, the
+TSR move would have failed and the Irkutsk army would not have been allowed to
+move.  So in this case, while this is not an adjudication paradox, we have
+a situation in which if China <b>tries</b> to bounce Russia, Russia does not
+bounce, but if it does not try to bounce it, Russia does bounce.  This is a
+very deep thing, beyond the scope of this article.  I think this is like
+the Zen belief of only getting something you want if you really don't want
+it, and I will leave the TSR here for others to ponder.
+<P>
+<hr><table><tr VALIGN=BOTTOM><td><a HREF=MailTo:schwarz@haas.berkeley.edu>
+<IMG BORDER=0 SRC=/Zine/Common/letter.gif></a>
+<td><strong>Andy Schwarz<br>(schwarz@haas.berkeley.edu)</strong><br>
+University of California at Berkeley
+</table>
+<p><i>If you wish to E-Mail feedback on this article to the author, click on
+the letter above.  If that does not work, feel free to use the
+<a HREF=/Zine/S1997M/Common/DearDP.html>"<b>Dear DP...</b>"</a> mail interface.</i>
+<hr>
+<a HREF=/Zine/><IMG ALIGN=LEFT SRC=/Zine/Common/DPbutton.gif></a>
+<a HREF=/Zine/S1997M/><IMG ALIGN=RIGHT SRC=/Zine/Common/toS1997M.gif></a>
+<br CLEAR=BOTH>
+</BODY>
+</HTML>
+<!--
+-->

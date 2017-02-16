@@ -1,0 +1,263 @@
+<html><head>
+<title>DP S1999R: The Unrelenting Eye</title></head><body>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1999R/"><IMG align=right SRC="/Zine/Common/toS1999R.gif" border=0></A>
+<BR clear=all><HR>
+<H1 align=center>The Unrelenting Eye</H1>
+<H2 align=center><i>By David Hertzman</i></H2>
+<H3 align=center><U>Part 1: <I>Introduction to Game Theory</i></u></H3>
+<P>Chaos Diplomacy,
+for those who are not aware, is a nifty variant played by thirty-four players on the standard map.  At the beginning of the game, every SC is owned by a different power.  The game begins with builds, and follows up with the chaos
+of Spring, 1901.  The variant is aptly named, since the number of brutal stabs in the first year is horrendous.  What is worse, the majority of the stabs
+are completely ineffective.  Why does this happen?  Can it be explained?</P>
+<P>In this three-part article series, I intend to tread lightly upon the basic
+concepts of game theory.  I do not pretend to be an expert, but I will give
+it my best shot.  I will also try to avoid any complicated mathematical manipulations, not the least since I am likely to make an error and be thought
+of as a fool.
+The game theory aspects of Diplomacy have already been well covered by
+David Rosen, but I am going to attempt to explain just the basics as they
+relate to the everyday Diplomacy player.
+<P>
+My basic plan for these articles is as follows, though it
+is likely to change without notice.</P>
+<ul>
+<li>Part 1: Introduction, Prisoner's Dilemma
+<li>Part 2: Power, effects of coalitions on individual power
+<li>Part 3: Splitting the proceeds, determining appropriate payoffs for a
+given coalition.
+</ul>
+<P>Back to the chaos game.  We will start by looking
+at a specific example, which will use the Brest and Paris powers.  We will
+assume that both powers have built armies and that they both held in Spring,
+1901.  They have made an agreement to order the following in Fall, 1901:</P>
+<blockquote>
+<tt>A Par - Bur
+<p>A Bre - Gas</tt>
+</blockquote>
+<P>The idea is that in 1902 each will hopefully
+pick up an SC, keeping them on even keel.  After all, it is always nice to grow side by side with your ally.  Big friends tend to be bad friends.
+For the duration of this article we will assume that all players are good
+players, they are tactically perfect and know that the other players are
+similarly skilled.  At the end of the day, each player is concerned solely
+with his or her own welfare. </P>
+<P>Now, each of Brest and Paris has the
+option to keep the agreement or to stab.  A stab would involve ordering to the neighboring SC instead of the agreed location.  That is, for the Paris player, he would stab with Par-Bre, and would keep the agreement with Par-Bur.
+<P>If
+both powers stab, neither gets anywhere.  If one stabs and the other does
+not, the stabber ends up with two SC's while the stabee is eliminated.  Finally,
+if neither stabs, they pick up goodwill and the potential to pick up two SC's in the following year.  It is reasonable to say then that they will
+pick up one SC each year over two years, and so each will have gained &frac12; of a
+supply centre this year.</P>
+<P>These situations can be represented by the following matrix, where (x,y) means that Brest gets a payoff of x while Paris gets a payoff of y.</P>
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7>
+<TR><TD WIDTH="25%" VALIGN="TOP" colspan=2 rowspan=2 >&nbsp;</TD>
+<Th WIDTH="75%" VALIGN="MIDDLE" COLSPAN=2>
+Paris</TH>
+</TR>
+<TR>
+<TD WIDTH="25%"
+VALIGN="TOP" BGCOLOR="#ffffff">
+<P ALIGN="CENTER">AGREE</TD>
+<TD WIDTH="25%"
+VALIGN="TOP" BGCOLOR="#ffffff">
+<P ALIGN="CENTER">STAB</TD>
+</TR>
+<TR>
+<Th WIDTH="25%" VALIGN="MIDDLE" ROWSPAN=2>Brest</Th>
+<TD
+WIDTH="25%" VALIGN="TOP" BGCOLOR="#ffffff">
+<P ALIGN="CENTER">AGREE</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">(½, ½)</TD>
+<TD WIDTH="25%"
+VALIGN="TOP">
+<P ALIGN="CENTER">(-1,1)</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP"
+BGCOLOR="#ffffff">
+<P ALIGN="CENTER">STAB</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">(1,-1)</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">(0,0)</TD>
+</TR>
+</TABLE>
+</center>
+<P>We can see that if Brest follows the agreement (AGREE)
+and Paris does not (STAB) then Brest loses a supply centre and Paris gains
+a supply centre, so the matrix entry is (-1,1).  This is the classic prisoner’s
+dilemma.  For those who have never heard of it, I will explain briefly.  Let us look at the payoff matrix strictly from the point of view of Brest.</P>
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 >
+<TR><TD WIDTH="25%"
+VALIGN="TOP" colspan=2 rowspan=2 >&nbsp;</TD>
+<Th WIDTH="75%" VALIGN="MIDDLE"
+COLSPAN=2>
+Paris</Th>
+</TR>
+<TR>
+<TD WIDTH="25%" VALIGN="TOP" BGCOLOR="#ffffff">
+<P ALIGN="CENTER">AGREE</TD>
+<TD WIDTH="25%" VALIGN="TOP" BGCOLOR="#ffffff">
+<P ALIGN="CENTER">STAB</TD>
+</TR>
+<TR>
+<Th WIDTH="25%" VALIGN="MIDDLE" ROWSPAN=2>Brest</Th>
+<TD WIDTH="25%" VALIGN="TOP" BGCOLOR="#ffffff">
+<P ALIGN="CENTER">AGREE</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">½</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">-1</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP" BGCOLOR="#ffffff">
+<P ALIGN="CENTER">STAB</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">0</TD>
+</TR>
+</TABLE>
+</center>
+<P>Remember, Brest is a good Diplomacy player, and as such does not have
+a carebear bone in his body.  He looks at the above matrix, and has to make
+a decision.  Overall, for the Brest/Paris pair of players, the best payoff
+occurs if each follows the agreement, since they gain a cumulative total
+of 1 SC.  Any other situation results in a null payoff for the pair, though
+the individual payoffs vary.</P>
+<P>That said, Brest is going to stab.  <B>No matter what Paris does, Brest is better off stabbing!</B>  If Paris
+follows the agreement, Brest could gain ½ by following the agreement, or
+he could gain 1 by stabbing.  Similarly, if Paris stabs, Brest is faced with elimination, a –1 payoff, or with a 0 payoff.  Either way, he benefits
+by stabbing.  </P>
+<P>So, where does the dilemma come in?  Paris, also being a good player, follows the same train of logic and decides that he
+is going to stab as well.  Therefore, both players will stab.  It should
+be noted, of course, that the payoff matrix pictured above is not absolute.
+Repeated bounces may result in a negative payoff when a third party comes
+along for the kill.  This would lower the stab-stab payoff and perhaps make
+it reasonable to follow the agreement.  Nonetheless, in the first year, it would be hard to argue that the payoff matrix was substantially different
+than the one pictured above.</P>
+<P>Therefore, in the first year of the
+chaos game, every good player stabs, and the results are chaotic.  By the
+end of the first year, a few people will have attempted to follow an agreement,
+and they will have been eliminated.  The game then begins to change slightly.
+It should be noted that the above only applies to a two-player game.  N-player
+games are considerably more complex and will be looked at in a later article.</P>
+<P>Now we have another question, why do we not have the same level of stabbing
+in standard Diplomacy games?  The answer to this is that the payoff matrix
+is not quite the same as it is for the chaos game.  Austria and Italy can
+be used as a good example.  The following is a sample, and is just my perception
+of the situation.  The payoffs can represent either SC's or some arbitrary
+number, you choose.</P>
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 >
+<TR><TD
+WIDTH="25%" colspan=2 rowspan=2 VALIGN="TOP" >&nbsp;</TD>
+<Th WIDTH="75%" VALIGN="MIDDLE"
+COLSPAN=2>
+Italy</Th>
+</TR>
+<TR>
+<TD WIDTH="25%" VALIGN="TOP" BGCOLOR="#ffffff">
+<P ALIGN="CENTER">AGREE</TD>
+<TD WIDTH="25%" VALIGN="TOP" BGCOLOR="#ffffff">
+<P ALIGN="CENTER">STAB</TD>
+</TR>
+<TR>
+<Th WIDTH="25%" VALIGN="MIDDLE" ROWSPAN=2>Austria</Th>
+<TD WIDTH="25%" VALIGN="TOP" BGCOLOR="#ffffff">
+<P ALIGN="CENTER">AGREE</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">(2,2)</TD>
+<TD WIDTH="25%"
+VALIGN="TOP">
+<P ALIGN="CENTER">(-1,2)</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP"
+BGCOLOR="#ffffff">
+<P ALIGN="CENTER">STAB</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">( 2½,0)</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">(
+½ ,1)</TD>
+</TR>
+</TABLE>
+</center>
+<P>Obviously, with multiple units to be ordered, there are some
+inbetween possibilities (stab with one or two units, and abide by your
+agreements with
+the other, etc.).  In fact, it is the goal of the game to reach the state
+when you can perform risk-free stabs by defending (either diplomatically
+or militarily) against all the down-sides of your attacks.
+The point is that Austria <i>can</i> just defend against the stab, but a large
+enough matrix would account for all possible moves.  This is just a short
+article, and there is a concept
+known as minimax that applies to large matrices, though possibly only those
+that are zero-sum.  Now, regardless of Italy's actions, in this matrix,
+Austria gains by
+stabbing Italy.  Of course, in this case, a stab could be seen as a simple
+covering of Trieste by Vienna, or it could be something more invasive.  However, from Italy’s point of view, if Austria keeps the agreement, he does not lose by agreeing as well.  Furthermore, Austria doesn’t gain all
+that much by stabbing if Italy honours his agreements.  The agreement results
+in considerable mutual benefit.  </P>
+<P>There is a further argument that
+applies in this case.  If the Austria/Italy game were played only by the
+two players, Austria would still be wise to play the stab.  However, there
+are other players involved, therefore, it is not sufficient just to get more
+than the other player has, but it is important to get more than all the other
+players.  In other words, the above game is played a number of
+times.  In the short run, it might be better to stab.  However, in the long
+run, if one player continues to honour his agreements, the other is likely
+to follow suit, and similarly for a stab.  The more times the matrix is
+played, the more sense it makes for Austria and Italy to come to agreement.
+</P>
+<H3>Problem for Next Article</H3>
+<P>Seven players are trying to decide
+between two courses of action.  Each player has a number of votes.  The players are called A,B,C,D,E,F,and G.  The votes for each player are as follows:</P>
+<ul>
+<li>A – 14 votes
+<li>B –  9 votes
+<li>C –  3 votes
+<li>D –3 votes
+<li>E – 2 votes
+<li>F – 2 votes
+<li>G – 1 vote
+</ul>
+<P>What percentage of total power does each player control?  (Hint:  simply
+dividing by thirty-four isn’t going to cut it.)
+Now let's say there are only four players:</P>
+<ul>
+<li>A – 14 votes
+<li>B – 9 votes
+<li>C – 10 votes
+<li>D – 1 vote
+</ul>
+<P>What percentage of power does each player control now?</P>
+<P>
+See you next time....
+<P>
+<table>
+<tr valign="bottom">
+<td><A HREF="mailto:knave@idirect.com"><IMG src="/Zine/Common/letter.gif" border="0"></A>
+</td>
+<td>
+<strong>David Hertzman<br>
+(knave@idirect.com)</strong>
+</td>
+</tr>
+</table>
+<P>
+<em>If you wish to e-mail feedback on this article to the author,
+click on the letter above.  If that does not work, feel free to use the
+<A HREF="/Zine/S1999R/Common/DearDP.html">
+&quot;<strong>Dear DP...</strong>&quot;</A> mail interface.</em>
+<p>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1999R/"><IMG SRC="/Zine/Common/toS1999R.gif" border=0 ALIGN=right></A>
+<br clear=both>
+</body>
+</html>
+<!--
+-->

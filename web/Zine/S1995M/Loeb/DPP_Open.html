@@ -1,0 +1,67 @@
+<TITLE>
+DP S1995M: Openings By Computer
+</TITLE>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1995M/"><IMG align=right SRC="/Zine/Common/toS1995M.gif" border=0></A>
+<BR><BR><HR>
+<H1><center>Opening By Computer:</H1>
+<H2>Spring 1901 Through The Eyes of A Computer Player</H2></center>
+<h3><center><em>Danny Loeb</em></center></h3>
+<HR>
+Given the "game date" theme of <B>The Diplomatic Pouch</B>, I thought it
+might be appropriate to preface my <A HREF="Project.html">article on the
+Diplomacy Programming Project</A>, which appears in this premiere issue, with
+some general remarks about Diplomacy openings as seen by the computer player.
+<P>
+The Bordeaux diplomat being coded considers a large number of combinations of
+moves in order to find and anticipate the best moves of each player.
+Unfortunately, the number of combinations is far too large to consider
+them all. In fact, according to T. Green, there are over four quadrillion
+distinct openings in Spring of 1901 (not counting openings in which useless
+support is given).
+<P>
+In the final version of the diplomat, Spring 1901 moves might be
+generated from a table. Obviously, more than one standard opening
+should be listed for each country. Otherwise, the computer's
+pre-spring 1901 diplomacy would be quite inflexible. Moreover, the
+computer's behavior would be terribly predictable.
+<P>
+In practice, the algorithm we use in Spring 1901 is the same as that
+of any movement phase. We do so because a good movement algorithm
+should generate good moves in any movement phase, and in particular in
+Spring 1901. We can use the data acquired in Spring 1901 of human game
+to test the behavior of our diplomat.
+<P>
+(To give you a human equivalent, I used to maintain a database of the
+openings and the end results of several hundred e-mail diplomacy games.
+This library will be published in an upcoming issue of <B>The Diplomatic
+Pouch</B>.
+I no longer maintain this library, hoping that someone will write a program
+that will automatically maintain this data base given output from Judge.)
+<P>
+Given the large number of
+possible combinations of moves, an algorithm is employed to try to search only
+"likely" combinations.
+This algorithm, called the Refined Evolutionary Search algorithm,
+searches for good moves for all alliances.
+<P>
+Now that your appetite is whetted, I invite you to read my
+<A HREF="Project.html">treatise on the Diplomacy Programming Project</A>,
+found elsewhere in this issue of <B>The Diplomatic Pouch</B>, wherein
+the algorithm and the entire project is discussed in more detail.
+<P>
+<B>Danny Loeb<BR>
+Universite de Bordeaux I, France<BR>
+(<A HREF="mailto:loeb@delanet.com">loeb@delanet.com</A>)</B>
+<P>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the mail address above does not work for you, feel free to use the "<b>Dear
+DP...</b>" mail interface, which is <A HREF="/Zine/S1995M/Common/DearDP.html">located
+here...</A>.</i>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1995M/"><IMG align=right SRC="/Zine/Common/toS1995M.gif" border=0></A>
+<BR><BR>
+<!--
+-->

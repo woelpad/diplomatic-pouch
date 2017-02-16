@@ -1,0 +1,315 @@
+<HTML>
+<HEAD>
+<TITLE>DP W1995A: The Diplomacy Academy -- The Chopin Solution</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=all><HR>
+<center>
+<H2>Solution to The Chopin Tactical Challenge</H2>
+<H3>As broadcast during the game!</H3>
+</center>
+Musicians of the World (and audience):
+<P>
+Here is the solution for 100% victory for Austria.
+<P>
+Skip to the <A href="#summary">"SUMMARY" section</a> if you would rather skip
+the lengthy development of the solution.
+<P>
+<HR>
+<H3>The Difference Between 100% and Forced Win</H3>
+First, the distinction between a 100% victory and a forced victory.
+A forced victory is one where the prospective winner (PW) can simply
+state what his moves would be. The information won't help the
+defending coalition (DC). The victory is forced within a fixed number
+of turns. This is very much like a "mate-in-2 (or whatever)" position
+in a chess game. I like to call such a position "Strongly Forced."
+<P>
+<H4>Weakly Forced Victory</H4>
+Now we consider what I call a "weakly forced victory": a position where the
+PW has two strategies. If the DC guess correctly which strategy he uses,
+nothing happens. Otherwise, the PW wins. Table 1 demonstrates this position.
+<P>
+<center>
+<table border>
+<caption><B>Table 1. Zeroth Degree Force</b></caption>
+<tr><th><th colspan=2>PW Strategies</tr>
+<tr><th><th>1<th>2</tr>
+<tr><th>DC Guesses PW Uses Strategy 1<td align=center>No Change
+<td align=center>Win</tr>
+<tr><th>DC Guesses PW Uses Strategy 1<td align=center>Win
+<td align=center>No Change</tr>
+</table>
+</center>
+<P>
+The PW will just flip a coin to decide which strategy to take.
+If he fails to win, he will flip it again next turn.
+Eventually, the DC will mis-guess, and the PW will win.
+Saying all of this mathematically, the probability of victory
+within N turns is P(N) = 1-(1/2)^N. The probability of
+<b>ever</b> winning is the limit of P(N) as N approaches infinity.
+That probability is 100%, and the expected number of turns to
+complete the game is 2.
+<P>
+Notice the difference between this position and a Strongly Forced
+victory. The PW is no longer able to broadcast his orders in advance.
+If he does, the DC will be able to perpetually prevent him from winning.
+I refer to this position as "Weakly Forced." Since there is no risk
+involved, I also like to call it "Zeroth Degree Force."
+<H4>First Degree Forced Victory</H4>
+Next, consider a position with some more sophistication
+(special thanks to Salieri for bringing a real example of such a
+position -- from a championship game -- to my attention some two
+years ago). Suppose the PW has two strategies. We will call one
+strategy the "Basic" strategy and the other strategy the "Daring" one.
+If the DC mis-guess which strategy the PW is using, the PW wins
+instantly. If they guess correctly and it's the "Basic" one,
+then nothing happens. The position remains unchanged. If they
+guess correctly and it's the "Daring" one, the DC will instantly
+stalemate the position and prevent the PW from ever winning
+(tactically, at least). Table 2 demonstrates this position.
+<P>
+<center>
+<table border>
+<caption><B>Table 2. First Degree Force</b></caption>
+<tr><th><th colspan=2>PW Strategies</tr>
+<tr><th><th>Basic<th>Daring</tr>
+<tr><th>DC Guesses PW Uses the Basic Strategy<td align=center>No Change
+<td align=center>Win</tr>
+<tr><th>DC Guesses PW Uses the Daring Strategy<td align=center>Win
+<td align=center>Stalemate</tr>
+</table>
+</center>
+<P>
+On the face of it, it might appear that the PW has a 50% or so
+chance of winning, but this isn't so. The probability of victory
+is actually as high as the PW would like to set it. For instance,
+the PW might choose to play the "Basic" strategy 99% of the times,
+and the "Daring" strategy 1% of the time. The PW can even tell the
+DC that this is his strategy (but not tell them on which turn he
+is "Basic" and when he is "Daring"). Now, if the DC decides to
+defend by guessing the "Basic" counter-strategy, DC has no hope.
+Either they'll lose that turn (1% of the time), or nothing will
+happen (99%). The fact that the chance of losing -- on the turn -- is
+small is no consolation. Eventually, DC will lose. By guessing
+"Daring," the DC at least has a chance. There is a 1% chance
+that the DC will gain a stalemate (because there is a 1% chance
+that the PW will choose to play "Daring" that turn). On the other hand,
+there is also a 99% chance of losing on the turn. The overall
+probability of victory for the PW is 100% if DC guesses "Basic"
+and 99% if they guess "Daring."
+<P>
+Now the expected length of the game is 100 turns if the DC guess "Basic"
+(since that's how long before the PW takes his 1% "Daring" turn).
+The game will last exactly one turn if the DC guess "Daring."
+<P>
+Now, before anyone says "1% chance of being stalemated is pretty
+good, but it ain't 0%," I'll return to the limiting argument.
+The DW didn't have to choose 1% as the probability of being "Daring".
+He could just as easily have chosen 0.1% or 0.01%, etc.
+The probability of being stalemated would be equal to the probability
+of playing the "Daring" strategy, and is completely settable by the PW
+to be as low as he would like it to be. In the limit, it's 0%.
+Note that the expected game length -- if the DC chooses to guess "Basic"
+(which is a hopeless play, as seen above) is inversely proportional
+to the probability of playing the "Daring" strategy. If the DW decides
+to play the "Daring" strategy only once in a thousand turns, then -- as
+long as the DC insists on always guessing "Basic" -- it is expected to
+take a thousand turns to complete the game. Of course, the "superior"
+(in so much as one may talk about "superior" strategies when they
+all have 0% chances) DC play is to guess "Daring." At least it gives
+some chance -- however small -- that there be a stalemate.
+<P>
+To put it in (more) mathematical terms, the optimal strategy for
+the PW player is to play "Basic" with probability <i>"1 minus epsilon"</i> and
+"Daring" with probability <i>epsilon</i>, where <i>epsilon</i> is an
+arbitrarily small positive number. The probability of winning is thus
+<i>"1 minus epsilon"</i>, which is arbitrarily close to 100%.
+This position is also "Weakly Forced." Since it is necessary for
+the PW to employ a strategy with diminishingly small (<i>epsilon</i>)
+probability, I like to call this position a "First Degree Force."
+<H4>Second Degree Forced Victory</H4>
+Onward to an even more complicated position: The Chopin Iberian position.
+(We ignore everything east of Switzerland, as that part of the board is
+stalemated already.)
+<P>
+In Chopin, there is a "Basic" strategy. I'll call it "A":
+<PRE>
+A: NAF-MAO, WES-SPA, POR S WES-SPA, MAR S WES-SPA, LYO S MAR, PIE S MAR.
+</PRE>
+The advantage of that strategy is that there is absolutely no risk
+to Austria (that a stalemate line would be formed). POR can't be
+taken because the only two units that adjoin it (MAO and SPA) are
+both attacked. Neither could provide the other with an uncut support.
+MAR can't be taken since it is supported twice, and the maximum attack
+on it can only have two supports. WES is equally undislodgeable. Only
+one hostile fleet adjoins it (and it's impossible to get a fleet into
+Spain without losing it in the process). The only way WES leaves its
+present post is if it goes to SPA (which will conclude the exercise).
+NAF is likewise immovable. The worst that could happen (from Austria's
+point of view) is for there to be no change.
+<P>
+Austria will lose nothing by playing strategy "A" with an arbitrarily
+high probability (say, 99%). This will assure a 99% probability
+of winning against any counter-strategy which does not properly
+defend SPA without any risk to Austria.
+<P>
+The disadvantage of the "Basic" strategy is that it is easy to defend SPA.
+There are two possible counter-strategies (other counter-strategies are
+also possible, but they are equivalent or strictly inferior to at least
+one of these two). I'll call these counter-strategies "1" and "2":
+<PRE>
+1: MAO-POR, BUR-MAR, GAS S BUR-MAR, SPA S BUR-MAR, RUH-BUR.
+2: MAO-POR, GAS S SPA, BUR-MAR, SPA S BUR-MAR, RUH-BUR.
+</PRE>
+Strictly speaking, care should be taken to assure the non-dislodgement
+of the MAO fleet. However, since none of the Austrian strategies discussed
+here even attempt to dislodge MAO, I won't bother. In any event, within one
+turn (if France cooperates) or two turns (if he doesn't), there will be
+three fleets behind MAO capable of assuring the non-dislodgement of MAO.
+<P>
+Against "1", Austria could easily counter with "B":
+<PRE>
+B: NAF-MAO, WES-SPA, POR S WES-SPA, MAR S WES-SPA, LYO S WES-SPA, PIE S MAR.
+</PRE>
+There is a problem with "B", but it's solvable. "B" is vulnerable to
+the formation of a stalemate line by yet a third potential
+counter-strategy (the one France mentioned in an earlier broadcast):
+<PRE>
+3: MAO-POR, SPA-MAR, BUR S SPA-MAR, GAS S SPA-MAR.
+</PRE>
+However, this isn't such a great problem. Since "3" losses against the
+basic "A" strategy -- which is played 99% of the time -- any attempt
+by the defenders to employ it is extremely likely to end in an instant
+Austrian victory. All Austria needs to do is to play "B" with a probability
+of 1% and that will take care of "1". In that respect, "B" and "3" acts
+like the "Daring/Guess Daring" strategies.
+<P>
+The problem for Austria then becomes "2". Strategy "2" doesn't form a
+stalemate line against either "A" or "B", but it does avoid losing to either.
+<P>
+To defeat "2", Austria could do "C":
+<PRE>
+C: NAF-MAO, MAR-SPA, WES S MAR-SPA, LYO S MAR-SPA, POR S MAR-SPA, PIE-MAR.
+</PRE>
+The problem with "C" is that it is vulnerable to the formation of a
+stalemate line against defense "1". But, as we have seen, "1" is already
+defeated by an "AB" 99%-1% combination. All we need to do now is to add
+a <B>very</b> small probability of playing "C" to also take care of "2". This
+probability should be smaller than the probability of playing "B" by as
+much as the probability of playing "B" is smaller than the probability
+of playing "A" is (99 to 1).
+<P>
+This way, if the defense plays "1", there is a 99 times higher chance
+that it will be countered with a winning "B" than with a stalemated "C".
+(It doesn't matter how often it is countered with "A" since nothing will
+then change.)
+If the defense plays "2", it could never form a stalemate line, and
+eventually it will be countered with a winning "C". (It doesn't matter
+how often it is countered with "A" or "B" since nothing will then change.)
+If the defense plays "3", there is a 99% chance it will immediately
+lose to "A".
+<P>
+The existence of a strategy which should only be played
+with a small probability relative to another strategy which
+itself is played with a small probability, is why I like
+to call this position a "Second Degree Force."
+<P>
+<a name=summary>
+<HR>
+<H3>Summary</H3>
+Austria will play one of 3 strategies:
+<PRE>
+A: NAF-MAO, WES-SPA, POR S WES-SPA, MAR S WES-SPA, LYO S MAR, PIE S MAR.
+B: NAF-MAO, WES-SPA, POR S WES-SPA, MAR S WES-SPA, LYO S WES-SPA, PIE S MAR.
+C: NAF-MAO, MAR-SPA, WES S MAR-SPA, LYO S MAR-SPA, POR S MAR-SPA, PIE-MAR.
+</PRE>
+<SL>
+<LI>Strategy "A" will be played with probability <i>"1 minus epsilon"</i>
+<LI>Strategy "B" will be played with probability <i>epsilon minus epsilon2</i>
+<LI>Strategy "C" will be played with probability <i>epsilon2</i>.
+<li>Epsilon</i> is set as low as Austria wishes to. For instance, 1%
+</SL>
+There are 3 potential counter-strategies that could be played by EL(F?):
+<PRE>
+1: MAO-POR, BUR-MAR, GAS S BUR-MAR, SPA S BUR-MAR, RUH-BUR.
+2: MAO-POR, GAS S SPA, BUR-MAR, SPA S BUR-MAR, RUH-BUR.
+3: MAO-POR, SPA-MAR, BUR s SPA-MAR, GAS S SPA-MAR.
+</PRE>
+The outcome of each of Austria's 3 strategies against each of EL(F?) as
+well as the probability with which Austria will play each is
+given in Table 3.
+<P>
+<center>
+<table border>
+<caption><b>Table 3. Second Degree Force</b></caption>
+<tr><th><th colspan=3>Austria's Strategies<th></tr>
+<tr><th>Coalition Defense<th>"A"<BR>(99.00%)
+<th>"B"<BR>(0.99%)<th>"C"<BR>(0.01%)<th>Outcome</tr>
+<tr><th>"1"<td align=center>No Change<td align=center>Win
+<td align=center>Stalemate<td align=center><b>99%</b></tr>
+<tr><th>"2"<td align=center>No Change<td align=center>No Change
+<td align=center>Win<td align=center><b>100%</b></tr>
+<tr><th>"3"<td align=center>Win<td align=center>Stalemate
+<td align=center>No Change<td align=center><b>99%</b></tr>
+</table>
+</center>
+<P>
+To evaluate the probability of Austrian victory, one should ignore
+those cases where nothing changes and only compare the likelihood
+that the game will end in an Austrian win to the likelihood that
+it will end in a stalemate.
+<P>
+If EL(F?) play strategy "1", the probability of an Austrian win
+on any given turn (0.99%) is 99 times higher than the probability
+of a stalemate line being formed (0.01%). Therefore, the overall
+probability of an Austrian win against strategy "1" is 99%.
+(It will take, at worst, 100 seasons for the game to terminate
+if EL(F?) play strategy "1" every turn.)
+<P>
+If EL(F?) play "2", the probability of an Austrian win on any
+given turn is 0.01%. However, the probability of a stalemate
+line being formed is 0%. Therefore the overall probability
+of an Austrian win against strategy "2" is 100%.
+(It will take, at worst, 10000 seasons for the game to terminate
+if EL(F?) play strategy "2" every turn.)
+<P>
+If EL(F?) play "3", the probability of an Austrian win
+on any given turn (99.00%) is 100 times higher than the probability
+of a stalemate being formed (0.99%). Therefore, the overall
+probability of an Austrian win against strategy "3" is approximately
+99%.  (It will take, at worst, only somewhere around one season for
+the game to terminate if EL(F?) play "3" every turn.)
+<P>
+These results are outlined in the "OUTCOME" column of the table.
+<P>
+(Do not forget that the 99% is only an example. The actual probabilities
+can be set as high as one wishes to. You can be assured that <b>I</b> won't
+set it any lower than 99.9% :)  So what if it might take a thousand or
+a million seasons to finish? I'm in no hurry :)  ).
+<P>
+<HR>
+<H3>Practical Execution of Solution</H3>
+I would request that players concede the game once they are satisfied
+that the above presentation is valid. This could save us <b>many</b> years
+of non-movement. Of course, Lowland can always (just about) force a
+decision by playing "3".
+<P>
+If players do insist on going on for a long time, we might make an
+arrangement with the GM to resolve the continuation of the game quickly.
+I could provide the GM with a list of the years in which I will be
+playing strategies "B" (on average, once every 1000 seasons) and "C"
+(on average, once every million seasons). Lowland, could likewise
+provide the GM with the strategies he'll play. The GM can then instantly
+conclude when and how the game will end. (Saying something like
+"Austrian win in the year 534,108.")
+<HR>
+<A HREF="Academy.html#Fresh"><IMG SRC="/Zine/Common/UpArr.gif">
+Go Back to the Diplomacy Academy</a>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=all>
+<!--
+-->

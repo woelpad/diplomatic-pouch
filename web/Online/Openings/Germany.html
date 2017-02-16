@@ -1,0 +1,736 @@
+
+
+
+
+<title>DP Online: The Diplomacy Openings Library</title>
+
+<BODY BGCOLOR="#ffffff">
+
+
+
+<script language=javascript>
+<!--
+	power = 'Germany'
+	var varName = new Array()
+	var varDesc = new Array()
+	var u0 = new Array()
+	var u1 = new Array()
+	var u2 = new Array()
+	if (power == 'Russia') var u3 = new Array()
+	
+varName[0] = "ger-holland"
+u0[0] = 1
+u1[0] = 0
+u2[0] = 2
+varName[1] = "ger-barb"
+u0[1] = 1
+u1[1] = 2
+u2[1] = 3
+varName[2] = "ger-danish"
+u0[2] = 1
+u1[2] = 1
+u2[2] = 5
+varName[3] = "ger-blitz-den"
+u0[3] = 0
+u1[3] = 0
+u2[3] = 5
+varName[4] = "ger-jutland"
+u0[4] = 0
+u1[4] = 0
+u2[4] = 5
+varName[5] = "ger-sealion"
+u0[5] = 0
+u1[5] = 0
+u2[5] = 5
+varName[6] = "ger-blitz-hol"
+u0[6] = 1
+u1[6] = 0
+u2[6] = 5
+varName[7] = "ger-wmandmary"
+u0[7] = 1
+u1[7] = 0
+u2[7] = 5
+varName[8] = "ger-dike"
+u0[8] = 3
+u1[8] = 0
+u2[8] = 1
+varName[9] = "ger-frederich"
+u0[9] = 0
+u1[9] = 3
+u2[9] = 5
+varName[10] = "ger-silesian"
+u0[10] = 0
+u1[10] = 3
+u2[10] = 5
+varName[11] = "ger-rhineland"
+u0[11] = 0
+u1[11] = 1
+u2[11] = 1
+varName[12] = "ger-wesbarb"
+u0[12] = 2
+u1[12] = 0
+u2[12] = 3
+varName[13] = "ger-berlin"
+u0[13] = 0
+u1[13] = 4
+u2[13] = 6
+varName[14] = "ger-holland"
+u0[14] = 1
+u1[14] = 0
+u2[14] = 4
+varName[15] = "ger-nta"
+u0[15] = 1
+u1[15] = 0
+u2[15] = 4
+varName[16] = "ger-koniggratz"
+u0[16] = 1
+u1[16] = 0
+u2[16] = 4
+varName[17] = "ger-panther"
+u0[17] = 1
+u1[17] = 3
+u2[17] = 1
+varName[18] = "ger-panther"
+u0[18] = 1
+u1[18] = 1
+u2[18] = 1
+varName[19] = "ger-slav"
+u0[19] = 0
+u1[19] = 3
+u2[19] = 2
+varName[20] = "ger-blitz-bal"
+u0[20] = 2
+u1[20] = 0
+u2[20] = 5
+varName[21] = "ger-silesian"
+u0[21] = 0
+u1[21] = 3
+u2[21] = 0
+varName[22] = "ger-silesian"
+u0[22] = 0
+u1[22] = 3
+u2[22] = 1
+varName[23] = "ger-berlin"
+u0[23] = 0
+u1[23] = 4
+u2[23] = 5
+varName[24] = "ger-silesian"
+u0[24] = 1
+u1[24] = 3
+u2[24] = 4
+varName[25] = "ger-koniggratz"
+u0[25] = 1
+u1[25] = 3
+u2[25] = 4
+varName[26] = "ger-blitz"
+u0[26] = 3
+u1[26] = 0
+u2[26] = 5
+varName[27] = "ger-holland"
+u0[27] = 1
+u1[27] = 0
+u2[27] = 3
+varName[28] = "ger-prussian"
+u0[28] = 3
+u1[28] = 2
+u2[28] = 5
+varName[29] = "ger-ansch-sil"
+u0[29] = 0
+u1[29] = 0
+u2[29] = 3
+varName[30] = "ger-rhineland"
+u0[30] = 0
+u1[30] = 1
+u2[30] = 5
+varName[31] = "ger-anschluss"
+u0[31] = 0
+u1[31] = 0
+u2[31] = 4
+varName[32] = "ger-nta"
+u0[32] = 0
+u1[32] = 0
+u2[32] = 4
+varName[33] = "ger-koniggratz"
+u0[33] = 0
+u1[33] = 0
+u2[33] = 4
+varName[34] = "ger-centrifuge"
+u0[34] = 2
+u1[34] = 2
+u2[34] = 6
+varName[35] = "ger-barb"
+u0[35] = 0
+u1[35] = 2
+u2[35] = 3
+varName[36] = "ger-silesian"
+u0[36] = 4
+u1[36] = 3
+u2[36] = 7
+varName[37] = "ger-barb"
+u0[37] = 2
+u1[37] = 2
+u2[37] = 3
+varName[38] = "ger-anschluss"
+u0[38] = 0
+u1[38] = 0
+u2[38] = 0
+varName[39] = "ger-anschluss"
+u0[39] = 0
+u1[39] = 0
+u2[39] = 2
+varName[40] = "ger-anschluss"
+u0[40] = 0
+u1[40] = 0
+u2[40] = 1
+varName[41] = "ger-holland-burg"
+u0[41] = 1
+u1[41] = 0
+u2[41] = 1
+varName[42] = "ger-panther"
+u0[42] = 1
+u1[42] = 0
+u2[42] = 1
+varDesc['comment'] = "--ABOUT THE GERMAN OPENINGS--</b><dd>"
+varDesc['comment'] += 'The German openings are categorized as follows:  if the Berlin army is sent to '
+varDesc['comment'] += 'Kiel, then if Munich opens to Ruhr, the opening is a Blitzkrieg opening, and '
+varDesc['comment'] += 'if Munich does <i>not</i> open to Ruhr,  '
+varDesc['comment'] += 'the opening is named according to the order of the Kiel fleet. '
+varDesc['comment'] += 'Otherwise (if Berlin does <i>not</i> open to Kiel) the opening is categorized '
+varDesc['comment'] += 'based on the order given to the Berlin army. '
+varDesc['comment'] += '<ul> '
+varDesc['comment'] += '<li>Blitzkrieg Openings  (A Ber-Kie, A Mun-Ruh) '
+varDesc['comment'] += '<li>Anschluss Openings   (A Ber-Kie, F Kie-Den) '
+varDesc['comment'] += '<li>Dutch Openings       (A Ber-Kie, F Kie-Hol) '
+varDesc['comment'] += '<li>Dutch Boy Openings   (A Ber-Kie, F Kie-HEL) '
+varDesc['comment'] += '<li>Western Barbarossa   (A Ber-Kie, F Kie-BAL) '
+varDesc['comment'] += '<li>Gambit Openings      (A Ber-Mun, F Kie-Hol) '
+varDesc['comment'] += '<li>Rhineland Openings   (A Ber-Mun, F Kie-Den) '
+varDesc['comment'] += '<li>Prussian Openings    (A Ber-Pru) '
+varDesc['comment'] += '<li>Silesian Openings    (A Ber-Sil) '
+varDesc['comment'] += '<li>Berlin Defense       (A Ber H) '
+varDesc['comment'] += '</ul> '
+varDesc['comment'] += ' '
+varDesc['ger-blitz-bal'] = "BLITZKRIEG OPENING, BALTIC VARIANT</b><dd>"
+varDesc['ger-blitz-bal'] += 'Also known as the Baltic Opening, this is a German attack starting in '
+varDesc['ger-blitz-bal'] += 'Scandinavia rather than in the Polish '
+varDesc['ger-blitz-bal'] += 'corridor.  The fall continuation is F BAL-Swe, A Kie-Den, A Ruh-Hol/Bel. If '
+varDesc['ger-blitz-bal'] += 'Sweden is taken, BAL can be retaken via F Swe S Kie-BAL, followed '
+varDesc['ger-blitz-bal'] += 'by F BAL C Den-Lvn! If not, F BAL S Den-Swe, plus, new armies '
+varDesc['ger-blitz-bal'] += 'enter Polish corridor. Requires solid knowledge of English, French '
+varDesc['ger-blitz-bal'] += '(and Italian) intentions. '
+varDesc['ger-blitz-bal'] += ' '
+varDesc['ger-jutland'] = "[JUTLAND GAMBIT]</b><dd>"
+varDesc['ger-jutland'] += "Edi Birsan's Fall continuation of the Danish Blitzkrieg, which delays the "
+varDesc['ger-jutland'] += 'choice of first victim until Spring of 1902.  The Fall 1901 orders are: '
+varDesc['ger-jutland'] += 'F Den-SKA, A Kie-Den, and A Ruh-Hol. Note that Germany writes off Belgium '
+varDesc['ger-jutland'] += 'entirely, but is a little less vulnerable to a double cross in the north. '
+varDesc['ger-jutland'] += ' '
+varDesc['ger-panther'] = "[PANTHER]</b><dd>"
+varDesc['ger-panther'] += 'This Fall Austro-Italo-German continuation  '
+varDesc['ger-panther'] += "was named by Dan Abbott after Kaiser Wilhelm II's sending the German "
+varDesc['ger-panther'] += 'gunboat <i>Panther</i> to Africa in 1911.  The opening presents a combined '
+varDesc['ger-panther'] += 'front by the Central Powers (A/G/I) in an attempt to guarantee control of '
+varDesc['ger-panther'] += 'Africa and the Gibraltar block by controlling the Mediterranean.  To do this, '
+varDesc['ger-panther'] += 'the rivals Mediterranean powers (France and Turkey) must be taught a lesson. '
+varDesc['ger-panther'] += '<P> '
+varDesc['ger-panther'] += 'In Spring, Austria opens to pressure the Ionian, while Italy does a Swiss '
+varDesc['ger-panther'] += 'Lepanto and Germany opens to Burgundy and Holland.  The pure Panther sees '
+varDesc['ger-panther'] += 'occupation of Serbia and Kiel in Spring 1901, but other variations are '
+varDesc['ger-panther'] += 'possible, which also put pressure on Russia. '
+varDesc['ger-panther'] += '<P> '
+varDesc['ger-panther'] += 'In Fall, the Italian army in Apulia is convoyed to Albania by the Austrian '
+varDesc['ger-panther'] += 'fleet, while Italy takes Tunis, and both Germany and Italy continue to '
+varDesc['ger-panther'] += 'harass France in Marseilles, Burgundy, and Belgium.  While France is '
+varDesc['ger-panther'] += 'occupied by pressure on his entire eastern border, Turkey sees two hostile '
+varDesc['ger-panther'] += 'fleets coming at him.  The remaining two powers, England and Russia, should '
+varDesc['ger-panther'] += 'be pleased by the opening. Russia is able to not only get in on the '
+varDesc['ger-panther'] += "Turkish party but also appeased by Germany's lack of Scandinavian force. "
+varDesc['ger-panther'] += 'England is also satisfied with the Scandinavian lines and can help out with '
+varDesc['ger-panther'] += 'France. '
+varDesc['ger-panther'] += ' '
+varDesc['ger-centrifuge'] = "CENTRIFUGE</b><dd>"
+varDesc['ger-centrifuge'] += "Clinton Wolf's name for the Prussian opening that includes F Kie-BAL and "
+varDesc['ger-centrifuge'] += 'A Mun-Kie.  Followed by a convoy to Denmark, '
+varDesc['ger-centrifuge'] += 'and then by the addition of another fleet in Winter, which '
+varDesc['ger-centrifuge'] += 'is used to completely plug the waters from Kiel to St. Petersburg, '
+varDesc['ger-centrifuge'] += 'the Centrifuge is described in full in '
+varDesc['ger-centrifuge'] += '<a target=_top href=/DipPouch/Zine/S1999R/Wolf/centrifuge.html>a Diplomatic '
+varDesc['ger-centrifuge'] += 'Pouch Zine article on the opening</a>. '
+varDesc['ger-centrifuge'] += ' '
+varDesc['ger-anschluss'] = "ANSCHLUSS OPENING</b><dd>"
+varDesc['ger-anschluss'] += "Richard Sharp's strategic notion that Germany should, in the "
+varDesc['ger-anschluss'] += 'early game, strive to keep Austria strong to reduce both powers '
+varDesc['ger-anschluss'] += 'vulnerability as central (and surrounded) powers. Although they '
+varDesc['ger-anschluss'] += 'take their name from the annexation of Austria by Nazi-Germany '
+varDesc['ger-anschluss'] += 'in March 1938, Anschluss alliances are generally regarded as '
+varDesc['ger-anschluss'] += 'essentially pro-Austrian, with Germany using diplomatic leverage '
+varDesc['ger-anschluss'] += 'to discourage other powers -- in particularly Russia (with the '
+varDesc['ger-anschluss'] += 'threat of standing him out of Sweden in 1901) -- from attacking '
+varDesc['ger-anschluss'] += 'his ally. Tactically, Anschluss openings entail F Kie-Den and '
+varDesc['ger-anschluss'] += 'A Ber-Kie.  Munich either HOLDs or stands off in Burgundy or Tyrolia '
+varDesc['ger-anschluss'] += '(the pure Anschluss), or even enters Tyrolia or Bohemia, with Italy '
+varDesc['ger-anschluss'] += 'told that this unit will aid Austria if Italy attacks. The advantage '
+varDesc['ger-anschluss'] += 'for Germany is that it is statistically evident that Germany is far '
+varDesc['ger-anschluss'] += 'less likely to win if Austria is eliminated early in the game. '
+varDesc['ger-anschluss'] += 'There are three variants: '
+varDesc['ger-anschluss'] += '<ul> '
+varDesc['ger-anschluss'] += '<li>Sudetenland Variant  (A Mun-Boh); '
+varDesc['ger-anschluss'] += '<li>Tyrolean Variant  (A Mun-Tyr); '
+varDesc['ger-anschluss'] += '<li>Silesia Variant   (A Mun-Sil). '
+varDesc['ger-anschluss'] += '</ul> '
+varDesc['ger-anschluss'] += "The pure Anschluss is Germany's fourth most common opening. Unless a standoff "
+varDesc['ger-anschluss'] += 'in Burgundy occurs, it bespeaks an aggressive German player almost certainly '
+varDesc['ger-anschluss'] += "allied with England. A standoff is more ambiguous, but may be Germany's attempt "
+varDesc['ger-anschluss'] += 'to head off a France-England-Russian blitz. '
+varDesc['ger-anschluss'] += '<P> '
+varDesc['ger-anschluss'] += '<i>[Notice that the opening using Mun-Ruh is not considered an Anschluss '
+varDesc['ger-anschluss'] += 'opening.  Rather, this is the Danish Blitzkreig, the most popular German '
+varDesc['ger-anschluss'] += 'opening.]</i> '
+varDesc['ger-anschluss'] += ' '
+varDesc['ger-koniggratz'] = "[KONIGGRATZ FREAKOUT]</b><dd>"
+varDesc['ger-koniggratz'] += "Edi Birsan's offbeat German-Italian continuation to Italy's Alpine Chicken "
+varDesc['ger-koniggratz'] += 'Opening.  With A Ven S Pie-Tyr in the Fall, the German army in Tyrolia is  '
+varDesc['ger-koniggratz'] += 'dislodged, allowing it to retreat to whichever of Vienna '
+varDesc['ger-koniggratz'] += "or Trieste Austria leaves open. In addition to this benefit, Italy's opening "
+varDesc['ger-koniggratz'] += 'move to Piedmont provides some assurance to Germany that the French army in '
+varDesc['ger-koniggratz'] += 'Burgundy will not be tempted to go for Munich, '
+varDesc['ger-koniggratz'] += 'especially if Germany notified France that he will open A Mun-Tyr. '
+varDesc['ger-koniggratz'] += ' '
+varDesc['ger-sealion'] = "[SEALION]</b><dd>"
+varDesc['ger-sealion'] += "Edi Birsan's strong anti-English continuation of the Danish "
+varDesc['ger-sealion'] += 'Blitzkrieg, as detailed in his <A '
+varDesc['ger-sealion'] += 'HREF=/DipPouch/Zine/S1997M/Birsan/Sealion.html '
+varDesc['ger-sealion'] += 'TARGET=_top>Diplomatic Pouch Article</A>. '
+varDesc['ger-sealion'] += '<P> '
+varDesc['ger-sealion'] += 'Supported by a French fleet in the English Channel, Germany forces his way '
+varDesc['ger-sealion'] += 'into the North Sea in Fall of 1901, while taking Denmark and Holland with '
+varDesc['ger-sealion'] += 'armies.  In Spring of 1902, Germany and France both attempt convoys onto '
+varDesc['ger-sealion'] += "England, and at least one is guaranteed to succeed.  Named after Hitler's "
+varDesc['ger-sealion'] += 'plan to attack England from out of the Low Countries, this opening gained '
+varDesc['ger-sealion'] += "rapid popularity in the late 1990's in e-mail play. "
+varDesc['ger-sealion'] += "One example is Bif Smithson's Diplomatic Pouch article <A "
+varDesc['ger-sealion'] += 'HREF=/DipPouch/Zine/F1997R/Smithson/seaart.html '
+varDesc['ger-sealion'] += 'TARGET=_top>The Sealion Opening in Action</A>. '
+varDesc['ger-sealion'] += ' '
+varDesc['ger-wmandmary'] = "[WILLIAM AND MARY OPENING]</b><dd>"
+varDesc['ger-wmandmary'] += "William Oosten's alternative to the Sealion is detailed "
+varDesc['ger-wmandmary'] += 'in his Diplomatic Pouch article, "<A '
+varDesc['ger-wmandmary'] += 'HREF=/DipPouch/Zine/F1997M/Oosten/WmandMary.html '
+varDesc['ger-wmandmary'] += 'TARGET=_top>The William and Mary Opening</A>:" '
+varDesc['ger-wmandmary'] += '<P> '
+varDesc['ger-wmandmary'] += '"Given a friendly Russia and a hostile Italy, Germany opens seemingly '
+varDesc['ger-wmandmary'] += 'anti-French, while France rushes south. By 1902, France and Germany '
+varDesc['ger-wmandmary'] += 'join their navies to acquire the English Channel and the North '
+varDesc['ger-wmandmary'] += 'Sea. Once F/G rule the waves, they have their way with England." '
+varDesc['ger-wmandmary'] += '<P> '
+varDesc['ger-wmandmary'] += 'Germany moves his fleet into Belgium, while the French fleet '
+varDesc['ger-wmandmary'] += 'presumably bounces in the English Channel in the Spring and  '
+varDesc['ger-wmandmary'] += 'goes to the Mid-Atlantic in the Fall. All this is maintains a peaceful '
+varDesc['ger-wmandmary'] += 'attitude towards England until the Winter builds - 2 fleets. '
+varDesc['ger-wmandmary'] += 'Criticism of this opening is that Germany, with 3 builds, might be too '
+varDesc['ger-wmandmary'] += 'strong, since France might have to defend Marseilles and only get 1. '
+varDesc['ger-wmandmary'] += ' '
+varDesc['ger-rhineland'] = "RHINELAND OPENING</b><dd>"
+varDesc['ger-rhineland'] += 'Named by Manus Hand, this opening gives Germany two units to attack Burgundy '
+varDesc['ger-rhineland'] += 'in Fall, while providing a say in the Lowlands and Scandinavia.  One advantage '
+varDesc['ger-rhineland'] += 'to this opening is that if France has entered Burgundy, Germany is sure to '
+varDesc['ger-rhineland'] += 'protect Munich without risking the inability to build a fleet at either or '
+varDesc['ger-rhineland'] += 'both of his ports.  If an Anglo-French attack is foreseen, the Sudetenland is '
+varDesc['ger-rhineland'] += 'a good choice. '
+varDesc['ger-rhineland'] += ' '
+varDesc['ger-ansch-sil'] = "ANSCHLUSS, SILESIA VARIANT</b><dd>"
+varDesc['ger-ansch-sil'] += "This opening shows Munich's role as &quot;swing&quot; unit. The "
+varDesc['ger-ansch-sil'] += 'order alerts Russia to an attack but put him in some difficulty. '
+varDesc['ger-ansch-sil'] += 'Germany can still change attack (A Sil-Gal) in the Fall. A common '
+varDesc['ger-ansch-sil'] += 'alternative, A Mun-Kie, A Ber-Pru is much weaker. A Russian attack '
+varDesc['ger-ansch-sil'] += '(A War-Sil, A Mos-War) will put Germany at a disadvantage. There '
+varDesc['ger-ansch-sil'] += 'is also no way to change tack save retreat (A Pru-Ber). '
+varDesc['ger-ansch-sil'] += ' '
+varDesc['ger-holland'] = "DUTCH OPENING</b><dd>"
+varDesc['ger-holland'] += "Richard Sharp's name for any German opening using F Kie-Hol and "
+varDesc['ger-holland'] += 'A Ber-Kie. There are three named variations: the Burgundy Attack, the '
+varDesc['ger-holland'] += 'Silesian and the Tyrolian. There are no prizes for guessing what '
+varDesc['ger-holland'] += 'the differences are. '
+varDesc['ger-holland'] += ' '
+varDesc['ger-blitz-den'] = "BLITZKREIG OPENING, DANISH VARIANT</b><dd>"
+varDesc['ger-blitz-den'] += 'This is the most popular German opening, and also the most popular '
+varDesc['ger-blitz-den'] += 'opening for any country. It guarantees two neutrals against any offense, '
+varDesc['ger-blitz-den'] += 'gives Germany leverage in Sweden and Belgium, and usually will offend '
+varDesc['ger-blitz-den'] += 'no one. If no one has moved adjacent to him, he will have great '
+varDesc['ger-blitz-den'] += 'flexibility in Fall, and all home centres will be open for builds. '
+varDesc['ger-blitz-den'] += '<P> '
+varDesc['ger-blitz-den'] += 'This is the basic opening where France is an ally, Russia is '
+varDesc['ger-blitz-den'] += 'neutral or suspect, and England is the objective. The Denmark fleet can deny '
+varDesc['ger-blitz-den'] += 'Sweden to Russia. Germany also has a lock on Holland (A Kie-Hol, '
+varDesc['ger-blitz-den'] += 'A Ruh S A Kie-Hol), and can defend Berlin and still take '
+varDesc['ger-blitz-den'] += 'Holland (so long as England does not stop him). '
+varDesc['ger-blitz-den'] += ' '
+varDesc['ger-dike'] = "DUTCH BOY OPENING</b><dd>"
+varDesc['ger-dike'] += 'Named by Manus Hand, Dutch Boy openings involve F Kie-HEL '
+varDesc['ger-dike'] += 'and A Ber-Kie.  This move applies pressure to the North '
+varDesc['ger-dike'] += 'Sea (in combination with a French fleet in the Channel) but is a rather '
+varDesc['ger-dike'] += 'poor substitute for F Kie-Den.  The advantage is that if France is to make '
+varDesc['ger-dike'] += 'the attack on the North Sea, Germany may occupy Denmark with an army rather '
+varDesc['ger-dike'] += 'than a fleet, giving him immediate convoy possibilities.  The Dutch Boy is '
+varDesc['ger-dike'] += 'also useful in combination with a Russian Northern System opening.  With '
+varDesc['ger-dike'] += 'a Russian army in St. Petersburg after Spring of 1901, and with pressure '
+varDesc['ger-dike'] += "on England's North Sea fleet, the only sure English build in Norway must "
+varDesc['ger-dike'] += 'be taken by vacating the North Sea, and Germany can take advantage of this '
+varDesc['ger-dike'] += 'by HEL-NTH, while still covering Holland and Denmark with armies. '
+varDesc['ger-dike'] += ' '
+varDesc['ger-nta'] = "[NORTHERN TIER ALLIANCE OPENING]</b><dd>"
+varDesc['ger-nta'] += 'This fall continuation is based on an E/F/G triple alliance. '
+varDesc['ger-nta'] += 'England convoys to Denmark, with A Mar-Pie and A Mun-Tyr for an immediate '
+varDesc['ger-nta'] += 'southern attack. '
+varDesc['ger-nta'] += 'Subsequently, England builds a minimum of fleets, France builds '
+varDesc['ger-nta'] += 'mostly F Mar. (The opening was named by Richard Hucknall in FOE #57) '
+varDesc['ger-nta'] += ' '
+varDesc['ger-prussian'] = "PRUSSIAN OPENING</b><dd>"
+varDesc['ger-prussian'] += "Richard Sharp's name for any opening which uses the move A Ber-Pru. "
+varDesc['ger-prussian'] += 'The most famous named variant is the Barbarossa, which sends Munich to Silesia '
+varDesc['ger-prussian'] += 'to launch a full-scale war on Russia. '
+varDesc['ger-prussian'] += ' '
+varDesc['ger-berlin'] = "BERLIN DEFENSE</b><dd>"
+varDesc['ger-berlin'] += 'Any German opening in which Berlin is ordered to HOLD.  These openings '
+varDesc['ger-berlin'] += 'guard against a Russian entry into the east without committing the German '
+varDesc['ger-berlin'] += 'to an attack. '
+varDesc['ger-berlin'] += ' '
+varDesc['ger-silesian'] = "SILESIAN OPENING</b><dd>"
+varDesc['ger-silesian'] += 'Any involving the move A Ber-Sil.  The following named variants exist: '
+varDesc['ger-silesian'] += '<ul> '
+varDesc['ger-silesian'] += '<li>Frederich Variation '
+varDesc['ger-silesian'] += '<li>Slavic Attack '
+varDesc['ger-silesian'] += '</ul> '
+varDesc['ger-silesian'] += ' '
+varDesc['ger-slav'] = "SILESIAN OPENING, SLAVIC ATTACK</b><dd>"
+varDesc['ger-slav'] += 'Again, Munich is the &quot;swing.&quot; Here Germany goes after '
+varDesc['ger-slav'] += 'Russia <i>and</i> Austria, or Austria alone. Both armies threaten Galicia '
+varDesc['ger-slav'] += 'as well as two supply centers. Against Austria alone, A Boh-Vie, '
+varDesc['ger-slav'] += 'A Sil-Gal will hurt. '
+varDesc['ger-slav'] += ' '
+varDesc['ger-barb'] = "PRUSSIAN OPENING, THE BARBAROSSA</b><dd>"
+varDesc['ger-barb'] += "This opening, named by Richard Sharp, is Germany's most aggressive "
+varDesc['ger-barb'] += 'opening towards the east, sending Mun-Sil and Ber-Pru. Note that both '
+varDesc['ger-barb'] += 'Holland and Belgium are ignored, virtually asking for an English convoy '
+varDesc['ger-barb'] += 'to Holland. In addition to the '
+varDesc['ger-barb'] += 'Barbarossa Proper (F Kie-BAL), there are two variations: the Danish variant '
+varDesc['ger-barb'] += '(F Kie-Den) and the Dutch variant (F Kie-Hol). '
+varDesc['ger-barb'] += ' '
+varDesc['ger-holland-burg'] = "DUTCH OPENING, BURGUNDY ATTACK VARIANT</b><dd>"
+varDesc['ger-holland-burg'] += "This is Germany's third most common "
+varDesc['ger-holland-burg'] += 'opening, and a standoff in Bur may well be arranged. This is '
+varDesc['ger-holland-burg'] += "Germany's most westerly oriented opening, and its success is "
+varDesc['ger-holland-burg'] += 'usually dependent on who, if anyone, has entered the English '
+varDesc['ger-holland-burg'] += 'Channel. '
+varDesc['ger-holland-burg'] += '<P> '
+varDesc['ger-holland-burg'] += 'This is almost the same as the Dutch Blitzkrieg (where Munich moves to Ruhr). '
+varDesc['ger-holland-burg'] += "It shows the role of A Mun as Germany's &quot;swing&quot; unit. "
+varDesc['ger-holland-burg'] += "It sets the tone and direction of Germany's opening. England "
+varDesc['ger-holland-burg'] += 'is an ally, Russia is neutral, and France is the objective. The '
+varDesc['ger-holland-burg'] += 'attack on Burgundy is a direct assault on France. It may stand '
+varDesc['ger-holland-burg'] += "off an unsupported French move to Burgundy. If Germany's attack "
+varDesc['ger-holland-burg'] += 'succeeds, the blow to French defenses is serious.&quot; '
+varDesc['ger-holland-burg'] += ' '
+varDesc['ger-blitz-hol'] = "BLITZKRIEG OPENING, DUTCH VARIATION</b><dd>"
+varDesc['ger-blitz-hol'] += 'This is the second most popular German '
+varDesc['ger-blitz-hol'] += 'opening. Compared to the Danish Blitzkrieg, this trades German influence '
+varDesc['ger-blitz-hol'] += 'in Scandinavia for a stronger hand in Belgium, plus a slightly '
+varDesc['ger-blitz-hol'] += 'stronger defensive position. '
+varDesc['ger-blitz-hol'] += '<P> '
+varDesc['ger-blitz-hol'] += 'This is the basic opening where England is an ally, Russia is '
+varDesc['ger-blitz-hol'] += 'neutral, and France is the objective. Even so, nothing has yet '
+varDesc['ger-blitz-hol'] += 'been done to antagonize France directly. Ruhr can go to Begiuml '
+varDesc['ger-blitz-hol'] += "with Holland's support, or can defend Munich if the French entered Burgundy. "
+varDesc['ger-blitz-hol'] += 'In the latter event, F Hol-Bel still denies the center to France. '
+varDesc['ger-blitz-hol'] += 'F Hol could also support an English unit into Belgium. '
+varDesc['ger-blitz-hol'] += ' '
+varDesc['ger-blitz'] = "BLITZKRIEG OPENING</b><dd>"
+varDesc['ger-blitz'] += 'The Blitzkrieg openings involve a westward move by the German armies, '
+varDesc['ger-blitz'] += 'with Berlin moving to Kiel and Munich to Ruhr.  These are far and away  '
+varDesc['ger-blitz'] += 'the most common German openings, and there are three named variants: '
+varDesc['ger-blitz'] += '<ul> '
+varDesc['ger-blitz'] += '<li>Danish Variant (F Kie-Den) '
+varDesc['ger-blitz'] += '<li>Dutch Variant (F Kie-Hol) '
+varDesc['ger-blitz'] += '<li>Baltic Variant (F Kie-BAL) '
+varDesc['ger-blitz'] += '</ul> '
+varDesc['ger-blitz'] += ' '
+varDesc['ger-wesbarb'] = "WESTERN BARBAROSSA</b><dd>"
+varDesc['ger-wesbarb'] += 'Any opening sending F Kie-Bal with A Ber-Kie.  This opening allows for the '
+varDesc['ger-wesbarb'] += 'taking of Denmark (or Holland) with an army and Germany threatens a fleet '
+varDesc['ger-wesbarb'] += 'move to the Gulf of Bothnia.  In combination with Mun-Sil, Russia can see '
+varDesc['ger-wesbarb'] += 'two of his units with early worries. '
+varDesc['ger-wesbarb'] += ' '
+varDesc['ger-danish'] = "DANISH GAMBIT</b><dd>"
+varDesc['ger-danish'] += "Don Scheifler's name for the opening involving Kiel-Holland and Berlin-Munich. "
+varDesc['ger-danish'] += 'It passes on the build from Denmark the first year, in order '
+varDesc['ger-danish'] += 'to gain position against France, usually picking up both Holland and Belgium. '
+varDesc['ger-danish'] += 'It is very effective at splitting an F/E alliance that may have been '
+varDesc['ger-danish'] += 'planned against Germany, causing England to become involved in a war against '
+varDesc['ger-danish'] += 'Russia.   Germany is often able to choose his ally the second year, either '
+varDesc['ger-danish'] += "taking Denmark with Russia's help, or moving against France with help from "
+varDesc['ger-danish'] += 'England.  The strong western front also helps convince Italy to move to '
+varDesc['ger-danish'] += "Pie/Wes in Spring '02.   Or with good negotiating, a fleet build in Kiel can "
+varDesc['ger-danish'] += 'even gain France as an ally against England.  The opening provides a Kaiser '
+varDesc['ger-danish'] += 'with a great number of options, while throwing western neighbors off balance '
+varDesc['ger-danish'] += 'during the first crucial years.  In the pure Danish Gambit, Munich opens to '
+varDesc['ger-danish'] += 'Ruhr.  If it opens to Burgundy, the opening can be '
+varDesc['ger-danish'] += 'transformed into a Panther opening. '
+varDesc['ger-danish'] += ' '
+varDesc['ger-frederich'] = "SILESIAN OPENING, FREDERICH VARIANT</b><dd>"
+varDesc['ger-frederich'] += 'Also known as the Frederich Opening, this opening was named by John Mark. '
+varDesc['ger-frederich'] += 'France should be pleased and more inclined to move against England, and Silesia '
+varDesc['ger-frederich'] += 'can guard Munich against A Bur-Mun just as well as Kiel can. It also gives '
+varDesc['ger-frederich'] += 'protection against A War-Sil. '
+varDesc['ger-frederich'] += ' '
+
+// -->
+</script>
+	
+
+<BODY BGCOLOR="#ffffff">
+<p align=center>
+<A TARGET=_parent HREF="/DipPouch">
+<IMG SRC="/DipPouch/Common/DPLogo.gif"
+	ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A TARGET=_parent HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="/DipPouch/Common/DPLinks.gif"
+	ALT="Shortcuts" HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
+<BR clear=both>
+<img src="/DipPouch/Common/reddot.gif" height=2 width=100%%>
+<br clear=all>
+<center><H2>The Library of Diplomacy Openings</H2>
+<script language=JavaScript>
+<!--
+function newPower()
+{
+	window.parent.body.document.write('<H3 align=center><font color=red>')
+	window.parent.body.document.write('<blink>...Loading Data For ')
+	window.parent.body.document.write(document.forms[0].power.options[document.forms[0].power.selectedIndex].value)
+	window.parent.body.document.write('...Please Wait...</blink></font>')
+	window.parent.body.document.close()
+	window.location.replace(document.forms[0].power.options[document.forms[0].power.selectedIndex].value + '.html')
+	// document.forms[0].submit()
+}
+// -->
+</script>
+<table>
+<tr><th valign=right>
+	<form name=powerForm method=post action=openings>
+	Openings for&nbsp;<select name=power onChange=newPower()>
+
+<option value=Austria
+>Austria
+<option value=England
+>England
+<option value=France
+>France
+<option value=Germany
+ selected
+>Germany
+<option value=Italy
+>Italy
+<option value=Russia
+>Russia
+<option value=Turkey
+>Turkey
+
+	</select></form>
+	<script language=javascript>
+	<!--
+	function showDesc(key)
+	{
+		window.parent.body.document.write('<dl><dt><b>')
+		window.parent.body.document.write(varDesc[key] + '<p></dl>')
+	}
+	function updateOrder()
+	{
+		openg = document.forms[1].opening
+		key = openg.options[openg.selectedIndex].value
+		if (key == '') return
+		if (key != 'comment')
+		{
+			for (i in varName)
+			{
+				if (varName[i] == key)
+				{
+					document.forms[2].unit0.selectedIndex = u0[i] + 1
+					document.forms[2].unit1.selectedIndex = u1[i] + 1
+					document.forms[2].unit2.selectedIndex = u2[i] + 1
+					if (power == 'Russia')
+						document.forms[2].unit3.selectedIndex = u3[i] + 1
+					break
+				}
+			}
+		}
+		showDesc(key)
+		window.parent.body.document.close()
+	}
+	// -->
+	</script>
+	<th valign=left>
+	<form name=nameForm method=post action=openings target=body>
+	<select name=opening onchange=updateOrder()>
+	<option>--Choose or order an opening--
+
+<option value=comment
+ selected
+>--ABOUT THE GERMAN OPENINGS--
+<option value=ger-anschluss
+>ANSCHLUSS OPENING
+<option value=ger-ansch-sil
+>ANSCHLUSS, SILESIA VARIANT
+<option value=ger-berlin
+>BERLIN DEFENSE
+<option value=ger-blitz-den
+>BLITZKREIG OPENING, DANISH VARIANT
+<option value=ger-blitz
+>BLITZKRIEG OPENING
+<option value=ger-blitz-bal
+>BLITZKRIEG OPENING, BALTIC VARIANT
+<option value=ger-blitz-hol
+>BLITZKRIEG OPENING, DUTCH VARIATION
+<option value=ger-centrifuge
+>CENTRIFUGE
+<option value=ger-danish
+>DANISH GAMBIT
+<option value=ger-dike
+>DUTCH BOY OPENING
+<option value=ger-holland
+>DUTCH OPENING
+<option value=ger-holland-burg
+>DUTCH OPENING, BURGUNDY ATTACK VARIANT
+<option value=ger-prussian
+>PRUSSIAN OPENING
+<option value=ger-barb
+>PRUSSIAN OPENING, THE BARBAROSSA
+<option value=ger-rhineland
+>RHINELAND OPENING
+<option value=ger-silesian
+>SILESIAN OPENING
+<option value=ger-frederich
+>SILESIAN OPENING, FREDERICH VARIANT
+<option value=ger-slav
+>SILESIAN OPENING, SLAVIC ATTACK
+<option value=ger-wesbarb
+>WESTERN BARBAROSSA
+<option value=ger-jutland
+>[JUTLAND GAMBIT]
+<option value=ger-koniggratz
+>[KONIGGRATZ FREAKOUT]
+<option value=ger-nta
+>[NORTHERN TIER ALLIANCE OPENING]
+<option value=ger-panther
+>[PANTHER]
+<option value=ger-sealion
+>[SEALION]
+<option value=ger-wmandmary
+>[WILLIAM AND MARY OPENING]
+</select><input type=hidden name=power value=Germany></form>
+
+</table><table><tr><td>
+<script language=javascript>
+<!--
+function setChoice()
+{
+	leform = document.forms[2]
+	un0 = leform.unit0.options[leform.unit0.options.selectedIndex].value
+	un1 = leform.unit1.options[leform.unit1.options.selectedIndex].value
+	un2 = leform.unit2.options[leform.unit2.options.selectedIndex].value
+	if (power == 'Russia')
+		un3 = leform.unit3.options[leform.unit3.options.selectedIndex].value
+	shown = 0
+	for (i in varName)
+	{
+		if (u0[i] == un0 && u1[i] == un1 && u2[i] == un2
+		&& (power != 'Russia' || u3[i] == un3))
+		{
+			if (shown == 0)
+			{
+				shown = 1
+				for (j = 0; j < document.forms[1].opening.options.length; ++j)
+					if (document.forms[1].opening.options[j].value == varName[i])
+					{
+						document.forms[1].opening.selectedIndex = j
+						break
+					}
+			}
+			showDesc(varName[i])
+		}
+	}
+	if (shown == 0)
+	{
+		window.parent.body.document.write('<h3 align=center><font color=red>')
+		if (un0 == -1 || un1 == -1 || un2 == -1
+		|| (power == 'Russia' && un3 == -1))
+		{
+			window.parent.body.document.write('...Fill in Orders for All ' +
+				'Units to Look Up An Opening....')
+		}
+		else
+		{
+			window.parent.body.document.write('This Opening Is Unnamed ' +
+				'and No Information Exists For It!')
+		}
+		window.parent.body.document.write('</h3>')
+		document.forms[1].opening.selectedIndex = 0;
+	}
+	window.parent.body.document.close()
+}
+// -->
+</script>
+<form name=openForm method=post action=openings target=body>
+
+
+		<th valign=top>F Kie <select name=unit0 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-Den
+<option value=1>-Hol
+<option value=2>-BAL
+<option value=3>-HEL
+<option value=4>HOLD
+</select>
+
+		<th valign=top>A Ber <select name=unit1 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-Kie
+<option value=1>-Mun
+<option value=2>-Pru
+<option value=3>-Sil
+<option value=4>HOLD
+</select>
+
+		<th valign=top>A Mun <select name=unit2 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>HOLD
+<option value=1>-Bur
+<option value=2>-Boh
+<option value=3>-Sil
+<option value=4>-Tyr
+<option value=5>-Ruh
+<option value=6>-Kie
+<option value=7>S Ber-Sil
+</select>
+
+</table>
+<input type=hidden name=power value=Germany>
+<input type=hidden name=opening value="byOrder">
+<HR>
+</form>
+<script language=JavaScript>
+<!--
+	showDesc('comment')
+	window.parent.body.document.close()
+// -->
+</script>
+
+
+
+
+
+
+<!--
+-->
+

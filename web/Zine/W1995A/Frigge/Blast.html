@@ -1,0 +1,375 @@
+<HTML>
+<HEAD>
+<TITLE>Untitled</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=all><HR>
+<H1 align=center>Turkish Opening Moves -- A Catalog</H1>
+<H2><i>Michael L. Frigge</i></H2>
+The author does not mention this more general problem in his introduction.
+I would strongly recommend that he enlarge the introduction, outlining the more
+general setting.
+<P>
+In calculating the number of positions, support orders are generally not
+important (so the number of Autumn 1901 positions can be calculated by
+considering adjacent provinces).  They are important when calculating the
+number of distinct openings which can lead to the positions.  The author
+states that he will ignore unneeded supports and this is not unreasonable.
+<P>
+However, the author does not include the possibility of self-standoffs,
+except when the units are also involved in standing off a unit of a
+different nationality.  The set <tt>A Con-Bul, A Smy-Arm</tt>
+and <tt>F Ank-Arm</tt>
+is considered a valid order but <tt>A Con-Bul, A Smy-Con</tt> and
+<tt>F Ank-Con</tt> is not valid.
+<P>
+I believe that some readers may object to this distinction.  Certainly
+the author can not claim to calculate "the total number of Turkish
+Openings in Spring 1901," only a <i>reasonable</i> subset of them.  At the
+moment, the introduction is slightly misleading.  The author does not
+attempt to "explore in detail the possible Spring 1901 openings for
+Turkey"; only the <i>reasonable</i> openings.  The introduction needs to be
+expanded to clear-up this point.  I believe that the reason why
+self-standoffs are ignored (unless there is the possibility of a foreign
+unit entering the space) should be moved from the `Opening Moves' Section
+to the Introduction.
+<P>
+In the more general position, it is clearly reasonable to ignore `vanity'
+self-standoffs.
+<P>
+Along similar lines to my second point the author's comment in the
+conclusion about "exact number of opening moves and end positions" needs
+to be clarified.  His method calculated the exact number of end positions,
+but not the exact number of moves which lead to those positions; only the
+subset of <i>reasonable</i> ones.
+<P>
+The "How Many Openings Are There" article should be referenced and the
+difference between
+their approach and his outlined.
+<P>
+Tables 4 (listing the 40 possible end positions) and 5
+(enumerating the 40 possible end positions) contain the same information.
+One of them is redundant.
+<P>
+The article is split into four sections: End Positions, Opening
+Moves, Some Observations and Conclusions.  These should be numbered.
+------------------------------------------------------------------------
+<H3>Introduction</H3>
+Since, in standard Diplomacy, Turkey is the most restricted
+in its set of opening moves, I set for myself the task of
+exploring in detail the reasonable Spring 1901 openings for
+Turkey.
+<H3>End Positions</H3>
+As a baseline, construct an upper bound for the number of
+possible positions of the Turkish units at the end of the
+phase.  To do this, simply list the starting position of
+each Turkish unit; and then, for each unit, the possible end
+positions.
+<center>
+<table border>
+<caption><b>Table 1.  Possible End Positions</td></caption>
+<tr><th>Starting Position<th>Ending Position</tr>
+<tr><td><tt>A Con</tt><td><tt>Ank Bul Con Smy</tt></tr>
+<tr><td><tt>A Smy</tt><td><tt>Ank Arm Con Smy Syr</tt></tr>
+<tr><td><tt>F Ank</tt><td><tt>Ank Arm Bla Con</tt><tr>
+</table>
+</center>
+Since there are four end places for <tt>A Con</tt>, five end places for
+<tt>A Smy</tt> and four end places for <tt>F Ank</tt>, then a starting upper
+bound is 4 times 5 times 4, which is 80 [formally, (4 Choose 1)
+times (5 Choose 1) times (4 Choose 1)].
+<P>
+Clearly, this number is too high as it allows more than one
+unit to occupy the same space at the end of the phase.
+Simply counting arguments does not help much in establishing the
+effects of this constraint.  A modest programming effort, or
+even a simple enumeration and thought, will allow these and
+subsequent reductions.  This constraint reduces the number
+of possible end positions from 80 to 50 possibilities as
+follows:
+<center>
+<table border>
+<caption><b>Table 2.
+<tr><th>A Con<th>A Smy<th>F Ank</tr>
+<tr><td>Ank<td>Arm<td>Bla Con</tr>
+<tr><td><td>Con<td>Arm Bla</tr>
+<tr><td><td>Smy<td>Arm Bla Con</tr>
+<tr><td><td>Syr<td>Arm Bla Con</tr>
+<tr><td>Bul<td>Ank<td>Arm Bla Con</tr>
+<tr><td><td>Arm<td>Arm Bla Con</tr>
+<tr><td><td>Con<td>Ank Arm Bla</tr>
+<tr><td><td>Smy<td>Ank Arm Bla Con</tr>
+<tr><td><td>Syr<td>Ank Arm Bla Con</tr>
+<tr><td>Bul<td>Ank<td>Arm Bla</tr>
+<tr><td><td>Arm<td>Ank Bla</tr>
+<tr><td><td>Smy<td>Ank Arm Bla</tr>
+<tr><td><td>Syr<td>Ank Arm Bla</tr>
+<tr><td>Smy<td>Ank<td>Arm Bla Con</tr>
+<tr><td><td>Arm<td>Arm Bla Con</tr>
+<tr><td><td>Con<td>Ank Arm Bla</tr>
+<tr><td><td>Syr<td>Ank Arm Bla Con</tr>
+</table></center>
+There are still too many end positions listed.  Diplomacy
+rules do not allow two units to switch spaces (unless one
+unit is convoyed via a fleet in an adjoining body of water
+-- which is irrelevant for the Spring 1901 move
+considerations).  The two possible switches for Turkey are
+<tt>Con&lt;--&gt;Ank</tt> and <tt>Con&lt;--&gt;Smy</tt>.
+Removing these possibilities
+reduces the number of possible end positions from 50 to 44
+as follows:
+A Con    A Smy    F Ank
+-----    -----    ---------------
+Ank      Arm     Bla
+Con     Arm Bla
+Smy     Arm Bla
+Syr     Arm Bla
+Bul      Ank     Arm Bla Con
+Arm     Ank Bla Con
+Con     Ank Arm Bla
+Smy     Ank Arm Bla Con
+Syr     Ank Arm Bla Con
+Con      Ank     Arm Bla
+Arm     Ank Bla
+Smy     Ank Arm Bla
+Syr     Ank Arm Bla
+Smy      Ank     Arm Bla Con
+Arm     Ank Bla Con
+Syr     Ank Arm Bla Con
+End positions don't take into consideration where the unit
+came from.  Thus, a position resulting from A Con --&gt; Ank
+and A Smy --&gt; Con cannot be distinguished from a position
+resulting from A Con Hold and A Smy --&gt; Ank.  Dropping the
+source information, but retaining the unit type, reduces the
+number of possible end positions to 40:
+A Ank    A Arm   F Bla
+A Bul   F Arm Bla Con
+A Con   F Arm Bla
+A Smy   F Arm Bla Con
+A Syr   F Arm Bla
+A Arm    A Bul   F Ank Bla Con
+A Arm    A Con   F Ank Bla
+A Arm    A Smy   F Ank Bla Con
+A Bul    A Con   F Ank Arm Bla
+A Smy   F Ank Arm Bla Con
+A Syr   F Ank Arm Bla Con
+A Con    A Smy   F Ank Arm Bla
+A Con    A Syr   F Ank Arm Bla
+A Smy    A Syr   F Ank Arm Bla Con
+Here is an enumerated list of the possible end positions
+for Turkey.
+Num.  Units
+------------------------
+t01   A Ank  A Arm  F Bla
+t02   A Ank  A Bul  F Arm
+t03   A Ank  A Bul  F Bla
+t04   A Ank  A Bul  F Con
+t05   A Ank  A Con  F Arm
+t06   A Ank  A Con  F Bla
+t07   A Ank  A Smy  F Arm
+t08   A Ank  A Smy  F Bla
+t09   A Ank  A Smy  F Con
+t10   A Ank  A Syr  F Arm
+t11   A Ank  A Syr  F Bla
+t12   A Arm  A Bul  F Ank
+t13   A Arm  A Bul  F Bla
+t14   A Arm  A Bul  F Con
+t15   A Arm  A Con  F Ank
+t16   A Arm  A Con  F Bla
+t17   A Arm  A Smy  F Ank
+t18   A Arm  A Smy  F Bla
+t19   A Arm  A Smy  F Con
+t20   A Bul  A Con  F Ank
+t21   A Bul  A Con  F Arm
+t22   A Bul  A Con  F Bla
+t23   A Bul  A Smy  F Ank
+t24   A Bul  A Smy  F Arm
+t25   A Bul  A Smy  F Bla
+t26   A Bul  A Smy  F Con
+t27   A Bul  A Syr  F Ank
+t28   A Bul  A Syr  F Arm
+t29   A Bul  A Syr  F Bla
+t30   A Bul  A Syr  F Con
+t31   A Con  A Smy  F Ank
+t32   A Con  A Smy  F Arm
+t33   A Con  A Smy  F Bla
+t34   A Con  A Syr  F Ank
+t35   A Con  A Syr  F Arm
+t36   A Con  A Syr  F Bla
+t37   A Smy  A Syr  F Ank
+t38   A Smy  A Syr  F Arm
+t39   A Smy  A Syr  F Bla
+t40   A Smy  A Syr  F Con
+OPENING MOVES
+-------------
+A starting point is to set an upper bound on the number of
+opening moves.  First, for each starting unit list the
+possible opening moves of that unit.  A move is one of four
+types: Hold, Move, Support or Convoy.  For the purposes of
+this investigation, do not consider orders which have no
+possible tactical benefit.  This rules out impossible
+supports, impossible convoys and unneeded supports.  For
+Spring 1901 no Convoy of any type need be considered.
+A Con       A Smy       F Ank
+---------------------------------------------
+Hold    |   Hold        Hold        Hold
+---------------------------------------------
+Move    |   -Ank        -Ank        -Arm
+|   -Bul        -Arm        -Bla
+|   -Smy        -Con        -Con
+|               -Syr
+---------------------------------------------
+Support |               S Ank-Arm   S Smy-Arm
+---------------------------------------------
+The Hold and Move orders are self-evident, but the Support
+orders may require justification.  For Turkey, the only
+contested end spaces in Spring 1901 are Arm and Bla.  The
+only supports (which might possibly be needed) into these
+contested areas are the two indicated supports into Arm.
+This produces an upper bound on the number of distinct
+opening moves for Turkey at (4 times 6 times 5) = 120.
+This is an upper bound because it allows joint moves which
+are not allowed (two units switching places) and includes
+joint moves which have unneeded bounces.  Enumerating the
+opening moves in a similar fashion to the end positions
+above yields 54 distinct openings.  Below is a table of
+these openings along with an index into the possible end
+positions each set of orders allows.
+A Con       A Smy       F Ank       Ending Positions
+----------------------------------------------------------
+T001  Hold        Hold        Hold        t31
+T002                          -Arm        t31 t32
+T003                          -Bla        t31 t33
+T004              -Ank        -Arm        t05 t31
+T005                          -Bla        t06 t31
+T006              -Arm        Hold        t15 t31
+T007                          -Arm        t15 t31 t32
+T008                          -Bla        t15 t16 t33
+T009                          S Smy-Arm   t15
+T010              -Syr        Hold        t34
+T011                          -Arm        t34 t35
+T012                          -Bla        t34 t36
+T013              S Ank-Arm   -Arm        t32
+T014  -Ank        Hold        -Arm        t07 t31
+T015                          -Bla        t08 t31
+T016              -Arm        -Arm        t07 t15 t31
+T017                          -Bla        t01 t08 t15
+T018              -Con        -Arm        t05 t31
+T019                          -Bla        t06 t31
+T020              -Syr        -Arm        t10 t34
+T021                          -Bla        t11 t34
+T022              S Ank-Arm   -Arm        t07
+T023  -Bul        Hold        Hold        t23
+T024                          -Arm        t23 t24
+T025                          -Bla        t23 t25
+T026                          -Con        t26
+T027              -Ank        -Arm        t02 t23
+T028                          -Bla        t03 t23
+T029                          -Con        t04
+T030              -Arm        Hold        t12 t23
+T031                          -Arm        t12 t23 t24
+T032                          -Bla        t12 t13 t25
+T033                          -Con        t14 t26
+T034                          S Smy-Arm   t12
+T035              -Con        Hold        t20
+T036                          -Arm        t20 t21
+T037                          -Bla        t20 t22
+T038              -Syr        Hold        t27
+T039                          -Arm        t27 t28
+T040                          -Bla        t27 t29
+T041                          -Con        t30
+T042              S Ank-Arm   -Arm        t24
+T043  -Smy        -Ank        -Arm        t07 t31
+T044                          -Bla        t08 t31
+T045                          -Con        t09
+T046              -Arm        Hold        t18 t31
+T047                          -Arm        t17 t31 t32
+T048                          -Bla        t17 t18 t33
+T049                          -Con        t19 t31
+T050                          S Smy-Arm   t17
+T051              -Syr        Hold        t37
+T052                          -Arm        t37 t38
+T053                          -Bla        t37 t39
+T054                          -Con        t40
+----------------------------------------------------------
+Here it is allowed to bounce two units in Arm since that has
+the tactical result of keeping F Sev from entering Arm.
+Further, since Sev could support either Ank or Smy to Arm,
+this gives tactical impact to allowing Con --&gt; Ank or
+Con --&gt; Smy during this bounce as the Con move could
+possibly succeed.
+Below is the table which lists the end positions and which
+opening moves could possibly achieve them.
+Num.  Units                   Possible Opening Moves
+-------------------------     ---------------------------
+t01   A Ank  A Arm  F Bla     T017
+t02   A Ank  A Bul  F Arm     T027
+t03   A Ank  A Bul  F Bla     T028
+t04   A Ank  A Bul  F Con     T029
+t05   A Ank  A Con  F Arm     T004 T018
+t06   A Ank  A Con  F Bla     T005 T019
+t07   A Ank  A Smy  F Arm     T014 T016 T022 T043
+t08   A Ank  A Smy  F Bla     T015 T017 T044
+t09   A Ank  A Smy  F Con     T045
+t10   A Ank  A Syr  F Arm     T020
+t11   A Ank  A Syr  F Bla     T021
+t12   A Arm  A Bul  F Ank     T030 T031 T032 T034
+t13   A Arm  A Bul  F Bla     T032
+t14   A Arm  A Bul  F Con     T033
+t15   A Arm  A Con  F Ank     T006 T007 T008 T009 T016
+T017
+t16   A Arm  A Con  F Bla     T008
+t17   A Arm  A Smy  F Ank     T047 T048 T050
+t18   A Arm  A Smy  F Bla     T046 T048
+t19   A Arm  A Smy  F Con     T049
+t20   A Bul  A Con  F Ank     T035 T036 T037
+t21   A Bul  A Con  F Arm     T036
+t22   A Bul  A Con  F Bla     T037
+t23   A Bul  A Smy  F Ank     T023 T024 T025 T027 T028
+T030 T031
+t24   A Bul  A Smy  F Arm     T024 T031 T042
+t25   A Bul  A Smy  F Bla     T025 T032
+t26   A Bul  A Smy  F Con     T026 T033
+t27   A Bul  A Syr  F Ank     T038 T039 T040
+t28   A Bul  A Syr  F Arm     T039
+t29   A Bul  A Syr  F Bla     T040
+t30   A Bul  A Syr  F Con     T041
+t31   A Con  A Smy  F Ank     T001 T002 T003 T004 T005
+T006 T007 T014 T015 T016
+T018 T019 T043 T044 T046
+T047 T049
+t32   A Con  A Smy  F Arm     T002 T007 T013 T047
+t33   A Con  A Smy  F Bla     T003 T008 T048
+t34   A Con  A Syr  F Ank     T010 T011 T012 T020 T021
+t35   A Con  A Syr  F Arm     T011
+t36   A Con  A Syr  F Bla     T012
+t37   A Smy  A Syr  F Ank     T051 T052 T053
+t38   A Smy  A Syr  F Arm     T052
+t39   A Smy  A Syr  F Bla     T053
+t40   A Smy  A Syr  F Con     T054
+SOME OBSERVATIONS
+-----------------
+&gt;From the above tables it is seen that 17 end positions, if
+desired, can be guaranteed.  The other 23 end positions
+depend on the orders submitted for F Sev.  Those end
+positions which can be guaranteed are:
+t04 t07 t09 t12 t15   t17 t20 t23 t24 t26
+t27 t30 t31 t32 t34   t37 t40
+Also, 21 possible end positions can only be generated from
+one opening.  Those end positions are:
+t01 t02 t03 t04 t09   t10 t11 t13 t14 t16
+t19 t21 t22 t28 t29   t30 t35 t36 t38 t39
+t40
+CONCLUSIONS
+-----------
+Turkey is the easiest case to consider, with only 54
+distinct opening moves and 40 distinct end positions, but
+this methodology can be applied to the other powers as well.
+Given an analysis such as this for each power, it should be
+possible to determine the exact number of opening moves and
+end positions available for the entire board in Spring 1901.
+</HTML>
+<!--
+-->

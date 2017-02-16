@@ -1,0 +1,473 @@
+<TITLE>
+DP S1995R: Counting the Openings
+</TITLE>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1995R/"><IMG align=right SRC="/Zine/Common/toS1995R.gif" border=0></A>
+<BR><BR><HR>
+<H1><center>
+Blast From The Past
+</H1>
+<H2><i>Articles from the Annals of 'Zines Past</H2></i>
+</center>
+<HR>
+<center><H3>How Many Valid Openings Are There?</center></H3>
+<HR>
+In this journey into the past, we look back at a series of submissions to the
+'zine <i>Electronic Protocol</i>.  The prolific Danny Loeb started the
+discussion with a not-so-innocent question posed in <i>EP #211</i>:
+<P>
+<B>How many different sets of opening orders are there?</b> Such a
+set of orders must specify a legal movement, support, or hold for each
+of the 22 units on the board. (Convoys are of course impossible in
+Spring 1901.) You must consider all possible movements including
+stupid ones like moving <samp>Smy-Syr</samp> or <samp>Lon-Yor</samp>
+with <samp>Edi-Yor</samp>. However,
+you should only count supports which are <b>not</b> void. That is to say, the
+supported unit must be ordered to do what is supported to do.
+Furthermore, only count <b>useful</b> supports. That is to say, only count
+supports which are given by a country "A" for himself or for a country "B"
+which in theory could prevent the success of the move or hold by a country "C"
+distinct from "A" and "B".
+<HR>
+In <i>EP #215</i> (dated December 30, 1990), Magnus Selhammar's solution was
+presented:
+<P>
+I have calculated the number of opening moves, and the the number of opening
+moves suggested in <i>The Gamer's Guide to Diplomacy</i>. In order to forestall
+Daniel Loeb's next quiz, I have also calculated the number of possible orders
+for a typical Fall 1901 position, and the number in the sample game at the
+Spring 1904 positions in <i>The Gamer's Guide</i>. Please take these numbers as
+approximate; it's very likely that I have made errors.
+<P>
+I have counted all possible orders, even orders such as:
+<UL><samp>
+<LI>     A Nwy - Fin
+<LI>     F Nwg C A Nwy - Den
+<LI>     F Nth C (Ger) A Den - Cly
+<LI>     F Edi - Cly
+</UL></samp>
+I have not counted holding supports to empty territories, but all supports
+to an empty territory from an occupied territory wherefrom a unit can
+enter. Even though most of the orders are improbable and bad (but not
+illegal), the Fall 1901 position I have calculated on is quite plausible.
+<P>
+The number of opening moves are 1.84*10^22. If one use the suggested
+moves in <i>The Gamer's Guide</i>, the possible opening moves there are 46656.
+In the typical situation at Fall 1901 there are 4.93*10^35 possibilities,
+and in the sample game at Spring 1904 there are 6.92*10^44 possible sets of
+orders.  In the "typical" position at Spring 1902 the positons were: (Belgium
+is still a neutral supply center.)
+<PRE>
+Austria   A Tri Vie Bud Ser                F Gre
+England   A Nwy                            F Edi Nwg Nth
+France    A Par Bur Por Mar                F Spa(sc)
+Germany   A Ruh Den Mun                    F Hol Kie
+Italy     A Ven Tun                        F Nap Ion
+Russia    A StP War Ukr Sev                F Swe Rum
+Turkey    A Bul Ank                        F Con Smy
+</PRE>
+In these situations the convoy possibilities are rather limited. They are
+the main reason why the number increases so much. With more fleets on the
+water, the number will raise considerable. As an example, in the sample game
+there are 63 different legal orders for the fleet in MAO.
+<P>
+In chess there are most often less than ten "good" moves. In Diplomacy,
+there are many more, often thousands of them. The problem of writing a program
+is then quite different and much more difficult than chess, even when one
+uses parallellism as Michael Hall suggested, and a great challenge indeed.
+<HR>
+In this same issue of <i>Electronic Protocol</i>, Danny Loeb's own solution was
+published.  The <i>EP</i> editor commented, "Danny's answer is about a million
+times smaller than Magnus's.  Although 10^22 and 10^16 are in the same
+ballpark of big numbers."  Danny's solution follows:
+<P>
+First we must count for each unit the number of neighbors it has and
+could move to. Obviously, besides supporting, a unit can move to one
+of these spaces or it could hold.  The asterisks in the table below
+indicate units which can offer "useful" supports in Spring, 1901.
+<PRE>
+Number of Neighbors
+Edi Lvp Lon     Bre Par Mar     Ven Rom Nap     Tri Vie Bud
+4   4   4       4   4*  5*      6*  4   3       3   5*  5*
+Con Smy Ank     Mun Kie Ber     Sev Mos War StP/sc
+3   4*  3*      7*   3  4*      3   5   6   3
+</PRE>
+Next we must consider the map and determine which are the "useful"
+supports to which I was referring. (Again, units which can offer these
+are distinguished by an asterisk in the table above.)  The only "useful"
+support on nation can
+give <i>another</i>, you will note, is that any of Austria, Italy, and Germany
+can support a second to prevent the third from taking Tyrolia. In
+fact, it is possible for two of these countries to so support the
+third!
+<pre>
+Useful triples:
+country         units           dest
+France:         Par,Mar         Bur
+Germany:        Mun,Ber         Sil
+Turkey:         Smy,Ank         Arm
+Austria:        Vie,Bud         Gal
+Vie,Bud         Tri
+G+A+I:          Vie,Mun,Ven     Tyr
+</pre>
+Thus, answer is the following product:<PRE>
++----------- number of moves
+| +--------- HOLD order
+| |  +------ number of units for which this is true
+| |  | +-- "useful" support orders
+| |  | |
+V V  V V
+ANSWER  =       (3+1)^6         (Nap, Tri, Con, Kie, Sev, StP)    4096
+x       (4+1)^5         (Edi, Lpl, Lon, Bre, Rom)         3125
+x       (5+1)^1         (Mos)                                6
+x       (6+1)^1         (War)                                7
+x      ((4+1)^1         (Par)
+x    (5+1)^1         (Mar)
++            2)      (Par S Mar-Bur, Mar S Par-Bur)      32
+x      ((4+1)^1         (Smy)
+x    (3+1)^1         (Ank)
++            2)      (Smy S Ank-Arm, Ank S Amy-Arm)      22
+x       A               (Mun, Ber, Vie, Bud, Ven)        13174
+</PRE>
+Where A is the number of possible combinations for Munich, Berlin,
+Vienna, Budapest, and Venice. We break up A into the possibility that
+Vie and Bud support each other to Gal or Tri, and if Mun and Ber
+support.
+<PRE>
+(4               (Vie*Bud)                           4
+x       ((6+1)          (Ven)
+x     (7+1)          (Mun)
++           2)       (Ven S Mun-Tyr, Mun S Ven-Tyr)  x  58
+x       (4+1))          Ber                             x   5 =  1160
+------------------------------------------------------------------------
++         (4               (Vie*Bud)                       +   4
+x       (6+1)           (Ven)                           x   7
+x            2)      (Mun S Ber-Sil, Ber S Mun-Sil)  x   2 =    56
+------------------------------------------------------------------------
++         ((5+1)           (Bud)                           +   6
+x              2        (Mun S Ber-Sil, Ber S Mun-Sil)  x   2
+x       ((5+1)          (Vie)
+x     (6+1)          (Ven)
++           2)       (Vie S Ven-Tyr, Ven S Vie-Tyr)  x  44 =   528
+------------------------------------------------------------------------
++         ((5+1)           (Bud)                           +   6
+x       (4+1)           (Ber)                           x   5
+x       ((5+1)          (Vie)
+x     (6+1)          (Mun)
+x     (7+1)          (Ber)
++           2(5+1)
++           2(6+1)
++           2(7+1)
++           3)                                       x 381 = 11430
+------------------------------------------------------------------------
+A = TOTAL OF SUMS                                                = 13174
+</PRE>
+Thus, the final answer is 4,985,969,049,600,000. At a rate of 1 game
+per person in the world per minute, it would take about 2 years to try
+every possible Diplomacy opening!
+<HR>
+Trevor Green took a slightly different approach, calculating the number of
+valid (as defined) openings for each of the seven powers, and came up with
+yet a third figure.  His response to Danny Loeb's request to provide
+the details of his solution was was published in <i>Electronic
+Protocol</i> issue #265 (dated December 5, 1991).
+<P>
+While transcribing Mr. Green's solution for
+re-publication, I (Manus Hand, Publisher of <B>The Diplomatic Pouch</B>),
+corrected a number of errors, changed the notation used, and
+took into account Danny Loeb's comments describing the openings which were
+missed by Mr. Green.  To quote Danny Loeb's comments on Green's original
+solution, "In your list of openings, you don't count, for example, the
+possibility of Turkey supporting Russia to Armenia, <i>and himself</i>
+moving to Armenia. This is clearly different from just moving to Armenia,
+or not moving to Armenia.  (Same goes for France and Germany in Burgundy
+[<i>and Germany and Russia in Silesia and Austria and Russia in Galicia --Manus</i>].)
+Such a set of orders could be used by someone who definitely didn't
+want Armenia empty (for some strange psychological reason).
+Perhaps the problem is exactly in defining what a set of distinct
+orders is?"
+<P>
+Indeed, even after my own updates, what appears below does not consider, for
+example, <samp><B>A CON-ANK, A SMY-ARM, F ANK S A SMY-ARM</b></samp> to be
+a separate opening from <samp><B>A CON HOLD, A SMY-ARM,
+F ANK S A SMY-ARM</b></samp>.  That is, bounce moves having no effect are
+considered useless (indeed, they are, tactically, and thus this answer
+fits Danny Loeb's problem description -- diplomatically, of course, is another
+story).
+<P>
+Therefore, what appears below is not a faithful reproduction
+of Green's solution published in <i>EP #265</i>, but rather a corrected and
+updated solution based on the work begun by Mr. Green.  With no further ado,
+here it is.
+<P>
+Okay, here goes.  The notation I'm using should be self-explanatory.
+Parenthesized orders mean that (given the other units' moves) the orders(s)
+specified within parentheses would not be distinct from one of the
+other possible openings for that country.  As per always, I invite you
+to check my math and correct me if I did anything wrong.
+<P>
+<PRE>
+<B>DISTINCT OPENINGS FOR AUSTRIA-HUNGARY</B></center>
+Order    F Tri       A Bud        A Vie
+-----    -----       -----        -----
+A      HOLD        HOLD         HOLD
+B      -Alb        -Gal         -Tyr
+C      -Ven        -Rum         -Gal
+D      -Adr        -Tri         -Bud
+E                  -Vie         -Tri
+F                  -Ser         -Boh
+G                  S Vie-Gal    S Bud-Gal
+H                  S Vie-Tri    S Bud-Tri
+I                  S War-Gal    S Ven-Tyr
+J                               S Mun-Tyr
+K                               S War-Gal
+F Tri       A Bud        A Vie       Total
+-----       -----        -----       -----
+A           A          ABCHIJ         6
+B          ABCDFGIJK      9
+CF         ABCDFIJ       14
+E          BCF            3
+ABCD        GI         C              8
+BD          D          ABCDEFHIJ     18
+BCD         A          ABCEFIJ       21
+B          ABCDEFGIJK    30
+CF         ABCDEFIJ      48
+E          BCEF          12
+H          E              3
+C           D          ABCDFIJ        7
+-----
+Total distinct openings for Austria-Hungary:   179
+<B>DISTINCT OPENINGS FOR ENGLAND</B>
+Order    A Lvp       F Edi        F Lon
+-----    -----       -----        -----
+A      HOLD        HOLD         HOLD
+B      -Cly        -Cly         -Yor
+C      -Edi        -Nwg         -Nth
+D      -Yor        -Nth         -Wal
+E      -Wal        -Yor         -Eng
+A Lvp       F Edi        F Lon       Total
+-----       -----        -----       -----
+A         ABC          ABCDE         15
+B         AC           ABCDE         10
+C         BC           ABCDE         10
+D         ABC          ACDE          12
+D            ADE            3
+E         ABC          ABCE          12
+D            ABE            3
+E            ACE            3
+ABC       D            ABDE          12
+E            ACDE          12
+-----
+Total distinct openings for England:    92
+<B>DISTINCT OPENINGS FOR FRANCE</B>
+Order    F Bre       A Mar       A Par
+-----    -----       -----       -----
+A      HOLD        HOLD        HOLD
+B      -Mid        -Bur        -Pic
+C      -Pic        -Gas        -Bur
+D      -Gas        -Spa        -Gas
+E      -Eng        -Pie        -Bre
+F                  S Par-Bur   S Mar-Bur
+G                  S Mun-Bur   S Mun-Bur
+F Bre       A Mar       A Par        Total
+-----       -----       -----        -----
+A           ADE         ABCE           12
+B           ABCDFG          6
+C           ABDF            4
+BE          ADE         ABCDE          30
+B           ABCDEFG        14
+C           ABCE            8
+C           ADE         ACDE           12
+B           ACDEFG          6
+D           ACE             3
+D           ADE         ABCE           12
+B           ABCEFG          6
+ABCDE       FG          C              10
+-----
+Total distinct openings for France:   123
+<B>DISTINCT OPENINGS FOR GERMANY</B>
+Order    F Kie       A Ber       A Mun
+-----    -----       -----       -----
+A      HOLD        HOLD        HOLD
+B      -Ber        -Pru        -Kie
+C      -Hol        -Sil        -Ber
+D      -Hel        -Mun        -Sil
+E      -Den        -Kie        -Boh
+F      -Bal        S Mun-Sil   -Tyr
+G                  S War-Sil   -Bur
+H                              -Ruh
+I                              S Ber-Sil
+J                              S Vie-Tyr
+K                              S Ven-Tyr
+L                              S Mar-Bur
+M                              S Par-Bur
+N                              S War-Sil
+F Kie       A Ber       A Mun        Total
+-----       -----       -----        -----
+A           A           ADEFGHJKLM     10
+B           ACDEFGHJKLM    11
+C           ACDEFGHIJKLMN  13
+D           DEFGH           5
+B           B           ABDEFGHJKLM    11
+C           ABDEFGHIJKLMN  13
+CDEF        A           ADEFGHJKLM(B)  40
+B           ABCDEFGHJKLM   48
+C           ABCDEFGHIJKLMN 56
+D           CDEFGHJKLM(A)  40
+ACDEF       FG          D              10
+BCDEF       D           BDEFGH         30
+-----
+Total distinct openings for Germany:   287
+<B>DISTINCT OPENINGS FOR ITALY</B>
+Order     F Nap      A Rom      A Ven
+-----     -----      -----      -----
+A       HOLD       HOLD       HOLD
+B       -Apu       -Tus       -Pie
+C       -Ion       -Ven       -Apu
+D       -Rom       -Apu       -Rom
+E       -Tys       -Nap       -Tus
+F                             -Tyr
+G                             -Tri
+H                             S Mun-Tyr
+I                             S Vie-Tyr
+J                             S Vie-Tri
+K                             S Bud-Tri
+F Nap      A Rom      A Ven         Total
+-----      -----      -----         -----
+B          A          ABFGHIJK(E)      8
+B          ABDFGHIJK        9
+C          BEFG             4
+E          ABDEFGHIJK      10
+CE         E          ABCDEFGHIJK     22
+D          B          ABCFGHIJK        9
+D          ABEFGHIJK        9
+ACE        A          ABCFGHIJK(E)    27
+B          ABCDFGHIJK      30
+D          ABDEFGHIJK      30
+ACDE       C          BCEFG           20
+-----
+Total distinct openings for Italy:   178
+<B>DISTINCT OPENINGS FOR RUSSIA</B>
+Order     F Sev      F StP/sc   A Mos      A War
+-----     -----      --------   -----      -----
+A       HOLD       HOLD       HOLD       HOLD
+B       -Arm       -Lvn       -StP       -Lvn
+C       -Bla       -Bot       -Sev       -Mos
+D       -Rum       -Fin       -Ukr       -Ukr
+E       S Ank-Arm             -War       -Gal
+F       S Smy-Arm             -Lvn       -Pru
+G                                        -Sil
+H                                        S Bud-Gal
+I                                        S Vie-Gal
+J                                        S Mun-Sil
+K                                        S Ber-Sil
+F Sev      F StP/sc   A Mos      A War         Total
+-----      --------   -----      -----         -----
+ABCDEF     ACD        A          AEFGHIJK(BD)   116
+D          BCEFGHIJK(A)   134
+E          BDEFG           90
+F          CDEFGHIJK(A)   134
+B          A          AEFGHIJK(D)     48
+B          ACDEFGHIJK      60
+D          CEFGHIJK(A)     48
+E          CDEF            24
+CD         B          ABCDEFGHIJK    132
+BCD        ACD        C          ABCDEFGHIJK     99
+B          C          ACDEFGHIJK      30
+-----
+Total distinct openings for Russia:              915
+<B>DISTINCT OPENINGS FOR TURKEY</B>
+Order     A Con      F Ank      A Smy
+-----     -----      -----      -----
+A       HOLD       HOLD       HOLD
+B       -Bul       -Con       -Con
+C       -Ank       -Bla       -Ank
+D       -Smy       -Arm       -Arm
+E                  S Smy-Arm  -Syr
+F                  S Sev-Arm  S Ank-Arm
+G                             S Sev-Arm
+A Con      F Ank      A Smy         Total
+-----      -----      -----         -----
+A          A          ADE              3
+C          ADE(C)           3
+D          ADEFG(C)         5
+ABD        EF         D                6
+B          A          ABDE             4
+B          ACDE             4
+C          ABCDE            5
+D          ABCDEFG          7
+C          C          BE(A)            2
+D          BEF(A)           3
+D          A          DE               2
+BC         CDE              6
+D          CDEFG            5
+-----
+Total distinct openings for Turkey:    55
+<B>TOTAL DISTINCT OPENINGS</B>
+Austria-Hungary         179
+England                  92
+France                  123
+Germany                 287
+Italy                   178
+Russia                  915
+Turkey                   55
+---------------------------
+Total 5 207 528 463 013 800
+</PRE>
+Note that Trevor Green's published answer was, like Danny Loeb's, over four
+quadrillion.  After correcting errors, however (for example, he had counted
+999 distinct Russian openings), I reached a total of only 338,171,034,482,560
+(338 trillion).  Only after adding the openings described by Danny Loeb
+(<samp><b>ANK S SEV-ARM, SMY-ARM</b></samp>, etc.) did the total jump
+to this figure over five quadrillion.
+<HR>
+Determined to see how many of these five-odd quadrillion possible
+openings actually result in separate <i>positions</i> (that is, how many
+possible positions can be reached from the starting setup), I (me, Manus,
+again) decided one more calculation would be nice.  To be eliminated, then,
+are all
+openings which contain bounces.  For example, any opening with Brest and
+London standing off in the Channel is identical to those in which both these
+units hold.
+<P>
+Notice that all self-bounces (such as Mar-Gas with Par-Gas) are already
+discounted.  So all that are left to remove are situations like the following:
+<PRE>
+Lon-ENG with Bre-ENG
+Sev-BLA with Ank-BLA
+Ven-Pie with Mar-Pie
+Mun-Bur with Par-Bur and without Mar S Mun-Bur and Mar S Par-Bur
+Mun-Bur with Mar-Bur and without Par S Mun-Bur and Par S Mar-Bur
+Par-Bur with Mar-Bur and without Mun S Par-Bur and Mun S Mar-Bur
+Sev-Arm with Ank-Arm and without Smy S Sev-Arm and Smy S Ank-Arm
+Sev-Arm with Smy-Arm and without Ank S Sev-Arm and Ank S Ank-Arm
+Ank-Arm with Smy-Arm and without Sev S Ank-Arm and Sev S Ank-Arm
+-etc.-
+</PRE>
+Unfortunately, the situation around Tyrolia makes determining all
+the situations in which there is any bounce out of this province very
+difficult.  For example, some of these situations are:
+<PRE>
+Ven-Tyr with Vie-Tyr and without Mun S Ven-Tyr or Mun S Vie-Tyr
+Ven-Tyr with Vie S Ven-Tyr and Mun-Tyr
+-etc.-
+</PRE>
+We could, in this way, go through and describe all situations resulting in
+bounces, but it would seem more straightforward to attack this problem anew.
+We must then determine the possible ending locations for each of the 22 units
+and then remove those which have two (or more) units in the same location.
+<P>
+And here is where I take the professor's cop-out and say, "Determining the final
+solution from this beginning is left as an exercise for the reader."  We'll
+have a contest.  First one to send in the correct, documented answer will
+win a free lifetime subscription to The Pouch!
+<HR>
+<i>Fodder for this article was supplied through Mark Nelson's
+collection of on-line Diplomacy articles.</i>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1995R/"><IMG align=right SRC="/Zine/Common/toS1995R.gif" border=0></A>
+<BR><BR>
+<!--
+-->

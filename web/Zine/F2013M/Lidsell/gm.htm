@@ -1,0 +1,307 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<TITLE>DP F2013M: One GM to Rule Them All</TITLE>
+<!-- ---------------------Header---------------------------------- -->
+<!-- ------------------------------------------------------------- -->
+<!---- Authored by  ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Created on September 23, 2006 ---->
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton2.gif" align="left" border="0"></a>
+<a href="/Zine/F2013M/"><img src="/Zine/Common/toF2013M.gif" align="right" border="0"></a>
+<br clear="all">
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<CENTER>
+<H1>ONE GM TO RULE THEM ALL:<BR/>HOW TO PLAY THE GAME OF MACHIAVELLI, PART I</H1>
+<h2>by Bruce Duewer & Sergio Lidsell</h2>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+</CENTER>
+<p>
+  <TABLE WIDTH="95%" BORDER="0" ALIGN="CENTER">
+      <TR>
+	      <TD ALIGN="JUSTIFY">
+<p><b>Machiavelli</b> is one of our favorite variants and Bruce happens to be very good at as well. It has been out of print for some years, but is supported both by the <a href="http://ustp.asciiking.com/">Ken Lowe Internet judges</a> (nJudge) and the <a href="http://condottierigame.net/">Condottierigame.net</a> sites. The Battleline and Avalon Hill rules as written and the old nJudge implementation contain certain oddities and ambiguities that annoy players new and old alike when they run into places where things happen differently than they expect. Thus, in this first article on <b>Machiavelli</b> game play we try to make sure everyone can go into games with a good knowledge of the basic of the game. This article is an attempt to address three burning questions in the hearts of most <b>Machiavelli</b> newbies and many GMs:</p>
+<ul>
+<li>Which are the <i>real</i> rules?</li>
+<li>Which rules may cause confusion?</li>
+<li>What do we do if the Judge screws up?</li>
+</ul>
+<h2 align="center">Section I: All Those Rules</h2>
+<p>What rules? Seriously, what rules? This is certainly the major question as there are six slightly differing rule sets to contend with. The first three items below are usually called “<b>Classic Machiavelli</b>”, while the 1995 edition is usually called <b>Machiavelli 2nd edition</b>.</p>
+<ul>
+<li>The rules of the original Battleline release.</li>
+<li>The first Avalon Hill release (1980), which is very similar to Battleline.</li>
+<li>The second Avalon Hill release (1983), which omitted the option to borrow money from the “bankers” for some reason.</li>
+<li>The third Avalon Hill release (1995), which has a couple of notable differences.</li>
+<li>The version one  nJudge rules, which were based on the original Battleline release. The pre-version 1.3.0 nJudge implementations of <b>Machiavelli</b> were also very buggy, which complicated things.</li>
+<li>The version two nJudge rules that clarified a lot of problems and paradoxes of the Battleline/AH rules. The post 1.7.2 nJudge implementations fully supports these rules.</li>
+</ul>
+<p>And to confuse matters more there are Basic, Advanced and Optional <b>Machiavelli</b> rules. The nJudge supports all the Basic, Advanced and Optional rules of Classic <b>Machiavelli</b>. The 2nd edition is partially supported.</p>
+<p>Thus, when playing <b>Machiavelli</b> you have to first decide which rules to use, then to decide how to interpret the rules omissions and ambiguities, and finally, if you play on the nJudge, how to address any remaining bugs.</p> 
+<p>In the new version of the rules, a variety of issues that were unclear, and varied depending on GM ruling, were clarified. In addition, the document was completely reorganized, several of the more obscure points were stated more obviously, and additional technical information and examples were included. In a few cases, we made rulings contrary to the original Battleline/AH rules. These were intended to codify where current practice was both superior to the original and improved game play. The most important of these was that a besieged city does produce income. The fortress option is now active, and several things that were hard coded before (like Venice being the only area that can have those special characteristics) can now be described by the mapfile. Support for the 2nd edition was also added as well as the new disaster type storms.</p>
+<p>Today there are two actively used sources of knowledge about what the real rules are.</p>
+<ul>
+<li>The file <a href="http://medlem.spray.se/machsite/Machiavelli/rules.machiavelli.txt">rules.machiavelli</a> version 3.1b or newer, which should take precedence in all play.</li>
+<li>The 1980 <b>Machiavelli</b> rules by Avalon Hill on matters of basic game mechanics. (For Mach2 games on the nJudge you would also need to refer to the file <a href="http://medlem.spray.se/machsite/Machiavelli/rules.machiavelli2.txt">rules.machiavelli2</a> and parts of the Avalon Hill 1995 2nd edition rules.)</li>
+</ul>
+<p>Hopefully the recourse to tradition and authority is now much less necessary to play a game and we hope that the new nJudge rules have covered all the bases and that the current nJudge implementation will give you, the player, a pleasurable hassle-free gaming experience.</p>
+<p>The following will describe the basics of the game as implemented on the nJudges. We risk causing great confusion by stating what we think is the proper way to play as codified in the rules.machiavelli. At the end of this list, we have also included some alternative rules from the playing community that may spice up a hand adjudicated game. We apologize for the laundry-list nature of this. Where there are important differences between the nJudge/AH1980 rules and the AH1995 rules I have added a note explaining those. Rules and differences that may cause confusion are indicated in italics. I have also added some playing tips, which are indicated with <b><font color="red">red</font></b>.</p>
+<p>And now on to a short introduction to the game map features and to the rules.</p>
+<h3>What every Diplomacy player should know</h3>
+<p><b>Machiavelli</b> is similar enough to <b>Diplomacy</b> to make Dip players quickly feel comfortable with the game. Advanced <b>Machiavelli</b> offers more ways to treachery and deceit thanks to the use of money and bribes. Surely options that will warm the heart of any Dip player. Another great feature of <b>Machiavelli</b> is that it is totally stalemate free if money and/or disasters are used. It always encourages you to go for the solo.</p>
+<p>Dip purists tend to gripe about the randomness of the dice, but hey, that is what life is. You cannot predict and plan for every eventuality. You have to stay focused and keep flexible enough to be able to counter a bad plague or famine with your, of course, brilliant diplomacy and superior tactical skills :-). Otherwise you could of course disable money and disasters and just avoid all of the much maligned real world simulation features of Mach, and remain safely in your bed in your cozy house and abide by same safe old unchanging <b>Diplomacy</b> tactics. Tactics that have been the same for the last millennia and will never… "Me-god" I am beginning to hyper-rant, quick, the paper bag&#8230; Calm down now, yes calm down, yes. Oomph, that was close.</p>
+<p>The main differences from <b>Diplomacy</b> are as follows:</p>
+<ul>
+<li>Three movement seasons: spring, summer and fall. <font color="red">And yes, there is actually a setting that removes the summer turn if you really really really hate summer ;-)</font></li> 
+<li>Immediate ownership changes. Classic Mach. (2nd edition is like <b>Diplomacy</b>.)</li>
+<li>Fleets can only be built in provinces/cities with anchors.</li>
+<li>Convoy rules.</li>
+<li>Garrison unit and siege rules.</li>
+<li>Special (multi-strength) units. Advanced rules.</li>
+<li>Powers have finances and may give and loan money. Advanced rules.</li>
+<li>The use of money to buy, build, disband and maintain units. Advanced rules.</li>
+<li>Disasters (famine and plague events). Advanced rules.</li>
+<li>Bribery. Advanced rules.</li>
+<li>New order types to support all of the above.</li>
+</ul>
+<h2 align="center">Section II: The Game</h2>
+<h3>The map</h3>
+<p>The original game covers medieval Italy and some adjoining areas in Austria, the Balkans, modern day France and a sliver of Africa (Tunis). It has the following geographical features.</p>
+<ul>
+<li>Sea areas</li>
+<li>Land areas (provinces) with a coast (thus adjacent to one or more sea areas)</li>
+<li>Land areas (provinces) without a coast</li>
+<li>Major cities (squares with numbers, large outlined circles on the 1995 map)</li>
+<li>Fortified cities (squares, small outlined circles on the 1995 map)</li>
+<li>Unfortified cities (small dots on all map versions)</li>
+<li>Port or anchored cities</li>
+<li>Fortresses (square outlines, used in certain scenarios, removed in 1995 version)</li>
+<li>Straits (treated differently in 1980 and 1995 rules)</li>
+<li>The Venice area which is treated as a province in the 1980 version, but as a sea area with a city in the 1995 version.</li>
+</ul>
+<p>Some special map features:</p>
+<ul>
+<li>Provence and Croatia have two coasts on the 1980 map.
+<li><i>Armies can move directly from Istria to Dalmatia and vice versa on the 1980 map, while on the 1995 map they can instead move directly between Otranto and Messina, and also between Corsica and Sardinia. This may be a bit confusing the first times.</i></li>
+<li>The 1995 map has also fewer provinces which somewhat affects tactics on the northern half of the map and give slightly less income for Venice, Milan and Papacy.</li>
+<li>Venice is on the 1980 map a small province in a small sea (the lagoon). The Venice province is one big rules exception so it is important you read <a href="http://ustp.asciiking.com/rules.html#Venice_province">the nJudge rules document</a>.</li>
+<li>In the 1995 version Venice is instead a sea area with a major city. No armies may enter it, besiege it or support into it. Nor may garrisons convert to armies. See <a href="http://medlem.spray.se/machsite/Machiavelli/rules.machiavelli2.txt">the Mach2 rules document</a> for additional info.</li>
+</ul>
+<p>Anchored Cities:</p>
+<ul>
+<li>Fleets can only be built in provinces containing anchored cities.</li>
+<li><i>Do note that Tivoli is an anchored fortress. Fleets can only be built in Tivoli if fortresses are in play.</i></li>
+<li>The only place fleets can convert to garrisons, and garrisons can convert to fleets is in fortified or major cities with anchors.</li>
+<li>As implied by the above, fleets cannot retreat to garrison form in unanchored cities.</li>
+<li>Fleets can only lay siege on anchored fortified or major cities.</li>
+<li>Armies can use anchored cities in the same ways they would unanchored cities.</li>
+</ul>
+<h3>Units & movement</h3>
+<p>Special units:</p>
+<ul>
+<li>Elite and Professional units have twice the normal strength for moves, holds, and supports.</li> 
+<li>Citizen and Professional units cost twice as much to bribe.</li> 
+<li><i>Special units if attacked have their entire support broken in a normal manner.</i></li> 
+<li><i>Each player may only have one special unit in play at any one time. One cannot build or buy an additional special unit if one already has one.</i></li>
+<li>Autonomous units (see below).</li>
+<li><i>Notice that the 2nd edition restricts some powers from using all special units.</i></li>
+</ul>
+<p>Autonomous units:</p>
+<ul>
+<li>Are created by bribery or part of a scenario setup.</li>
+<li><i>Bribes can only create autonomous garrisons, but some scenarios have autonomous armies.</i></li>
+<li>Always hold and can never support any other unit or convert. Are automatically maintained each winter.</li>
+<li>Notice that special units retain their 'specialness' if you bribe them to turn autonomous. Thus you may e.g. create an elite autonomous garrison!</li>
+<li>A city thus occupied generates no income.</li>
+<li><i>Also turn control of the province their city is in (whenever the province is unoccupied) to autonomous. The province will no longer generate any income.</i></li>
+<li><font color="red">Turning a committed garrison to autonomous is the cheapest bribe to quickly get rid of a garrison in a major city (especially if the garrison supports an army/fleet in the province).</font></li>
+</ul>
+<p>Movement:</p>
+<ul>
+<li><i>Where the <b>Machiavelli</b> rules are unclear, the rules for moves, retreats, standoffs and dislodgement follow the <b>Diplomacy</b> or judge rules.</i></li>
+<li>As movement is simultaneous, a dislodged unit may still cut support or cause a standoff in any province except the one the attacker came from. Because attackers may never "switch provinces". Ex: (A) A Tyr M Mil, (A) A Trt S A Tyr M Mil, (A) A Aus M Tyr thus (I) A Mil M Tyr will not cause a bounce, while (I) A Com M Tyr will cause a bounce.</li>
+<li>Support is always cut if the supporting unit is dislodged or if the attacker comes from any province except the one support is given into. Ex: (A) A Trt M Mil, (A) A Tyr S A Trt M Mil thus (I) A Mil M Tyr will not cut support, while (I) A Com M Tyr will cut the support.</li>
+<li>If you attack an empty province with two different attacks the stronger force will succeed. As long as the province is unoccupied by any of your units normal attack rules apply and not the "self-dislodgement" rules. So do not expect a bounce in this case.  Ex: (A) A Tyr M Mil, (A) A Trt S A Tyr M Mil, (A) A Carin M Mil and (-) Mil. In this case there will be no bounce but the Tyr unit will move to Milan and not the Carin unit.</li>
+<li>You may never cut your own support by a "self-attack".</li>
+<li>Units convoyed by different routes may "switch provinces". Ex: (P) A Anc M LAS M Dal, (V) A Dal M UAS M Anc will succeed. (This is an exception to the "no-switch rule".)</li>
+</ul>
+<p>Special movement rules:</p>
+<ul>
+<li>Piombino strait controls movement between ETS and Pisa. And Messina strait between ION and GON. <b>Read <a href="http://ustp.asciiking.com/rules.html#SPECIAL_MAPBOARD_FEATURES_AND_RULES">the nJudge rules document</a>, as it explains the complicated rules in depth.</b> In the 1995 version there is no Piombino strait and the rules regarding Messina are somewhat simpler.</li>
+<li><i>If a fleet in Piombino is forced to retreat by an attacking fleet it will not be allowed to retreat into WTS or ETS, as the attacking fleet will block movement through the strait.
+The rules do not cover whether it should be allowed to retreat into garrison, if possible, or if the presence of unoccupied ETS/WTS will disallow this.
+The current nJudge implementation is regarded as correct.</i></li>
+</ul>
+<p>Convoys:</p>
+<ul>
+<li>Alternate convoy routes are not allowed as any intermediate province must be specified.</li>
+<li>Dual/alternate movement orders cannot be issued. E.g. if players do (P) A ANC-DAL, (T) F UAS T ANC-DAL, (T) F LAS T ANC-DAL it will raise an error.</li>
+</ul>
+<p>Coastal Convoys:</p>
+<ul>
+<li><i>Fleets along coasts can be used to convoy armies. Second edition Mach does not allow coastal convoys, but on the nJudge it is controlled by the </i>'COASTAL CONVOYS'<i> flag.</i></li>
+<li>Inland armies cannot be convoyed (obviously). Armies must start in an area adjacent to the coast or sea zone of the fleet at the front of the chain, and end in an area adjacent to the coast or sea zone of the fleet at the end of the chain.</li>
+<li>Convoys cannot jump coasts; for example a fleet in Croatia/sc or Croatia/nc can't convoy an army from Dalmatia to Carniola.</li>
+</ul>
+<p>Support cutting determination &#8212; the nJudge determines how support gets cut in the following manner:</p>
+<ul>
+<li>All non-convoyed supports are resolved.</li>
+<li>Units convoyed by fleets that still may be dislodged are flagged "maybe no convoy".</li>
+<li>Convoyed units not flagged with "maybe no convoy" cut support in their destination provinces if they dislodge the supporting unit.</li>
+<li>Units convoyed by dislodged fleets are flagged "no convoy".</li>
+<li>Any units still being flagged "maybe no convoy" cut support in the destination province if they dislodge the supporting unit.</li>
+</ul>
+<p>Retreats:</p>
+<ul>
+<li><i>A unit may not retreat into garrison form unless that is the only retreat available.</i></li>
+<li><i>In 2nd edition Mach, a retreat into garrison is always allowed.</i></li>
+<li><i>A unit in Venice is not allowed to retreat into garrison.</i></li>
+<li><i>A fleet in the Lagoon may retreat into garrison in Venice only if no other area is available. In the 2nd edition a fleet in Venice may choose whether to retreat into garrison or to an adjacent area.</i></li>
+<li><i>Multistrength units are treated as one strength point units for retreat purposes. Thus the following retreat will bounce (I) EM MAN-VER and (V) A CAR-VER.</i></li>
+<li>A unit that retreats into garrison form will turn the city under the control of the unit's owner.</li>
+</ul>
+<p>Disband determination:</p>
+<ul>
+<li>You may disband any unit at any time. On the nJudge this feature is controlled by the 'DISBAND' flag.</li>
+<li>If a player does not remove a unit it cannot maintain the nJudge will automatically disband a unit (usually the oldest built) not in a city/supply center province.</li>
+</ul>
+<p>Sieges:</p>
+<ul>
+<li><i>Cities under siege still produce income. (This is nJudge specific and contrary to the official <b>Machiavelli</b> rules. It was chosen to do so because many player groups allowed this.)</i></li>
+<li>To displace a garrison it must be besieged for two consecutive campaigns.
+<li><i>A fleet can only besiege port cities from the containing province, never from a sea area.</i></li>
+<li><i>A garrison in Venice can never be besieged as only one unit is allowed in the area. In the 2nd edition it is because fleets never can lay siege from a sea area.</i></li>
+<li>A garrison may not convert in the second year of a siege regardless of strength, but may support an attack into the province.</li>
+<li>You may formally end a siege by issuing a lift siege order, although you will still be holding in the province.</li>
+<li>The siege automatically ends if the garrison is eliminated (whatever the cause) or if it is disbanded by a bribe or disband order.</li>
+<li><font color="red">Notice that, as bribes are processed before moves, you may issue a besiege order on your own garrison if you suspect it will be besieged, but, if the garrison remains yours, the order will automatically be changed to 'hold'. Should a similar situation occur as a result of bribes the besieging unit will automatically have its orders changed to 'lift siege'.</font></li>
+<li><font color="red">If you play Venice a garrison in Venice city is a sure way to ensure survival as it cannot be besieged and cost at least 18 ducats to bribe. If you put a Citizen’s militia garrison in Venice it will 36 ducats to successfully bribe. A CM garrison costs 6 ducats to maintain, but as Venice will give you 3+1 and variable income at least 2 ducats, the unit will be self-sustaining.</font></li>
+</ul>
+<p>Rebellions:</p>
+<ul>
+<li>Rebellions form due to a bribe specifically creating one, or during the process of assassination.</li>
+<li>Rebellions do not remove ownership of an area.</li>
+<li><i>Rebellions separately affect a province and a city and are placed in both if possible. (This is nJudge specific and contrary to the official <b>Machiavelli</b> rules. It was chosen to do so because the official rules are not 100% clear on this topic. Just 98% ;-)</i></li>
+<li>If there is a garrison in the city, the city does not enter rebellion 
+<li>It is impossible to retreat into garrison into a city with a rebellion in it.</li>
+<li><i>The only way <b>you</b> can remove a rebellion from one of <b>your</b> cities is to lay siege to it, to pay to have it removed, or for someone to take the city from you.</i></li>
+<li>Any other player will automatically remove any rebellion in a city when it enters its containing province.</li>
+<li>Rebellions in a city automatically support a hostile force (i.e. force of player the rebellion was not directed against) entering the containing province.</li>
+<li>Rebellion units cannot and do not support retreats.</li>
+<li>No rebellion may be placed in Venice if there is a unit in Venice (regardless of whether the unit is an army, fleet or garrison).</li>
+<li>Only one rebellion unit is placed in Venice, and then always in the city.</li>
+<li>A rebellion in Venice can never be besieged by the affected player as the rebelling unit will bounce any of his units (as there can only be one unit).</li>
+<li><font color="red">Placing a rebellion in Venice city is a great way to cause Venice major problems (no builds and loss of 4 ducats). Especially if Venice is strapped for funds and cannot pay to have it removed or will be pushed to default on a loan and thus assassinated. (Notice that it requires 'NOADJACENCY' set in Classic Mach due to the lagoon.)</font></li>
+</ul>
+<p>Timing of ownership changes:</p>
+<ul>
+<li>Ownership change checks occur essentially constantly. For example, if a unit is purchased, it immediately gains control of the area it is in when purchased even if it immediately moves out. <font color="red">Two for one ;-) This may sometimes be worth it for tactical reasons or to gain some major city.</font></li>
+<li>Because of this, if a unit in a city is removed during builds, and a unit in the province is not, the power owning the unit in the province will gain control of the city before spring movement.</li>
+<li><i>If a garrison and an army/fleet in the same province are removed at the same time, whatever the cause, the province will revert to neutral (unowned)</i>.</li> 
+<li>In 2nd edition Mach, control is only calculated before builds and maintenance (as in <b>Diplomacy</b>).</li>
+</ul>
+<p>Builds:</p>
+<ul>
+<li>Any unit may be removed during build phase.</li> 
+<li>Only one unit may be built in each home city/province pair each build phase (that is, one can't build Garrison Rome and Army Rome on the same turn).</li> 
+<li><i>A city or province may not be the site of both a build and disband, but it is okay for a city/province pair that a disband occurs in one while a build occurs in the other.</i></li> 
+<li><i>The nJudge does not limit the total number of units of a player (or the number each of armies, fleets, and garrisons).</i></li>
+</ul>
+<h3>Money</h3>
+<p>Basic income:</p>
+<ul>
+<li>Each controlled city and province and each sea area with fleet present, generate one ducat. Major cities may generate 2 or 3 ducats.</li>
+<li>Famined and rebelling areas do not generate income, but garrisoned cities do.</li>
+</ul>
+<p>Variable income:</p>
+<ul>
+<li>Variable incomes are tied to who can use the home area the roll is tied to, not ownership of the capital of the home area.</li>
+<li>A power need only control one city or one province of its home area to get the income.</li>
+<li>Famines, rebellions and assassinations do not prevent the collection of variable income.</li>
+<li><i>Ownership of the Genoa variable roll is based solely on ownership of the city.</i></li>
+</ul>
+<p>Cash transfers and banking:</p>
+<ul>
+<li>Cash can be given to another player when one is not in debt. 
+The 25d borrowing limit is on principal, not interest.</li>
+<li>One can pay money to the bank then borrow more on the phase a loan is due, as the bank will collect at the end of that phase.</li>
+<li>You can also give money and then borrow money during the same phase if you have no debt. <font color="red">Thus while you cannot as your last dying gasp borrow 25 ducats and give them to another player, you can save , say 25d, give them to another player and then borrow 25d yourself. This is probably very unlikely, but a rich power may wish to do so to help an ally or to get an unreachable unit bribed. You should be really sure you can repay your loan in that case.</font></li> 
+<li>If you default on a loan you will get assassinated (all orders convert to hold and rebellion rolls will occur).</li>
+</ul>
+<h3>Bribes and assassins</h3>
+<p>Assassination Chits:</p>
+<ul>
+<li>Each nation gets one assassination chit for each other nation at game start.</li> 
+<li>Transfer of assassination chits can occur at any time. No one is notified when the transfer occurs, not even the receiver.</li> 
+<li><i>To see your chit list, sign on to the game then list it.</i></li>
+</ul>
+<p>Bribes, Counter-Bribes, & Adjacency:</p>
+<ul>
+<li>Can only be in multiples of 3d.</li>
+<li><i>Bribes against garrisons in cities of value greater than 1 cost twice as much.</i></li>
+<li>Counter-bribes can only be used to protect units (that is, you can't counter a rebellion or assassination).</li>
+<li><i>Bribes (and expenditures) are resolved before movement, thus you may buy a unit and order it to move in the same turn.</i></li>
+<li>If the adjacency flag is set, bribes can only be directed at enemy units in provinces adjacent to your units.</li>
+<li>For purposes of adjacency, unit type is irrelevant. For example, a fleet in Dalmatia is "adjacent" to an army in Bosnia, even though the fleet cannot go there. Similarly, an army in Romagna is "adjacent" to the UAS.</li>
+<li>Do not waste money on bribes, unless you can gain a tactical or strategical advantage.</li>
+<li><font color="red">The “Cause rebellion” bribe is a sneaky, albeit costly, way to get support into a province or to remove income from a player.</font></li>
+<li><font color="red">Note that a bribe to gain Genoa will not repay itself until after 2-4 years.</font></li>
+</ul>
+<h3>Various</h3>
+<p>Disasters:</p>
+<ul>
+<li>Famine. Units in a famined province by the end of spring are eliminated.</li>
+<li>Famines may be relieved by a special expense.</li>
+<li>Plague. Resolved before summer movement. Any unit in an affected province is immediately eliminated.</li>
+<li>Storms. Affect sea areas in fall. Special nJudge extension.</li>
+</ul>
+<p>NoDice flag (nJudge specific)</p>
+<ul>
+<li>This flag turns off random events. These include Famine, Plague, Assassination, and the Bank.</li> 
+<li>Variable income rolls are now predictable. They alternate by year, sometimes all 4, sometimes all 3.</li>
+</ul>
+<h3>Winning and losing</h3>
+<p>Country control:</p>
+<ul>
+<li>Home countries are gained/lost in a block as they were defined at setup. Once a Home Country has lost its original controlling player it will be treated as a "Non Player Country" (NPC) for the rest of the game. No player can use NPC cities and province for builds, nor gain its variable income unless they conquer the NPC in its entirety.</li>
+<li>To conquer an NPC or a Home Country another player must gain control of all its original provinces and cities for at least one full season (campaign). The country is then a Conquered Home Country (CHC).</li>
+<li>Players may control multiple countries.</li>
+<li>Gaining an additional country is advantageous as you will be able to get its variable income and use its cities and provinces for builds.</li>
+<li>It is good practice to try to stop another player from conquering a country.</li>
+</ul>
+<p>Elimination:</p>
+<ul>
+<li>If a player does not control any of the cities and province in all countries it controls at the end of a season, it is eliminated.</li>
+<li>Notice that an enemy power must control all the cities and provinces, having no units is not enough to lose a country.</li>
+<li>Rebellion units do not count for control determination purposes.</li>
+<li><i><font color="red">WARNING: If a power (A) takes control of another power's (B) country in the same season that power A loses control of all of its current home areas, both power A and B will be eliminated!</font></i></li>
+</ul>
+<p>Victory Conditions:</p>
+<ul>
+<li>The master should state the victory conditions clearly in the game listing.</li> 
+<li>The minimum victory conditions for a relatively balanced game are 23 cities and two home areas. Three home areas is in my opinion even better.</li> 
+<li>For ranking purposes (in my opinion), 15 city games should be ignored, and treated as unrated teaching games.</li>
+</ul>
+<BR><BR><TABLE>
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD><A href="mailto:beduewer@gmail.com"><IMG 
+      src="/Zine/Common/letter.gif" border=0></A> </TD>
+    <TD><STRONG>Bruce Duewer<BR>(<a href="mailto:beduewer@gmail.com">beduewer@gmail.com</a>)</STRONG><td valign="center"><strong><i>or</i>
+<TD><A href="mailto:sigge@lidsell.com"><IMG 
+      src="/Zine/Common/letter.gif" border=0></A> </TD>
+    <TD><STRONG>Sergio Lidsell<BR>(<a href="mailto:sigge@lidsell.com">sigge@lidsell.com</a>)</STRONG>  
+  </TD></TR></TBODY></TABLE>
+<P>
+<I>If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the <A 
+href="/Zine/F2013M/Common/DearDP.html">"<B>Dear 
+DP...</B>"</A> mail interface.</I> 
+</table><P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton2.gif" align="left" border="0"></a>
+<a href="/Zine/F2013M/"><img src="/Zine/Common/toF2013M.gif" align="right" border="0"></a>
+</BODY></HTML>
+<!--
+-->

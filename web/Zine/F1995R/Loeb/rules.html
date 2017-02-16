@@ -1,0 +1,114 @@
+<html> <head>
+<title>DP F1995R: Retreat Rules</title>
+</head>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1995R/"><IMG align=right SRC="/Zine/Common/toF1995R.gif" border=0></A>
+<BR><BR><HR>
+<h1>
+<center>Retreat Rules</h1>
+</center>
+<hr>
+<H2>Rules of Diplomacy</H2>
+<h3>Copyright (c) Hasbro, Inc. <!The Avalon Hill Game Company></h3>
+A unit which otherwise would have remained in the
+space attacked by a better supported unit is
+dislodged and must retreat or be disbanded.
+<p>
+It must move to a space to		
+which it could ordinarily move if unopposed by
+other units; that is, to an adjacent space
+suitable to an army or fleet, as the case may be.
+The unit may not retreat, however, to any space
+which is occupied, nor to the space its attacker
+came from, nor to a space which was left vacant
+due to a standoff on the move. If no place is
+available for retreat, the dislodged unit is
+"disbanded"; that is, its marker is removed from
+the board.
+<h3>Writing Retreats.</h3>
+If two or more units must		
+retreat after a move, the retreats are written		
+down immediately by the players concerned,
+without diplomacy,
+<h3>Other Retreat Rules.</h3>
+A player may choose to
+disband a unit rather than retreat it. 
+<p>
+If two or						
+more units may retreat only to the same space,		
+they are all disbanded, unless only one of the
+units is ordered to retreat and the others are
+ordered to be disbanded. In that case, the one
+unit ordered to retreat may do so. If two or more
+units are ordered to retreat to the same space,
+they are all disbanded.
+<p>
+If a player fails to order				
+a retreat when necessary, the unit is disbanded.
+Retreats may neither be convoyed nor supported.
+<HR size=5>
+<h2>Diplomacy Adjudicator</h2>
+<h3>Ken Lowe</h3>
+<p>
+The format of your Diplomacy orders depends on the phase of the game:
+Movement, Retreats or Adjustments.  Multiple orders can be entered on 
+one line by separating them with commas or semicolons.
+<p>
+Retreat orders:
+<pre>
+{type} {s-prov} {moves}   {d-prov}
+{type} {s-prov} {disband}
+{/pre}
+where:
+{pre}
+{type}    = "army", "a", "fleet", "f" or {empty}.
+{s-prov}  = Source province.
+{moves}   = "-", "->", "m", "move", "moves", "move to", or "moves to".
+{d-prov}  = Destination province.
+{disband} = "d" or "disband"
+</pre>
+<HR size=5>
+<h2>Diplomacy Programming Project Protocol</h2>
+<H3>Daniel Loeb</H3>
+<p>
+The following messages are used in the retreat phase by the Diplomat
+Adjudicator. Note that all dislodged units must submit an order
+even if there is no option other than <i>disband</i>.
+For consistency, an "empty" retreat phase is automatically generated
+if no units must retreat.
+<dl compact>
+<dt><B>Orders:</B>
+<dd><pre>
+RTO prov            {retreat}
+DSB                 {disband = nonretreat}
+</pre>
+Used by diplomats to <b>sub</b>mit retreats, used by interface to
+display the results of a retreat phase (<b>ord</b>), used between diplomats to
+suggest or forbid retreats.
+<P>
+<dt><B>Notes:</B>
+<dd><pre>
+1.  BNC             {move bounced, e.g.: eng-nth vss nwy-nth}
+                    {...or retreat bounced, mutual disband}
+2.  (RET prov)      {must retreat due to attack from (prov)}
+3.  (note RET prov)
+4.  (MBE {[provs]}) {retreat is no good, it must be to one}
+                    {of the following provinces}
+5.  NRN             {no retreat needed for this unit}
+6.  NRS             {not right season}
+</pre>
+used by interface to indicate (1,2,3,4) the result of moves made
+(<b>ord</b>) or (5,6) moves illegally submitted (<b>thk</b>).
+<b>NRS</b> is also used to forbid diplomacy prior to retreat phases.
+</dl>
+<hr>
+Return to <a href="ret.html">main article</a>.
+<hr>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1995R/"><IMG align=right SRC="/Zine/Common/toF1995R.gif" border=0></A>
+<BR><BR>
+</body>
+</html>
+<!--
+-->

@@ -1,0 +1,590 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<title>DP S2012M: Sherlock Holmes, Consulting Diplomat</title>
+	<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1" />
+	<script>
+	function toggleLayer(whichLayer)
+	{	var elem, vis;
+		if (document.getElementById) elem = document.getElementById(whichLayer);
+		else if (document.all) elem = document.all[whichLayer];
+		else if (document.layers) elem = document.layers[whichLayer];
+		vis = elem.style;
+		if (vis.display==''&&elem.offsetWidth!=undefined&&elem.offsetHeight!=undefined)
+			vis.display = (elem.offsetWidth!=0&&elem.offsetHeight!=0)?'inline':'none';
+		vis.display = (vis.display==''||vis.display!='none')?'none':'inline';
+		if (whichLayer == 'part2') toggleLayer('part1');
+	}
+	</script>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton2.gif" align="left" border="0" /></a>
+<a href="/Zine/S2012M/"><img src="/Zine/Common/toS2012M.gif" align="right" border="0" /></a>
+<br clear="all" />
+<hr align="center" width="100%" size="-1" color="gray" />
+<! ------------------------------------------------------------- >
+<! ----------------------- M A S T H E A D --------------------- >
+<h2 align="center">
+<table cellspacing="5" width="90%" align="center">
+<tbody>	<tr>	<td width="120">
+			<img src="/Zine/Common/Holmes.gif" width="120" align="left" />
+		</td>
+   		<td>	<h2>	Sherlock Holmes,
+				<br>Consulting Diplomat 
+				<p>	<font size="4">
+						<b>	by Mario Huys and Manus Hand,
+							<br />
+							Master Ænigmatists
+						</b>
+					</font>
+				</p>
+			</h2>
+		</td>
+	</tr>
+</tbody>
+</table>
+<! ------------------------------------------------------------- >
+<! ------------------------ S U B H E A D ---------------------- >
+	<hr align="center" width="100%" size="-1" color="gray" />
+	The Costly Case of the Last Man Standing 
+	<hr align="center" width="100%" size="-1" color="gray" />
+</h2>
+<! ------------------------------------------------------------- >
+<! ------------------------ O P E N I N G ---------------------- >
+<table width="90%" border="0" align="center">
+<tbody>	<tr>	<td align="justify">
+<! ------------------------------------------------------------- >
+<p align="center"><font color="red"><b><i>
+		<u>NOTE:</u> It has been nearly four full years since the great
+		Holmes last appeared in these pages.
+		Unfortunately, it is the case, therefore, that no solution has yet
+		been published in this time
+		to the mystery presented then
+		(<a href="/Zine/F2008R/Hand/Moriarty.html">"A Challenge From
+		Devonshire"</a>).
+		Rather than present that solution now, however, I have elected to
+		present to this readership a new case.
+		My reasons for doing so concern the fact that both the cases below and
+		"A Challenge from Devonshire"
+		are exercises in the same specific tactical art &mdash; the art of
+		most expeditiously eliminating units from the board.
+		Thus, I feel that to present Holmes's solution to "A Challenge from
+		Devonshire" would perhaps be to provide an unfair leg-up,
+		which may deny some of the enjoyment to be derived by matching wits
+		with Holmes in the cases presented below.
+		I would like to strongly encourage my gentle readers to revisit and
+		undertake to resolve
+		"A Challenge from Devonshire" before trying their hands at the
+		mysteries below,
+		which &mdash; while applications of the same discipline &mdash;
+		are rather more intricate and involved.
+		<br />	</i>&mdash; John Watson, M.D.
+</b></font></p>
+<hr width="50%" color="gray"/>
+<p align="justify">
+It was a particularly cold and snowy night in London, and as I entered the
+quarters at 221B Baker Street which I share with my good friend Sherlock 
+Holmes, I stamped my feet and shook the evening's precipitation from my
+trenchcoat before removing it and hanging it upon the hook.  Emerging from 
+the foyer and stepping toward the fire to warm my hands, I found my friend
+seated at the table, a contented smile upon his face.  "Good evening, 
+Holmes," I said.
+</p>
+<p align="justify">
+"Indeed it is, Watson," came his reply.  "Pray, come and see what I
+have been up to whilst you tended to hangnails and the other assorted 
+ailments and complaints of your subscribers."
+</p>
+<p align="justify">
+Rubbing my hands briskly together one final time, I left the fire and took
+note of the fact that the cause of Holmes's rather jovial mood was certainly
+the Diplomacy set laid 
+out on the table before him.  Upon the board stood only a single English army,
+planted squarely and proudly upon
+the capital of that Great Power which has lately
+been the subject of so much press.
+<!--
+the capital of that most pretentious of Great Powers,
+having ambitions matching only those of Great Britain.
+-->
+I quickly grasped 
+something of my friend's afternoon activity, and said, "Holmes! You have been
+engaged in a game of Last Man Standing!"
+</p>
+<p align="justify">
+"Engaged, yes; but only after the fact, Watson.  What we have here is
+indeed the concluding position of a particularly interesting Last Man 
+Standing exhibition.  I am delighted to know that you are familiar with
+such things; they are admittedly rather frivolous, and a not-inexpensive
+diversion for many men."
+</p>
+<p align="justify">
+"Certainly I am aware of it, Holmes;
+it is presently all the 
+rage throughout Europe.  In a Last Man Standing exhibition, 
+the exhibitor reduces the number of pieces on the board to one by
+reproducing for his audience a game that he has previously concocted,
+and whose orders sit in a sealed envelope.
+Before replaying the game, it is customary for him to
+describe some of its interesting features to his audience, after which
+the assembled gentlemen often place wagers amongst themselves concerning
+such things as which power will survive, the final position, and any number 
+of other events that could transpire as the game is played out.
+Obviously, as gentlemen all, every bettor vouches to having never
+been made privy to the sealed moves. It is the case, however, as you point
+out, that just as often as not a man may be found to be less
+interested in the beauty of the Great Game being displayed than he is in
+the promise of financial gain to be had through succeeding in these
+wagers.
+Whilst I have never attended such an exhibition, I do admit that
+the idea attracts me &mdash; though I would of course be unable to attend
+in any role other than that of a spectator, unless 
+the wagers be only for very small
+stakes; this separates me, surely, from so many of the game's most ardent
+patrons, who, while they may have no more love for The Game than I,
+certainly possess much more financial wherewithal!"
+</p>
+<p align="justify">
+"Well described, Watson," my friend said.
+"Such an exhibition game is, in fact, precisely what we have here.
+Are you aware of the
+Congress for Permanent Balkan Settlement currently underway in this city?"
+</p>
+<p align="justify">
+The sudden change of subject initially caught me by surprise.
+I was indeed &mdash; from coverage provided by <i>The Times</i> &mdash;
+familiar
+with the fact that
+London was presently filled with diplomats from all across the Continent, 
+meeting daily at Westminster discussing the future of that troubled part
+of Europe. "Most certainly I am aware of the Congress, Holmes," I answered him.  
+When Holmes only puffed on his pipe silently, I continued, rather
+mystified, launching into a non-sequitur.
+"As Fleet Street would tell it,
+the present difficulties in debate concern
+<!--
+the dangerous calls for Serbian autonomy that some fear will
+eventually drag the entire Continent to arms,
+-->
+the bold reassertion by agitators of the Habsburg Empire's claim to
+Transylvania."
+<!--
+, and allegations of interference in the internal affairs of the Bulgars,
+and Greeks by
+powers having colonial ambitions in Africa, Iberia, and Scandinavia.
+It is also said that the representatives from Low Countries are threatening
+to depart the conference, believing that their interests are being
+ignored by controlling diplomats from the Great Powers."
+</p>
+<p align="justify">
+-->
+I paused once again, and Holmes still kept silent. Searching my mind for another
+piece of information about the Congress, I was suddenly struck by the reason
+for my friend's question.  "By Jove, Holmes! Is this game the
+work of the
+great Baron Hervé?  Did he visit our apartment to-day whilst I was occupied in
+my unpleasant drudgery at the chemist's?"
+</p>
+<p align="justify">
+"The great Baron Hervé", as I had referred to him, was of course
+Baron Hervé van Rompuy-Leterme, long the toast of the continent,
+and certainly among the most well-respected and
+talented men of our age.
+A universally acclaimed diplomat in the theatre of European politics,
+the baron was also one of the foremost Diplomacy players of the past decades.
+Some years ago, citing advancing age, he had 
+retired both from politics and from the active play of The
+Game.
+Of late, however, he had become something of an elder statesman,
+both on the board and off.
+His ardent passion for
+peace in the Balkans had proven sufficient to draw him from his retirement and
+place him as the presiding officer of the
+great Congress now in session, and his passion for The Game had recently seen
+him treating Diplomacy clubs all across the continent to exhibitions of his
+keen talents in the construction of Last Man Standing games.
+</p>
+<p align="justify">
+"Yes and no, Watson," came the reply. "This game is indeed the work of Baron
+Hervé, but unfortunately, I have not had the pleasure of his company here
+at Baker Street.
+It seems, happily, that despite his busy schedule presiding over the Congress,
+he has managed to make time to entertain
+a number of his fellow delegates, also boarded at the Calhamer Club,
+as well as some invited members and guests of the Club,
+with his skills.  He has, in fact, brought with him from Brussels
+his famously large Diplomacy board."
+<p align="justify">
+Hearing this, and that Baron Hervé was quartered at our Club, I was delighted.
+"So you have been out to the Calhamer Club this afternoon, Holmes?"
+</p>
+<p align="justify">
+"No indeed, Watson; I would not presume to venture out in this weather.
+<!--
+and I was not invited to the exhibition that the baron 
+conducted last evening.
+-->
+The game itself was brought to me, here, earlier to-day, by our friend
+Sir Malcolm
+Walpole-Price, down from Liverpool for the Congress, who was privileged
+to attend the exhibition conducted last evening.
+<!-- given last night by Baron Hervé. -->
+Sir Malcolm was in excellent
+good spirits, for he had (like many of the others in attendance at 
+the club) patriotically wagered on England to win.  In fact, Sir Malcolm was
+doubly successful, for he also wagered upon the survival of the army 
+that begins the game in his home-town of Liverpool, and, indeed, that unit
+did become the Last Man Standing,
+beating a Russian and a Turk to the pitch, which were the only two other survivors in the final year."
+</p>
+<p align="justify">
+"I see, Holmes; it sounds like Sir Malcolm had capital fun."
+(I groaned at my own pun, but
+Holmes seemed to take no note of it.)  "I wish we had been on-hand for 
+it.  If I may ask, were you told which 'marvels' the baron exhibited in last
+night's game?
+</p>
+<p align="justify">
+"I was.  For one thing, Watson, this final position was obtained after the
+conclusion of only four game-years."
+</p>
+<p align="justify">
+It took a moment for my
+face to register the surprise I experienced on hearing that such a thing
+could be accomplished.
+</p>
+<p align="justify">
+Noting my delayed reaction, Holmes smiled and continued.
+"And that is not all, Watson.  The claim was made 
+&mdash; and proven &mdash; that not a single neutral centre would be captured,
+and &mdash; most marvelous to the audience, in a game that was to achieve 
+its <i>denouement</i> after 1904 &mdash; that every one of the seven Great
+Powers would survive into 1903.  Those facts, apart from the information that
+the Last Man Standing would be found, as you see here,
+sitting upon one of the capitals of the Great Powers
+of Europe, which, as Sir Malcolm gleefully added, had itself been eliminated before the start of the final year, amounted to the sum total of the baron's description."
+</p>
+<p align="justify">
+"Astonishing, Holmes!  As I see the board here in its final position, I must
+presume that Sir Malcolm brought with him the litany of the game's 
+moves.  Might I see them, and thus do as you and he did, playing the game out
+for my own entertainment and amusement?"
+</p>
+<p align="justify">
+Holmes dismissed my assumption with the wave of his hand.  "I suppose that Sir
+Malcolm may have had with him a transcribed copy of the game's orders, he may
+even have intended to leave such a copy with me; the subject did not
+arise, however, and I did not inquire.  Rather, using the details he 
+had provided, I considered it an enjoyable diversion to reproduce for him the
+game in its every detail, and that is how I have spent my 
+afternoon."
+</p>
+<p align="justify">
+"Your skills never cease to amaze me, Holmes!  Simply from the fact that this
+sole English army survived, 
+ending up in the capital of a power eliminated before the start of the final year, 
+when its only remaining opponents were a Russian and a Turk, 
+and the three other spare facts you were 
+given &mdash; that no neutral centres were taken, that the game reaches this
+position before Spring of 1905 is played, and that all powers survive 
+into 1903 &mdash; you reconstructed the entire exhibition game?"
+</p>
+<p align="justify">
+"Quite so, Watson," Holmes said nonchalantly, as if what I had described were
+mere child's play.
+</p>
+<p align="right">
+<table width="70%"><tbody><tr><td>
+<img hspace=5 src="/Zine/Common/stopsign.jpg" align="left" border="0" />
+</td><td>
+<p align="justify">
+<b>	<i>	Can you do as Holmes did?  Eliminate all units from the board, except
+a single English army, which is left sitting on a European capital, in four
+full game years, without capturing any neutral
+centres, and ensuring that all seven powers survive until 1903, 
+with only Russia, Turkey and England remaining in 1904, neither of whose capital is the final target. Once you have
+done so, <a href="mailto:manus@diplom.org">mail your solution to The Pouch!</a>
+	</i>
+</b>
+</p>
+<p align="justify">
+<i><b>...if you have given it a long honest try and want a bit more assistance,
+Watson is willing to tell you more about what he sees on the board, if you
+<a href='#'
+onclick="alert('The sole English army sits in Berlin.');return false">click
+here</a>.
+</b></i>
+</p>
+</td></tr></tbody></table>
+</p>
+<div id="part1" name="part1" style="display:inline">
+<h2 align="left"><b><font color="red">
+<i>...and when you're ready to continue with Watson's tale,
+<a href="#" onclick="toggleLayer('part2');return false;"><font color="red">click here</font></a>....
+</i></font></b>
+</h2>
+</div>
+<div id="part2" name="part2" style="display:none">
+<hr width="50%" color="gray"/>
+<p align="justify">
+After pulling deeply on his pipe, admiring the near-empty board as he did so,
+Holmes continued.  "Were it not for the inclement weather, I would have sent
+a boy to you at your offices to suggest that we attend the Calhamer 
+Club to-night should you have been able to extricate yourself from your duties
+lancing the boils of London,
+for Baron Hervé has acceeded to a request to conduct another
+presentation 
+this evening.  Indeed, Sir Malcolm rushed away from here a mere two hours ago,
+concerned that he would arrive there too late to attend the exhibition.
+He wished very much to 
+join the other Britons there in displaying their pride in country by
+betting once again upon His Majesty's armed forces,
+just as his fellow delegates to the conference all mean to repeat their own
+wagers upon the success of their respective home-nations."
+</p>
+<p align="justify">
+As if on signal, a rap came at the door of our quarters.  Startled that we
+would have visitors on such a night, I nevertheless resolved to protect 
+our landlady from the freeze in the air.  "I will attend to it, Mrs Hudson," I
+called, and stepped to the door.
+</p>
+<p align="justify">
+Opening it, I found there our Liverpudlian friend, the diplomat Sir Malcolm
+Walpole-Price, who rushed past me with barely a nod.  "Tragedy, Holmes!  
+Tragedy!" he cried, entering the drawing room where Holmes still drew on his
+pipe.
+</p>
+<p align="justify">
+In stark contrast to the frantic behaviour of our visitor, Holmes merely said,
+"Good evening, Sir Malcolm; it seems from your entrance that England did not
+fare so well in this evening's game?  I do trust that your financial
+reverses were at least minimal."
+</p>
+<p align="justify">
+"You are correct that the funds I wagered ended the evening in another man's
+pocket, but no, Holmes, I am exceedingly distressed to admit that they were not 
+minimal; not at all.  I am afraid that they were quite substantial indeed.
+And I am far from alone in this my unhappy situation, Holmes.  A great many men
+left the Calhamer Club in the same sad state as I, having become bereft of
+considerable sums of money.  Oh, Holmes, I feel completely ruined!"
+</p>
+<p align="justify">
+Holmes appeared not to notice what my trained medical eye did: that Sir
+Malcolm was quickly throwing himself into a weakened state, overwrought as 
+he was, his flushed face hot and sweating, arms flailing about as he paced,
+the heat of the fire only adding to the shocks his system had 
+experienced, come in as he was so soon and suddenly from the harsh weather.
+"Do calm down, Sir Malcolm,"
+I tried, "and tell us what transpired."
+</p>
+<p align="justify">
+Sir Malcolm did not, however, calm down, though he did, in panting frantic
+breaths, tell us about his misfortune at the Calhamer Club.  "Once 
+again, Holmes, Baron Hervé told us that the game would end as quickly as last
+evening's game had done &mdash; with the Last Man Standing alone after the 
+conclusion of 1904.  My hopes rose immediately for another successful night
+like the last!"  He paused, breathless, shaking his head sadly and in 
+disbelief, then immediately began pacing again.  "We were then promised that
+we would see a convoy move performed during every phase in which any 
+fleet were in water, and again, my intended wager upon England seemed all the
+more sure &mdash; Britannia Rule the Waves and all that rot, you 
+know."
+</p>
+<p align="justify">
+Holmes nodded, and tried to be sympathetic.  "How unfortunate that England did
+not come out of 1904 with the sole unit, Sir Malcolm.  You would have been wise
+to have wagered to-night only as much as you had won last night, so that you
+could not have come out of the two exhibitions less flush than you went in."
+</p>
+<p align="justify">
+Sir Malcolm neither needed nor appreciated the reproach, his face reddening all
+the more in shame (if not indignation at Holmes for pointing out the 
+error of his ways).  "You are of course correct, Holmes," he sputtered, "but
+it is not simply that I bet more upon the English survival than I 
+should have; you see, we engaged ourselves in a particular set of
+side-bets this
+evening &mdash; bets that have left me not only impoverished but quite
+astonished at the proven failure of my bets."
+</p>
+<p align="justify">
+I approached our visitor and, clapping my hands upon his shoulders, tried to
+drag him to the stuffed chair, but he only threw me off and continued 
+pacing, wringing his hands in his agitated state.  "What were the terms of the
+side-bets, Sir Malcolm?" inquired Holmes.
+</p>
+<p align="justify">
+"Oh, it's just terrible; terrible, Holmes!" came the reply.  "Baron Hervé
+announced
+that, unlike last evening's game, some number of neutral centres would be
+captured, and then some one of our party struck on the idea that we should
+bet upon those centres that would and would not come under the control of
+one of the Great Powers during the course of such a brief game having the
+aim of eliminating every unit save one.
+<!--
+, and which centres
+each Great Power would own, and...oh, Holmes, it's terrible!
+-->
+I and many others laid much money on what we were certain
+were fool's bets being offered us, so positive were we that precious few
+neutrals could possibly be captured in such a short game, laying even more
+heavily against particular centres that seemed truly unreachable during the
+course of the game." As if to himself, he added, "And some of these men,
+one in particular, are seemingly quite wealthy; why oh why 
+did I wager so much?"
+</p>
+<p align="justify">
+I saw that Sir Malcolm was beyond calming, so I resigned myself to what seemed
+our task: to simply allow him to purge the evening's experience from his 
+system by telling us of it.  "And how many neutrals were captured, Sir
+Malcolm?" I asked.
+</p>
+<p align="justify">
+"When the game finished, Baron Hervé claimed that he had captured
+every last neutral centre!" came the response.
+</p>
+<p align="justify">
+At this, Holmes immediately sprung to his feet, his attention suddenly rapt.
+"Impossible!  Are you quite sure, Sir Malcolm?"
+</p>
+<p align="justify">
+Our guest was visibly flustered at Holmes's outburst.
+"I will take your word that it is impossible, Holmes, and indeed the baron 
+had not, in fact, done so.  He
+had, only slightly, overstated his accomplishment, and he was quickly corrected.
+Would that he had captured them all, however!  It would have meant a slightly
+better result for me," he said, shaking his head sadly.
+"In fact, Holmes, there was a single neutral centre uncaptured.  Yes, only a
+single one.  And this single centre &mdash; alas! &mdash; was one of the
+very few that I had bet a considerable sum <u>would</u> be taken!"  Pacing
+frenetically now, Sir Malcolm muttered,
+You'll forgive me for the state I'm in, gentlemen," and then he rushed on.
+"Yes, yes; eleven neutrals were taken &mdash; all of them during the first year &mdash; while we with grand sums of money laid
+against any such thing being possible all watched in
+horror!... and one, only one, was not.  Even though there were many units skirting it, none ever set foot there, let alone captured it."
+</p>
+<p align="justify">
+"Sir Malcolm, you have clearly been under too much tension. At least take off your coat," said I, reaching out to take off his winter coat, but he shrugged me off.
+</p>
+<p align="justify">
+"It doesn't stop there.  
+After that first tumultuous year the pieces came streaming back to the same area of the board as the night before,
+raising our hopes that we might luck out on the final destination, but alas, ..."
+</p>
+<p align="justify">
+"It was not the same capital?" Holmes helpfully offered, dimly suppressing a smile.
+</p>
+<p align="justify">
+"My good man, it was not even a home center!   And then
+&mdash; oh, then, Holmes! &mdash; the terrible costs were accounted!"
+</p>
+<p align="justify">
+His body could take no more of what his mind was putting it through, and Sir
+Malcolm collapsed suddenly on the floor of our drawing room, before 
+the fire.  I rushed to him, calling to Mrs Hudson for smelling salts, but his
+heaving body failed immediately to revive.  Informing Holmes of the 
+gravity of Sir Malcolm's condition, I sent for an ambulance, and readied
+myself to accompany Sir Malcolm to hospital.
+</p>
+<p align="justify">
+I was surprised to see that Holmes had apparently decided to ride with
+us, for he grabbed his deerstalker and began to bundle up against the 
+weather.  I protested that he need not travel to the hospital with me, and
+that I would manage the care of my sudden patient, whereupon Holmes 
+said, "I do not intend to accompany you, Watson.  Rather, I am off to the
+Calhamer Club.  Indeed, while you were seeing to our guest, I dispatched
+a boy to Scotland Yard to convey to Inspector Lestrade my urgent request that
+he join me there, and that he locate and detain the confidence men who mean
+to abscond with their ill-gotten gains.  You see, I know which power won
+the game, I know where his solitary unit sits, and I am also convinced that I
+know which neutral centre remained uncaptured.  I only hope that I might arrive
+at the club in time to see the game board, which will go a long way toward
+confirming my suspicions."
+</p>
+<p align="right">
+<table width="70%"><tbody><tr><td>
+<img hspace=5 src="/Zine/Common/stopsign.jpg" align="left" border="0" />
+</td><td>
+<b>	<i>
+<p align="justify">
+Holmes's suspicions that Sir Malcolm and the others were
+the victims of a sly hustle are correct, of course, and at the Calhamer
+Club he will indeed find a particular single unit standing on a particular
+space on the Diplomacy board. Is it an army? Is it a fleet? On which space
+does it sit? And which Great
+Power owns it?  Holmes also is correct about which centre was never taken,
+and in fact, the Great Detective can correctly specify the ownership of every
+centre on the board.  When you, like Holmes, have reconstructed this
+costly game of Last Man Standing,
+		<a href="mailto:manus@diplom.org">mail your solution to The Pouch!</a>
+</p>
+<p align="justify">
+	...If you need just a little bit more help, 
+<!--
+	<script>
+	function help2()
+	{	alert(
+			'As Holmes threw his scarf over his shoulder and rushed into ' +
+			'the weather, he called back, "The ' + "baron's " +
+			'second game of Last Man ' +
+			'Standing, Watson, follows the same general course as his first."');
+		return false;
+	}
+	</script>
+-->
+	<script>
+	function help2()
+	{	alert(
+			'As Holmes threw his scarf over his shoulder and rushed into ' +
+			'the weather, he called back, "I have no doubt ' +
+			'that the baron patterned his second game of ' +
+			'Last Man Standing after the first, systematically ' +
+			'incorporating neutral centres until they were ' +
+			'exhausted.  If you find the time, you' + "'" +
+			'd do well to do the same."');
+		return false;
+	}
+	</script>
+	<a href="#" onclick="return help2();">click here</a>.
+</p>
+	</i>
+</b>
+</td></tr></tbody></table>
+</p>
+</div>
+<! ---------------------- S I G N A T U R E -------------------- >
+<p align="justify">
+<b>&mdash; Dr John H. Watson</b>
+<table>
+<tbody>	<tr valign="top">
+		<td>	<a href="mailto:manus@diplom.org"><img src="/Zine/Common/letter.gif" border="0"></a>
+		</td>
+		<td align="left">	<b>	via Mario Huys
+				(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+				<br />and Manus Hand
+				(<a href="mailto:manus@diplom.org">manus@diplom.org</a>)
+			</b> 
+		</td>
+	</tr>
+</tbody>
+</table>
+<p>
+<i>
+	If you wish to e-mail feedback on this article to the author,
+	and clicking on the envelope above does not work for you, feel free 
+	to use the <a href="/Zine/Working/Common/DearDP.html">"<b>Dear 
+	DP...</b>"</a> mail interface.
+</i>
+</p>
+<! ----------------------- C L O S U R E ---------------------- >
+		</td>
+	</tr>
+</tbody>
+</table>
+<p />
+<hr align="center" width="100%" size="-1" color="gray" />
+<a href="/Zine/"><img src="/Zine/Common/DPbutton2.gif" align="left" border="0" /></a>
+<a href="/Zine/S2012M/"><img src="/Zine/Common/toS2012M.gif" align="right" border="0" /></a>
+</body>
+</html>
+<!--
+-->

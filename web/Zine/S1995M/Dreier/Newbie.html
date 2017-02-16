@@ -1,0 +1,184 @@
+<TITLE>
+DP S1995M: Running Newbie E-Mail Games
+</TITLE>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1995M/"><IMG align=right SRC="/Zine/Common/toS1995M.gif" border=0></A>
+<BR><BR><HR>
+<H1><center>Running Newbie<BR>E-Mail Games</H1></center>
+<h2><center><em>Jamie Dreier</em></center></h2>
+<HR>
+The e-mail version of the Diplomacy hobby is seeing a surge of interest
+these days. Each week a few newcomers post to the
+<samp><B>rec.games.diplomacy</samp></B> newsgroup asking for information
+on how to become involved. As a consequence, there is a growing need for
+games catering to newcomers. Herein a few notes on my experiences GM'ing
+such games.
+<P>
+Any GM ought to read the
+<A HREF="http://www.ugcs.caltech.edu/~roustk/judge/data/master.html">
+help file, available from the judges, on Mastering
+a game</A>. Since I assume all potential GM's will be experienced in obtaining
+judge files, I'll just leave this part to you (or, to make it easy
+on you, you could click on the
+hotlink found in the previous sentence)!
+<P>
+I first distinguish between newcomers to the game of Diplomacy, on the one
+hand, and newcomers to the e-mail world, on the other. If you're GM'ing a
+game for people who have never played Diplomacy, or who have played only a
+game or two, you'll need to explain a good deal more than you have to say
+when the players have some Diplomacy experience but are somewhat dazzled by
+the judges. Most of the notes below are aimed at helping newbies to the
+net or at least to the play of Diplomacy through it.
+<HR>
+<H3>Setting Up And Signing On</H3>
+<samp>CREATE</samp> a game, <samp>BECOME master</samp>, and <samp>SET</samp>
+a <samp>COMMENT</samp> for the game, explaining
+(briefly) that it is intended for newcomers.
+<P>
+Personally, I like to <samp>SET ALL PRESS</samp>. For one thing, it's always
+fun to
+watch. But for a newbie game, it can be functional, too. You'll be able
+to keep an eye out to see whether anyone's negotiating past the deadline
+(which is against House Rules).
+<P>
+Notices of forming Newbie games should be posted to r.g.d. It would be
+unwise to expect newcomers to know how to list forming games from the
+judges. It's helpful to scan the newsgroup for recent requests from
+newbies, and write to each poster announcing the formation of your game. In
+your mail and in your newsgroup posting, include your e-mail address
+explicitly and tell anyone interested to write to you directly if they
+don't know how to <samp>SIGNON</samp>.
+<P>
+Explain to all interested parties just how to <samp>REGISTER</samp>, how to
+<samp>SIGNON</samp>, and
+also how to <samp>SET PREFERENCE</samp>s. Thereafter, explanations can be
+via <samp>BROADCAST</samp>.
+<HR>
+<H3>The Gamestart</H3>
+I strongly urge GM's of newbie games to keep a list of players' addresses.
+If the judge goes down (cf. <A HREF="#Outages">below</A>), newbies are not
+likely to know what's happening.
+<P>
+Write a <samp>BROADCAST</samp>, saying hi, and explaining the basics of press.
+Also explain how to <samp>GET HELP</samp> (and other) files from the judge.
+Point out the deadline, and the period which you <samp>SET</samp> for the
+<samp>DEADLINE</samp> calculations for future moves.
+<P>
+Don't assume that anything is obvious from the help files. Newcomers to the
+e-mail world are going to be confused, as a matter of course, by lengthy
+explanations of syntax. I recommend giving short, basic introductions to
+the main topics, oversimplifying if necessary. For example, to explain how
+press works, give a very simple example of how to send press to France. I
+got several requests for clarification of how to send press to the GM, so
+it's wise to explain that too. In particular, one player thought that
+<PRE>   press to gm</PRE>
+would do it. Fortunately, he realized that there was a possibility that the
+press would go to Germany!
+<P>
+A simple, basic example will get them started. Once they've internalized
+the simple case, the rest of the <samp>HELP</samp> file will be vastly more
+comprehensible.
+<P>
+Similar remarks apply to order syntax. Giving an example of a move order,
+and a convoy order, and a support order will prove much more helpful than the
+big help file for <samp>syntax</samp>.
+<HR>
+<H3>Answering the Frequently Asked Questions</H3>
+<DL>
+<DT><B>How do I interpret that confusing mass of garbage that's supposed to
+indicate the deadline calculation?</B>
+<DD>The main thing to explain here is the <samp>NEXT</samp> parameter. If
+anyone is interested, explain the <samp>CLOCK</samp> parameter, too. (This is
+likely to come up, because at some point a deadline will be set further in the
+future than expected. I didn't really understand this myself! I bet few GM's
+do.  Suppose the <samp>NEXT</samp> parameter is set to 72 hours. When a move
+is processed after 23:30 [the default for <samp>CLOCK</samp>], say on a Monday,
+the judge won't set the next deadline for Thursday 23:30, but rather for
+<em>Friday</em>. GM's can work it all out from
+<A HREF="http://www.contrib.andrew.cmu.edu/usr/ss8c/dip/deadline.html">
+the <samp>deadline</samp> file</A>
+and explain it.)
+<DT><B>What is a Dedication Rating?</B>
+<DD>The short, sweet explanation is that everyone starts with a dedication of
+zero, gains 3 points every time he or she submits a move on time, and loses a
+point for every lateness day. Abandoning costs 100 points, a deficit
+difficult to recover from. Mention that it is reasonable to ask for
+deadline extensions, and that most GM's will grant any reasonable request.
+<DT><B>How can I find out the current position?</B>
+<DD>It might be good to mention the <samp>LIST</samp> command right off the
+bat, without waiting for someone to ask.
+</DL>
+<HR>
+<H3>Some Things They'll Never Think To Ask About</H3>
+It's a good idea to explain the following three things, maybe during a lull
+in the game, or between the game start and the processing of the first move.
+<OL>
+<LI>The <samp>HISTORY</samp> command
+<LI><samp>GET SUMMARY</samp>
+<LI><samp>SET WAIT</samp> (actually, some people do get the idea on their own)
+</OL>
+<HR>
+<H3>The First Move</H3>
+When more than one of the players is a newcomer to Diplomacy, I think it's
+very valuable, and worth the effort, to post a short discussion of all of
+the opening moves. I used the <em>Gamers' Guide</em> second edition. If you
+stick to fairly standard analysis, you're in less danger of ruining someone's
+carefully planned surprise. It ought to go without saying that comments on
+play should not influence the outcome of the game any more than you can
+avoid.
+<HR>
+<A NAME=Outages>
+<H3>When The Judge Goes Down</H3>
+First, write to the players. (If you have newbie observers, write to them,
+too. I forgot to do this in my games. Stupid of me.)
+<P>
+Explain that the things usually come back up in a few hours.
+<P>
+Ask them <B>not</B> to send tons of mail to the judge testing to see whether
+it's back. When a judge goes down, it will come back up to find a very
+large queue of mail, and its first priority will be to empty that queue.
+The judge won't process moves until it gets through its mail queue. So
+sending lots of mail will only postpone the processing of moves. It would be
+just great if <em>experienced</em> judge-users would pay attention to this
+rather obvious fact. Let's try to educate a new generation, shall we?
+<P>
+Point out that they can continue to negotiate via direct e-mail while they
+await the return of the judge.
+<P>
+This would be a good time to spring any amusing pastimes you've saved up. I
+like to pose some map questions, such as the following
+<UL COMPACT>
+<LI>Which spaces border the largest number of supply centers?
+<LI>Which spaces border the smallest number of supply centers?
+<LI>Which neutral centers can the various powers <em>guarantee</em> for
+themselves in the first year by making the right opening moves? And which
+power has no such 'safe center'?
+</UL>
+Players seemed to enjoy these.
+<HR>
+<H3>In Closing....</H3>
+As this goes to press, both of my newcomer games are still in progress. No
+doubt some important new issues will come up. I will keep you posted.
+<P>
+In a short separate contribution to this issue, I explain, in a way intended
+to be understandable to newcomers to the game (not merely to the net),
+<A HREF="NoTheory.html">why there is no opening theory to speak of in
+Diplomacy</A>. Players in my games seemed to find this interesting. It's a
+good deal more controversial than the banal and mundane notes above, but I
+hereby release it to the public domain.
+<P>
+<B>Jamie Dreier<BR>
+Brown University<BR>
+(<A HREF="mailto:James_Dreier@brown.edu">James_Dreier@brown.edu</A>)</B>
+<P>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the mail address above does not work for you, feel free to use the "<b>Dear
+DP...</b>" mail interface, which is <A HREF="/Zine/S1995M/Common/DearDP.html">located
+here...</A>.</i>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1995M/"><IMG align=right SRC="/Zine/Common/toS1995M.gif" border=0></A>
+<BR><BR>
+<!--
+-->

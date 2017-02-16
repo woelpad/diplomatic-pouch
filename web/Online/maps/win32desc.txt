@@ -1,0 +1,38 @@
+I've completed work on a mapping program for win32.  Although I feel it's 
+quite stable, I'm still claiming it to be beta.
+
+There are many objectives for this project:
+  - Parse complete history files, including single turn results.
+    (Histories aren't more than a file of appended judge messages)
+  - Graphically, and intuitively display results, nearly eliminating need
+    to look at judge files.
+  - Step through histories in a simple manner so as to quickly, and
+    clearly become familiar with past moves. (Handy when taking over a
+    power and wishing to view the aggressiveness of powers in previous
+    turns.)
+  - Allow for easy installment of new variant maps.
+  - Allow for zooming areas of the map.
+
+A few points which I will mention are:
+  - Only standard map is provided with this release.  (Volunteers will
+    hopefully build new maps :)
+  - Most of the graphics are small bitmaps, and as such may be customised
+    as desired.
+  - I've tested the program, and it's supporting files on Win95 only, and
+    as such can only guarantee it to be functional on that environment.
+    Theoretically it should run on WinNT.
+  - I expect to make regular updates as new ideas are suggested, and bugs
+    fixed.
+
+I welcome anyone to submit new ideas, report bugs, or generally make 
+comments.
+
+The files to download may be found by anonymous ftp at:
+      Devel.diplom.org  in /pub/diplomacy/Sources
+Soon: ftp.ugcs.caltech.edu   in /pub/diplomacy/Sources   (I hope :)
+
+grab: bdmap32.txt and bdmap32.zip which contains a setup program to run.
+
+Please, though, don't ask for support of win3.x, as this is impossible.  
+(Unless you want to port it yourself :)
+

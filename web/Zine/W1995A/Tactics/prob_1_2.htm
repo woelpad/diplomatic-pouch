@@ -1,0 +1,150 @@
+<HTML>
+<HEAD>
+<TITLE>DP W1995A: Diplomacy Tactics - Problem 1 (part 2)</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=both><HR>
+<H4>Answer to Problem 1 (part 2) </H4>
+<BLOCKQUOTE>
+<IMG SRC="images/prob_1.gif" ALIGN="BOTTOM" ALT="Problem 1" HEIGHT="326" WIDTH="407">
+</BLOCKQUOTE>
+<P>
+The first is simple. Just use the support from Bulgaria which
+Russia cannot cut.
+<BLOCKQUOTE>
+Turkey: Fleet Black Sea -&gt; Rumania.<BR>
+Turkey: Army Bulgaria SUPPORT Fleet Black Sea -&gt; Rumania.<BR>
+Turkey: Army Armenia -&gt; Sevastapol.
+</BLOCKQUOTE>
+<P>
+The main problem with this approach is that it is likely to give
+up the Black Sea, which will make it very hard to advance any
+further from this position.
+<P>
+The second solution is to convoy Armenia across the Black Sea
+to Rumania (this is the <A HREF="section3.htm#LeapfrogAttack">leapfrog attack </A>again).
+<BLOCKQUOTE>
+Turkey: Fleet Black Sea CONVOY Army Armenia -&gt; Rumania.<BR>
+Turkey: Army Bulgaria SUPPORT Army Armenia -&gt; Rumania.<BR>
+Turkey: Army Armenia -&gt; Black Sea -&gt; Rumania.
+</BLOCKQUOTE>
+<P>
+This is probably the best attack against the new Russian defense,
+but because it doesn't cut the possible support from Sevastapol
+it fails against both of our original Russia defenses.
+<P>
+If keeping all of this in your head makes you dizzy, then it's
+time to build the move resolution matrix:
+<P>
+<CENTER>
+<TABLE BORDER=1 ALIGN="CENTER">
+<TR><TH ALIGN="CENTER"></TH><TH COLSPAN=3 ALIGN="CENTER">
+<CENTER>
+<A NAME="UQHTML1"><B>Russian Defense</B> </A>
+</CENTER>
+</TH></TR>
+<TR><TH ALIGN="CENTER">
+<CENTER>
+<A NAME="UQHTML6"><B>Turkish Attack </B></A>
+</CENTER>
+</TH><TH ALIGN="CENTER" ALIGN="CENTER" ALIGN="CENTER" ALIGN="CENTER">
+<CENTER>
+<B>Ukr S Rum </B>
+</CENTER>
+</TH><TH ALIGN="CENTER">
+<CENTER>
+<B>Ukr S Sev</B>
+</CENTER>
+</TH><TH ALIGN="CENTER">
+<CENTER>
+<B>Ukr S Rum -&gt; Sev </B>
+</CENTER>
+</TH></TR>
+<TR><TH ALIGN="CENTER">
+<CENTER>
+<B>Bul -&gt; Rum </B>
+</CENTER>
+</TH><TD CELLSPACING="28" ALIGN="CENTER" ALIGN="CENTER" ALIGN="CENTER" ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD></TR>
+<TR><TH>
+<CENTER>
+<B>Arm -&gt; Sev</B>
+</CENTER>
+</TH><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD></TR>
+<TR><TH>
+<CENTER>
+<B>Bla -&gt; Rum</B>
+</CENTER>
+</TH><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD></TR>
+<TR><TH ALIGN="CENTER">
+<CENTER>
+<B>Arm -&gt; Bla -&gt; Rum </B>
+</CENTER>
+</TH><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+?
+</CENTER>
+</TD></TR>
+</TABLE>
+</CENTER>
+<P>
+The Russian defenses have been listed by the key defensive order
+given to the Ukraine, while the Turkish attacks have been listed
+by the key attacking order which is being given support.
+<P>
+Can you fill in the results for each case?
+<P>
+<A HREF="prob_1_3.htm"><IMG SRC="/Zine/Common/Question.gif" ALT="?" HEIGHT="40" WIDTH="40"></A>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=both>
+</BODY>
+</HTML>
+<!--
+-->

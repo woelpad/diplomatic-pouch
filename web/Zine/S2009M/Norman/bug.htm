@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<TITLE>DP S2009M: The Most Obscure Bug</TITLE>
+<!-- ---------------------Header---------------------------------- -->
+<!-- ------------------------------------------------------------- -->
+<!---- Authored by  ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Created on September 23, 2006 ---->
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+<br clear="all">
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<CENTER>
+<H1>THE MOST OBSCURE DIPLOMACY ADJUDICATOR BUG IN THE WORLD</H1>
+<h2>by David Norman</h2>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+</CENTER>
+<p>
+  <TABLE WIDTH="95%" BORDER="0" ALIGN="CENTER">
+      <TR>
+	      <TD ALIGN="JUSTIFY">
+<p>When writing a computer adjudicator for <b>Diplomacy</b>, it is inevitable that it won't work perfectly first time. But generally, once a few games have been played, the problems have all been found and fixed, and it works correctly and reliably. However, with the DAIDE adjudicator, we've recently found a bug that's so obscure that I thought it worth writing about it.
+<p>The DAIDE (Diplomacy AI Development Environment) Adjudicator is used to run <b>Diplomacy</b> games between AIs. But it is also used within various AIs, to generate orders. Albert, by Jason van Hal is one such AI. Albert generates several sets of orders for each of the powers, and then plays them against each other to evaluate how good each set is, in order to select the best set to submit. Jason estimates that for each turn played, Albert does about 150,000 internal adjudications!
+<p>A short while ago, Jason reported to me that he was occasionally seeing Albert crash inside the adjudicator module. As I'd written this module, he wanted me to look at it. The problem was, it was very occasional &#8212 Jason estimated it only happened about once in every 150 games played between 7 Alberts.
+<p>The problem is, when the bug happens this rarely, it's very difficult to tie it down. The bug is causing a crash, so you can't log anything after the event. And writing the current adjudication to disk before doing each one, adds a huge amount of overhead to Albert. However, through a combination of methods, Jason firstly managed to tie it down to a position in which it happens, and then by running Albert repeatedly on that position, to a specific adjudication.
+<p>So, the bug was as follows:
+<p>Firstly, you need two convoys. This isn't a surprise &#8212 mutiple convoys are a pain to adjudicate, as each convoy can affect the other.
+<p>Secondly, you need a fleet in the destination of each convoy. Each fleet is either supporting the convoying fleet for the other convoy, or supporting an attack on it. This ensures that it's difficult to work out which one to adjudicate first. But this still isn't that unusual.
+<p>Then you need one of those convoys to actually be a multi-step convoy.
+<p>And to complete the complication, you then need one of the fleets, other than the ones involved in the circle, to be dislodged.
+<p>And at that point, it was correctly working out that the Turkish convoy was broken, and therefore it could resolve this one first and then the Italian. But then it was removing the Italian convoy from the list of convoys to resolve, not the Turkish one &#8212 which meant a few steps later, it was trying to resolve a convoy it had resolved already, and having a convoy that was never being resolved. And that is what caused it to crash.
+<p>Given the combination of orders required to make this bug occur, it is pretty rare that it happens. Given that Albert is doing 150,000 adjudications per turn, a game is typically about 40 turns, and it was only crashing every 150 games, that suggests that this bug happens about once in every billion adjudications!
+<p>Which means if it was in any other Diplomacy Adjudicator, it would probably never have happened!
+<BR><BR><TABLE>
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD><A href="mailto:david@ellought.demon.co.uk"><IMG 
+      src="/Zine/Common/letter.gif" border=0></A> </TD>
+    <TD><STRONG>David Norman<BR>(<a href="mailto:david@ellought.demon.co.uk">david@ellought.demon.co.uk</a>)</STRONG> 
+  </TD></TR></TBODY></TABLE>
+<P>
+<I>If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the <A 
+href="/Zine/S2009M/Common/DearDP.html">"<B>Dear 
+DP...</B>"</A> mail interface.</I> 
+</table><P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+</BODY></HTML>
+<!--
+-->

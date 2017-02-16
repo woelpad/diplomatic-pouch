@@ -1,0 +1,665 @@
+<HEAD>
+   <TITLE>DP F1999M: Machiavelli</TITLE>
+</HEAD>
+<BODY bgcolor=white>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1999M/"><IMG align=right SRC="/Zine/Common/toF1999M.gif" border=0></A>
+<BR clear=both><HR>
+<H1 align=center>
+Machiavelli - State of the Art of the State</H1>
+<H2 align=center><i>Bruce Duewer</i></H2>
+Machiavelli is one of my favorite variants, and my favorite that is supported
+both by the Ken Lowe Internet judges and is in print. That I
+happen to be relatively good
+at it as well is a bonus. I've gotten a lot more requests lately for information
+regarding certain oddities in the current state of the Machaivelli implementation
+of the judge than I have in a while. Apparently, we've got a lot of new
+players (a very good thing) and they are justifiably annoyed when they
+run into places where things happen differently than they expect. Thus,
+in this first article on Machiavelli (yes Manus, that's a promise that this will
+be a short series) I will ignore various pleas for a
+strategy guide, first trying to make sure everyone can go into games with
+a relatively even playing field. This article is my attempt to address
+three burning questions in the hearts of most Judge Machiavelli newbies
+and many GMs:
+<UL>
+<LI>What are the <i>real</i> rules?</LI>
+<LI>How will the Judge screw up?</LI>
+<LI>What do we do when the Judge screws up?</LI>
+</UL>
+<HR><H3 align=center>
+<font color=red><u>Section I: The Rules</u></font></H3>
+The Judge implementation of Machiavelli is based on the original release,
+rather than on the more recent Avalon Hill re-release. Thus, when playing
+on the judge, the first principle
+to remember is to ignore the new release, or you will get very confused.
+<P>There are actively used sources of knowledge about what the rules are.
+They are:
+<ul>
+<li>The file <tt><A HREF="http://www4.ncsu.edu/eos/users/b/beduewer/www/rules.mach">rules.machiavelli</A></tt>.
+This generally takes precedence.
+<li>The judge code. It's got bugs (to be discussed later), but where
+it does not agree with the <tt>rules.machiavelli</tt> file, it takes precedence. I've always tended to
+view all disagreements with <tt>rules.machiavelli</tt> as bugs, but some disagree.
+<li>The original Machiavelli rules by Battleline Publications. These
+are dangerous, since they contain <i>many</i> things that were changed in the
+judge port. Still, they occasionally provide greater detail on ambiguous
+matters. In most respects the judge port uses the most advanced version
+of any given rule, rather the the beginner's section version.
+<li>Tradition. Certain people have gained a reputation as knowing how
+things are supposed to happen, and are sometimes asked what the deal is
+when something goes wrong. I've recently apparently paid my dues
+enough to join these august ranks, if my mail influx is any indication.
+Probably on the theory that because I've played so many games, most
+of the odd things that can happen have happened to me already.
+</ol>
+<P>I'm going to risk causing great confusion by stating what <i>I</i> think
+the proper way to play is on the less-than-clear points, and I invite others
+to write me with comments. Hopefully at least on the points where we can
+reach a consensus, either <tt>rules.machiavelli</tt> can be updated or an
+<tt>errata.machiavelli</tt>
+can be added to the distribution. I apologize for the laundry-list nature
+of this, and how things that are simply
+easy to misread will be mixed in with things about which
+serious contention exists. Some of these are also occasionally handled
+inconsistently by the judge and will be addressed in that respect in sections
+II and III. GM's are welcomed to include a statement in the house
+rules for games either affirming or denying agreement with this document
+until we produce something more official.
+<P>
+<b>Anchored Cities</b>
+<ul>
+<li>The only place fleets can convert to garrisons, and garrisons can convert
+to fleets is in fortified cities with anchors. This is true in any phase.
+<li>As implied by the above, fleets cannot retreat to garrison form in
+unanchored cities.
+<li>Fleets can only siege anchored cities.
+<li>Fleets are not barred from taking unanchored cities.
+<li>Fleets can only be built in anchored cities.
+<li>Armies can use anchored cities in the same ways they would unanchored
+cities.
+</ul>
+<p>
+<b>Rebellions</b>
+<ul>
+<li>Rebellions do not remove ownership of an area
+<li>Rebellions can seperately affect a province and a city
+<li>When rebellions form in an area, if there is a garrison in the city
+the city does not enter rebellion
+<li>It is impossible to retreat by garrison conversion into a city with
+a rebellion directed against you in it.
+<li>The only ways to remove a rebellion from one of your cities are to
+siege it, to pay to have it removed, or for someone to take the city from
+you.
+<li>Rebellions form due to either a bribe specifically creating one,
+or during the process of assasination.
+</ul>
+<p>
+<b>Variable Incomes</b>
+<ul>
+<li>Variable incomes are tied to who can use the home area the roll is tied
+to, <u>not</u> ownership of the capital of the home area. If a power controls
+a home area yet doesn't control any of the cities, they still get the income.
+Similarly, rebellions and assasinations do not prevent the collection of
+variable income.
+<li>Genoa is unusual in that it is not considered a home area for purposes
+of victory conditions or building units. But it's variable income roll
+is treated just like those of major powers, insofar as rebellion, famine,
+and active sieges do not prevent income from the variable roll. Ownership
+of the Genoa variable roll is based solely on ownership of the city.
+</ul>
+<P>
+<b>Sieges</b>
+<ul>
+<li>Contrary to <tt>rules.machiavelli</tt>,
+cities under siege still produce income.
+I agree that this is a good thing, but strongly feel that this is a place
+where revision of the rules file is needed.
+<li>A garrison may not convert once a siege has been established. It retains
+the ability to support units into the province however.&nbsp; Note that
+this means that once a siege is established, a normal unit can keep a special
+unit trapped.
+</UL>
+<p>
+<b>Retreats</b>
+<UL>
+<li>A unit may not retreat into garrison form unless that is the only retreat
+available.
+<li>A unit that retreats into garrison form should keep the city under
+the control of the unit's owner.
+<li>Since the province and city of Venice are the same space, and venice
+only borders the Lagoon, a unit in Venice cannot retreat.
+</UL>
+<p>
+<b>Timing of ownership changes</b>
+<ul>
+<li>Ownership change checks should occur essentially constantly. For example,
+if a unit is purchased, it immediately gains control of the area it is
+in when purchased even if it immediately moves out.
+<li>Because of this, if a unit in a city is removed during builds, and
+a unit in the province is not, the power owning the unit in the province
+should gain control before spring movement.
+<li>Also because of this, if a unit is purchased and in the same round
+moved, the person gains control of where it was bought before it leaves.
+</UL>
+<p>
+<b>Elimination:</b>
+<UL>
+<li>If a power controls only it's initial home area, it is removed immediately
+when it loses ownership of all its home cities after units have moved (ie,
+if someone buys the unit in one home city and the power even retreats into
+another of their home cities before the end of the season they are OK).
+<li>If a power takes control of another home area, from that point on it does
+not lose control of a home area unless another power gains control of it. 
+<li>If a player loses all home cities of all home areas they currently own, the
+judge eliminates them in the same way as if they lost all their home cities
+with just one home area. Based on feedback and recent GM rulings, I think
+the majority of the community agrees this is good to leave as is.
+<!--
+<li>If a power takes control of another home area, from that point on
+it doesn't lose control of a home area unless another power gains control
+of it. Thus, a power could own nothing, and remain in control of several
+home areas. [Yes, I know that another common ruling is that when one loses
+control of all but one home area they are back in the state as if they
+had only an initial home area. I feel each choice is somewhat arbitrary,
+but my ruling has a little more tradition].
+-->
+<li>If a power controls all of another power's home area <i>at the end
+of a season</i> they gain control of it, picking up the ability to build there
+and the variable rolls from the area.
+<li>Note an implication of these: <FONT COLOR="#CC0000">If a power in
+the same season takes control of another power's home area, while losing
+all his current home areas, they are eliminated <i>before</i> a check is made
+to gain a new home area, and all their territory goes neutral. They do
+<i>not</i> live on in the new home area in this case.</FONT>
+</ul>
+<p><b>Counter-Bribes</b>
+<UL>
+<li>Counterbribes can only be in multiples of 3d.
+<li>Counterbribes can only be used to protect units (that is, you can't counter
+a rebellion or assasination).
+</UL>
+<p><b>
+Bribes</b>
+<UL>
+<li>Bribes can only be in multiples of 3d.
+<li>Bribes against garrisons in cities of value greater than 1 cost twice
+as much.
+</ul>
+<p><b>Adjacency</b>
+<UL>
+<li>If this flag is set, bribes directed at units can only be directed at
+adjacent units.
+<li>For purposes of this check, unit type is irrelevant. For example,
+a fleet in Dalmatia is "adjacent" to an army in Bosnia, even though the
+fleet cannot go there. Similarly, an army in Romagna is "adjacent" to the
+UAS.
+</ul>
+<p><b>NoDice</b>
+<ul>
+<li>This flag turns off random events. These include Famine, Plague, Assasination,
+and the Bank.
+<li>Variable income rolls are now predictable. They alternate by year,
+sometimes all 4, sometimes all 3.
+</UL>
+<p><b>Coastal Conovys</b>
+<UL>
+<li>Fleets along coasts can be used to convoy armies.
+<li>Inland armies cannot be convoyed. Armies must start in an area adjacent
+to the coast or sea zone of the fleet at the front of the chain, and end
+in an area adjacent to the coast or sea zone of the fleet at the end of
+the chain.
+<li>Convoys cannot jump coasts; for example a fleet in Croatia/sc and
+Croatia can't convoy an army from Dalmatia to Carniola.
+</ul>
+<p><b>Special movement rules</b>
+<UL>
+<li>Piombino and Messina control straits; <tt>rules.machiavelli</tt> explains this
+adequately.
+</ul>
+<p><b>Assasination Chits</b>
+<UL>
+<li>Each nation gets one assasination chit for each other nation at game
+start.
+<li>Transfer of assasination chits can occur at any time. 
+No one is notified when the transfer occurs, not even the receiver.
+<li>To see your chit list, sign on to the game then list it.
+</ul>
+<p><b>Bank operations</b>
+<ul>
+<li>The 25d limit is on principal, not interest.
+<li>One can pay money to the bank then borrow more on the phase a loan
+is due, and the bank will collect at the end of that phase, if doing so
+prevents an assasination.
+<li>If moves that do not prevent assasination are in place however, none
+of them will be implemented, and all orders will be converted to holds,
+and rebellion rolls will occur.
+</UL>
+<p><b>Transfers</b>
+<UL>
+<li>Cash can only be transfered when one is not in debt.
+<li>One can transfer money then borrow money during the same phase.
+</UL>
+<p><b>Special units</b>
+<UL>
+<li>Elite and Professional units have twice the normal strength for moves,
+holds, and supports.
+<li>Citizen and Professional units cost twice as much to bribe.
+<li>Special units if attacked have their entire support broken in a normal
+manner.
+<li>Each player may only have one special unit in play. One cannot build
+or buy an additional special unit if one already has one.
+</UL>
+<p><b>Fortresses</b>
+<UL>
+<li>Fortresses are not in use in the current scenerio. They are the boxes without cities
+in them. Ignore them.
+</UL>
+<p><b>Builds</b>
+<UL>
+<li>Any unit may be removed during build phase.
+<li>Only one unit may be built in each home city/province pair each build
+phase (that is, one can't build Garrison Rome and Army Rome on the same turn).
+<li>A city or province may not be the site of both a build and disband,
+but it is okay for a city/province pair that a disband occurs in one while
+a build occurs in the other.
+<li>The judge does not limit the total number of units of a player (or the
+number each
+of armies, fleets, and garrisons). This is contrary to <tt>rules.machiavelli</tt>
+and the original rules, but in my opinion the limits were an artifact
+of number of pieces supplied with the board game. I recommend modifying
+<tt>rules.machiavelli</tt> rather than
+the judge code here, and playing with unlimited normal unit builds.
+</UL>
+<p><b>
+Autonomous Garrisons</b>
+<UL>
+<li>Earn no income, but are automatically maintained.
+<li>Assert control of the province their city is in whenever it is unoccupied.
+<li>When these are created, they should hold. They immediately remove
+control of the city they are in from its former order.
+</UL>
+<p><b>Victory Conditions</b>
+<UL>
+<li>The master should state the victory conditions clearly in the game listing.
+<li>The minimum victory conditions for a relatively balanced game are
+23 cities and two home areas. Three home areas is in my opinion even better.
+<li>For ranking purposes (in my opinion), 15 city games should be ignored, and treated
+as unrated teaching games.
+</UL>
+<p><b><u>Art of the State</u></b>
+<UL>
+<li>This is actually unrelated to Machiavelli, but I thought it would be
+cool to work into my title. <U>Art of the State</U> is an album by AD,
+released in 1985. It features the talents of <A HREF="http://www.numavox.com/">Kerry
+Livgren</A>, former writer of Kansas (remember "Dust In The Wind" and "Carry
+on Wayward Son"?), at least one other former member of Kansas, and some
+others.
+</li>
+</ul>
+</dl>
+<HR><H3 align=center>
+<font color=red><u>Section II: Judge Bugs</u></font></H3>
+The Judge has several known bugs, and probably several unknown bugs. Here
+is a description of some of the most common ones, and a short description
+of the fix. Let me know if you know of more. For the purposes of this list
+I'm assuming that my interpretations in Section 1 are correct. Any
+judge coders who are motivated to do so are welcome to shrink this section.
+In my opinion, adding additional ownership checks at certain key points would
+do the most good for an easy change.
+<p><b>
+Retreat City Ownership Bug</b>
+<ul>
+<li><u>Description</u>
+<BR>This occurs most commonly when a unit is dislodged and retreats to
+become a garrison. The Judge awards ownership of the city to the power
+who just conquered the province rather than leaving the ownership in the
+hands of the person whose garrison is in the city. The problem appears
+to be that units in retreat are in a strange kind of limbo, where the check
+to see if they get the what they retreated to is overruled if someone else
+took the province that season and thus might have gotten the city under
+a different retreat.
+<li><u>Fixes</u><br>
+<ol>
+<li>If this doesn't involve a home city, happens in a season besides
+Fall, and the garrision and army are not immediately destroyed by famine
+or plague, then one can play on -- the judge figures out the garrison takes
+control of the city the next season.
+<li>If the ownership of the city <i>does</i> matter immediately, I recommend
+that the game be rolled back, and the orders for the unit be changed to
+a garrison conversion. If the unit broke any supports, or had any other
+affect on the turn, these must also be implemented by modifying orders
+of the appropritate units. Note that there are times when rolls after the
+movement in question may be affected by the change in moves (for example,
+if a power would have been eliminated). I always consider any rolls proceeding
+from an invalid adjudication to be wrong, and that the rolls from the rollback
+and reprocessing are the valid ones.
+</ol>
+</ul>
+<p><b>
+Missing Ownership Checks</b>
+<ul>
+<li><u>Description</u>
+<BR>This could be considered a more general version of the retreating garrsion
+bug. This is when the judge fails to check ownership as frequently
+as it should, and someone winds up owning (or not owning) something they
+should. Examples include if one has an army in a province and the garrison
+is removed, but the judge does not credit the owner of the army with
+ownership of the city (often when the army moves out the next turn).&nbsp;
+Another effect of the lack of change at retreats in particular is that
+retreating units don't remove rebellions in all cases when they should.
+<li><u>Fix</u>
+<BR>This can cause many different problems. Do what is necessary to make
+the game state as it should be. Often data file modification is needed.
+See section III.
+</ul>
+<p><b>
+Repeated Rolls Bug</b>
+<ul>
+<li><u>Description</u><br>
+Some versions of the judge (such as that in use on  USEF) will get stuck in a
+pattern where the same famine, plague, etc. rolls occur year after year.
+<li><u>Fixes</u><br>
+<ol>
+<li>Bite the bullet and move the game to another judge. Moves should
+be generated by the GM to move the game state to the end of the first game
+year; assuming the problem was detected due to the famine and incomes repeating,
+the new judge's rolls for the second year are now the valid ones, and proceed
+from spring.
+<li>If the problem was not detected until much later in the game, again
+move to another judge. Reshuffle the powers and start over if gunboat,
+otherwise the GM need not bother with the reshuffle.
+</ol></ul>
+<p><b>
+Negative or Out of Bounds Rolls</b>
+<ul>
+<li><u>Description</u><br>
+This occurs in some versions of the judge code, and usually affects income.
+Often it results in a power getting much larger income than it should.
+<li><u>Fix</u><br>
+Master rerolls manually to replace the invalid rolls, but leaves
+the valid ones for the same turn. If it simply resulted in extra income,
+things are easy, a few extraneous counterbribes can take care of the extra
+cash. For rebellions and such,&nbsp; editing judge files may be needed.
+</ul>
+<p><b>
+Extra Special Units</b>
+<ul>
+<li><u>Description</u><br>
+Sometimes the Judge will allow a player to enter a state where they have
+more than one Special unit. Most often, this seems to happen as a result
+of a bribe.
+<li><u>Fix</u><br>
+Master rolls back turn and eliminates the build order or purchase
+order that led to the extra special unit.
+</ul>
+<p><b>
+Truncated Order Reports</b>
+<ul>
+<li><u>Description</u><br>
+Sometimes a player's order report (or other messages) will be trunctated.
+This actually can happen in non-machiavelli games as well.
+This happens due to some strange situations where a period is created
+on a line by itself, which at least some sendmail programs treat as an
+end of message marker. Keven Roust reported one such incident
+to the Judge Maintenance mailing list, where a bribe had the effect of
+clearing a rebellion. The tacked on message to the bribe line due
+to this was just long enough to place a period on an otherwise blank line.
+<li><u>Fixes</u><br>
+<ol><li>
+The JK can get the actual expected message contents with a little
+fiddling, as well as tweak the judge code to prevent a given cause from
+repeating.
+<li>If the JK is not one of the ones that tends to respond quickly,
+a quick and dirty way to get past the problem in most cases it to intentionally
+set the error flag (to prevent processing while you fix it), erase the
+offer or order from your sheet that leads to the truncation, get the rest
+of the offers the way you want them, save a copy of that receipt, then
+put in a message that both clears the error flag and adds the bribe back
+in. Make sure that this message is in every repect correct, since if you
+accidentally fail to fix the error flag, or leave a unit unordered, then
+your will have no way of knowing.
+<li>If it's press instead of offers that causes the problem, just ask the sender to repeat themselves,
+being careful about line endings.
+</ol>
+</ul>
+<p><b>
+Frankenstien's Autonomous Garrison</b>
+<ul>
+<li><u>Description</u><br>
+When a unit is made autonomous by a bribe, it will retain the last order
+given it. This is wrong; it should hold.
+<li><u>Fix</u><br>
+Rollback and make the garrison hold.
+</ul>
+<p><b>
+Illegal Conversion Retreats Allowed</b>
+<ul>
+<li><u>Description</u><br>
+Sometimes the Judge will allow a retreat that should not be possible. One
+example of this is allowing a unit to retreat into a city in rebellion
+against it, another is if a conversion to garrision is allowed when a unit
+has been dislodged by a conversion.
+<li><u>Fixes</u><br>
+<ol><li>
+If retreats haven't happened, tell the player the illegal retreat
+is not an option.
+<li>If the retreat has happened, rollback and change the retreat order
+to a disband.
+</ol></ul>
+<p><b>
+Illegal Venice Retreats Allowed</b>
+<ul>
+<li><u>Description</u><br>
+A unit in Venice that is dislodged is allowed by the judge to retreat to
+garrison form. This creates a situation where two units occupy the same
+space, and various bad things can then occur.
+<li><u>Fixes</u><br>
+<ol>
+<li>If retreats haven't happened, tell the player the illegal retreat
+is not an option.
+<li>If the retreat has happened, rollback and change the retreat order
+to a disband.
+</ol></ul>
+<p><b>
+Mishandling of 3d multiple rules</b>
+<ul>
+<li><u>Description</u><br>
+The judge allows people to enter counter-bribes that are not multiples
+of 3d, and rather than rounding down to the nearest 3d will actually let
+the excess cause bribes to fail.
+<li><u>Fix</u><br>
+If this causes a bribe to fail that should have succeeded, roll back the game,
+and change the counterbribe to the proper amount (the largest multiple
+of three less than or equal to the counterbribe originally entered). Add
+another counterbribe that will not affect the outcome of the turn to burn
+the extra money the player ordered.
+</ul>
+<p><b>
+Victory Not Detected</b>
+<ul>
+<li><u>Description</u><br>
+The judge is not very good at detecting when someone has reached a victory.
+<li><u>Fix</u><br>
+The Master should note when a player wins, and manually make all
+the powers agree to a concession to the power that won, so that the records
+are proper.
+</ul>
+<p><b>
+Unreal Dislodgements of Convoys</b>
+	<li><u>Description</u><br>
+	In one case, there was a standoff involving an elite fleet and
+	a pair of normal fleets in an area which contained a fleet doing
+	a convoy. The elite fleet belonged the the owner of the convoying
+	fleet. The results flagged the fleet as dislodged and the convoy
+	disrupted, but the unit was not listed as one of the units to
+	retreat. The convoy should not have been disrupted; the unit was
+	not dislodged.
+	<li><u>Fix</u><br>
+	Roll back the turn and change the orders involved in making the
+	standoff so that the convoying fleet is not actually attacked, and
+	all units wind up where they should.
+<p><b>
+Paradox Situations</b>
+<ul>
+<li><u>Description</u><br>
+Sometimes a paradox will occur, like Pandin's in standard. For example,
+if two players each try to assasinate the other at the same time, then
+what happens? Or what happens if a player sieging and a player under siege
+are assasinated at the same time? The rules do not cover these situations.
+For the sake of there being some standard, here are the calls I would make
+in these situations, as well as the judge calls.
+<ul>
+<li>For the case of double-assasination and sieges, the judge goes through
+the players in processing order, doing each assasination separately.
+If the player under siege is reached first, the unit is destroyed, otherwise
+it survives. This is <b><i>not</i></b> (in my opinion) a good way to solve this. My ruling
+would be that all units under seige always survive the siege when the power
+sieging them gets assasinated, whether they are assasinated as well or
+not.
+<li>For the case where multiple assasination attempts, I would rule that
+attempts to assasinate are not prevented by one being assasinated. This
+avoids the paradox, creates another problem,
+that of whether a failed assasination costs money in such a case. I
+would say yes to this as well.
+</ol>
+<li><u>Fix</u><br>
+Usually it's a lot of work to deal with these situations. You better
+read section III now.
+</ul>
+</dl>
+<HR><H3 align=center>
+<font color=red><u>Section III: Dealing With Bugs</u></font></H3>
+<p><b>
+Rollbacks</b>
+<ul>
+Rollbacks are a simple judge mechanism whereby a turn is returned to a
+state before the turn. All players orders are set to the state they were
+immediately before processing. At this point, the GM can change the orders
+or expenses of any power using the "become" command.&nbsp; Once they have
+all been set to what is necessary to overcome the results of a given bug,
+the "process" command is used to move the game forward again. Simple, eh?
+<p>Well, actually there are side effects. While use of seed values for
+the semi-random dice generation routines means that usually rolls should
+be the same when a phase is reprocessed, all this really does is make it
+soe that if nothing is changed the rolls will remain the same. If something
+is changed (say a power is eliminated) this may cause additional rolls
+to occur or not occur and thus things get out of sync, and for essential
+game purposes a whole new set of rolls is created.
+<p>The principle I use is that if the moves were wrong, the rolls may
+also have been wrong, and the <i>right</i> rolls are those that occur after
+the rollback.
+Of course, sometimes an error occurs and in order to fix it by rollback
+it would be necessary to roll back far enough that movement or build
+phases which depended on the changed rolls have occurred. In this case,
+it is no longer okay to throw out the old rolls -- anything a player has had
+to act on should not be pulled out from under them. Another solution should
+be employed if feasible.
+</ul>
+<p><b>
+Cash Wasting Bribes</b>
+<ul>
+Sometimes a power will have more cash than they should. An easy way to
+get rid of this cash is for the master to add (or require the player to
+add) a counter-bribe or bribe for something that will have no effect on
+the game. For example, a large counterbribe on a unit noone else who can
+throw a bribe has adjacency to (in an Adjacency game). Or an attempt to
+purchase where the purchase offer is less than 18d.
+</ul>
+<p><b>
+Moving a game to a different Judge</b>
+<ul>
+Sometimes it is necessary to move a game to another Judge in order for
+it to continue. Assuming this is done without the availability of the data
+files, but with at least a listing of the proper game state, the normal
+way to do this is for all the players to sign on to a new game on the new
+judge setting their preference list as appropriate to the circumstance.
+Then the Master enters the necessary orders to bring the game up to proper
+current positionings and bank state (remembering to borrow money at the
+right times is one of the harder things, as is dealing with rebellions
+being in the wrong place during assasinations. If you make the assasinations
+happen sooner, you've got more time to correct this). Finally, the Master
+may have to have the final state somewhat different from the real one (ex,
+famine locations if the rolls were valid to create them). In this case,
+he will have to either modify the judge files or do various order adjustments
+before each processing until things can be brought back into sync.
+<p>Alternately, if one has the data files, or can create them, they can
+be moved to the new judge. See the techniques discussed below.
+</ul>
+<p><b>
+Editing Data Files</b>
+<ul>
+Sometimes, this is the only way to fix a problem. It is easier on some
+judges than others, but I've found that almost all JKs are willing to send
+you the necessary files, and then put them in place when you return them.
+So I describe what I know of the file setup here to help you when you start
+hacking on it.
+<P>The judge keeps the files for each game mostly in its own directory,&nbsp;
+with the directory name being the name of the game preceeded by a capital
+D. Some of the game info is also in the dip.master file, but this is all
+information which is duplicated in the directory as well.
+<P>The files G001, G002, etc are the files used to store all the indepth
+information about the game state. These are what you need from the GM;
+specifically, you need the one for the phase which you which
+<BR>to change the state for. The phase identifier is the first line in
+the file.
+<P>After this, is a list of units. If all you need to do is add, remove,
+or move a unit around, this is easy to do. Note that the the power IDs
+are the same as the press IDs, and autonomous units are identified using
+the &amp; character.
+<P>After a <tt>-1</tt> token, comes the next section which can be somewhat more
+confusing. It is a series of values regaring provinces laid out in a semi-horizontal
+fashion. The <tt>N:</tt> lines is the first letter of the province name, n: lines
+are the next two. The odd thing here is that Mach uses five-letter abbreviations
+for tracking provinces -- the three letter abbreviations here are not unique
+and in fact some repeat (there are three Wes entries for example). Determining
+which is which can be interesting.
+<p>The next lines are the <tt>0:</tt>, <tt>C:</tt>, and <tt>H:</tt> lines. I need to verify this with
+some tests on USVT, but if I recall correctly, they represent various sorts of ownership --
+that of owning the province, owning the city, and counting the city as
+a home city. The final line is <tt>F:</tt>, which I think contains the flags associated
+with the province and city (famine and such).
+<P>After the sections of <tt>N:</tt> et al, comes a set of lines that are pairs
+of <tt>D:</tt> and <tt>A:</tt> lines. The <tt>D:</tt> lists the treasury of the power, then 12 more
+numbers. I assume they have something to do with debt, but haven't out
+the details yet. The <tt>A:</tt> line lists the power, then the assasination chits
+owned by that power. Note that while most of the information in the game
+data file is visible to all players, the assasination chit data is not.
+<P>The next sections are playerlists of the normal sort from <tt>dip.master</tt>,
+fairly similar to what you'd find in a normal Diplomacy game. You shouldn't
+need to mess with them, except perhaps the cash and unit count entries,
+when directly editing the file. Note that these are the sections which
+duplicate info in <tt>dip.master</tt>, so if you want to change them you'll want
+to notify the JK to modify the appropriate part of <tt>dip.master</tt> as well putting
+them back in (the last section [between the "<tt>-2</tt>" and "<tt>-</tt>" tags]<i>is</i> the
+<tt>dip.master</tt> entry minus the passwords, so how to do that should be obvious
+once he has the fixed <tt>DXXX</tt> file).
+<HR>
+</dl>
+<P>
+<table>
+<tr valign="bottom">
+<td><A HREF="mailto:beduewer@eos.ncsu.edu"><IMG src="/Zine/Common/letter.gif" border="0"></A>
+</td>
+<td>
+<strong>Bruce Duewer<br>
+(mailto:beduewer@eos.ncsu.edu)</strong>
+</td>
+</tr>
+</table>
+<p>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the envelope above does not work for you, feel free to use the
+<A HREF="/Zine/F1999M/Common/DearDP.html">
+"<b>Dear DP...</b>"</A> mail interface.</i>
+<p>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1999M/"><IMG align=right SRC="/Zine/Common/toF1999M.gif" border=0></A>
+<BR clear=both>
+</BODY>
+</HTML>
+</BODY>
+</HTML>
+<!--
+-->

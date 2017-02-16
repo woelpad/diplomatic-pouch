@@ -1,0 +1,265 @@
+<HTML>
+<HEAD>
+<X-SAS-WINDOW TOP=63 BOTTOM=604 LEFT=9 RIGHT=861>
+<TITLE>DP S1998R: Diplomacy's New Rating System</TITLE>
+</HEAD>
+<body bgcolor="#ffffff">
+<a href="/Zine/">
+<img align=left src="/Zine/Common/DPbutton.gif" border=0></a>
+<a href="/Zine/S1998R/">
+<img align=right src="/Zine/Common/toS1998R.gif" border=0></a>
+<br clear=all>
+<HR>
+<H1><CENTER><FONT COLOR="#AF0000">
+A Player Rating System for Diplomacy
+</font></center></H1>
+<H3 align=center><font color=#af0000>--or--<br>
+See YARS Later, Welcome EIDRaS</FONT></CENTER></H2>
+<H3><CENTER><FONT COLOR="#AF0000"><i>by Tony Nichols</i></FONT>
+</CENTER></H3>
+<H3>Introduction</H3>
+<P>The observant amongst you may have noticed the Pouch's YARS rating
+system is currently down. This was partly technical because the
+way it was coded placed great strains on the diplom.org machine but also
+because certain people questioned the meaningfulness of the YARS
+ratings. This article introduces a new Diplomacy rating system, based
+on the ELO chess methodology, that should be up and running at the
+Pouch by the time the next issue of the Zine hits your Web browser.</P>
+<H3>Why Not YARS or The HoF?</H3>
+<P>In many ways, both YARS and the Hall of Fame work well in their
+intent to judge the best and most prolific players. However for us
+mere mortals the ratings are not comparable. For instance, in YARS a
+slightly negative rating may indicate frequent above average play or
+dreadful but infrequent play. What we need is a rating system that
+only judges ability, not the number of games played.</P>
+<H3>EIDRaS Properties</H3>
+<P>EIDRaS is an abbreviation of ELO Inspired Diplomacy Rating System,
+as you may have guessed it thus has the following advantageous ELO
+properties:</P>
+<UL>
+<LI>Players of similar ability have similar ratings allowing GMs
+to designate games for players rated 2000+ or between 1000 and
+1400. Players joining such games will be guaranteed a more even
+quality and thus hopefully better quality game.
+<LI>The difference in rating between two players is indicative of
+how their performances should differ if paired in the same game.
+For instance if you were rated 200 above France, you'd be expected
+to score half a point more and this would be the case if you were
+rated 3000 and France 2800 or you 800 to her 600.
+<LI>The abilities of opponents affect your rating. Beating up on a
+bunch of newbies will do your rating a lot less good than soloing
+against quality opposition. Conversely, losing to poor players will
+inflict greater damage on your rating.
+<LI>Recent results affect your rating more than old ones, hence
+the ability to improve, or regress, is recognised and with time
+those awful early results will stop dragging your rating down.
+<LI>Players will tend toward their true rating from 1000 over
+time, hence the top ratings will not be filled with players who
+have played one or two games but got a solo, nor will it reward playing
+extra games once a relatively accurate rating is established.
+<LI>The rating system includes map variants on an equal basis.
+</UL>
+<H3>The Math</H3>
+<P>Each player has a rating <B>R</B> and each game that rating
+changes by an amount <B><img src=Dgr.gif>R</B> (delta R) depending on the result,
+<B>S</B>, and the expected result, <B>X</B>, which itself depends on
+how you compare with the opposition ratings wise. Your rating should
+be considered as an approximate measure of your ability which with
+added results becomes more accurate. The <B>K</B> factor represents
+this by reducing the degree of rating change as the number of games
+you have played increases. The formula is simply</P>
+<P><B><img src=Dgr.gif>R = K(S - X)</B></P>
+<P><B>S = W.n &divide; N </B>is the game score where <B>n</B> is number of
+players, <B>N</B> the number of winners, and <B>W</B> is 1 if you won/draw
+or 0 if you didn't.</P>
+<P><B>X</B> is your expected result depending on your rating compared
+to your opponents. <B>X = n.e^[c.R] &divide; <img src=Sgr.gif><sub>j</sub>(e^[c.(R<sub>j</sub>)] ) </B>where c
+= 0.002 and the R<sub>j</sub>'s are the ratings of every player in the game
+including yourself. If more than one player played a nation, the time
+weighted average is used for R<sub>j</sub>. For the mathematically inclined
+this becomes the ELO formula when n=2. [1]</P>
+<P><B>K </B>is a rating change factor. It is a measure of
+how much more accurate your rating has become as a result of this
+game information. Hence it depends on number of games you have played
+before, the press settings and how many of your opponents were
+provisionally rated. K is calculated by the formula
+<B>K=(max(50s/(g+5),s) </B>where <B>g</B> is the number of games
+played; <B>s</B> is given by <B>max(f&divide;3, p.f)</B> where p is the
+fraction of provisionally rated opponents and <B>f </B>a press factor
+taking the value of 20 for partial press; 15 for broadcast only and
+10 for no-press. For real time (RT) judge games, f=f-4</P>
+<H3>Seeding the System</H3>
+<P>The system will be seeded by a iterative method. All players are
+estimated to be worth 1000 rating points and HOF results are put
+through the above formulae to generate ratings. The output ratings
+are then used as new estimates and results fed through the system
+again. This is repeated until the variation in output ratings is
+small.</P>
+<H3>Newbies</H3>
+<P>Newbies start with a 1000 point rating which will vary as per the
+above formulae. For the first seven games their ratings will be
+considered provisional and have less effect on the changes of fellow
+players rating via the K factor. </P>
+<H3>Abandonments and Replacements</H3>
+<P>If more than one player plays a nation, the nation's rating is
+assumed to be the time weighted average of the players concerned.
+(Time being measured by the number of movement seasons each was at
+the helm.)<BR>
+Abandonments ratings will change by: <B><img src=Dgr.gif>R = min(0, t<img src=Dgr.gif>R&divide;(t+T))
+</B>where t is the number of seasons you played, T the number you
+missed. It is not the place of an ability rating system to hurt the
+undedicated however annoying they are, but I don't think they can
+benefit either. It has proven very difficult to find a fair formula
+for replacements so their rating is unaffected by such games. Like
+old age this is not ideal, just better than the alternative.</P>
+<H3>A Simple Example</H3>
+<P>A group of seven established dippers play three games, one right
+after the other.  <font color=red>Note that the players take into each
+game the rating they hold as a result of the last game.</font>
+Here are the results:</P>
+<center>
+<P><TABLE BORDER=1 CELLSPACING=1 CELLPADDING=3>
+<TR>
+<Th>
+Name
+</Th><Th>
+Initial Rating
+</Th><Th>
+After ABC draw
+</Th><Th>
+After D solo
+</Th><Th>
+After ABCD draw
+</Th></TR>
+<TR>
+<TD>
+<P>Another Stabber
+</TD><TD align=center>
+<P>1300
+</TD><TD align=center>
+<P>1319
+</TD><TD align=center>
+<P>1290
+</TD><TD align=center>
+<P>1299
+</TD></TR>
+<TR>
+<TD>
+<P>Bobby Bull
+</TD><TD align=center>
+<P>1000
+</TD><TD align=center>
+<P>1032
+</TD><TD align=center>
+<P>1015
+</TD><TD align=center>
+<P>1135
+</TD></TR>
+<TR>
+<TD>
+<P>Cannon Fodder
+</TD><TD align=center>
+<P>800
+</TD><TD align=center>
+<P>837
+</TD><TD align=center>
+<P>826
+</TD><TD align=center>
+<P>850
+</TD></TR>
+<TR>
+<TD HEIGHT=15>
+<P>Dave Decent
+</TD><TD align=center HEIGHT=15>
+<P>1400
+</TD><TD align=center HEIGHT=15>
+<P>1366
+</TD><TD align=center HEIGHT=15>
+<P>1475
+</TD><TD align=center HEIGHT=15>
+<P>1471
+</TD></TR>
+<TR>
+<TD>
+<P>Elaine Egotist
+</TD><TD align=center>
+<P>900
+</TD><TD align=center>
+<P>888
+</TD><TD align=center>
+<P>875
+</TD><TD align=center>
+<P>864
+</TD></TR>
+<TR>
+<TD>
+<P>Fluent Liar
+</TD><TD align=center>
+<P>1100
+</TD><TD align=center>
+<P>1082
+</TD><TD align=center>
+<P>1064
+</TD><TD align=center>
+<P>1047
+</TD></TR>
+<TR>
+<TD>
+<P>Gil Gullible
+</TD><TD align=center>
+<P>1200
+</TD><TD align=center>
+<P>1177
+</TD><TD align=center>
+<P>1156
+</TD><TD align=center>
+<P>1135
+</TD></TR>
+</TABLE></P></center>
+<P>Note how the ratings of A, B, and C, who all achieved the same
+results, converge, and similarly for E, F and G. Against this
+opposition, D really needs to win, which still has a healthy effect on
+his rating, but the four-way draw actually leads to a rating <i>decline</i>
+for D because he should have been able to achieve better.</P>
+<H3><B>Acknowledgements</B></H3>
+<P>EIDRaS has been developed by George Heintzelman and myself. Thanks
+to Brahm Dorst for initiating the rec.games.diplomacy newsgroup thread
+that buoyed us into
+action and to all the r.g.d contributors for helping to shape the
+system. Thanks to Manus for agreeing to host EIDRaS at the Pouch and
+offering to help code it up (ready, Manus?)</P>
+<hr width=200 align=left>
+<small>[1] Actually the constant is different, we use the natural
+logarithm and X averages 1 rather than 0.5 for chess so you cannot
+use this to compare your chess vs. Diplomacy ability, but the form is
+essentially identical.</small>
+<P>
+<hr>
+<table>
+<tr valign="bottom">
+<td>
+<A HREF="mailto:anthony.nichols@virgin.net">
+<IMG src="/Zine/Common/letter.gif" border="0"></A></td>
+<td>
+<strong>Tony Nichols<br>
+(anthony.nichols@virgin.net)</strong></td>
+</tr>
+</table>
+<p>
+<em>If you wish to e-mail feedback on this article to the author, click on
+the letter above. If that does not work, feel free to use the
+<A HREF="/Zine/S1998R/Common/DearDP.html">"<strong>Dear DP...</strong>"</A> mail
+interface.</em>
+<p>
+<hr>
+<A HREF="/Zine/">
+<IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1998R/">
+<IMG SRC="/Zine/Common/toS1998R.gif" border=0 ALIGN=right></A>
+<br clear=both>
+</body>
+</html>
+</body>
+</HTML>
+<!--
+-->

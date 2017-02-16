@@ -1,0 +1,1519 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<TITLE>DP S2007R: The Statistician on SCs in 1901 & 1902</TITLE>
+<!-- ---------------------Header---------------------------------- -->
+<!-- ------------------------------------------------------------- -->
+<!---- Authored by  ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Created on September 23, 2006 ---->
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2007R/"><img src="/Zine/Common/toS2007R.gif" align="right" border="0"></a>
+<br clear="all">
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<CENTER>
+<H1>THE STATISTICIAN:<BR>SUPPLY CENTERS IN 1901 AND 1902</H1>
+<h2>by Josh Burton</h2>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+</CENTER>
+<h2>Introduction</h2>
+<p>
+In my <a href="/Zine/F2006M/Burton/DP_F2006M_best_powers.htm">first article</a>, I introduced FRIGATE, a program to perform large-scale statistical analysis of Diplomacy games.   I used FRIGATE to derive some long-winded answers to a very basic question: <i>What are the best powers to play?</i>  That's a good question to ask &#8212 at the very beginning of a game, before powers are assigned, assuming you're submitting a preference list.   But once you've been handed your colors, it's not much use.
+<p>
+The natural follow-up question is: once you know what power you're playing, <i>how should you play it?</i>  That's an incredibly complex question.  There are so many aspects of a Diplomacy game that it seems virtually impossible to sum them all up in a single, coherent set of rules.  There's obviously no "winning" strategy, since no power can survive for long without help.  The best Diplomacy players in the world are regularly eliminated when they play.  That is, in fact, one of the beautiful aspects of the game.
+<p>
+Our question may be unanswerable, but that doesn't mean people haven't tried.  There are thousands of Diplomacy strategy articles out there, and each one claims that it will improve your Diplomacy game.   I am aware that this is a tall order, but I'm going to make the same claim for this article, in which I will use FRIGATE to determine some reasonable strategies.  I hope that my statistical approach will provide some interesting results that other articles have missed.  It's not an easy task, but hey &#8212 numbers don't lie, right?
+<p>
+<h4>Problem Statement: Supply Centers in 1901 and 1902</h4>
+<p>
+Picture this: You've just begun a game of Standard Diplomacy.  You've been assigned your power, and you're staring at the board, in anticipation of the excitement of 1901.  Your main concern, of course, is supply centers.  Which neutrals do you contend?  Will you try to grab someone else's home center? Are you concerned about losing any of your own home centers?  Your quest to achieve a favorable position in the first winter will motivate a large portion of your moves and diplomacy until then.  If you're really thinking in the long term, you may be envisioning the second winter as well.  In short, you ask yourself: <i>Which centers can I take?  Which centers <b>should</b> I take?</i>
+<p>
+This question, framed as such, is easily answerable by statistical analysis.  FRIGATE can look at game summaries to determine the ownership of each supply center at the end of each year, including 1901 and 1902.  Thus it can determine the likelihood of a particular center ending up in a particular power's hands.  This is defined as that power's <i><b>Probability of Ownership</b></i>.  FRIGATE also knows the final outcome of each game, so it can determine the average number of Calhamer Points that a power can expect under certain conditions.  (Calhamer Points are awarded as follows: the winning/drawing powers receive 1 CP split evenly among them.)  The average number of CPs that a power can expect earn after occupying a supply center is called a <i><b>score</b></i>.
+<p>
+For example, if the database has 4 games, and 3 of them show Italy owning Tunis in Winter of 1901, then Italy's probability of ownership in Tunis in 1901 is 75% in this set.  If Italy went on to earn a victory in one of those games and four-way draws in the other two, then Italy's score, assuming he takes Tunis in 1901, is ( 1 + 1/4 + 1/4 ) / 3 = 50%.  With only four data points, this number isn't very reliable, but FRIGATE has an enormous database.
+<p>
+<h2>Results</h2>
+<p>
+For these results, I combine games of all press types, for a total of 8,525 games.  Due to rounding, percentages might not always add to exactly 100%.
+<center>
+<a name="table1">
+<table border="2">
+    <caption><b>Table 1:</b><br><i>Probability of Ownership, 1901</i></caption>    <tr>
+        <th>SC
+        <th><font color="red">Austria
+        <th><font color="blue">England
+        <th><font color="teal">France
+        <th><font color="black">Germany
+        <th><font color="green">Italy
+        <th><font color="gray">Russia
+        <th><font color="olive">Turkey
+        <th><font color="magenta">Unowned
+    <tr>
+        <th>Ankara
+	<th>
+	<th>
+	<th>
+	<th>
+	<th>
+	<th><font color="gray">0.59%
+	<th><font color="olive">99.41%
+        <th>
+    <tr>
+        <th>Belgium
+        <th>
+        <th><font color="blue">20.60%
+        <th><font color="teal">26.57%
+        <th><font color="black">22.73%
+        <th>
+        <th>
+        <th>
+        <th><font color="magenta">30.10%
+    <tr>
+        <th>Berlin
+        <th>
+        <th>
+        <th>
+        <th><font color="black">99.03%
+        <th>
+        <th><font color="gray">0.97%
+        <th>
+        <th>
+    <tr>
+        <th>Brest
+        <th>
+        <th><font color="blue">5.11%
+        <th><font color="teal">94.89%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Budapest
+        <th><font color="red">96.39%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">0.99%
+        <th><font color="gray">2.63%
+        <th>
+        <th>
+    <tr>
+        <th>Bulgaria
+        <th><font color="red">0.81%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">0.68%
+        <th><font color="olive">91.80%
+        <th><font color="magenta">6.71%
+    <tr>
+        <th>Constantinople
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">0.43%
+        <th><font color="olive">99.57%
+        <th>
+    <tr>
+        <th>Denmark
+        <th>
+        <th><font color="blue">2.70%
+        <th>
+        <th><font color="black">86.35%
+        <th>
+        <th>
+        <th>
+        <th><font color="magenta">10.95%
+    <tr>
+        <th>Edinburgh
+        <th>
+        <th><font color="blue">100%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Greece
+        <th><font color="red">66.40%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">3.44%
+        <th>
+        <th><font color="olive">10.66%
+        <th><font color="magenta">19.50%
+    <tr>
+        <th>Holland
+        <th>
+        <th><font color="blue">1.40%
+        <th>
+        <th><font color="black">89.23%
+        <th>
+        <th>
+        <th>
+        <th><font color="magenta">9.37%
+    <tr>
+        <th>Kiel
+        <th>
+        <th>
+        <th>
+        <th><font color="black">100%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Liverpool
+        <th>
+        <th><font color="blue">100%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>London
+        <th>
+        <th><font color="blue">99.37%
+        <th><font color="teal">0.63%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Marseilles
+        <th>
+        <th>
+        <th><font color="teal">96.83%
+        <th><font color="black">0.62%
+        <th><font color="green">2.55%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Moscow
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">100%
+        <th>
+        <th>
+    <tr>
+        <th>Munich
+        <th><font color="red">0.43%
+        <th>
+        <th><font color="teal">4.97%
+        <th><font color="black">90.58%
+        <th><font color="green">3.43%
+        <th><font color="gray">0.59%
+        <th>
+        <th>
+    <tr>
+        <th>Naples
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="green">100%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Norway
+        <th>
+        <th><font color="blue">87.84%
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">2.89%
+        <th>
+        <th><font color="magenta">9.27%
+    <tr>
+        <th>Paris
+        <th>
+        <th>
+        <th><font color="teal">99.33%
+        <th><font color="black">0.67%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Portugal
+        <th>
+        <th>
+        <th><font color="teal">78.65%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="magenta">21.35%
+    <tr>
+        <th>Rome
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="green">100%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Rumania
+        <th><font color="red">5.50%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">70.86%
+        <th><font color="olive">9.35%
+        <th><font color="magenta">14.29%
+    <tr>
+        <th>Serbia
+        <th><font color="red">89.00%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">1.22%
+        <th>
+        <th><font color="olive">2.03%
+        <th><font color="magenta">7.75%
+    <tr>
+        <th>Sevastopol
+        <th><font color="red">0.15%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">94.45%
+        <th><font color="olive">5.40%
+        <th>
+    <tr>
+        <th>Smyrna
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="olive">100%
+        <th>
+    <tr>
+        <th>Spain
+        <th>
+        <th>
+        <th><font color="teal">81.27%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="magenta">18.73%
+    <tr>
+        <th>St Petersburg
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">100%
+        <th>
+        <th>
+    <tr>
+        <th>Sweden
+        <th>
+        <th>
+        <th>
+        <th><font color="black">3.05%
+        <th>
+        <th><font color="gray">59.66%
+        <th>
+        <th><font color="magenta">37.29%
+    <tr>
+        <th>Trieste
+        <th><font color="red">85.49%
+        <th>
+        <th>
+        <th><font color="black">0.04%
+        <th><font color="green">14.48%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Tunis
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="green">87.48%
+        <th>
+        <th>
+        <th><font color="magenta">12.52%
+    <tr>
+        <th>Venice
+        <th><font color="red">1.89%
+        <th>
+        <th><font color="teal">0.05%
+        <th><font color="black">0.02%
+        <th><font color="green">98.04%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Vienna
+        <th><font color="red">92.55%
+        <th>
+        <th>
+        <th><font color="black">0.29%
+        <th><font color="green">3.26%
+        <th><font color="gray">3.89%
+        <th>
+        <th>
+    <tr>
+        <th>Warsaw
+        <th><font color="red">1.47%
+        <th>
+        <th>
+        <th><font color="black">0.76%
+        <th>
+        <th><font color="gray">97.77%
+        <th>
+        <th>
+    </tr>
+</table>
+<p>
+<a name="table2">
+<table border="2">
+    <caption><b>Table 2:</b><br><i>Probability of Ownership, 1902</i></caption>    <tr>
+        <th>SC
+        <th><font color="red">Austria
+        <th><font color="blue">England
+        <th><font color="teal">France
+        <th><font color="black">Germany
+        <th><font color="green">Italy
+        <th><font color="gray">Russia
+        <th><font color="olive">Turkey
+        <th><font color="magenta">Unowned
+    <tr>
+        <th>Ankara
+	<th>
+	<th>
+	<th>
+	<th>
+	<th>
+	<th><font color="gray">2.98%
+	<th><font color="olive">97.02%
+        <th>
+    <tr>
+        <th>Belgium
+        <th>
+        <th><font color="blue">20.50%
+        <th><font color="teal">32.48%
+        <th><font color="black">44.75%
+        <th><font color="green">0.01%
+        <th>
+        <th>
+        <th><font color="magenta">2.26%
+    <tr>
+        <th>Berlin
+        <th><font color="red">0.14%
+        <th><font color="blue">0.01%
+        <th><font color="teal">0.40%
+        <th><font color="black">95.41%
+        <th><font color="green">0.28%
+        <th><font color="gray">0.97%
+        <th>
+        <th>
+    <tr>
+        <th>Brest
+        <th>
+        <th><font color="blue">5.67%
+        <th><font color="teal">94.10%
+        <th><font color="black">0.21%
+        <th><font color="green">0.02%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Budapest
+        <th><font color="red">85.12%
+        <th>
+        <th>
+        <th><font color="black">0.04%
+        <th><font color="green">1.47%
+        <th><font color="gray">12.86%
+        <th><font color="olive">0.52%
+        <th>
+    <tr>
+        <th>Bulgaria
+        <th><font color="red">19.72%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">0.81%
+        <th><font color="gray">3.14%
+        <th><font color="olive">75.79%
+        <th><font color="magenta">0.54%
+    <tr>
+        <th>Constantinople
+        <th><font color="red">0.42%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">0.19%
+        <th><font color="gray">1.47%
+        <th><font color="olive">97.92%
+        <th>
+    <tr>
+        <th>Denmark
+        <th>
+        <th><font color="blue">12.43%
+        <th><font color="teal">0.01%
+        <th><font color="black">84.81%
+        <th>
+        <th><font color="gray">1.62%
+        <th>
+        <th><font color="magenta">1.13%
+    <tr>
+        <th>Edinburgh
+        <th>
+        <th><font color="blue">99.27%
+        <th><font color="teal">0.07%
+        <th><font color="black">0.66%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Greece
+        <th><font color="red">59.58%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">9.42%
+        <th><font color="gray">0.05%
+        <th><font color="olive">29.06%
+        <th><font color="magenta">1.89%
+    <tr>
+        <th>Holland
+        <th>
+        <th><font color="blue">7.79%
+        <th><font color="teal">0.92%
+        <th><font color="black">90.33%
+        <th><font color="green">0.01%
+        <th>
+        <th>
+        <th><font color="magenta">0.95%
+    <tr>
+        <th>Kiel
+        <th><font color="red">0.01%
+        <th><font color="blue">0.63%
+        <th><font color="teal">0.43%
+        <th><font color="black">98.19%
+        <th><font color="green">0.09%
+        <th><font color="gray">0.65%
+        <th>
+        <th>
+    <tr>
+        <th>Liverpool
+        <th>
+        <th><font color="blue">97.57%
+        <th><font color="teal">2.35%
+        <th><font color="black">0.08%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>London
+        <th>
+        <th><font color="blue">97.41%
+        <th><font color="teal">2.15%
+        <th><font color="black">0.45%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Marseilles
+        <th><font color="red">0.01%
+        <th><font color="blue">0.05%
+        <th><font color="teal">94.44%
+        <th><font color="black">1.01%
+        <th><font color="green">4.49%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Moscow
+        <th><font color="red">0.35%
+        <th><font color="blue">0.49%
+        <th>
+        <th><font color="black">0.33%
+        <th>
+        <th><font color="gray">97.95%
+        <th><font color="olive">0.88%
+        <th>
+    <tr>
+        <th>Munich
+        <th><font color="red">0.93%
+        <th><font color="blue">0.04%
+        <th><font color="teal">3.18%
+        <th><font color="black">92.03%
+        <th><font color="green">2.76%
+        <th><font color="gray">1.07%
+        <th>
+        <th>
+    <tr>
+        <th>Naples
+        <th><font color="red">0.50%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">99.35%
+        <th>
+        <th><font color="olive">0.14%
+        <th>
+    <tr>
+        <th>Norway
+        <th>
+        <th><font color="blue">72.10%
+        <th>
+        <th><font color="black">0.86%
+        <th>
+        <th><font color="gray">26.11%
+        <th>
+        <th><font color="magenta">0.93%
+    <tr>
+        <th>Paris
+        <th>
+        <th><font color="blue">0.57%
+        <th><font color="teal">97.01%
+        <th><font color="black">2.29%
+        <th><font color="green">0.13%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Portugal
+        <th>
+        <th><font color="blue">0.26%
+        <th><font color="teal">95.64%
+        <th><font color="black">0.06%
+        <th><font color="green">1.75%
+        <th>
+        <th>
+        <th><font color="magenta">2.29%
+    <tr>
+        <th>Rome
+        <th><font color="red">0.41%
+        <th>
+        <th><font color="teal">0.04%
+        <th>
+        <th><font color="green">99.55%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Rumania
+        <th><font color="red">17.96%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">0.06%
+        <th><font color="gray">65.97%
+        <th><font color="olive">14.85%
+        <th><font color="magenta">1.16%
+    <tr>
+        <th>Serbia
+        <th><font color="red">82.15%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">2.46%
+        <th><font color="gray">1.72%
+        <th><font color="olive">13.05%
+        <th><font color="magenta">0.62%
+    <tr>
+        <th>Sevastopol
+        <th><font color="red">0.45%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">82.95%
+        <th><font color="olive">16.60%
+        <th>
+    <tr>
+        <th>Smyrna
+        <th><font color="red">0.20%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">1.23%
+        <th><font color="gray">0.43%
+        <th><font color="olive">98.13%
+        <th>
+    <tr>
+        <th>Spain
+        <th>
+        <th><font color="blue">0.33%
+        <th><font color="teal">96.07%
+        <th><font color="black">0.04%
+        <th><font color="green">0.43%
+        <th>
+        <th>
+        <th><font color="magenta">3.13%
+    <tr>
+        <th>St Petersburg
+        <th><font color="red">0.02%
+        <th><font color="blue">16.25%
+        <th>
+        <th><font color="black">0.20%
+        <th>
+        <th><font color="gray">83.52%
+        <th><font color="olive">0.01%
+        <th>
+    <tr>
+        <th>Sweden
+        <th>
+        <th><font color="blue">13.35%
+        <th>
+        <th><font color="black">28.35%
+        <th>
+        <th><font color="gray">53.78%
+        <th>
+        <th><font color="magenta">4.52%
+    <tr>
+        <th>Trieste
+        <th><font color="red">80.64%
+        <th>
+        <th><font color="teal">0.01%
+        <th><font color="black">0.12%
+        <th><font color="green">18.90%
+        <th><font color="gray">0.19%
+        <th><font color="olive">0.14%
+        <th>
+    <tr>
+        <th>Tunis
+        <th><font color="red">0.22%
+        <th><font color="blue">0.01%
+        <th><font color="teal">0.47%
+        <th>
+        <th><font color="green">96.23%
+        <th>
+        <th><font color="olive">0.07%
+        <th><font color="magenta">3.00%
+    <tr>
+        <th>Venice
+        <th><font color="red">6.20%
+        <th>
+        <th><font color="teal">0.27%
+        <th><font color="black">0.26%
+        <th><font color="green">93.27%
+        <th><font color="gray">0.01%
+        <th>
+        <th>
+    <tr>
+        <th>Vienna
+        <th><font color="red">86.06%
+        <th>
+        <th><font color="teal">0.06%
+        <th><font color="black">0.69%
+        <th><font color="green">8.03%
+        <th><font color="gray">5.13%
+        <th><font color="olive">0.04%
+        <th>
+    <tr>
+        <th>Warsaw
+        <th><font color="red">3.18%
+        <th>
+        <th><font color="teal">0.13%
+        <th><font color="black">4.75%
+        <th><font color="green">0.13%
+        <th><font color="gray">91.67%
+        <th><font color="olive">0.14%
+        <th>
+    </tr>
+</table>
+<p>
+<br>
+<p>
+<a name="table3">
+<table border="2">
+    <caption><b>Table 3:</b><br><i><b>Base Score</b> (8525 games)</i></caption>
+    <tr>
+        <th>Power
+        <th><font color="red">Austria
+        <th><font color="blue">England
+        <th><font color="teal">France
+        <th><font color="black">Germany
+        <th><font color="green">Italy
+        <th><font color="gray">Russia
+        <th><font color="olive">Turkey
+    <tr>
+        <th>CPs
+	<th><font color="red">11.68%
+	<th><font color="blue">14.29%
+	<th><font color="teal">19.02%
+	<th><font color="black">14.81%
+	<th><font color="green">11.11%
+	<th><font color="gray">12.97%
+	<th><font color="olive">16.12%
+    </tr>
+</table>
+<p>
+<a name="table4">
+<table border="2">
+    <caption><b>Table 4:</b><br><i>Score Given Ownership, 1901</i></caption>
+    <tr>
+        <th>SC
+        <th><font color="red">Austria
+        <th><font color="blue">England
+        <th><font color="teal">France
+        <th><font color="black">Germany
+        <th><font color="green">Italy
+        <th><font color="gray">Russia
+        <th><font color="olive">Turkey
+    <tr>
+        <th>Ankara
+	<th>
+	<th>
+	<th>
+	<th>
+	<th>
+	<th><font color="gray">12.80%
+	<th>
+    <tr>
+        <th>Belgium
+        <th>
+        <th><font color="blue">19.17%
+        <th><font color="teal">22.71%
+        <th><font color="black">16.02%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Berlin
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">13.22%
+        <th>
+    <tr>
+        <th>Brest
+        <th>
+        <th><font color="blue">17.79%
+        <th><font color="teal">19.44%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Budapest
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="green">15.10%
+        <th><font color="gray">18.69%
+        <th>
+    <tr>
+        <th>Bulgaria
+        <th><font color="red">17.03%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">11.49%
+        <th><font color="olive">16.02%
+    <tr>
+        <th>Denmark
+        <th>
+        <th><font color="blue">18.42%
+        <th>
+        <th><font color="black">15.61%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Greece
+        <th><font color="red">14.12%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">13.61%
+        <th>
+        <th><font color="olive">24.06%
+    <tr>
+        <th>Holland
+        <th>
+        <th><font color="blue">22.23%
+        <th>
+        <th><font color="black">15.43%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>London
+        <th>
+        <th>
+        <th><font color="teal">28.46%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Marseilles
+        <th>
+        <th>
+        <th>
+        <th><font color="black">11.70%
+        <th><font color="green">13.26%
+        <th>
+        <th>
+    <tr>
+        <th>Munich
+        <th>
+        <th>
+        <th><font color="teal">21.00%
+        <th><font color="black">15.45%
+        <th><font color="green">10.27%
+        <th><font color="gray">7.83%
+        <th>
+    <tr>
+        <th>Norway
+        <th>
+        <th><font color="blue">14.77%
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">18.57%
+        <th>
+    <tr>
+        <th>Paris
+        <th>
+        <th>
+        <th>
+        <th><font color="black">23.80%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Portugal
+        <th>
+        <th>
+        <th><font color="teal">19.08%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Rumania
+        <th><font color="red">12.92%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">14.86%
+        <th><font color="olive">18.69%
+    <tr>
+        <th>Serbia
+        <th><font color="red">12.14%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">23.09%
+        <th>
+        <th><font color="olive">23.55%
+    <tr>
+        <th>Sevastopol
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">13.43%
+        <th><font color="olive">17.79%
+    <tr>
+        <th>Spain
+        <th>
+        <th>
+        <th><font color="teal">19.84%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Sweden
+        <th>
+        <th>
+        <th>
+        <th><font color="black">12.17%
+        <th>
+        <th><font color="gray">16.27%
+        <th>
+    <tr>
+        <th>Trieste
+        <th><font color="red">12.97%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">14.67%
+        <th>
+        <th>
+    <tr>
+        <th>Tunis
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="green">11.11%
+        <th>
+        <th>
+    <tr>
+        <th>Venice
+        <th><font color="red">8.30%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Vienna
+        <th><font color="red">12.37%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">20.29%
+        <th><font color="gray">21.64%
+        <th>
+    <tr>
+        <th>Warsaw
+        <th><font color="red">18.30%
+        <th>
+        <th>
+        <th><font color="black">14.59%
+        <th>
+        <th>
+        <th>
+    </tr>
+</table>
+<blockquote><i><b>Note:</b> Scores that are based on an insufficiently small (<0.5%) or overwhelmingly large (>95%) sample size are not shown.  They would not give informative or accurate data.</i></blockquote>
+<p>
+<a name="table5">
+<table border="2">
+    <caption><b>Table 5:</b><br><i>Score Given Ownership, 1902</i></caption>
+    <tr>
+        <th>SC
+        <th><font color="red">Austria
+        <th><font color="blue">England
+        <th><font color="teal">France
+        <th><font color="black">Germany
+        <th><font color="green">Italy
+        <th><font color="gray">Russia
+        <th><font color="olive">Turkey
+    <tr>
+        <th>Ankara
+	<th>
+	<th>
+	<th>
+	<th>
+	<th>
+	<th><font color="gray">22.28%
+	<th>
+    <tr>
+        <th>Belgium
+        <th>
+        <th><font color="blue">21.23%
+        <th><font color="teal">25.94%
+        <th><font color="black">17.39%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Berlin
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="green">5.00%
+        <th><font color="gray">16.82%
+        <th>
+    <tr>
+        <th>Brest
+        <th>
+        <th><font color="blue">21.65%
+        <th><font color="teal">19.80%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Budapest
+        <th><font color="red">13.42%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">26.57%
+        <th><font color="gray">22.53%
+        <th><font color="olive">31.70%
+    <tr>
+        <th>Bulgaria
+        <th><font color="red">21.87%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">17.22%
+        <th><font color="gray">24.07%
+        <th><font color="olive">18.95%
+    <tr>
+        <th>Constantinople
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">24.09%
+        <th>
+    <tr>
+        <th>Denmark
+        <th>
+        <th><font color="blue">21.90%
+        <th>
+        <th><font color="black">16.50%
+        <th>
+        <th><font color="gray">24.44%
+        <th>
+    <tr>
+        <th>Edinburgh
+        <th>
+        <th>
+        <th>
+        <th><font color="black">30.98%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Greece
+        <th><font color="red">16.03%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">17.67%
+        <th>
+        <th><font color="olive">24.99%
+    <tr>
+        <th>Holland
+        <th>
+        <th><font color="blue">25.84%
+        <th><font color="teal">34.44%
+        <th><font color="black">15.96%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Kiel
+        <th>
+        <th><font color="blue">24.20%
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">13.03%
+        <th>
+    <tr>
+        <th>Liverpool
+        <th>
+        <th>
+        <th><font color="teal">26.28%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>London
+        <th>
+        <th>
+        <th><font color="teal">38.34%
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Marseilles
+        <th>
+        <th>
+        <th><font color="teal">19.89%
+        <th><font color="black">18.37%
+        <th><font color="green">13.69%
+        <th>
+        <th>
+    <tr>
+        <th>Moscow
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="olive">25.82%
+    <tr>
+        <th>Munich
+        <th><font color="red">14.85%
+        <th>
+        <th><font color="teal">24.89%
+        <th><font color="black">15.49%
+        <th><font color="green">8.85%
+        <th><font color="gray">15.75%
+        <th>
+    <tr>
+        <th>Naples
+        <th><font color="red">14.34%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Norway
+        <th>
+        <th><font color="blue">17.22%
+        <th>
+        <th><font color="black">29.86%
+        <th>
+        <th><font color="gray">20.87%
+        <th>
+    <tr>
+        <th>Paris
+        <th>
+        <th><font color="blue">29.42%
+        <th>
+        <th><font color="black">25.49%
+        <th>
+        <th>
+        <th>
+    <tr>
+        <th>Portugal
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="green">15.56%
+        <th>
+        <th>
+    <tr>
+        <th>Rumania
+        <th><font color="red">19.18%
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">16.32%
+        <th><font color="olive">24.08%
+    <tr>
+        <th>Serbia
+        <th><font color="red">13.54%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">20.23%
+        <th><font color="gray">26.46%
+        <th><font color="olive">26.16%
+    <tr>
+        <th>Sevastopol
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">14.64%
+        <th><font color="olive">22.58%
+    <tr>
+        <th>Smyrna
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="green">16.97%
+        <th>
+        <th>
+    <tr>
+        <th>St Petersburg
+        <th>
+        <th><font color="blue">19.37%
+        <th>
+        <th>
+        <th>
+        <th><font color="gray">14.47%
+        <th>
+    <tr>
+        <th>Sweden
+        <th>
+        <th><font color="blue">23.67%
+        <th>
+        <th><font color="black">22.35%
+        <th>
+        <th><font color="gray">17.27%
+        <th>
+    <tr>
+        <th>Trieste
+        <th><font color="red">13.80%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">16.53%
+        <th>
+        <th>
+    <tr>
+        <th>Venice
+        <th><font color="red">12.25%
+        <th>
+        <th>
+        <th>
+        <th><font color="green">11.70%
+        <th>
+        <th>
+    <tr>
+        <th>Vienna
+        <th><font color="red">13.34%
+        <th>
+        <th>
+        <th><font color="black">17.85%
+        <th><font color="green">21.41%
+        <th><font color="gray">25.31%
+        <th>
+    <tr>
+        <th>Warsaw
+        <th><font color="red">19.76%
+        <th>
+        <th>
+        <th><font color="black">21.20%
+        <th>
+        <th><font color="gray">13.70%
+        <th>
+    </tr>
+</table>
+<blockquote><i><b>Note:</b> Scores that are based on an insufficiently small (<0.5%) or overwhelmingly large (>95%) sample size are not shown.  They would not give informative or accurate data.</i></blockquote>
+</center>
+<p>
+<br>
+<p>
+<h4>Caveats</h4>
+<p>
+Numbers don't lie, but they can easily mislead you if you're not careful.  It's important to use some statistical common sense when you're looking through these tables.  First of all, the "score" for a power occupying and SC (<a href="#table4">Tables 4-5</a>) should be considered as a differential from the base score for that power (<a href="#table3">Table 3</a>.)  The incentive for a power to take an SC can be calculated as a <b><i>score improvement</i></b>: the score a power gets under a certain condition, minus the score that power gets in general.  For example, England achieves a score of 17.79% by taking Brest in 1901 (according to <a href="#table4">Table 4</a>), while England's base score is 14.29% (according to <a href="#table3">Table 3</a>).  Hence for England, taking Brest in 1901 confers a score improvement of 17.79% - 14.29% = 3.50%.
+<p>
+Here are some other statistical caveats to keep in mind:
+<ul>
+    <li><u>Don't compare scores between powers; compare score improvements instead.</u>  It makes no sense to say <i>"France does better by holding onto Brest in 1901 than England does by occupying it."</i> This is strictly true, but it ignores the fact that France does better than England <i>in general</i>.  As we have seen, England improves his score by 3.50% by occupying Brest, while France's score improvement is only 0.42% (19.44% - 19.02%).  A correct analysis suggests that owning Brest in 1901 is much more beneficial to England than it is to France.
+<br><br>
+    <li><u>These are statistics, not guarantees.</u> Austria can do well by taking Naples from Italy in 1902: his score goes from a base of <a href="#table3">11.68%</a> to <a href="#table5">14.34%</a>.  So, is it correct to say <i>"Austria should always pursue Naples in 1902"</i>?  If the score improvement were 100%, then the answer would be yes.  But a rise of 2.66% means very little, on average.  It's about the same as the difference between a six-way draw (16.67%) and a seven-way draw (14.29%). <br><br>
+    <li><u>Statistics are uncertain.</u> Another reason to be skeptical of the Austria-in-Naples conclusion is that Austria takes Naples in 1902 only 0.50% of the time.  His score is drawn from a small dataset, so it is subject to the vagaries of random numbers.  (For the statistically minded, the <a href="http://en.wikipedia.org/wiki/Standard_deviation">standard deviation</a> of this score is 5.34%, corresponding to a 30.90% chance that Austria's score after taking Naples is <i>less</i> than 11.68%.)
+<br><br>
+    <li><u>Correlation does not prove causation.</u> In <a href="#table1">91.80%</a> of games, the Turk takes Bulgaria in 1901.  This seems to <i>hurt</i> his chances: his score drops from <a href="#table3">16.12%</a> to <a href="#table4">16.02%</a>.  Does that mean that Turks are wrong to always open with Con-Bul?  No.  Turkey often moves that army <i>beyond</i> Bulgaria &#8212 to Rumania, Serbia, or Greece &#8212 in Fall 1901.   Successfully vacating Bulgaria is a sign of progress, and thus the average non-Bulgaria-occupying Turk is better off than the average Bulgaria-occupying Turk.  Just because a power performs differently after taking a center doesn't mean that taking the center <i>caused</i> the change.
+</ul>
+<p>
+There's one final, very important, caveat: <u>You must play the players, not the board</u>! After staring at these tables for a while, you may come out with the impression that every power has a predetermined "best strategy".  This is completely untrue!  To win a <b>Diplomacy</b> game, you have to convince other players to trust you and cooperate with you.  No amount of tactical skill will save you if you're a terrible diplomat.  That's why all the scores in the tables above are far below 100%. The tables give suggestions based on averages, but your opponents aren't averages; they're real people. Even in no-press games, where you cannot communicate with fellow players directly, you must still maintain good relations with them or they will beat you to a pulp.
+</ul>
+<p>
+<h2>Analysis</h2>
+<p>
+After sifting through these numbers, I've come up with answers to several common questions about the early game in Diplomacy.  Here are my conclusions.
+<p>
+<h4>How should the Western powers handle Belgium?</h4>
+<p>
+Belgium sits famously at the exact junction of the English, French, and German spheres of influence.  Its <a href="#table1">ownership at the end of 1901</a> is remarkably well-balanced: 20.60% English, 26.57% French, 22.73% German, 30.10% unowned.  However, this balance does not last: by the end of 1902, Belgium is German 44.75% of the time, while England's probability of ownership drops slightly, to 20.50%.  This can be attributed to Belgium's adjacency to another neutral SC, Holland, which typically goes German.  After 1901 Germany may not be in Belgium, but he is <i>very</i> likely (89.23%) to be in Holland.  The unit in Holland can spend 1902 trying to force its way into Belgium.
+<p>
+Who <i>needs</i> Belgium the most, though?  Let's compare the score improvements of the three powers (i.e., their score given ownership of Belgium, minus their <a href="#table3">base score</a>):
+<br><br>
+<center>
+<table border="2">
+    <caption><i>Score Improvement from Occupying Belgium</i></caption>
+    <tr>
+        <th>Year
+        <th><font color="blue">England
+        <th><font color="teal">France
+        <th><font color="black">Germany
+    <tr>
+        <th><a href="#table4">1901</a>
+	<th><font color="blue">4.88%
+	<th><font color="teal">3.69%
+	<th><font color="black">1.21%
+    <tr>
+        <th><a href="#table5">1902</a>
+	<th><font color="blue">6.94%
+	<th><font color="teal">6.92%
+	<th><font color="black">2.58%
+    </tr>
+</table>
+</center>
+<br><br>
+There are some clear trends here.  First of all, Germany gains less from taking Belgium than England and France do.  The German's energies may be better focused elsewhere, although he may still want to make the effort to deny Belgium to the others.  Secondly, every power benefits much more from holding Belgium in 1902 than in 1901.  There's no point in racing to take Belgium in 1901 if you're going to lose it in the next year &#8212 especially since the power occupying Belgium in 1901 often finds itself the victim of a two-way alliance.  In short, don't neglect diplomacy, and take Belgium only if you're prepared to keep it.
+<p>
+<h4>How should the Eastern powers handle Rumania?</h4>
+<p>
+Rumania is the only neutral supply center that can be contested in Spring 1901.  Austria and Russia are both reluctant to let the other take it &#8212 justifiably so, since it borders both of their home centers.  Turkey can also grab Rumania, in which case he poses a threat to both Austria and Russia.
+<p>
+The balance of power over Rumania is not as even as with Belgium.  It tends to go to Russia: <a href="#table2">by 1902</a>, Rumania is 65.97% Russian, 17.96% Austrian, and 14.85% Turkish.  But is Rumania worth fighting for?  Again, let's compare the score improvement that each power gets with occupation of Rumania.
+<br><br>
+<center>
+<table border="2">
+    <caption><i>Score Improvement from Occupying Rumania</i></caption>
+    <tr>
+        <th>Year
+        <th><font color="red">Austria
+        <th><font color="gray">Russia
+        <th><font color="olive">Turkey
+    <tr>
+        <th><a href="#table4">1901</a>
+        <th><font color="red">1.24%
+        <th><font color="gray">1.89%
+        <th><font color="olive">2.57%
+    <tr>
+        <th><a href="#table5">1902</a>
+        <th><font color="red">7.50%
+        <th><font color="gray">3.35%
+        <th><font color="olive">7.96%
+    </tr>
+</table>
+</center>
+<br><br>
+These numbers suggest that Rumania, like Belgium, is worth fighting over in 1902, but not in 1901.  Securing Rumania in 1901 often requires a lot of effort &#8212 particularly for Austria, who has many other things to do with his three units.  In 1902, the Dual Monarch will probably be in Serbia, and the Turk will be in Bulgaria; at that point, Rumania becomes a natural, defensible extension of both of their spheres of influence.  Russia can afford to hold back &#8212 although most Russian players do not.  Despite Russians' best efforts, they often lose control of Rumania: note that Russia's probability of ownership <i>decreases</i> from 1901 to 1902.
+<p>
+<h4>Should Italy attack Austria?</h4>
+<p>
+The Italian blitz on Austria is the quickest and deadliest attack possible in 1901.  Trieste falls to Italy in 1901 far more often than any other home center changes hands.  The Austrian player knows this, of course, and he can defend himself from an Italian attack if he sees it coming.  Even if Italy gets away with it, he will need to race into the Austrian and Balkan centers &#8212 the densest concentration of supply centers on the board.  If those centers fall into Russian or Turkish hands, instead of his own, he is worse off for having attacked Austria.
+<p>
+So goes the conventional wisdom.  But do the numbers support it?
+<br><br>
+<center>
+<table border="2">
+    <caption><i>Italian Score Improvement<br>from Occupying Austrian/Balkan SCs</i></caption>
+    <tr>
+        <th>Year
+        <th>Trieste
+        <th>Vienna
+        <th>Budapest
+        <th>Serbia
+        <th>Bulgaria
+        <th>Greece
+    <tr>
+        <th><a href="#table4">1901</a>
+        <th><font color="green">3.56%
+        <th><font color="green">9.18%
+        <th><font color="green">4.99%
+        <th><font color="green">11.98%
+        <th><font color="green">
+        <th><font color="green">2.50%
+    <tr>
+        <th><a href="#table5">1902</a>
+        <th><font color="green">5.42%
+        <th><font color="green">10.30%
+        <th><font color="green">15.46%
+        <th><font color="green">9.12%
+        <th><font color="green">6.11%
+        <th><font color="green">6.56%
+    </tr>
+</table>
+</center>
+<br><br>
+<p>
+Italy can make huge gains from invading the Balkan/Austrian region.  The numbers in this table are enormous: for example, if Italy gains Serbia in 1901, this alone will more than double his score.  (This is undoubtedly because, not only is Serbia in the very heart of the Balkans, but Italian occupation of it in 1901 usually implies a cooperative Austrian.)  But some centers are more valuable than others.  Italy should aim for Serbia, Budapest, and Vienna.  Trieste and Greece are also helpful, but less so &#8212 probably because they can be dead-ends for expansion.  We've all seen an Italian player seize Trieste and then spend years supporting himself in place there, facing an angry Austrian determined to get his home center back.  Similarly, Italy sometimes sneaks a unit into Greece but then must support it constantly against Austrian or Turkish invasion.  Neither of these scenarios is great for Italy.
+<p>
+The lesson is clear: if you're Italy, and if you want to stab Austria, you've got to plunge the knife deep.  Don't just muscle into Trieste; perhaps sneak into Vienna, or set the Austrian up by convincing him to let your armies into the Balkans.  And be prepared to fight him for everything he's got.
+<p>
+<h4>Should Germany bounce Russia out of Sweden?</h4>
+<p>
+Russia's northern fleet almost always sails towards Sweden in 1901.  In 59.66% of games, he takes it.  Sometimes, though, Germany decides to screw his neighbor by bouncing him out, usually from Denmark.  In 3.05% of games, Russia doesn't bother to contest Sweden, and Germany gets in.  The remaining 37.29% of the time, the center remains unowned.  Sweden is the most likely center to stay neutral after 1901, or 1902.
+<p>
+If Germany has moved his fleet to Denmark in the Spring, he has the option of bouncing Russia.  Diplomacy in the fall turn often centers on Germany's order for his fleet.  Russia tries to wheedle, or threaten, Germany into letting him into Sweden.  Russia's other neighbors (England, Austria, Turkey) encourage Germany to deny the Bear a build.  What's Germany's best course of action?  Are all those other nations right to be pressuring the Kaiser?  Let's see who benefits the most from a Russian capture of Sweden in 1901, or from a lack thereof.
+<br><br>
+<center>
+<table border="2">
+    <caption><i>Score Improvement from Fate of Sweden in 1901</i></caption>
+    <tr>
+        <th>Owner
+        <th><font color="red">Austria
+        <th><font color="blue">England
+        <th><font color="teal">France
+        <th><font color="black">Germany
+        <th><font color="green">Italy
+        <th><font color="gray">Russia
+        <th><font color="olive">Turkey
+    <tr>
+        <th>Unowned
+        <th><font color="red">1.29%
+        <th><font color="blue">2.81%
+        <th><font color="teal">-0.99%
+        <th><font color="black">1.30%
+        <th><font color="green">0.17%
+        <th><font color="gray">-4.99%
+        <th><font color="olive">0.41%
+    <tr>
+        <th>Russia
+        <th><font color="red">-0.81%
+        <th><font color="blue">-2.04%
+        <th><font color="teal">0.65%
+        <th><font color="black">-0.67%
+        <th><font color="green">-0.03%
+        <th><font color="gray">3.30%
+        <th><font color="olive">-0.39%
+    <tr>
+        <th>Germany
+        <th><font color="red">0.06%
+        <th><font color="blue">5.56%
+        <th><font color="teal">-0.46%
+        <th><font color="black">-2.62%
+        <th><font color="green">-1.55%
+        <th><font color="gray">-3.37%
+        <th><font color="olive">2.38%
+    </tr>
+</table>
+<blockquote><i><b>Note:</b> The numbers in this chart cannot be derived from the Results section.<br>I have calculated them separately.</i></blockquote>
+</center>
+<br>
+<p>
+The biggest numbers in this chart are not in Germany's column; they're in Russia's and England's.  Russia, not surprisingly, fares much better when he takes Sweden, and worse when he is bounced.  England, on the other hand, benefits from a bounce, and even more from a German capture of Sweden.  A German/Russian war allows England to eventually claim Scandinavia for himself.
+<p>
+What about Germany himself?  He benefits from the bounce, but it's a small benefit: he does 1.97% better when Sweden remains unowned than when it goes to Russia.  Germany should also be aware of the risk of capturing Sweden himself, which actually <i>hurts</i> his score.  When Germany takes Sweden it is often because the Russian, expecting a bounce, has decided to seek revenge by sailing into the Baltic Sea.  If Russia has tipped off England, then England may be able to sneak into Denmark in Fall 1901, leaving England in fine shape and Germany in a very sorry state.
+<p>
+My advice to German players: Ignore all these numbers, since they're inconclusive for you.  Realize that England needs the bounce more than you do.  And focus on the diplomacy!
+<p>
+<h2>Conclusions</h2>
+<p>
+Using the FRIGATE program, I have provided data for the probability of ownership of every power, in every supply center, in 1901 and 1902.  I have also provided each power's average "score", assuming capture of each SC, also in 1901 and 1902.  Analysis of this data bank has led to some useful strategy tips.
+<p>
+It's important to keep these tips in perspective, of course.  Strategy and tactics are useful, but building and maintaining alliances is paramount.  Whenever there are more than two players left in a game, the brilliant tactician loses to the brilliant diplomat.  After all, the name of the game is <b>Diplomacy</b>!
+<p>
+<BR><BR><TABLE>
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD><A href="mailto:jburton@alumni.princeton.edu"><IMG 
+      src="/Zine/Common/letter.gif" border=0></A> </TD>
+    <TD><STRONG>Josh Burton<BR>(<a href="mailto:jburton@alumni.princeton.edu">jburton@alumni.princeton.edu</a>)</STRONG> 
+  </TD></TR></TBODY></TABLE>
+<P>
+<I>If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the <A 
+href="/Zine/S2007R/Common/DearDP.html">"<B>Dear 
+DP...</B>"</A> mail interface.</I> 
+<P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2007R/"><img src="/Zine/Common/toS2007R.gif" align="right" border="0"></a>
+</BODY></HTML>
+<!--
+-->

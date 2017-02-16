@@ -1,0 +1,1452 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<TITLE>DP F2008M: Sherlock Holmes, Consulting Diplomat</TITLE>
+<script>
+function toggleLayer( whichLayer )
+{
+var elem, vis;
+if( document.getElementById ) // this is the way the standards work
+elem = document.getElementById( whichLayer );
+else if( document.all ) // this is the way old msie versions work
+elem = document.all[whichLayer];
+else if( document.layers ) // this is the way nn4 works
+elem = document.layers[whichLayer];
+vis = elem.style;
+// if the style.display value is blank we try to figure it out here
+if(vis.display==''&&elem.offsetWidth!=undefined&&elem.offsetHeight!=undefined)
+vis.display = (elem.offsetWidth!=0&&elem.offsetHeight!=0)?'block':'none';
+vis.display = (vis.display==''||vis.display=='block')?'none':'block';
+if (whichLayer == 'part2') toggleLayer('part1');
+}
+</script>
+<!-- ---------------------Header---------------------------------- -->
+<!-- ------------------------------------------------------------- -->
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton50.gif" align="left" border="0"></a>
+<a href="/Zine/F2008M/"><img src="/Zine/Common/toF2008M.gif" align="right" border="0"></a>
+<br clear="all">
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="CC9933">
+<! ------------------------------------------------------------- >
+<! ----------------------- M A S T H E A D --------------------- >
+<!---->
+<table align=center width=90% cellspacing=5>
+<td width=120>
+<IMG align=left width=120 SRC="Holmes50.gif">
+<td>
+<H2><font COLOR="CC9933">
+Sherlock Holmes,<BR>
+Consulting Diplomat
+<H3>
+by Manus Hand,<BR>
+Master Ænigmatist</font>
+<!--
+<p>with generous assistance
+<br>from John Woolley
+<br>and Christian M. Butler
+-->
+</H3>
+</table>
+<! ------------------------------------------------------------- >
+<! ------------------------ S U B H E A D ---------------------- >
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="CC9933"><center>
+<H2>	<font COLOR="CC9933">
+Begone And Back: A Basic Conundrum Deciphered Entirely</font></H2>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="CC9933"></center>
+<! ------------------------------------------------------------- >
+<p align=justify>
+<CENTER>
+<TABLE WIDTH="90%" BORDER="0">
+<TR>
+<TD ALIGN="JUSTIFY">
+<p align=justify>
+The Foreign Secretary Lord Fortescue and I &mdash; frequently commenting on how
+remarkable it was for
+us to find ourselves reconstructing a game of Diplomacy by "playing it
+forward"
+&mdash; were amazed by the cunning of the Sultan of
+Suwat, who had posed this lovely riddle, <a href=/Zine/F2007M/Holmes/Begone.html>Begone And Back</a>, to the British government.
+We were amazed to no less an extent, of course, by
+the intelligence of our friend Sherlock Holmes, who
+had deduced the rules of movement and adjustment that the players of this
+game of Diplomacy must have followed, and who had
+<a href=/Zine/W2007A/Hand/BegoneAgain.html>enlightened us
+as to these particulars</a>.
+<p align=justify>
+As Holmes had explained to us, the pieces in the game that the Sultan described
+were each following a specific common rule to decide upon their next order.
+With every unit moving on every single turn &mdash; Holmes pointed out that this
+effectively ensured that no retreats would be possible &mdash; the destination of
+each unit's order was either the adjacent space whose abbreviation was <i>next</i> alphabetically from that of its current location, or which was <i>last</i> alphabetically before it.
+That is, an army in Munich (<tt>MUN</tt>) could only ever be ordered either to
+Ruhr (<tt>RUH</tt> being the adjacent space next alphabetically <i>later</i> than <tt>MUN</tt> itself) or to
+Kiel (<tt>KIE</tt>, being the adjacent space last alphabetically <i>before</i> <tt>MUN</tt> itself).  Which of these two destinations the unit would choose was wholly dependent on the unit's own movement results leading up to the order.
+As Holmes explained, every unit in this game begins its life moving <i>up</i> the alphabet, toward <i>A</i>.  As an example, the German army that began the game in Munich
+was indeed ordered to Kiel in Spring of 1901.  Units continue moving <i>up</i> the alphabet (toward <i>A</i>) unless and until their movement order fails, and they bounce, at which point that unit changes direction and begins moving <i>down</i> the alphabet (toward <i>Z</i>).
+Such a "downward" direction is the rule followed by that unit until it again
+"bounces", failing in its attempt to move, at which point it will once again
+reverse its alphabetical direction of movement.
+<p align=justify>
+Holmes also pointed out to us that the Sultan had made available sufficient evidence &mdash;
+both in the first game-year's worth of moves that he had provided, and also in
+his rather obscure written clues &mdash; for us to know that the units went from one end of the alphabet to another, as necessary.  For example, the Turkish fleet beginning
+the game in Ankara (and moving, like all units on the first turn, toward <i>A</i>) saw itself ordered to Constantinople.  This was due to the fact that there are no spaces adjacent to Ankara having an abbreviation earlier in the alphabet than <tt>ANK</tt> itself, and so the alphabet is "restarted" from <i>Z</i>, as it were, and <tt>CON</tt> found to be the closest-to-<i>Z</i> (still continuing
+our movement back "up" to <i>A</i>) space to which the fleet could be ordered.
+<p align=justify>
+This much, Lord Reginald and I saw, was borne out by the first two seasons worth
+of game results, which the Sultan had provided to us.  These are reproduced below, with asterisks marking those orders that had bounced, causing the units in
+question to thereupon "reverse" their alphabetical direction.
+<P>
+<center>
+<table cellpadding=5 border=3 bordercolorlight="gold" bordercolordark="CC9933">
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>SPRING 1901</font></tt></th></tr><tr>
+<td>
+<tt>
+<b><u>AUSTRIA</u><!/b><br>
+<font color=blue>
+A BUD-VIE *<br>
+F TRI-ALB<br>
+A VIE-TYR *<br>
+</font>
+<b><u>ENGLAND</u><!/b><br>
+<font color=blue>
+F EDI-CLY<br>
+F LON-ENG<br>
+A LVP-EDI<br>
+</font>
+<b><u>FRANCE</u><!/b><br>
+<font color=blue>
+F BRE-PIC<br>
+A MAR-GAS *<br>
+A PAR-GAS *<br>
+</font>
+<b><u>GERMANY</u><!/b><br>
+<font color=blue>
+A BER-SIL<br>
+F KIE-HOL<br>
+A MUN-KIE<br>
+</font>
+<b><u>ITALY</u><!/b><br>
+<font color=blue>
+F NAP-ION<br>
+A ROM-NAP<br>
+A VEN-TYR *<br>
+</font>
+<b><u>RUSSIA</u><!/b><br>
+<font color=blue>
+A MOS-LVN *<br>
+F SEV-RUM<br>
+F STP/SC-LVN *<br>
+A WAR-UKR<br>
+</font>
+<b><u>TURKEY</u><!/b><br>
+<font color=blue>
+F ANK-CON *<br>
+A CON-BUL<br>
+A SMY-CON *<br>
+</font>
+</tt>
+</td>
+<th><img src=S1901M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>FALL 1901</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!/b></u><br>
+<font color=blue>
+F ALB-ADR<br>
+A BUD-GAL<br>
+A VIE-BOH<br>
+</font>
+<u><b>ENGLAND<!/b></u><br>
+<font color=blue>
+F CLY-NWG<br>
+A EDI-CLY<br>
+F ENG-BRE<br>
+</font>
+<u><b>FRANCE<!/b></u><br>
+<font color=blue>
+A MAR-PIE<br>
+A PAR-PIC<br>
+F PIC-ENG<br>
+</font>
+<u><b>GERMANY<!/b></u><br>
+<font color=blue>
+F HOL-HEL<br>
+A KIE-HOL<br>
+A SIL-PRU<br>
+</font>
+<u><b>ITALY<!/b></u><br>
+<font color=blue>
+F ION-GRE<br>
+A NAP-APU<br>
+A VEN-APU<br>
+</font>
+<u><b>RUSSIA<!/b></u><br>
+<font color=blue>
+A MOS-SEV *<br>
+F RUM-BUL/EC<br>
+F STP/SC-BOT<br>
+A UKR-SEV *<br>
+</font>
+<u><b>TURKEY<!/b></u><br>
+<font color=blue>
+F ANK-ARM<br>
+A BUL-SER<br>
+A SMY-SYR<br>
+</font>
+</tt>
+</td>
+<th><img src=F1901M.gif></th>
+</tr>
+</table>
+</center>
+<p align=justify>
+The only other details needed, and which were of course deduced and supplied by the wondrous
+mind of my friend Holmes, were the rules to be followed by the powers to determine their actions in the adjustment phases.  Here the Sultan's written note was all on which we could depend, but it proved sufficient for Holmes.
+From that cryptic note, the great detective was able to conclude that any power
+eligible to build any new unit would build only fleets, and would do so in its build centres in <i>reverse</i> (<i>Z-to-A</i>) alphabetical order.  Austria, of course, was limited only to building in Trieste, but France, for example, would build a fleet in Marseilles (<tt>MAR</tt>) if eligible for a single build, and also a fleet in Brest (<tt>BRE</tt>) if eligible for more than one build (or,
+of course, if Marseilles were not available to receive a newly built unit,
+it being either not vacant, or under the control of a foreign power).
+<p align=justify>
+As for removals, Holmes explained that any power called upon to remove any number of units would first remove any or all of its armies, in <i>A-to-Z</i> order according to the abbreviations of their current locations, and only once no armies remained for that power to remove, would remove its fleets in this same <i>A-to-Z</i> order.
+<p align=justify>
+Given these rules, the Sultan had challenged us to determine which neutral supply centres were the <u>final two</u> to be acquired by any of the great powers in the game.  This knowledge was needed so as to allow the Foreign Secretary to dispatch
+a messenger to the first of these two locations, where he would purchase a round-trip ticket to the other location, then travel upon this ticket to reach the Sultan, who would sign an extension of the most important lease held by the British government on the deep-water facilities of Port Suwat.
+<p align=justify>
+Once we had established these rules of movement and adjustment,
+the chore of "playing the game forward" was relatively easy,
+although we had to take
+care, of course, to remember in which direction (<i>A-to-Z</i> or <i>Z-to-A</i>) each of the units had most recently moved or attempted to move.  Doing so,
+we were able to determine that the game proceeded through 1902 as follows.
+<p>
+<center>
+<table cellpadding=5 border=3 bordercolorlight="gold" bordercolordark="CC9933">
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>WINTER 1901</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!(3/3)></b></u><br>
+BUD&nbsp;TRI&nbsp;VIE<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i><br></b></font>
+<br><u><b>ENGLAND<!(3/4)></b></u><br>
+BRE&nbsp;EDI&nbsp;LON&nbsp;LVP<br>
+<font color=blue><b><i>BUILD F LVP</i><br></b></font>
+<br><u><b>FRANCE<!(3/2)></b></u><br>
+MAR&nbsp;PAR<br>
+<font color=blue><b><i>REMOVE A PIC</i></b><br></font>
+<br><u><b>GERMANY<!(3/4)></b></u><br>
+BER&nbsp;HOL&nbsp;KIE&nbsp;MUN<br>
+<font color=blue><b><i>BUILD F KIE</i></b><br></font>
+<br><u><b>ITALY<!(3/4)></b></u><br>
+GRE&nbsp;ROM&nbsp;NAP&nbsp;VEN<br>
+<font color=blue><b><i>BUILD F ROM</i></b><br></font>
+<br><u><b>RUSSIA<!(4/5)></b></u><br>
+BUL&nbsp;MOS&nbsp;<br>SEV&nbsp;STP&nbsp;WAR<br>
+<font color=blue><b><i>BUILD F STP/SC</i></b><br></font>
+<br><u><b>TURKEY<! (3/3)></b></u><br>
+ANK&nbsp;CON&nbsp;SER&nbsp;SMY<br>
+<font color=blue><b><i>BUILD F SMY</i></b><br></font>
+<p>
+<u><b>UNOWNED</b></u><br>
+BEL&nbsp;DEN&nbsp;NWY&nbsp;POR<br>
+RUM&nbsp;SPA&nbsp;SWE&nbsp;TUN
+</td>
+<th><img src=W1901A.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>SPRING 1902</font></tt></th></tr><tr>
+<td>
+<tt>
+<b><u>AUSTRIA</u><!/b><br>
+<font color=blue>
+F ADR-VEN<br>
+A BOH-GAL *<br>
+A GAL-RUM *<br>
+</font>
+<b><u>ENGLAND</u><!/b><br>
+<font color=blue>
+F BRE-PIC<br>
+F CLY-LVP<br>
+F LVP-IRI<br>
+A NWG-NTH<br>
+</font>
+<b><u>FRANCE</u><!/b><br>
+<font color=blue>
+F ENG-BRE<br>
+A PIE-TUS<br>
+</font>
+<b><u>GERMANY</u><!/b><br>
+<font color=blue>
+F HEL-DEN<br>
+A HOL-BEL<br>
+F KIE-HOL<br>
+A PRU-LVN *<br>
+</font>
+<b><u>ITALY</u><!/b><br>
+<font color=blue>
+F GRE-BUL/SC *<br>
+A NAP-ROM *<br>
+F ROM-NAP *<br>
+A VEN-TYR<br>
+</font>
+<b><u>RUSSIA</u><!/b><br>
+<font color=blue>
+A BOT-FIN<br>
+F BUL/EC-BLA *<br>
+A MOS-LVN *<br>
+F STP/SC-LVN *<br>
+A UKR-WAR<br>
+</font>
+<b><u>TURKEY</u><!/b><br>
+<font color=blue>
+F ARM-BLA *<br>
+A SER-RUM *<br>
+F SMY-EAS<br>
+A SYR-ARM *<br>
+</font>
+</tt>
+</td>
+<th><img src=S1902M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>FALL 1902</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!/b></u><br>
+<font color=blue>
+A BOH-VIE<br>
+A GAL-BUD<br>
+F VEN-TRI *<br>
+</font>
+<u><b>ENGLAND<!/b></u><br>
+<font color=blue>
+F IRI-ENG *<br>
+A LVP-EDI<br>
+F NTH-LON<br>
+F PIC-ENG *<br>
+</font>
+<u><b>FRANCE<!/b></u><br>
+<font color=blue>
+F BRE-PIC *<br>
+A TUS-VEN *<br>
+</font>
+<u><b>GERMANY<!/b></u><br>
+<font color=blue>
+A BEL-RUH<br>
+F DEN-BAL<br>
+F HOL-HEL<br>
+A PRU-SIL<br>
+</font>
+<u><b>ITALY<!/b></u><br>
+<font color=blue>
+F GRE-ION<br>
+A NAP-APU<br>
+F ROM-TUS *<br>
+A TYR-TRI *<br>
+</font>
+<u><b>RUSSIA<!/b></u><br>
+<font color=blue>
+F BUL/EC-CON<br>
+F FIN-STP/SC<br>
+A MOS-SEV<br>
+F STP/SC-BOT<br>
+A WAR-GAL<br>
+</font>
+<u><b>TURKEY<!/b></u><br>
+<font color=blue>
+F ARM-ANK<br>
+F EAS-AEG<br>
+A SER-TRI *<br>
+A SYR-SMY<br>
+</font>
+</tt>
+</td>
+<th><img src=F1902M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>WINTER 1902</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!(3/3)></b></u><br>
+BUD&nbsp;TRI&nbsp;VEN&nbsp;VIE<br>
+<font color=blue><b><i>BUILD F TRI</i><br></b></font>
+<br><u><b>ENGLAND<!(3/4)></b></u><br>
+EDI&nbsp;LON&nbsp;LVP<br>
+<font color=blue><b><i>REMOVE A EDI</i><br></b></font>
+<br><u><b>FRANCE<!(3/2)></b></u><br>
+BRE&nbsp;MAR&nbsp;PAR<br>
+<font color=blue><b><i>BUILD F MAR</i></b><br></font>
+<br><u><b>GERMANY<!(3/4)></b></u><br>
+BER&nbsp;HOL&nbsp;KIE&nbsp;MUN<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i></b><br></font>
+<br><u><b>ITALY<!(3/4)></b></u><br>
+GRE&nbsp;ROM&nbsp;NAP<br>
+<font color=blue><b><i>REMOVE A APU</i></b><br></font>
+<br><u><b>RUSSIA<!(4/5)></b></u><br>
+BUL&nbsp;CON&nbsp;MOS&nbsp;<br>SEV&nbsp;STP&nbsp;WAR<br>
+<font color=blue><b><i>BUILD WAIVED</i></b><br></font>
+<br><u><b>TURKEY<! (3/3)></b></u><br>
+ANK&nbsp;SER&nbsp;SMY<br>
+<font color=blue><b><i>REMOVE A SER</i></b><br></font>
+<p>
+<u><b>UNOWNED</b></u><br>
+BEL&nbsp;DEN&nbsp;NWY&nbsp;POR<br>
+RUM&nbsp;SPA&nbsp;SWE&nbsp;TUN
+</td>
+<th><img src=W1902A.gif></th>
+</tr>
+</table>
+</center>
+<p align=justify>
+As Lord Reginald and I determined and gave effect to the adjustment orders,
+we expressed our disappointment to have found that absolutely
+none of the centres that had remained unconquered going into this second
+game-year had lost their neutral status during the year.
+Just as was the situation after the moves of 1901 (which the Sultan had
+provided to us), there yet remained eight unowned neutral centres.
+"Holmes," I asked, "are you quite certain that we are proceeding correctly?"
+<p align=justify>
+"Indeed, doctor, 1902 was rather uneventful for the neutral
+centres; that is true.  Pray continue to the next game-year, however,
+for we are most certainly following the proper instructions," came my
+friend's answer,
+issued after sipping from his snifter of brandy.
+<p>
+<center>
+<table cellpadding=5 border=3 bordercolorlight="gold" bordercolordark="CC9933">
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>SPRING 1903</font></tt></th></tr><tr>
+<td>
+<tt>
+<b><u>AUSTRIA</u><!/b><br>
+<font color=blue>
+A BUD-VIE<br>
+F TRI-ALB<br>
+F VEN-ADR<br>
+A VIE-TYR<br>
+</font>
+<b><u>ENGLAND</u><!/b><br>
+<font color=blue>
+F IRI-LVP<br>
+F LON-ENG *<br>
+F PIC-BEL<br>
+</font>
+<b><u>FRANCE</u><!/b><br>
+<font color=blue>
+F BRE-ENG *<br>
+F MAR-LYO<br>
+A TUS-ROM *<br>
+</font>
+<b><u>GERMANY</u><!/b><br>
+<font color=blue>
+F BAL-SWE<br>
+F HEL-DEN<br>
+A RUH-MUN<br>
+A SIL-WAR<br>
+</font>
+<b><u>ITALY</u><!/b><br>
+<font color=blue>
+F ION-NAP *<br>
+F ROM-NAP *<br>
+A TYR-VEN<br>
+</font>
+<b><u>RUSSIA</u><!/b><br>
+<font color=blue>
+F BOT-FIN<br>
+F CON-SMY *<br>
+A GAL-RUM<br>
+A SEV-UKR<br>
+F STP/SC-BOT<br>
+</font>
+<b><u>TURKEY</u><!/b><br>
+<font color=blue>
+F AEG-SMY *<br>
+F ANK-CON *<br>
+A SMY-CON *<br>
+</font>
+</tt>
+</td>
+<th><img src=S1903M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>FALL 1903</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!/b></u><br>
+<font color=blue>
+F ADR-ALB *<br>
+F ALB-ADR *<br>
+A TYR-TRI<br>
+A VIE-TYR<br>
+</font>
+<u><b>ENGLAND<!/b></u><br>
+<font color=blue>
+F BEL-ENG<br>
+F LON-NTH<br>
+F LVP-NAO<br>
+</font>
+<u><b>FRANCE<!/b></u><br>
+<font color=blue>
+F BRE-PIC<br>
+F LYO-WES<br>
+A TUS-VEN<br>
+</font>
+<u><b>GERMANY<!/b></u><br>
+<font color=blue>
+F DEN-BAL<br>
+A MUN-KIE<br>
+F SWE-SKA<br>
+A WAR-GAL<br>
+</font>
+<u><b>ITALY<!/b></u><br>
+<font color=blue>
+F ION-GRE<br>
+F ROM-TUS<br>
+A VEN-APU<br>
+</font>
+<u><b>RUSSIA<!/b></u><br>
+<font color=blue>
+A UKR-WAR<br>
+A RUM-SER<br>
+F CON-BUL/SC *<br>
+F BOT-FIN<br>
+F FIN-STP/SC<br>
+</font>
+<u><b>TURKEY<!/b></u><br>
+<font color=blue>
+A SMY-SYR<br>
+F ANK-ARM<br>
+F AEG-BUL/SC<br>
+</font>
+</tt>
+</td>
+<th><img src=F1903M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>WINTER 1903</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!(3/3)></b></u><br>
+BUD&nbsp;TRI&nbsp;VIE<br>
+<font color=blue><b><i>REMOVE A TRI</i><br></b></font>
+<br><u><b>ENGLAND<!(3/4)></b></u><br>
+EDI&nbsp;LON&nbsp;LVP<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i><br></b></font>
+<br><u><b>FRANCE<!(3/2)></b></u><br>
+BRE&nbsp;MAR&nbsp;PAR&nbsp;VEN<br>
+<font color=blue><b><i>BUILD F MAR</i></b><br></font>
+<br><u><b>GERMANY<!(3/4)></b></u><br>
+BER&nbsp;HOL&nbsp;KIE&nbsp;MUN<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i></b><br></font>
+<br><u><b>ITALY<!(3/4)></b></u><br>
+GRE&nbsp;ROM&nbsp;NAP<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i></b><br></font>
+<br><u><b>RUSSIA<!(4/5)></b></u><br>
+BUL&nbsp;CON&nbsp;MOS&nbsp;SER<br>SEV&nbsp;STP&nbsp;WAR<br>
+<font color=blue><b><i>BUILD F SEV</i></b><br></font>
+<br><u><b>TURKEY<! (3/3)></b></u><br>
+ANK&nbsp;SMY<br>
+<font color=blue><b><i>REMOVE A SYR</i></b><br></font>
+<p>
+<u><b>UNOWNED</b></u><br>
+BEL&nbsp;DEN&nbsp;NWY&nbsp;POR<br>
+RUM&nbsp;SPA&nbsp;SWE&nbsp;TUN
+</td>
+<th><img src=W1903A.gif></th>
+</tr>
+</table>
+</center>
+<p align=justify>
+Once more, Lord Reginald and I felt that our labour to "play the game
+forward" another year was left unrewarded, for still there remained
+eight neutral supply centres.  This time, it was Lord Reginald who voiced
+our shared concern.  "Holmes, are you quite certain that we shall reach
+a satisfactory solution to this perplexing riddle?  We have now taken the
+game two years into its future, and not another single neutral centre has
+been captured."
+<p align=justify>
+Our friend was no less positive than earlier he had been.
+"We can be assured, milord, that we are on the correct course, and that
+the neutral centres must eventually fall."
+<!-- With four falling in 1901, there
+is of course no way to call any pair of them the final two that we seek."
+-->
+As he paused to light his pipe, I could tell from his look that
+the great detective had used his mind's eye to see the next couple of
+movements for at least some of the pieces on the board.  "Proceed, gentlemen,
+through 1904, and I believe you will find yourselves less disappointed in
+our progress."
+<p align=justify>
+The reader will not be surprised to learn that my friend Holmes was of course correct,
+as proven by the next sets of orders, which we found to be as shown below.
+<p>
+<center>
+<table cellpadding=5 border=3 bordercolorlight="gold" bordercolordark="CC9933">
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>SPRING 1904</font></tt></th></tr><tr>
+<td>
+<tt>
+<b><u>AUSTRIA</u><!/b><br>
+<font color=blue>
+F ADR-VEN<br>
+F ALB-GRE<br>
+A TYR-TRI *<br>
+</font>
+<b><u>ENGLAND</u><!/b><br>
+<font color=blue>
+F ENG-IRI<br>
+F NAO-NWG *<br>
+F NTH-NWG *<br>
+</font>
+<b><u>FRANCE</u><!/b><br>
+<font color=blue>
+F MAR-LYO<br>
+F PIC-ENG<br>
+A VEN-APU<br>
+F WES-TYS *<br>
+</font>
+<b><u>GERMANY</u><!/b><br>
+<font color=blue>
+F BAL-SWE<br>
+A GAL-RUM *<br>
+A KIE-HOL<br>
+F SKA-NWY<br>
+</font>
+<b><u>ITALY</u><!/b><br>
+<font color=blue>
+A APU-NAP<br>
+F GRE-BUL/SC<br>
+F TUS-TYS *<br>
+</font>
+<b><u>RUSSIA</u><!/b><br>
+<font color=blue>
+F CON-SMY *<br>
+F FIN-STP/SC<br>
+A SER-TRI *<br>
+F SEV-RUM *<br>
+F STP/SC-BOT<br>
+A WAR-GAL *<br>
+</font>
+<b><u>TURKEY</u><!/b><br>
+<font color=blue>
+F AEG-SMY *<br>
+F ARM-BLA<br>
+</font>
+</tt>
+</td>
+<th><img src=S1904M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>FALL 1904</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!/b></u><br>
+<font color=blue>
+F GRE-ION<br>
+A TYR-VEN<br>
+F VEN-TRI<br>
+</font>
+<u><b>ENGLAND<!/b></u><br>
+<font color=blue>
+F IRI-LVP<br>
+F NAO-MAO<br>
+F NTH-LON<br>
+</font>
+<u><b>FRANCE<!/b></u><br>
+<font color=blue>
+A APU-NAP *<br>
+F ENG-BRE<br>
+F LYO-WES *<br>
+F WES-LYO *<br>
+</font>
+<u><b>GERMANY<!/b></u><br>
+<font color=blue>
+A GAL-BUD<br>
+A HOL-BEL<br>
+F NWY-NWG<br>
+F SWE-SKA<br>
+</font>
+<u><b>ITALY<!/b></u><br>
+<font color=blue>
+A NAP-ROM *<br>
+F BUL/SC-AEG *<br>
+F TUS-ROM *<br>
+</font>
+<u><b>RUSSIA<!/b></u><br>
+<font color=blue>
+F BOT-FIN<br>
+F CON-BUL/SC *<br>
+A SER-RUM<br>
+F SEV-ARM<br>
+F STP/SC-BOT<br>
+A WAR-UKR<br>
+</font>
+<u><b>TURKEY<!/b></u><br>
+<font color=blue>
+F BLA-BUL/EC *<br>
+F AEG-BUL/SC *<br>
+</font>
+</tt>
+</td>
+<th><img src=F1904M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>WINTER 1904</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!(3/3)></b></u><br>
+TRI&nbsp;VEN&nbsp;VIE<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i><br></b></font>
+<br><u><b>ENGLAND<!(3/4)></b></u><br>
+EDI&nbsp;LON&nbsp;LVP<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i><br></b></font>
+<br><u><b>FRANCE<!(3/2)></b></u><br>
+BRE&nbsp;MAR&nbsp;PAR<br>
+<font color=blue><b><i>REMOVE A APU</i></b><br></font>
+<br><u><b>GERMANY<!(3/4)></b></u><br>
+BEL&nbsp;BER&nbsp;BUD&nbsp;HOL&nbsp;<br>KIE&nbsp;MUN<br>
+<font color=blue><b><i>BUILD F BER</i></b><br></font>
+<font color=blue><b><i>BUILD F KIE</i></b><br></font>
+<br><u><b>ITALY<!(3/4)></b></u><br>
+BUL&nbsp;GRE&nbsp;ROM&nbsp;NAP<br>
+<font color=blue><b><i>BUILD F ROM</i></b><br></font>
+<br><u><b>RUSSIA<!(4/5)></b></u><br>
+CON&nbsp;MOS&nbsp;RUM&nbsp;SER<br>SEV&nbsp;STP&nbsp;WAR<br>
+<font color=blue><b><i>BUILD F STP/SC</i></b><br></font>
+<br><u><b>TURKEY<! (3/3)></b></u><br>
+ANK&nbsp;SMY<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i></b><br></font>
+<p>
+<u><b>UNOWNED</b></u><br>
+DEN&nbsp;NWY&nbsp;POR<br>
+SPA&nbsp;SWE&nbsp;TUN
+</td>
+<th><img src=W1904A.gif></th>
+</tr>
+</table>
+</center>
+<p align=justify>
+"At last!" I exclaimed as we re&euml;nacted the 1904 Fall Movement orders.
+"We finally have made some progress against this puzzle!  Both Belgium and
+Rumania have fallen to the Great Powers!"
+<p align=justify>
+"Excellent, Watson.  The solution is that much clearer, is it not?" asked
+Holmes.
+<p align=justify>
+Lord Reginald, also elated by this turn of events, excitedly began determining
+the orders to be issued in 1905, which we thereupon made, and which are
+reproduced below.
+<p>
+<center>
+<table cellpadding=5 border=3 bordercolorlight="gold" bordercolordark="CC9933">
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>SPRING 1905</font></tt></th></tr><tr>
+<td>
+<tt>
+<b><u>AUSTRIA</u><!/b><br>
+<font color=blue>
+F ION-NAP *<br>
+F TRI-ALB<br>
+A VEN-APU *<br>
+</font>
+<b><u>ENGLAND</u><!/b><br>
+<font color=blue>
+F LON-ENG<br>
+F LVP-NAO<br>
+F MAO-IRI<br>
+</font>
+<b><u>FRANCE</u><!/b><br>
+<font color=blue>
+F BRE-PIC<br>
+F LYO-MAR<br>
+F WES-TYS *<br>
+</font>
+<b><u>GERMANY</u><!/b><br>
+<font color=blue>
+A BEL-RUH<br>
+F BER-BAL<br>
+A BUD-VIE<br>
+F KIE-HOL<br>
+F NWG-NTH<br>
+F SKA-NWY<br>
+</font>
+<b><u>ITALY</u><!/b><br>
+<font color=blue>
+F BUL/SC-CON *<br>
+A NAP-APU *<br>
+F ROM-NAP *<br>
+F TUS-TYS *<br>
+</font>
+<b><u>RUSSIA</u><!/b><br>
+<font color=blue>
+F ARM-BLA *<br>
+F BOT-FIN<br>
+F CON-SMY *<br>
+F FIN-STP/SC<br>
+F STP/SC-LVN<br>
+A RUM-GAL<br>
+A UKR-SEV<br>
+</font>
+<b><u>TURKEY</u><!/b><br>
+<font color=blue>
+F AEG-SMY *<br>
+F BLA-ARM *<br>
+</font>
+</tt>
+</td>
+<th><img src=S1905M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>FALL 1905</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!/b></u><br>
+<font color=blue>
+F ALB-ADR<br>
+F ION-GRE<br>
+A VEN-TYR *<br>
+</font>
+<u><b>ENGLAND<!/b></u><br>
+<font color=blue>
+F ENG-BRE<br>
+F IRI-ENG *<br>
+F NAO-NWG *<br>
+</font>
+<u><b>FRANCE<!/b></u><br>
+<font color=blue>
+F MAR-PIE<br>
+F PIC-ENG *<br>
+F WES-LYO<br>
+</font>
+<u><b>GERMANY<!/b></u><br>
+<font color=blue>
+F BAL-SWE<br>
+F HOL-HEL<br>
+F NTH-LON<br>
+F NWY-NWG *<br>
+A RUH-MUN<br>
+A VIE-TYR *<br>
+</font>
+<u><b>ITALY<!/b></u><br>
+<font color=blue>
+F BUL/SC-AEG *<br>
+A NAP-ROM *<br>
+F ROM-TUS *<br>
+F TUS-ROM *<br>
+</font>
+<u><b>RUSSIA<!/b></u><br>
+<font color=blue>
+F ARM-ANK<br>
+F CON-BUL/SC *<br>
+F FIN-STP/SC *<br>
+A GAL-BUD<br>
+F LVN-BOT *<br>
+A SEV-RUM<br>
+F STP/SC-BOT *<br>
+</font>
+<u><b>TURKEY<!/b></u><br>
+<font color=blue>
+F BLA-BUL/EC *<br>
+F AEG-BUL/SC *<br>
+</font>
+</tt>
+</td>
+<th><img src=F1905M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>WINTER 1905</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!(3/3)></b></u><br>
+TRI&nbsp;GRE&nbsp;VEN<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i><br></b></font>
+<br><u><b>ENGLAND<!(3/4)></b></u><br>
+BRE&nbsp;EDI&nbsp;LVP<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i><br></b></font>
+<br><u><b>FRANCE<!(3/2)></b></u><br>
+MAR&nbsp;PAR<br>
+<font color=blue><b><i>REMOVE F LYO</i></b><br></font>
+<br><u><b>GERMANY<!(3/4)></b></u><br>
+BEL&nbsp;BER&nbsp;HOL&nbsp;KIE<br>LON&nbsp;MUN&nbsp;NWY&nbsp;SWE<br>VIE<br>
+<font color=blue><b><i>BUILD F BER</i></b><br></font>
+<font color=blue><b><i>BUILD F KIE</i></b><br></font>
+<font color=blue><b><i>BUILD WAIVED</i></b><br></font>
+<br><u><b>ITALY<!(3/4)></b></u><br>
+BUL&nbsp;ROM&nbsp;NAP<br>
+<font color=blue><b><i>REMOVE A NAP</i></b><br></font>
+<br><u><b>RUSSIA<!(4/5)></b></u><br>
+ANK&nbsp;BUD&nbsp;CON&nbsp;MOS<br>RUM&nbsp;SER<br>SEV&nbsp;STP<br>WAR<br>
+<font color=blue><b><i>BUILD F SEV</i></b><br></font>
+<font color=blue><b><i>BUILD WAIVED</i></b><br></font>
+<br><u><b>TURKEY<! (3/3)></b></u><br>
+SMY<br>
+<font color=blue><b><i>REMOVE F AEG</i></b><br></font>
+<p>
+<u><b>UNOWNED</b></u><br>
+DEN&nbsp;POR&nbsp;SPA&nbsp;TUN
+</td>
+<th><img src=W1905A.gif></th>
+</tr>
+</table>
+</center>
+<p align=justify>
+As with those of the previous game-year, I was ecstatic with these results.
+"Both Norway and Sweden fell to the German,
+Holmes!  Another two neutral centres taken!  Hopefully this most
+excellent pace will continue!"
+<p align=justify>
+Lord Reginald was just as enthusiastic as I was about this turn of events.
+"Agreed, doctor!
+Only four centres remain untaken, Holmes!  Eight down, and four left to go!"
+<p align=justify>
+Holmes himself, at this point, took a lingering look at the position of
+the pieces, and then simply hummed in that way that he has,
+indicating that he knows something more than he wishes to let on.
+Being of long acquaintance with him, I knew that behind his smiling eyes,
+he was holding some knowledge that the Foreign Secretary and I had yet to
+divine.  Apparently there was something that our lesser minds had missed,
+or had misstated,
+but Holmes, settling contentedly into an easy chair with his pipe and the
+air of someone whose task is completely done, merely waved his hand at us.
+"It's onward to 1906 then, gentlemen!" said Holmes.  "You seem to have matters
+quite well in hand now."
+<p align=justify>
+So it was; with Holmes having opened a book taken from the shelf, and on
+occasion idly
+rearranging the fronds of a potted fern near his easy chair, Lord Reginald and
+I "played the game forward" yet another year.
+<p>
+<center>
+<table cellpadding=5 border=3 bordercolorlight="gold" bordercolordark="CC9933">
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>SPRING 1906</font></tt></th></tr><tr>
+<td>
+<tt>
+<b><u>AUSTRIA</u><!/b><br>
+<font color=blue>
+F ADR-VEN<br>
+F GRE-BUL/SC *<br>
+A VEN-APU<br>
+</font>
+<b><u>ENGLAND</u><!/b><br>
+<font color=blue>
+F BRE-PIC<br>
+F IRI-LVP<br>
+F NAO-MAO<br>
+</font>
+<b><u>FRANCE</u><!/b><br>
+<font color=blue>
+F PIC-BEL<br>
+F PIE-TUS<br>
+</font>
+<b><u>GERMANY</u><!/b><br>
+<font color=blue>
+F BER-BAL<br>
+F HEL-DEN<br>
+F KIE-HOL<br>
+F LON-ENG<br>
+A MUN-KIR<br>
+F NWY-SKA *<br>
+F SWE-SKA *<br>
+A VIE-BOH<br>
+</font>
+<b><u>ITALY</u><!/b><br>
+<font color=blue>
+F BUL/SC-CON *<br>
+F ROM-NAP<br>
+F TUS-TYS<br>
+</font>
+<b><u>RUSSIA</u><!/b><br>
+<font color=blue>
+F ANK-CON *<br>
+A BUD-VIE<br>
+F CON-SMY<br>
+F FIN-BOT<br>
+F LVN-PRU<br>
+A RUM-GAL<br>
+F SEV-RUM<br>
+F STP/SC-LVN<br>
+</font>
+<b><u>TURKEY</u><!/b><br>
+<font color=blue>
+F BLA-ARM<br>
+</font>
+</tt>
+</td>
+<th><img src=S1906M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>FALL 1906</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!/b></u><br>
+<font color=blue>
+A APU-NAP *<br>
+F GRE-ION *<br>
+F VEN-TRI<br>
+</font>
+<u><b>ENGLAND<!/b></u><br>
+<font color=blue>
+F LVP-NAO<br>
+F MAO-IRI<br>
+F PIC-ENG *<br>
+</font>
+<u><b>FRANCE<!/b></u><br>
+<font color=blue>
+F BEL-ENG *<br>
+F TUS-TYS<br>
+</font>
+<u><b>GERMANY<!/b></u><br>
+<font color=blue>
+F BAL-SWE *<br>
+A BOH-GAL<br>
+F DEN-BAL *<br>
+F ENG-BRE<br>
+F HOL-HEL<br>
+A KIE-HOL<br>
+F NWY-NWG<br>
+F SWE-BAL *<br>
+</font>
+<u><b>ITALY<!/b></u><br>
+<font color=blue>
+F BUL/SC-AEG<br>
+F NAP-ION *<br>
+F TYS-WES<br>
+</font>
+<u><b>RUSSIA<!/b></u><br>
+<font color=blue>
+F ANK-ARM *<br>
+F BOT-BAL *<br>
+A GAL-BUD<br>
+F LVN-BOT *<br>
+F PRU-BAL *<br>
+F RUM-BUL/EC<br>
+F SMY-SYR<br>
+A VIE-TYR<br>
+</font>
+<u><b>TURKEY<!/b></u><br>
+<font color=blue>
+F AEM-ANK *<br>
+</font>
+</tt>
+</td>
+<th><img src=F1906M.gif></th>
+</tr>
+<tr>
+<th colspan=2 bgcolor=black><tt><font color=white size=3>SITUATION IN ADVANCE OF WINTER 1906</font></tt></th></tr><tr>
+<td>
+<tt>
+<u><b>AUSTRIA<!(3/3)></b></u><br>
+TRI&nbsp;GRE&nbsp;VEN<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i><br></b></font>
+<br><u><b>ENGLAND<!(3/4)></b></u><br>
+EDI&nbsp;LVP<br>
+<font color=blue><b><i>MUST REMOVE 1</i><br></b></font>
+<br><u><b>FRANCE<!(3/2)></b></u><br>
+BEL&nbsp;MAR&nbsp;PAR<br>
+<font color=blue><b><i>MAY BUILD 1</i></b><br></font>
+<br><u><b>GERMANY<!(3/4)></b></u><br>
+BER&nbsp;BRE&nbsp;DEN&nbsp;HOL<br>KIE&nbsp;LON&nbsp;MUN&nbsp;NWY<br>SWE&nbsp;VIE<br>
+<font color=blue><b><i>MAY BUILD 2</i></b><br></font>
+<br><u><b>ITALY<!(3/4)></b></u><br>
+ROM&nbsp;NAP<br>
+<font color=blue><b><i>MUST REMOVE 1</i></b><br></font>
+<br><u><b>RUSSIA<!(4/5)></b></u><br>
+ANK&nbsp;BUD&nbsp;BUL&nbsp;CON<br>MOS&nbsp;RUM&nbsp;SER&nbsp;SEV<br>STP&nbsp;WAR<br>
+<font color=blue><b><i>MAY BUILD 2</i></b><br></font>
+<br><u><b>TURKEY<! (3/3)></b></u><br>
+SMY<br>
+<font color=blue><b><i>NO ADJUSTMENTS</i></b><br></font>
+<p>
+<u><b>UNOWNED</b></u><br>
+POR&nbsp;SPA&nbsp;TUN
+</td>
+<th><img src=preW1906A.gif></th>
+</tr>
+</table>
+</center>
+<p align=justify>
+"Most excellent, doctor!  The neutral centres continue to drop in number!"
+said Lord Fortescue as we completed the Fall movement.
+"The conquest of Denmark by Germany takes us that much further toward
+the solution!"
+<p align=justify>
+"Indeed," I agreed, "although unfortunately only a single centre
+has this year come under the control of the
+Great Powers,
+rather than
+two as we have seen earlier.
+Still in all, it is progress, milord."
+<p align=justify>
+The Foreign Secretary and I thereupon set about determining the next adjustment
+orders, but it was at this point that we were interrupted by Holmes who, hearing
+our conversation, rose from his chair and rejoined us.
+"Ah, Watson, how wrong you are that the loss of but a single centre is
+unfortunate.  Rather, I would have said it to be a happy foregone conclusion."
+Smiling, he continued.  "Lord Reginald, I presume you
+are in a rush now to set about meeting the Sultan's terms to extend
+the important lease.  Might I fetch your hat and coat for you?"
+<p align=justify>
+Our guest stood as dumbfounded as I, as we both stared blankly
+at Holmes.  At length, Lord Reginald managed to sputter, "Surely,
+Holmes, you have not had a fair look at the board.  The good doctor and I
+have now 'played the game forward', as you say, merely to the point where
+there are three neutral supply centres yet to be taken."
+<p align=justify>
+"Indeed so, Lord Secretary.  Well done to you both.  Now, as to your coat
+and hat...."
+<p align=justify>
+Again, Lord Fortescue and I exchanged puzzled glances.  "Holmes," I said,
+"perhaps I am under a misapprehension as to the requirements of the puzzle,
+for it certainly does not seem that we have in any way yet discovered any
+information that can be employed to advantage by the Foreign Office.
+Pray tell, is our task not to determine the final two neutral
+supply centres that shall lose their neutrality in this game?"
+<p align=justify>
+"That is precisely true, Watson.  Now that you have done exactly that, I
+simply assumed that Lord Reginald would wish to take the necessary diplomatic action
+with some urgency."
+<p align=justify>
+"Pardon me, Holmes," said Lord Reginald, "but it seems rather apparent to
+me that with three supply centres still holding neutral status in this game,
+it must be impossible at this time to determine which centres will be the two
+that are finally taken."
+<p align=justify>
+While Holmes once more busied himself drawing deeply from his pipe as he
+re-lit it with some difficulty, I felt compelled to buttress the Foreign
+Secretary's
+statement.  "Lord Reginald is entirely correct, Holmes.  With three centres
+yet to be conquered, there is positively no way in which we can we know which two
+centres are the last to fall,
+let alone the <i>order</i> in which these two will fall,
+which I understand to be another important detail with which we must
+concern ourselves."
+<p align=justify>
+"Gentlemen," Holmes began, seating himself at the table with us, "you do not
+give your work enough credit.  You have in fact gathered all the evidence
+needed
+to answer the Sultan's riddle.  Surely you see that."
+<p align=justify>
+"Surely we do not!" I nearly exploded, while Lord Reginald nodded in agreement
+with me.
+<div id=part1>
+<p align=justify>
+<table><tr><td valign=top>
+<IMG border=0
+align=left hspace=5 SRC="/Zine/Common/stopsign.gif"></td><td><b><i>
+How about you?  Do you know enough to answer the Sultan's riddle yet?
+Consider the position that has been reached, and see if you realize
+what it is that Sherlock Holmes realizes.
+Only when you are ready to do so,
+<a href=javascript:toggleLayer('part2')>
+click here</a>
+to read the rest of Dr Watson's account, and Holmes's final solution
+to this mystery.
+</i> </b></td></tr></table>
+</div>
+<div id=part2 style='display:none;'>
+<p align=justify>
+<hr width=200 COLOR="CC9933">
+<p align=justify>
+Holmes merely smiled.  "Perhaps a restatement of your accomplishment is
+in order, gentlemen.  Have you not seen the greater mass of the neutral centres
+taken?"
+<p align=justify>
+"Certainly we have, Holmes, but not the full retinue of them."  It was
+Lord Reginald who spoke, for I was still rather nonplussed at what appeared
+to be the illogical position of my friend Holmes.  "The Sultan gave to us a
+situation with four neutral centres already conquered, and eight were yet
+untaken.
+By 'playing the game forward' we saw that &mdash; after two rather concerning
+years wherein these eight remaining centres all stubbornly held on to their
+neutrality &mdash;
+their numbers dwindled by two in each of the game-years 1904 and 1905.
+Our most recent work has shown that by the end of 1906 one more of the
+centres has fallen, but three still remain outside the control of any
+of the Great Powers."
+<p align=justify>
+At this, I burst forth.  "And there is positively no way to know, Holmes,
+which pair from those three centres
+will be the final two taken!"
+<p align=justify>
+What Holmes said next took me aback.
+"Ah, doctor, there is positively no evidence that the pair of centres is
+in fact found <i>among</i> those three.  In fact, there is positively <i>ample</i>
+evidence to the contrary!"
+<p align=justify>
+Lord Fortescue and I sat in stunned silence.  Each of us began to stammer
+in protest, but could not seem to form complete sentences.  Finally, Holmes
+continued.
+"Which three neutral centres remain, milord?" asked Holmes.
+<p align=justify>
+"Why, Portugal, Spain, and Tunis, Holmes."
+<p align=justify>
+"Precisely.  In other words, no unit has yet ended a Fall turn, in any of the
+first six years of this game, in any of those locations, is this so?"
+<p align=justify>
+"Certainly it is, Holmes," I said.  "I suppose that is another way to
+say it, yes.  This, indeed, is precisely why we must continue to play
+the game forward until on some future Fall turn each of these centres <i>shall
+be</i>
+occupied by a unit of one of the Great Powers, terminating the neutral status of
+the said centre.  Lord Reginald and I
+are hopeful that one or more of these centres will be occupied
+at the end of 1907, and so" (I glanced at the Foreign Secretary to be sure,
+and he nodded)
+"we intend to proceed at once to determine the
+events of that upcoming game-year."
+<p align=justify>
+Holmes shook his head from side to side.  "You are quite welcome to play
+through 1907, Watson; do not let me stop you if it is your intention.  I
+merely state for the record that you have solved the problem now, if you
+will but realize it, and to trouble yourselves to proceed further is quite
+unnecessary."
+<p align=justify>
+Another pause ensued, the Foreign Secretary and I again paralyzed both in
+words and actions.
+<p align=justify>
+"Gentlemen," Holmes at last began, slowly and methodically.
+"It should be apparent to you both by now &mdash; after
+having played so many moves of this game according to its very particular rules
+governing the orders that are issued to the pieces &mdash; that a unit in any
+given location can only ever be ordered to two of the spaces adjacent to
+that location.  Although the space that a piece occupies may be adjacent
+to as many as ten or more other spaces on the board, it is true that it may
+only ever be ordered either to the single space whose namespace abbreviation
+alphabetically <i>precedes</i> that of its current location, or the space which
+alphabetically <i>follows</i> it.  Any other adjacent spaces cannot possibly
+be the destination of a movement order issued to a unit at that location."
+<p align=justify>
+I felt compelled to add something.  "What you say is mostly correct, Holmes,
+but of course the two choices that a unit may have from each location may
+differ based on the type of the unit.  For example, a fleet in Liverpool,
+moving <i>up</i> the alphabet, from <i>Z-to-A</i> will be ordered to the Irish
+Sea, but an army in that same space and moving the same alphabetical direction
+will instead be ordered to Edinburgh."
+<p align=justify>
+"All well and true, Watson.  My point, however, is that any unit in Liverpool, be
+it an army or a fleet, cannot ever <i>possibly</i> be ordered, for example,
+to Clyde
+or to Yorkshire.
+An army's choices, depending on its direction of movement along the alphabet,
+are either Edinburgh or Wales, whilst a fleet's choices stand as either the
+Irish Sea or the North Atlantic Ocean.  Under the rules of movement we have
+been given, Clyde and Yorkshire
+are simply not reachable in a single move from Liverpool."
+<p align=justify>
+"All of this is quite true, Holmes, but I fail to see how this helps us in
+any way."
+<p align=justify>
+"Ah, Lord Reginald, it helps us greatly.  Turn what we have just discussed
+upon its head, and rather than considering the spaces <i>to which</i> a unit in
+any given location can move, think instead of the spaces <i><u>from which</u></i>
+a unit <i>could move</i> in order to <i><u>reach</u></i> a given location."
+<p align=justify>
+"I am afraid you lost me, Holmes," said I.
+<p align=justify>
+Lord Reginald, however, apparently had more luck in knowing the mind
+and meaning of our friend.  "Ah, I believe I see, Holmes," he said
+with a smile.
+<p align=justify>
+Gratified, Holmes said, "Excellent, Lord Reginald.  Perhaps you would wish to
+choose from amongst the three supply centres that remain neutral,
+and determine for your chosen centre how it may possibly come about
+that a unit might be ordered to occupy it."  After a short pause, Holmes
+smiled and offered, "Might I suggest Spain for your choice, milord?"
+<p align=justify>
+"Then Spain it shall be, Holmes.  First, we would consider the case of an
+army finding itself in any of the spaces adjacent to Spain.  Obviously,
+this means that the army would be either in Gascony, Marseilles, or Portugal.
+Were it in Gascony, it could only ever be ordered to Brest (with <tt>BRE</tt>
+being the space amongst those adjacent to Gascony that is next <i>up</i> the
+alphabet from <tt>GAS</tt>) or to Marseilles (<tt>MAR</tt> being next
+<i>down</i> the alphabet from <tt>GAS</tt>)."
+<p align=justify>
+The light began to dawn on me at this point.  "So an army in Gascony cannot possibly
+ever move to Spain!"
+<p align=justify>
+"Correct, Watson.  Pray continue, milord."
+<p align=justify>
+Both Lord Reginald and I were smiling now, as it had struck us where this
+train of logic might lead.  "Similarly, Holmes, if the army were in
+Marseilles, once again, Spain is not amongst the two choices for its possible
+order!  From Marseilles, an army will only ever be ordered to either Gascony
+or Piedmont!  Never to Spain!"
+<p align=justify>
+"Exactly, gentlemen.  In fact, the only possible location that an army may
+occupy and be ordered to move to Spain is, of course, Portugal.  In fact,
+regardless of the alphabetical direction it might be moving, any army finding
+itself in Portugal will certainly be ordered to move to Spain, as being the only
+location adjacent to Portugal by land it is both
+the space next <i>down</i> and next <i>up</i> the alphabet from <tt>POR</tt>."
+<p align=justify>
+Lord Reginald continued where he had left off.  "We have a few more locations
+to consider in the case of a fleet.  A fleet may be found adjacent to Spain
+in any of six spaces &mdash; Marseilles, the Gulf of Lyon, the Western Mediterranean,
+the Mid-Atlantic Ocean, Portugal, and Gascony.  I assume, Holmes, that once
+more we would find that neither of the two movement options that a
+fleet would have in any of these locations would include Spain?"
+<p align=justify>
+"That is correct, Lord Fortescue.  With, of course, the selfsame exception
+that the fleet may be in Portugal and moving <i>down</i> the alphabet from
+<i>A-to-Z</i>, which would see it ordered to the north coast of Spain."
+<p align=justify>
+Lord Reginald and I spent a minute satisfying ourselves that this was in fact
+the case, and at length I announced the conclusion we had reached.  "So we
+have found, Holmes, that the only possible way that a unit can ever enter
+Spain is to first find itself in Portugal, and only in Portugal."
+<p align=justify>
+"Well stated, Watson.  I propose that we now repeat the same investigation,
+this time using Portugal rather than Spain."
+<p align=justify>
+That is precisely what we did.  This went rather quickly, with the
+Mid-Atlantic Ocean and Spain being the only two locations adjacent to
+Portugal for us to consider as possible locations for a unit being ordered
+to Portugal.  When we realized that a fleet in the Mid-Atlantic Ocean will
+only ever be ordered either to the Irish Sea or to North Africa, I was able
+to exclaim, "And now we have proven, Holmes, that the only possible way that
+a unit can ever enter <i>Portugal</i> is to first find itself in <i>Spain</i>,
+and only in Spain!"
+<p align=justify>
+Lord Reginald had the pleasure of stating the conclusion that followed from
+our investigations into these Iberian centres.  "Obviously, then, since
+no unit ever begins its lifespan in either Portugal or Spain by being built
+there, no unit can ever possibly reach either of these two centres!"
+<p align=justify>
+"That is precisely correct, Lord Reginald, meaning that neither of these
+two centres can possibly be among the final two that <i>are</i> taken.
+With this understood, I put it to you once more that you have solved the
+Sultan's riddle."
+<p align=justify>
+Lord Reginald beamed, while he and I once again marveled at the mind of
+our friend Holmes.  "Of course, Holmes!  This most-recently concluded game-year
+saw the fall of Denmark.  That must be the first of the final two centres
+to be taken, and the other &mdash; with Spain and Portugal impossible to reach &mdash;
+must be Tunis!  I must set about immediately arranging for a courier to
+travel to Copenhagen with a lease extension and arrange for his travel
+from there on a round-trip to Tunis!"
+<p align=justify>
+Holmes moved to fetch the hat and coat of the Foreign Secretary, saying,
+"I am quite confident, milord, that your courier will find our clever friend
+the Sultan awaiting him in Tunis, prepared and well-disposed to extend the lease."
+<p align=justify>
+I, however, stood still at the table, and before Lord Reginald had his
+arms into his topcoat, I said, "I am afraid I am not as confident as Holmes
+in that, Lord Reginald."
+<p align=justify>
+"Is that so, doctor?" asked the Foreign Secretary.
+<p align=justify>
+"I am sorry to say it, milord, but allow me to explain.  Just as we have
+never seen a unit ordered to Spain and Portugal in this game &mdash; and we have
+well and truly proven that no unit ever <i>can</i> or <i>will</i> be ordered
+there &mdash; I note with some trepidation that we have <i>also</i> never seen a unit
+be ordered to Tunis."
+<p align=justify>
+Lord Reginald understood my point right away.  "The doctor is right,
+Holmes.  It may very well be that Tunis is also unreachable, just like
+Spain and Portugal!"  Disheartened, the Foreign Secretary removed his
+topcoat from his shoulders and returned to the table.
+<p align=justify>
+"Gentlemen, you may be sure that Tunis will be conquered,"  Holmes asserted.
+<p align=justify>
+I was forced to differ.
+"How can we be so sure, Holmes?  While you and Lord Reginald were at the
+cloak closet, I admit I began for Tunis the same investigation we conducted
+for Spain and Portugal, and while it is true that a fleet in North Africa
+moving toward <i>Z</i>
+would indeed be ordered to Tunis, I yet see some issues in concluding from
+this that such a thing might ever take place."
+<p align=justify>
+"The doctor is correct, Holmes.  Not only must we be sure that a fleet
+can ever possibly reach North Africa and be moving in the
+correct alphabetical direction, we also must be sure that this happens
+on a Fall turn, so that once the fleet reaches Tunis, it does not sail
+again, vacating the centre without claiming it for its own."
+<p align=justify>
+Holmes, smiling indulgently, only said, "Actually, gentlemen, such a move
+<i>could</i> occur in the Spring, as long as the fleet, having reached
+Tunis, thereupon bounces in its attempt to leave in the Fall."
+<p align=justify>
+"True enough, I suppose, Holmes," said I, "but it seems as if we have no
+proof whatsoever that the proper conditions will ever come about to effectively
+render Tunis under the control of one of the Great Powers."
+<p align=justify>
+"Not so, Watson.  We have all the proof we require.  We have the Sultan
+telling us explicitly that we shall be able to conclusively communicate
+to him, by means of the round-trip ticket to be purchased,
+which two neutral centres are the final two to be taken.  From this alone,
+we can conclude that the days of the neutrality of Tunis are numbered."
+<p align=justify>
+The smile broke out again on Lord Reginald's face.  "Of course, Holmes!
+The simple fact that that year <i>before</i> the fall of Denmark, <i><u>two</u></i>
+neutrals fell <i>simultaneously</i> eliminated both of those centres, Norway and
+Sweden, from the possible solution set!"
+<p align=justify>
+At once I saw it.  "Brilliant, Holmes!  In this way, we are forced to the
+conclusion that Denmark cannot possibly be the <i>final</i> centre taken,
+since we know that the final two must be taken in separate game-years!
+With Sweden and Norway having been taken together, Denmark must be the
+<u>pænultimate</u>
+centre taken, and Tunis must therefore eventually fall."
+<p align=justify>
+Lord Reginald, once more and this time finally satisfied, hurriedly wrapped
+himself against the weather, donned his bowler, and after a vigorous shaking
+of hands, left 221B Baker Street
+with Whitehall his destination.  Within a fortnight, it was reported by Fleet
+Street that the important lease held by Great Britain on the deepwater
+facilities of Port Suwat was extended in a ceremony held in Tunis, and
+that the diplomat who had represented the crown in this affair was
+known at that time to be <i>en route</i> back to London by way of Copenhagen.
+<blockquote><i>
+<p align=justify>
+This concluded the affair that I have entitled "Begone And Back", but the
+reader may be interested to know that I spent some of my idle time over
+the next several weeks continuing to "play the game forward", simply to
+assure myself that Tunis would indeed be taken.
+I am publishing with this
+treatise <a target=bab href=bab.pdf>the complete set of maps</a> that was the result
+of my efforts.  This proved a much more labourious exercise than I had hoped,
+and I began
+to wonder if in fact Tunis would </i>ever<i> fall,
+or if instead before it did so,
+some one of the Great Powers
+would perhaps achieve ownership of
+eighteen centres, ending the game.  At long last, however, the Sultan and my
+friend were proven correct, though it was not until the
+game-year 1925 that Tunis became the last and final neutral centre to be
+taken.  It is hoped that the gentle reader will take as much pleasure
+paging through the maps that record the movements in each season of this
+curious game, smiling at the various and sundry bounces and changes in
+direction that resulted in a number of tantalizing and humorous near-misses
+on the way to the ultimate conquest of Tunis, as did I, your humble
+chronicler of the accomplishments of my good friend Mr Sherlock Holmes.
+</i></blockquote>
+</div>
+<p>
+<b>&mdash; Dr John H. Watson</b>
+</blockquote>
+<TABLE>
+<TBODY>
+<TR vAlign=top>
+<TD><A href="mailto:manus@diplom.org"><IMG
+src="/Zine/Common/letter.gif" border=0></A> </TD>
+<TD valign=top><STRONG>via Manus Hand<BR>(<a href="mailto:manus@diplom.org">manus@diplom.org</a>)</STRONG>
+</TD></TR></TBODY></TABLE>
+<P>
+<I>If you wish to e-mail feedback on this article to the author, and clicking
+on the envelope above does not work for you, feel free to use the <A
+href="/Zine/F2008M/Common/DearDP.html">"<B>Dear
+DP...</B>"</A> mail interface.</I>
+</TD>
+</TR>
+</TABLE>
+<P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="CC9933">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton50.gif" align="left" border="0"></a>
+<a href="/Zine/F2008M/"><img src="/Zine/Common/toF2008M.gif" align="right" border="0"></a>
+</BODY></HTML>
+<!--
+-->

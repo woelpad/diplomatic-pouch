@@ -1,0 +1,186 @@
+<html>
+<head>
+<title>DP F1995M: DPP: What You Don't Know </title>
+</head>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1995M/"><IMG align=right SRC="/Zine/Common/toF1995M.gif" border=0></A>
+<BR><BR><HR>
+<IMG align=left height=165 hspace=10 SRC="/Zine/Common/Loeb.gif">
+<center>
+<h2>The Diplomacy Programming Project</h2>
+<h1>What you Don't Know<BR>
+Can Help You</h1>
+<H2><i>Danny Loeb</i></H2>
+</center>
+<P>
+<hr>
+You are the GameMaster of a Diplomacy game and
+two players (say, Danny Loeb and Dan Shoham)
+write identical letters to you:
+<pre>
+        Dear GameMaster,
+        If it is not too much trouble, could you please
+        roll an ordinary six sided die?
+        If it comes up 1 or 2, then please indicate
+        that fact privately to Mr. Loeb.
+        If it comes up 5 or 6, then please indicate
+        that fact privately to Mr. Shoham.
+        If it comes up 3 or 4, then please take no
+        special action.
+        We are trying to pick a random strategy
+        (we must keep those other players guessing!),
+        and we don't have a die handy.
+        Thanks in advance.
+        Yours,
+        Danny Loeb
+        Dan Shoham
+</pre>
+What is going on here?
+<p>
+Why do these two players (actually game theorists) ask their GM to
+roll a die when they could very well do so themselves?
+<p>
+One possibility is that they are deciding if a given center will go to
+Loeb or to Shoham, and they do not trust each other to flip the coin
+fairly without the presence of the other player.
+(Actually there are <a href="Coin.html">methods of simulating a coin
+flip</a> between two separated parties without the intervention of a
+neutral third party.)
+Still, if they really wanted to use a neutral third party, why not use
+the final digit of the Dow Jones index as a "die"?
+<p>
+A hint as to why they couldn't do this lies in their strange
+instructions to the GM as to how to report the results.
+They clearly want one party to be in doubt as to the result of the die
+roll.
+If they had agreed to use some publically available source of information,
+this would be impossible.
+<p>
+Well, maybe Loeb has agreed to support Shoham. Loeb has two units
+available for the support. Whichever unit Loeb uses will expose him to
+a stab by Shoham in a different way, so he doesn't want Shoham to know
+which unit will actually be making the support.
+<p>
+That is possible, but quite unlikely, since if the secret decision
+only involves Loeb's unit, then why doesn't he make up his mind
+"randomly" by himself? Furthermore, why does Shoham get information in
+certain cases?
+<p>
+What really is going on is that both players are being given access to
+their own "random variable." These random variables take two values:
+<UL compact>
+<LI><B>be contacted by the GM</B> (with probability 1/3) and
+<LI><B><i>not</i> be contacted by the GM</B> (with probability 2/3).
+</UL>
+<P>However, we must note that these random
+variables are <b>not</b> "independent." In particular, there is <B>no</B>
+chance that <i>both</i> players will be contacted by the GM.
+<p>
+Here is what is really going on.
+To keep things, simple let's assume that both players have only two
+options: "conservative" and "ambitious." (I'll
+avoid actually drawing a
+Diplomacy gameboard, since any real position is bound to be more
+complicated and will divert your attention from my main point.)
+<p>
+If both allies chose to be "conservative" then they both get a good
+result. Let's say the resulting position is worth "six" in some units
+to both players.
+If both players are "ambitious," then the plan would fail, and both
+players get "zero."
+If one player is "ambitious" while the other is "conservative," then the
+"ambitious" player gets a great position worth "seven" and the
+"conservative" player gets a poor position worth only "two."
+<pre>
+                            +-------+
+                            |  Loeb |
+                            +---+---+
+                            | C | A |
+               +--------+---+---+---+
+               |        |   |\ 6|\ 7|
+               |        | C | \ | \ |
+               |        |   |6 \|2 \|
+               | Shoham +---+---+---+
+               |        |   |\ 2|\ 0| 
+               |        | A | \ | \ | 
+               |        |   |7 \|0 \|
+               +--------+---+---+---+
+</pre>
+The Nobel Prize winning mathematician John Nash showed that any such
+game has (at least 
+one) equilibrium position from which no player has an incentive to
+change his moves.
+In this example, the result <i>(Loeb=ambitious, Shoham=conservative)</i>
+is a Nash
+equilibrium, since Loeb and Shoham would lose 1 and 2 points
+respectively if either changed his mind. Similarly,
+<i>(Loeb=conservative, Shoham=ambitious)</i> is a Nash equilibrium.
+<p>
+In actual play, each player will try to impose the equilibrium that
+favors him by trying to argue to his ally that he is committed to
+being ambitious, has already sent in his moves, and will have no
+chance to change them. The risk, of course, if both players do that is
+that they will both end up with zero.
+In any case, Nash Equilibria play leads only to a "total gain"
+of "nine" for the alliance.
+<p>
+Now, in the situation as described, Loeb and Shoham have agreed to only be
+ambitious if he is contacted by the GM.
+This agreement will result in <i>(conservative, conservative)</i>,
+<i>(conservative, ambitious)</i>, and <i>(ambitious, conservative)</i>
+each one-third
+of the time. The average expected payoff for the alliance is now
+"ten."
+<p>
+However, is the agreement stable?
+That is, do both players have an incentive to keep their agreements in
+all circumstances? After all, if we were to consider all agreements
+regardless of their stability, then an outcome of "twelve" would come from
+playing <i>(conservative, conservative)</i>.
+<p>
+If the GM contacts Loeb, then Loeb knows that Shoham will not be contacted
+and will play "conservative." Loeb can ensure that highest payoff possible for
+himself by sticking to the prearranged strategy and play "ambitious."
+<p>
+If the GM does not contact Loeb, then the GM may have contacted Shoham
+or he might not have. From Loeb's point of view, either may have
+occurred with an a postiori probability of one-half.
+By playing "conservative" (as per the agreement), Loeb will gain "six"
+half of the time, and "two" half of the time, leading to an expected
+gain of "four." By breaking the agreement and playing "ambitious," Loeb
+will gain "seven" half of the time, and "zero" half of the time,
+leading to an expected gain of "3.5."
+<p>
+Thus, in neither case should Loeb break his agreement.
+Shoham will prove to be trustworthy for similar reasons.
+<p>
+Each player has an information set that is different from but related
+to the information set of the other player.
+By not knowing everything that your ally knows, a certain stability is
+achieved that allows the alliance to perform better.
+<h2>Reader Feedback</h2>
+<ul>
+  <li>How should the GM respond to such a request?
+      Does generating random numbers for the players give them an 
+      <b>unfair</b> advantage?
+  <li>Can you think of any real situations on the board that
+      correspond to the type of payoff matrix above?
+      Have you seen any such situation in a real game?
+</ul>       
+<p><hr>
+<A HREF="http://www.labri.u-bordeaux.fr/~loeb/"><B>Danny Loeb<BR></A>
+University of Bordeaux<br>
+(<A HREF="mailto:loeb@delanet.com">loeb@delanet.com</A>)</B>
+<P>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the mail address above does not work for you, feel free to use the
+<A HREF="/Zine/F1995M/Common/DearDP.html">"<b>Dear DP...</b>"</A> mail interface.</i>
+<hr>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1995M/"><IMG align=right SRC="/Zine/Common/toF1995M.gif" border=0></A>
+<BR><BR>
+</body>
+</html>
+<!--
+-->

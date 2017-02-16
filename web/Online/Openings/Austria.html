@@ -1,0 +1,950 @@
+
+
+
+
+<title>DP Online: The Diplomacy Openings Library</title>
+
+<BODY BGCOLOR="#ffffff">
+
+
+
+<script language=javascript>
+<!--
+	power = 'Austria'
+	var varName = new Array()
+	var varDesc = new Array()
+	var u0 = new Array()
+	var u1 = new Array()
+	var u2 = new Array()
+	if (power == 'Russia') var u3 = new Array()
+	
+varName[0] = "aus-bwo"
+u0[0] = 1
+u1[0] = 1
+u2[0] = 4
+varName[1] = "aus-bwl"
+u0[1] = 1
+u1[1] = 1
+u2[1] = 4
+varName[2] = "aus-bwo"
+u0[2] = 1
+u1[2] = 0
+u2[2] = 0
+varName[3] = "aus-hsj"
+u0[3] = 1
+u1[3] = 0
+u2[3] = 0
+varName[4] = "aus-bwo"
+u0[4] = 1
+u1[4] = 1
+u2[4] = 1
+varName[5] = "aus-panther"
+u0[5] = 1
+u1[5] = 1
+u2[5] = 1
+varName[6] = "aus-galgam"
+u0[6] = 2
+u1[6] = 4
+u2[6] = 5
+varName[7] = "aus-housboat-hun"
+u0[7] = 0
+u1[7] = 1
+u2[7] = 0
+varName[8] = "aus-kenkey"
+u0[8] = 0
+u1[8] = 1
+u2[8] = 0
+varName[9] = "aus-bwo"
+u0[9] = 1
+u1[9] = 1
+u2[9] = 5
+varName[10] = "aus-bwl"
+u0[10] = 1
+u1[10] = 1
+u2[10] = 5
+varName[11] = "aus-hedgehog-sou"
+u0[11] = 3
+u1[11] = 1
+u2[11] = 1
+varName[12] = "aus-bwo"
+u0[12] = 1
+u1[12] = 3
+u2[12] = 4
+varName[13] = "aus-italy"
+u0[13] = 1
+u1[13] = 3
+u2[13] = 4
+varName[14] = "aus-rumgam-road"
+u0[14] = 2
+u1[14] = 0
+u2[14] = 1
+varName[15] = "aus-warthog"
+u0[15] = 2
+u1[15] = 0
+u2[15] = 1
+varName[16] = "aus-rusfrol"
+u0[16] = 2
+u1[16] = 0
+u2[16] = 1
+varName[17] = "aus-balgam"
+u0[17] = 2
+u1[17] = 1
+u2[17] = 2
+varName[18] = "aus-bulgam"
+u0[18] = 2
+u1[18] = 1
+u2[18] = 2
+varName[19] = "aus-roadhog"
+u0[19] = 0
+u1[19] = 0
+u2[19] = 1
+varName[20] = "aus-hsj"
+u0[20] = 0
+u1[20] = 0
+u2[20] = 1
+varName[21] = "aus-rusfrol"
+u0[21] = 0
+u1[21] = 0
+u2[21] = 1
+varName[22] = "aus-hogal"
+u0[22] = 2
+u1[22] = 4
+u2[22] = 1
+varName[23] = "aus-hedgehog-but"
+u0[23] = 3
+u1[23] = 6
+u2[23] = 3
+varName[24] = "aus-bluewater-but"
+u0[24] = 1
+u1[24] = 6
+u2[24] = 4
+varName[25] = "aus-balgam-vie"
+u0[25] = 2
+u1[25] = 1
+u2[25] = 6
+varName[26] = "aus-bulgam"
+u0[26] = 2
+u1[26] = 1
+u2[26] = 6
+varName[27] = "aus-hedgehog-ffv"
+u0[27] = 3
+u1[27] = 0
+u2[27] = 3
+varName[28] = "aus-hsj"
+u0[28] = 3
+u1[28] = 0
+u2[28] = 3
+varName[29] = "aus-housboat"
+u0[29] = 0
+u1[29] = 1
+u2[29] = 1
+varName[30] = "aus-hedgehog-por"
+u0[30] = 3
+u1[30] = 5
+u2[30] = 1
+varName[31] = "aus-balgam-tyr"
+u0[31] = 2
+u1[31] = 1
+u2[31] = 4
+varName[32] = "aus-bulgam"
+u0[32] = 2
+u1[32] = 1
+u2[32] = 4
+varName[33] = "aus-sd"
+u0[33] = 2
+u1[33] = 2
+u2[33] = 2
+varName[34] = "aus-hedgehog"
+u0[34] = 3
+u1[34] = 1
+u2[34] = 0
+varName[35] = "aus-kenkey"
+u0[35] = 3
+u1[35] = 1
+u2[35] = 0
+varName[36] = "aus-bwo"
+u0[36] = 1
+u1[36] = 0
+u2[36] = 1
+varName[37] = "aus-hsj"
+u0[37] = 1
+u1[37] = 0
+u2[37] = 1
+varName[38] = "aus-rusfrol"
+u0[38] = 1
+u1[38] = 0
+u2[38] = 1
+varName[39] = "aus-panther"
+u0[39] = 1
+u1[39] = 0
+u2[39] = 1
+varName[40] = "aus-balgam-bud"
+u0[40] = 2
+u1[40] = 1
+u2[40] = 0
+varName[41] = "aus-kenkey"
+u0[41] = 2
+u1[41] = 1
+u2[41] = 0
+varName[42] = "aus-ionian"
+u0[42] = 2
+u1[42] = 1
+u2[42] = 0
+varName[43] = "aus-bulgam"
+u0[43] = 2
+u1[43] = 1
+u2[43] = 0
+varName[44] = "aus-bwo"
+u0[44] = 1
+u1[44] = 2
+u2[44] = 1
+varName[45] = "aus-housboat"
+u0[45] = 1
+u1[45] = 2
+u2[45] = 1
+varName[46] = "aus-hedgehog-dpv"
+u0[46] = 3
+u1[46] = 4
+u2[46] = 7
+varName[47] = "aus-hedgehog-but"
+u0[47] = 3
+u1[47] = 6
+u2[47] = 4
+varName[48] = "aus-rumgam"
+u0[48] = 2
+u1[48] = 0
+u2[48] = 5
+varName[49] = "aus-hsj"
+u0[49] = 2
+u1[49] = 0
+u2[49] = 5
+varName[50] = "aus-hedgehog"
+u0[50] = 3
+u1[50] = 0
+u2[50] = 1
+varName[51] = "aus-bwo"
+u0[51] = 1
+u1[51] = 0
+u2[51] = 4
+varName[52] = "aus-hsj"
+u0[52] = 1
+u1[52] = 0
+u2[52] = 4
+varName[53] = "aus-gambit-but"
+u0[53] = 2
+u1[53] = 6
+u2[53] = 3
+varName[54] = "aus-housboat-tyr"
+u0[54] = 0
+u1[54] = 1
+u2[54] = 4
+varName[55] = "aus-roadhog"
+u0[55] = 0
+u1[55] = 0
+u2[55] = 0
+varName[56] = "aus-hsj"
+u0[56] = 0
+u1[56] = 0
+u2[56] = 0
+varName[57] = "aus-gambit-but"
+u0[57] = 2
+u1[57] = 6
+u2[57] = 4
+varName[58] = "aus-bwo"
+u0[58] = 1
+u1[58] = 0
+u2[58] = 5
+varName[59] = "aus-hsj"
+u0[59] = 1
+u1[59] = 0
+u2[59] = 5
+varName[60] = "aus-rumgam-tyr"
+u0[60] = 2
+u1[60] = 0
+u2[60] = 4
+varName[61] = "aus-hsj"
+u0[61] = 2
+u1[61] = 0
+u2[61] = 4
+varName[62] = "aus-housboat-nth"
+u0[62] = 0
+u1[62] = 1
+u2[62] = 3
+varName[63] = "aus-bwo"
+u0[63] = 1
+u1[63] = 1
+u2[63] = 0
+varName[64] = "aus-kenkey"
+u0[64] = 1
+u1[64] = 1
+u2[64] = 0
+varName[65] = "aus-balgam-gal"
+u0[65] = 2
+u1[65] = 1
+u2[65] = 1
+varName[66] = "aus-bulgam"
+u0[66] = 2
+u1[66] = 1
+u2[66] = 1
+varName[67] = "aus-tyrgam"
+u0[67] = 2
+u1[67] = 3
+u2[67] = 4
+varName[68] = "aus-balgam-tri"
+u0[68] = 2
+u1[68] = 1
+u2[68] = 5
+varName[69] = "aus-ionian"
+u0[69] = 2
+u1[69] = 1
+u2[69] = 5
+varName[70] = "aus-bulgam"
+u0[70] = 2
+u1[70] = 1
+u2[70] = 5
+varName[71] = "aus-balgam-boh"
+u0[71] = 2
+u1[71] = 1
+u2[71] = 3
+varName[72] = "aus-bulgam"
+u0[72] = 2
+u1[72] = 1
+u2[72] = 3
+varName[73] = "aus-bluewater-but"
+u0[73] = 1
+u1[73] = 6
+u2[73] = 3
+varName[74] = "aus-rumgam-mcg"
+u0[74] = 2
+u1[74] = 0
+u2[74] = 0
+varName[75] = "aus-hsj"
+u0[75] = 2
+u1[75] = 0
+u2[75] = 0
+varName[76] = "aus-hedgehog-alp"
+u0[76] = 3
+u1[76] = 4
+u2[76] = 4
+varName[77] = "aus-hedgehog"
+u0[77] = 3
+u1[77] = 1
+u2[77] = 4
+varName[78] = "aus-housboat-cri"
+u0[78] = 0
+u1[78] = 1
+u2[78] = 2
+varName[79] = "aus-housboat-par"
+u0[79] = 0
+u1[79] = 1
+u2[79] = 2
+varDesc['comment'] = "--ABOUT THE AUSTRIAN OPENINGS--</b><dd>"
+varDesc['comment'] += 'The Austrian openings are categorized in the following groups: '
+varDesc['comment'] += '<ul> '
+varDesc['comment'] += '<li>Roadhog Openings (F Tri H, A Bud-Rum) '
+varDesc['comment'] += '<li>Houseboat Openings (F Tri H, A Bud-Ser) '
+varDesc['comment'] += '<li>Hedgehog Openings (F Tri-Ven) '
+varDesc['comment'] += '<li>Blue Water Openings (F Tri-ADR) '
+varDesc['comment'] += '<li>Gambit Openings (F Tri-Alb) '
+varDesc['comment'] += '<ul> '
+varDesc['comment'] += '<li>Balkan Gambit Openings (A Bud-Ser) '
+varDesc['comment'] += '<li>Galician Gambit Openings (A Bud-Gal) '
+varDesc['comment'] += '<li>Rumanian Gambit Openings (A Bud-Rum) '
+varDesc['comment'] += '<li>Tyrolese Gambit Opening (A Bud-Tri, A Vie-Tyr) '
+varDesc['comment'] += '</ul> '
+varDesc['comment'] += '</ul> '
+varDesc['comment'] += ' '
+varDesc['aus-hedgehog-sou'] = "HEDGEHOG, SOUTHERN VARIATION</b><dd>"
+varDesc['aus-hedgehog-sou'] += 'Better known as the Southern Hedgehog. The opening: F Tri-Ven, A Bud-Ser, '
+varDesc['aus-hedgehog-sou'] += 'and A Vie-Gal.  Named and popularised by Richard Sharp.  '
+varDesc['aus-hedgehog-sou'] += ' '
+varDesc['aus-housboat-hun'] = "HOUSEBOAT, HUNGARIAN VARIATION</b><dd>"
+varDesc['aus-housboat-hun'] += "Also known as the Hungarian Houseboat. Richard Sharp's name for the opening: "
+varDesc['aus-housboat-hun'] += 'F Tri H, A Bud-Ser, A Vie-Bud. '
+varDesc['aus-housboat-hun'] += ' '
+varDesc['aus-hedgehog-ffv'] = "HEDGEHOG, FISHER'S FOLLY VARIATION</b><dd>"
+varDesc['aus-hedgehog-ffv'] += "Richard Sharp's name for the opening: F Tri-Ven, A Bud-Rum, A Vie-Boh. "
+varDesc['aus-hedgehog-ffv'] += ' '
+varDesc['aus-hogal'] = "GALICIAN GAMBIT, HEAD-ON GALICIAN VARIANT</b><dd>"
+varDesc['aus-hogal'] += "The Head-On Galician is Richard Sharp's name for the opening: F Tri-Alb, "
+varDesc['aus-hogal'] += 'A Vie-Gal and A Bud-Gal.  Sure to keep Galicia vacant or Austrian, it is '
+varDesc['aus-hogal'] += 'among the safer Gambits, but relies entirely on Italian and Turkish  '
+varDesc['aus-hogal'] += 'friendship to be able to earn a single 1901 build. '
+varDesc['aus-hogal'] += ' '
+varDesc['aus-hedgehog-but'] = "BUTLER HEDGEHOG (NANAMAVEU)</b><dd>"
+varDesc['aus-hedgehog-but'] += 'Named after Christian Butler, the Butler Hedgehog (also called the '
+varDesc['aus-hedgehog-but'] += 'Nanamaveu) is an abandonment of the Balkans in favor of an all out '
+varDesc['aus-hedgehog-but'] += 'attack on Italy (or an application of early pressure on Germany). '
+varDesc['aus-hedgehog-but'] += 'It should be used only if the Turk can be counted on to allow later '
+varDesc['aus-hedgehog-but'] += 'Balkan growth for Austria, and Russia is friendly, if not dedicated '
+varDesc['aus-hedgehog-but'] += 'to a full German attack. '
+varDesc['aus-hedgehog-but'] += ' '
+varDesc['aus-housboat-par'] = "HOUSEBOAT, PARANOIA DEFENCE</b><dd>"
+varDesc['aus-housboat-par'] += "Richard Sharp's name for the opening: A Vie S F Tri, A Bud-Ser.  This is "
+varDesc['aus-housboat-par'] += "simply Crichton's Houseboat with a meaningless twist.  A silly opening indeed, "
+varDesc['aus-housboat-par'] += 'useless even in no-press games, as its meaning is unfathomable. '
+varDesc['aus-housboat-par'] += ' '
+varDesc['aus-hedgehog-dpv'] = "HEDGEHOG, DEAD PORCUPINE VARIATION</b><dd>"
+varDesc['aus-hedgehog-dpv'] += "Richard Sharp's name for the opening: F Tri-Ven, A Vie S Bud-Gal. "
+varDesc['aus-hedgehog-dpv'] += ' '
+varDesc['aus-housboat-cri'] = "HOUSEBOAT, CRICHTON'S VARIATION</b><dd>"
+varDesc['aus-housboat-cri'] += "Richard Sharp's name for the opening used by David Crichton in "
+varDesc['aus-housboat-cri'] += 'a game in Dolchstoss (DS19): F Tri H, A Bud-Ser, A Vie H. '
+varDesc['aus-housboat-cri'] += ' '
+varDesc['aus-bwo'] = "BLUE WATER OPENING</b><dd>"
+varDesc['aus-bwo'] += 'Any opening sending the Trieste fleet to the Adriatic Sea. '
+varDesc['aus-bwo'] += 'The von Metzke Blitz (a.k.a. the Italian Attack) is recognized as '
+varDesc['aus-bwo'] += 'a variant of the Blue Water Opening. '
+varDesc['aus-bwo'] += ' '
+varDesc['aus-bwl'] = "[BLUE WATER LEPANTO]</b><dd>"
+varDesc['aus-bwl'] += "Manus Hand's Fall 1901 continuation of the Blue Water Opening has Austria "
+varDesc['aus-bwl'] += "virtually forcing himself into Italy's Lepanto convoy chain by the creation "
+varDesc['aus-bwl'] += 'of a perceived threat to Venice that forces Italy to take Tunis by fleet, '
+varDesc['aus-bwl'] += 'vacating the Ionian Sea. '
+varDesc['aus-bwl'] += 'The Austrian (who opened to the Adriatic) sails '
+varDesc['aus-bwl'] += 'to the Ionian in Fall of 1901 to be the victim of an arranged dislodgement '
+varDesc['aus-bwl'] += "by the Italian fleets in Naples and Tunis.  Austria's fleet then surprises "
+varDesc['aus-bwl'] += 'Turkey by retreating eastward to form part of the convoy chain that carries '
+varDesc['aus-bwl'] += 'the Italian army to Anatolia.  Described in '
+varDesc['aus-bwl'] += '<a target=_parent href=/Zine/W1999A/Hand/bwl.html>an article '
+varDesc['aus-bwl'] += 'in The Pouch Zine</a> by Manus Hand and in '
+varDesc['aus-bwl'] += '<a target=_parent href=/Zine/F2000M/Pillie/bluewater.html>a follow-up article</a> by '
+varDesc['aus-bwl'] += 'Derek Pillie. '
+varDesc['aus-bwl'] += ' '
+varDesc['aus-rusfrol'] = "[RUSSIAN FROLIC]</b><dd>"
+varDesc['aus-rusfrol'] += "Allen Wells' name for the Austro-Turkish opening based on A Vie-Gal, A Bud-Rum, "
+varDesc['aus-rusfrol'] += 'A Con H, A Smy-Arm, F Ank-Bla. The key here is A Con H which, '
+varDesc['aus-rusfrol'] += "by eliminating Turkey's 1901 risk to Serbia, permits Austria "
+varDesc['aus-rusfrol'] += 'to move safely to Rum. Discussed in issue 29 of <i>Diplomacy World</i>. '
+varDesc['aus-rusfrol'] += ' '
+varDesc['aus-rumgam'] = "RUMANIAN GAMBIT</b><dd>"
+varDesc['aus-rumgam'] += 'A series of Austrian openings named by Richard Sharp involving '
+varDesc['aus-rumgam'] += 'the moves F Tri-Alb and A Bud-Rum. There are three named variations: '
+varDesc['aus-rumgam'] += '<ul> '
+varDesc['aus-rumgam'] += '<li>The Balkan Roadhog (A Vie-Gal). '
+varDesc['aus-rumgam'] += "<li>McGivern's Gambit (A Vie-Bud), "
+varDesc['aus-rumgam'] += '<li>Tyroleses Variation (A Vie-Tyr). '
+varDesc['aus-rumgam'] += '</ul> '
+varDesc['aus-rumgam'] += ' '
+varDesc['aus-balgam-boh'] = "BALKAN GAMBIT, BOHEMIA ABERRATION</b><dd>"
+varDesc['aus-balgam-boh'] += "Richard Sharp's name for the opening F Tri-Alb, A Bud-Ser, A "
+varDesc['aus-balgam-boh'] += "Vie-Boh. Also known as Fisher's Folly. "
+varDesc['aus-balgam-boh'] += '<P> '
+varDesc['aus-balgam-boh'] += "About this variant, <i>The Gamer's Guide to Diplomacy</i> says, "
+varDesc['aus-balgam-boh'] += '"A Vie-Boh is marginal: if Russia is absolutely friendly, '
+varDesc['aus-balgam-boh'] += 'and if there is definitely an Anglo-German alliance against France, '
+varDesc['aus-balgam-boh'] += 'it provides good options. It will help preserve the Balance of '
+varDesc['aus-balgam-boh'] += 'power in the west." '
+varDesc['aus-balgam-boh'] += ' '
+varDesc['aus-rumgam-tyr'] = "RUMANIAN GAMBIT, TYROLESES VARIATION</b><dd>"
+varDesc['aus-rumgam-tyr'] += 'The variant of the Rumanian Gambit which sends Vienna to Tyrolia. '
+varDesc['aus-rumgam-tyr'] += ' '
+varDesc['aus-housboat-tyr'] = "HOUSEBOAT, HUNGARIAN VARIATION</b><dd>"
+varDesc['aus-housboat-tyr'] += "Also known as the Tyrolian Houseboat. Richard Sharp's name for the opening: "
+varDesc['aus-housboat-tyr'] += 'F Tri H, A Bud-Ser, A Vie-Tyr. '
+varDesc['aus-housboat-tyr'] += ' '
+varDesc['aus-gambit-but'] = "BUTLER GAMBIT</b><dd>"
+varDesc['aus-gambit-but'] += 'Named after Christian Butler, the Butler Gambit sends both armies north, '
+varDesc['aus-gambit-but'] += 'abandoning the Balkans for an immediate attack on Germany.  It should be '
+varDesc['aus-gambit-but'] += 'used only if assistance against a belligerent German is guaranteed, and '
+varDesc['aus-gambit-but'] += 'if free passage to Greece and a safe Trieste is guaranteed. '
+varDesc['aus-gambit-but'] += ' '
+varDesc['aus-balgam-tri'] = "BALKAN GAMBIT, TRIESTE VARIATION</b><dd>"
+varDesc['aus-balgam-tri'] += 'The Balkan Gambit with A Vie-Tri, designed to defend against '
+varDesc['aus-balgam-tri'] += 'Italy. The paradox is that an Italian attack is more likely to '
+varDesc['aus-balgam-tri'] += 'begin with A Ven-Tyr rather than A Ven-Tri. If there is a A Tyr, '
+varDesc['aus-balgam-tri'] += 'A Ven you can still force Italy to guess (Vie or supported attack '
+varDesc['aus-balgam-tri'] += 'on Tri), being able to divert A Ser to defend Tri. This is the '
+varDesc['aus-balgam-tri'] += 'single most popular Austrian opening. '
+varDesc['aus-balgam-tri'] += '<P> '
+varDesc['aus-balgam-tri'] += "The <i>Gamer's Guide to Diplomacy</i> says, "
+varDesc['aus-balgam-tri'] += '"this is virtually <i>the</i> opening for Austria. It is followed '
+varDesc['aus-balgam-tri'] += 'by F Alb-Gre and A Ser S Alb-Gre, gaining two centers. Austria should '
+varDesc['aus-balgam-tri'] += 'make no other opening without sound and sufficient reason. '
+varDesc['aus-balgam-tri'] += 'In this opening, the object of distrust is Italy, though the Trieste '
+varDesc['aus-balgam-tri'] += 'army can still defend against Russia if she opened to Galicia. As in '
+varDesc['aus-balgam-tri'] += 'The Galician Variation, however, the defense is primarily a guessing game." '
+varDesc['aus-balgam-tri'] += ' '
+varDesc['aus-roadhog'] = "ROADHOG</b><dd>"
+varDesc['aus-roadhog'] += 'Any Austrian opening that orders Trieste to HOLD and Budapest to Rumania. '
+varDesc['aus-roadhog'] += ' '
+varDesc['aus-balgam'] = "BALKAN GAMBIT</b><dd>"
+varDesc['aus-balgam'] += 'The Balkan Gambit is any opening sending Trieste to Albania and Budapest to '
+varDesc['aus-balgam'] += 'Serbia.  The gambit here is that Austria will find a friendly Italian and '
+varDesc['aus-balgam'] += 'Russian, who will allow the dual monarchy to achieve two builds, from Greece '
+varDesc['aus-balgam'] += 'and Serbia, without fear of losing any of the Austrian home centers.  In the '
+varDesc['aus-balgam'] += 'Balkan Gambit, the burden of defense is left mostly to the Vienna army. What '
+varDesc['aus-balgam'] += 'the Austrian player does with that unit depends on whom he distrusts most. '
+varDesc['aus-balgam'] += 'In its pure form, the Vienna army is ordered to hold, but the gambit has a '
+varDesc['aus-balgam'] += 'number of variants, based on the order for the Vienna army: '
+varDesc['aus-balgam'] += '<ul> '
+varDesc['aus-balgam'] += '<li>the Bohemia Aberration, '
+varDesc['aus-balgam'] += '<li>the Budapest Variation, '
+varDesc['aus-balgam'] += '<li>the Galician Variation,  '
+varDesc['aus-balgam'] += '<li>the Trieste Variation,  '
+varDesc['aus-balgam'] += '<li>the Tyrolean Variation,  '
+varDesc['aus-balgam'] += '<li>the Vienna Lemming Variation. '
+varDesc['aus-balgam'] += '</ul> '
+varDesc['aus-balgam'] += "Concerning the pure Balkan Gambit (A Vie H), the <i>Gamer's Guide to "
+varDesc['aus-balgam'] += 'Diplomacy</i> says that "this non-move may keep everybody happy, but it is '
+varDesc['aus-balgam'] += 'very passive and not recommended. It allows the defense of A Vie-Bud, A '
+varDesc['aus-balgam'] += 'Ser-Bud if Russia has ordered A War-Gal. (However, if Russia then orders A '
+varDesc['aus-balgam'] += 'Gal S Ser-Bud the result could be only one build or none in 1901!)" '
+varDesc['aus-balgam'] += ' '
+varDesc['aus-hedgehog'] = "HEDGEHOG</b><dd>"
+varDesc['aus-hedgehog'] += 'Any Austrian opening which orders the Trieste fleet into Venice. '
+varDesc['aus-hedgehog'] += 'In its pure form, the Hedgehog sends Vienna to Galicia and Budapest to Rumania. '
+varDesc['aus-hedgehog'] += 'A number of variants exist, based on the orders given to the Austrian armies: '
+varDesc['aus-hedgehog'] += '<ul> '
+varDesc['aus-hedgehog'] += '<li>Alpine Variation '
+varDesc['aus-hedgehog'] += '<li>Porcupine Variation '
+varDesc['aus-hedgehog'] += '<li>Dead Porcupine Variation '
+varDesc['aus-hedgehog'] += "<li>Fisher's Folly "
+varDesc['aus-hedgehog'] += '<li>Southern Hedgehog '
+varDesc['aus-hedgehog'] += '</ul> '
+varDesc['aus-hedgehog'] += "Richard Sharp's "
+varDesc['aus-hedgehog'] += '<a target=_parent href=http://www.spoff.demon.co.uk/articles/hedgehog.htm>article on the '
+varDesc['aus-hedgehog'] += 'Hedgehog</a> provides more information, and Richard Hucknall, in his '
+varDesc['aus-hedgehog'] += '<a target=_parent href=http://www.spoff.demon.co.uk/articles/asset.htm><i>The Hedgehog: '
+varDesc['aus-hedgehog'] += 'An Asset ot Liability?</i></a>, provides some counterpoint. '
+varDesc['aus-hedgehog'] += ' '
+varDesc['aus-bulgam'] = "[BULGARIAN GAMBIT]</b><dd>"
+varDesc['aus-bulgam'] += 'This Austro-Russian combination requires a careful diplomatic setup of '
+varDesc['aus-bulgam'] += "Turkey, but guarantees to keep the Turk at three SC's by the end of 1901. "
+varDesc['aus-bulgam'] += 'Austria opens with Tri-Alb and Bud-Ser, while Russia sends the Sevastopol '
+varDesc['aus-bulgam'] += 'fleet to Rumania.  In the Fall, Turkey is convinced by one or both of '
+varDesc['aus-bulgam'] += 'Austria and Russia to attempt a move out of Bulgaria, and A/R combine to '
+varDesc['aus-bulgam'] += 'dislodge the unsupportable Bulgaria.  Doug Beyerlein wrote '
+varDesc['aus-bulgam'] += '<a target=_parent href=http://www.spoff.demon.co.uk/articles/bulgarian.htm>an article '
+varDesc['aus-bulgam'] += 'on the Bulgarian Gambit</a>. '
+varDesc['aus-bulgam'] += ' '
+varDesc['aus-hedgehog-por'] = "HEDGEHOG, PORCUPINE VARIATION</b><dd>"
+varDesc['aus-hedgehog-por'] += "Richard Sharp's name for the opening: F Tri-Ven, A Bud S Vie-Gal. "
+varDesc['aus-hedgehog-por'] += ' '
+varDesc['aus-italy'] = "BLUE WATER OPENING, VON METZKE BLITZ</b><dd>"
+varDesc['aus-italy'] += 'Also known as the Italian Attack, this is one example of the many fully '
+varDesc['aus-italy'] += 'committal attacks that can be launched '
+varDesc['aus-italy'] += 'in Spring 1901, in this case by Austria on Italy. As such it is a suitable '
+varDesc['aus-italy'] += "contrast with the Hedgehog opening.  If Italy opens with A Rom-Nap, he's lost "
+varDesc['aus-italy'] += 'Venice -- though the Balkans are for Russia and Turkey to carve up. This '
+varDesc['aus-italy'] += "opening is invariably popular with Turkey, Italy's perennial rival in the "
+varDesc['aus-italy'] += 'Mediterranean, but is usually regarded as one of the more "bizarre" openings. '
+varDesc['aus-italy'] += "Being Conrad von Metzke's favourite Austrian opening, it is known as the "
+varDesc['aus-italy'] += 'von Metzke Blitz or the von Metzke Opening.  Some claim that the poor '
+varDesc['aus-italy'] += 'statistics for Austria in the early days of the hobby are due in part to '
+varDesc['aus-italy'] += "Conrad's penchant for both Austria and this opening. "
+varDesc['aus-italy'] += '<P> '
+varDesc['aus-italy'] += 'The <i>Gamer\'s Guide to Diplomacy</i> says, "This seemingly suicidal set of '
+varDesc['aus-italy'] += 'orders has on rare occasions given good results.  These orders might be used '
+varDesc['aus-italy'] += 'in the special circumstance that Austria is allied with Russia <b>and</b> '
+varDesc['aus-italy'] += 'Turkey. The alliance strategy would call for the rapid destruction of Italy in '
+varDesc['aus-italy'] += 'order to hit France and break into the Atlantic. Even so, Austria is usually '
+varDesc['aus-italy'] += 'foolish to give up Serbia." '
+varDesc['aus-italy'] += ' '
+varDesc['aus-tyrgam'] = "TYROLESE GAMBIT</b><dd>"
+varDesc['aus-tyrgam'] += "Richard Sharp's name for the opening: F Tri-Alb, A Bud-Tri, A Vie-Tyr. "
+varDesc['aus-tyrgam'] += ' '
+varDesc['aus-hedgehog-alp'] = "HEDGEHOG, ALPINE VARIATION</b><dd>"
+varDesc['aus-hedgehog-alp'] += "Richard Sharp's name for the opening: F Tri-Ven, A Vie-Tyr, and A Bud-Gal. "
+varDesc['aus-hedgehog-alp'] += ' '
+varDesc['aus-galgam'] = "GALICIAN GAMBIT</b><dd>"
+varDesc['aus-galgam'] += "Richard Sharp's name for the opening: F Tri-Alb, A Vie-Tri, and A Bud-Gal. "
+varDesc['aus-galgam'] += ' '
+varDesc['aus-bluewater-but'] = "BUTLER BLUE WATER (MANAWEG)</b><dd>"
+varDesc['aus-bluewater-but'] += 'Named after Christian Butler, the Butler Blue Water (also called the '
+varDesc['aus-bluewater-but'] += 'Manaweg) is an abandonment of the Balkans which puts Italy in a '
+varDesc['aus-bluewater-but'] += 'position to look for gains in the north. '
+varDesc['aus-bluewater-but'] += ' '
+varDesc['aus-rumgam-road'] = "RUMANIAN GAMBIT, BALKAN ROADHOG VARIANT</b><dd>"
+varDesc['aus-rumgam-road'] += 'The variant of the Rumanian Gambit which sends Vienna to Galicia. '
+varDesc['aus-rumgam-road'] += '<P> '
+varDesc['aus-rumgam-road'] += 'Tony Swinnerton\'s Diplomatic Pouch article, "<A '
+varDesc['aus-rumgam-road'] += 'HREF=/DipPouch/Zine/W1997A/Swinnerton/Lepanto.html '
+varDesc['aus-rumgam-road'] += 'TARGET=_top>Playing the Key Lepanto</A>," recommends it in conjunction with '
+varDesc['aus-rumgam-road'] += 'an unusual Italian/Austrian alliance opening. '
+varDesc['aus-rumgam-road'] += ' '
+varDesc['aus-kenkey'] = "[KENDALL KEY OPENING]</b><dd>"
+varDesc['aus-kenkey'] += 'A variation on the Key in which Austria orders A Bud S A Ser-Rum '
+varDesc['aus-kenkey'] += 'in Fall of 1901. Thus, the Aus attack on Russia is delayed until F01 to '
+varDesc['aus-kenkey'] += 'allow a Russo-Turkish war to develop. (The variant was discussed by Alan '
+varDesc['aus-kenkey'] += 'Wells in issue #6 of <i>Dot Happy</i>.) '
+varDesc['aus-kenkey'] += ' '
+varDesc['aus-warthog'] = "RUMANIAN GAMBIT, WARTHOG VARIANT</b><dd>"
+varDesc['aus-warthog'] += "The Warthog is Richard Sharp's name for the rarely-used Austrian opening "
+varDesc['aus-warthog'] += '(0.87%): F Tri-Alb, A Vie-Gal and, A Bud-Rum. Richard writes that it is '
+varDesc['aus-warthog'] += '"a new name for something resembling a Hedgehog, but not as pretty." '
+varDesc['aus-warthog'] += ' '
+varDesc['aus-ionian'] = "[IONIAN GAUNTLET]</b><dd>"
+varDesc['aus-ionian'] += "Edi Birsan's take-charge opening for Austria: in Fall, Serbia goes for Greece, "
+varDesc['aus-ionian'] += 'the other army is sent to Serbia, and the Austrian fleet moves to the Ionian '
+varDesc['aus-ionian'] += 'Sea.  This gives Austria a more forward position for Spring 1902, at the risk '
+varDesc['aus-ionian'] += 'of losing Greece. '
+varDesc['aus-ionian'] += ' '
+varDesc['aus-sd'] = "SITTING DUKE</b><dd>"
+varDesc['aus-sd'] += "Owen Kavanaugh's name for the ineffectual Austrian opening which sends only "
+varDesc['aus-sd'] += 'Trieste to Albania.  Once played in a game in which Italy solicited and '
+varDesc['aus-sd'] += 'received permission for a Key Opening, the opening succeeded in resolving '
+varDesc['aus-sd'] += 'a brewing Russo-Turkish war, since they found something they could do '
+varDesc['aus-sd'] += 'together. '
+varDesc['aus-sd'] += ' '
+varDesc['aus-rumgam-mcg'] = "RUMANIAN GAMBIT, McGIVERN'S GAMBIT VARIANT</b><dd>"
+varDesc['aus-rumgam-mcg'] += "McGivern's Gambit is the variant of the Rumanian Gambit that sends "
+varDesc['aus-rumgam-mcg'] += 'Vienna to Budapest. '
+varDesc['aus-rumgam-mcg'] += ' '
+varDesc['aus-housboat-nth'] = "HOUSEBOAT, NORTHERN VARIATION</b><dd>"
+varDesc['aus-housboat-nth'] += "Manus Hand's name for the Houseboat opening that sends Vienna to Bohemia. "
+varDesc['aus-housboat-nth'] += ' '
+varDesc['aus-hsj'] = "[HOP, STEP AND JUMP OPENING]</b><dd>"
+varDesc['aus-hsj'] += 'Named by Iain Forsyth, this Austro-Russian opening sends Budapest to '
+varDesc['aus-hsj'] += 'Rumania, followed in the fall by a Russian convoy of A Rum-Ank. The Warsaw '
+varDesc['aus-hsj'] += 'army is sent to Galicia as Springtime camouflage. '
+varDesc['aus-hsj'] += ' '
+varDesc['aus-balgam-tyr'] = "BALKAN GAMBIT, TYROLIAN VARIATION</b><dd>"
+varDesc['aus-balgam-tyr'] += "Richard Sharp's name for the opening: F Tri-Alb, A Bud-Ser, A "
+varDesc['aus-balgam-tyr'] += 'Vie-Tyr. Useful if you suspect that Italy will open with the '
+varDesc['aus-balgam-tyr'] += 'Tyrolian attack and if you can trust Russia. '
+varDesc['aus-balgam-tyr'] += ' '
+varDesc['aus-balgam-gal'] = "BALKAN GAMBIT, GALICIAN VARIATION</b><dd>"
+varDesc['aus-balgam-gal'] += 'The Balkan Gambit with A Vie-Gal. The opening defends against Russian entry '
+varDesc['aus-balgam-gal'] += 'into Galicia, and when the Austrian succeeds in taking Galicia, he has '
+varDesc['aus-balgam-gal'] += 'two units on Rumania plus the threat to Warsaw -- which may well distract '
+varDesc['aus-balgam-gal'] += 'a Ukraine army away from Rumania.  On the down side, this opening risks the loss '
+varDesc['aus-balgam-gal'] += 'of Trieste. But if the move to Galicia fails, Austria has shielded two home '
+varDesc['aus-balgam-gal'] += 'centres from attack, and is in a decent position to limit further mischief '
+varDesc['aus-balgam-gal'] += 'from any Italian army that does get into Trieste. '
+varDesc['aus-balgam-gal'] += '<P> '
+varDesc['aus-balgam-gal'] += 'The <i>Gamer\'s Guide to Diplomacy</i> notes that, "here the object of distrust '
+varDesc['aus-balgam-gal'] += 'is Russia.  If Turkey is friendly (F Alb-Gre) may still succeed. Austria thus '
+varDesc['aus-balgam-gal'] += 'has the possibility of 3 builds.  The Fall 1901 move A Gal-Ukr is also made '
+varDesc['aus-balgam-gal'] += 'possible." This provides a devastating position for 1902. '
+varDesc['aus-balgam-gal'] += ' '
+varDesc['aus-balgam-vie'] = "BALKAN GAMBIT, VIENNA LEMMING VARIATION</b><dd>"
+varDesc['aus-balgam-vie'] += "Richard Sharp's name for the opening: F Tri-Alb, A Bud-Ser, A "
+varDesc['aus-balgam-vie'] += 'Vie S A Ven-Tyr. The fact that this opening has been named means that '
+varDesc['aus-balgam-vie'] += 'apparently someone has used it. '
+varDesc['aus-balgam-vie'] += ' '
+varDesc['aus-housboat'] = "HOUSEBOAT OPENING</b><dd>"
+varDesc['aus-housboat'] += "The Houseboat is Richard Sharp's name for any opening in which the Trieste "
+varDesc['aus-housboat'] += 'fleet is ordered to HOLD, and Budapest is sent to Serbia.  In its pure form '
+varDesc['aus-housboat'] += '(also known as the Southern Variation), Vienna is ordered to Galicia.  A '
+varDesc['aus-housboat'] += 'number of variants exist, based on the order given to the Vienna army: '
+varDesc['aus-housboat'] += '<ul> '
+varDesc['aus-housboat'] += "<li>Crichton's Variation "
+varDesc['aus-housboat'] += '<li>Hungarian Variation '
+varDesc['aus-housboat'] += '<li>Paranoia Defense '
+varDesc['aus-housboat'] += '<li>Northern Houseboat '
+varDesc['aus-housboat'] += '<li>Tyrolian Variation '
+varDesc['aus-housboat'] += '</ul> '
+varDesc['aus-housboat'] += ' '
+varDesc['aus-balgam-bud'] = "BALKAN GAMBIT, BUDAPEST VARIATION</b><dd>"
+varDesc['aus-balgam-bud'] += 'The Balkan Gambit with A Vie-Bud. Austria thus takes no defensive '
+varDesc['aus-balgam-bud'] += 'measures against Italy or Russia. In return, he has two pieces '
+varDesc['aus-balgam-bud'] += 'adjacent to Rum. He can also accept Russian support into Bul '
+varDesc['aus-balgam-bud'] += 'and still have A Bud-Ser. See Ionian Gauntlet and Key Opening. '
+varDesc['aus-balgam-bud'] += ' '
+varDesc['aus-panther'] = "[PANTHER]</b><dd>"
+varDesc['aus-panther'] += 'This Fall Austro-Italo-German continuation of the Blue Water '
+varDesc['aus-panther'] += "Opening was named by Dan Abbott after Kaiser Wilhelm II's sending the German "
+varDesc['aus-panther'] += 'gunboat <i>Panther</i> to Africa in 1911.  The opening presents a combined '
+varDesc['aus-panther'] += 'front by the Central Powers (A/G/I) in an attempt to guarantee control of '
+varDesc['aus-panther'] += 'Africa and the Gibraltar block by controlling the Mediterranean.  To do this, '
+varDesc['aus-panther'] += 'the rivals Mediterranean powers (France and Turkey) must be taught a lesson. '
+varDesc['aus-panther'] += '<P> '
+varDesc['aus-panther'] += 'In Spring, Austria opens to pressure the Ionian, while Italy does a Swiss '
+varDesc['aus-panther'] += 'Lepanto and Germany opens to Burgundy and Holland.  The pure Panther sees '
+varDesc['aus-panther'] += 'occupation of Serbia and Kiel in Spring 1901, but other variations are '
+varDesc['aus-panther'] += 'possible, which also put pressure on Russia. '
+varDesc['aus-panther'] += '<P> '
+varDesc['aus-panther'] += 'In Fall, the Italian army in Apulia is convoyed to Albania by the Austrian '
+varDesc['aus-panther'] += 'fleet, while Italy takes Tunis, and both Germany and Italy continue to '
+varDesc['aus-panther'] += 'harass France in Marseilles, Burgundy, and Belgium.  While France is '
+varDesc['aus-panther'] += 'occupied by pressure on his entire eastern border, Turkey sees two hostile '
+varDesc['aus-panther'] += 'fleets coming at him.  The remaining two powers, England and Russia, should '
+varDesc['aus-panther'] += 'be pleased by the opening. Russia is able to not only get in on the '
+varDesc['aus-panther'] += "Turkish party but also appeased by Germany's lack of Scandinavian force. "
+varDesc['aus-panther'] += 'England is also satisfied with the Scandinavian lines and can help out with '
+varDesc['aus-panther'] += 'France. '
+varDesc['aus-panther'] += ' '
+
+// -->
+</script>
+	
+
+<BODY BGCOLOR="#ffffff">
+<p align=center>
+<A TARGET=_parent HREF="/DipPouch">
+<IMG SRC="/DipPouch/Common/DPLogo.gif"
+	ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A TARGET=_parent HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="/DipPouch/Common/DPLinks.gif"
+	ALT="Shortcuts" HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
+<BR clear=both>
+<img src="/DipPouch/Common/reddot.gif" height=2 width=100%%>
+<br clear=all>
+<center><H2>The Library of Diplomacy Openings</H2>
+<script language=JavaScript>
+<!--
+function newPower()
+{
+	window.parent.body.document.write('<H3 align=center><font color=red>')
+	window.parent.body.document.write('<blink>...Loading Data For ')
+	window.parent.body.document.write(document.forms[0].power.options[document.forms[0].power.selectedIndex].value)
+	window.parent.body.document.write('...Please Wait...</blink></font>')
+	window.parent.body.document.close()
+	window.location.replace(document.forms[0].power.options[document.forms[0].power.selectedIndex].value + '.html')
+	// document.forms[0].submit()
+}
+// -->
+</script>
+<table>
+<tr><th valign=right>
+	<form name=powerForm method=post action=openings>
+	Openings for&nbsp;<select name=power onChange=newPower()>
+
+<option value=Austria
+ selected
+>Austria
+<option value=England
+>England
+<option value=France
+>France
+<option value=Germany
+>Germany
+<option value=Italy
+>Italy
+<option value=Russia
+>Russia
+<option value=Turkey
+>Turkey
+
+	</select></form>
+	<script language=javascript>
+	<!--
+	function showDesc(key)
+	{
+		window.parent.body.document.write('<dl><dt><b>')
+		window.parent.body.document.write(varDesc[key] + '<p></dl>')
+	}
+	function updateOrder()
+	{
+		openg = document.forms[1].opening
+		key = openg.options[openg.selectedIndex].value
+		if (key == '') return
+		if (key != 'comment')
+		{
+			for (i in varName)
+			{
+				if (varName[i] == key)
+				{
+					document.forms[2].unit0.selectedIndex = u0[i] + 1
+					document.forms[2].unit1.selectedIndex = u1[i] + 1
+					document.forms[2].unit2.selectedIndex = u2[i] + 1
+					if (power == 'Russia')
+						document.forms[2].unit3.selectedIndex = u3[i] + 1
+					break
+				}
+			}
+		}
+		showDesc(key)
+		window.parent.body.document.close()
+	}
+	// -->
+	</script>
+	<th valign=left>
+	<form name=nameForm method=post action=openings target=body>
+	<select name=opening onchange=updateOrder()>
+	<option>--Choose or order an opening--
+
+<option value=comment
+ selected
+>--ABOUT THE AUSTRIAN OPENINGS--
+<option value=aus-balgam
+>BALKAN GAMBIT
+<option value=aus-balgam-boh
+>BALKAN GAMBIT, BOHEMIA ABERRATION
+<option value=aus-balgam-bud
+>BALKAN GAMBIT, BUDAPEST VARIATION
+<option value=aus-balgam-gal
+>BALKAN GAMBIT, GALICIAN VARIATION
+<option value=aus-balgam-tri
+>BALKAN GAMBIT, TRIESTE VARIATION
+<option value=aus-balgam-tyr
+>BALKAN GAMBIT, TYROLIAN VARIATION
+<option value=aus-balgam-vie
+>BALKAN GAMBIT, VIENNA LEMMING VARIATION
+<option value=aus-bwo
+>BLUE WATER OPENING
+<option value=aus-italy
+>BLUE WATER OPENING, VON METZKE BLITZ
+<option value=aus-bluewater-but
+>BUTLER BLUE WATER (MANAWEG)
+<option value=aus-gambit-but
+>BUTLER GAMBIT
+<option value=aus-hedgehog-but
+>BUTLER HEDGEHOG (NANAMAVEU)
+<option value=aus-galgam
+>GALICIAN GAMBIT
+<option value=aus-hogal
+>GALICIAN GAMBIT, HEAD-ON GALICIAN VARIANT
+<option value=aus-hedgehog
+>HEDGEHOG
+<option value=aus-hedgehog-alp
+>HEDGEHOG, ALPINE VARIATION
+<option value=aus-hedgehog-dpv
+>HEDGEHOG, DEAD PORCUPINE VARIATION
+<option value=aus-hedgehog-ffv
+>HEDGEHOG, FISHER'S FOLLY VARIATION
+<option value=aus-hedgehog-por
+>HEDGEHOG, PORCUPINE VARIATION
+<option value=aus-hedgehog-sou
+>HEDGEHOG, SOUTHERN VARIATION
+<option value=aus-housboat
+>HOUSEBOAT OPENING
+<option value=aus-housboat-cri
+>HOUSEBOAT, CRICHTON'S VARIATION
+<option value=aus-housboat-tyr
+>HOUSEBOAT, HUNGARIAN VARIATION
+<option value=aus-housboat-nth
+>HOUSEBOAT, NORTHERN VARIATION
+<option value=aus-housboat-par
+>HOUSEBOAT, PARANOIA DEFENCE
+<option value=aus-roadhog
+>ROADHOG
+<option value=aus-rumgam
+>RUMANIAN GAMBIT
+<option value=aus-rumgam-road
+>RUMANIAN GAMBIT, BALKAN ROADHOG VARIANT
+<option value=aus-rumgam-mcg
+>RUMANIAN GAMBIT, McGIVERN'S GAMBIT VARIANT
+<option value=aus-rumgam-tyr
+>RUMANIAN GAMBIT, TYROLESES VARIATION
+<option value=aus-warthog
+>RUMANIAN GAMBIT, WARTHOG VARIANT
+<option value=aus-sd
+>SITTING DUKE
+<option value=aus-tyrgam
+>TYROLESE GAMBIT
+<option value=aus-bwl
+>[BLUE WATER LEPANTO]
+<option value=aus-bulgam
+>[BULGARIAN GAMBIT]
+<option value=aus-hsj
+>[HOP, STEP AND JUMP OPENING]
+<option value=aus-ionian
+>[IONIAN GAUNTLET]
+<option value=aus-kenkey
+>[KENDALL KEY OPENING]
+<option value=aus-panther
+>[PANTHER]
+<option value=aus-rusfrol
+>[RUSSIAN FROLIC]
+</select><input type=hidden name=power value=Austria></form>
+
+</table><table><tr><td>
+<script language=javascript>
+<!--
+function setChoice()
+{
+	leform = document.forms[2]
+	un0 = leform.unit0.options[leform.unit0.options.selectedIndex].value
+	un1 = leform.unit1.options[leform.unit1.options.selectedIndex].value
+	un2 = leform.unit2.options[leform.unit2.options.selectedIndex].value
+	if (power == 'Russia')
+		un3 = leform.unit3.options[leform.unit3.options.selectedIndex].value
+	shown = 0
+	for (i in varName)
+	{
+		if (u0[i] == un0 && u1[i] == un1 && u2[i] == un2
+		&& (power != 'Russia' || u3[i] == un3))
+		{
+			if (shown == 0)
+			{
+				shown = 1
+				for (j = 0; j < document.forms[1].opening.options.length; ++j)
+					if (document.forms[1].opening.options[j].value == varName[i])
+					{
+						document.forms[1].opening.selectedIndex = j
+						break
+					}
+			}
+			showDesc(varName[i])
+		}
+	}
+	if (shown == 0)
+	{
+		window.parent.body.document.write('<h3 align=center><font color=red>')
+		if (un0 == -1 || un1 == -1 || un2 == -1
+		|| (power == 'Russia' && un3 == -1))
+		{
+			window.parent.body.document.write('...Fill in Orders for All ' +
+				'Units to Look Up An Opening....')
+		}
+		else
+		{
+			window.parent.body.document.write('This Opening Is Unnamed ' +
+				'and No Information Exists For It!')
+		}
+		window.parent.body.document.write('</h3>')
+		document.forms[1].opening.selectedIndex = 0;
+	}
+	window.parent.body.document.close()
+}
+// -->
+</script>
+<form name=openForm method=post action=openings target=body>
+
+
+		<th valign=top>F Tri <select name=unit0 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>HOLD
+<option value=1>-ADR
+<option value=2>-Alb
+<option value=3>-Ven
+</select>
+
+		<th valign=top>A Bud <select name=unit1 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-Rum
+<option value=1>-Ser
+<option value=2>HOLD
+<option value=3>-Tri
+<option value=4>-Gal
+<option value=5>S Vie-Gal
+<option value=6>-Vie
+</select>
+
+		<th valign=top>A Vie <select name=unit2 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-Bud
+<option value=1>-Gal
+<option value=2>HOLD
+<option value=3>-Boh
+<option value=4>-Tyr
+<option value=5>-Tri
+<option value=6>S Ven-Tyr
+<option value=7>S Bud-Gal
+</select>
+
+</table>
+<input type=hidden name=power value=Austria>
+<input type=hidden name=opening value="byOrder">
+<HR>
+</form>
+<script language=JavaScript>
+<!--
+	showDesc('comment')
+	window.parent.body.document.close()
+// -->
+</script>
+
+
+
+
+
+
+<!--
+-->
+

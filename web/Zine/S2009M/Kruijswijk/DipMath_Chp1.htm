@@ -1,0 +1,98 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>DP S2009M: The Math of Adjudication</title>
+<!-- Authored by Lucas B. Kruijswijk -->
+<!-- Published on the Pouch Zine with permissions -->
+<!-- Created on March 6, 2008 -->
+</head><body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+<br clear="all">
+<hr size="1" width="100%" align="center" style="color: GRAY">
+<center>
+<h1>The Math of Adjudication</h1>
+<h2>by Lucas Kruijswijk</h2>
+<hr size="1" width="100%" align="center" style="color: GRAY; margin-bottom: 15px">
+</center>
+<table width="95%" align="center" border="0">
+<tbody><tr>
+<td align="justify">
+<h2>Introduction</h2>
+<p>Anyone who is introduced to the game of Diplomacy and has an interest in
+algorithms and discrete mathematics will not only be intrigued by this magnificent
+game, but also be attracted by the peculiarities of the rules in their own right.</p>
+<p>Adjudicating a face to face game manually is not very difficult. Certainly, some
+experience is required: but it is a job that can be done fairly easily. Yet if we
+look at the history of automatic adjudication, we see that many adjudicators have
+been plagued with bugs and mistakes. Even in the forums of the more mature and
+respected adjudicator programs, one can find the occasional bug report.</p>
+<p>Since I always had interest in algorithms and discrete mathematics, I was
+keenly interested in adjudication. Of course, when my initial attempts didn't
+work out, I started to look at what had already been written. I searched on the
+Internet and found the <a href="dptg.txt">DPTG</a> (Diplomacy Player's Technical
+Guide). The DPTG is a very complicated document, and I wondered whether it made
+things easier or more difficult.</p>
+<p>Anyway, I was not happy with the DPTG. If the algorithm in the DPTG is the
+simplest flawless algorithm, then so be it. However, many of the sentences
+in the DPTG are clearly &#x201c;derived knowledge&#x201d;. They are constructed or deduced from
+more fundamental principles that the authors already know, but that may not be
+obvious to the casual reader. We should try to get the complete reasoning on paper,
+instead of only the conclusions.</p>
+<p>If we look at mathematics, we see that the ancient Greeks had only 5 axioms
+for geometry (the five postulates from Euclid). Even the fifth postulate was
+heavily debated until the early 19<sup>th</sup> century. So if the DPTG describes
+the most fundamental axioms of adjudication, then this implies that adjudication
+in Diplomacy is far more complex than the entire field of geometry! Surely
+adjudication is a bit simpler than that...</p>
+<p>So, I worked on my own ideas about adjudication, and finally I constructed
+my own algorithm. I wanted to build this in an existing program, but concluded
+that it needed systematic testing. I thought I could write the necessary test
+cases in a few evenings, but it turned out to be slightly more work than I
+expected. The result was the <a href="http://web.inter.nl.net/users/L.B.Kruijswijk/">DATC</a>
+(Diplomacy Adjudicator Test Cases, which was (and still is) used by several
+new Diplomacy programs. For a new adjudication program,
+the DATC significantly increases the quality of the first release.</p>
+<p>Still, my real interests were in adjudication and in making the simplest
+flawless algorithm. In this article I will discuss all the issues about
+adjudication that I have explored over the last 10 years. It contains the
+following chapters:</p>
+<ul>
+<li><a href="DipMath_Chp2.htm">Equations, the fundamentals of the rules</a><br/>
+In this chapter I will show how some approaches to adjudication
+won't work, and that the fundamental rules of Diplomacy are best
+represented with equations rather than a procedure.</li>
+<li><a href="DipMath_Chp3.htm">A simple recursive algorithm that works for most cases</a><br/>
+With the rules described as equations, one can construct a simple
+recursive algorithm that works in most cases other than cyclic dependencies.</li>
+<li><a href="DipMath_Chp4.htm">Decisions on partial information</a><br/>
+One way to deal with cyclic dependencies is to make decisions based on
+partial information. However, this makes programming the equations more
+complicated.</li>
+<li><a href="DipMath_Chp5.htm">Two proofs about the Diplomacy rules</a><br/>
+In this chapter we prove two theorems. First, that an order can
+only be part of one dependency cycle at a time; and second, that
+decisions based on partial information are enough to do the job.</li>
+<li><a href="DipMath_Chp6.htm">A simple recursive guess algorithm that works in all cases</a><br/>
+Finally, I give an algorithm that is correct and simpler than an
+algorithm based on partial information. This chapter includes a
+listing of a part of the algorithm.</li>
+</ul>
+<p>
+<a href="DipMath_Chp2.htm">NEXT</a></p>
+<br><br><table>
+<tbody>
+<tr valign="bottom">
+<td><a href="mailto:editor@diplom.org"><img src="/Zine/Common/letter.gif" border="0"></a> </td>
+<td><strong>Lucas Kruijswijk<br>(<a href="mailto:L.B.Kruijswijk@inter.nl.net">L.B.Kruijswijk@inter.nl.net</a>)</strong>
+</td></tr></tbody></table>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the envelope above does not work for you, feel free to use the <a href="/Zine/S2009M/Common/DearDP.html">"<b>Dear
+DP...</b>"</a> mail interface.</i>
+</td></tr></tbody></table>
+<hr size="1" width="100%" align="center" style="color: GRAY; margin-top: 15px">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+</body></html>
+<!--
+-->

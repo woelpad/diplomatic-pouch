@@ -1,0 +1,156 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<TITLE>DP W2006A: About The Pouch</TITLE>
+<!-- ---------------------Header---------------------------------- -->
+<!-- ------------------------------------------------------------- -->
+<!---- Authored by  ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Created on September 23, 2006 ---->
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/W2006A/"><img src="/Zine/Common/toW2006A.gif" align="right" border="0"></a>
+<br clear="all">
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<CENTER>
+<H1>Response to "<a href="/Zine/S2006M/Birsan/Roles%20of%20Artificial%20Intelligence.htm">Roles of Artificial Intelligence</a>"</H1>
+<h2>by David Norman</h2>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+</CENTER>
+<p>In the article <a href="/Zine/S2006M/Birsan/Roles%20of%20Artificial%20Intelligence.htm">Roles of Artificial Intelligence</a>
+in the S2006M issue of the DP Zine, Edi Birsan set out his view of the way that the
+development of Diplomacy AIs should progress in order to best benefit the hobby. This
+article compares his ideas with the current state of Diplomacy AI development.
+<p>Edi introduces the article with a quote on the current state of AI development,
+primarily the DAIDE project. Then, after describing the problems with the e-mail hobby,
+he says, "What is needed is for us to have a modified AI that fits in with the e-mail
+play of the game, not one that is designed to play against a single player in the classic
+computer game".
+<p>Contrary to what this sentence implies, the DAIDE project is not designed for single
+player play. Each power is played by a separate player; that player can be a human or one
+of several different AIs that have been developed. This allows games to be played in any
+configuration. The "classic computer game format" of one human and six AI players is
+played regularly by various people, especially those involved in the DAIDE project who
+want to see how their AI is playing. We've also played games across the Internet, and
+across local networks, with two humans and five AIs, right up to six humans and one AI,
+and also games with 7 humans and no AIs at all, or 7 AIs and no humans at all. The system
+handles all of these configurations equally well. Where there are multiple AIs (or
+multiple humans) in the same game, powers have no information as to which other powers
+are humans and which are AIs.
+<p>The bulk of the text in Edi's article is based around the statement that, "We need the
+AI to act as a backup for the player to keep his position viable and to have the
+possibility to act to take over abandoned positions to preserve the game flow. Here is
+an outline of what might be a step-by-step for the backup AI." Edi then continues by
+proposing a step-by-step method which could be used to generate a set of orders for a
+player who has been NMRed. This step-by-step approach has a number of serious flaws in it.
+<p>Step one is: "Player creates a profile for his position: allies, enemies, neutrals,
+priority of builds and removals." This is meant to be an AI which is looking after a
+position for a player who has NMRed. If the player has time to create a profile for his
+position, then surely he has time to perform the much less time-consuming task of entering
+some orders. If he doesn't, then it's going to have to be done by the GM, who should not
+be making judgement calls as to what the alliance structure on the board is, etc.
+<p>The step-by-step guide then goes on to detail how to generate a set of default moves,
+builds, and disbands. The obvious question here is, if such a simple algorithm could
+really provide a much more suitable set of orders than an NMR "all hold", then why has a
+GM never run a game with such an algorithm used to generate moves for powers which NMR?
+After all, the algorithm he suggests is so simple that a GM could work out the orders it
+generates in a minute or two, using just pencil and paper. The only reasons I can think
+of are either that it doesn't work (that the moves are sometimes much better, but
+sometimes much worse, than all units holding), or that players want games where NMRs are
+punished. Either way, the evidence suggests that the method Edi suggests isn't what
+people actually want.
+<p>Furthermore, if it were possible to write an effective AI with such a simple algorithm,
+then we would have had competitive Diplomacy AIs years ago. Unfortunately, it's not that
+easy.
+<p>Edi then goes on to say, "Once we have the AI able to step in for missed adjustments,
+and retreats, and then one-off situations, then we can move to it being able to stand in
+for taking over abandoned positions for a few turns at a clip". The fact is we already
+have such an AI. Any of the current AIs can do both these things. It just takes a little
+lateral thinking.
+<p>The AIs are designed to play any variant that has been coded up. Therefore, an easy
+way to generate a set of orders for a single turn is to create a variant where the
+starting position is the current position in your game, and see what opening moves the
+AI comes up with. To do this, you have to create a variant within the DAIDE system.
+<p>A DAIDE variant is coded in four files. The first two are the most technical and
+complicated. The symbol file defines which symbols represent provinces in this variant,
+which represent powers, etc, and how they are encoded into the DAIDE system. The map file
+defines the map; which provinces are adjacent to which others, which provinces are land,
+sea, or coast, which are supply centres, etc. But the good news is, for a variant that
+is just a different starting position, these are unchanged &#8212 so you can just copy
+the files for the Standard variant.
+<p>Thirdly, there is the current centre ownership file. It looks like this:
+<p>SCO (AUS BUD TRI VIE) (ENG LVP EDI LON) (FRA BRE MAR PAR) (GER KIE BER MUN)<BR>
+(ITA ROM NAP VEN) (RUS STP MOS WAR SEV) (TUR ANK CON SMY)<BR>
+(UNO NWY SWE DEN HOL BEL SPA POR TUN GRE SER RUM BUL)
+<p>And fourthly, there is the unit position file. It looks like this:
+<p>NOW (SPR 1901) (AUS FLT TRI) (AUS AMY VIE) (AUS AMY BUD)<BR>
+(ENG FLT LON) (ENG FLT EDI) (ENG AMY LVP)<BR>
+(FRA FLT BRE) (FRA AMY PAR) (FRA AMY MAR)<BR>
+(GER FLT KIE) (GER AMY BER) (GER AMY MUN)<BR>
+(ITA FLT NAP) (ITA AMY ROM) (ITA AMY VEN)<BR>
+(RUS FLT (STP SCS)) (RUS FLT SEV) (RUS AMY MOS) (RUS AMY WAR)<BR>
+(TUR FLT ANK) (TUR AMY CON) (TUR AMY SMY)<BR>
+<p>Neither of these should be too hard to modify to enter the current position of a game.
+The only catch is each province has one abbreviation, and only one. For instance, you
+must use ECH for English Channel, and MAO for the Mid Atlantic.
+<p>Once that is done, run up the server, select your new variant, run up seven AIs, let
+them play, and then have a look in the log and see what they ordered for the first turn.
+And there you have your default orders.
+<p>Edi then goes on to say, "Finally, once the above is done, then and only then do we
+move toward the creation of the AI as a player making proposals and what not, starting
+with a basic format of who is an ally, enemy and neutral to working on specific
+combinations with other powers to play."
+<p>The problem with this approach, and one of the fundamental policies that the DAIDE
+project has had from the start, is that nobody knows how to write a good Diplomacy AI.
+If you don't allow people to write negotiating AIs until we have good no-press AIs, then
+you are making the unfounded assumption that the best AIs will use their tactical and
+strategic ability to work out what to say, rather than using their negotiating abilities
+to work out what to order. If that turns out to be wrong, then we would have wasted
+years of development time on strategy-first AIs, before starting to consider negotiation.
+That is why the DAIDE project has, from the start, had a design that allows press and
+no-press play between AIs.
+<p>Finally, Edi says, "This is at least a stepladder approach that will allow the hobby
+to have some benefit to each of the simple small steps in the progression of an AI than
+waiting for someone to come up and create a total AI package from the start."
+<p>"The total AI package" has been around for over three years now. DumbBot was released
+in April 2003, and was the first AI to win a game with all the other 3 powers being
+played by humans (it was only a 4-player variant). The more recent AIs are much better
+than DumbBot, although, as far as we are aware, no AI has yet won a game of Standard
+Diplomacy against 6 human players.
+<p>If you want to try playing against the AIs, then go to
+<a href="http://www.ellought.demon.co.uk/dipai">www.ellought.demon.co.uk/dipai</a> .
+Download the DAIDE Server, DAIDE Mapper and DumbBot. And then click the link at the top
+of the page to see the instructions on how to use them. Once you're beating DumbBot on a
+regular basis, go to <a href="http://www.daide.org.uk/clients.xml">http://www.daide.org.uk/clients.xml</a> and download the latest AIs &#8212
+especially KissMyBot and R.E.D., and see how you fare against those.
+<p>If you'd rather play against a mixture of humans and AIs, then the best place to find
+a game is on the Yahoo Groups mailing lists RTDip and RTNow. Games are regularly arranged
+on there, with anything between zero and five AIs in the game, depending on how many
+people are around. The environment is so quick to use that we've been known to have a
+no-press game play to 1913 in about 45 minutes!
+<p>All in all, the AIs are already around, to take part in games in whatever way you want.
+And if you think you can do better, then join us on the DipAI mailing list on Yahoo Groups
+and have a go at developing your own.
+<p>So, to summarise, if you read Edi's article and thought that it would be really good
+if AIs could ever get that far &#8212 well, they're already doing everything that Edi
+asked of them, and a whole lot more.
+<p>
+<BR><BR><TABLE>
+<TBODY>
+<TR vAlign=bottom>
+<TD><A href="mailto:david@ellought.demon.co.uk"><IMG
+src="/Zine/Common/letter.gif" border=0></A> </TD>
+<TD><STRONG>David Norman<BR>(<a href="mailto:david@ellought.demon.co.uk">david@ellought.demon.co.uk</a>)</STRONG>
+</TD></TR></TBODY></TABLE>
+<P>
+<I>If you wish to e-mail feedback on this article to the author, and clicking
+on the envelope above does not work for you, feel free to use the <A
+href="/Zine/W2006A/Common/DearDP.html">"<B>Dear
+DP...</B>"</A> mail interface.</I>
+<P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/W2006A/"><img src="/Zine/Common/toW2006A.gif" align="right" border="0"></a>
+</BODY></HTML>
+<!--
+-->

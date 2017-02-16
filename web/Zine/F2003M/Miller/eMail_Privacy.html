@@ -1,0 +1,208 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+<TITLE>DP F2003M: Judge Email Privacy</TITLE>
+<!---- Authored by Millis Miller ---->
+<!---- Created on the DPZine June 21st, 2003 ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Updated by Edward Hawthorne on 06/23/03 ---->
+</HEAD>
+<BODY>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F2003M/"><IMG align=right SRC="/Zine/Common/toF2003M.gif" border=0></A>
+<BR clear=both>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<BR>
+<! ------------------------------------------------------------- >
+<! ------------------------------------------------------------- >
+<CENTER><H2 ALIGN=CENTER>Judge Email Privacy</H2>
+<H3 ALIGN=CENTER><I>By&nbsp; Millis Miller</I></H3></CENTER>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<P>&nbsp;
+<CENTER>
+<TABLE WIDTH=90% BORDER=0 CELLPADDING=2 CELLSPACING=2>
+<TR>
+<TD>
+<H4 ALIGN=JUSTIFY>The Problem:</H4>
+<P ALIGN=JUSTIFY>Have you ever wondered how secure all the email
+messages that are being sent to/from the judges in the course of
+your games that you play? Probably not, as I myself did up until
+recently, but maybe that is not the best approach to take.
+</P>
+<P ALIGN=JUSTIFY>For those who don't know, email is inherently a
+very insecure transmission method. It is analogous to using a
+postcard to send messages: anyone along the way can read your
+message, alter it or even submit a completely fake message, and
+you and/or the destinary would never know it.
+</P>
+<P ALIGN=JUSTIFY>OK, for some sensitive information (bank
+transactions, credit clearances etc.) this might be an issue but
+for Diplomacy games? Well, just consider these possible scenarios
+(in increasing order of likelihood):
+</P>
+<OL>
+<LI><P ALIGN=JUSTIFY>Someone 'spoofs' you by sending an email
+purporting to be from the real judge. OK, you might spot this
+from the headers that would indicate the phony source, but then
+again you quite likely would not (not all email clients easily
+show message headers, and you may not know what to look for).
+</P>
+<LI><P ALIGN=JUSTIFY>Someone intercepts an email from the judge
+and alters it (changing a press message for example). You have
+no way of knowing that it was altered, let alone where.
+</P>
+<LI><P ALIGN=JUSTIFY>Someone fakes you and sends an email
+purporting to be you, so that the judge accepts new orders,
+different to those that you think were going to be processed.
+</P>
+</OL>
+<P ALIGN=JUSTIFY>Not all of these possibilities are academic. I
+unfortunately know first-hand of a colleague I introduced to the
+email hobby who used his computer knowledge, plus the fact an
+unfortunate player sent their password by mistake, to generate
+false message purporting to come from the judge and to submit new
+orders to the judge.
+</P>
+<H4 ALIGN=JUSTIFY>The Solution:</H4>
+<P ALIGN=JUSTIFY>How could this be avoided? Well, there exists a
+program called <A HREF="http://www.pgp.com/">PGP</A>, and its
+free counterpart <A HREF="http://www.gnupg.org/">GnuPG</A>, that
+can secure emails so that these tricks become impossible. Most
+email clients support these programs, that tack on some extra
+information to the email.  <A HREF="http://www.pgpi.org/doc/pgpintro/">How
+does PGP work?</A> Well, in simple terms, a unique key pair is
+generated: one public, the other private. Anyone can use the
+public key (in fact, they are often made available on public key
+servers) but the private key is only held by the person who
+created the key pair.
+</P>
+<P ALIGN=JUSTIFY>With these key pairs, essentially the following
+two features are provided:
+</P>
+<H4 ALIGN=JUSTIFY STYLE="margin-left: 1cm; margin-right: 1cm; margin-top: 0cm">
+Digital Signature</H4>
+<BLOCKQUOTE STYLE="text-align: justify">With this, a message is
+digitally signed by the originator with their private key. Anyone
+receiving this message can compare it with the corresponding
+public key, which will match if correct. Additionally, checks are
+performed that inform if the message is not the original copy
+(i.e. it was altered during transmission). If you know who holds
+the private key, then you can be certain that that message
+originated from them.
+</BLOCKQUOTE>
+<H4 ALIGN=JUSTIFY STYLE="margin-left: 1cm; margin-right: 1cm; margin-top: 0cm">
+Digital Encryption</H4>
+<BLOCKQUOTE STYLE="text-align: justify">If you want to send a
+secure message, unreadable by all except the intended destinary,
+then you use encryption. Anyone can encrypt a message for a
+destination by using its corresponding public key, but only the
+person in possession of the matching private key can decode and
+read the message. Encryption strength is usually sufficient that
+the encoding is unbreakable in practical terms, so message
+security is assured.
+</BLOCKQUOTE>
+<P ALIGN=JUSTIFY>How could this be used on the judge? For
+example, by adding a digital signature to all emails coming from
+the judge, you could be certain that is was the judge that sent
+it to you, and not someone else pretending to be it. Similarly,
+you could send your emails to the judge also digitally signed, so
+the judge can be sure your message was not altered mid-flow.
+</P>
+<P ALIGN=JUSTIFY>In addition, if you know the judge's public key
+and it knows yours, both of you can be certain who is really
+sending, and messages could be rejected if the keys do not match.
+</P>
+<P ALIGN=JUSTIFY>To get even more secure, the emails between the
+judge and player could be encrypted so that not even their
+content could be read by third-parties.
+</P>
+<H4 ALIGN=JUSTIFY>Identity Registration</H4>
+<P ALIGN=JUSTIFY>One of the banes of judge play is the use of
+multiple identities, whereby the same person uses separate email
+addresses to play multiple positions.
+</P>
+<P ALIGN=JUSTIFY>To avoid this problem, use could be made of key
+signing. This is a procedure whereby a key itself is digitally
+signed by another key. This is used to validate the identity of
+the key signed, as the signer is agreeing that the person really
+exists. If enough people sign each others keys, then eventually a
+network of signatures is established that will lead from one
+person to any other (a so called Web of Trust).
+</P>
+<P ALIGN=JUSTIFY>In judge terms, every player could be required
+to have a valid key that was signed by real people. Only players
+signing/encrypting messages with these keys would be permitted to
+play on the judge.
+</P>
+<P ALIGN=JUSTIFY>In that way, you would be certain that each
+player in a game is a separate person, and no more would multiple
+positions be playable unknown by the same player.
+</P>
+<H4>When can this be implemented?
+</H4>
+<P ALIGN=JUSTIFY>The framework for this already exists. There
+already exist <A HREF="http://www.pgp.net/">public key servers</A>,
+and various <A HREF="http://www.rubin.ch/pgp/weboftrust">Web of
+Trust</A> schemes to certify the identity of people (e.g. for
+<A HREF="http://www.debian.org/devel/extract_key">Debian
+Developers</A>). All that is required is to bolt this on to the
+existing judge system.
+</P>
+<P ALIGN=JUSTIFY>Currently, I have established a judge, <A HREF="mailto:uksj@faztek.org">UKSJ</A>
+that is the first step in this. It is set up to send all emails
+digitally signed (using the <A HREF="http://www.cleancode.org/email">email</A>
+program) thus guaranteeing that the judge is really sending them.
+Time is always limited for me, but the next steps that I see are:
+</P>
+<UL>
+<LI><P ALIGN=JUSTIFY>Added ability to receive digitally signed
+messages from players, rejecting those with signing errors
+(indicating tampering).
+</P>
+<LI><P ALIGN=JUSTIFY>Allow players to encrypt messages to the
+judge (using the judge's public key).
+</P>
+<LI><P ALIGN=JUSTIFY>Allow players to register their public keys
+(either with the judge directly or a specially created dedicated
+key server).
+</P>
+<LI><P ALIGN=JUSTIFY>Use player-registered public keys to
+digitally sign/encrypt messages from the judge to each player.
+</P>
+</UL>
+<P ALIGN=JUSTIFY>Not everyone will want to go to such lengths to
+play on a secure judge like this. Sending from other email
+accounts, or using the common Webmail services (such as Yahoo and
+Hotmail) will not work with PGP/GnuPG, and the Microsoft Outlook
+Express email client actually refuses to read such messages. But,
+if you want to be certain that your game is free of cheating,
+this may be the best way to go.
+</TD>
+</TR>
+<! ------------------------------------------------------------- >
+<! ------------------------------------------------------------- >
+<TR>
+<TD><P><A HREF="mailto:millis@diplom.org"><IMG src="/Zine/Common/letter.gif" border="0"></A>
+</TD>
+</TR>
+<TR>
+<TD>
+<B>Millis Miller<br>
+(<A HREF="mailto:millis@diplom.org">millis@diplom.org</A>)</B>
+<BLOCKQUOTE>
+<CENTER><P><EM>If you wish to e-mail feedback on this article to the author, click on the letter above. If that does not work, feel free to use the "<A HREF="/Zine/F2003M/Common/DearDP.html"><B>Dear DP...</B></A>" mail interface.</EM>
+</CENTER>
+</BLOCKQUOTE>
+</TD>
+</TR>
+</TABLE>
+<P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F2003M/"><IMG SRC="/Zine/Common/toF2003M.gif" border=0 ALIGN=right></A>
+<BR>&nbsp;
+</CENTER>
+</BODY>
+</HTML>
+<!--
+-->

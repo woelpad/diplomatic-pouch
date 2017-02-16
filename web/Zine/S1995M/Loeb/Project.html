@@ -1,0 +1,1083 @@
+<TITLE>
+DP S1995M: The Diplomacy Programming Project
+</TITLE>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1995M/"><IMG align=right SRC="/Zine/Common/toS1995M.gif" border=0></A>
+<BR><BR><HR>
+<center>
+<table cellspacing=5>
+<TR><TD><IMG hspace=10 SRC="/Zine/Common/Loeb.gif">
+<TD>
+<H3>
+<i>Danny Loeb</i></H3>
+<H1>Challenges in<BR>Multi-Player<BR>Gaming by Computers:</H1>
+<H2>A Treatise on the Diplomacy Programming Project</H2>
+<h4>Dedicated to my daughter Gabrielle Jeanette Loeb</h4>
+</TR>
+</table>
+</center>
+<HR>
+<H3>Overview</H3>
+<P>
+This document is organized into an <A HREF="#Intro">Introductory section</A>,
+which is followed by a mathematical evaluation of <A HREF="#Theory&gt;multi-player
+gaming&lt;/A&gt;, and a description of the element of
+&lt;A HREF="#Negotiate">negotiation</A> in such games.  Finally, the application
+of this theory and research in a programming project called
+<A HREF="#Bordeaux">the Bordeaux diplomat</A> is detailed, and the
+<A HREF="#Conclude">conclusions</A> which can be drawn from this article are
+presented.  A <A HREF="#Bib">bibliography</A> containing the references
+cited in this article is provided as an appendix.
+<P>
+This article is also available for downloading in DVI and LaTeX format from
+the web site:
+<center>
+<A HREF="http://www.labri.u-bordeaux.fr/~loeb/dpp/table.of.contents.html">
+<B>http://www.labri.u-bordeaux.fr/~loeb/dpp/table.of.contents.html</B></A>
+</center>
+<HR>
+<A NAME=Intro>
+<H3>Introduction</H3>
+<P>
+Whereas a great deal of work has been done on two-player games,
+multi-player games are only beginning to become understood both on a
+theoretical and on a practical level. In so far as one studies games in
+an attempt to model the real world, this is a terrible loss, for
+large number of participants are involved in most real world conflicts.
+<P>
+The game of Diplomacy was invented in 1959 by Allan Calhamer to
+simulate one such conflict: the First World War.
+This game was chosen as a test bed for our multi-player
+game playing theories.
+<P>
+As in any multi-player game, positions are extremely difficult to
+analyze. The mathematical machinery developed to analyze two-player
+games crumbles, and must be rebuilt from scratch.
+In the final analysis, the most important factor in evaluating
+a position of a multi-player game is not located on the game board,
+but rather in the minds of the players. For this reason, in any
+multi-player game negotiation becomes necessary in order to determine,
+and perhaps modify these attitudes.
+<P>
+Diplomacy is an extremely rich example of a multi-player game. The
+number of players allows a large number of free-wheeling alliances
+without degenerating into total chaos. Many heuristics exist by which
+to measure a player's progress to victory, and there are a large number
+of points which need to be negotiated during the formation and
+continued operation of an alliance.
+<P>
+Furthermore, just as real life, Diplomacy is not a sequential game.
+Moves must be submitted simultaneously for all players for all of
+their units. Thus, normal search techniques either no longer apply or
+get bogged down in the tremendous size of the game
+tree, for it is impossible to complete even a one-ply search.
+<P>
+Finally, Diplomacy is an extremely suitable testbed for different
+approaches to multi-player games, since it is sufficiently popular to
+encourage unrelated groups of researchers to work on the game.
+<P>
+According to legend, the first play-by-mail Diplomacy game
+(1963A) included a diplomat (diplomacy automata) by Dave
+McDaniel which was eliminated in 1903. (See bibliography entry "MB".)
+In 1982, the Avalon Hill Game Corporation marketed
+"Computer Diplomacy." The program is designed primarily as a game
+master, but has very limited playing capabilities as well.
+<P>
+At the 1989 Conference on Computer Games, Kraus,
+Ephrati, and Lehmann introduced a diplomat they developed over three
+years at Hebrew University (see <B>KLE1,KLE2</B>). Their program
+is very good, and negotiates like a human. It constitutes the
+first serious attempt at a computer Diplomacy program.
+<P>
+During the 1991 Conference on Computer Games, Michael Hall
+and the author elaborated
+several ideas by which a computer could play the game Diplomacy.
+Whereas the Hebrew University diplomat is based primarily on the
+negotiation, our diplomat is based primarily on the strategy of the
+game. See bibliography entry <B>HL</B> for details. The present article
+outlines the
+Diplomacy Programming Project's
+progress since last year and connects our ideas with a new
+mathematical theory developed for multi-player games. (See also
+bibliography entry <B>DL</B>.)
+<P>
+In order to make the article as accessible as possible, we have
+preferred to omit all references to the detailed rules of the game.
+(For these, see the bibliography entry <B>Rules</B>.) In fact, most of the
+ideas discussed below can be
+be applied to any multi-person conflict.
+<P>
+I would like to express my appreciation to Constantin Staykoff for his
+dedication and hard work in implementing the strategic module of the
+Bordeaux Diplomat, and Ken Lowe for the use
+of his Diplomacy Adjudicator.  I would further like to thank all the
+members of the Diplomacy Programming Project for their encouragement
+and help.
+<P>
+<A NAME=Theory>
+<H3>Three-Player Position Evaluation</H3>
+<H4>Traditional Techniques</H4>
+<P>
+In theory, the minimax algorithm can be used to play
+any two-player, deterministic, sequential-move game perfectly.
+<OL>
+<LI>A tree is drawn representing the game with the current position
+as root. The children of each node
+represent the various positions obtained after making all of the
+possible moves. The type of a node is given by the player whose turn
+it is to move.
+<LI>Assign position values to all leaves. Increasing values
+indicate better results for player <i>A</i>. For example, in a game with
+<B>win</B>,
+<B>loss</B>, and <B>draw</B>, we can assign <i>v(<B>win</B>)=1</i>,
+<i>v(<B>loss</B>)=-1</i>, and <i>v(<B>draw</B>)=0</i>.
+<LI>For each internal node, calculate the value of the position
+assuming perfect play on both sides. For an <i>A</i>-node, the value is the
+maximum of the children's values. For a <i>B</i>-node, the value is the
+minimum of the children's values.
+<LI><i>A</i> should choose a move from the root node with maximum value.
+</OL>
+However,
+due to time constraints, it is seldom possible to analyze the entire
+game tree. Therefore, game programs often use various search
+techniques (such as <i>alpha-beta</i> from bibliography entry <B>AB</B>)
+and approximative
+evaluation functions which analyze the position using different
+heuristics, and thus need not search to the end of the game.
+<P>
+However, the above analysis guarantees that there exists a
+perfect strategy to which any approximation thereof can be compared.
+<P>
+However, what happens when a third player is added?
+<P>
+For simplicity, assume that one player will win, and the other
+two players lose. However, similar remarks hold in the absence of
+such assumptions.
+<P>
+A game tree can still be formed as above with values assigned to the leaves.
+However, problems are encountered when minimaxing the values back
+up the tree.
+<P>
+Let <i>n</i> be an <i>A</i>-node in the tree whose children have all
+been evaluated. <i>v(n)</i> must now be calculated.
+Obviously, if <i>n</i> has a child whose value is equal to an <i>A</i>-win, then
+this child is a good strategy for <i>A</i>, and the value of <i>n</i> will be a
+win for <i>A</i>. Similarly, if <B>all</B> of the children of <i>n</i> are wins
+for say <i>B</i>, then <i>n</i> is itself a win for <i>B</i>. However, what
+happens if some of the children of <i>n</i> are wins for <i>B</i> and some are
+wins for <i>C</i>? It is then impossible to evaluate <i>n</i> without some
+psychological information regarding <i>A</i>'s attitude to such situations.
+His choice of move is indifferent, yet greatly affects the
+strategy of the other players.
+<P>
+<H4>Queer Games</H4>
+<P>
+Jim Propp calls such positions "queer" (see bibliography entry <B>3PIG</B>).
+<PRE>
+0+1--0+0
+/ n    p
+/
+0+2--0+0
+/ n    p
+/
+1+2--1+1--0+1--0+0
+q \  f \  n    p
+\    \
+1+0  1+0--0+0
+n \  n    p
+\
+0+0
+p
+<B>Figure 1: Three player nim</B>
+</PRE>
+For example, consider the game of "Nim" played with
+three players.  Players take turns removing stones from two piles. Any
+number of stones (at least one) can be removed from a single pile. The player
+to make the last move wins.  In such a game, 0+0 is a win for the
+<B>previous</B> player.
+Thus, 1+0, 0+1, 2+0 and 0+2 are wins for the <B>next</B> player. Hence, 1+1
+is a win for the <B>following</B> player. Therefore, the position 1+2 is
+queer, as it yields
+a choice for the <B>next</B> player between wins for the <B>previous</B>
+player and the <B>following</B> player.
+<P>
+Are queer positions very common? If not, then we can hope to frequently
+apply the traditional techniques mentioned above.
+<P>
+Unfortunately, given any impartial game (one in which to answer the question
+"What moves are possible?", you need not pose the question "Whose turn is it?"
+Thus, Chess is not an impartial game, since only White can move White's
+pieces), <i>G</i>, the game <i>2+2+G</i> is queer. Thus, impartial games large
+enough to
+contain a 2+2 component are queer.
+<P>
+A simple probabilistic argument shows that virtually all games are
+queer. Let <i>a,b,c,q</i> represent the probabilities that a position is a
+win for any given player or that it is queer respectively. Without
+loss of generality, we consider games in which all internal nodes have
+two children. By
+symmetry, <i>a=b=c</i>. Thus, the probability to be queer <i>q=1-3a</i> is equal
+to the probability that neither choice is a win for the
+current player,
+yet the two choices are wins for different opponents
+<i>(1-a)^{2} - 2a^{2}</i>. The only solution that represents a valid
+probability is <i>a=0</i>. Thus, <i>q=1</i>.
+<P>
+<H4>Sums of Games</H4>
+<P>
+A traditional technique in analyzing games has been to break down the
+game into a sum of simpler games.  That is, the game G+H is the game
+in which players may play in either <i>G</i> or <i>H</i> but not both. The game
+is over when play is no longer possible in either summand. The last
+player to have played is the winner.
+<P>
+Typically, the most powerful results have been found for impartial
+games. The two possible results of a two-player game are <i>N</i> (win for
+the next player),  and <i>P</i> (win for the previous player).
+<PRE><B>  +  |     N      P
+---+-------------
+N  |  N or P    N
+P  |     N      P</B></PRE>
+The table above gives the sums of all two-player impartial games except
+<i>N+N</i>. In fact, the sum of two <i>N</i>'s
+depends on the particular games, yet a theorem of Grundy allows
+us without loss of generality to consider only sums of  games of "Nim" with one
+pile. In these trivial games, the <i>P</i> positions are equivalent to empty
+piles, and <i>N</i> positions are equivalent to non-empty piles. The sum of
+two <i>N</i> positions is <i>N</i> itself if and only if the sizes of their
+associated "Nim" piles are distinct (see bibliography entry
+<B>WinningWays</B>).
+<P>
+For three-player impartial games, the possible sums are quite
+complex (see the table below). The sums are calculated on the
+premise that play rotates <i>NFPNFPNFP....</i> (see <B>3PIG</B>).
+<PRE><B>  +  |  P     N     F     Q
+---+-----------------------
+P  |  PQ    NQ    FQ    Q
+N  |  NQ    NFQ   PNQ   NQ
+F  |  FQ    PNQ   NQ    NFQ
+Q  |  Q     NQ    NFQ   FQ</B></PRE>
+Only in one particular case (<i>P+Q</i>) is the sum predetermined.
+To determine the value of the sum, there are two further problems. First,
+there is no generalized theorem of Grundy. Grundy's proof supposes that
+all "reversible" moves can be ignored. However, in three-player
+impartial games even if <i>P</i>'s move is reversed by <i>N</i>,
+he may have gained Zugzwang, and placed <i>F</i> in a difficult position.
+Second, as can be seen below, even the game of "Nim" is no longer
+trivial once there are three players.
+<P>
+<H4>Classifying Queer Games</H4>
+<P>
+In the above classification, queer games are all considered to have
+the same value. Indeed, it has been believed (see <B>JVN</B>) that all
+three-player games are strictly-determined or symmetric
+non-strictly determined. However, are queer games always symmetric?
+For example, suppose <i>N</i> could choose between  two
+queer positions: one where <i>F</i> would name <i>N</i> or <i>P</i> as
+winner, and one where <i>N</i> would name <i>F</i> or <i>P</i> as winner.
+Perhaps, <i>N</i> would prefer the first choice even though both are queer
+games, since  he would then retain some chance of winning.
+<P>
+The two positions above must then be given different values: <i>f1</i>
+and <i>n1</i> respectively. Obviously, <i>p1</i> can be defined in a
+similar manner. Now, denote forced wins by <i>f0,</i> <i>p0,</i> and
+<i>n0</i> respectively. <i>N</i> has the following preferences
+<i>n0 > f1 , p1 > f0 , p0.</i>
+He is indifferent regarding <i>f0</i> and <i>p0</i>. A position leading to
+such a choice can not be simplified by his opponents, and must be
+labeled simply <i>n1</i>.
+<P>
+Is <i>N</i> necessarily indifferent between <i>f1</i> and <i>p1</i>?
+Unfortunately, we can not answer this question until we clarify how a
+player makes a choice between equally interesting possibilities.
+One assumption is that he makes a random move. In that case, <i>f1</i>
+may be preferred to <i>p1</i> or visa versa. However, consider a game
+with additional moves equivalent to certain other moves. For example,
+in Chess allowing the Rooks to be moved by either
+hand and all other pieces to be moved only by the left hand. Is it
+then more likely the player will move his rook?
+<P>
+Although plausible, this is not a very pleasing model since it does
+not allow us to prune redundant branches from our game tree. Instead,
+I propose the model by which the players establish equivalence
+classes of positions.  (Two positions are said to be equivalent if the
+equivalence classes of their non-dominated options are in one-to-one
+correspondence via equivalence.)
+Moves are made by randomly choosing a non-dominated equivalence class,
+and then selecting a move within this class.
+<P>
+In this way, <i>f1</i> and <i>p1</i> are equivalence classes of equal
+interest to <i>N</i>. He makes his choice randomly between the two. This
+choice between <i>F</i> and <i>P</i> to select the eventual winner can be
+represented as <i>n2</i>.
+<P>
+Similarly, <i>n3</i> is the choice by <i>N</i> of who will choose the person
+who will choose the person who
+selects the winner. In fact, it can be shown that any position in a
+three-player finite sequential perfect-knowlege game is equivalent to exactly
+one of the equivalence
+classes <i>ni,pi,fi</i> where <i>i</i> is an integer. <i>ni+1</i> for
+example is defined to be a choice for <i>N</i> between <i>pi</i> and <i>fi</i>.
+Thus, we have the counter-intuitive result that <B>no</B> game is
+symmetric under the hypotheses above.
+<P>
+Calculations with these refined classes become even more complicated.
+For example, whereas "Nim" with two piles is completely
+trivial with two players (the next player wins unless the two piles are of
+equal size), there is no apparent rhyme or reason in the three-player two-pile
+"Nim" table (see the table below).<PRE><B>
+i  \  j  |  1     2     3     4     5     6     7     8     9    10
+---------+---------------------------------------------------------
+0    p0  | n0    n0    n0    n0    n0    n0    n0    n0    n0    n0
+1    n0  | n1    f1    n2    n2    n2    n2    n2    n2    n2    n2
+2    n0  | n1    f1    n2    n2    n2    n2    n2    n2    n2    n2
+3    n0  | f1    n2    p1    p1    p1    p1    p1    p1    p1    p1
+4    n0  | n2    n2    p1    f2    n3    f3    n4    n4    n4    n4
+5    n0  | n2    n2    p1    n3    f3    n4    n4    n4    n4    n4
+6    n0  | n2    n2    p1    f3    n4    p3    p3    p3    p3    p3
+7    n0  | n2    n2    p1    n4    n4    p3    f4    n5    f5    n6
+8    n0  | n2    n2    p1    n4    n4    p3    n5    f5    n6    n6
+9    n0  | n2    n2    p1    n4    n4    p3    f5    n6    p5    p5
+10   n0  | n2    n2    p1    n4    n4    p3    n6    n6    p5    f6</B></PRE>
+<H4>More players</H4>
+Until now, we have only discussed games with three players.
+When a fourth player is added, the refined classification
+<i>(ni,fi,pi)</i> breaks down completely. However, the crude
+classification scheme <i>N,F,P,Q</i> can be extended. Instead of
+four types of games, now twelve are needed.
+<OL>
+<LI>[1-4] Forced win for a certain player.
+<LI>[5-8] An alliance of three players is needed
+to stop a certain player from winning.
+<LI>[9-12] One player plays no significant
+role whatsoever and the three remaining players participate in a
+"Queer" game. (In other word, any of the three players can be
+stopped by the other two.)
+</OL>
+Under this view, game types are in one-to-one correspondence with
+voting schemes (see bibliography entry <B>Isbell</B>).<PRE><B>
+Number of Voting Schemes
+n     0  1  2  3   4   5    6      7
+---------------------------------------
+v(n)  0  1  2  4  12  81  2646  1422564
+</PRE></B>
+A voting scheme consists of a set of voters
+<i>V</i>, and a set of winning coalitions <i>W</i> subject to the
+condition that if <i>V is a superset of B and B a superset of A in coalition
+set W</i>, then <i>B is in W</i>, and if <i>A=V-B</i>, then exactly one of
+<i>A</i> and <i>B</i> can be a
+member of <i>W</i>. In other words, a voting scheme is an order
+preserving map <i>f</i> from the subsets of <i>V</i> to <i>\{-1,1\}</i>
+such that
+<i>f(A)=-f(V-A)</i>.
+<P>
+Given a game <i>G</i> and a partition <i>P</i> of its players, we
+define the quotient game <i>G/</i> to be a new game with one player for
+each block
+(or <B>alliance</B>) of <i>P</i>. The player <i>B in P</i> in the game
+<i>G/P</i> must make a move whenever it is the turn of some <i>p\in
+B</i>.  Thus, in <i>G/P</i> there might not be simple rotation
+of play even if in <i>G</i> the players take turns playing in simple rotation.
+<P>
+The moves available to <i>B</i> in the game <i>G/P</i> are the same as those
+available to <i>P</i> in the game <i>G</i>. <i>B</i> wins the game <i>G/P</i>
+if any <i>P in B</i> wins.
+<P>
+<i>A</i> is said to be a winning (resp. losing) alliance of players in the game <i>G</i>
+if the quotient game <i>G/{A,P-A}</i> is a win (resp. loss) for the
+alliance <i>A</i>.
+The set of winning games is a voting scheme, since adding players to
+an alliance can only strengthen it, and given a pair of opposing
+coalitions exactly one can win while the other must lose. (If
+the game includes results other the simple
+wins and losses, then the notion of a voting scheme must be
+generalized. A generalized voting scheme is a order preserving map
+from the subsets of <i>V</i> into the set of results {-n,-n+2,...,n-2,n}<i>
+such that </i>f(A)=-f(V-A)</i>)
+<P>
+The play of a game can be viewed as the selection of a winning
+coalition (see <B>Sh</B>).
+The difference between the coarse classification and the fine
+classification of game is that when a winning alliance is formed in
+fact the alliance itself does not win, but rather only one member of
+the alliance. Thus, in the end, most alliances are unstable. It is
+this unstability which the fine types <i>fi,ni,pi</i> attempt to
+measure in three-player games.
+<P>
+In conclusion, just as two-dimensional projections are often
+insufficient to recreate a three-dimensional object, these coarse
+classifications based on
+two-player projections of a multi-player game do not contain the
+subtle nuances which give the game its interest. However, it is
+difficult to develop a single complete and rigorous theory as was the
+case for the theory of two-player games.
+<P>
+<A NAME=Negotiate>
+<H3>Negotiation</H3>
+<H4>The Theoretical Basis</H4>
+<P>
+Three-player games are much more complicated than
+two-player games. Whereas, in a two-player game, there is only one
+adversarial relationship, in a three-player game, any of the three
+players can be opposed by an alliance of the other two players.
+<P>
+The exact strategy derived depends on many "psychological"
+assumptions on the behavior of the other players when confronted with
+choices of equal interest. For example, when a loss seems certain,
+many players will choose to share the defeat with the player most
+responsible for their loss. While maximizing your position against
+such a psychology, one must be careful not to give the impression that
+you are minimizing the position of any other player.
+<P>
+Whereas, when a victory seems possible, players chose their winning
+coalition according to their estimated chances of having the victory
+accorded to them. Thus, all critical members of an alliance must be
+assured of the likelihood of victory for them.
+<P>
+In any two-player game, players can only be pleasantly surprised when
+their opponent makes a bad move. In that way, the player will often
+find a previously unavailable winning strategy.
+However, this is not the case in three-player games.
+Suppose for example that, <i>N</i> chooses <i>f0</i> (a forced
+win for <i>F</i>) when he could have chosen <i>f1</i> (by which <i>F</i> would
+have decided whether <i>P</i> or <i>N</i> would win). This is a bad move for
+<i>N</i>
+since he no longer has any chance to win. Nevertheless, <i>P</i> also loses
+from this error.
+<P>
+Thus, in any three-player game, negotiation is necessary for several
+reasons. First, as we saw above, each player will attempt to shift the
+blame for the other player's misfortunes on the third player.
+Here we discuss matters of loyalty and treason, and try to place an
+appropriate "spin" on the moves that we have made.
+<P>
+Secondly, negotiation can be used to avoid the sort of error that <i>N</i>
+made in the example above. If <i>P</i> had convinced <i>N</i> of the danger that
+he was in, then perhaps <i>N</i> would have made the move that was in their
+mutual interest.
+<P><HR>
+By giving a player useful suggestions, one can hope that his trust for
+you will be raised. On the other hand,
+you can suggest a move to a gullible player which is more in
+your interest than his. If you have promoted his trust in you up to
+now, then perhaps he will accept your advice (against his better
+judgement).
+<P>
+On the other hand, if the other player no longer has any trust in you,
+then he will be less receptive to any advice you might give. In an
+extreme case, he might ignore his own normal preferences, and simply
+hand the victory to the third player.
+<P>
+In a game with a very complicated search tree, communication does not
+merely serve for negotiation itself, but rather these suggestions
+allow a pair of players temporarily working together to exchange
+information, and thus examine the search tree in parallel.
+<P>
+<H4>Diplomacy</H4>
+<P>
+In order to better study the relationship between negotiation and
+multi-player games, we chose the game Diplomacy.
+<P>
+Obviously, many other multi-player games exist. However, certain of these
+prohibit negotiation among players. For example, in the game of Poker,
+perhaps some information could usefully be exchanged among the players.
+However, this is normally forbidden.
+<P>
+Some games such as three-player "Nim" are so simple that there
+is little to discuss. Moreover, in any impartial game, there is a
+great symmetry which
+overshadows the negotiation. In a position <i>n1</i>, what can the
+player <i>F</i> say to <i>N</i> different from what <i>P</i> might say in order to
+persuade <i>N</i> to attribute the victory to him.
+<P>
+On the other hand, although there is no inherent symmetry in the game
+Diplomacy,
+statistics show that each country has an approximately equal chance to win
+the game (see <B>PG</B>). In fact, according to Alan Calhamer, creator of
+the game, a perfect game of Diplomacy is one in which no country is
+eliminated, but rather everyone allies against the current leader until he
+is weakened and  a new leader appears.  All of this coalition building and
+rebuilding generally involves much detailed negotiation. Furthermore, an
+effective alliance will require coordinated movements. Through these
+negotiations the participants in any alliance will determine which of the
+units will make attacks, and which will support those attacks.
+<P>
+Moreover, the strategy of the game Diplomacy is very rich. Thus, in
+proposing alliances with Turkey, Russia and Austria-Hungary will each
+be able to offer a number of advantages and disadvantages to Turkey.
+Depending on the temperament of the Turkish player, he can accept one
+of the offers, hold off while waiting further developments, or
+even pretend to accept both offers while intending to soon
+betray the trust of one or both of the other players.
+<P>
+<H4>Diplomacy Programming Project</H4>
+<P>
+When testing game programs, we have learned much more from
+machine-versus-machine competitions than from machine-versus-human
+competitions.
+The humans are very unpredictable. Thus, a victory one day might not
+mean that you have improved your program, but rather that the human is
+tired, or has gotten overconfident, etc.
+<P>
+On the other hand, computer tests are repeatable. One variable can be
+changed at a time, while hundreds of test games are played
+automatically. Using such techniques, we are able to
+automatically fine-tune the position evaluation heuristics of a
+computer game program. Some programs use automated learning
+techniques; in this case, it is vital that the program be able to play
+thousands of games automatically.
+<P>
+For a game like Diplomacy, it is even more important to emphasize
+automated testing.
+Since there are seven players, an "average" program should win about
+one seventh of the time. Thus, as compared with a two-player game,
+approximately three or four times as many test games should be run in
+order to statistically prove a similar percentage increase in the
+number of wins.
+Furthermore, the heuristic position evaluation used by the Bordeaux
+Diplomat contains a large number of parameters whose values should
+eventually be optimized through repeated tests.
+<P>
+When testing a Diplomacy program with human players, we have seen that
+each player has many preconceived notions about the computer.
+These preconceptions lead to unwarranted prejudices for or against
+the computer, which in turn
+influence the alliance formation process much more than any purely
+game-related factor.
+Thus, the real capacity of the program is clouded by a large number of
+extraneous issues.
+<P>
+To avoid this, test games against humans have been organized using
+Gunboat rules. By these rules, the identity of each player is kept
+secret, and no communication is allowed other than through the
+movements themselves.  However, by eliminating communication, we have
+eliminated the negotiation which was our main object of study.
+<P>
+Indeed, the ideal solution is to test our program against computer
+opponents.
+The first opponents one might think of are copies of our program, or
+alternate versions of our program. However, this is an extremely
+inadequate solution. Obviously, programs could recognize copies of
+themselves by sending special messages at the beginning of the game.
+The program would then ally with copies of itself, eliminate
+any remaining players, and finally declare a draw.
+<P>
+Here, we assume that the programmer is trying to recognize his own
+program. However, similar effects can occur without such intentions on
+the part of the programmer.
+For example, it is reasonable, all things being
+equal, to follow advice from an intelligent player -- yet how
+should a program judge the intelligence of others? The most reasonable
+criterion is that an intelligent player would suggest moves that you consider
+very strong. However, if the other program is a copy of yourself, then
+it will evaluate moves the same way you do, and then will probably
+suggest to you the very moves you would have thought of making
+yourself. Under such conditions, your program would inevitably
+ally with itself.
+<P>
+Once again the subject at hand is being clouded by a host of
+irrelevant details. To avoid these problems, any Diplomacy program
+should be tested against a set of programs written by different groups
+of programmers using completely different techniques.
+<P>
+But how can seven diplomats programmed by
+different people carry out any sort of meaningful dialog?
+How should messages be transmitted between programs? And how can these
+messages be understood?
+<P>
+In many computer game competitions, moves are transmitted by hand. The
+computers sit side-by-side while operators enter moves. This
+guarantees
+compatibility, but in a game of Diplomacy, where for each
+turn up to 34 movements must be entered, and may be preceded by arbitrarily
+many diplomatic messages, the game would inevitably slow down to a
+standstill. Indeed, the test at the 1992 Computer Olympiad (see <B>DL</B>) was
+terminated after 12 movement phases due to lack of time, whereas it is
+important to run a large number of complete game in order to
+accurately measure the potential of a Diplomacy program.
+<P>
+To run the necessary number of games in a reasonable amount of time, the
+computers communicate directly. The Diplomat
+Interface has been developed by the Diplomacy
+Programming Project to facilitate such communication.
+This interface is written in LCS, is a variant of SML developed by
+Bernard Berthomeiu and the <B>Outil et Logiciel pour le
+Communication</B> group at the <B>Laboratoire d'Automatique et de
+l'Analyse de Systeme</B> in Toulouse. LCS differs from SML in that it
+allows the management of parallel processing. This implementation choice
+notwithstanding, the interface is capable of
+launching programs written in any language within the UNIX
+operating system. The standard output of each player-diplomat is
+rerouted via the use of an LCS instream to the LCS agent responsible for the
+communication with that player-diplomat. This agent then
+can output in the corresponding LCS outstream where it is
+available on a FIFO basis as standard input for the diplomat.
+<P>
+To simulate the play of humans against machines, the Diplomacy
+Interface is capable of opening <B>X</B> or <B>suntools</B> windows for
+specified countries. Input and output for these windows are handled in
+a manner similar to that described above. Actually, it is impossible
+for a diplomat to determine who is playing the other countries: a
+human or a machine. Thus, no prejudices against humans can be
+built into the diplomats, and humans must perform a sort of Turing test
+if they wish to distinguish the machines from other humans.
+<P>
+Each player communicates only with the Diplomat Interface. The
+Diplomat Interface acts as a game master. That is to say, players can
+submit their moves with the <samp><B>SUB</samp></B> command. When all
+the moves are
+in and all players are ready to go, or when the deadline arrive,
+results are computed and distributed with the <samp><B>ORD</samp></B>
+message. The
+current position is announced via the <samp><B>NOW</samp></B> message,
+the missing
+orders for next turn are requested with the <samp><B>MIS</samp></B> message.
+It is the Diplomat Interface that declares the game over either
+because a player has reached the victory condition of 18 supply
+centers, or because the players have agreed on a draw with the
+<samp><B>DRW</samp></B> command.
+<P>
+However, the Diplomat Interface is also a real interface; that is to
+say, it can pass messages from one player to another.
+<P>
+It was decided that this communication should not be made in a natural
+language. The study of natural languages is an entirely separate and
+difficult field of research; but we wish to
+concentrate on the problems directly related to negotiation and game
+playing. Thus, a simplified language called the DPP Protocol was
+devised by which the players would be required to communicate
+(see <B>DPPP,DPPEx</B>).
+<P>
+Tests using actual negotiation transcripts show that this simple
+language allows the expression of nearly all of the concepts usually
+employed when negotiating in Diplomacy. It is impossible to say that it
+is sunny outside, but it is easy to threaten a player with war if he
+takes one of your cities.  For example,<PRE><B>
+France: "SND ENG (IFF DMZ(PAR BRE MAR) THN PCE ELS NOT(PCE))"
+</PRE></B>
+This language was developed independently of the diplomat we are
+developing. Thus, one can hope that other programmers will find the
+language as convenient as we are.
+<P>
+In order to make the language as rich as possible, several dozen
+predicates have been defined. In addition to their grammar,
+definitions of their suggested meaning and examples of their use are
+given. However, there are no guarantees that other programs will
+interpret the messages accordingly. One can always write a
+psychopathic program which attacks only those who propose peace.
+However, one could expect that, as in the real world, psychopaths would
+have a terribly short life expectancy in Diplomacy. In consequence,
+most reasonable diplomats will start all relationships with the
+tentative assumption that their partners will react "normally" to any
+signals made.
+<P>
+Certain programs might not understand all possible
+constructions in the protocol. However, for the most part, they should
+understand the messages we indicate in the dictionary as the most
+basic. This includes the message <samp><B>TRY</samp></B>. Its purpose is
+that upon
+receipt of an unknown message, we respond with <samp><B>TRY</samp></B>
+and a list of
+constructions understood by our program. In this way, some sort of
+communication can be held between programs of widely differing levels
+of sophistication.
+<P>
+<A NAME=Bordeaux>
+<H3>The Bordeaux Diplomat</H3>
+<H4>Division of Control</H4>
+<P>
+The Diplomat proposed in bibliography entry <B>HL</B> is based on a
+strategic core.
+This lower brain of the diplomat does all the calculations and thus
+forms the basis for the decisions taken by the upper brain, or
+negotiator part of the diplomat.
+<P>
+The negotiator does not know the details of the map, nor the rules of
+the game. On the other hand, it must be able to communicate with the
+other players, distinguish between friends and enemies, form
+alliances, and so on. To make decisions, the negotiators poses
+concrete questions to the strategic core, and following the answers to
+these questions, it chooses the appropriate moves to submit, or
+messages to send out.
+<P>
+The strategic core does not know which country the diplomat is playing.
+It is simply a disinterested, objective observer who calculates the
+best moves for any country given a certain number of constraints
+along with the value of the resulting position of all countries.
+<P>
+This strategic core can be tested separately from the rest of the
+program (as was done at the 1992 Computer Olympiad). However, its
+failure to communicate and to grasp the notions of balance of power,
+greatly limit its potential.
+<P>
+On the other hand, the program's division between the strategic core
+and the negotiator is completely modular. Thus, it would be possible
+to redesign the Bordeaux diplomat simply by replacing one of the two
+modules with a new program. Given a collection of several negotiators
+and several strategic cores based on different algorithms, we can easily
+construct an enormous number of full diplomats.
+<P>
+The strategic core is given the current position including the supply
+center distribution, and a set of "concerned" countries, which has been
+pre-divided into alliances by the negotiator. Each alliance can
+optionally have a list of "mortal enemies" designated. Next, the
+length and depth of the search is specified. The core can be told that
+certain countries are diplomatically bound not
+to enter certain "demilitarized zones," or to make or not make certain
+moves.
+Finally, a "seed" can be specified for the search.
+<P>
+In return, the strategic core must return for each concerned
+country the move that maximizes the total interest of their alliance
+(while minimizing the interest of their enemies) subject to the
+constraints given along with the values themselves.
+<P>
+Obviously the strategic core is used to select the moves to be used
+subject to the constraints of all of the treaties which we have agreed
+to, and decided to follow.
+However, the core has many other applications:
+<UL>
+<LI>In response to a proposed new alliance, two
+problems can be submitted: one with the current alliances, and one
+with the new alliances. A good alliance is one in which both players
+gain.
+<LI>Given a rumor or a threat, we introduce the moves in question as
+a "seed." If after several iterations, the move is still being
+considered, then the move is plausible.
+<LI>Suggestions can be evaluated similarly.
+<LI>To detect new alliances, we send the actual moves used last turn
+to the strategic core along with various conjectured alliances. The
+actual alliances are those for which the actual moves used are the
+most stable.
+<LI>In case of a backstab, we calculate the actual gain of the
+player with the moves used, and the gain he would have made with the
+moves proposed by the alliance. The difference gives an upper bound on
+his reliability.
+During turns in which he does not stab, a similar calculation gives a
+lower bound on his reliability.
+A player is expected to keep his word until
+his potential gains exceeds his reliability.
+</UL>
+Further discussion of the diplomatic aspects of our program are
+postponed to a later article as continued work progresses on the
+negotiation module of our program by Per Westling
+(Linkoping, Sweden).
+<P>
+<H4>The Strategic Core</H4>
+<P>
+Many difficulties were encountered in writing the strategic core of our
+program. It was first outlined in bibliography entry <B>HL</B>, but several
+difficulties
+were noted in the search routine. In the end, a new algorithm was
+implemented by Constantin Staykoff.
+<P>
+As we have seen above, perfect-knowledge position evaluation
+is much more difficult to define in a multi-player
+environment -- especially in a game such as Diplomacy with as many as
+seven players.
+<P>
+Already in two-player games such as Chess, the strategy is
+sufficiently rich to prevent programs from playing perfectly.
+Hence, a search is made through the most "important" parts of the
+game tree, and value of the leave positions are then "calculated."
+The selection of tree paths and the evaluation of the terminal
+positions are governed by various heuristics.
+<P>
+The game tree of Diplomacy is much more complex. All units must move
+simultanously. Thus, the game is not a sequential game, but rather a
+seven-dimensional matricial game. For example, the number of possible
+non-equivalent openings is 4,430,690,040,914,420 (over four
+quadrillion, see bibliography entry <B>Green</B>) as
+compared to 20 in chess. In chess, the average number of moves mounts
+to about three dozen during the mid-game. However, in Diplomacy, the
+number of available moves increases by an additional factor of several
+billion during the movement phases as the number of units and possible
+supports rises.
+<P>
+An efficient simplex algorithm has been invented by Lemke and Howson
+(see <B>LH</B>) to find Nash equilibria in two-dimension matricial games.
+However, even if this method could be generalized to multi-player
+games, there would not be sufficient time to input the entire game
+matrix to the algorithm. Hence, whereas it is possible to search
+several turns ahead in chess, it is impossible to conduct a complete
+one-ply search during a movement phase of the game Diplomacy. Instead,
+we must carefully converge on the Nash equilibria in the enormous
+matrix without looking at all the possible moves.
+<P>
+It is senseless to consider looking at two movement phases at the same
+time. All predictional capacity must then be built into our position
+evaluation heuristics.
+<P>
+Fortunately, during the building and retreat phases, the number of
+possible moves is never quite so astronomical. It is thus possible to
+do a complete one-ply analysis of these phases of the game.
+<P>
+Optionally, the search of a build or retreat phase could be less
+complete, but anticipate the following phase via a recursive call to
+the strategic module of the program.
+<P>
+<H4>Search Techniques with Simultaneous Movement</H4>
+<P>
+A complete description of the heuristics of our position evaluator can
+be found in bibliography entry <B>HL</B>, so we will concentrate on the search
+techniques itself. What moves should be considered? In what combinations? And
+in what order?
+<P>
+The search technique proposed in EBBFS (Even Better
+Best-First Search) involved an iterative search for moves for all of
+the concerned countries in parallel. Moves were considered one at a
+time by each alliance following a set agenda and adding orders for one
+unit a time (Best-First). The results of a given move were calculated
+in relation to the "current best" moves for each of the other
+alliances. The position is kept as current best move or is rejected
+according to the output the position evaluator gives to the resulting
+position.
+<P>
+Suppose a move <i>MA</i> was rejected for the alliance <i>A</i> because
+the alliance <i>B</i> had  considered the move <i>MB</i> to be its
+best move at the time <i>A</i> evaluated <i>MA</i>, but later <i>B</i> rejects
+<i>MB</i> for a better move <i>M'B</i>. According to the above algorithm,
+the alliance <i>A</i> would not be given a chance to reconsider the
+interest of the move <i>MA</i> in light of this development.
+<P>
+Given the drawbacks of EBBFS, we propose a new search technique called
+RES (Refined Evolutionary Search). The name is derived from the fact
+that this search strategy is similar to that adopted by nature to play
+the game "Biology."
+<P>
+In the game biology, each player must chose DNA sequences
+families. These sequences then define a certain number of living
+organisms. If the descendants of these living organisms are numerous
+after several billion years in a certain prechosen environment, then
+the player has won.
+<P>
+To play the game of biology, a player must in theory test every DNA
+sequences family in competition against every possible set of rivals.
+However, such a research is impossible. Thus, nature has adopted the
+evolutionary search techniques. By this method, animals are mutated
+one at a time by randomly changing a certain number of genomes. The
+successful mutations replace the original species,
+and the unsuccessful mutations are rejected.
+<P>
+Similarly, in Diplomacy, a large alliance cannot possibly consider
+all of its movements. Thus, the research is started by considering a
+certain "seed" move. This move being considered is then mutated by
+selected a certain number of units, and randomly selecting new moves
+for these units. Mutations are made for one alliance after another
+until the maximum search length has been reached.
+<P>
+The value of any given mutation with respect to the current moves of
+all other alliances is compared to the value of the original move with
+respect to the <B>current</B> moves of all other alliances. In other
+words, when an alliance adopts a new strategy, this may change the
+value of the strategies already being considered by the other
+alliances.
+<P>
+A certain number of consistency rules cut the loss of time due to the
+consideration of uninteresting mutations. In all cases where allied
+forces are ordered to attack each other, the moves are changed into
+mutual support. Furthermore, as a time saving measure, support is only
+considered among units belonging to the same alliance.
+<P>
+If the search passes through Nash equilibrium, then no alliance will
+have any interest in changing its moves. Thus, no Nash equilibria will
+be lost.
+<P>
+Nevertheless, the program only considers pure strategies whereas pure
+Nash equilibria do not exist for all games. Suppose Italy with his
+fleet in the Tyrrhenian Sea is trying to
+counter Turkey's incursion into the Ionian Sea. If Italy defends
+Naples, then Turkey should attack Tunis. However, if Italy defends
+Tunis, then Turkey should attack Naples.
+<P>
+Assuming that Italy and Turkey are the only countries concerned by
+this situation, the RES search will eventually enter a
+cyclic pattern of length four as described above.
+Eventually, we would like our program to be able to detect such
+cycles. The strategies involved in these cycles could then be
+extracted and subjected to a detailed matricial game analysis. A mixed
+Nash equilibrium would then be found by which Italy moves to Naples
+and Tunis with certain probabilities. At that point, a random choice
+would be made, and the move evaluated according the <B>expected return</B>.
+<P>
+Currently our program does not do such detailed analysis but merely
+halts at a random point (the search limit) and returns the strategies
+currently being considered and their <B>actual return</B>.
+<P>
+The research is designated as "refined," since that is how the
+mutation rate is set. At the beginning of the research, all units are
+reassigned new orders. There is no reason to believe that
+the old orders are good, so we attempt to examine as many completely
+different possibilities as we can. Later on in the research, we are
+more confident in the moves being considered, and therefore restrict
+ourselves to smaller and smaller modifications. As the search limit
+approaches, we only consider changing the order of one unit at a time,
+or permute the supports used.
+<P>
+The following procedure can be used to calculate best moves and their values
+for each given alliance with respect to a certain position (units and supply
+centers) in the game Diplomacy and under the following constraints:
+demilitarized zones, required moves, forbidden moves, search depth, and search
+width.
+<OL>
+<LI>[RES1] <B>(Initialize.)</B>
+Set best moves <i>BestM</i>, and best raw moves <i>RBestM</i> to
+the default moves. <BR>
+Calculate the position <i>P</i> resulting from <i>BestM</i>.<BR>
+For each alliance <i>k</i>, let <i>VBestMk</i> be the value of <i>P</i> for
+alliance <i>k.</i> <B>(see note below)</B><BR>
+For each unit <i>u</i>, create a list of legal moves <i>LM(u)</i> given
+the map, demilitarized zones, forbidden moves, and required moves.
+Abort if <i>LM(u)</i> is empty.<BR>
+Set <i>i=1</i>.
+<LI>[RES2] <B>(Choose Alliance.)</B> Let <i>p</i> be <i>i</i> mod the number of
+alliances.
+<LI>[RES3] <B>(Choose Units.)</B>
+Let <i>n</i> be the smallest integer greater than or
+equal to the number of units in alliance <i>p times width - width</i>.<BR>
+Select a set <i>SU</i> of <i>n</i> units belonging to alliance <i>p</i>.
+<LI>[RES4] <B>(Make Moves.)</B>
+Set <i>RM</i> to <i>RBestMp</i>.<BR>
+For all units <i>u</i> in
+<i>SU</i>, set <i>RM(u)</i> to a random move or hold from <i>LM(u)</i>.<BR>
+Set <i>M</i> to <i>RM</i>.
+<LI>[RES5] <B>(Make Supports.)</B>
+Replace in <i>M</i> all orders of the form <i>A MovesTo C</i> and
+<i>B MovesTo C</i> with appropriate random supports.<BR>
+Replace in <i>M</i> all orders of the form <i>A MovesTo B</i> and <i>B</i>
+<B>Holds</B> with appropriate supports.
+<LI>[RES6] <B>(Evaluate Moves.)</B> Calculate the position <i>P</i>
+resulting from <i>M</i> and <i>BestMj</i> for <i>j not equal to p</i>.<BR>
+Let <i>NewVj</i> be the value of <i>P</i> for the
+alliance <i>j.</i> <B>(see note below)</B>
+<LI>[RES7] <B>(Select Moves.)</B> If <i>NewVp>VBestMp</i>, then
+set <i>BestMp</i>
+to <i>M</i>, set <i>RBestMp</i> to <i>RM</i>, and for all alliances <i>j</i>,
+set <i>VBestMj</i> to <i>NewVj</i>.
+<LI>[RES8] <B>(Test Exit.)</B> Increment <i>i</i>.<BR>
+If <i>i is less than width</i>, then continue with step 2.<BR>
+Otherwise, output <i>BestMj</i> and <i>VBestMj</i> for each alliance, and exit.
+</OL>
+<B>NOTE:</B> The value of a position for an alliance is the sum of the values
+for each member of the alliance minus the value for any indicated
+mortal enemy.
+<P>
+In biology, Mammals have retained their deep-diving instinct to some
+measure despite having left the oceans millions of years ago.
+Similarly, in Diplomacy, a player may attempt to defend a space which
+comes under attack early in the research. In response, the attacking
+alliance may add enough support that defense becomes hopeless. However,
+the defender will persist in his futile support unless there is
+positive gain by making some other move.  (When there is a
+positive gain available from another move, a cyclic situation as
+described above often results.)
+<P>
+Such behavior in biology is useful; for example, when people fall into
+icy waters. Similarly, such a behavior is useful in Diplomacy in order
+to make life as difficult as possible for the attacking player.
+<A NAME=Conclude>
+<H3>Conclusions</H3>
+The theory of multi-player games and the game Diplomacy in particular
+is too deep and rich to expect a complete analysis.
+However, in view of the applications of multi-player games, we must
+persist in our efforts to model such games.
+<P>
+Mathematically, we seem to lack a good language in which to describe
+such problems. Underlying psychological hypotheses are necessary, which
+open the game up to the fuzzy world of negotiation.
+<P>
+Our view of negotiation is that it must be based on a solid strategic
+core. Otherwise, the diplomat cannot decide what to ask for, nor
+evaluate any sort of offer.  Early versions of this strategic
+core show good survival skills, but lack the savvy to pull off a win.
+Nevertheless, in blind tests, players are unable to distinguish
+the strategic core from human players.
+<P>
+In combination with an automatic negotiator which will
+temper the aggressivity of its strategic alter-ego, we should be able to
+compete at an equal level with humans in the game of Diplomacy.
+Simultaneously, we hope that existing diplomats will be made available
+in conformity with a universal language of communication among
+Diplomat which we have developed, and that many new programs are
+introduced.
+<P>
+Thus, we will be able to begin the repeated testing necessary to
+compare various theories, and to optimize our strategies.
+<P>
+By attempting to solve these difficult problems resulting
+from the interactions of intelligent agents, we hope to better understand
+what sort of capabilities such an agent should have, when it cannot assume
+that everyone in the world is its friend.  Creating programs that
+can play complex multi-player games is a step towards creating programs
+that can deal with the complexities of the real world and the craftiness
+of humans.
+<A NAME=Bib>
+<H3>Bibliography</H3>
+<UL>
+<LI><B>(MB)</B> Mark Berch, "The Lexicon of Diplomacy," <i>Diplomacy
+Digest, <B>34</B></i> (1980).
+<LI><B>(WinningWays)</B> E. R. Berlekamp, J. H. Conway and R. K.
+Guy, "Winning Ways for your Mathematical Plays," Academic Press, 1982.
+<LI><B>(HL)</B> M. Hall and D. Loeb, "Thoughts on Programming a
+Diplomat," <i>Heuristic Programming in Artificial Intelligence 3: The
+Third Computer Olympiad</i>, eds: J. van den Herik and V. Allis, Ellis
+Horwood, pp. 123-45 (1992).
+<LI><B>(Rules)</B> A. Calhamer, "Rules to Diplomacy," The Avalon Hill Game
+Company, 1956, 1976. ("Diplomacy" is a trademark of the Avalon Hill
+Game Company.)
+<LI><B>(Green)</B> T. Green, private communication.
+<LI><B>(AB)</B> D. E. Knuth and R. W. Moore, "An Analysis of
+<i>alpha-beta</i> Pruning," <i>Artificial Intelligence, <B>6(4)</B></i>,
+pp. 293-325 (1975).
+<LI><B>(KLE1)</B> S. Kraus, D. Lehmann, E. Ephrati,
+"An Automated Diplomacy Player," <i>Heuristic Programming in
+Artificial Intelligence</i>, Eds. D. N. L. Levy and  D. F. Beal, Ellis
+Horwood (1989), pp. 136-53.
+<LI><B>(KLE2)</B> S. Kraus, E. Ephrati and D. Lehmann,
+"Evaluation of Suggestions during Automated Negotiations",
+<i>Proc of the 11th Cognitive Science Conference</i>, 1989.
+<LI><B>(LH)</B> Lemke and Howson, "Equilibrium Points Of Bimatrix Games,"
+<em>Journal of Social and Industrial Applications of Mathematics</em>, 1964,
+pp. 413-23.
+<LI><B>(DL)</B> D. Loeb and C. Staykoff, "Diplomacy in London," available
+from the author.
+<LI><B>(DPPP)</B> D. Loeb, "Diplomacy Programming Project: Message
+Protocol Update," distributed via e-mail, 1992.
+<LI><B>(DPPEx)</B> D. Loeb, "Diplomacy Programming Project:
+Conversations," distributed via e-mail, 1992.
+<LI><B>(Isbell)</B> F. Lunnon, "The <em>IU</em> Function: The Size Of
+A Free Distributive Lattice," <i>Combinatorial Mathematics and its
+Applications</i>, ed. D. J. A. Welsh, pp. 173-81.
+<LI><B>(3PIG)</B> J. G. Propp, "Three-Person Impartial Games,"
+Unpublished manuscript.
+<LI><B>(Sh)</B> L. S. Shapley, "A Value For N-person Games,"
+<i>Contributions To The Theory of Games</i>, Vol. 2 (eds. H. Kuhn and A. W.
+Tucker), pp. 307-17, Princeton University Press, Princeton.
+<LI><B>(CS)</B> Constantin Staykoff, "Automate-Calculateur de
+Mouvements pour le jeu Diplomatie," DEA thesis 1992, Universite de
+Bordeaux I, France. (In French)
+<LI><B>(JVN)</B> John von Neumann, "Zur Theorie der
+Gesellschaftsspiele," <em>Mathematische Annalen <B>100</B></i> (1928),
+pp. 295-320  (In German) Translation in English by Sonya Bargmann, "On the
+Theory of Games of Strategy" in <i>Contributions to the Theory of
+Games</i>, Volume IV, eds. A. W. Tucker and R. D. Luce,
+<i>Annals of Mathematics Studies <B>40</B></i>, Princeton University Press
+1959, pp. 13-42.
+<LI><B>(PG)</B> Rod Walker, "Player's Guide to Diplomacy," The
+Avalon Hill Game Company, Baltimore, 1979.
+</UL>
+<B>Danny Loeb<BR>
+Universite de Bordeaux I, France<BR>
+(<A HREF="mailto:loeb@delanet.com">loeb@delanet.com</A>)</B>
+<P>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the mail address above does not work for you, feel free to use the "<b>Dear
+DP...</b>" mail interface, which is <A HREF="/Zine/S1995M/Common/DearDP.html">located
+here...</A>.</i>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1995M/"><IMG align=right SRC="/Zine/Common/toS1995M.gif" border=0></A>
+<BR><BR>
+<!--
+-->

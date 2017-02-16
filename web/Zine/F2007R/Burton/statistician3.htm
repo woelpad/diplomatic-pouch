@@ -1,0 +1,429 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD>
+<TITLE>DP F2007R: The Statistician: Solo Victories</TITLE>
+<!-- ---------------------Header---------------------------------- -->
+<!-- ------------------------------------------------------------- -->
+<!---- Authored by  ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Created on September 23, 2006 ---->
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/F2007R/"><img src="/Zine/Common/toF2007R.gif" align="right" border="0"></a>
+<br clear="all">
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<CENTER>
+<H1>THE STATISTICIAN:<BR>SOLO VICTORIES</H1>
+<h2>by Josh Burton</h2>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+</CENTER>
+<h2>Introduction</h2>
+<p>
+My <a href="/Zine/S2007R/Burton/statistician2.htm">previous article</a> in the Diplomatic Pouch explored the beginning of a <b>Diplomacy</b> game.  Using statistical analysis, I answered the following questions: <i>What supply centers is each Power likely to capture in 1901 and 1902?</i> and <i>How well does each Power do, in the long term, if it captures a given supply center?</i>
+<p>
+That's all well and good for 1901 and 1902.  But what about 1903?  What about further on down the road, when the game is winding down and someone is hoping to pull off a victory?  Can statistical analysis tell us what tends to happen at the <i>end</i> of a <b>Diplomacy</b> game?  Of course it can.
+<p>
+<h3>What does Victory Look Like?</h3>
+<p>
+As a <b>Diplomacy</b> player, your ultimate objective is winning the game, which (in the Standard variant) means gaining control of 18 supply centers.  From the very beginning of the game, you should be thinking about how to achieve this objective.  What will your 18 centers be?  How long will it take you to get to them?  Which of your six competitors are going to help you out, and which ones are you going to bump off?
+<p>
+The answers to these questions depend heavily on who your opponents are and how your rapport with them develops.  Do not hurry to formulate your plan before getting to know the other players.  On the other hand, you cannot escape a certain element of geographical fate.  If you're England, you'll likely need to count the German home centers among your 18; and as a consequence you may have to eliminate Germany, even if you get along great with the German player.  But you probably won't need the Italian home centers (although you may need to attack Italy in order to take other centers from him), and you almost certainly won't need the Turkish centers.  So go ahead and negotiate an alliance with the Kaiser; just keep in mind that your chances of victory are low unless you mercilessly backstab him and destroy him utterly.  But he doesn't have to know that.
+<p>
+In this article, I will present data from FRIGATE, my trusty statistical-analysis tool.  I will answer the following four solo-victory-related questions:
+<ul>
+    <li><b>Who wins most often?</b>  How often does each Power solo?  How does this depend on the press type?
+    <li><b>How long does the game take?</b>  How many game-years occur before the game officially ends?  How does it depend on the game's outcome, or on the press type?
+    <li><b>Which supply centers do Powers usually win with?</b>  What portion of a Power's solo victories include control of a particular supply center?  For example, how often does Russia count Greece among his magic 18 (or 19, or 20)?
+    <li><b>How often do Powers eliminate other Powers on their way to victory?</b> What portion of a Power's solo victories entail the elimination of certain other Powers?  For example, how does an Italian solo correlate with survival for Austria?
+</ul>
+All my analysis is of Standard-variant games, of all press types.  I exclude games with unusual rules that could upset game balance, including <a href="/Zine/W1995A/Payola/">Payola</a>, <a href="http://www.floc.net/dpjudge/?page=Rules#BLIND">Blind</a>, <a href="http://www.floc.net/dpjudge/?page=Rules#CIVIL_DISORDER">Civil Disorder/NMR</a>, and so forth.  My press types are as defined in the <a href="/Zine/F2006M/Burton/DP_F2006M_best_powers.htm">first <i>Statistician</i> article</a>:  no-press games have no communication between players, except through moves; full-press games have at least White, Partial press; and incomplete-press games are everything in the middle.  My dataset is slightly larger than it was for my earlier articles &#8212 I've brought in new game results!
+<p>
+<p>
+<h2>Results & Analysis</h2>
+<p>
+<h3>Who wins most often?</h3>
+<p>
+<center>
+<a name="table1">
+<table border="2">
+    <caption><b>Table 1:</b><br><i>Number of Solos for Each Power, By Press Type</i></caption>
+    <tr>
+        <th rowspan=2 colspan=2>
+	<th rowspan=2>Number<br>of Games
+	<th colspan=8>Games ending in a solo victory for...
+    <tr>
+        <th>Anyone
+	<th><font color="red">Austria
+        <th><font color="blue">England
+        <th><font color="teal">France
+        <th><font color="black">Germany
+        <th><font color="green">Italy
+        <th><font color="gray">Russia
+        <th><font color="olive">Turkey
+    <tr>
+        <th colspan=2>All Press Types
+	<td><center>10953
+	<td><center>5706<br><b>(52.1%)
+	<td><center><font color="red">649<br><b>(5.9%)
+        <td><center><font color="blue">766<br><b>(7.0%)
+        <td><center><font color="teal">1123<br><b>(10.3%)
+        <td><center><font color="black">875<br><b>(8.0%)
+        <td><center><font color="green">554<br><b>(5.1%)
+        <td><center><font color="gray">825<br><b>(7.5%)
+        <td><center><font color="olive">914<br><b>(8.3%)
+    <tr><tr><tr><tr><tr>
+    <tr>
+        <th rowspan=3>Press Type
+        <th>None
+	<td><center>4878
+        <td><center>2867<br><b>(58.8%)
+	<td><center><font color="red">291<br><b>(6.0%)
+        <td><center><font color="blue">358<br><b>(7.3%)
+        <td><center><font color="teal">635<br><b>(13.0%)
+        <td><center><font color="black">475<br><b>(9.7%)
+        <td><center><font color="green">272<br><b>(5.6%)
+        <td><center><font color="gray">341<br><b>(7.0%)
+        <td><center><font color="olive">495<br><b>(10.1%)
+    <tr>
+        <th>Incomplete
+	<td><center>583
+        <td><center>273<br><b>(46.7%)
+	<td><center><font color="red">27<br><b>(4.6%)
+        <td><center><font color="blue">36<br><b>(6.2%)
+        <td><center><font color="teal">64<br><b>(11.0%)
+        <td><center><font color="black">44<br><b>(7.5%)
+        <td><center><font color="green">29<br><b>(5.0%)
+        <td><center><font color="gray">29<br><b>(5.0%)
+        <td><center><font color="olive">43<br><b>(7.4%)
+    <tr>
+        <th>Full
+	<td><center>5492
+        <td><center>2567<br><b>(46.7%)
+	<td><center><font color="red">331<br><b>(6.0%)
+        <td><center><font color="blue">372<br><b>(6.8%)
+        <td><center><font color="teal">424<br><b>(7.7%)
+        <td><center><font color="black">356<br><b>(6.5%)
+        <td><center><font color="green">253<br><b>(4.6%)
+        <td><center><font color="gray">455<br><b>(8.3%)
+        <td><center><font color="olive">376<br><b>(6.8%)
+</table>
+</center>
+<p>
+These results parallel the findings in my <a href="/Zine/F2006M/Burton/DP_F2006M_best_powers.htm">first article</a>.  No-press games are more likely to end in solo victories than games with press.  France is by far the most likely victor, although Russia earns the most solos in full-press games.  Italy and Austria are the hardest Powers to win with, regardless of press type.  Russia wins more often in games with more press, while France, Germany, and Turkey benefit from less press.
+<p>
+<h3>When does the game usually end?</h3>
+<p>
+<center>
+<a name="table2">
+<table border="2">
+    <caption><b>Table 2:</b><br><i>Median Game Length, in Game-Years, By Press Type and Winning Power</i></caption>
+    <tr>
+        <th rowspan=2 colspan=2>
+	<th rowspan=2>All Games
+	<th colspan=8>Games ending in a solo victory for...
+    <tr>
+	<th>Anyone
+	<th><font color="red">Austria
+        <th><font color="blue">England
+        <th><font color="teal">France
+        <th><font color="black">Germany
+        <th><font color="green">Italy
+        <th><font color="gray">Russia
+        <th><font color="olive">Turkey
+    <tr>
+        <th colspan=2>All Press Types
+	<th>13
+	<th>12
+	<th><font color="red">12
+        <th><font color="blue">13
+        <th><font color="teal">12
+        <th><font color="black">12
+        <th><font color="green">13
+        <th><font color="gray">11
+        <th><font color="olive">12
+    <tr><tr><tr><tr><tr>
+    <tr>
+        <th rowspan=3>Press Type
+        <th>None
+	<th>14
+	<th>14
+	<th><font color="red">13
+        <th><font color="blue">15
+        <th><font color="teal">13
+        <th><font color="black">14
+        <th><font color="green">13
+        <th><font color="gray">12
+        <th><font color="olive">14
+    <tr>
+        <th>Incomplete
+	<th>12
+	<th>12.5
+	<th><font color="red">13
+        <th><font color="blue">13
+        <th><font color="teal">12
+        <th><font color="black">12
+        <th><font color="green">13
+        <th><font color="gray">11
+        <th><font color="olive">12
+    <tr>
+        <th>Full
+	<th>11
+	<th>11
+	<th><font color="red">11
+        <th><font color="blue">12
+        <th><font color="teal">11
+        <th><font color="black">11
+        <th><font color="green">11
+        <th><font color="gray">10
+        <th><font color="olive">11
+</table>
+</center>
+<p>
+Note that these averages are actually <a href="http://en.wikipedia.org/wiki/Median">medians</a>, rather than <a href="http://en.wikipedia.org/wiki/Arithmetic_mean">means</a>.  This reduces the effect of outliers (<i>i.e.</i> the occasional <a href="http://www.floc.net/observer.py?judge=NZMB&amp;game=vgnp2015&amp;page=list">game that continues until 1952</a>, which distorts the mean.)  It also ensures that the data is almost always in the easy-to-digest form of whole numbers.
+<p>
+The game-length numbers here depend on two variables: press type and game outcome.  Table 2 shows that more press tends to make a game go more quickly, which makes perfect sense: it's easier for players to cooperate in a press game.  Without press, you can agree to ally with your neighbor but still be unable to coordinate your units, because you have to guess how your ally is going to move.  As a result, your own moves will inevitably involve guesswork, resulting in a lot of bouncing and other unproductive movement.
+<p>
+Games ending in solos are likely to wrap up at about the same time as games ending in draws.  This is surprising; one would think that solo games end sooner.  After all, a drawn game is often the result of a failed attempt at a solo, and these games may continue for many game-years after a draw becomes inevitable, because the player trying to solo won't give up.  These data suggest a counterbalancing factor: some games are declared draws well <i>before</i> the draw is inevitable.  Perhaps some of us are giving up on our solo chances a little bit too soon, or accepting a large draw when we could fight for a smaller one.
+<p>
+Lastly, some Powers take longer to get to 18 than others.  The Russian steamroller is notably fast; Russian solo victories take place one or two years before everyone else's.  The English are a year slower than the others, perhaps because of the necessity of setting up convoys onto mainland Europe.  The other five Powers are virtually equal in speed.
+<p>
+<h3>Which supply centers do Powers usually win with?</h3>
+<p>
+A picture is worth a thousand numbers.  The most effective way to show the raw data for this question is not with another huge chart, but with colorful maps.  Here are some maps showing the centers typically owned by each Power when it achieves a solo victory.
+<p>
+<center>
+<a href="article3-solo-A.png" target="_blank"><img src="article3-solo-A.png" height=100></a>
+<a href="article3-solo-E.png" target="_blank"><img src="article3-solo-E.png" height=100></a>
+<a href="article3-solo-F.png" target="_blank"><img src="article3-solo-F.png" height=100></a>
+<a href="article3-solo-G.png" target="_blank"><img src="article3-solo-G.png" height=100></a>
+<a href="article3-solo-I.png" target="_blank"><img src="article3-solo-I.png" height=100></a>
+<a href="article3-solo-R.png" target="_blank"><img src="article3-solo-R.png" height=100></a>
+<a href="article3-solo-T.png" target="_blank"><img src="article3-solo-T.png" height=100></a>
+</center>
+<p>
+Some words about the coloration of these maps: every supply center is colored with an intensity matching the probability of that Power occupying the center in its victory year.  The probability is also written on to each supply center, expressed as a percentage.
+<p>
+These maps suggest that, in solo victories, anything is possible.  Every single Power owns every single center at least <i>sometimes</i>.  On the other hand, some positions are much more likely than others.  Specifically: <i>most solo victories are heavily concentrated on one side of the main stalemate line</i>.
+<p>
+As an experienced <b>Diplomacy</b> player will know, the main stalemate line (hereafter abbreviated <b>MSL</b>) separates a set of 17 northern and western supply centers from a distinct set of 17 southern and eastern centers.  The northern centers include the English, French, and German home centers; the Iberian, Lowland, and Scandinavian neutrals; and St. Petersburg.  The seven Great Powers include three exclusively northern Powers (England, France, Germany) and three exclusively southern Powers (Italy, Austria, Turkey).  Russia is often lumped in with the southern Powers, although it is more ambiguous than anyone else on the board, since it owns home supply centers on both sides of the line.  The primary feature of the MSL is that supply centers on one side of it are easily defended, by means of a stalemate line, from attacks originating on the other side.  Conversely, it is hard to break across the MSL and capture centers on the far side of it.
+<p>
+The power of the MSL is borne out in these maps.  Every side-bound Power (<i>i.e.</i>, not Russia) occupies the centers on its own side of the MSL much more frequently than the centers on the far side.  The "Wicked Witches", England and Turkey, are far away from the MSL and are particularly susceptible: each is significantly more likely to occupy <i>any</i> center on its own side of the MSL than <i>any</i> center on the far side.  These differentials are not purely the result of increased distance to the far-side centers: note that France is almost twice as likely to take St. Petersburg (four turns away at best from any French home center) as Venice (two turns away from Marseilles.)
+<p>
+Of course, you cannot win by adhering <i>completely</i> to one side of the MSL, since each side has only 17 centers.  To win, you have to break across the MSL and grab at least one center on the other side.  But what center is that likely to be?  The answer is different for each Power, and it relates closely to the Powers' typical army/fleet makeup.
+<ul>
+    <li><b>Austria</b> is heavily land-based, and often has trouble building up a navy.  So the dry regions of central Europe are his best chance to break through.  Austria takes Munich and Berlin quite often &#8212 more often, in fact, than Tunis, which is on his own side of the MSL but requires naval power to capture.<br><br>
+    <li><b>England</b> is the opposite of Austria: heavily naval.  Hence Tunis, which is Austria's toughest reach on the southern side of the MSL, is England's <i>easiest</i> pickup there.  England may also win by bringing armies through St. Petersburg &#8212 the quickest convoy route to the MSL &#8212 and muscling into Warsaw and Moscow.<br><br>
+    <li><b>France</b> can push into the Mediterranean more easily than England, because he can build fleets there.  As a result France is very likely to take Tunis. Beyond that, his three most common pickups in the south are the Italian home centers.  This suggests that France's high solo frequency may be directly attributable to his ability to build fleets in Marseilles.<br><br>
+    <li><b>Germany</b> is more land-based than his neighbors England and France, which makes his winning mix of centers different from theirs.  He is less likely to break into the Iberian peninsula and much more likely to take the landlocked centers to his east, including Warsaw, Moscow, and Vienna.<br><br>
+    <li><b>Italy</b> is the second most likely Power to make a significant break across the MSL, after Russia.  He usually dominates the Mediterranean with his fleets and gets Marseilles, Spain, and Portugal.  However, the Italian armies reach Warsaw and Moscow with less than 40% frequency, an unparalleled low for a Power taking centers on the close side of the MSL.<br><br>
+    <li><b>Turkey</b> has a good mix of armies and fleets, but his fleets are typically bottled up in the Mediterranean and can't help out in the Scandinavia/Baltic area.  Turkey tends to win by pushing into Marseilles or Munich, or, if he can manage to get a fleets out into the Mid-Atlantic, grabbing Portugal.
+</ul>
+<b>Russia</b>, as noted, is a unique case.  The Tsar's 19 most likely centers include 7 in the north and 12 in the south.  This reflects Russia's uneven split across the MSL, with one home center in the north and 3 in the south.  It speaks to Russia's ability to build fleets on both sides of the MSL, which gives him &#8212 like France &#8212 a boost in solo frequency.  Lastly, it's clear that in order to win, a Russian player must be successful in both the north <i>and</i> the south.  If he gives up his position straddling the MSL, his solo chances drop precipitously.  Only 5% of Russian victories exclude St. Petersburg, and virtually none exclude Russia's southern home centers.
+<p>
+<h3>How often do Powers eliminate other Powers on their way to victory?</h3>
+<p>
+<center>
+<a name="table3">
+<table border="2">
+    <caption><b>Table 3:</b><br><i>Probability of Solos For Each Powers, Assuming Other Powers' Survival</i></caption>
+    <tr>
+        <th rowspan=2 colspan=2>
+	<th rowspan=2>All Games
+        <th colspan=7>Assuming the survival of...
+    <tr>
+        <th><font color="red">Austria
+	<th><font color="blue">England
+	<th><font color="teal">France
+        <th><font color="black">Germany
+        <th><font color="green">Italy
+        <th><font color="gray">Russia
+        <th><font color="olive">Turkey
+    <tr>
+        <th rowspan=8>This is the<br>probability of<br>a solo for...
+        <th>Austria
+	<th>5.9%
+	<th><font color="red">
+        <th><font color="blue">9.5%
+        <th><font color="teal">6.6%
+        <th><font color="black">8.3%
+        <th><font color="green">6.6%
+        <th><font color="gray">4.1%
+        <th><font color="olive">1.1%
+    <tr>
+	<th>England
+	<th>7.0%
+	<th><font color="red">11.0%
+        <th><font color="blue">
+        <th><font color="teal">3.3%
+        <th><font color="black">3.0%
+        <th><font color="green">7.6%
+        <th><font color="gray">6.8%
+        <th><font color="olive">10.1%
+    <tr>
+	<th>France
+	<th>10.3%
+	<th><font color="red">13.6%
+        <th><font color="blue">3.2%
+        <th><font color="teal">
+        <th><font color="black">5.6%
+        <th><font color="green">13.2%
+        <th><font color="gray">16.7%
+        <th><font color="olive">15.4%
+    <tr>
+        <th>Germany
+	<th>8.0%
+	<th><font color="red">10.8%
+        <th><font color="blue">3.3%
+        <th><font color="teal">6.6%
+        <th><font color="black">
+        <th><font color="green">11.9%
+        <th><font color="gray">6.1%
+        <th><font color="olive">12.6%
+    <tr>
+        <th>Italy
+	<th>5.1%
+	<th><font color="red">3.2%
+        <th><font color="blue">6.1%
+        <th><font color="teal">5.8%
+        <th><font color="black">7.7%
+        <th><font color="green">
+        <th><font color="gray">7.3%
+        <th><font color="olive">1.7%
+    <tr>
+        <th>Russia
+	<th>7.5%
+	<th><font color="red">4.4%
+        <th><font color="blue">8.1%
+        <th><font color="teal">10.9%
+        <th><font color="black">7.2%
+        <th><font color="green">11.8%
+        <th><font color="gray">
+        <th><font color="olive">6.2%
+    <tr>
+        <th>Turkey
+	<th>8.3%
+	<th><font color="red">1.9%
+        <th><font color="blue">13.3%
+        <th><font color="teal">11.1%
+        <th><font color="black">11.7%
+        <th><font color="green">3.7%
+        <th><font color="gray">9.1%
+        <th><font color="olive">
+	<th>
+    </tr>
+</table>
+</center>
+<p>
+These numbers are a little tricky to interpret.  Each Power has some generalized probability of winning, which is an average within the dataset of all games.  Each Power's probability of winning changes when the dataset is restricted to games in which a particular <i>other</i> Power survives.  (Note that "survival" is not the same thing as "not losing".  You can lose without being eliminated if another Power achieves a solo, or if you get shut out of a <a href="http://www.floc.net/dpjudge/?page=Rules#NO_DIAS">No DIAS</a> draw.)
+<p>
+For example, Germany solos in 8.0% of all games.  Among games in which Turkey survives, however, Germany solos 12.6% of the time.  This is strong evidence of a spoiler effect: Germany and Turkey have some common neighbors, so if Turkey is eliminated, some of Germany's neighbors get stronger and are more able to keep him at bay.  A feisty Turkey, though, can distract other Powers, who then become unable to prevent a German solo.  Germany actually has an incentive to ensure Turkey's continued survival through diplomatic means.
+<p>
+This chart of raw data is not a succinct way to answer our questions.  If you're playing Italy, and you're trying to decide whether to take down Austria, you want to know if an Austrian bloodbath improves your chances.  How much more likely is Italy to solo if Austria is eliminated?  For that matter, Austria might be a threat to <i>you</i>, and you want to know if he's got designs on you: How much more likely is Austria to solo when Italy is eliminated?  Let's define a statistical value, the <i>mutual antagonism</i>, as follows: two nations have a mutual antagonism equal to the amount that survival by one Power decreases the probability of a solo by the other Power.  The number is averaged over both Powers, and normalized by their total probability of winning.  For example, Austria and Italy have a mutual antagonism of
+<br>
+[ (5.9% - <font color="green">6.6%</font>) + (5.1% - <font color="red">3.2%</font>) ] / (5.9% + 5.1%) = 11.3%
+<p>
+<center>
+<a name="table4">
+<table border="2">
+    <caption><b>Table 4:</b><br><i>Mutual Antagonism for Solo Victories</i></caption>
+    <tr>
+        <th>
+	<th>England
+	<th>France
+        <th>Germany
+        <th>Italy
+        <th>Russia
+        <th>Turkey
+    <tr>
+        <th>Austria
+        <th><font color="#008000">-59.1%
+        <th><font color="#0021bf">-24.6%
+        <th><font color="#00437b">-36.8%
+        <th><font color="#4300bd">11.3%
+        <th><font color="#890077">36.5%
+        <th><font color="#ff0001">79.4%
+    <tr>
+        <th>England
+        <th>
+        <th><font color="#cf0031">62.0%
+        <th><font color="#c5003b">58.2%
+        <th><font color="#0003fa">-13.8%
+        <th><font color="#1d00e3">-2.4%
+        <th><font color="#006e24">-52.6%
+    <tr>
+        <th>France
+        <th>
+        <th>
+        <th><font color="#7f0081">33.2%
+        <th><font color="#0020c0">-24.4%
+        <th><font color="#007713">-55.6%
+        <th><font color="#00535a">-42.8%
+    <tr>
+        <th>Germany
+        <th>
+        <th>
+        <th>
+        <th><font color="#006830">-50.3%
+        <th><font color="#4b00b5">14.5%
+        <th><font color="#006439">-48.8%
+    <tr>
+        <th>Italy
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="#006d26">-52.1%
+        <th><font color="#c90037">59.6%
+    <tr>
+        <th>Russia
+        <th>
+        <th>
+        <th>
+        <th>
+        <th>
+        <th><font color="#2f00d1">4.1%
+    </tr>
+</table>
+<i>Color spectrum:</i> <img src="article3-spectrum.png">
+</center>
+<p>
+Informally, you may think of this number as the amount by which you increase your chances to solo, if you are solely responsible for the elimination of another Power.  Note that mutual antagonism may be negative, as in the case of Germany and Turkey, where each Power's survival <i>increases</i> the other's solo chances.  Also note that this antagonism is purely a measure of the two Powers' likelihood of winning the game without eliminating each other.  It is NOT the same thing as the Powers' inability to cooperate during the game, and it says nothing about the likelihood of them sharing in a draw.
+<p>
+Under this definition of mutual antagonism, the Austria/Italy relationship is not nearly as unfriendly as one might expect.  It is lopsided: Italy is more likely to win by eliminating Austria than the other way around.  But Austria should be more concerned with Russia than with Italy, and both Austria and Italy have much less to fear from each other than from Turkey.
+<p>
+The strongest antagonisms involve Powers on the same side of the MSL, and in particular the Wicked Witches, England and Turkey.  England <i>vis-a-vis</i> France and Germany, and Turkey <i>vis-a-vis</i> Italy and Austria, are by far the four most antagonistic relationships on the map.  This makes sense: England and Turkey usually must control all 17 centers on their respective sides of the MSL in order to solo, which means they need to eliminate the other Powers that sit among those 17 centers.
+<p>
+On the other hand, the relations between Powers on opposite sides of the MSL are uniformly friendly.  This is undoubtedly due to the spoiler effect already observed.  The friendliest pair is England and Austria, perhaps because the English Navy and the Austrian Army are highly unlikely to step on each other's toes.  The implication is that, in order to win, you do not need to eliminate Powers on the far side of the MSL.  You may need to <i>attack</i> them &#8212 after all, you need to grab a center or two across the MSL &#8212 but elimination usually does not occur.
+<p>
+Russia, once again, is a special case.  Russia can cooperate with the Wicked Witches, because they do not need to eliminate Russia completely in order to secure their side of the MSL.  (Furthermore, Russia's victories bisect the MSL and therefore do not need to flush England or Turkey out of their home centers.)  Russia's worst enemy is Austria, followed by Germany and Turkey.  It seems that Russia's friendliness towards his neighbors is inversely proportional to their inclination to build armies.
+<p>
+<p>
+<h2>Conclusion</h2>
+<p>
+Thanks to an ever-increasing dataset, I've gathered data relating to the end of a <b>Diplomacy</b> game, particularly games ending in solo victories.  We see that the main stalemate line (MSL) heavily affects the circumstances of most solo victories.  The three northern Powers &#8212 England, France, and Germany &#8212 usually include most of the 17 northwestern supply centers, and very few of the 17 southeastern centers, in their solos.  If one of these Powers solos, the other two tend to be eliminated.  The mirror image is true for the three southern Powers &#8212 Italy, Austria, and Turkey.  The "Wicked Witches" (England and Turkey) are the most deeply ensconced on their sides of the MSL, and so they follow these trends most strongly.  England and Turkey are very likely to take most or all of their side's 17 supply centers when they win, and they are very likely to eliminate their neighbors in the process.
+<p>
+Russia is the only Power not to fit these patterns.  Russian solo victories almost always cross the MSL and include significant numbers of centers on both sides, although they tend to be concentrated in the south, where three of Russia's four home centers are.  Not coincidentally, Russia also tends to achieve its solos a few game-years sooner than any of the other Powers.
+<p>
+Now that I've spoken authoritatively, let me remind you that there are no certainties in <b>Diplomacy</b>.  Statistical probabilities are just that &#8212 <i>probable</i>.  Turkey doesn't <i>usually</i> get far across the MSL, but he takes Liverpool in 5% of his solo victories, and Norway in another 5%.  And while Russia tends to win a year or two more quickly than the other Powers, it's also true that one in four Russian solos takes multiple years <i>longer</i> than the overall median.  Statistical analysis can tell you what is likely, and what is rare, but it can't tell you what is impossible.
+<p>
+This should underscore a larger point: do not treat these numbers as gospel truth.  They describe each Power's typical route to 18 supply centers, but that does not mean you can search the charts for a secret code that will magically guarantee you 18 centers in your own game.  Statistical analysis can teach you what your solo victory is (probably) going to look like, but it won't tell you how to get there.  As always, if you want to win, you're going to have to brush up on your <b>Diplomacy</b>.
+<p>
+<BR><BR><TABLE>
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD><A href="mailto:jburton@alumni.princeton.edu"><IMG 
+      src="/Zine/Common/letter.gif" border=0></A> </TD>
+    <TD><STRONG>Josh Burton<BR>(<a href="mailto:jburton@alumni.princeton.edu">jburton@alumni.princeton.edu</a>)</STRONG> 
+  </TD></TR></TBODY></TABLE>
+<P>
+<I>If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the <A 
+href="/Zine/F2007R/Common/DearDP.html">"<B>Dear 
+DP...</B>"</A> mail interface.</I> 
+<P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/F2007R/"><img src="/Zine/Common/toF2007R.gif" align="right" border="0"></a>
+</BODY></HTML>
+<!--
+-->

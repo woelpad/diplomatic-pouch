@@ -1,0 +1,213 @@
+<HTML>
+<HEAD>
+<TITLE>DP W1995A: Master Class</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=all><HR>
+<H1><CENTER>Master Class </CENTER></H1>
+<H2><CENTER><I>Jamie Dreier</I> </CENTER></H2>
+<H3><CENTER>ENDGAME III </CENTER></H3>
+<P>
+Good day, class.
+<P>
+<A HREF="/Zine/F1995R/Dreier/Endgame2.html">Last time</A>,
+we finished by asking what are the French chances of
+winning, and what is France's best strategy, when the situation
+on the board reduces to the following table (where 'w' indicates
+a French Win, 'd' a Draw, and '-' means that the position is unchanged
+and the game proceeds to the next move with pieces unmoved).
+<P>
+<CENTER><TABLE border>
+<TR><TH></TH><TH><CENTER><B>Apb</B></CENTER></TH><TH><CENTER><B>Amb</B></CENTER>
+</TH><TH><CENTER><B>Amun</B></CENTER></TH></TR>
+<TR><TH><CENTER><B>Fsaf </B></CENTER></TH><TD ALIGN="CENTER"><CENTER>-</CENTER>
+</TD><TD ALIGN="CENTER"><CENTER>w</CENTER></TD><TD ALIGN="CENTER"><CENTER>-</CENTER>
+</TD></TR>
+<TR><TH><CENTER><B>Fber</B></CENTER></TH><TD ALIGN="CENTER"><CENTER>d</CENTER>
+</TD><TD ALIGN="CENTER"><CENTER>w</CENTER></TD><TD ALIGN="CENTER"><CENTER>w</CENTER>
+</TD></TR>
+<TR><TH><CENTER><B>Fbur</B></CENTER></TH><TD ALIGN="CENTER"><CENTER>w</CENTER>
+</TD><TD ALIGN="CENTER"><CENTER>d</CENTER></TD><TD ALIGN="CENTER"><CENTER>-</CENTER>
+</TD></TR>
+</TABLE>
+</CENTER>
+<P>
+Actually, I revealed that France has a range of strategies, which
+give her chances of winning up to, but not including, 1: a virtual
+win. But what are these strategies?
+<P>
+Intuitively, and informally, France must use her safety move,
+<B>Fsaf</B>, for a while, to make sure that Austria isn't going
+to play <B>Amb</B>. If/when she can eliminate the Austrian move
+<B>Amb</B>, the table reduces to this one:
+<P>
+<CENTER><TABLE border>
+<TR><TH></TH><TH><CENTER><B>Apb</B></CENTER></TH><TH><CENTER><B>Amun</B></CENTER>
+</TH></TR>
+<TR><TH><CENTER><B>Fsaf </B></CENTER></TH><TD ALIGN="CENTER"><CENTER>-</CENTER>
+</TD><TD ALIGN="CENTER"><CENTER>-</CENTER></TD></TR>
+<TR><TH><CENTER><B>Fber</B></CENTER></TH><TD ALIGN="CENTER"><CENTER>d</CENTER>
+</TD><TD ALIGN="CENTER"><CENTER>w</CENTER></TD></TR>
+<TR><TH><CENTER><B>Fbur</B></CENTER></TH><TD ALIGN="CENTER"><CENTER>w</CENTER>
+</TD><TD ALIGN="CENTER"><CENTER>-</CENTER></TD></TR>
+</TABLE>
+</CENTER>
+<P>
+And then France has the usual 'epsilon' strategies available,
+namely, she plays <B>Fbur</B> with chance 1-epsilon, and <B>Fber</B>
+with chance epsilon, for some small-valued epsilon.
+<P>
+But this is too informal. Let's make it rigorous. The strategy
+(strategies) for France are what we might call (following Dan
+Shoham) 'second degree epsilon strategies'. France wants her probability
+of playing <B>Fsaf</B> to overwhelm her probability of playing
+either of the other options, and her probability of playing <B>Fbur</B>
+to overwhelm her probability of playing <B>Fber</B>.
+<P>
+Then her approach is this:
+<BLOCKQUOTE>
+Play <B>Fsaf</B> with probability (1-e-e^2);<BR>
+Play <B>Fbur</B> with probability e;<BR>
+Play <B>Fber</B> with probability e^2. 
+</BLOCKQUOTE>
+<P>
+Let's recall what this means, in terms of the positions we actually
+studied. The French Berlin position turns out to be a Virtual
+Win for France. And this means the original position, in which
+France holds Munich and not Berlin, is also a Virtual Win, for
+we could force with chance 1-epsilon either the French Berlin
+position or an outright Win, depending on Austria's strategy.
+Barring a few loose ends, the original position is now fully analyzed.
+<P>
+Are there any questions? Ah, I see there are some questions!
+<P>
+<B>Q1</B>: This sort of situation seems awfully arcane. I thought
+we were going to have some <I>useful</I> advice, some lessons
+we could apply. What gives?
+<P>
+<B>Answer</B>: The position in question is not arcane at all,
+but rather quite common. Admittedly, you will not very often find
+the <I>exact</I> position we've analyzed, but you will find positions
+very close to it. And just as important, you will find positions
+that are evolving toward our analyzed position -- now you know
+whether you want the evolution to continue or whether instead
+you have to do something to prevent it.
+<P>
+Furthermore, a Second Degree Epsilon position extends beyond the
+situation we have analyzed. I know of one other such position,
+a position which was on the horizon in a game played by Dan Shoham.
+(Master Class students are encouraged to try this
+<A HREF="/Zine/W1995A/Shoham/challenge.html">Chopin</A> Etude.)
+Here it is:
+<BLOCKQUOTE>
+<B>Austria</B>: F Bla, A Gal, F Ion, F Lyo, A Mar, F NAf, A Pie,
+F Por, A Rum, A Sev, A Tri, A Trl, F Tun, A Ukr, A Vie, F Wes.
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+<B>England</B>: A Boh, A Bre, A Bur, F Eng, A Gas, F Hel, F Iri,
+F MAO, A Mos, A Mun, F NAO, F Nth, A Pru, A Sil, A Spa, A StP,
+A War. 
+</BLOCKQUOTE>
+<P>
+Ownership of Supply Centers:
+<BLOCKQUOTE>
+<B>Austria</B>: Ank, Bud, Bul, Con, Gre, Mar, Nap, Por, Rom, Rum,
+Ser, Sev, Smy, Tri, Tun, Ven, Vie. 
+</BLOCKQUOTE>
+<BLOCKQUOTE>
+<B>England</B>: Bel, Ber, Bre, Den, Edi, Hol, Kie, Lon, Lvp, Mos,
+Mun, Nwy, Par, Spa, StP, Swe, War. 
+</BLOCKQUOTE>
+<P>
+Each side owns 17 centers; the position east of Switzerland is
+locked up. Austria wins if she takes Spain without losing Mar
+or Por. A little thought about the position will show that Austria
+has all the chances here, and England is just hoping to hold on
+to the draw.
+<P>
+Work out the Relevantly Different sets of orders for England and
+Austria, and plot them on a table. You will find that the table
+is isomorphic to the one for French Berlin. Austria has a Second
+Degree Epsilon strategy.
+<P>
+<B>Q2</B>: Are there Third Degree Epsilon strategies? Fourth Degree??
+<P>
+<B>Answer</B>: In theory, yes, but not on the actual Diplomacy
+board. Actually, I am not perfectly certain that there are no
+Higher Degree Epsilon positions on the actual Diplomacy board;
+maybe someone can discover one! I have constructed fanciful maps
+on which Higher Degree Epsilon positions can arise, and a recipe
+for making maps to illustrate any degree. But these are novelties,
+or of merely theoretic interest.
+<P>
+<B>Q3</B>: In the set-up for the French Berlin position, and for
+the original position to be analyzed, you weaseled around a bit.
+You <I>assumed</I> that France could always order A Pie-Trl, but
+you admitted that this assumption is unrealistic. Won't you come
+clean now?
+<P>
+<B>Answer</B>: Uh, ahem, yes. (Conrad, take off that mask, I know
+it's you.) Barring some preposterous, hopelessly unrealistic gerrymandering,
+the position on the board will admit <I>some</I> chance for Austria
+to dislodge the French army from Piedmont. We can make the chance
+small, and we can begin with Austria needing to jockey her units
+around in a very tedious, arduous way in order to have any hope
+of dislodging that unit. In most games, and most situations, we
+would be justified in writing off the possibility. However, we
+are considering Virtual Wins, situations in which one side can
+get its chances up as high as it wants. The complication of Piedmont
+will mean that there is a theoretic ceiling, lower than 1.0, above
+which France cannot get her chances after all. Teacher is too
+tired of the position to investigate what this ceiling might be
+for plausible variations of the Mediterranean portion of the French
+Berlin position. Perhaps a reader might like to have a shot at
+it?
+<P>
+<B>Q4</B>: Speaking of realism, isn't this epsilon deal a fairytale?
+In real life, no one is going to be willing to wait a thousand
+game years for a win. How might this fact be added to the analysis?
+<P>
+<B>Answer</B>: Conrad Minshall has suggested the following plausible
+apparatus. Having a .999 chance of winning in 1000 game years
+is, intuitively, worth a whole lot less than having a .99 chance
+of winning in 10 game years. There is a kind of discount rate,
+according to which the same result is worth less now when that
+result is projected into the future. In economics, the value of
+money now is related to the value of the same quantity of money
+later according to the (projected) interest rate; this phenomenon
+is fairly well understood. Now, the discount for futurity in Diplomacy
+outcomes is going to depend in large part on the psychology of
+the given player. But there are some manageable factors, too.
+For instance, you might find it important to get your Hall of
+Fame points before September 1st, when Nick Fitzpatrick does the
+next calculation to determine who is invited to play in Hall96.
+Given a discount function, we will be able to optimize the value
+of epsilon to maximize your expected value.
+<P>
+One further note is relevant. When France is playing an epsilon
+strategy, what is Austria's <I>best</I> counter-strategy? Unless
+epsilon is very high (which would be pretty dumb), Austria's best
+strategy is to throw caution to the winds and play her riskiest
+move on the very first try. This is a happy fact, for it means
+that if you steadfastly play your epsilon strategy, and your opponent
+plays her best counter-strategy, you are very, very likely to
+win right away. 
+<p>
+<B>Jamie Dreier<BR>
+Brown University<BR>
+(<A HREF="mailto:James_Dreier@brown.edu"><B>James_Dreier@brown.edu</B></A>)</B>
+<P>
+<I>If you wish to e-mail feedback on this article to the author,
+and clicking on the mail address above does not work for you,
+feel free to use the &quot;<A HREF="/Zine/W1995A/Common/DearDP.html" ><I>Dear DP...</I></A>&quot;
+mail interface.</I> 
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=all>
+</BODY>
+</HTML>
+<!--
+-->

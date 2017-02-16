@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=windows-1252"></META>
+<TITLE>DP F2003M: The Rationale Behind A Common Diplomacy Notation</TITLE>
+<!---- Authored by Eric Mitchell ---->
+<!---- Created on the DPZine February 8th, 2003 ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Updated by Edward Hawthorne on 06/21/03 ---->
+</HEAD>
+<BODY>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F2003M/"><IMG align=right SRC="/Zine/Common/toF2003M.gif" border=0></A>
+<BR clear=both>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<BR>
+<! ------------------------------------------------------------- >
+<! ------------------------------------------------------------- >
+<CENTER><H2>The Rationale Behind A Common Diplomacy Notation</FONT></H2>
+<H3><I>By&nbsp; Eric Mitchell</I></H3></CENTER>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<CENTER><P>
+<TABLE WIDTH="90%" BORDER="0">
+<TR>
+<TD ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">The issue has been raised recently in The Pouch of having a common Diplomacy notation format for archiving games of Diplomacy for analysis, preservation, and archival.  The usage of such notation would be similar to, say, the PGN format for archiving chess games, or the format for games of Go.  Perhaps the most expedient solution to such a problem, especially when it comes to archiving games played by the Pouch's internet savvy Judge players, would be to simply adopt the Judge Output Format (or JOF) as such a standard.  There are some very good reasons for doing so, but I believe that in the long run, the problems associated with the Judge Output Format outweigh the benefits gained by such expediency.  During the course of this article, I will offer my views on the features of a better system of notation, which I will refer to as "CDN".
+<H4>Judge Output Benefits</H4>
+<P ALIGN="JUSTIFY">The primary benefit to using JOF is that a lot of it exists today, and it could be considered the de facto Diplomacy notation format.  The excellent site at www.floc.net has many games readily archived and available for review.  Also, many home grown adjudication and display tools for Diplomacy are capable of creating JOF.  Adding such a feature to a tool currently lacking such output would be a fairly trivial programming task.  The format is also quite easy for a human to read and understand.  Just about every electronic mapping tool available via the internet can parse JOF, and create maps based on the orders of the game.
+<H4>Judge Output Problems</H4>
+<P ALIGN="JUSTIFY">The first and foremost problem with JOF is the lack of consistency in the output.  Since the output was designed to be understood by humans, some liberties were taken with the construction of certain phrases in the output.  Some types of output (pending retreats, supply center ownership, etc.) are split across multiple lines of text, depending on the length of the information, further complicating the automated parsing of JOF.  Also, province names are not consistent in all locations.  For example, sometimes a sea area is prefixed with "the", e.g. "The Austrian Fleet in the Ionian Sea can retreat to the Adriatic Sea, or Aegean Sea".  In addition, the longhand notation for STP sometimes has a period after "St", and sometimes doesn't.  While none of these "features" makes it impossible to automatically parse JOF, they do contribute to making the parsers more complex.
+<P ALIGN="JUSTIFY">While humans should be capable of understanding CDN, it is presumed that external tools would make the conception of, say, a movement phase more comprehensible.  Just as someone practiced in the art of reading PGN could see the first few moves of a game, and tell you which opening both sides selected, someone practiced in the art of reading CDN should be able to do the same.  While the judge output for "Italy: Army Venice -> Trieste" reads smoothly, an Austrian player seeing "I: A VEN - TRI" should be just as terrified (assuming A wasn't aware of Italy's intentions).  Moreover, it should be trivial for an external tool (see DP for mapping tools) to parse CDN.  There should be no exception cases to deal with (e.g. "Aegean Sea" vs. "the Aegean Sea", possible multiple line continuations) if at all avoidable.
+<P ALIGN="JUSTIFY">Another problem with JOF is that there is no standard way to store multiple games in the same file.  It would be useful to store all the popular openings for each power in the game as a single file for reference by newcomers.  There is such a file for chess openings available from (<A HREF="http://wherever/i/found/the/file.pgn">http://wherever/i/found/the/file.pgn</A>).  You could concatenate the output from several JOF snippets, but this solution lacks the ability to store useful metadata about the collection of games (WDC2002, VGNP2000-2002, etc.)
+<P ALIGN="JUSTIFY">Also, referring to a specific game, other than a URL to the main page for a game listed at floc.net, is difficult, if not impossible. One more desireable feature would be to to have a unique referencing scheme for games.  In the heyday of postal Diplomacy (still quite popular for some), "Boardman" numbers were assigned upon request to most postal games, allowing the games to be referenced by their unique ID.
+<H4>Summary of CDN Features</H4>
+<BLOCKQUOTE>
+<OL>
+<LI>Multiple games in one file</LI>
+<LI>A canonical method for referring to games - DOMAIN:gamename:date</LI>
+<LI>Terse, but readable format, geared for simple automated parsing</LI>
+<LI>Human readability desireable, but not at the expense of simplicity</LI>
+<LI>Allow for extensibility to support variants</LI>
+<LI>Allow for extensibility to support future additions to format</LI>
+<LI>Allow comments by powers, and GM/observers, each move and EOG</LI>
+</OL>
+</BLOCKQUOTE>
+<P>&nbsp;
+</TD>
+</TR>
+<! ------------------------------------------------------------- >
+<! ------------------------------------------------------------- >
+<TR>
+<TD><P><A HREF="mailto:ricdude@slothandavarice.com"><IMG src="/Zine/Common/letter.gif" border="0"></A>
+</TD>
+</TR>
+<TR>
+<TD>
+<B>Eric Mitchell
+<br>
+(<A HREF="mailto:ricdude@slothandavarice.com">ricdude@slothandavarice.com</A>)</B>
+<CENTER><P><EM>If you wish to e-mail feedback on this article to the author, click on the letter above.<BR>If that does not work, feel free to use the "<A HREF="/Zine/F2003M/Common/DearDP.html"><B>Dear DP...</B></A>" mail interface.</EM></CENTER>
+</TD>
+</TR>
+</TABLE>
+<P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F2003M/"><IMG SRC="/Zine/Common/toF2003M.gif" border=0 ALIGN=right></A>
+<BR>&nbsp;
+</CENTER>
+</BODY>
+</HTML>
+<!--
+-->

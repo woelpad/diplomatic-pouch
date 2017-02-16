@@ -1,0 +1,138 @@
+<HTML>
+<HEAD>
+<TITLE>DP W1995A: Diplomacy Tactics - Problem 1 (part 3)</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=both><HR>
+<H4>Answer to Problem 1 (part 3) </H4>
+<BLOCKQUOTE>
+<IMG SRC="images/prob_1.gif" ALIGN="BOTTOM" ALT="Problem 1" HEIGHT="326" WIDTH="407">
+</BLOCKQUOTE>
+<P>
+The result matrix is tabulated below. Of the twelve combinations,
+five result in Russia losing a supply center while seven result
+in no change.
+<P>
+<CENTER>
+<TABLE BORDER=1 ALIGN="CENTER">
+<TR><TH ALIGN="CENTER"></TH><TH COLSPAN=3 ALIGN="CENTER" VALIGN="MIDDLE">
+<CENTER>
+<A NAME="UQHTML3"><B>Russian Defense</B> </A>
+</CENTER>
+</TH></TR>
+<TR><TH ALIGN="CENTER">
+<CENTER>
+<A NAME="UQHTML16"><B>Turkish Attack </B></A>
+</CENTER>
+</TH><TH ALIGN="CENTER">
+<CENTER>
+<B>Ukr S Rum </B>
+</CENTER>
+</TH><TH ALIGN="CENTER">
+<CENTER>
+<B>Ukr S Sev</B>
+</CENTER>
+</TH><TH ALIGN="CENTER">
+<CENTER>
+<B>Ukr S Rum -&gt; Sev </B>
+</CENTER>
+</TH></TR>
+<TR><TH ALIGN="CENTER">
+<CENTER>
+<B>Bul -&gt; Rum </B>
+</CENTER>
+</TH><TD ALIGN="CENTER">
+<CENTER>
+--
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+Bul -&gt; Rum
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+--
+</CENTER>
+</TD></TR>
+<TR><TH ALIGN="CENTER">
+<CENTER>
+<B>Arm -&gt; Sev</B>
+</CENTER>
+</TH><TD ALIGN="CENTER">
+<CENTER>
+Arm -&gt; Sev
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+--
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+--
+</CENTER>
+</TD></TR>
+<TR><TH>
+<CENTER>
+<B>Bla -&gt; Rum</B>
+</CENTER>
+</TH><TD ALIGN="CENTER">
+<CENTER>
+--
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+Bla -&gt; Rum
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+Bla -&gt; Rum<BR>
+Rum -&gt; Sev<BR>
+Sev -&gt; Bla
+</CENTER>
+</TD></TR>
+<TR><TH ALIGN="CENTER">
+<CENTER>
+<B>Arm -&gt; Bla -&gt; Rum </B>
+</CENTER>
+</TH><TD ALIGN="CENTER">
+<CENTER>
+--
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+--
+</CENTER>
+</TD><TD ALIGN="CENTER">
+<CENTER>
+Arm -&gt; Rum
+</CENTER>
+</TD></TR>
+</TABLE>
+</CENTER>
+<P>
+Note that the five successful cases all result in different board
+positions, some of which are much better for Turkey than others.
+Since every defensive column has a failure for Russia and every
+offensive row has a failure for Turkey, there are no sure-fire
+strategies for either side.
+<P>
+If the only consideration was whether Turkey gained the supply
+center (let's say it would be his 18th center), then all of the
+results would be equivalent. In this case the attack &quot;Bla
+-&gt; Rum&quot; would be said to <I>dominate</I> the attacks &quot;Bul
+-&gt; Rum&quot; and &quot;Arm -&gt; Bla -&gt; Bul&quot;, since
+it succeeds whenever they do, but the others sometimes fail where
+it succeeds. The dominated moves would therefore be irrational
+choices and could be removed from further consideration.
+<P>
+<A HREF="problems.htm#Problem1"><IMG SRC="/Zine/Common/LeftArr.gif" ALT="Back" HEIGHT="20" WIDTH="43"></A>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=both>
+</BODY>
+</HTML>
+<!--
+-->

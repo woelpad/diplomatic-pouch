@@ -1,0 +1,195 @@
+#
+# first we have a list of valid country names...
+#
+BC
+California
+Florida
+Heartland
+NewYork
+Peru
+Quebec
+Texas
+Cuba
+Mexico
+-1
+#
+# then we have a list of all locations...
+#
+#
+346 329 |ABI|Abitibi|
+100 461 |ANC|Anchorage|
+464 83  |ANT|Antioquia|
+340 174 |APB|Apalachee Bay|
+178 212 |ARI|Arizona|
+294 212 |ARK|Arkansas|
+145 520 |ARO|Arctic Ocean|
+316 493 |BAF|Baffin Bay|
+161 170 |BAJ|Baja California|
+378 315 |BEA|Beauce|
+167 486 |BEF|Beaufort Sea|
+28  498 |BER|Bering Sea|
+444 195 |BET|Bermuda Triangle|
+481 60  |BOG|Bogota|
+456 63  |CAL|Cali|
+443 81  |CAL/NC|Cali (north coast)|
+445 51  |CAL/SC|Cali (south coast)|
+401 152 |CAM|Camaguey|
+402 158 |CAM/NC|Camaguey (north coast)|
+401 152 |CAM/SC|Camaguey (south coast|
+410 137 |CAT|Cayman Trench|
+186 346 |CGY|Calgary|
+410 250 |CHB|Chesapeake Bay|
+195 172 |CHH|Chihuahua|
+306 251 |CHI|Chicago|
+296 92  |CHP|Chiapas|
+236 162 |COA|Coahuila|
+378 52  |COB|Coronado Bay|
+216 237 |COL|Colorado|
+240 69  |COM|Coast of Mexico|
+384 76  |COS|Costa Rica|
+386 81  |COS/NC|Costa Rica (north coast)|
+375 69  |COS/SC|Costa Rica (south coast)|
+378 355 |COT|Cote-Nord|
+245 282 |DAK|Dakotas|
+251 197 |DAL|Dallas|
+472 162 |DOM|Dominican Republic|
+320 201 |DSO|Deep South|
+214 145 |DUR|Durango|
+402 213 |ECO|East Coast|
+454 137 |ECS|East Caribbean Sea|
+446 32  |ECU|Ecuador|
+342 86  |ELS|El Salvador|
+344 189 |FPA|Florida Panhandle|
+341 14  |GAL|Galapagos|
+387 337 |GAS|Gaspesie|
+190 115 |GCA|Gulf of California|
+353 208 |GEO|Georgia|
+45  393 |GOA|Gulf of Alaska|
+292 127 |GOC|Gulf of Campeche|
+344 57  |GOF|Gulf of Fonseca|
+406 32  |GOG|Gulf of Guayaquil|
+355 120 |GOH|Gulf of Honduras|
+304 151 |GOM|Gulf of Mexico|
+403 95  |GOMO|Gulf of Mosquitos|
+424 59  |GOP|Gulf of Panama|
+293 70  |GOT|Gulf of Tehuantepec|
+374 509 |GRE|Greenland|
+125 201 |GSC|Gulf of Santa Catalina|
+415 357 |GSL|Gulf of St-Lawrence|
+222 121 |GUA|Guadalajara|
+240 97  |GUE|Guerrero|
+460 107 |GUJ|Guajira|
+333 106 |GUT|Guatemala|
+333 106 |GUT/NC|Guatemala (north coast)|
+320 91  |GUT/SC|Guatemala (south coast)|
+448 151 |HAI|Haiti|
+377 149 |HAV|Havana|
+66  90  |HAW|Hawaii|
+419 150 |HOL|Holguin|
+360 101 |HON|Honduras|
+372 106 |HON/NC|Honduras (north coast)|
+353 92  |HON/SC|Honduras (south coast)|
+274 180 |HOU|Houston|
+294 384 |HUB|Hudson Bay|
+175 272 |IDA|Idaho|
+322 251 |IND|Indiana|
+281 260 |IOW|Iowa|
+370 195 |JAC|Jacksonville|
+257 235 |KAN|Kansas|
+334 240 |KEN|Kentucky|
+424 126 |KIN|Kingston|
+394 388 |LAB|Labrador|
+339 274 |LER|Lake Erie|
+481 150 |LES|Lesser Antilles|
+334 291 |LHU|Lake Huron|
+475 19  |LIM|Lima|
+314 273 |LMI|Lake Michigan|
+358 289 |LON|Lake Ontario|
+138 227 |LOS|Los Angeles|
+298 188 |LOU|Louisiana|
+309 303 |LSU|Lake Superior|
+430 300 |MAB|Massachussets Bay|
+394 319 |MAI|Maine|
+254 352 |MAN|Manitoba|
+472 295 |MAO|Mid Atlantic Ocean|
+398 292 |MAS|Massachussets|
+420 275 |MAY|Cape May|
+250 117 |MEX|Mexico|
+377 178 |MIA|Miami|
+326 279 |MIC|Michigan|
+294 282 |MIL|Milwaukee|
+305 282 |MIL/EC|Milwaukee (east coast)|
+288 289 |MIL/NC|Milwaukee (north coast)|
+271 282 |MIN|Minneapolis|
+288 240 |MIS|Missouri|
+358 311 |MON|Montreal|
+136 108 |MPO|Mid Pacific Ocean|
+198 292 |MTA|Montana|
+473 392 |NAO|North Atlantic Ocean|
+148 379 |NBC|Northern BC|
+402 335 |NBR|New Brunswick|
+402 335 |NBR/NC|New Brunswick (north coast)|
+404 325 |NBR/SC|New Brunswick (south coast)|
+374 236 |NCA|North Carolina|
+248 253 |NEB|Nebraska|
+154 248 |NEV|Nevada|
+431 371 |NFL|Newfoundland|
+376 90  |NIC|Nicaragua|
+378 97  |NIC/EC|Nicaragua (east coast)|
+363 84  |NIC/wC|Nicaragua (west coast)|
+390 272 |NJE|New Jersey|
+260 147 |NLE|Nuevo Leon|
+213 207 |NME|New Mexico|
+305 340 |NON|Northern Ontario|
+40  222 |NPO|North Pacific Ocean|
+417 336 |NSC|Nova Scotia|
+251 416 |NUN|Nunavut|
+185 414 |NWT|North West Territories|
+388 285 |NYC|New York City|
+372 293 |NYS|New York State|
+265 89  |OAX|Oaxaca|
+339 257 |OHI|Ohio|
+265 214 |OKL|Oklahoma|
+332 305 |ONT|Ontario|
+144 281 |ORE|Oregon|
+410 75  |PAN|Panama|
+370 277 |PHI|Philadelphia|
+248 133 |POT|Potosi|
+96 364  |QCS|Queen Charlotte Sound|
+369 331 |QUE|Quebec|
+259 165 |SAN|San Antonio|
+219 333 |SAS|Saskatchewan|
+365 222 |SCA|South Carolina|
+433 103 |SCS|South Caribbean Sea|
+151 212 |SDI|San Diego|
+127 253 |SFR|San Francisco|
+110 316 |SJF|Straits of Juan de Fuca|
+373 163 |SOF|Straits of Florida|
+390 430 |SOL|Sea of Labrador|
+479 235 |SOS|Sea of Sargasso|
+348 146 |SOY|Straits of Yucatan|
+177 27  |SPO|South Pacific Ocean|
+24  71  |SWP|South West Pacific Ocean|
+310 109 |TAB|Tabasco|
+364 187 |TAM|Tampa|
+326 226 |TEN|Tennessee|
+349 377 |UNG|Ungava|
+303 295 |UPP|Upper Peninsula|
+182 242 |UTA|Utah|
+149 339 |VAN|Vancouver|
+385 303 |VEM|Vermont|
+483 111 |VEN|Venezuela|
+279 110 |VER|Veracruz|
+485 87  |VIC|Vichada|
+370 251 |VIR|Virginia|
+151 303 |WAS|Washington|
+96  271 |WCO|West Coast|
+393 113 |WCS|West Caribbean Sea|
+384 260 |WDC|Washington DC|
+286 317 |WON|Western Ontario|
+357 269 |WPA|West Pennsylvania|
+229 184 |WTE|West Texas|
+352 250 |WVA|West Virginia|
+207 264 |WYO|Wyoming|
+333 127 |YUC|Yucatan|
+135 428 |YUK|Yukon|

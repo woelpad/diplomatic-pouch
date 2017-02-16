@@ -1,0 +1,110 @@
+<html> <head>
+<title>DP F1995R: The Retreat Strategy Finder</title>
+</head>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1995R/"><IMG align=right SRC="/Zine/Common/toF1995R.gif" border=0></A>
+<BR><BR><HR>
+<body>
+<h1>
+<center>How Does the Current Strategy Finder<BR>
+Handle Retreat Phases?
+</center></h1>
+<HR>
+During the movement phases, the large number of possibilities prohibit
+considering every possible combination of moves.
+Fortunately, during the building and retreat phases, the number of
+possible moves is never quite so astronomical.
+As we have seen, even in the worst possible case there
+are at most about 72 million possible retreat combinations (or about
+525 million
+including the option of disbanding). These are large numbers, but for
+a high-speed computer, it is feasible to consider each case in turn.
+Typically, only a couple of units retreat at one time, making for only a
+few dozen retreat combinations at most.
+<p>
+It is thus possible to
+do a complete one-ply analysis of these phases of the game. That is,
+we can consider every possible combination of retreats.
+<p>
+Given enough search time, we will include Spring retreats in our search for
+Spring moves, and the Autumn retreats and Winter builds in our search
+for Fall moves. This is feasible since the number of possible retreats
+and builds is usually quite limited; we are not facing the same sort
+of combinatorial explosion described earlier.
+<p>
+One such look-ahead strategy is called the <i>offensive retreat</i>, which
+takes advantage of the fact that a unit can often retreat "forward."
+For example, if England
+attacks the French <i>F Bel</i> with support from Holland while
+the North Sea is open, France can retreat there and menace the entire
+East coast of England as well as Scandinavia and the Lowlands.
+It is equally important to look ahead at the builds. If
+Austria-Hungary is at war with Turkey and wants to build a fleet, then
+he should take care during the Fall movement that Trieste is
+left open for such a build.  Similarly, a player who needs a unit back
+home may chose to disband one of his farflung units rather than
+retreating it.
+<p>
+Even if anticipating retreats and builds were not needed for strategic
+reasons, they are clearly needed on a diplomatic level. In face-to-face
+play and use of the Bordeaux diplomat, the conduct of diplomacy is
+not allowed before retreat and build season. Thus, any message
+concerning those seasons should be anticipated and sent to allies
+before the preceding movement season.
+<p>
+However, looking ahead to future movement seasons will often be
+futile, because the computer is
+likely to be wrong about the
+opponents' moves and the mistakes will get compounded for each turn
+looked ahead.
+<p>
+The initial strategy finder written by Constantin Staykov
+(<a
+href="mailto:CSTAYKOFF@DT.euroview.fr"><tt>CSTAYKOFF@DT.euroview.fr</tt></a>)
+considered all possible combinations of retreats. However,
+when we introduced the notion of a multi-ply search, we
+chose to use search techniques in build or retreat
+phases that are less
+complete. With their increased efficiency, they can anticipate
+the following phase via a
+recursive call to the strategic module of the program.  This enables
+efficient prediction of the results for retreats while planning the
+strategy of a movement phase.
+<p>
+To implement this technique, the retreat generator was
+rewritten by Gilles
+Schaeffer (<a href="mailto:schaeffe@clipper.ens.fr"
+><tt>schaeffe@clipper.ens.fr</tt></a>).
+Groups of <i>related</i> retreats are
+studied simultaneously (using an evolutionary search, optimizing in
+turn for each involved country).
+<p>
+Let the terminology <i>uAv</i> refer to <i>u</i> and </i>v</i> which are
+2 retreating units which have a common possible retreat or even adjacent
+possible retreats.
+Let <i>B</i> be the transitive
+closure of this function <i>A</i>. (That is, <i>B = I u A u A^2 u ...</i>)
+Then two units <i>u</i> and <i>v</i> are considered
+<i>related</i> if <i>uBv</i>. (In the vast majority of circumstances, a
+retreating unit will only be related to itself.
+<p>
+Among related retreats, all combinations will be studied, and each
+alliance will move to maximize its minimum possible return.
+<p>
+Remember also that only a maximum
+of 11 units can retreat at one time (and usually many fewer).
+This search is much more rapid (and thus much more useful as the
+second ply of a two-ply search), and yields more significant results
+than the original program.
+<P>
+<hr>
+Return to <a href="ret.html">main article</a>
+<hr>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1995R/"><IMG align=right SRC="/Zine/Common/toF1995R.gif" border=0></A>
+<BR><BR>
+</body>
+</html>
+<!--
+-->

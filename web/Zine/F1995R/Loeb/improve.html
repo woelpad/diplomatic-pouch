@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>DP F1995R: Diplomacy Programming Project Work to be Done</title>
+</head>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1995R/"><IMG align=right SRC="/Zine/Common/toF1995R.gif" border=0></A>
+<BR><BR><HR>
+<h1>
+<center><a name="futur">Work To Be Done</a></h1>
+</center>
+<HR>
+<h3>Testing</h3>
+The Staykov Strategy Finder was extensively play tested against humans
+in the games DPPA, DPPB, etc., and at the London Computer Olympiad.
+<p>
+Gilles Schaeffer's improvements have been "debugged," and
+the retreats now work according to the new system. It has been tested
+with pretty complicated examples (high numbers of interacting
+retreats). It is better and significantly faster than the
+previous version.
+<p>
+However,
+the various improvements have not been tested via self-play, nor
+against humans. It would also be appropriate to test the <a
+href="/Zine/S1995R/Loeb/Observe.html">observation module</a> at the same time.
+<h3>Winter</h3>
+In the next issue of The Diplomatic Pouch, we will discuss the algorithms
+used to search for good builds and removals during an adjustment
+phase.
+However, more work is need to make builds  compatible with retreats in
+the sense
+that the program must be modified to consider the possibility of removing
+a retreating unit and building it elsewhere.
+<p>
+<H4>Ideas:</H4>
+<ul>
+<li>Do Fall and Winter as normal, but while doing the seconfnd phase of build
+optimization, modify retreats as well. However, if the SC count changes, then
+what do we do!?
+<li>Solve each set of corrolated retreats independently, given
+different numbers of disbands. Then for each country and for each
+possible number of disbands, pick the best combination of builds and
+retreats. Compare. Then optimize, how?
+<li>If #Ply=2 or more, then count "estimated SC holdings" assuming
+everyone grabs SC's during retreats. If a country's home SC's are
+threatened (distance < 3, say, to enemy), and if
+the expected number of SC's is not less than the number of units for a country,
+and that is less than the number of open home SC's, then for each unit
+of that country, add all possible builds to the list of retreats. Then
+compute sets of corrolated retreats and optimize as before....
+<li> ????
+</ul>
+<P>
+<hr>
+Return to <a href="ret.html">main article</a>
+<hr>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1995R/"><IMG align=right SRC="/Zine/Common/toF1995R.gif" border=0></A>
+<BR><BR>
+</body>
+</html>
+<!--
+-->

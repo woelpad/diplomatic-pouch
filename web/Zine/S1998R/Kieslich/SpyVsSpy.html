@@ -1,0 +1,346 @@
+<HTML>
+<TITLE>        DP S1998R: Black Spy, story 1.
+</TITLE>
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1998R/"><IMG align=right SRC="/Zine/Common/toS1998R.gif" border=0></A>
+<BR clear=all><img src="/Common/blackdot.gif" height=2 width=100%>
+<TABLE CELLSPACING=5 >
+<TR>
+<TD>
+<IMG align=left width=120 SRC="Blackspy.gif">
+</TD>
+<TD valign=bottom>
+<H2>A CRYPTIC POSTCARD</H2>
+<H3>A Black Spy Story</H3>
+<H4><i>Brian Kieslich</i><!/H4>
+</TD>
+</TR>
+</TABLE>
+<HR>
+<BR>One rainy afternoon I went to my club, hoping for a game of bridge
+or even better Diplomacy. As none of the usual players was present I settled
+for a Glenfiddich and a chair by the fire. As I sat down I heard an angry
+voice from the other chair, "....and they have no discipline." I looked
+over and there was M sitting, apparently talking to his brandy. Before
+I could ask him what the problem was, he decided to tell me. "There have
+been some rumours about war next year. We know that each great powers has
+sent out a spy from their capital to conduct espionage in another capital,
+so we did too. But what are they worth, I ask? They have no respect for military
+or naval traditions, and what takes an army or fleet six month to investigate,
+they travel through in one day. How can they gather information with that
+speed? I doubt seriously that they do any kind of bang-up job of it! We wanted
+our spy to tell us who was spying on who, and all he sends back is this." M
+handed me a postcard with a picture of some scouts with "Wish You Were Here!"
+adorning one side and what looked like a normal letter on the other side:
+<blockquote><i><P>
+"Dear Uncle, We have much fun here at the scouts' summer camp. Last week
+we had a competition. We were all given a different task. We started Monday,
+and the first two finished on Wednesday, two on Thursday, one Friday, one
+Saturday, and the last one Sunday. My Russian friend and I finished the
+same day. Please send some money. See you soon. James."
+</i></blockquote>
+<P>"Both you and James play at that game Diplomacy, so maybe you can see
+if there is a meaning to this, or if he simply is in his second childhood."
+<P>
+"Do you know how many days he travelled?" I asked. M mumbled something about
+a well used expense account and told me what I needed to know. And before
+we had finished our drinks I told M what he wanted to know.
+<P>So one rainy afternoon, take a vodka martini (shaken, not stirred) and read
+the postcard from James, and you will also know who spied on who that summer
+in 1899.
+<p><i>If you can untangle the spy web, <a href=mailto:dippouch@diplom.org>send
+your solution to The Pouch</a>!</i>
+<P>
+<b>Hint:</b> It's easier to keep track of the possible solutions, if you use
+the grid below (simply click on a particular cell to change its contents!)
+<P>
+<script>
+bVersion = parseInt(navigator.appVersion);
+state = new Array();
+plus = "plus.gif";
+minus = "minus.gif";
+huh = "huh.gif";
+function imgToggle(imgObjectName, which) {
+if (bVersion >=3) {
+++state[which];
+state[which] %= 3;
+if (state[which] == 0) imgObjectState = huh;
+else if (state[which] == 1) imgObjectState = minus;
+else imgObjectState = plus;
+imgObject = new Object();
+imgObject = imgObjectName;
+imgObject.src = imgObjectState;
+}
+}
+function imgPreLoad(i, img) {
+if (bVersion >=3) {
+cacheImg[i] = new Image();
+cacheImg[i].src = img;
+}
+}
+// Declare and Load Images
+state['A1'] = state['D1'] = state['C1'] = state['E1'] = 0;
+state['A2'] = state['D2'] = state['C2'] = state['E2'] = 0;
+state['A3'] = state['D3'] = state['C3'] = state['E3'] = 0;
+state['A4'] = state['D4'] = state['C4'] = state['E4'] = 0;
+state['A5'] = state['D5'] = state['C5'] = state['E5'] = 0;
+state['A6'] = state['D6'] = state['C6'] = state['E6'] = 0;
+state['A7'] = state['D7'] = state['C7'] = state['E7'] = 0;
+state['A8'] = state['D8'] = state['C8'] = state['E8'] = 0;
+state['A9'] = state['D9'] = state['C9'] = state['E9'] = 0;
+state['A10'] = state['D10'] = state['C10'] = state['E10'] = 0;
+state['A11'] = state['D11'] = state['C11'] = state['E11'] = 0;
+state['F1'] = state['G1'] = 0;
+state['F2'] = state['G2'] = 0;
+state['F3'] = state['G3'] = 0;
+state['F4'] = state['G4'] = 0;
+state['F5'] = state['G5'] = 0;
+state['F6'] = state['G6'] = 0;
+state['F7'] = state['G7'] = 0;
+state['F8'] = state['G8'] = 0;
+state['F9'] = state['G9'] = 0;
+state['F10'] = state['G10'] = 0;
+state['F11'] = state['G11'] = 0;
+state['B1'] = 0;
+state['B2'] = 0;
+state['B3'] = 0;
+state['B4'] = 0;
+state['B5'] = 0;
+state['B6'] = 0;
+state['B7'] = 0;
+state['B8'] = 0;
+state['B9'] = 0;
+state['B10'] = 0;
+cacheImg = new Array();
+imgPreLoad(1,plus);
+imgPreLoad(2,minus);
+imgPreLoad(3,huh);
+</script>
+<center>
+<form>
+<TABLE BORDER CELLSPACING=0>
+<TR>
+<th rowspan=2 COLSPAN=2><br></TD>
+<th colspan=7>Spied On</TD>
+<th colspan=5>Day On Which Travel Ended</TD>
+</TR>
+<TR>
+<th width=30>A</TD>
+<th width=30>E</TD>
+<th width=30>F</TD>
+<th width=30>G</TD>
+<th width=30>I</TD>
+<th width=30>R</TD>
+<th width=30>T</TD>
+<th width=30>Wed&nbsp;(2)</td>
+<th width=30>Thu&nbsp;(2)</td>
+<th width=30>Fri&nbsp;(1)</td>
+<th width=30>Sat&nbsp;(1)</td>
+<th width=30>Sun&nbsp;(1)</d>
+</TR>
+<TR>
+<TH rowspan=7 width=30>S<br>p<br>y<p>F<br>r<br>o<br>m</th>
+<th width=30>Austria</TD>
+<th><img src=minus.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A1,'A1');return(false)">
+<img border=0 name=A1 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A2,'A2');return(false)">
+<img border=0 name=A2 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A3,'A3');return(false)">
+<img border=0 name=A3 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A4,'A4');return(false)">
+<img border=0 name=A4 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A5,'A5');return(false)">
+<img border=0 name=A5 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A6,'A6');return(false)">
+<img border=0 name=A6 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A7,'A7');return(false)">
+<img border=0 name=A7 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A8,'A8');return(false)">
+<img border=0 name=A8 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A9,'A9');return(false)">
+<img border=0 name=A9 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A10,'A10');return(false)">
+<img border=0 name=A10 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(A11,'A11');return(false)">
+<img border=0 name=A11 src=huh.gif></TD>
+</TR>
+<TR>
+<th>England</TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(B1,'B1');return(false)">
+<img border=0 name=B1 src=huh.gif></TD>
+<th><img border=0 src=minus.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(B2,'B2');return(false)">
+<img border=0 name=B2 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(B3,'B3');return(false)">
+<img border=0 name=B3 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(B4,'B4');return(false)">
+<img border=0 name=B4 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(B5,'B5');return(false)">
+<img border=0 name=B5 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(B6,'B6');return(false)">
+<img border=0 name=B6 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(B7,'B7');return(false)">
+<img border=0 name=B7 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(B8,'B8');return(false)">
+<img border=0 name=B8 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(B9,'B9');return(false)">
+<img border=0 name=B9 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(B10,'B10');return(false)">
+<img border=0 name=B10 src=huh.gif></TD>
+<th><a onclick=imgToggle()><img border=0 src=minus.gif></TD>
+</TR>
+<TR>
+<th>France</TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C1,'C1');return(false)">
+<img border=0 name=C1 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C2,'C2');return(false)">
+<img border=0 name=C2 src=huh.gif></TD>
+<th><a onclick=imgToggle()><img border=0 src=minus.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C3,'C3');return(false)">
+<img border=0 name=C3 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C4,'C4');return(false)">
+<img border=0 name=C4 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C5,'C5');return(false)">
+<img border=0 name=C5 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C6,'C6');return(false)">
+<img border=0 name=C6 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C7,'C7');return(false)">
+<img border=0 name=C7 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C8,'C8');return(false)">
+<img border=0 name=C8 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C9,'C9');return(false)">
+<img border=0 name=C9 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C10,'C10');return(false)">
+<img border=0 name=C10 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(C10,'C10');return(false)">
+<img border=0 name=C11 src=huh.gif></TD>
+</TR>
+<TR>
+<th>Germany</TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D1,'D1');return(false)">
+<img border=0 name=D1 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D2,'D2');return(false)">
+<img border=0 name=D2 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D3,'D3');return(false)">
+<img border=0 name=D3 src=huh.gif></TD>
+<th><a onclick=imgToggle()><img border=0 src=minus.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D4,'D4');return(false)">
+<img border=0 name=D4 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D5,'D5');return(false)">
+<img border=0 name=D5 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D6,'D6');return(false)">
+<img border=0 name=D6 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D7,'D7');return(false)">
+<img border=0 name=D7 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D8,'D8');return(false)">
+<img border=0 name=D8 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D9,'D9');return(false)">
+<img border=0 name=D9 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D10,'D10');return(false)">
+<img border=0 name=D10 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(D11,'D11');return(false)">
+<img border=0 name=D11 src=huh.gif></TD>
+</TR>
+<TR>
+<th>Italy</TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E1,'E1');return(false)">
+<img border=0 name=E1 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E2,'E2');return(false)">
+<img border=0 name=E2 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E3,'E3');return(false)">
+<img border=0 name=E3 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E4,'E4');return(false)">
+<img border=0 name=E4 src=huh.gif></TD>
+<th><a onclick=imgToggle()><img border=0 src=minus.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E5,'E5');return(false)">
+<img border=0 name=E5 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E6,'E6');return(false)">
+<img border=0 name=E6 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E7,'E7');return(false)">
+<img border=0 name=E7 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E8,'E8');return(false)">
+<img border=0 name=E8 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E9,'E9');return(false)">
+<img border=0 name=E9 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E10,'E10');return(false)">
+<img border=0 name=E10 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(E11,'E11');return(false)">
+<img border=0 name=E11 src=huh.gif></TD>
+</TR>
+<TR>
+<th>Russia</TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F1,'F1');return(false)">
+<img border=0 name=F1 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F2,'F2');return(false)">
+<img border=0 name=F2 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F3,'F3');return(false)">
+<img border=0 name=F3 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F4,'F4');return(false)">
+<img border=0 name=F4 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F5,'F5');return(false)">
+<img border=0 name=F5 src=huh.gif></TD>
+<th><a onclick=imgToggle()><img border=0 src=minus.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F6,'F6');return(false)">
+<img border=0 name=F6 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F7,'F7');return(false)">
+<img border=0 name=F7 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F8,'F8');return(false)">
+<img border=0 name=F8 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F9,'F9');return(false)">
+<img border=0 name=F9 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F10,'F10');return(false)">
+<img border=0 name=F10 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(F11,'F11');return(false)">
+<img border=0 name=F11 src=huh.gif></TD>
+</TR>
+<TR>
+<th>Turkey</TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G1,'G1');return(false)">
+<img border=0 name=G1 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G2,'G2');return(false)">
+<img border=0 name=G2 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G3,'G3');return(false)">
+<img border=0 name=G3 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G4,'G4');return(false)">
+<img border=0 name=G4 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G5,'G5');return(false)">
+<img border=0 name=G5 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G6,'G6');return(false)">
+<img border=0 name=G6 src=huh.gif></TD>
+<th><a onclick=imgToggle()><img border=0 src=minus.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G7,'G7');return(false)">
+<img border=0 name=G7 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G8,'G8');return(false)">
+<img border=0 name=G8 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G9,'G9');return(false)">
+<img border=0 name=G9 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G10,'G10');return(false)">
+<img border=0 name=G10 src=huh.gif></TD>
+<th><a href=/Zine/S1998R/Kieslich/ onclick="imgToggle(G11,'G11');return(false)">
+<img border=0 name=G11 src=huh.gif></TD>
+</TR>
+</TABLE>
+</center>
+</form>
+<P>
+If something is impossible, put a dash ('-') in the cell. For example, James
+did not end his travel on Sunday, so the cell where England crosses Sunday
+gets a '-'.
+Use a '+' where you have found a connection. If any row or a column has
+six dashes, then the seventh cell must have a '+'.   (In the case of the Wednesday
+and Thursday columns, only five dashes are needed, since there will be two
+pluses).
+<P><B>Brian Kieslich</B>
+<BR><B>(<A HREF="mailto:briank@fredericia.mail.telia.com">briank@fredericia.mail.telia.com</A>)</B>
+<P><I>If you wish to e-mail feedback on this article to the author, and
+clicking on the mail address above does not work for you, feel free to
+use the <A HREF="/Zine/S1998R/Common/DearDP.html">"<B>Dear DP...</B>"</A> mail interface.</I>
+<P>
+<HR><A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/S1998R/"><IMG align=right SRC="/Zine/Common/toS1998R.gif" border=0></A>
+</BODY>
+</HTML>
+<!--
+-->

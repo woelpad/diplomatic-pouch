@@ -1,0 +1,1307 @@
+<HEAD>
+   <TITLE>DP F1999M: The Unrelenting Eye</TITLE>
+</HEAD>
+<BODY bgcolor=white>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1999M/"><IMG align=right SRC="/Zine/Common/toF1999M.gif" border=0></A>
+<BR clear=both><HR>
+<H1 align=center>The Unrelenting Eye</H1>
+<H2 align=center><i>By David Hertzman</i></H2>
+<H3 ALIGN="CENTER">Part 2: <I>Power, effects of coalitions on individual power</i></h3>
+<HR>
+<b><u>Introduction</u></b>
+<I><P ALIGN="CENTER">
+</B></I></U></FONT><P ALIGN="JUSTIFY">A constant concern among Diplomacy players is their position in a given game.  How well is the game going?  Is a solo in the works or is this game headed towards a draw?  Whom should I attack next?  Generally, it is very difficult to quantify a given position in a game.  A good player may have a good &quot;feeling&quot; as to how well he happens to be doing, but it is hard to place an actual number that determines placement in a game.  Strict SC count is not satisfying, since 2 players can have the same number of SC’s and yet not have the same chance as winning.  For example, the lead player with a 17-15-2 SC split is far less likely to get the solo than the player in a 17-4-4-3-3-2-1 split.   
+<P ALIGN="JUSTIFY">I suggest that the root quantifier in all these scenarios is power.  Power can be simply defined as &quot;<I>the ability to control decisions</I>&quot;, but has a wide ranging application.  I will start with a simple example and then move on to one that is more relevant to the board game that we all love.
+<P ALIGN="JUSTIFY">
+<b><u>Contrived Examples</u></b>
+<P ALIGN="JUSTIFY">Suppose that five people, whom we shall call <B>A</B>be, <B>B</B>rad, <B>C</B>hris, <B>D</B>aniel and <B>E</B>velyn are all voting on a given proposal.  They can choose to go with proposal X, or with proposal Y, but they cannot abstain.  The winning proposal gets at least one vote more than 50%.  Now, how much power does each person possess if they each have a single vote?  The answer is fairly simple here, no one person is any more powerful than the other therefore they are all equally powerful.  In other words, since there are five voters, each voter controls a fifth (or 20%) of the total power.
+<P ALIGN="JUSTIFY">However, lets say that Abe, Brad and Chris come up with a bright idea.  They agree to go into a back room before the vote and have their own personal vote, and then all three agree to vote for the winner of their private vote.  In other words, players A,B and C have decided to form a coalition.  Since there are only five votes in total, a given proposition only needs 3 votes in order to pass.  The coalition of Abe, Brad and Chris will have a force of three votes while Daniel and Evelyn are stuck with one vote each.  However, in this scenario, it does not even matter what Daniel or Evelyn decide to vote, since whatever the coalition votes for will win.  Therefore, while Daniel and Evelyn still have one vote each, neither has any power.  The coalition holds 100% of the power.  However, since there are three members in the coalition, each gets a third of the overall power of the coalition, or 33%.  Therefore, the coalition members have increased their power from 20% to 33% while the non-coalition members have lost all their power.
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">(This, of course, is how many democratic governments function.  The cabinet meets to vote on policy, and then the entire party votes for the proposal that won within the party ranks.  The majority government therefore maintains all the power, while the opposition loses all power.  If the party let each member vote as he pleased, then the government would lose much of its power since the opposition would be able to affect policy)
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Now, lets say that Abe and Brad decide to form a coalition between themselves.  It is slightly more difficult to determine how much power their coalition has.  Effectively, they are acting as a single player (we will call this player <B>Z</B>) who has a voting strength of two.  Unfortunately, a full explanation of power determination is beyond the scope of this article, however a simple mechanism for determining power will be presented.  Suppose that the four players (C,D,E,Z) with votes of 1,1,1 and 2 respectively each vote one at the time.  There are 24 different orders that they could possibly vote in.  Each time we will determine which vote was the &quot;pivot voter&quot;, that is, the voter that brought the total number of votes to a majority.  A given voter’s power is then given as being proportional to the number of times that his vote was pivotal.  
+<P ALIGN="JUSTIFY">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=590>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">CD<B><I><U>E</B></I></U>Z</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">DC<B><I><U>E</B></I></U>Z</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">EC<B><I><U>D</B></I></U>Z</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">Z<B><I><U>C</B></I></U>DE</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">CD<B><I><U>Z</B></I></U>E</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">DC<B><I><U>Z</B></I></U>E</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">EC<B><I><U>Z</B></I></U>D</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">Z<B><I><U>C</B></I></U>ED</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">CE<B><I><U>D</B></I></U>Z</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">DE<B><I><U>C</B></I></U>Z</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">ED<B><I><U>C</B></I></U>Z</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">Z<B><I><U>D</B></I></U>CE</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">CE<B><I><U>Z</B></I></U>D</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">DE<B><I><U>Z</B></I></U>C</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">ED<B><I><U>Z</B></I></U>C</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">Z<B><I>D</B></I>EC</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">C<B><I><U>Z</B></I></U>ED</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">D<B><I><U>Z</B></I></U>CE</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">E<B><I><U>Z</B></I></U>CD</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">Z<B><I><U>E</B></I></U>CD</TD>
+</TR>
+<TR><TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">C<B><I><U>Z</B></I></U>DE</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">D<B><I><U>Z</B></I></U>EC</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">E<B><I><U>Z</B></I></U>DC</TD>
+<TD WIDTH="25%" VALIGN="TOP">
+<P ALIGN="CENTER">Z<B><I><U>E</B></I></U>DC</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">  
+<P ALIGN="JUSTIFY">In the above table, we see a list of the 24 possible combinations, with the pivotal vote underlined.  Remember that <B>Z</B> represents the coalition with a voting strength of 2, while CDE each only have one vote.  Since there are 5 votes in total and 3 votes are needed for a majority.  For example, when the order was CDEZ, <I>E</I> represented the third and therefore pivotal vote.  When the order was CDZE, <I>D</I> brought the voting total up to 2, while <I>Z</I> brought the total up to 4, which was more than the 3 necessary and therefore <I>Z</I> was the pivotal vote.  Finally, when the order was ZEDC, Z cast 2 votes, and then the vote of player E brought the total up to 3, making E the pivotal vote.
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Of the 24 combinations, Z was the pivotal voter for 12 of them, and C,D, and E were pivotal for 4 combinations each.  Therefore, while the coalition of Z only controlled 40% of the votes (2 out of 5), they actually controlled 50% of the power (12 out of 24).  Since the coalition consisted of two members, each member controlled half of the total coalition power, which means that each member of the coalition controlled 25% of the power.  So, while Abe and Brad increased their power from 20% to 25% each by forming a coalition, the other voters saw their power drop from 20% to about 16% each.
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Coalitions, however, are <B>not</B> always beneficial.  Lets say that Daniel and Evelyn, seeing that Abe and Brad have formed a coalition, decide to form a coalition of their own, which we will call coalition <B>Y</B>.  We now have three groups of voters, we have Chris, with a single vote, and we have the two coalitions, with a voting strength of 2 each.  There are six possible orders that these groups could vote in, as shown in the following table.
+<P ALIGN="JUSTIFY">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=590>
+<TR><TD WIDTH="33%" VALIGN="TOP">
+<P ALIGN="CENTER">C<B><I><U>Y</B></I></U>Z</TD>
+<TD WIDTH="33%" VALIGN="TOP">
+<P ALIGN="CENTER">Y<B><I><U>C</B></I></U>Z</TD>
+<TD WIDTH="33%" VALIGN="TOP">
+<P ALIGN="CENTER">Z<B><I><U>C</B></I></U>Y</TD>
+</TR>
+<TR><TD WIDTH="33%" VALIGN="TOP">
+<P ALIGN="CENTER">C<B><I><U>Z</B></I></U>Y</TD>
+<TD WIDTH="33%" VALIGN="TOP">
+<P ALIGN="CENTER">Y<B><I><U>Z</B></I></U>C</TD>
+<TD WIDTH="33%" VALIGN="TOP">
+<P ALIGN="CENTER">Z<B><I><U>Y</B></I></U>C</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Something has happened!  Even though the coalitions have double the voting strength that Chris has alone, her vote was pivotal just as often as either coalition.  Each voting group was pivotal 2 out of the 6 times, and therefore controls 33% percent of the power.  However, each member of the coalition consists of 2 members so each member only controls half of the overall coalition power.  So, while Chris has the 33% power all to herself, the coalition members only get 16.5% of the power each.  By staying out of the coalitions, Chris has increased her power by 13%!
+<P ALIGN="JUSTIFY">
+<b><u>Realistic Examples -- Three Players</u></b>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">How does the matter discussed to this point relate to Diplomacy?  It can be said that the number of &quot;votes&quot; controlled by each power is directly proportional to the number of SC’s that they control.  If any one power picks up 18 votes, they have over 50% of the votes and have 100% of the power (since their vote is always pivotal).  Therefore, the victory conditions coincide nicely with the capturing of all the power.  I would also propose at this point that, the more power a given country controls, the closer he is to victory.
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">We now move to actual Diplomacy situations.  I will no longer show power calculations but will simply provide results for analysis.  We start off with a series of games that are near their end.  
+<P ALIGN="CENTER">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=516>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">&nbsp;</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 1</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 2</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 3</TD>
+<TD WIDTH="27%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 4</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<FONT SIZE=3><P ALIGN="CENTER">Player</FONT></TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">A</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">12</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">B</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">3</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">6</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">9</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">11</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">C</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">12</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">9</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">11</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Note that, once there are only three players left, the actual SC distribution does not matter all that much.  All players control the same amount of power.  This is probably why many games end in 3-way draws.  The situation is extremely stable, no one player has any more power than the other, so no player is clearly in the lead.  The situation changes though, when one player reaches 17 SC’s.
+<P ALIGN="JUSTIFY">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=516>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">&nbsp;</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 5</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 6</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 7</TD>
+<TD WIDTH="27%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 8</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<FONT SIZE=3><P ALIGN="CENTER">Player</FONT></TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">A</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">67%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">67%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">67%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">67%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">B</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">C</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">12</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">9</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">9</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Note that the above table does not take the effect of stalemate lines into consideration.  If the 17 SC’s controlled by the leading power are all on one side of the major stalemate line, it is likely that the power is still evenly split, despite the fact that one of the players has reached 17 SC’s.  If a stalemate line has not formed though, a player with 17 supply centers is very likely to win the game.
+<P ALIGN="JUSTIFY">
+<b><u>Realistic Examples -- Four or More Players</u></b>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Now we shall look at some examples with four players remaining in the game.  In the first table, we will maintain the supply center count of the leading player and just alter the distribution of the remaining centers to see how it affects the leading player’s power.
+<P ALIGN="JUSTIFY">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=516>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">&nbsp;</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 9</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 10</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 11</TD>
+<TD WIDTH="27%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 12</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<FONT SIZE=3><P ALIGN="CENTER">Player</FONT></TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">A</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">75%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">75%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">75%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">75%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">B</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">11</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">7</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">C</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">3</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">D</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">3</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Once a player has reached 17 supply centers, all of his opponents are immediately placed on equal footing.  Regardless of the internal distribution of SC’s, all the opponents attempting to stop the solo victory have equal amounts of power.  There are two items that deserve special notice.  Firstly, when a player had 17 SC’s and there were only 3 players left, he had 67% of the power.  With 4 players remaining in the game, the player with 17 SC’s now controls 75% of the power.  The other item of note is in game #9.  While it might appear that player B is doing substantially better than players C or D, in reality he controls no more power than either of them.  Players C and D are in a great position to make demands upon player B, since the power of player B is far below his supply centre control.  Intuitively, this makes sense, since player A is likely to win, and regardless of the holding of player B, he will just be another one of the losers.
+<P ALIGN="JUSTIFY">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=516>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">&nbsp;</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 13</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 14</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 15</TD>
+<TD WIDTH="27%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 16</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<FONT SIZE=3><P ALIGN="CENTER">Player</FONT></TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">A</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">42%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">42%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">B</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">25%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">11</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">7</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">25%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">C</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">25%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">6</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">9</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">25%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">D</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">3</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Games 13-16 demonstrate another intriguing situation.  The amount of power held by the lead player (and players B,C for that matter) lies not on the number of centers controlled by B and C but by the number of SC’s controlled by player D.  When player D only has a single supply center, he is effectively out of the game, and the power percentages approach 33% for the remaining 3 powers, as would be expected in a 3-player setup.  If player D has at least 2 supply centers, then the power distribution moves away from the 3-player setup and player D ends up with just as much power as players B and C.
+<P ALIGN="JUSTIFY">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=516>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">&nbsp;</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 17</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 18</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 19</TD>
+<TD WIDTH="27%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 20</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<FONT SIZE=3><P ALIGN="CENTER">Player</FONT></TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">A</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15 </TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">B</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">12</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">7</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">C</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">6</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">6</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">6</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">D</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">0%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">3</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">6</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Game 16 is a special case, in which players C and D wield power that is far beyond their share of supply centers.  This is a version of the &quot;kingmaker&quot; situation.  Many players in position C or D would simply be content to crown their least hated enemy as the winner, however, as can be seen, both players C and D are in a great position to win concessions from the leading powers.  Games 19 and 20 seem to be somewhat like the games seen in the previous table, in which all three coalition members are required to stop the leading power.  However, in Game #18, players B and C control more than 50% of the supply centers, and therefore do not require player D in their coalition.  Player D therefore loses all power, since he can be eliminated without players B and C risking a solo win by player A.
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Just as a reminder, I am not making these values up!  I wrote an Excel program that simply plugs through all the combinations and determines how many pivotal votes each power possesses and expresses it as a percentage of the total.  This was especially necessary with 5 or more players, since the number of combinations increases dramatically. (120 combinations for 5 players, 720 combinations for 6 players, 5040 combinations if all 7 players are still around).  
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">A few more examples for interests sake now follow:
+<P ALIGN="JUSTIFY">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=516>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">&nbsp;</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 21</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 22</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 23</TD>
+<TD WIDTH="27%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 24</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<FONT SIZE=3><P ALIGN="CENTER">Player</FONT></TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">A</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">42%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15 </TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">14</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">14</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">B</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">13</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">25%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">14</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">11</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">11</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">C</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">25%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">7</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">33%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">D</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">0%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">0%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">The main point by now is aptly demonstrated.  Regardless of the number of SC’s controlled by the leading player, his real power depends on the distribution of SC’s among the other players.  This is why a good Diplomacy player pays attention to the entire board, so as to influence various levels of power among players to produce optimum conditions.  Of course, I have not yet discussed what exactly the optimum conditions are, but you should be getting an idea by now.  We will look at power distributions with 5 players next.
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Once again, the presence of the extra player will benefit, in most cases, the leading player.  This is especially evident when the leading player has 17 centers, and now even one more player is needed to form the alliance to stop the solo.  
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">&nbsp;
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=516>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">&nbsp;</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 25</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 26</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 27</TD>
+<TD WIDTH="27%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 28</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<FONT SIZE=3><P ALIGN="CENTER">Player</FONT></TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">A</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">80%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">80%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">80%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">B</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">12</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">14</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">14</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">C</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">3</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">D</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">E</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=516>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">&nbsp;</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 29</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 30</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 31</TD>
+<TD WIDTH="27%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 32</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<FONT SIZE=3><P ALIGN="CENTER">Player</FONT></TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">A</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">60%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">55%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">16</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">B</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">7</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">13%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">9</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">13%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">C</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">13%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">6</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">13%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">6</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">D</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">13%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">13%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">E</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">In game 30, the situation is closer to a 4-person game than in game 29, so the corresponding power of the lead player drops.  It is interesting to note that in cases looked at so far, once a power drops to a single supply centre, his power diminishes considerably.  I am not certain if this is a quirk of my technique or if it reflects an actual situation.  It is interesting to note that, in chaos games, one centre powers are much weaker than those that have achieved a second centre.  Perhaps this is reflected in the power distributions of an early chaos game, but I will not calculate those!
+<P ALIGN="JUSTIFY">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=516>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">&nbsp;</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 33</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 34</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 35</TD>
+<TD WIDTH="27%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 36</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<FONT SIZE=3><P ALIGN="CENTER">Player</FONT></TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">A</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">45%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">15</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">14</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">45%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">14</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">B</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">20%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">20%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">C</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">6</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">20%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">20%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">D</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">12%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">3</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">12%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">E</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">3%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">3%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">1</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">0%</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<center>
+<TABLE BORDER CELLSPACING=1 CELLPADDING=7 WIDTH=516>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">&nbsp;</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 37</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 38</TD>
+<TD WIDTH="21%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 39</TD>
+<TD WIDTH="27%" VALIGN="MIDDLE" COLSPAN=2>
+<P ALIGN="CENTER">Game 40</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<FONT SIZE=3><P ALIGN="CENTER">Player</FONT></TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">SC’s</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">Power</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">A</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">13</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">45%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">13</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">50%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">12</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">35%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">12</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">40%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">B</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">20%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">9</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">27%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">9</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">23%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">C</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">20%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">17%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">5</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">18%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">7</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">23%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">D</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">12%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">7%</TD>
+</TR>
+<TR><TD WIDTH="10%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">E</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">3%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">8%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">4</TD>
+<TD WIDTH="12%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">10%</TD>
+<TD WIDTH="9%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">2</TD>
+<TD WIDTH="17%" VALIGN="MIDDLE">
+<P ALIGN="CENTER">7%</TD>
+</TR>
+</TABLE>
+</center>
+<P ALIGN="JUSTIFY">
+<P ALIGN="JUSTIFY">Notice again how power depends on the distribution of supply centers among the small powers, not necessarily on the distribution among the larger powers.  The six power situation is even more complex, as is the situation when there is no real leading power.  However, this article is already excessively long, so  I will put that off until the next issue, at which point I will also explore the means to make use of the information to, of course, win a game of Diplomacy.
+<P>
+<table>
+<tr valign="bottom">
+<td><A HREF="mailto:knave@idirect.com"><IMG src="/Zine/Common/letter.gif" border="0"></A>
+</td>
+<td>
+<strong>David Hertzman<br>
+(knave@idirect.com)</strong>
+</td>
+</tr>
+</table>
+<p>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the envelope above does not work for you, feel free to use the
+<A HREF="/Zine/F1999M/Common/DearDP.html">
+"<b>Dear DP...</b>"</A> mail interface.</i>
+<p>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/F1999M/"><IMG align=right SRC="/Zine/Common/toF1999M.gif" border=0></A>
+<BR clear=both>
+</BODY>
+</HTML>
+</BODY>
+</HTML>
+<!--
+-->

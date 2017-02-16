@@ -1,0 +1,399 @@
+<HTML>
+<HEAD>
+<TITLE>DP W1995A: Combinatorics of Adjustments</TITLE>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=all><HR>
+<table cellspacing=5>
+<tr>
+<td><IMG height=165 SRC="/Zine/Common/Loeb.gif">
+<td>
+<h2>The Diplomacy<br>Programming Project</H2><H1>
+The Combinatorics<BR>Of Adjustments</h1>
+<h2><i>Danny Loeb</i></h2>
+</table>
+<hr><p>
+<blockquote>
+<i>After the Fall moves have been played, and the
+retreats (if any) made, each player's number of
+units must be adjusted to equal the number of
+supply centers his Great Power controls.</i>
+</blockquote>
+<a href="/Zine/F1995R/Loeb/ret.html">Last issue</a> we discussed 
+the complexity of the search problems posed to the computer diplomat
+by the retreat  
+phase in the game of diplomacy. In comparison, how difficult a problem
+is posed by winter adjustments (builds/removals)?
+To measure this problem, we analyze the worst-case scenario that
+a potential computer diplomat might face.
+<p>
+An initial version of the adjustment portion of the strategy finder 
+of the Bordeaux diplomat was written by Brian Chojnowski (University
+of Illinois, Champaign-Urbana). 
+Some alternate algorithms were proposed by Jean-Michel Faure (Bordeaux) and 
+Per Westling (Linkoping, Sweden). 
+The current version  programmed by Gilles Schaeffer
+(Bordeaux, ENS/Paris) is presented below. We conclude with possible 
+future developments.
+<h2>Search size</h2>
+The difficulty of a search problem is proportional to the number of
+the choices. 
+<p>
+As we have seen there are 4,430,690,040,914,420 significantly
+different Spring 1901 openings in Diplomacy.  Searching completely
+such a large space 
+ is an impossible task that grows worse in successive
+movement phases as a typical game of Diplomacy progresses.
+<p>
+On the other hand, a typical retreat phase involves only a small
+number of units with limited interactions, and tightly constrained
+movements. We can thus make a complete search of all possible retreats
+combinations. (Actually, we don't really consider all combinations,
+since "independent" retreats are optimized separately in order to gain
+time for a 2 or 3-ply look-ahead in our search.)
+<h2>How many removals are possible?</h2>
+<blockquote>
+<i>
+If he has
+fewer centers than units, he must disband the
+excess units only, by removing them from the
+board. The units removed may be any of his units
+he chooses.
+</i>
+</blockquote>
+A player can have any number <i>n</i> of units up to 17. He may then be
+required to remove <i>k</i> of them where <i>k</i> is some number
+between 0 and <i>n</i>. He can remove any <i>k</i> he wants.
+He can remove no more and no less.
+<p>
+Thus, the number of choices is exactly the binomial coefficient
+<i>n</i>!/<i>k</i>!(<i>n</i>-<i>k</i>)! as given in the table below. 
+<p>
+<pre>
+n\k 1   2   3    4    5	    6     7     8     9    10    11   12   13  14  15 16 17 
+ 1  1
+ 2  2   1
+ 3  3   3   1
+ 4  4   6   4    1
+ 5  5  10  10    5    1
+ 6  6  15  20   15    6     1
+ 7  7  21  35   35   21     7     1
+ 8  8  28  56   70   56    28     8     1
+ 9  9  36  84  126  126    84    36     9     1
+10 10  45 120  210  252   210   120    45    10     1
+11 11  55 165  330  462   462   330   165    55    11     1
+12 12  66 220  495  792   924   792   495   220    66    12    1
+13 13  78 286  715 1287  1716  1716  1287   715   286    78   13    1
+14 14  91 364 1001 2002  3003  3432  3003  2002  1001   364   91   14   1
+15 15 105 455 1365 3003  5005  6435  6435  5005  3003  1365  455  105  15   1
+16 16 120 560 1820 4368  8008 11440 12870 11440  8008  4368 1820  560 120  16  1
+17 17 136 680 2380 6188 12376 19448 <b>24310 24310</b> 19448 12376 6188 2380 680 136 17 1
+</pre>
+<p>
+By inspection we see that the largest number of choices, namely
+<b>24,310</b>, 
+arises when a 17-unit superpower is forced to remove roughly half of
+his forces.
+<h2>How many builds are possible?</h2>
+<blockquote>
+<i>
+If he has more centers than units, he
+<b>may</b> build units by placing them, one in each
+unoccupied supply center, in his home country only
+(provided that such supply centers are still under
+his control). He must specify a fleet or an army
+in a coastal supply center 
+(if Russia builds a	
+fleet in St. Petersburg, he must specify the coast
+on which it is to appear, or the build is
+invalid).
+</i>
+</blockquote>
+The number of builds possible will vary depending upon:
+<ul>
+<li> Up to how many units may be built,
+<li> How many centers 0-3 are available for builds (0-4 in the case of
+Russia), and
+<li> Whether or not they are coastal (or bicoastal in the case of St. Petersburg).
+</ul>
+Since we are computing maximal numbers of build possibility, we can
+ignore
+the possibility that a center is occupied or
+owned by another power, and thus unavailable for a build.
+<h3>Turkey, England, Italy</h3>
+These powers have three coastal centers.
+<ol> 
+<li> 2 + 2 + 2 = 6 choices for one build.
+<li> 2x2 + 2x2 + 2x2 = <b>12</b> choices for two builds. (18 counting waives)
+<li> 2x2x2 = 8 choices for three builds. (<b>26</b> counting waives)
+</ol>
+<h3>Two coastal centers: France, Germany</h3>
+These powers have two coastal centers and one inland.
+<ol>
+<li> 2 + 2 + 1 = 5 choices for one build.
+<li> 2x2 + 2x1 + 2x1 = <b>8</b> choices for two builds. (13 counting waives)
+<li> 2x2x1 = 4 choices for three builds. (<b>17</b> counting waives)
+</ol>
+<h3>One coastal centers: Austria</h3>
+These powers have one coastal centers, and two inland.
+<ol>
+<li> 2 + 1 + 1 = 4 choices for one build.
+<li> 1x1 + 2x1 + 2x1 = <b>5</b> choices for two builds. (9 counting waives)
+<li> 2x1x1 = 2  choices for three builds. (<b>11</b> counting waives)
+</ol>
+<h3>Russia</h3>
+Russia has 2 inland centers, a coastal center, and a bicoastal center.
+<ol>
+<li> 1 + 1 + 2 + 3 = 5 choices for one build.
+<li> 3x2 + 3x1 + 3x1 + 2x1 + 2x1 + 1x1 = <b>17</b> choices for two builds. (22 counting waives)
+<li> 3x2x1 + 3x2x1 + 3x1x1 + 2x1x1 = <b>17</b> choices for three builds. (39
+counting waives)
+<li> 3x2x1x1 = 6 choices for four builds. (<b>45</b> counting waives)
+</ol>
+Russia has the most choices to consider for its builds. Up to <b>45</b>
+counting waives when it has 4 builds.
+<p>
+Occasionally, it may be in a countries interest to waive a build that
+it might otherwise be able to use to create a new unit. For example,
+Austria might save a build in order to build one fleet now and one
+fleet next year.  
+Since our program can only look-ahead one or two phases at a time, it
+is unable to anticipate any advantages that 
+waiving a build might bring next year. Thus, we do not even consider
+doing so unless so 
+required by diplomatic constraints (eg. demilitarized zones) imposed
+by the negotiation module.
+Not counting waives then, Russia still has the most choices (<b>17</b>) when
+it has 2 or 3 builds.
+<h2>Open problem</h2>
+The total size of the search space is given by the product of the 
+number of the choices available to each player. How can we maximize
+that?
+<p>
+Other than the share combinatorial challenge of tackling such a
+problem, there are practical implications of answer.
+It may be acceptable to write a diplomat that occasionally submits
+poor moves. However, it is unacceptable to write a diplomat that hangs
+for decades in certain rare situations trying to compare all  the
+possible build combinations.
+<p>
+If the total search space can bounded by a reasonable number, then
+we can apply symplex methods to the resulting game matrix and find
+all of the Nash equilibria. However, if the total search space is too
+large, then (at least in some circumstances) only approximative
+methods may be practical.
+<p>
+So just how bad <i>can</i> things get?
+<p>
+The "obvious" solution of having two 17-unit powers each lose 8 supply centers
+does not work, since we must also assign 16 units to capture their
+centers. Also, note that a power must have 3 (or 4) units to control 
+all of its supply center (as we assume above).
+<p>
+One possible solution with over 11 billion combinations is the following
+<P>
+<center>
+<table border>
+<tr><th><th>From<th>To<th>Possibilities</tr>
+<tr><td align=center>Austria<td align=center>17<td align=center>8<td align=center>24310</tr>
+<tr><td align=center>Germany<td align=center>1<td align=center>2<td align=center>2</tr>
+<tr><td align=center>France<td align=center>3<td align=center>5<td align=center>8</tr>
+<tr><td align=center>Turkey<td align=center>3<td align=center>5<td align=center>12</tr>
+<tr><td align=center>England<td align=center>3<td align=center>5<td align=center>12</tr>
+<tr><td align=center>Italy<td align=center>3<td align=center>5<td align=center>12</tr>
+<tr><td align=center>Russia<td align=center>4<td align=center>6<td align=center>17</tr>
+<tr><th colspan=3>Total<td align=center><b>11,426,088,960</b>
+</table>
+</center>
+<h2>Algorithms</h2>
+Even in the example given above, it might be possible to 
+program a computer to consider all of the possibilities.
+However, the time available for an adjustment phase is severely
+limited and we also want to anticipate possible Spring moves 
+while planning our builds.
+<p>
+Our current strategy finder calculates winter orders 
+in two steps.
+<ol>
+<li> First, a good move is found sequentially for each country using
+an algorithm by Brian Chojnowski.
+<li> Second, moves are optimized with respect to
+each other using a simulated annealing algorithm by Gilles Schaeffer
+similar to that used in the movement phase.
+</ol>
+<h3>Preliminary Search</h3>
+First, optimal adjustments are found for each country under the
+simplifying assumption   
+that the builds or removals of each country do not drastically effect
+those of another country.
+<p>
+This assumption allows us to calculate the builds and removals for
+each country independently. For each country, we consider all the
+possible combinations or builds and removals, and chose the option
+that maximize the value of the  resulting position. This value
+may be calculated  directly by the position evaluation
+subprogram. Or if sufficient time is available, the values may be
+calculated  via a recursive call to the strategy
+finder itself so that the diplomat can anticipate the Spring moves
+while planning its Winter adjustments. 
+<p>
+However, the adjustments of one country <i>can</i> affect those of
+another.  
+<ul>
+<li> If Italy suspects France will build a fleet in Marseilles then he
+should build a fleet in Rome or Naples.
+<li> If Turkey suspects that Italy will build a fleet in Naples as
+part of a <i>Lepanto</i>, then he might want to build a fleet in
+Smyrna, but if he suspect that Russia will build a unit in Sevastopol
+then he might prefer to build another fleet in Ankara.
+</ul>
+Nevertheless, the results of the above search produce reasonable
+winter orders based on the consideration independently of all of the
+options for each country.
+<p>
+That is, each country finds the best adjustment for its alliance under
+the (false) assumption that all other countries will skip their
+adjustment phase.
+<h4>Possible Improvement</h4>
+Calculate the adjustment of country <i>i</i> under the assumption that
+only countries <i>i</i>+1  through 7 will skip their adjustment phase.
+This may produce slightly better orders for country 7.
+This would be especially helpful if we arrange for country 7 to be 
+our country. (We should note however that the strategy finder
+as currently implemented has no knowledge about what country we play. 
+The strategy finder simply finds the best moves for all countries
+based on diplomatic constraints.)
+<h3>Secondary search</h3>
+If time is limited, for example if this search is part of 
+a recursive search, then the results of the preliminary search 
+are taken as final.
+<p>
+Given additional time, our strategy finder will attempt further
+improvements using simulated annealing.
+Each country is considered successively an random modifications
+of its adjustments are proposed until time runs out.
+The modifications are adopted if the resulting position is better for
+the country in question given the adjustments currently being
+considered by the six other powers. 
+As the search progresses, we assume that the moves being considered
+are practically optimal, and we therefore modify smaller and smaller
+subsets of adjustments orders at a time.
+<h4>Possible Improvements</h4>
+<strong>1. Combined Search</strong><P>
+These two phases of search could be combined as follows.
+<ol>
+<li> For each country, let new list be its list of legal adjustment orders
+(subject to diplomatic constraints), and let old list be an empty
+list. Let <i>n</i> be 7 times the length of the longest new list.
+<li> Let <i>P</i> be the position on the board given the first set of
+orders on each countries new list.
+<li> Remove the first set of orders from each countries new list, and
+place it in old list.
+<li> Let <i>C</i> be Austria.
+<li> If <i>C</i>'s new list is empty, then go to step 15.
+<li> Let <i>b</i> be the first set of orders on <i>C</i>'s new list.
+<li> Consider the position <i>P'</i> obtained by replacing <i>C</i>'s
+adjustment in <i>P</i> with <i>b</i>.
+<li> Evaluate the value of <i>P'</i> for all countries using the
+position evaluator (if the <i>flag</i> has not been set) or using a recursive
+search (if it has).
+<li> If <i>P'</i> is better for <i>C</i>'s alliance than <i>P</i>,
+then 
+  <ul>	<li>replace <i>P</i> with <i>P'</i>,
+	<li>update the value of the currently considered move for all
+	countries,
+	<li>concatenate the old list to the end of the new list
+	for each country, and
+	<li>empty list of old moves for each country.
+  </ul>
+<li> Insert <i>b</i> into <i>C</i>'s old list according to
+the value of <i>P'</i> for <i>C</i>'s alliance.
+<li> Remove <i>b</i> from <i>C</i>'s new list.
+<li> If all new lists are empty and <i>flag</i> is set, then
+go to line 16.
+<li> If all new list are empty and <i>flag</i> is not set,
+then set <i>flag</i>, replace new lists with old lists, and empty old
+lists. 
+<li> After <i>n</i> iterations, set the <i>flag</i> if recursive
+search has been specified.
+<li> If time remains, let <i>C</i> be the next country, and go to step
+4.
+<li> Return first element of each old list with their
+values, and halt. 
+</ol>
+This algorithm combines the two searchs above into a single search.
+Each country is guaranteed to consider all of its options. 
+Moreover, no one country is especially privileged in its ability 
+to anticipate the moves of the other countries.
+<p>
+Once a country exhausts its list of possible moves, then it stops 
+searching until another country changes its mind about its best move.
+There is no point considering exactly the same combination of moves
+two times. When it resumes searching it will consider moves in the
+order of their value as determined in the previous search under the
+theory that moves that were good under the prior circumstances are
+likely to still be good. 
+<p>
+If all countries exhaust their lists, then each countries adjustment
+is optimal with respect to the adjustments being considered by the six
+other countries. We have thus found the "Nash equilibrium" we are
+looking for.
+<P><strong>2. Mixed Equilibria</strong><P>
+Occasionally, Nash equilibria involving pure strategies might fail to
+exist. It might be possible to detect an "infinite loop" in the above
+search using a hash table, and then use linear programming to find a mixed Nash
+equilibrium. 
+<P><strong>3. Disband and Build</strong><P>
+The 
+builds should be redesigned to interface with the retreats in a
+multipli 
+search so that disbanding a unit and rebuilding it elsewhere is
+considered.
+This should be done whenever there are units to retreat, and
+no removals to consider, and at least one home supply center open. In
+that case, the best retreats will be recalculated in each "component"
+for various subsets of our units. The best builds will then be
+factored in, and the results compared.
+<p>
+In anticipating the number of builds, we will assume that any unit
+which can do so will capture an enemy or neutral supply center with
+its retreat. 
+<h2>For more...</h2>
+In conclusion, the problem of analyzing build combinations is slightly
+more difficult than the problem of analyzing retreat combinations, but
+child's play in comparison to the problem of analyzing moves. We thus
+have programmed the Bordeaux diplomat to conduct a very thorough
+search. Nevertheless, in order to leave time to look-ahead at future
+phases, this search is not perfect.
+<p>
+More work could be done on integrating the search for retreats and
+builds, and especially on testing the work done so far.
+<P>
+For more information, feel free to contact the author at the address
+below,
+read <a href="/Zine/list.html#DPP">previous articles</a> in this series, or
+consult the <a href="http://www.labri.u-bordeaux.fr/~loeb/dpp">DPP Home
+Page</a>. 
+<p>
+Note that <a
+href="http://www.labri.u-bordeaux.fr/~loeb/stud.html">plenty of
+work</a> is left to be done, especially in testing the  
+strategy finder,  writing the negotiation module, and on the
+small games projects.
+<P>
+<B>Danny Loeb<BR>
+<B>(<A HREF="mailto:loeb@delanet.com"><B>loeb@delanet.com</B></A>)</B></B>
+<P>
+<I>If you wish to e-mail feedback on this article to the author,
+and clicking on the mail address above does not work for you,
+feel free to use the <A HREF="/Zine/W1995A/Common/DearDP.html"><I>&quot;Dear DP...&quot;</I></A>
+mail interface.</I>
+<HR>
+<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
+<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<BR clear=all>
+</body> </html>
+<!--
+-->

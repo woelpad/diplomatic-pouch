@@ -1,0 +1,365 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+<title>DP S2009M: The Math of Adjudication</title>
+<!-- Authored by Lucas B. Kruijswijk -->
+<!-- Published on the Pouch Zine with permissions -->
+<!-- Created on March 6, 2008 -->
+</head><body style="background-color: rgb(255, 255, 255);">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+<br clear="all">
+<hr size="1" width="100%" align="center" style="color: GRAY">
+<center>
+<h1>The Math of Adjudication</h1>
+<h2>by Lucas Kruijswijk</h2>
+<hr size="1" width="100%" align="center" style="color: GRAY; margin-bottom: 15px">
+</center>
+<table width="95%" align="center" border="0">
+<tbody><tr>
+<td align="justify">
+<h2>Equations, the fundamentals of the rules</h2>
+<p>When we try to explain to a person how to adjudicate a situation manually,
+we would probably teach him the simple rule of thumb &#x201c;cut the support first&#x201d;.
+In most common cases, supports can be adjudicated with this rule, which
+simplifies the situation. However, convoys can mess up the situation pretty
+badly, as shown in the following example:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure1.png" width="250" height="299" alt="Figure 1" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">Germany:
+A ruh -> bel
+A hol Supports ruh -> bel
+A den -> nwy
+F ska Convoys den -> nwy
+A fin Supports den -> nwy
+England:
+A yor -> hol
+F nth Convoys yor -> hol
+F hel Supports yor -> hol
+Russia:
+F nwg -> nth
+F nwy Supports nwg -> nth
+F swe -> ska</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 1.</i></center>
+<p>When determining whether the support of Army Holland will succeed, we have to know
+whether the convoy of Army Yorkshire is disrupted. To determine this, we have to
+adjudicate the move of the fleet in the Norwegian Sea. This move in turn depends
+on the support from Fleet Norway, which could be cut by the convoy from Denmark &#x2014; but
+only if the fleet in Sweden fails to dislodge the fleet in Skagerrak.</p>
+<p>We see that the rule of thumb &#x201c;cut all supports first&#x201d; does not always work.
+It is good guidance for manual adjudication, but its use for a more formal
+description of the rules or an algorithm is questionable.</p>
+<p>Another notion, which can be found in many adjudicators, is the search for
+&#x201c;hotspots&#x201d;. Consider the following situation:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure2.png" width="144" height="259" alt="Figure 2" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">Germany:
+A ber -> sil
+A sil -> boh
+A boh -> tyr
+Italy:
+A ven -> tyr</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 2.</i></center>
+<p>The Berlin, Silesia and Bohemia orders are a chain of moves, where the success of one
+move depends on the success of another. The head of this chain is considered a hotspot
+which must be adjudicated first. So if we follow this principle, we start by resolving
+the conflict in Tyrolia. Since all units trying to move into Tyrolia have equal strength,
+both Army Venice and Army Bohemia fail to move. After resolving the Tyrolia area,
+the other orders in the chain can be adjudicated.</p>
+<p>Although the idea of hotspots looks sound at first sight, things get less clear
+when a head-to-head battle is involved:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure3.png" width="365" height="298" alt="Figure 3" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">Germany:
+A ber -> kie
+F den Supports ber -> kie
+F hel Supports ber -> kie
+France:
+A kie -> ber
+A mun Supports kie -> ber
+A sil Supports kie -> ber
+England:
+A ruh -> kie
+F hol Supports ruh -> kie
+Russia:
+A pru -> ber
+F bal Supports pru -> ber</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 3.</i></center>
+<p>In the situation above, a head-to-head battle takes place between the armies in Kiel
+and Berlin. Both units attack with a strength of 3, while at the same time, they are
+stabbed from behind by a foreign unit with one support. Since the situation is symmetric,
+both Kiel and Berlin could be chosen as a hotspot. If one of the German supports were to
+be removed, the hotspot would lean to Berlin, while if a French support were to be removed
+the hotspot would lean to Kiel.</p>
+<p>Some programs adjudicate this situation incorrectly. They take one of the two areas as
+a hotspot, depending on how the orders show up in the internal administration.
+If Kiel is chosen as a hotspot, the result will be that the moves from Ruhr,
+Kiel and Berlin fail. After this resolution, the algorithm will continue with the other
+orders. Since the Kiel order has failed, the Russian order will be adjudicated with a
+positive (but incorrect) result. If instead Berlin is chosen as the hotspot, the army in
+Ruhr will advance (incorrectly).</p>
+<p>Both the idea of cutting support first and the notion of hotspots are based on the idea
+that putting the orders in a sequence will help. The sequence in which the orders are
+adjudicated is a kind lifeline for the adjudicators based on this principle. For the most
+common situations, the sequence will indeed help; but for a truly flawless algorithm,
+things can still get pretty complicated (although not impossible). In these cases the
+sequence is not a lifeline that rescues by making things simple. On the contrary, it is more
+like a shark, something that bites and that we want to avoid.</p>
+<p>To get things under control, we must go back to the fundamentals of the rules. If we
+take a look at the dislodge rule (page 10 of the 2000 rulebook) we see the following
+sentence:</p>
+<p style="font-style: italic; margin-left: 40px">Support is cut if the unit giving
+support is dislodged.</p>
+<p>This rule implies that the move that dislodges the supporting unit must be
+resolved first. Since the dislodgement can only succeed when the attacker gets its
+own support, that support must also be resolved in advance. Yet none of these sequence
+issues are listed by this rule, or in any other place in the rulebook. The rulebook
+merely gives conditions with which the resolution must comply, but does not give any
+hint of the sequence in which the orders must be resolved.</p>
+<p>This means that the rules of Diplomacy are more like &#x201c;equations&#x201d;,
+while in most other games the rules are more procedural. The essential difference
+between the two approaches is that the equations cannot depend on time. An equation
+defines a relationship between variables
+<span style="text-decoration: underline">that does not change</span>. It is valid at
+the start of adjudication, during adjudication, and at the end of adjudication. In
+contrast, a procedure is executed step by step, and each step may change a variable
+affecting a later step.</p>
+<p>This implies that when we construct an equation, obviously we can not make it
+dependent on time. For instance, the principle &#x201c;a support is successful until it
+is cut&#x201d; means that the resolution of a support changes over time. It may have a
+different value at the start of the adjudication than at the end. This might work for an
+algorithm, but is incompatible with equations. On the positive side, an equation may refer
+to something we don't know yet, while this is considered an error in a procedure.</p>
+<p>Furthermore, the equation approach is &#x201c;all or nothing&#x201d;. We can not
+describe a part of the rules with equations and another part with a procedure. The rules
+are either wholly described as equations (the official rulebook), or wholly described as
+procedure (the DPTG approach). So the challenge is to transform the rulebook into a more
+formal description, while keeping the idea of equations (and yet avoiding any sequence).
+We will start with the simpler parts.</p>
+<p>Prior to this transformation, we assume that orders are checked for geographical
+limitations, that unmatched orders are removed, and that for units moving to each
+territory, it is determined whether it is a swap or a head-to-head battle.</p>
+<div style="margin-left: 40px"><i>dislodged</i>
+<div style="margin: 0px 0px 5px 40px">A unit can only be dislodged when it stays in
+its current space. This is the case when the unit did not receive a move order, or if
+the unit was ordered to <i>move</i> but failed.</div>
+<div style="margin: 0px 0px 5px 40px">If so, the unit is dislodged if another unit
+has a move order attacking the unit and for which the <i>move</i> succeeds.</div>
+</div>
+<p>Note, that in the description, the word <i>move</i> is in <i>italics</i>. It refers to
+the <i>move</i> equation described further down.</p>
+<div style="margin-left: 40px"><i>convoy order</i>
+<div style="margin: 0px 0px 5px 40px">A fleet with a successful convoy order can be
+part of a convoy.</div>
+<div style="margin: 0px 0px 5px 40px">A convoy order is successful when the fleet receiving
+the order is not <i>dislodged</i>.</div></div>
+<div style="margin-left: 40px"><i>path</i>
+<div style="margin: 0px 0px 5px 40px">The path of a move order is successful when the
+origin and destination of the move order are adjacent, or when there is a chain of adjacent
+fleets from origin to destination each with a matching and successful
+<i>convoy order</i>.</div></div>
+<div style="margin-left: 40px"><i>support</i>
+<div style="margin: 0px 0px 5px 40px">A support order is cut when another unit is ordered to move to the area of the supporting unit
+and the following conditions are satisfied:
+<ul>
+<li>The moving unit is of a different nationality</li>
+<li>The destination of the supported unit is not the area of the unit
+attacking the support</li>
+<li>The moving unit has a successful <i>path</i></li>
+</ul></div>
+<div style="margin: 0px 0px 5px 40px">A support is also cut when it is
+<i>dislodged</i>.</div></div>
+<p>Things get more complicated for the move. For a simple case, where a unit attacks another
+unit, we have to consider the <i>hold strength</i> of the defending unit (area) and the
+<i>attack strength</i> of the attacking unit.</p>
+<div style="margin-left: 40px"><i>hold strength</i>
+<div style="margin: 0px 0px 5px 40px">The hold strength is defined for an area, rather than
+for an order.</div>
+<div style="margin: 0px 0px 5px 40px">The hold strength is 0 when the area is empty, or
+when it contains a unit that is ordered to move and for which the <i>move</i> succeeds.</div>
+<div style="margin: 0px 0px 5px 40px">It is 1 when the area contains a unit that is
+ordered to move and for which the <i>move</i> fails.</div>
+<div style="margin: 0px 0px 5px 40px">In all other cases, it is 1 plus the number of
+orders that successfully <i>support</i> the unit to hold.</div></div>
+<p>The <i>attack strength</i> (sometimes called the &#x201c;dislodge strength&#x201d;) is a little bit
+complicated because it may depend on whether the unit at the destination successfully
+moves away or not. Consider the following situation:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure4.png" width="278" height="148" alt="Figure 4" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">Germany:
+A war -> mos
+A pru Supports sil -> war
+Austria:
+A sil -> war</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 4.</i></center>
+<p>If the German unit in Warsaw successfully moves away, then the Austrian army in Silesia
+can use the full <i>attack strength</i> of 2 to capture Warsaw. However, if not, then the
+German army in Prussia will not help to dislodge its fellow army in Warsaw.</p>
+<div style="margin-left: 40px"><i>attack strength</i>
+<div style="margin: 0px 0px 5px 40px">If the <i>path</i> of the move order is not successful,
+then the attack strength is 0.</div>
+<div style="margin: 0px 0px 5px 40px">Otherwise, if the destination is empty, or in a case
+where there is no head-to-head battle and the unit at the destination has a move order for
+which the <i>move</i> is successful, then the attack strength is 1 plus the number of
+successful <i>support</i> orders.</div>
+<div style="margin: 0px 0px 5px 40px">If not and the unit at the destination is of the same
+nationality, then the attack strength is 0.</div>
+<div style="margin: 0px 0px 5px 40px">In all other cases, the attack strength is 1 plus the
+number of successful <i>support</i> orders of units that do not have the same nationality
+as the unit at the destination.</div></div>
+<p>In cases where the unit is engaged in a head-to-head battle, the unit has to overcome
+the power of the move of the opposing unit instead of the <i>hold strength</i> of
+the area.</p>
+<div style="margin-left: 40px"><i>defend strength</i>
+<div style="margin: 0px 0px 5px 40px">The defend strength of a unit with a move order is
+1 plus the number of successful <i>support</i> orders.</div></div>
+<p>The final obstacle that an attacker has to defeat is the strength of the moves that
+compete for the same territory.</p>
+<div style="margin-left: 40px"><i>prevent strength</i>
+<div style="margin: 0px 0px 5px 40px">If the <i>path</i> of the move order is not successful,
+then the prevent strength is 0.</div>
+<div style="margin: 0px 0px 5px 40px">In cases where the move is part of a head-to-head
+battle and the <i>move</i> of the opposing unit is successful, then the prevent strength is 0.</div>
+<div style="margin: 0px 0px 5px 40px">In the remaining cases the prevent strength is 1
+plus the number of successful <i>support</i> orders.</div></div>
+<p>The <i>defend strength</i> and the <i>prevent strength</i> have a similarity in that
+they count the <i>support</i> regardless of the nationality of the support. Some
+adjudicators use the same function for calculating these strengths, and
+interpret it as the <i>defend strength</i> or the <i>prevent strength</i> depending on
+the stage of the algorithm. However, when using equations we can not
+depend on the stage of an algorithm, and it is vital to distinguish
+between <i>defend strength</i> and <i>prevent strength</i>. The following example
+shows how <i>attack strength</i>, <i>defend strength</i>, and <i>prevent strength</i> can
+each be different for the same move:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure5.png" width="180" height="215" alt="Figure 5" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">Germany:
+A ruh -> bur
+France:
+A bur -> ruh
+A hol Supports bur -> ruh
+A bel Supports bur -> ruh
+A mun Supports ruh -> bur
+A mar -> bur
+</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 5.</i></center>
+<p>The German army in Ruhr may count the unusual support from Munich in its defense
+against the attack from Burgundy, so the <i>defend strength</i> of the Ruhr unit is 2.
+However, the unit in Munich will not help to dislodge its fellow army in Burgundy, so
+the <i>attack strength</i> of the unit in Ruhr is 1. Since it will be dislodged by the
+move from Burgundy, it can not prevent the unit in Marseilles from moving to Burgundy,
+so the <i>prevent strength</i> of the unit in Ruhr is just 0.</p>
+<p>Finally we can give the conditions that allow a unit to actually move to
+another area:</p>
+<div style="margin-left: 40px"><i>move</i>
+<div style="margin: 0px 0px 5px 40px">In case of a head-to-head battle, the move succeeds
+when the <i>attack strength</i> is larger then the <i>defend strength</i> of the opposing
+unit and larger than the <i>prevent strength</i> of any unit moving to the same area. If
+one of the opposing strengths is equal or greater, then the move fails.</div>
+<div style="margin: 0px 0px 5px 40px">If there is no head-to-head battle, the move
+succeeds when the <i>attack strength</i> is larger then the <i>hold strength</i> of the
+destination and larger than the <i>prevent strength</i> of any unit moving to the same
+area. If one of the opposing strengths is equal or greater, then the move fails.</div></div>
+<p>In case of circular movement or a convoy paradox, the equation may not have exactly one
+resolution. Sometimes the incompleteness theory of G&ouml;del is suggested, but it is not
+that complicated. It is just that equations do not always have a single solution. For
+instance, x<sup>2</sup> = 4 has two real solutions, and x<sup>2</sup> = -4 has no real
+solution (for G&ouml;del we should at least introduce an infinite map!).</p>
+<p>In these situations we set aside the equations, and pass the troublesome part to
+what I call &#x201c;the backup rule&#x201d;. For circular movement all the move orders
+in the circle must succeed, and for convoy paradoxes a paradox rule should be used.
+Recently programmed adjudicators, such as <a href="http://jdip.sourceforge.net/">jDip</a>,
+<a href="http://www.hagenah.de/diptool/">DipTool</a>,
+<a href="http://www.westeindeweb.nl/palmdip/">Palmpolitik</a>,
+<a href="http://www.paradoxplaza.com/index.php?option=com_content&amp;task=view&amp;id=61&amp;Itemid=141">Paradox Interactive</a>,
+<a href="http://phpdiplomacy.net/">phpDiplomacy</a> (and its derivate
+<a href="http://www.facebook.com/apps/application.php?id=8604176918">Facebook diplomacy</a>),
+<a href="http://www.stabbeurfou.org/">Stabbeurfou</a>, and
+<a href="http://gamesbyemail.com/Games/Politics">Politics</a> have opted for the
+<a href="/Zine/F1999R/Debate/paradox.html">Szykman rule</a> for
+dealing with paradoxes. This rule says that the convoy part of the paradox must be treated
+as disrupted, and the other units are adjudicated normally (although originally it was
+formulated differently).</p>
+<p>Some conditions expressed in the equations have a one-to-one relation with the
+official English rulebook. The conditions that cut a support can literally be found
+in the rulebook. Other parts &#x2014; for instance, the strength values &#x2014; are
+expressed somewhat differently in the equations as compared to the rulebook. Consider
+the following situation:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure6.png" width="270" height="155" alt="Figure 6" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">Germany:
+A ber -> sil
+A mun Supports ber -> sil
+Russia:
+A war -> sil
+Austria:
+A boh -> sil</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 6.</i></center>
+<p>To a certain extent, the rulebook sees the Silesia area as a single conflict that
+must be adjudicated. And as explained earlier, some adjudicators see the Silesia area
+as a hotspot and look for the unit with the highest support (Berlin in this case). That
+unit succeeds, and the other units fail to move. The equations are different, in the sense
+that the conditions for success and failure are given for each of the moving units
+separately. The Berlin unit succeeds in its move because the <i>attack strength</i> is
+higher than the <i>prevent strength</i> of the other units. The other units fail because
+their <i>attack strength</i> does not beat the <i>prevent strength</i> of Berlin.</p>
+<p>In the equations, the convoy order can succeed or fail. It is more common to talk about
+a whole convoy being disrupted instead of a single convoy order: however, considering the
+convoying fleet separately has its advantages when resolving a convoy paradox with the
+Szykman rule. Consider the following situation:</p>
+<table align="center">
+<tr><td align="right" width="50%"><img src="figure7.png" width="352" height="146" alt="Figure 7" style="margin-right: 15px"/></td>
+<td align="left"><pre style="margin-left: 15px; font-size: 15px">Turkey:
+F aeg -> ion
+F gre Supports F aeg -> ion
+Italy:
+A tun -> gre
+F ion Convoys A tun -> gre</pre>
+</td></tr></table>
+<br/>
+<center><i>Figure 7.</i></center>
+<p>The army in Tunis plays a major role in this convoy paradox. However, the resolution
+of the order is of no importance, because the army would always fail to move even if the
+attempt to cut support succeeded. One could argue (this will also be discussed later on
+in this article) that the resolution of the Tunis order is not part of the paradox.
+Applying the Szykman rule would let the Tunis move fail. This means that the backup
+rule has a consequence beyond the paradox. This is not directly problematic, but it
+is just easier to say that the convoy order of the Ionian Sea fails (and can not
+take part in a convoy route). Adjudication of the other orders can then continue as
+normal.</p>
+<p>Although the equations are not an exact one-to-one translation of the official
+English rulebook, they are close enough for discussing them properly. In this discussion
+we don't have the burden of the sequence in which the orders must be adjudicated and
+this keeps the complexity of checking the equations with the rulebook within
+proportions.</p>
+<p>Still, the equations do not tell us <b>how</b> to adjudicate. In the next chapter we
+will take the first steps in transforming the equations into a usable algorithm.</p>
+<p><a href="DipMath_Chp1.htm">PREV</a> - <a href="DipMath_Chp3.htm">NEXT</a></p>
+<br><br><table>
+<tbody>
+<tr valign="bottom">
+<td><a href="mailto:editor@diplom.org"><img src="/Zine/Common/letter.gif" border="0"></a> </td>
+<td><strong>Lucas Kruijswijk<br>(<a href="mailto:L.B.Kruijswijk@inter.nl.net">L.B.Kruijswijk@inter.nl.net</a>)</strong>
+</td></tr></tbody></table>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the envelope above does not work for you, feel free to use the <a href="/Zine/S2009M/Common/DearDP.html">"<b>Dear
+DP...</b>"</a> mail interface.</i>
+</td></tr></tbody></table>
+<hr size="1" width="100%" align="center" style="color: GRAY; margin-top: 15px">
+<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
+<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+</body></html>
+<!--
+-->
