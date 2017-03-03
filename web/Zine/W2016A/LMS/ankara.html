@@ -1,226 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title> DP {W2016A}: Last Man Standing: Operation Ankara </title>
-		<meta charset="utf-8"/> 
-		<!-- Point to whereever this stylesheet will exist-->
-		<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
-		<style type="text/css">
-			/*
-			 * Insert styles for the content_body here
-			 */
-			 .game_img {text-align: center; text-decoration: italic;}
-			 .map_img {width: 60%;}
-			 .content_body {}
-		</style>
-	</head>
-	<body>
-		<div class="req_link_container">
-			<div class="req_link left_link">
-				<a href="../..">
-					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
-				</a>
-			</div>
-			<div class="req_link right_link">
-				<a href="..">
-					<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
-				</a>
-			</div>
-			<hr class="hr_rule top_hr">
-		</div>
-		<div class="centered">
-			<!-- Insert Author Name -->
-			<h1>Last Man Standing: Operation Ankara</h1>
-			<h2>by Mario Huys </h2>
-			<hr class="hr_rule">
-		</div>
-		<div class="content_body centered padded_body">
-		<!-- Content Body -->
-			
-		<!-- Content Body End -->
-		</div>
+<head>
+<title> DP W2016A: Last Man Standing: Operation Ankara </title>
+<meta charset="utf-8"/> 
+<!-- Point to whereever this stylesheet will exist-->
+<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+<style type="text/css">
+/*
+* Insert styles for the content_body here
+*/
+.game_img {text-align: center; text-decoration: italic;}
+.map_img {width: 60%;}
+.content_body {}
+.inputBox {
+	color:			#000000;
+	background:		#FFFFFF;
+	border-color:	#000000;
+	border-top:		1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-right:	1px solid;
+	font-family:	verdana;
+	font-size:		14px;
+}
+</style>
+<script>
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+		var args = arguments;
+		return this.replace(/{(\d)}/g, function(match, number) {
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+}
+function changeMap(selector, reference, content) {
+	var selected = selector.options[selector.selectedIndex];
+	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
+	var text = document.getElementById(selector.name + '.text');
+	image.src = anchor.href = reference.format(selected.value);
+	image.alt = text.innerHTML = content.format(selected.text);
+}
+</script>
+</head>
+<body>
+<div class="req_link_container">
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<hr class="hr_rule top_hr">
+</div>
+<div class="centered">
+<!-- Insert Author Name -->
+<h1>Last Man Standing: Operation Ankara</h1>
+<h2>by Mario Huys </h2>
+<hr class="hr_rule">
+</div>
+<div class="content_body  padded_body">
+<!-- Content Body -->
 
-			<h3>
-				Army Liverpool to Ankara
-			</h3>
+<h3>
+Army Liverpool to Ankara
+</h3>
 
-			<div class="game_img">
-				<img src="./images/lms_lvp-ank.gif" class="map_img" alt="Army Liverpool to Ankara, After Winter 1903">
-				<br /><i>Army Liverpool to Ankara, After Winter 1903</i>
-			</div>
+<div class="game_img">
+<img src="./images/lms_lvp-ank.gif" class="map_img" alt="Army Liverpool to Ankara, After Winter 1903">
+<br /><i>Army Liverpool to Ankara, After Winter 1903</i>
+</div>
 
-			<p>
-				Army Liverpool reaches the end of his journey that brought him to all the great capitals on the Old Continent. The last one is not actually in Europe proper, nor did it become a capital until after the Great War. But it's a remarkable feat nonetheless. And for the first time Britain loses a home center. A fitting prelude to our next issue, where we'll explore the conquest of Britain. Oh yes, there's more to come. Rejoice.
-			</p>
+<pre class="centered">
+Austria (1/5) F Con / Bud Con Tri Vie        
+England (1/4) A Sev / Lon Lvp Sev Stp        
+France  (1/6) A Arm / Bre Edi Mar Par Smy Ven
+Germany (0/5)         Ber Kie Mos Mun War    
+Italy   (0/2)         Nap Rom                
+Turkey  (1/1) F Bla / Ank                    
+</pre>
 
-			<h3>
-				To Constantinople
-			</h3>
+<p>
+Army Liverpool reaches the end of his journey that brought him to all the great capitals on the Old Continent. The last one is not actually in Europe proper, nor did it become a capital until after the Great War. But it's a remarkable feat nonetheless. And for the first time Britain loses a home center. A fitting prelude to our next issue, where we'll explore the conquest of Britain. Oh yes, there's more to come. Rejoice.
+</p>
 
-			<div class="game_img">
-				<img src="./images/lms_-con.gif" class="map_img" alt="To Constantinople, After Winter 1903">
-				<br /><i>To Constantinople, After Winter 1903</i>
-			</div>
+<h3>
+To Constantinople
+</h3>
 
-			<p>
-				In <a href="http://www.diplomacyworld.net/pdf/dw131.pdf">DW 131</a> I wrote that Constantinople, the actual capital of the Turkish empire during WWI, could be conquered, but just not by army Liverpool. This is the After Winter 1903 map. Four units left, surrounding the old capital. Well, who will it be? Who will capture the City? A simple question, no?
-			</p>
+<div class="game_img">
+<img src="./images/lms_-con.gif" class="map_img" alt="To Constantinople, After Winter 1903">
+<br /><i>To Constantinople, After Winter 1903</i>
+</div>
 
-			<h3>
-				Army Liverpool to Paris
-			</h3>
+<pre class="centered">
+Austria (1/2) A Smy / Smy Tri                    
+England (0/1)         Lvp                        
+France  (0/6)         Bre Edi Lon Mar Par Ven    
+Germany (1/7) A Ank / Ank Ber Kie Mos Mun Vie War
+Italy   (0/4)         Bud Nap Rom Sev            
+Russia  (1/1) F Aeg / Stp                        
+Turkey  (1/1) F Bla / Con                        
+</pre>
 
-			<p>
-				What's up with the Turk? It's not so strange that there is a yellow unit in the final year. After all, Turkey is furthest away from France and those nations tend to survive. But as it's an army, you might have expected it to be in Munich, not in Brest. Traveling by land it can be in Sevastopol in W01, Warsaw in W02, Munich in W03. Instead it's A Lvp occupying Munich, the same army that landed in Brest in the first year in the Sherlock Holmes LMS riddle. It's the world upside down.
-			</p>
+<p>
+In <a href="http://www.diplomacyworld.net/pdf/dw131.pdf">DW 131</a> I wrote that Constantinople, the actual capital of the Turkish empire during WWI, could be conquered, but just not by army Liverpool. This is the After Winter 1903 map. Four units left, surrounding the old capital. Well, who will it be? Who will capture the City? A simple question, no?
+</p>
 
-			<p>
-				You could say: "Well, it has to be so, otherwise A Lvp wouldn't become the Last Man Standing." But that would be wrong. The French army in Gascony can just as well attack Burgundy as support an attack on Burgundy. No, the reason is quite simply that this was the direction in which a solution was first sought. Can Turkey be convoyed to France? How many fleets would be involved? When could they be in place?
-			</p>
+<h3>
+Army Liverpool to Paris
+</h3>
 
-			<p>
-				As it happens, the earliest convoy straight from Turkey into France can occur in Spring 1902, involving 5 fleets in order to cross 5 sea spaces. Actually 4 might suffice if you aim for Spain and move into France in Fall. Or you could convoy to Tunis in Spring and then use a second convoy to get to the French Atlantic or Mediterranean coast. This too would require a total of 4 fleets, but spread over two seasons. The important thing is to do it early, so that there are still enough fleets in the game, before they start killing each other off. That means in 1902. 
-			</p>
+<p>
+What's up with the Turk? It's not so strange that there is a yellow unit in the final year. After all, Turkey is furthest away from France and those nations tend to survive. But as it's an army, you might have expected it to be in Munich, not in Brest. Traveling by land it can be in Sevastopol in W01, Warsaw in W02, Munich in W03. Instead it's A Lvp occupying Munich, the same army that landed in Brest in the first year in the Sherlock Holmes LMS riddle. It's the world upside down.
+</p>
 
-			<p>
-				The 5 fleets involved in the Spring 1902 convoy are F Ank in the Aegean, F Tri in the Ionian, F Nap in the Tyrrhenian, F Bre in the Western Mediterranean and F Lon in the Mid-Atlantic. All different nationalities, which bodes well for later dislodgements. We will need to raise at least one more French fleet to deal with the Turkish fleet, as neither Turkey nor Italy can be turned into sniper countries.
-			</p>
+<p>
+You could say: "Well, it has to be so, otherwise A Lvp wouldn't become the Last Man Standing." But that would be wrong. The French army in Gascony can just as well attack Burgundy as support an attack on Burgundy. No, the reason is quite simply that this was the direction in which a solution was first sought. Can Turkey be convoyed to France? How many fleets would be involved? When could they be in place?
+</p>
 
-			<p>
-				Looking at the home centers that have changed hands, the most significant one is Warsaw which became German, even though Germany lost all its home centers and no German unit remains on the After W03 map. We can surmise that Germany was a sniper in the first two years and lost its last unit through dislodgement in the third year. Even if Munich still had been German during 1903, its loss would not lead to a German disband, as there would still need to be one German left on account of Warsaw. Munich therefore is more useful if it's captured by France, the only true sniper power on this map. This allows for a French fleet build in W01 and the removal of an obsolete French unit in W03.
-			</p>
+<p>
+As it happens, the earliest convoy straight from Turkey into France can occur in Spring 1902, involving 5 fleets in order to cross 5 sea spaces. Actually 4 might suffice if you aim for Spain and move into France in Fall. Or you could convoy to Tunis in Spring and then use a second convoy to get to the French Atlantic or Mediterranean coast. This too would require a total of 4 fleets, but spread over two seasons. The important thing is to do it early, so that there are still enough fleets in the game, before they start killing each other off. That means in 1902. 
+</p>
 
-			<p>
-				Adding to that Sevastopol became Turkish and Constantinople remained Turkish, it's easy to see that as Russia lost two home centers it would be forced to disband F Sev and one more unit. F Stp would be the natural choice, as the greater fleet action is in the Med, leaving few fleets in the North to deal with it later on. A condition for this double removal is that Berlin only gets taken in 1902. If likewise Kiel's capture in postponed to the second year, Germany can field two armies in the East to deal with two raiders in the area, one being the Turkish army that took Sevastopol (A Smy moving through Armenia or A Con convoyed through the Black Sea from Bulgaria!), the other either a Russian or Austrian army. Given that an Austrian moving to Galicia in S01 can already be sandwiched between a Russian and German army, the choice is clear.
-			</p>
+<p>
+The 5 fleets involved in the Spring 1902 convoy are F Ank in the Aegean, F Tri in the Ionian, F Nap in the Tyrrhenian, F Bre in the Western Mediterranean and F Lon in the Mid-Atlantic. All different nationalities, which bodes well for later dislodgements. We will need to raise at least one more French fleet to deal with the Turkish fleet, as neither Turkey nor Italy can be turned into sniper countries.
+</p>
 
-			<p>
-				The path of the Austrian army that we see on the W03 map is pretty clear. First to Venice, then to Marseilles and finally to Burgundy. But how to handle the remaining Northern fleets, one German, two English? Remember that the two German armies were used as snipers, so F Kie must survive into 03, preferably close to the French coast. An extra French fleet in the area would be advantageous, but France took only one center so far (Munich), and pledged it to build a fleet in Marseilles. That shouldn't be a hindrance though. We can dislodge A Mar in Piedmont by converging the two Italian armies there. As long as Venice is cleared before the Austrian arrives, we can then still disband one Italian army and build that second French fleet in Brest. The rest is a question of putting the pieces of the puzzle together.
-			</p>
+<p>
+Looking at the home centers that have changed hands, the most significant one is Warsaw which became German, even though Germany lost all its home centers and no German unit remains on the After W03 map. We can surmise that Germany was a sniper in the first two years and lost its last unit through dislodgement in the third year. Even if Munich still had been German during 1903, its loss would not lead to a German disband, as there would still need to be one German left on account of Warsaw. Munich therefore is more useful if it's captured by France, the only true sniper power on this map. This allows for a French fleet build in W01 and the removal of an obsolete French unit in W03.
+</p>
 
-			<p>
-				<b>1901.</b> The fleets glide into position. Like a piece of ballet, everyone knows its moves.
-			</p>
+<p>
+Adding to that Sevastopol became Turkish and Constantinople remained Turkish, it's easy to see that as Russia lost two home centers it would be forced to disband F Sev and one more unit. F Stp would be the natural choice, as the greater fleet action is in the Med, leaving few fleets in the North to deal with it later on. A condition for this double removal is that Berlin only gets taken in 1902. If likewise Kiel's capture in postponed to the second year, Germany can field two armies in the East to deal with two raiders in the area, one being the Turkish army that took Sevastopol (A Smy moving through Armenia or A Con convoyed through the Black Sea from Bulgaria!), the other either a Russian or Austrian army. Given that an Austrian moving to Galicia in S01 can already be sandwiched between a Russian and German army, the choice is clear.
+</p>
 
-			<p>
-				<b>1902.</b> A <i>grand &eacute;cart</i> from Smyrna to Brest, followed by a <i>pirouette</i> surprising both English sister fleets. Sissies.
-			</p>
+<p>
+The path of the Austrian army that we see on the W03 map is pretty clear. First to Venice, then to Marseilles and finally to Burgundy. But how to handle the remaining Northern fleets, one German, two English? Remember that the two German armies were used as snipers, so F Kie must survive into 03, preferably close to the French coast. An extra French fleet in the area would be advantageous, but France took only one center so far (Munich), and pledged it to build a fleet in Marseilles. That shouldn't be a hindrance though. We can dislodge A Mar in Piedmont by converging the two Italian armies there. As long as Venice is cleared before the Austrian arrives, we can then still disband one Italian army and build that second French fleet in Brest. The rest is a question of putting the pieces of the puzzle together.
+</p>
 
-			<p>
-				<b>1903.</b> <i>Coupez, coupez.</i> Like scissors the French snipers snap away at the board, with some Austrian help.
-			</p>
+<div class="game_img">
+<a id="lms_lvp-par.1901.anchor" href="images/lms_lvp-par5.gif" target="_blank">
+<img class="map_img" id="lms_lvp-par.1901.image" src="images/lms_lvp-par5.gif" width="50%" alt="Army Liverpool to Paris, After Winter 1901"/><br/>
+<b id="lms_lvp-par.1901.text">Army Liverpool to Paris, After Winter 1901</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-par.1901" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-par{0}.gif', 'Army Liverpool to Paris, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5" selected>After Winter 1901</option>
+</select>
+</div>
 
-			<p>
-				<b>1904.</b> <i>Tournez, pliez et pointez</i>. The final applause. The curtain closes.
-			</p>
+<p>
+<b>1901.</b> The fleets glide into position. Like a piece of ballet, everyone knows its moves.
+</p>
 
-			<blockquote><i><a href="lms_lvp-par.pdf" target="_blank">Click here</a> for the complete solution.</i></blockquote>
+<div class="game_img">
+<a id="lms_lvp-par.1902.anchor" href="images/lms_lvp-par9.gif" target="_blank">
+<img class="map_img" id="lms_lvp-par.1902.image" src="images/lms_lvp-par9.gif" width="50%" alt="Army Liverpool to Paris, After Winter 1902"/><br/>
+<b id="lms_lvp-par.1902.text">Army Liverpool to Paris, After Winter 1902</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-par.1902" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-par{0}.gif', 'Army Liverpool to Paris, {0}')">
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+</select>
+</div>
 
-			<h3>
-				Austrian army to Brest
-			</h3>
+<p>
+<b>1902.</b> A <i>grand &eacute;cart</i> from Smyrna to Brest, followed by a <i>pirouette</i> surprising both English sister fleets. Sissies.
+</p>
 
-			<p>
-				Apart from the Austrian army in Brest and the colors of the dots, we are told that there's a fleet in the Mid-Atlantic Ocean in every [movement] season, except the first and the last. Which means that of the 3 or 4 (more likely) units remaining at the start of the last year, one will be a fleet in the Mid-Atlantic. It could be a French fleet or foreign. 
-			</p>
+<div class="game_img">
+<a id="lms_lvp-par.1903.anchor" href="images/lms_lvp-par13.gif" target="_blank">
+<img class="map_img" id="lms_lvp-par.1903.image" src="images/lms_lvp-par13.gif" width="50%" alt="Army Liverpool to Paris, After Winter 1903"/><br/>
+<b id="lms_lvp-par.1903.text">Army Liverpool to Paris, After Winter 1903</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-par.1903" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-par{0}.gif', 'Army Liverpool to Paris, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
 
-			<p>
-				Now, take a look at the centers closest to Brest. There's Paris of course, which is colored red and therefore the starting place of the Austrian army. There's London, which sits across the Channel. A fleet there could only move to the Channel, from where it can attack Brest, but not be attacked by the Austrian dude, as armies are useless against fleets in the water. And if it would have been an army in London, either it would have to be convoyed, which would require the French fleet to be in the Channel instead of the Mid-Atlantic (no fourth unit would be allowed) or it would need to get dislodged by the French sniper fleet with the help of an enemy fleet in the Channel, getting us in the same situation as before. So London is not an option. Munich is too far, being three moves removed from Brest.
-			</p>
+<p>
+<b>1903.</b> <i>Coupez, coupez.</i> Like scissors the French snipers snap away at the board, with some help from Austrians and Turks.
+</p>
 
-			<p>
-				That leaves us Marseilles, a green dot. In Spring the Italian army in Marseilles attacks some unit in Gascony, supported by a French fleet in Mid-Atlantic, while the Austrian army moves to Brest. In Fall Austria supports France against Italy. France loses its last center, disbands the fleet and the case is closed. Well, we only need to figure out the first three years and the mystery guy in Gascony. There is of course a distant possibility that no second center needed to be captured, but in the previous solutions we've learned that more is better, as every dot allows for more snipers to be around in 1903 and thus also more raiders.
-			</p>
+<div class="game_img">
+<a id="lms_lvp-par.1904.anchor" href="images/lms_lvp-par17.gif" target="_blank">
+<img class="map_img" id="lms_lvp-par.1904.image" src="images/lms_lvp-par17.gif" width="50%" alt="Army Liverpool to Paris, After Winter 1904"/><br/>
+<b id="lms_lvp-par.1904.text">Army Liverpool to Paris, After Winter 1904</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-par.1904" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-par{0}.gif', 'Army Liverpool to Paris, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
 
-			<p>
-				Let's turn to the starting board now and work our way forward. We see that different from before it's now Russia taking a Turkish center. With assistance from F Nap, F Sev could attack Smyrna in S02 and take care of both Turkish armies. That would preempt the need for a convoy. The question is whether the French fleets (indeed, plural again) can get close enough to finish off all Southern fleets. Fortunately they can by converging on the Ionian Sea at the end of 1903. Since this will leave two French fleets floating in the Med, two French centers should change hands, justifying the capture of Marseilles. And since there still should be a French fleet in the Mid-Atlantic, we'd better make sure to build two in W01 again.
-			</p>
+<p>
+<b>1904.</b> <i>Tournez, pliez et pointez</i>. The final applause. The curtain closes.
+</p>
 
-			<p>
-				Munich is again a French target in 1901, as Austria will capture it in 1902 before heading to Paris. But can we take out A Mar? Do we need to? Indeed, there's this remarkable fact that Vienna became Italian. This can only be achieved by A Ven in 1901. This army can return to Venice in 1902 and move on to Marseilles to become a part of the final battle. Which means Venice might as well be temporarily captured by France to provide for the second fleet build.
-			</p>
+<blockquote><i><a href="lms_lvp-par.pdf" target="_blank">Click here</a> for the complete solution.</i></blockquote>
 
-			<p>
-				The pieces are falling into place. But we didn't talk about the North yet. Germany is again down to one center, but this time it's Kiel, which did not become English. Indeed, England took no center whatsoever. Berlin became Russian again. But because Russia already targets Constantinople in 1901, we might as well take Berlin in the same year. Which allows us to disband two German units out of the gate. Which two? <i>Donnerwetter</i>, F Kie and A Ber of course, who can practice a routine not seen since the days of the <a href="W2012A/Holmes/devonshire.htm">Devonshire riddle</a>, attacking and dislodging F Stp in Livonia. That takes care of two fleets, leaving only England to worry about. It also allows us to send A Mun to France to assist in the disposal of England. In fact A Mun could well be the mysterious fourth man in 1904. Let's play it out.
-			</p>
+<h3>
+Austrian army to Brest
+</h3>
 
-			<p>
-				<b>1901.</b> France slashes out in all directions in an audacious center grab not seen since the days of Napoleon Bonaparte. <i>En avant les enfants de la patrie.</i>
-			</p>
+<p>
+Apart from the Austrian army in Brest and the colors of the dots, we are told that there's a fleet in the Mid-Atlantic Ocean in every [movement] season, except the first and the last. Which means that of the 3 or 4 (more likely) units remaining at the start of the last year, one will be a fleet in the Mid-Atlantic. It could be a French fleet or foreign. 
+</p>
 
-			<p>
-				<b>1902.</b> England steers full tilt towards France, but gets beaten back. Admiral Nelson is having a bad day.
-			</p>
+<p>
+Now, take a look at the centers closest to Brest. There's Paris of course, which is colored red and therefore the starting place of the Austrian army. There's London, which sits across the Channel. A fleet there could only move to the Channel, from where it can attack Brest, but not be attacked by the Austrian dude, as armies are useless against fleets in the water. And if it would have been an army in London, either it would have to be convoyed, which would require the French fleet to be in the Channel instead of the Mid-Atlantic (no fourth unit would be allowed) or it would need to get dislodged by the French sniper fleet with the help of an enemy fleet in the Channel, getting us in the same situation as before. So London is not an option. Munich is too far, being three moves removed from Brest.
+</p>
 
-			<p>
-				<b>1903.</b> France gets attacked from all sides by a motley combination of former allies and enemies. Napoleon readies himself to make a final stand on the rock of Brest.
-			</p>
+<p>
+That leaves us Marseilles, a green dot. In Spring the Italian army in Marseilles attacks some unit in Gascony, supported by a French fleet in Mid-Atlantic, while the Austrian army moves to Brest. In Fall Austria supports France against Italy. France loses its last center, disbands the fleet and the case is closed. Well, we only need to figure out the first three years and the mystery guy in Gascony. There is of course a distant possibility that no second center needed to be captured, but in the previous solutions we've learned that more is better, as every dot allows for more snipers to be around in 1903 and thus also more raiders.
+</p>
 
-			<p>
-				<b>1904.</b> It's not Waterloo, but the French are defeated anyway. It's the end of <i>La R&eacute;volution</i> and of <i>L'Empire Fran&ccedil;ais</i>. The king returns. <i>Vive le Roi.</i> Not for very long though. The wheels of History will inexorably roll on towards the reestablishment of <i>La R&eacute;publique</i>.
-			</p>
+<p>
+Let's turn to the starting board now and work our way forward. We see that different from before it's now Russia taking a Turkish center. With assistance from F Nap, F Sev could attack Smyrna in S02 and take care of both Turkish armies. That would preempt the need for a convoy. The question is whether the French fleets (indeed, plural again) can get close enough to finish off all Southern fleets. Fortunately they can by converging on the Ionian Sea at the end of 1903. Since this will leave two French fleets floating in the Med, two French centers should change hands, justifying the capture of Marseilles. And since there still should be a French fleet in the Mid-Atlantic, we'd better make sure to build two in W01 again.
+</p>
 
-			<blockquote><i><a href="lms_vie-bre.pdf" target="_blank">Click here</a> for the complete solution.</i></blockquote>
+<p>
+Munich is again a French target in 1901, as Austria will capture it in 1902 before heading to Paris. But can we take out A Mar? Do we need to? Indeed, there's this remarkable fact that Vienna became Italian. This can only be achieved by A Ven in 1901. This army can return to Venice in 1902 and move on to Marseilles to become a part of the final battle. Which means Venice might as well be temporarily captured by France to provide for the second fleet build.
+</p>
 
-		<div class="info_block padded_body">
-			<div>
-				<br/>
-				<br/>
-			</div>
+<p>
+The pieces are falling into place. But we didn't talk about the North yet. Germany is again down to one center, but this time it's Kiel, which did not become English. Indeed, England took no center whatsoever. Berlin became Russian again. But because Russia already targets Constantinople in 1901, we might as well take Berlin in the same year. Which allows us to disband two German units out of the gate. Which two? <i>Donnerwetter</i>, F Kie and A Ber of course, who can practice a routine not seen since the days of the <a href="W2012A/Holmes/devonshire.htm">Devonshire riddle</a>, attacking and dislodging F Stp in Livonia. That takes care of two fleets, leaving only England to worry about. It also allows us to send A Mun to France to assist in the disposal of England. In fact A Mun could well be the mysterious fourth man in 1904. Let's play it out.
+</p>
 
-			<div>
-				<table>
-	  				<tbody>
-						<tr>
-						    <td>
-						    	<!-- Insert Contact Information! -->
-						    	<a href="mailto:woelpad@gmail.com">
-						    		<img src="../../Common/letter.gif" alt="Email writer thumbnail">
-						    	</a> 
-						    </td>
-						    <td>
-						    	<strong>
-						    		Mario Huys <br/>
-						    		(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
-						    	</strong> 
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
+<div class="game_img">
+<a id="lms_vie-bre.1901.anchor" href="images/lms_vie-bre5.gif" target="_blank">
+<img class="map_img" id="lms_vie-bre.1901.image" src="images/lms_vie-bre5.gif" width="50%" alt="Army Vienna to Brest, After Winter 1901"/><br/>
+<b id="lms_vie-bre.1901.text">Army Vienna to Brest, After Winter 1901</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_vie-bre.1901" class="inputBox" onchange="changeMap(this, 'images/lms_vie-bre{0}.gif', 'Army Vienna to Brest, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5" selected>After Winter 1901</option>
+</select>
+</div>
 
-			<div>
-				<p>
-					<i>
-						If you wish to e-mail feedback on this article to the author, and clicking 
-						on the envelope above does not work for you, feel free to use the 
-						
-						<a href="../Common/DearDP.html">
-							<q><strong>Dear DP...</strong></q>
-						</a> 
+<p>
+<b>1901.</b> France slashes out in all directions in an audacious center grab not seen since the days of Napoleon Bonaparte. <i>En avant les enfants de la patrie.</i>
+</p>
 
-						mail interface.
-					</i> 
-				</p>
-			</div>
+<div class="game_img">
+<a id="lms_vie-bre.1902.anchor" href="images/lms_vie-bre9.gif" target="_blank">
+<img class="map_img" id="lms_vie-bre.1902.image" src="images/lms_vie-bre9.gif" width="50%" alt="Army Vienna to Brest, After Winter 1902"/><br/>
+<b id="lms_vie-bre.1902.text">Army Vienna to Brest, After Winter 1902</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_vie-bre.1902" class="inputBox" onchange="changeMap(this, 'images/lms_vie-bre{0}.gif', 'Army Vienna to Brest, {0}')">
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+</select>
+</div>
 
-		</div>
+<p>
+<b>1902.</b> England steers full tilt towards France, but gets beaten back. Admiral Nelson is having a bad day.
+</p>
 
-		<div class="req_link_container">
-			<hr class="hr_rule bot_hr">
+<div class="game_img">
+<a id="lms_vie-bre.1903.anchor" href="images/lms_vie-bre13.gif" target="_blank">
+<img class="map_img" id="lms_vie-bre.1903.image" src="images/lms_vie-bre13.gif" width="50%" alt="Army Vienna to Brest, After Winter 1903"/><br/>
+<b id="lms_vie-bre.1903.text">Army Vienna to Brest, After Winter 1903</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_vie-bre.1903" class="inputBox" onchange="changeMap(this, 'images/lms_vie-bre{0}.gif', 'Army Vienna to Brest, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
 
-			<div class="req_link left_link">
-				<a href="../..">
-					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
-				</a>
-			</div>
+<p>
+<b>1903.</b> France gets attacked from all sides by a motley combination of former allies and enemies. Napoleon readies himself to make a final stand on the rock of Brest.
+</p>
 
-			<div class="req_link right_link">
-				<a href="..">
-					<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
-				</a>
-			</div>
-		</div>
+<div class="game_img">
+<a id="lms_vie-bre.1904.anchor" href="images/lms_vie-bre17.gif" target="_blank">
+<img class="map_img" id="lms_vie-bre.1904.image" src="images/lms_vie-bre17.gif" width="50%" alt="Army Vienna to Brest, After Winter 1904"/><br/>
+<b id="lms_vie-bre.1904.text">Army Vienna to Brest, After Winter 1904</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_vie-bre.1904" class="inputBox" onchange="changeMap(this, 'images/lms_vie-bre{0}.gif', 'Army Vienna to Brest, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
 
-	</body>
+<p>
+<b>1904.</b> It's not Waterloo, but the French are defeated anyway. It's the end of <i>La R&eacute;volution</i> and of <i>L'Empire Fran&ccedil;ais</i>. The king returns. <i>Vive le Roi.</i> Not for very long though. The wheels of History will inexorably roll on towards the reestablishment of <i>La R&eacute;publique</i>.
+</p>
+
+<blockquote><i><a href="lms_vie-bre.pdf" target="_blank">Click here</a> for the complete solution.</i></blockquote>
+
+<!-- Content Body End -->
+</div>
+
+<div class="info_block padded_body">
+<div>
+<br/>
+<br/>
+</div>
+
+<div>
+<table>
+<tbody>
+<tr>
+<td>
+<!-- Insert Contact Information! -->
+<a href="mailto:woelpad@gmail.com">
+<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+</a> 
+</td>
+<td>
+<strong>
+Mario Huys <br/>
+(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+</strong> 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="dear_dp">
+<p>
+<i>
+If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the 
+
+<a href="../Common/DearDP.html">
+<q><strong>Dear DP...</strong></q>
+</a> 
+
+mail interface.
+</i> 
+</p>
+</div>
+
+</div>
+
+<div class="req_link_container">
+<hr class="hr_rule bot_hr">
+
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+</div>
+
+</body>
 </html>
