@@ -18,6 +18,11 @@ body {margin-bottom: 0px;}
  */
 .centered {text-align: center;}
 
+/* Justifies text within a div. Used in the header of the 
+ * article
+ */
+.justified {text-align: justify;}
+
 /* Removes the border of a div.
  * 
  */
