@@ -1,21 +1,29 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<TITLE>DP S2014M: The Machiavelli Loan Repayment JavaScript Application</TITLE>
+
+<HTML><HEAD><TITLE>DP S2014M: The Machiavelli Loan Repayment JavaScript Application</TITLE>
+
 <!-- ---------------------Header---------------------------------- -->
 <!-- ------------------------------------------------------------- -->
+
 <!---- Authored by  ---->
 <!---- Published on the Pouch Zine with permissions ---->
 <!---- Created on September 23, 2006 ---->
+
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <script type="text/javascript">
 function Oa(c) { return "0" === c || "." === c || "+" === c || "-" === c || "1" <= c && "9" >= c ? !0 : !1 } function Pa(c) { var g, b, l; if (null === c || "undefined" === typeof c) return null; if (0 >= c.length) return ""; g = 0; for (b = -1; 0 > b && g < c.length; g++) l = c[g], " " !== l && "\t" !== l && "\n" !== l && "\r" !== l && (b = g); 0 > b && (b = 0); return c.substring(b) } function I(c) { var g, b, l; if (null === c || "undefined" === typeof c || null === (l = Pa(c))) return 0; g = 0; for (b = -1; 0 > b && g < l.length; g++) 0 === g && ("+" === l[g] || "-" === l[g]) || Oa(l[g]) || (b = g); if (0 >= c.length) return 0; ret = parseInt(c, 10); return isNaN(ret) ? 0 : ret } function MyOnChangeTurn() { var c, g, b, l, h, J = ["Spring", "Summer", "Fall"]; if (null !== (h = document.getElementById("InputTurn")) && "undefined" !== typeof h) { if (4 <= (c = h.selectedIndex) || 0 > c) c = 0, h.selectedIndex = c; l = 3 === c ? 1 : 0; b = 3 === c ? 0 : c; if (null !== (h = document.getElementById("InputYear")) && "undefined" !== typeof h) for (0 > (g = I(h.value)) && (g = 0, h.value = g.toString()), c = 0; 6 > c; c++) null !== (h = document.getElementById("LabelDebt" + c.toString())) && "undefined" !== typeof h && (h.innerHTML = J[(c + b) % J.length] + " " + (g + l + Math.floor((c + b) / J.length)).toString()) } } function MyOnLoad() { MyOnChangeTurn() }; function MyButtonPress() { var c, g, b, l, h, J, ea, fa, r, f, B, m, d, e, a, n = [], s = [], N, F, W, Q, C, u, k, w, D, ga, ha, R, p, y, G, ia, ja, S, q, A, K, ka, la, T, z, t, E, O, ma, na, oa, v, H, U, pa, qa, ra, x, L, sa, ta, ua, M, va, P, X, wa, xa, ya, Y, za, Aa, Ba, Z, Ca, Da, Ea, Fa, $, Ga, Ha, Ia, aa, Ja, Ka, La, ba, Ma, Na, V, ca, da; if (null !== (a = document.getElementById("InputTurn")) && "undefined" !== typeof a) { if (4 <= (f = a.selectedIndex) || 0 > f) f = 0, a.selectedIndex = f, alert("Incorrect Turn Submission. This has been automatically corrected."); if (null !== (a = document.getElementById("InputYear")) && "undefined" !== typeof a && (0 > (r = I(a.value)) && (r = 0, a.value = r.toString(), alert("Year entry cannot be negative. This has been automatically corrected.")), N = r.toString(), F = (1 + r).toString(), W = (2 + r).toString(), null !== (a = document.getElementById("InputWinterPhaseSave")) && "undefined" !== typeof a && (0 > (B = I(a.value)) && (B = 0, a.value = B.toString(), alert("Your winter savings cannot be negative. This has been automatically corrected.")), null !== (a = document.getElementById("InputTreasury")) && "undefined" !== typeof a))) { 0 > (r = I(a.value)) && (r = 0, a.value = r.toString(), alert("Treasury entry cannot be negative. This has been automatically corrected.")); for (b = 0; 16 > b; b++) n[b] = 0, s[b] = 0; l = 3 === f ? 0 : f; for (b = 0; 6 > b; b++) h = b % 3, h = h < 3 - l ? h + l + 4 * (3 > b ? 1 : 2) : h - (3 - l) + 4 * (3 > b ? 2 : 3), null !== (a = document.getElementById("InputPrincipal" + b.toString())) && "undefined" !== typeof a && 0 > (n[h] = I(a.value)) && (n[h] = 0, a.value = n[h].toString()), null !== (a = document.getElementById("InputInterest" + b.toString())) && "undefined" !== typeof a && 0 > (s[h] = I(a.value)) && (s[h] = 0, a.value = s[h].toString()); if (25 < B) { alert("The program does not cater for savings of more than " + (25).toString() + " ducats. This has been automatically corrected."); if (null === (a = document.getElementById("InputWinterPhaseSave")) || "undefined" === typeof a) return; B = 25; a.value = B.toString() } u = 0; for (P = -1; 25 >= u; u++) if (!(3 !== f && 0 < u || u > B)) for (z = 0; 25 >= z; z++) if (!(3 === f && 0 < z || z > B || u + z !== B)) for (k = 0; 25 >= k; k++) if (ga = 5 * Math.floor(k / 5), ha = k % 5, R = Math.round(ga / 5) + Math.round(ha / 2), (c = 0 < f && 3 > f ? !1 : !0) || !(0 < k)) { D = w = 0; if (c) { l = !0; m = 3 === f ? u : r; b = d = 4; for (e = 0; 16 > b; b++) 3 !== b % 4 && (e += n[b]); 3 !== d % 4 && (w = n[d] + s[d]) > m && (w = m); D = n[d] + s[d] - w; if (25 < k + e - w || k < D) continue } else l = !1; for (p = 0; 25 >= p; p++) if (ia = 5 * Math.floor(p / 5), ja = p % 5, S = Math.round(ia / 5) + Math.round(ja / 2), (c = 1 < f && 3 > f ? !1 : !0) || !(0 < p)) { G = y = 0; if (c) { h = !0; m = (3 === f ? u : r) + k - w - D; b = d = 5; for (e = 0; 16 > b; b++) 3 !== b % 4 && (e += n[b]); e += k; 3 !== d % 4 && (y = n[d] + s[d]) > m && (y = m); G = n[d] + s[d] - y; if (25 < p + e - y || p < G) continue } else h = !1; for (q = 0; 25 >= q; q++) if (ka = 5 * Math.floor(q / 5), la = q % 5, T = Math.round(ka / 5) + Math.round(la / 2), (c = 2 < f && 3 > f ? !1 : !0) || !(0 < q)) { K = A = 0; if (c) { J = !0; m = (3 === f ? u : r) + k - w - D + p - y - G; b = d = 6; for (e = 0; 16 > b; b++) 3 !== b % 4 && (e += n[b]); e += k + p; 3 !== d % 4 && (A = n[d] + s[d]) > m && (A = m); K = n[d] + s[d] - A; if (25 < q + e - A || q < K) continue } else J = !1; for (t = 0; 25 >= t; t++) if (ma = 5 * Math.floor(t / 5), na = t % 5, oa = Math.round(ma / 5) + Math.round(na / 2), (c = 0 !== f && 3 !== f ? !0 : !1) || !(0 < t)) { O = E = 0; if (c) { ea = !0; m = (3 === f ? u : r) + z + k - w - D + p - y - G + q - A - K; b = d = 8; for (e = 0; 16 > b; b++) 3 !== b % 4 && (e += n[b]); e += k + p + q; 3 !== d % 4 && (E = n[d] + s[d] + k + R) > m && (E = m); O = n[d] + s[d] + k + R - E; if (25 < t + e - E || t < O) continue } else ea = !1; for (v = 0; 25 >= v; v++) if (pa = 5 * Math.floor(v / 5), qa = v % 5, ra = Math.round(pa / 5) + Math.round(qa / 2), (c = 0 !== f && 3 !== f ? !0 : !1) || !(0 < v)) { U = H = 0; if (c) { fa = !0; m = (3 === f ? u : r) + z + k - w - D + p - y - G + q - A - K + t - E - O; b = d = 9; for (e = 0; 16 > b; b++) 3 !== b % 4 && (e += n[b]); e += k + p + q + t; 3 !== d % 4 && (H = n[d] + s[d] + p + S) > m && (H = m); U = n[d] + s[d] + p + S - H; if (25 < v + e - H || v < U) continue } else fa = !1; for (x = 0; 25 >= x; x++) if (sa = 5 * Math.floor(x / 5), ta = x % 5, ua = Math.round(sa / 5) + Math.round(ta / 2), (c = 0 !== f && 3 !== f ? !0 : !1) || !(0 < x)) { b = L = 0; if (c) { c = !0; m = (3 === f ? u : r) + z + k - w - D + p - y - G + q - A - K + t - E - O + v - H - U; b = d = 10; for (e = 0; 16 > b; b++) 3 !== b % 4 && (e += n[b]); e += k + p + q + t + v; 3 !== d % 4 && (L = n[d] + s[d] + q + T) > m && (L = m); b = n[d] + s[d] + q + T - L; if (25 < x + e - L || x < b) continue } else c = !1; e = R + S + T + oa + ra + ua; m = (3 === f ? u : r) + z + k - w - D + p - y - G + q - A - K + t - E - O + v - H - U + x - L - b; for (Q = d = M = b = 0; 6 > b; b++) { switch (b) { case 0: C = k + R; g = l; break; case 1: C = p + S; g = h; break; case 2: C = q + T; g = J; break; case 3: C = t + oa; g = ea; break; case 4: C = v + ra; g = fa; break; case 5: C = x + ua; g = c; break; default: continue } g && (M += C, d += C * C, Q++) } 0 >= Q ? d = 0 : (M /= Q, d = d / Q - M * M); b = !1; if (0 > P || e < V || e === V && d < da || e === V && d === da && m > ca || e === V && d === da && m === ca && k + p + q + t + v + x < P + ya + Ba + Fa + Ia + La) b = !0; b && (va = u, P = k, X = w, wa = ga, xa = ha, ya = p, Y = y, za = ia, Aa = ja, Ba = q, Z = A, Ca = ka, Da = la, Ea = z, Fa = t, $ = E, Ga = ma, Ha = na, Ia = v, aa = H, Ja = pa, Ka = qa, La = x, ba = L, Ma = sa, Na = ta, V = e, ca = m, da = d) } } } } } } if (null !== (a = document.getElementById("Orders")) && "undefined" !== typeof a) if (0 > P) a.innerHTML = "A solution could not be found.<br /><br />Please make sure you have entered your present treasury correctly or consider increasing your winter savings.<br /><br />If these are correct then there is no solution to your debt problems."; else { a.innerHTML = ""; 0 < va && (a.innerHTML += "Winter " + N + "<br />Save " + va.toString() + " ducats of your present treasury of " + r.toString() + " ducats<br /><br />"); if (0 < X || 0 < P) a.innerHTML += "Spring " + (0 === f ? N : F) + "<br />", 0 < X && (a.innerHTML += "Pay " + X.toString() + "d to Bank<br />"), 0 < wa && (a.innerHTML += "Borrow " + wa.toString() + "d for 1 Year<br />"), 0 < xa && (a.innerHTML += "Borrow " + xa.toString() + "d for 2 Years<br />"), a.innerHTML += "<br />"; if (0 < Y || 0 < ya) a.innerHTML += "Summer " + (1 >= f ? N : F) + "<br />", 0 < Y && (a.innerHTML += "Pay " + Y.toString() + "d to Bank<br />"), 0 < za && (a.innerHTML += "Borrow " + za.toString() + "d for 1 Year<br />"), 0 < Aa && (a.innerHTML += "Borrow " + Aa.toString() + "d for 2 Years<br />"), a.innerHTML += "<br />"; if (0 < Z || 0 < Ba) a.innerHTML += "Fall " + (2 >= f ? N : F) + "<br />", 0 < Z && (a.innerHTML += "Pay " + Z.toString() + "d to Bank<br />"), 0 < Ca && (a.innerHTML += "Borrow " + Ca.toString() + "d for 1 Year<br />"), 0 < Da && (a.innerHTML += "Borrow " + Da.toString() + "d for 2 Years<br />"), a.innerHTML += "<br />"; 0 < Ea && (a.innerHTML += "Winter " + (2 >= f ? N : F) + "<br />Save " + Ea.toString() + " ducats<br /><br />"); if (0 < $ || 0 < Fa) a.innerHTML += "Spring " + (2 >= f ? F : W) + "<br />", 0 < $ && (a.innerHTML += "Pay " + $.toString() + "d to Bank<br />"), 0 < Ga && (a.innerHTML += "Borrow " + Ga.toString() + "d for 1 Year<br />"), 0 < Ha && (a.innerHTML += "Borrow " + Ha.toString() + "d for 2 Years<br />"), a.innerHTML += "<br />"; if (0 < aa || 0 < Ia) a.innerHTML += "Summer " + (2 >= f ? F : W) + "<br />", 0 < aa && (a.innerHTML += "Pay " + aa.toString() + "d to Bank<br />"), 0 < Ja && (a.innerHTML += "Borrow " + Ja.toString() + "d for 1 Year<br />"), 0 < Ka && (a.innerHTML += "Borrow " + Ka.toString() + "d for 2 Years<br />"), a.innerHTML += "<br />"; if (0 < ba || 0 < La) a.innerHTML += "Fall " + (2 >= f ? F : W) + "<br />", 0 < ba && (a.innerHTML += "Pay " + ba.toString() + "d to Bank<br />"), 0 < Ma && (a.innerHTML += "Borrow " + Ma.toString() + "d for 1 Year<br />"), 0 < Na && (a.innerHTML += "Borrow " + Na.toString() + "d for 2 Years<br />"), a.innerHTML += "<br />"; a.innerHTML += "Spare Cash At End: " + ca.toString() + " ducats" } } } };
 </script>
+
 </head>
+
 <body style="background-color: rgb(255, 255, 255);" onload="MyOnLoad();">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton2.gif" align="left" border="0"></a>
-<a href="/Zine/S2014M/"><img src="/Zine/Common/toS2014M.gif" align="right" border="0"></a>
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toS2014M.gif" align="right" border="0"></a>
 <br clear="all">
 <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
+
+
 <CENTER>
 <H1>MACHIAVELLI:<BR/>LOAN REPAYMENT<BR/>JAVASCRIPT APPLICATION</H1>
 <h2>by Jon Ashman</h2>
@@ -25,6 +33,9 @@ function Oa(c) { return "0" === c || "." === c || "+" === c || "-" === c || "1" 
   <TABLE WIDTH="95%" BORDER="0" ALIGN="CENTER">
       <TR>
 	      <TD ALIGN="JUSTIFY">
+
+
+
 <p>We have all read the <b>Machiavelli</b> rules on debt repayment and thought we understood them.
     However, I am always surprised how many people believe bankruptcy is inevitable,
     thinking they will be unable to repay their debt due to the 25d principal limit,
@@ -177,22 +188,25 @@ function Oa(c) { return "0" === c || "." === c || "+" === c || "-" === c || "1" 
     This will maximise the amount of additional loans you can take out in a turn.
     This will be explained more fully in a further article.
 </p>
+
 <BR><BR><TABLE>
   <TBODY>
   <TR vAlign=bottom>
     <TD><A href="mailto:jonashman17@yahoo.com"><IMG 
-      src="/Zine/Common/letter.gif" border=0></A> </TD>
+      src="../../Common/letter.gif" border=0></A> </TD>
     <TD><STRONG>Jon Ashman<BR/>(<a href="mailto:jonashman17@yahoo.com">jonashman17@yahoo.com</a>)</STRONG> 
   </TD></TR></TBODY></TABLE>
 <P>
 <I>If you wish to e-mail feedback on this article to the author, and clicking 
 on the envelope above does not work for you, feel free to use the <A 
-href="/Zine/S2014M/Common/DearDP.html">"<B>Dear 
+href="../Common/DearDP.html">"<B>Dear 
 DP...</B>"</A> mail interface.</I> 
 </table><P>
 <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton2.gif" align="left" border="0"></a>
-<a href="/Zine/S2014M/"><img src="/Zine/Common/toS2014M.gif" align="right" border="0"></a>
+
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
+<a href="../"><img src="../../Common/toS2014M.gif" align="right" border="0"></a>
+
+
 </BODY></HTML>
-<!--
--->
+

@@ -1,0 +1,689 @@
+<title>DP Online: The Diplomacy Openings Library</title>
+
+<BODY BGCOLOR="#ffffff">
+<script language=javascript>
+<!--
+	power = 'Italy'
+	var varName = new Array()
+	var varDesc = new Array()
+	var u0 = new Array()
+	var u1 = new Array()
+	var u2 = new Array()
+	if (power == 'Russia') var u3 = new Array()
+	
+varName[0] = "itl-mcgivern"
+u0[0] = 1
+u1[0] = 0
+u2[0] = 1
+varName[1] = "itl-boh"
+u0[1] = 1
+u1[1] = 0
+u2[1] = 1
+varName[2] = "itl-antihedlep"
+u0[2] = 0
+u1[2] = 0
+u2[2] = 3
+varName[3] = "itl-ill"
+u0[3] = 0
+u1[3] = 0
+u2[3] = 3
+varName[4] = "itl-stablep"
+u0[4] = 0
+u1[4] = 0
+u2[4] = 2
+varName[5] = "itl-key"
+u0[5] = 0
+u1[5] = 0
+u2[5] = 2
+varName[6] = "itl-naplep"
+u0[6] = 0
+u1[6] = 2
+u2[6] = 4
+varName[7] = "itl-ill"
+u0[7] = 0
+u1[7] = 2
+u2[7] = 4
+varName[8] = "itl-bwl"
+u0[8] = 0
+u1[8] = 2
+u2[8] = 4
+varName[9] = "itl-lepanto"
+u0[9] = 0
+u1[9] = 3
+u2[9] = 3
+varName[10] = "itl-ill"
+u0[10] = 0
+u1[10] = 3
+u2[10] = 3
+varName[11] = "itl-tyrlep"
+u0[11] = 0
+u1[11] = 1
+u2[11] = 1
+varName[12] = "itl-alpine"
+u0[12] = 1
+u1[12] = 0
+u2[12] = 0
+varName[13] = "itl-westlep"
+u0[13] = 1
+u1[13] = 4
+u2[13] = 0
+varName[14] = "itl-keylep"
+u0[14] = 0
+u1[14] = 1
+u2[14] = 2
+varName[15] = "itl-3fleets"
+u0[15] = 0
+u1[15] = 1
+u2[15] = 2
+varName[16] = "itl-ill"
+u0[16] = 0
+u1[16] = 1
+u2[16] = 2
+varName[17] = "itl-lepanto"
+u0[17] = 0
+u1[17] = 2
+u2[17] = 0
+varName[18] = "itl-ill"
+u0[18] = 0
+u1[18] = 2
+u2[18] = 0
+varName[19] = "itl-keylep"
+u0[19] = 0
+u1[19] = 2
+u2[19] = 2
+varName[20] = "itl-3fleets"
+u0[20] = 0
+u1[20] = 2
+u2[20] = 2
+varName[21] = "itl-ill"
+u0[21] = 0
+u1[21] = 2
+u2[21] = 2
+varName[22] = "itl-westlep"
+u0[22] = 1
+u1[22] = 3
+u2[22] = 2
+varName[23] = "itl-3fleets"
+u0[23] = 1
+u1[23] = 3
+u2[23] = 2
+varName[24] = "itl-tyrlep"
+u0[24] = 0
+u1[24] = 2
+u2[24] = 1
+varName[25] = "itl-swilep"
+u0[25] = 0
+u1[25] = 1
+u2[25] = 0
+varName[26] = "itl-ill"
+u0[26] = 0
+u1[26] = 1
+u2[26] = 0
+varName[27] = "itl-panther"
+u0[27] = 0
+u1[27] = 1
+u2[27] = 0
+varName[28] = "itl-bwl"
+u0[28] = 0
+u1[28] = 1
+u2[28] = 0
+varName[29] = "itl-tyrolia"
+u0[29] = 0
+u1[29] = 0
+u2[29] = 1
+varName[30] = "itl-boh"
+u0[30] = 0
+u1[30] = 0
+u2[30] = 1
+varName[31] = "itl-okt"
+u0[31] = 0
+u1[31] = 0
+u2[31] = 1
+varName[32] = "itl-lepanto"
+u0[32] = 0
+u1[32] = 2
+u2[32] = 3
+varName[33] = "itl-lepanto"
+u0[33] = 0
+u1[33] = 1
+u2[33] = 4
+varName[34] = "itl-ill"
+u0[34] = 0
+u1[34] = 1
+u2[34] = 4
+varName[35] = "itl-bwl"
+u0[35] = 0
+u1[35] = 1
+u2[35] = 4
+varName[36] = "itl-alpine"
+u0[36] = 0
+u1[36] = 0
+u2[36] = 0
+varName[37] = "itl-shuffle"
+u0[37] = 0
+u1[37] = 0
+u2[37] = 0
+varName[38] = "itl-koniggratz"
+u0[38] = 0
+u1[38] = 0
+u2[38] = 0
+varDesc['comment'] = "--ABOUT THE ITALIAN OPENINGS--</b><dd>"
+varDesc['comment'] += 'Italian openings are categorized as follows: '
+varDesc['comment'] += '<ul> '
+varDesc['comment'] += '<li>Lepanto Openings        (A Rom-Apu/Nap,   F Nap-ION) '
+varDesc['comment'] += '<li>The Western Lepanto     (A Rom-Nap/Tus/H, F Nap-TYS) '
+varDesc['comment'] += '<li>Austrian Attack Opening (A Rom-Ven,       A Ven-Tri) '
+varDesc['comment'] += '<li>Obriani Openings        (A Rom-Ven,       A Ven-Tyr) '
+varDesc['comment'] += '<li>Alpine Chicken Openings (A Rom-Ven,       A Ven-Pie) '
+varDesc['comment'] += '</ul> '
+varDesc['comment'] += ' '
+varDesc['itl-naplep'] = "LEPANTO, NEOPOLITAN VARIATION</b><dd>"
+varDesc['itl-naplep'] += 'The Lepanto opening with the Roman army moving to Naples rather than the '
+varDesc['itl-naplep'] += 'standard Apulia. There is basically no difference between the two destinations '
+varDesc['itl-naplep'] += 'for the army, but Apulia is generally regarded as standard Lepanto, with '
+varDesc['itl-naplep'] += 'Naples being the variant.  '
+varDesc['itl-naplep'] += ' '
+varDesc['itl-ill'] = "[ILLYRIAN OPENING]</b><dd>"
+varDesc['itl-ill'] += 'A Spring 1902 continuation of the Lepanto that sends F ION-ADR, F Nap-ION, '
+varDesc['itl-ill'] += 'and A Ven-Tri. Even '
+varDesc['itl-ill'] += 'if A Ven-Tri fails, Fall 1902 provides the choice of either F ADR S Ven-Tri '
+varDesc['itl-ill'] += 'with F ION C Tun-Alb, the less aggressive A Ven S Tun-ION-ADR-Tri, '
+varDesc['itl-ill'] += 'or the primarily positional F ADR S F ION C Tun-Alb (if Tri looks too secure). '
+varDesc['itl-ill'] += 'The point here is that a Lepanto start in 1901 does not preclude an attack on '
+varDesc['itl-ill'] += 'Austria as early as Spring of 1902. '
+varDesc['itl-ill'] += ' '
+varDesc['itl-swilep'] = "LEPANTO, SWISS VARIATION</b><dd>"
+varDesc['itl-swilep'] += 'The Swiss Lepanto, named by Manus Hand, often unnnecessarily antagonizes '
+varDesc['itl-swilep'] += 'France. It can be used, '
+varDesc['itl-swilep'] += 'however, if there is an Anglo-French alliance for sure and Italy wants to '
+varDesc['itl-swilep'] += 'help Germany. '
+varDesc['itl-swilep'] += ' '
+varDesc['itl-bwl'] = "[BLUE WATER LEPANTO]</b><dd>"
+varDesc['itl-bwl'] += "Manus Hand's Fall 1901 continuation of the traditional Lepanto has the "
+varDesc['itl-bwl'] += 'Italian covering a threatened Venice and feeling forced to take Tunis '
+varDesc['itl-bwl'] += 'with the Ionian fleet.  The Austrian (who opened to the Adriatic) sails '
+varDesc['itl-bwl'] += 'to the vacated Ionian to be dislodged by F Nap and F Tun, retreating '
+varDesc['itl-bwl'] += 'eastward to form part of the convoy chain that carries the Italian army '
+varDesc['itl-bwl'] += 'to Anatolia.  Described in <a target=_parent href=/Zine/W1999A/Hand/bwl.html>an article '
+varDesc['itl-bwl'] += 'in The Pouch Zine</a> by Manus Hand and in '
+varDesc['itl-bwl'] += '<a target=_parent href=/Zine/F2000M/Pillie/bluewater.html>a follow-up article</a> by '
+varDesc['itl-bwl'] += 'Derek Pillie. '
+varDesc['itl-bwl'] += ' '
+varDesc['itl-panther'] = "[PANTHER]</b><dd>"
+varDesc['itl-panther'] += 'This Fall Austro-Italo-German continuation of the Swiss Lepanto '
+varDesc['itl-panther'] += "Opening was named by Dan Abbott after Kaiser Wilhelm II's sending the German "
+varDesc['itl-panther'] += 'gunboat <i>Panther</i> to Africa in 1911.  The opening presents a combined '
+varDesc['itl-panther'] += 'front by the Central Powers (A/G/I) in an attempt to guarantee control of '
+varDesc['itl-panther'] += 'Africa and the Gibraltar block by controlling the Mediterranean.  To do this, '
+varDesc['itl-panther'] += 'the rival Mediterranean powers (France and Turkey) must be taught a lesson. '
+varDesc['itl-panther'] += '<P> '
+varDesc['itl-panther'] += 'In Spring, Austria opens to pressure the Ionian, while  '
+varDesc['itl-panther'] += 'Germany opens to Burgundy and Holland.  The pure Panther sees '
+varDesc['itl-panther'] += 'occupation of Serbia and Kiel in Spring 1901, but other variations are '
+varDesc['itl-panther'] += 'possible, which also put pressure on Russia. '
+varDesc['itl-panther'] += '<P> '
+varDesc['itl-panther'] += 'In Fall, the Italian army in Apulia is convoyed to Albania by the Austrian '
+varDesc['itl-panther'] += 'fleet, while Italy takes Tunis, and both Germany and Italy continue to '
+varDesc['itl-panther'] += 'harass France in Marseilles, Burgundy, and Belgium.  While France is '
+varDesc['itl-panther'] += 'occupied by pressure on his entire eastern border, Turkey sees two hostile '
+varDesc['itl-panther'] += 'fleets coming at him.  The remaining two powers, England and Russia, should '
+varDesc['itl-panther'] += 'be pleased by the opening. Russia is able to not only get in on the '
+varDesc['itl-panther'] += "Turkish party but also appeased by Germany's lack of Scandinavian force. "
+varDesc['itl-panther'] += 'England is also satisfied with the Scandinavian lines and can help out with '
+varDesc['itl-panther'] += 'France. '
+varDesc['itl-panther'] += ' '
+varDesc['itl-keylep'] = "LEPANTO, KEY VARIATION</b><dd>"
+varDesc['itl-keylep'] += 'A Key Opening without the camoflauge (and risk to Austria) '
+varDesc['itl-keylep'] += 'of Rom-Ven. '
+varDesc['itl-keylep'] += 'Named by Jeff Key, the inventor, the Key Lepanto is an Italian-Austrian opening '
+varDesc['itl-keylep'] += 'with A Ven-Tri-Ser (usually with Austrian support to foil A Bul-Ser), '
+varDesc['itl-keylep'] += 'A Bud-Ser-Gre (latter with support from F Alb). Since Italy gets '
+varDesc['itl-keylep'] += 'his build in Serbia, he can send his fleet forward to AEG or EAS in Fall '
+varDesc['itl-keylep'] += 'of 1901. This opening is particularly '
+varDesc['itl-keylep'] += 'valuable if Turkey opens F Ank-Con, since the traditional Lepanto '
+varDesc['itl-keylep'] += 'is almost certain to be foiled. If A Bul-Gre is believed unlikely, '
+varDesc['itl-keylep'] += 'Austria can step up the naval pressure on Turkey with F Alb-ION. '
+varDesc['itl-keylep'] += 'Italy can readily stab Austria with A Tri-Vie, A Ven-Tri, or '
+varDesc['itl-keylep'] += 'by gaining Turkish support for A Apu/F ION-Gre, plus A Tri-Alb '
+varDesc['itl-keylep'] += 'to cut support. '
+varDesc['itl-keylep'] += '<P> '
+varDesc['itl-keylep'] += 'The Lepanto is followed in the south as before. But in the '
+varDesc['itl-keylep'] += 'north by A Tri-Ser or A Tri-Alb. The purpose here is to get another '
+varDesc['itl-keylep'] += 'army into the Balkans against Turkey. If Italy holds Serbia at '
+varDesc['itl-keylep'] += 'the end of 1901, the purpose is to allow her to build two fleets. '
+varDesc['itl-keylep'] += 'The second fleet is used to help France against England/Germany '
+varDesc['itl-keylep'] += 'or to challenge England/France. Austria has got to have enormous '
+varDesc['itl-keylep'] += "trust in Italy to allow this movement, but that's Diplomacy. "
+varDesc['itl-keylep'] += '<P> '
+varDesc['itl-keylep'] += 'As with the non-Lepanto Key Opening, the temptation to stay in Trieste '
+varDesc['itl-keylep'] += 'is often too great for an Italian to resist. Consequently, despite the '
+varDesc['itl-keylep'] += 'overwhelming popularity of the Lepanto as an opening, the Key Lepanto itself '
+varDesc['itl-keylep'] += 'is rarely seen. '
+varDesc['itl-keylep'] += ' '
+varDesc['itl-boh'] = "[BOHEMIAN CRUSHER]</b><dd>"
+varDesc['itl-boh'] += "Aron Ambrosiani's name for the Obriani opening follow-up which sees "
+varDesc['itl-boh'] += 'Tyrolia move to Bohemia, while Venice is sent to Tyrolia.  A third '
+varDesc['itl-boh'] += 'army is added in Rome (for Tunis) at the end of the year. '
+varDesc['itl-boh'] += '<P> '
+varDesc['itl-boh'] += 'This opening banks on the probability that the Austrian army in '
+varDesc['itl-boh'] += 'Vienna or Trieste will cover supply centers and not guard against '
+varDesc['itl-boh'] += 'the surrounding action.  If Russia moves into Gal and/or Rum at the '
+varDesc['itl-boh'] += 'same time, Austria is doomed. '
+varDesc['itl-boh'] += '<P> '
+varDesc['itl-boh'] += 'The problem with this opening is, of course, the lack of fleets. It '
+varDesc['itl-boh'] += "can't be carried through if Turkey moves straight west. However, "
+varDesc['itl-boh'] += 'combined with a Turkish attack on Russia, Italy should be the leader '
+varDesc['itl-boh'] += 'entering the mid-game. '
+varDesc['itl-boh'] += '<p> '
+varDesc['itl-boh'] += 'The opening was '
+varDesc['itl-boh'] += '<a target=_top href=/Zine/F2008M/Hunt/crusher.htm>discussed and advocated by '
+varDesc['itl-boh'] += "David Hunt</a> in The Pouch Zine's fiftieth issue. "
+varDesc['itl-boh'] += ' '
+varDesc['itl-tyrolia'] = "OBRIANI OPENING (a.k.a. TYROLIA ATTACK)</b><dd>"
+varDesc['itl-tyrolia'] += 'This opening is the single most popular '
+varDesc['itl-tyrolia'] += 'Italian Opening.  It gives the player the option of attacking Vie, supporting '
+varDesc['itl-tyrolia'] += 'into Tri or going for Munich, in addition to helping Russia take Vienna. '
+varDesc['itl-tyrolia'] += '<P> '
+varDesc['itl-tyrolia'] += 'A classic Italian opening, one of the most enduring and popular combination of '
+varDesc['itl-tyrolia'] += 'moves for Italy in Spring 1901, it is traditionally regarded '
+varDesc['itl-tyrolia'] += 'as an attack on Austria, although it can also be turned against '
+varDesc['itl-tyrolia'] += 'Germany if (perhaps with French support or encouragement) A Tyr '
+varDesc['itl-tyrolia'] += 'attacks Munich in the Autumn. Indeed, this is very often an option, '
+varDesc['itl-tyrolia'] += 'since most Austrian players have better things to do with A Vienna '
+varDesc['itl-tyrolia'] += 'than order to Tyrolia and A Mun-Tyr is hardly a common opening '
+varDesc['itl-tyrolia'] += 'for Germany. But if the A Ven move can usually be expected to '
+varDesc['itl-tyrolia'] += 'work, the popularity of F Tri-Ven with Austria has risen so dramatically '
+varDesc['itl-tyrolia'] += 'with the Hedgehog Opening that A Rom will usually be stood off '
+varDesc['itl-tyrolia'] += 'in the Tyrolia Attack. No matter: it protects Venice, and if '
+varDesc['itl-tyrolia'] += 'by chance the move succeeds, Trieste or Vienna could be there '
+varDesc['itl-tyrolia'] += 'for the taking. Providing as it does an option on up to three '
+varDesc['itl-tyrolia'] += "centres, this opening is clearly Italy's best chance of securing "
+varDesc['itl-tyrolia'] += 'five centres in the first year. '
+varDesc['itl-tyrolia'] += '<P> '
+varDesc['itl-tyrolia'] += 'The <i>Gamer\'s Guide to Diplomacy</i> calls this "best anti-Austrian '
+varDesc['itl-tyrolia'] += 'opening.  It concentrates two armies '
+varDesc['itl-tyrolia'] += 'on Trieste and creates a guessing game around Vienna. The fleet '
+varDesc['itl-tyrolia'] += 'can pick up Tunis or even move to Greece or the Adriatic. Getting '
+varDesc['itl-tyrolia'] += 'Tunis is better; Italy needs a build." '
+varDesc['itl-tyrolia'] += '<P> '
+varDesc['itl-tyrolia'] += 'The opening can also be developed into a surprise attack on the French '
+varDesc['itl-tyrolia'] += 'using the Italian Oktoberfest continuation. '
+varDesc['itl-tyrolia'] += ' '
+varDesc['itl-tyrlep'] = "LEPANTO, TYROLIAN VARIATION</b><dd>"
+varDesc['itl-tyrlep'] += 'The order A Ven-Tyr is favored in many quarters, as it is  '
+varDesc['itl-tyrlep'] += 'is positive and powerful. It allows '
+varDesc['itl-tyrlep'] += 'A Tyr-Mun if there is an Anglo-German alliance threatening France. '
+varDesc['itl-tyrlep'] += 'This will bolster the French defense and help keep the West stalemated. '
+varDesc['itl-tyrlep'] += 'A Ven-Tyr may also stand off a German sneak attack from Munich. '
+varDesc['itl-tyrlep'] += 'It also gives the possibility of A Tyr-Boh (and thence to Gal), '
+varDesc['itl-tyrlep'] += "adding to Austria's defensive line if this is necessary.  "
+varDesc['itl-tyrlep'] += '<P> '
+varDesc['itl-tyrlep'] += 'Common wisdom is that on no account should Italy stab Austria. The '
+varDesc['itl-tyrlep'] += 'short-term gains may be all right, but the long-term price is not '
+varDesc['itl-tyrlep'] += 'something Italy would wish to pay. On the other hand, Leif Bergman '
+varDesc['itl-tyrlep'] += 'advocates just that, stabbing Austria, in his Diplomatic Pouch article '
+varDesc['itl-tyrlep'] += '"<A '
+varDesc['itl-tyrlep'] += 'HREF=http://devel.diplom.org/DipPouch/Zine/F1997M/Bergman/Italy.html '
+varDesc['itl-tyrlep'] += 'TARGET=_top>Go Fasta Go Fasta</A>." '
+varDesc['itl-tyrlep'] += ' '
+varDesc['itl-westlep'] = "WESTERN LEPANTO</b><dd>"
+varDesc['itl-westlep'] += 'The very anti-French opening of A Rom H/-Tus, then to Tunis via '
+varDesc['itl-westlep'] += 'F TYS, with A Ven-Pie-Mar/S French A Spa-Mar. In Spring of 1902, F TYS can '
+varDesc['itl-westlep'] += 'move to WES to convoy to Spain, or is in a position to directly '
+varDesc['itl-westlep'] += 'block F Mar-LYO. If there are no eastern commitments, this will '
+varDesc['itl-westlep'] += 'be a rare circumstance when building F Rom is superior to F Nap, '
+varDesc['itl-westlep'] += 'as F Rom-Tus permits the piece to be used directly in F02. '
+varDesc['itl-westlep'] += '<P> '
+varDesc['itl-westlep'] += 'This opening keeps powerful forces poised against Spain. France '
+varDesc['itl-westlep'] += 'must also play a guessing game. If she moves A Mar-Spa but not '
+varDesc['itl-westlep'] += 'A Par-Bur, she must now decide whether to order A Spa-Mar. If '
+varDesc['itl-westlep'] += 'Italy then orders A Pie-Mar, the center is saved; if not, Spain '
+varDesc['itl-westlep'] += "is lost, and a fleet can't be built in Marseilles. "
+varDesc['itl-westlep'] += ' '
+varDesc['itl-alpine'] = "ALPINE CHICKEN</b><dd>"
+varDesc['itl-alpine'] += 'This is a somewhat temporizing opening, generally '
+varDesc['itl-alpine'] += 'seen as pro-Turkey and anti-France. Both east and west options are preserved. '
+varDesc['itl-alpine'] += 'Often followed in Fall by a Koniggratz Freakout.   Stephen Agar describes '
+varDesc['itl-alpine'] += 'this opening more completely in his article, '
+varDesc['itl-alpine'] += '<a target=_parent href=http://www.spoff.demon.co.uk/articles/alpine.htm><i>Is The Alpine '
+varDesc['itl-alpine'] += 'Chicken A Tasty Bird?</i></a> '
+varDesc['itl-alpine'] += ' '
+varDesc['itl-koniggratz'] = "[KONIGGRATZ FREAKOUT]</b><dd>"
+varDesc['itl-koniggratz'] += "Edi Birsan's offbeat German-Italian continuation to the Alpine Chicken, "
+varDesc['itl-koniggratz'] += 'A Ven S Pie-Tyr, dislodging '
+varDesc['itl-koniggratz'] += 'the German army in Tyrolia, allowing it to retreat to whichever of Vienna '
+varDesc['itl-koniggratz'] += 'or Trieste Austria leaves open. Piedmont provides some assurance to '
+varDesc['itl-koniggratz'] += 'Germany that the French army in Burgundy will not be tempted to go for Munich, '
+varDesc['itl-koniggratz'] += 'especially if Germany announces that he will open A Mun-Tyr. '
+varDesc['itl-koniggratz'] += ' '
+varDesc['itl-3fleets'] = "[THREE FLEETS OPENING]</b><dd>"
+varDesc['itl-3fleets'] += "Edi Birsan's Fall continuation in which Italy allows his Trieste "
+varDesc['itl-3fleets'] += 'army to to be annihilated in Fall of 1901, and then builds two fleets. This '
+varDesc['itl-3fleets'] += 'avoids the superfluous army that occurs when Italy selects France '
+varDesc['itl-3fleets'] += 'and Turkey as his first two victims. '
+varDesc['itl-3fleets'] += ' '
+varDesc['itl-stablep'] = "AUSTRIAN ATTACK (a.k.a. STAB LEPANTO)</b><dd>"
+varDesc['itl-stablep'] += 'This opening puts maximum pressure on Austria (assuming Ven-Tri succeeds). '
+varDesc['itl-stablep'] += 'Since it is rarely tried unless success is known beforehand, this opening is '
+varDesc['itl-stablep'] += 'usually preceded by negotiation for a Lepanto, and thus the name "Stab '
+varDesc['itl-stablep'] += 'Lepanto." '
+varDesc['itl-stablep'] += ' '
+varDesc['itl-mcgivern'] = "OBRIANI OPENING, McGIVERN'S VARIATION</b><dd>"
+varDesc['itl-mcgivern'] += "Also known as McGivern's Opening, this is Richard Sharp's name for the "
+varDesc['itl-mcgivern'] += 'less frequently used Obriani opening that does not put Italian pressure '
+varDesc['itl-mcgivern'] += 'on Greece in 1901. '
+varDesc['itl-mcgivern'] += ' '
+varDesc['itl-shuffle'] = "[ITALIAN SHUFFLE]</b><dd>"
+varDesc['itl-shuffle'] += 'A fall continuation of the Alpine Chicken opening.  With Pie-Tyr and Ven-Tri, '
+varDesc['itl-shuffle'] += 'the point is to confuse or delay France, while delaying the attack on '
+varDesc['itl-shuffle'] += 'Austria for a season, allowing Italy the chance to see if the diplomatic '
+varDesc['itl-shuffle'] += 'and tactical position is right, and to persuade Austria that he is friendly. '
+varDesc['itl-shuffle'] += 'The risks are that the failure to attack Austria right off may antagonize '
+varDesc['itl-shuffle'] += 'Russia or Turkey, and that by violating Piedmont without disabling France '
+varDesc['itl-shuffle'] += "Italy may have stirred the hornet's nest without setting it afire. "
+varDesc['itl-shuffle'] += ' '
+varDesc['itl-okt'] = "[ITALIAN OKTOBERFEST]</b><dd>"
+varDesc['itl-okt'] += "Jim Burgess's name for the German-Italian continuation of the Obriani "
+varDesc['itl-okt'] += "in which Italy's opening to Tyrolia is followed by  a "
+varDesc['itl-okt'] += 'Fall 1901 advance into Munich, at which time the army in Venice '
+varDesc['itl-okt'] += 'proceeds to Piedmont, and Tunis is taken.  After building a fleet in Naples '
+varDesc['itl-okt'] += "and an army in Venice or Rome, Italy's Spring 1902 moves are Tun-ION, Pie-Mar, "
+varDesc['itl-okt'] += 'Mun-Bur, Nap-TYS, and the new army holds or moves to Tuscany.  This opening is '
+varDesc['itl-okt'] += 'discussed in <a target=new href=/Zine/S2003M/Burgess/Rome.html>an article in the Pouch '
+varDesc['itl-okt'] += 'Zine</a>. '
+varDesc['itl-okt'] += ' '
+varDesc['itl-lepanto'] = "LEPANTO</b><dd>"
+varDesc['itl-lepanto'] += 'Lepanto openings in general feature '
+varDesc['itl-lepanto'] += 'the Spring 1901 moves F Nap-ION and A Rom-Nap, followed by F '
+varDesc['itl-lepanto'] += 'ION C Nap-Tun in autumn, to secure a build of F Nap). The full '
+varDesc['itl-lepanto'] += 'Lepanto would then be pursued with the moves F Nap-ION, F ION-EAS '
+varDesc['itl-lepanto'] += 'and then F EAS C Tun-Syr (or Smy), thus embodying a four season '
+varDesc['itl-lepanto'] += "strategy directed against Turkey (Italy's traditional rival for "
+varDesc['itl-lepanto'] += 'naval supremacy in the Mediterranean). Indeed, the Lepanto takes '
+varDesc['itl-lepanto'] += 'its name from the Sixteenth Century Battle of Lepanto in which '
+varDesc['itl-lepanto'] += 'an Austro-Italian fleet defeated the Turks. In practice, however, '
+varDesc['itl-lepanto'] += 'the Lepanto is rarely pursued beyond Autumn 1901, after which '
+varDesc['itl-lepanto'] += 'Italian players usually prefer to develop a more flexible strategy. '
+varDesc['itl-lepanto'] += 'As an answer to the Juggernaut, the Lepanto may be the best Italian '
+varDesc['itl-lepanto'] += 'opening, assuming as it does no grave threat from Austria. '
+varDesc['itl-lepanto'] += '<P> '
+varDesc['itl-lepanto'] += 'Alliance with Austria is essential, with a standoff '
+varDesc['itl-lepanto'] += 'in the Black Sea in Spring 1901 very desirable. Devised and '
+varDesc['itl-lepanto'] += 'popularized by Edi Birsan '
+varDesc['itl-lepanto'] += '<a target=_parent href=/DipPouch/Zine/S1998M/Birsan/Lepanto.html>read '
+varDesc['itl-lepanto'] += 'the original article on the subject</a>), '
+varDesc['itl-lepanto'] += 'it is probably the best-known named opening.  The Lepanto '
+varDesc['itl-lepanto'] += 'can be turned from anti-Turk to anti-Austrian in 1902 using the '
+varDesc['itl-lepanto'] += 'Illyrian Opening.  '
+varDesc['itl-lepanto'] += '<P> '
+varDesc['itl-lepanto'] += 'The Lepanto is designed to carry Italian power into the east rapidly. '
+varDesc['itl-lepanto'] += 'This was the first opening ever to be discussed in depth in an '
+varDesc['itl-lepanto'] += "article. Edi Birsan's work on the subject is still considered "
+varDesc['itl-lepanto'] += 'a model effort. '
+varDesc['itl-lepanto'] += '<p>This attack on Turkey '
+varDesc['itl-lepanto'] += 'in alliance with Austria, is often enormously effective. Turkey '
+varDesc['itl-lepanto'] += 'can block it by building F Smy and ordering F Smy-EAS. However, '
+varDesc['itl-lepanto'] += 'Italy can order F ION-AEG instead, threatening a convoy into '
+varDesc['itl-lepanto'] += 'Bul, Con, or Smy. '
+varDesc['itl-lepanto'] += '<P> '
+varDesc['itl-lepanto'] += 'There are a number of variants to the Lepanto Opening: '
+varDesc['itl-lepanto'] += '<ul> '
+varDesc['itl-lepanto'] += '<li>Classical Lepanto (A Ven H) '
+varDesc['itl-lepanto'] += '<li>Tyrolian Lepanto (A Ven-Tyr) '
+varDesc['itl-lepanto'] += '<li>Key Lepanto (A Ven-Tri) '
+varDesc['itl-lepanto'] += '<li>Swiss Lepanto (A Ven-Tyr) '
+varDesc['itl-lepanto'] += '<li>Neopolitan Lepanto (A Rom-Nap) '
+varDesc['itl-lepanto'] += '<li>Anti-Hedgehog Lepanto (A Ven-Apu, A Rom-Ven) '
+varDesc['itl-lepanto'] += '</ul> '
+varDesc['itl-lepanto'] += '<P> '
+varDesc['itl-lepanto'] += 'The Classical Lepanto is often considered too passive, indicative of a distrust '
+varDesc['itl-lepanto'] += 'of Austria; it does, however, have the advantage that A Ven H, '
+varDesc['itl-lepanto'] += 'A Apu S A Ven, F ION-Tun in Fall 1901 saves Venice and still allows Italy '
+varDesc['itl-lepanto'] += 'to build if Austria puts two units against Venice. '
+varDesc['itl-lepanto'] += ' '
+varDesc['itl-antihedlep'] = "LEPANTO, ANTI-HEDGEHOG VARIATION</b><dd>"
+varDesc['itl-antihedlep'] += 'Named by Richard Sharp, the Anti-Hedgeog Lepanto was devised to combat the '
+varDesc['itl-antihedlep'] += 'popularity of the Austrian Hedgehog openings, which send Trieste into Venice. '
+varDesc['itl-antihedlep'] += ' '
+varDesc['itl-key'] = "[KEY OPENING]</b><dd>"
+varDesc['itl-key'] += "Jeff Key's Fall continuation to the Austrian Attack which sends the Italian "
+varDesc['itl-key'] += 'army in Trieste to Serbia, revealing a strong Italy/Austria alliance, and '
+varDesc['itl-key'] += 'putting an extra army into the fight against Turkey in the Balkans. '
+varDesc['itl-key'] += 'Austria agrees to give A Ven passage '
+varDesc['itl-key'] += 'through Trieste to attack Serbia (or Greece, through Albania). '
+varDesc['itl-key'] += 'Unfortunately for agreeable Austrian players, most Italians allowed '
+varDesc['itl-key'] += 'into Trieste refuse to move out in Autumn, with horrific consequences '
+varDesc['itl-key'] += 'for beleaguered Austria. '
+varDesc['itl-key'] += '<P> '
+varDesc['itl-key'] += 'Tony Swinnerton\'s Diplomatic Pouch article, "<A '
+varDesc['itl-key'] += 'HREF=http://devel.diplom.org/DipPouch/Zine/W1997A/Swinnerton/Key.html '
+varDesc['itl-key'] += 'TARGET=_top>Playing the Key</A>," has a more encouraging view. '
+varDesc['itl-key'] += ' '
+
+// -->
+</script>
+	
+
+<BODY BGCOLOR="#ffffff">
+<p align=center>
+<A TARGET=_parent HREF="/DipPouch">
+<IMG SRC="/DipPouch/Common/DPLogo.gif"
+	ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A TARGET=_parent HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="/DipPouch/Common/DPLinks.gif"
+	ALT="Shortcuts" HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
+<BR clear=both>
+<img src="/DipPouch/Common/reddot.gif" height=2 width=100%%>
+<br clear=all>
+<center><H2>The Library of Diplomacy Openings</H2>
+<script language=JavaScript>
+<!--
+function newPower()
+{
+	window.parent.body.document.write('<H3 align=center><font color=red>')
+	window.parent.body.document.write('<blink>...Loading Data For ')
+	window.parent.body.document.write(document.forms[0].power.options[document.forms[0].power.selectedIndex].value)
+	window.parent.body.document.write('...Please Wait...</blink></font>')
+	window.parent.body.document.close()
+	window.location.replace(document.forms[0].power.options[document.forms[0].power.selectedIndex].value + '.html')
+	// document.forms[0].submit()
+}
+// -->
+</script>
+<table>
+<tr><th valign=right>
+	<form name=powerForm method=post action=openings>
+	Openings for&nbsp;<select name=power onChange=newPower()>
+
+<option value=Austria
+>Austria
+<option value=England
+>England
+<option value=France
+>France
+<option value=Germany
+>Germany
+<option value=Italy
+ selected
+>Italy
+<option value=Russia
+>Russia
+<option value=Turkey
+>Turkey
+
+	</select></form>
+	<script language=javascript>
+	<!--
+	function showDesc(key)
+	{
+		window.parent.body.document.write('<dl><dt><b>')
+		window.parent.body.document.write(varDesc[key] + '<p></dl>')
+	}
+	function updateOrder()
+	{
+		openg = document.forms[1].opening
+		key = openg.options[openg.selectedIndex].value
+		if (key == '') return
+		if (key != 'comment')
+		{
+			for (i in varName)
+			{
+				if (varName[i] == key)
+				{
+					document.forms[2].unit0.selectedIndex = u0[i] + 1
+					document.forms[2].unit1.selectedIndex = u1[i] + 1
+					document.forms[2].unit2.selectedIndex = u2[i] + 1
+					if (power == 'Russia')
+						document.forms[2].unit3.selectedIndex = u3[i] + 1
+					break
+				}
+			}
+		}
+		showDesc(key)
+		window.parent.body.document.close()
+	}
+	// -->
+	</script>
+	<th valign=left>
+	<form name=nameForm method=post action=openings target=body>
+	<select name=opening onchange=updateOrder()>
+	<option>--Choose or order an opening--
+
+<option value=comment
+ selected
+>--ABOUT THE ITALIAN OPENINGS--
+<option value=itl-alpine
+>ALPINE CHICKEN
+<option value=itl-stablep
+>AUSTRIAN ATTACK (a.k.a. STAB LEPANTO)
+<option value=itl-lepanto
+>LEPANTO
+<option value=itl-antihedlep
+>LEPANTO, ANTI-HEDGEHOG VARIATION
+<option value=itl-keylep
+>LEPANTO, KEY VARIATION
+<option value=itl-naplep
+>LEPANTO, NEOPOLITAN VARIATION
+<option value=itl-swilep
+>LEPANTO, SWISS VARIATION
+<option value=itl-tyrlep
+>LEPANTO, TYROLIAN VARIATION
+<option value=itl-tyrolia
+>OBRIANI OPENING (a.k.a. TYROLIA ATTACK)
+<option value=itl-mcgivern
+>OBRIANI OPENING, McGIVERN'S VARIATION
+<option value=itl-westlep
+>WESTERN LEPANTO
+<option value=itl-bwl
+>[BLUE WATER LEPANTO]
+<option value=itl-boh
+>[BOHEMIAN CRUSHER]
+<option value=itl-ill
+>[ILLYRIAN OPENING]
+<option value=itl-okt
+>[ITALIAN OKTOBERFEST]
+<option value=itl-shuffle
+>[ITALIAN SHUFFLE]
+<option value=itl-key
+>[KEY OPENING]
+<option value=itl-koniggratz
+>[KONIGGRATZ FREAKOUT]
+<option value=itl-panther
+>[PANTHER]
+<option value=itl-3fleets
+>[THREE FLEETS OPENING]
+</select><input type=hidden name=power value=Italy></form>
+
+</table><table><tr><td>
+<script language=javascript>
+<!--
+function setChoice()
+{
+	leform = document.forms[2]
+	un0 = leform.unit0.options[leform.unit0.options.selectedIndex].value
+	un1 = leform.unit1.options[leform.unit1.options.selectedIndex].value
+	un2 = leform.unit2.options[leform.unit2.options.selectedIndex].value
+	if (power == 'Russia')
+		un3 = leform.unit3.options[leform.unit3.options.selectedIndex].value
+	shown = 0
+	for (i in varName)
+	{
+		if (u0[i] == un0 && u1[i] == un1 && u2[i] == un2
+		&& (power != 'Russia' || u3[i] == un3))
+		{
+			if (shown == 0)
+			{
+				shown = 1
+				for (j = 0; j < document.forms[1].opening.options.length; ++j)
+					if (document.forms[1].opening.options[j].value == varName[i])
+					{
+						document.forms[1].opening.selectedIndex = j
+						break
+					}
+			}
+			showDesc(varName[i])
+		}
+	}
+	if (shown == 0)
+	{
+		window.parent.body.document.write('<h3 align=center><font color=red>')
+		if (un0 == -1 || un1 == -1 || un2 == -1
+		|| (power == 'Russia' && un3 == -1))
+		{
+			window.parent.body.document.write('...Fill in Orders for All ' +
+				'Units to Look Up An Opening....')
+		}
+		else
+		{
+			window.parent.body.document.write('This Opening Is Unnamed ' +
+				'and No Information Exists For It!')
+		}
+		window.parent.body.document.write('</h3>')
+		document.forms[1].opening.selectedIndex = 0;
+	}
+	window.parent.body.document.close()
+}
+// -->
+</script>
+<form name=openForm method=post action=openings target=body>
+
+
+		<th valign=top>F Nap <select name=unit0 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-ION
+<option value=1>-TYS
+</select>
+
+		<th valign=top>A Rom <select name=unit1 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-Ven
+<option value=1>-Apu
+<option value=2>-Nap
+<option value=3>HOLD
+<option value=4>-Tus
+</select>
+
+		<th valign=top>A Ven <select name=unit2 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-Pie
+<option value=1>-Tyr
+<option value=2>-Tri
+<option value=3>-Apu
+<option value=4>HOLD
+</select>
+
+</table>
+<input type=hidden name=power value=Italy>
+<input type=hidden name=opening value="byOrder">
+<HR>
+</form>
+<script language=JavaScript>
+<!--
+	showDesc('comment')
+	window.parent.body.document.close()
+// -->
+</script>
+

@@ -1,0 +1,709 @@
+<HTML>
+
+<HEAD>
+<TITLE>DP Zine: Article Index</TITLE>
+
+<!------------------------------------------------->
+<!----       Attention DPCouncil Members       ---->
+<!---- Please update the "Last Update" fields. ---->
+<!---- Last update posted on:    02/07/2002    ---->
+<!---- Last update done by:   John Coffin      ---->
+<!------------------------------------------------->
+
+</HEAD>
+
+<BODY BGCOLOR="#ffffff">
+<p align=center>
+<A HREF="../..">
+<IMG SRC="../Common/DPLogo.gif"
+	ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="../Common/DPLinks.gif"
+	ALT="Shortcuts" HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
+<BR clear=both>
+<img src="../Common/reddot.gif" height=2 width=100%>
+
+
+<H1>
+<CENTER>
+The Zine</H1><H2>
+Article Index
+</CENTER>
+</H2>
+
+<b>Click to jump directly to one of the following sections, or scroll down to just browse<br>
+<dd><a href=#About>About The Diplomatic Pouch</a><br>
+<dd><a href=#Dipper>The Big Dipper</a><br>
+<dd><a href=#Blast>Blast From The Past</a><br>
+<dd><a href=#Caissa>Caissic Analysis</a><br>
+<dd><a href=#Convention>Convention Information</a><br>
+<dd><a href=#Convoy>Convoys and Their Paradoxes</a><br>
+<dd><a href=#Courtroom>The Courtroom</a><br>
+<dd><a href=#Academy>The Diplomacy Academy</a><br>
+<dd><a href=#DPP>The Diplomacy Programming Project</a><br>
+<dd><a href=#GM>Game Master Information</a><br>
+<dd><a href=#History>History Lessons</a><br>
+<dd><a href=#Humor>Humor</a><br>
+<dd><a href=#Innovations>Innovations</a><br>
+<dd><a href=#Instruction>Instruction</a><br>
+<dd><a href=#Interviews>Interviews</a><br>
+<dd><a href=#LMS>Last Man Standing</a><br>
+<dd><a href=#Machiavelli>Machiavelli</a><br>
+<dd><a href=#Master>Master Class</a><br>
+<dd><a href=#Newbie>Newbie Reflections</a><br>
+<dd><a href=#Openings>Openings</a><br>
+<dd><a href=#Peeriblah>Peeriblah's Potpourri</a><br>
+<dd><a href=#Formats>Play Formats</a><br>
+<dd><a href=#Info>Player Information</a><br>
+<dd><a href=#Deposits>Pouch Deposits</a><br>
+<dd><a href=#Project>The Pouch Project</a><br>
+<dd><a href=#Press>Press and NoPress</a><br>
+<dd><a href=#Puzzles>Puzzles</a><br>
+<dd><a href=#Reference>Reference</a><br>
+<dd><a href=#Holmes>Sherlock Holmes, Consulting Diplomat</a><br>
+<dd><a href=#Szykman>Szykman's World</a><br>
+<dd><a href=#Variants>Variants</a><br></b>
+
+<p><a name=About></a><DT><b><i>About The Diplomatic Pouch</i></b> (The Editor)
+<DD><LI>	<A HREF="About.html"><B>About The Zine (The Main Poop)</B></A></LI></DD>
+<DD><LI>	<A HREF="S1995M/Hand/About.html"><B>Spring 1995 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1995R/Hand/About.html"><B>Spring 1995 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1995M/Szykman/About.html"><B>Fall 1995 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1995R/Hand/About.html"><B>Fall 1995 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W1995A/Hand/About.html"><B>Winter 1995 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1996M/Hand/About.html"><B>Spring 1996 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1996R/Hand/About.html"><B>Spring 1996 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1996M/Hand/About.html"><B>Fall 1996 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W1996A/Hand/About.html"><B>Winter 1996 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1997M/Szykman/About.html"><B>Spring 1997 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1997R/Szykman/About.html"><B>Spring 1997 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1997M/Hand/About.html"><B>Fall 1997 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1997R/Hand/About.html"><B>Fall 1997 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W1997A/Hand/About.html"><B>Winter 1997 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1998M/Hand/About.html"><B>Spring 1998 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1998R/Hand/About.html"><B>Spring 1998 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1998M/Hand/About.html"><B>Fall 1998 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W1998A/Hand/About.html"><B>Winter 1998 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1999M/Hand/About.html"><B>Spring 1999 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1999R/Hand/About.html"><B>Spring 1999 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1999M/Hand/About.html"><B>Fall 1999 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1999R/Hand/About.html"><B>Fall 1999 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F2000M/Brase/About.html"><B>Fall 2000 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S2002M/Hawthorne/About.html"><B>Spring 2002 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S2002R/Hawthorne/About.html"><B>Spring 2002 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F2002M/Hawthorne/About.html"><B>Fall 2002 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W2003A/Editor/About.html"><B>Winter 2003 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W2014A/Editor/about.htm"><B>Winter 2014 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S2015M/Editor/about.htm"><B>Spring 2015 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S2015R/Editor/about.htm"><B>Spring 2015 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F2015M/Editor/about.htm"><B>Fall 2015 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F2015R/Editor/about.htm"><B>Fall 2015 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W2015A/Editor/xmas.html"><B>Christmas 2015 Special Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W2015A/Editor/about.html"><B>Winter 2015 Adjustment Issue</B></A></LI></DD>
+<dd><li><a href="S2016M/Editor/about.html"><b>Spring 2016 Movement Issue</b></a></li></dd>
+
+<p><a name=Dipper></a><DT><b><i>The Big Dipper</i></b> (Pitt Crandlemire)
+<DD><LI>	<A HREF="S1995M/Pitt/BigDip.html"><B>The Big Dipper Looks at The Black Sea</B></A></LI></DD>
+<DD><LI>    <A HREF="W1995A/Pitt/Shift.html"><b>The Big Dipper Looks at Shift Variants</b></A></LI></DD>
+<DD><LI>    <A HREF="S1996M/Pitt/Dipper.html"><b>The Big Dipper Looks at the Payola Variant</b></A></LI></DD>
+<DD><LI>    <A HREF="S1996R/Pitt/Dipper.html"><b>The Big Dipper Looks at Switzerland</b></A></LI></DD>
+<DD><LI>    <A HREF="F1996M/Pitt/Dipper.html"><b>The Big Dipper Looks Back at World DipCon VI</b></A></LI></DD>
+<DD><LI>    <A HREF="W1996A/Pitt/Dipper.html"><b>The Big Dipper Looks Back at the Asia Variant</b></A></LI></DD>
+<DD><LI>    <A HREF="S1997R/Pitt/Dipper.html"><b>The Big Dipper Looks at Face-to-Face and E-Mail Play</b></A></LI></DD>
+
+<p><a name=Blast></a><DT><b><i>Blast From The Past</i></b> (edited by Mark Nelson)
+<DD><LI>    <A HREF="S1995R/Misc/Blast.html"><b>How Many Openings Are There?</b></A> (Loeb, Selhammar, Green, and Hand)</LI></DD>
+<DD><LI>    <A HREF="F1995M/Nelson/Dropout.html"><b>Dropouts and Orphaning</b></A> (Mark Nelson)</LI></DD>
+<DD><LI>    <A HREF="W1995A/Nelson/Parents.html"><b>A Study in Non-Orphaned Games</b></A> (Mark Nelson)</LI></DD>
+<DD><LI>    <A HREF="S1996M/Nelson/Endgame.html"><b>The Endgame</b></A> (Nelson, Shoham, <i>et al.</i>)</LI></DD>
+<DD><LI>    <A HREF="S1998M/Birsan/Lepanto.html"><b>The Lepanto Opening</b></A> (Edi Birsan)</LI></DD>
+<DD><LI>    <A HREF="S1998R/Calhamer/invention.html"><b>The Invention of Diplomacy</b></A> (Allan Calhamer)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Agar/mapDesign.html"><b>Designing Maps For Diplomacy Variants</b></A> (Stephen Agar)</LI></DD>
+<dd><li><a href="S2015M/DW/dw70.htm"><b>On Matters of True and Everlasting Diplomacy</b></a> (Conrad von Metzke)</li></dd>
+<DD><LI>    <A HREF="W2015A/DW/minds.html"><b>The Art to find the Mind's Construction in a Face</b></A> (Stephen Agar)</LI></DD>
+
+<p><a name=Caissa></a><dt><b><i>Caissic Analysis</i></b>
+<dd><li>	<a href="F1997R/Windsor/lawdip.html"><b>Lawyer/Diplomat</b></a></li></dd>
+<dd><li>	<a href="S1998R/Windsor/caissa.html"><b>Caissa at the Diplomacy Table</b></a></li></dd>
+<dd><li>	<a href="W1998A/Windsor/Chainsaw.html"><b>Chainsaw Diplomacy</b></a></li></dd>
+<dd><li>	<a href="S1999M/Windsor/point.html"><b>What's Your Point?</b></a></li></dd>
+<dd><li>	<a href="S1999R/Windsor/caissa.html"><B>Caissa Annotates a No-Press Game</b></a></li></dd>
+<dd><li>	<a href="F1999M/Windsor/caissa.html"><B>Caissa Finishes Annotating a No-Press Game</b></a></li></dd>
+<dd><li>	<a href="F1999R/Windsor/dipmap.html"><B>Geography Is Destiny</b></a></li></dd>
+<dd><li>	<a href="S2000M/Windsor/Multilateraldip.html"><B>The New World Order</b></a></li></dd>
+<dd><li>	<a href="F2002M/Windsor/Persuasive_Illogic.html"><B>Persuasive Illogic</b></a></li></dd>
+
+<p><a name=Convention></a><DT><b><i>Convention Information</i></b>
+<DD><LI>    <A HREF=S1996M/Beaulieu/WDC.html><b>The Pouch and WDC VI</b></A> (Stephen Beaulieu)</LI></DD>
+<DD><LI>	<A HREF=F1996M/Hand/WDC-collection.html><b>World DipCon VI Reports</b></a> (Crandlemire, Hand, McQuinn, Peery, and Szykman)</LI></DD>
+<DD><LI>	<A HREF=W1996A/Isaksson/search.html><b>The Search for the American Continent</b></a> (Roland Isaksson)</LI></DD>
+<DD><LI>	<A HREF=W1996A/Peery/whynot.html><b>The Black Side of the Snow</b></a> (Larry Peery)</LI></DD>
+<DD><LI>	<A HREF=S1997R/Peery/wdcVII.html><b>World DipCon VII Report</b></a> (Larry Peery)</LI></DD>
+<DD><LI>	<A HREF=F1997M/Desper/AvalonCon.html><b>Report from AvalonCon '97</b></a> (Rick Desper)</LI></DD>
+<DD><LI>	<A HREF=F1997M/Setzer/AvalonCon.html><b>AvalonCon '97 Musings</b></a> (Ray Setzer)</LI></DD>
+<DD><LI>	<A HREF=F1997M/Hand/WDC7.html><b>World DipCon VII</b></a> (Manus Hand)</LI></DD>
+<DD><LI>	<A HREF=W1997A/Clarke/Don.html><b>Discovering the Religion
+		    of 'Donism'</b></a> (Brandon Clarke)</LI></DD>
+<DD><LI>	<A HREF=S1998M/Clarke/ADC.html><b>The Australian Diplomacy Championchip [sic]</b></a> (Dougal Ure)</LI></DD>
+<DD><LI>	<A HREF=S1998R/Clarke/NZChamps.html><b>The New Zealand Diplomacy Championship</b></a> (Brandon Clarke)</LI></DD>
+<DD><LI>	<A HREF=S1998R/WDC/WDC-collection.html><b>World DipCon 8 Article Collection</b></a> (Eddy, Martin, McQuinn, Mlinar, Morris, Peery, Szykman, and Willis)</LI></DD>
+<DD><LI>	<A HREF=W1998A/Clarke/nzChamps.html><b>The New Zealand Diplomacy Champs</b></a> (Brandon Clarke)</LI></DD>
+<DD><LI>	<A HREF=S1999M/Miszti/wdcix.html><b>WDC IX Report in Pictures</b></a> (Emeric Miszti)</LI></DD>
+<DD><LI>	<A HREF=S1999M/Martin/report.html><b>WDC IX Report From The Outgoing Champ</b></a> (Chris Martin)</LI></DD>
+<DD><LI>	<A HREF=S1999M/Clarke/wdcbid.html><b>Dip Down Under in 2002</b></a> (Brandon Clarke)</LI></DD>
+<DD><LI>	<A HREF=S1999R/Stephenson/vicdip.html><b>The Mysterious and Secretive Victorian Diplomacy Championships</b></a> (Rob Stephenson)</LI></DD>
+<DD><LI>	<A HREF=F1999M/Quarto/cons.html><b><i>Diplomo, Ergo Sum</i></b></a> (John Quarto-vonTivadar)</LI></DD>
+<DD><LI>	<A HREF=F1999R/Peery/namur.html><b>WDC IX at Namur, Belgium</b></a> (Larry Peery)</LI></DD>
+<DD><LI>	<A HREF=F1999R/Richarsdon/tempest.html><b>Tempest in a Teapot</b></a> (Tim Richardson)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Birsan/reflectionsdownunder.html><b>Reflections from Downunder</b></a> (Edi Birsan)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Miller/hammered.html><b>WDC X: A Report From the Hammered Position</b></a> (Tim Miller)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Clarke/sydney.html><b>The Cult of Cubisology</b></a> (Brandon Clarke)</LI></DD>
+<DD><LI>	<A HREF=W2003A/Birsan/DipCon36.html><b> The North American DIPCON XXXVI Report</b></a> (Edi Birsan)</LI></DD>
+<DD><LI>	<A HREF=W2003A/Peery/EDC2003.html><b>Euro DIPCON XI Report</b></a> (Larry Peery)</LI></DD>
+<DD><LI>	<A HREF=W2003A/Peery/DipCon37.html><b> DIPCON 2004: Portland, Oregon</b></a> (Larry Peery)</LI></DD>
+<DD><LI>	<A HREF=W2003A/Peery/RoadToBrum.html><b>WORLD DIPCON 2004: On the Road to Brum</b></a> (Larry Peery)</LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/review.htm><b>2014: The Diplomacy Year In Review</b></a> (Larry Peery)</LI></DD>
+<DD><LI>    <A HREF=W2015A/Pontavice/veryspecial.html><b>FDC XXXI: A Very Special Tournament</b></a> (Emmanuel du Pontavice)</LI></DD>
+<DD><LI>    <A HREF=W2015A/Anavoisard/transcript.html><b>FDC XXXI: A Video Blog</b></a> (Samuel Anavoisard)</LI></DD>
+<dd><li><a href="S2016M/Eddy/impressions.html"><b>Impressions from DipCon (1998 reprint)</b></a> (Buz Eddy)</li></dd>
+
+<p><a name=Convoy></a><DT><b><i>Convoys and Their Paradoxes</i></b>
+<DD><LI>    <A HREF=F1999R/Calhamer/convoy.html><b>On Convoy Path Specification</b></A> (Allan Calhamer)</LI></DD>
+<DD><LI>    <A HREF=F1999R/Debate/paradox.html><b>Eliminating the Paradox In Diplomacy</b></A> (Szykman and Hand)</LI></DD>
+
+<p><a name=Courtroom></a><DT><b><i>The Courtroom</i> (Mario Huys)</b>
+<DD><LI>    <A HREF=S2015M/Huys/prediction.htm><b>Predicting conflicts and conflicting predictions</b></A> (with Larry Peery)</LI></DD>
+
+<p><a name=Academy></a><DT><b><i>The Diplomacy Academy</i></b> (Dan Shoham)
+<DD><LI>	<A HREF="S1995M/Shoham/Academy.html"><B>The Games <i>CutThroat</i> and <i>CareBear</i></B></A></LI></DD>
+<DD><LI>	<A HREF="F1995M/Shoham/EOG.html"><B>The Game <i>Fresh</i></B></A></LI></DD>
+<DD><LI>	<A HREF="W1995A/Shoham/Academy.html"><B>The Game <i>Chopin</i></B></A></LI></DD>
+<DD><LI>	<A HREF="S1996M/Shoham/EOG.html"><B>The Game <i>HGWells</i></B></A></LI></DD>
+<DD><LI>	<A HREF="F1996M/Shoham/Academy.html"><B>The Game <i>Vanier</i></B></A></LI></DD>
+<DD><LI>	<A HREF="W1996A/Shoham/Academy.html"><B>The Game <i>Fools</i></B></A></LI></DD>
+<DD><LI>	<A HREF="S1997M/Shoham/Academy.html"><B>The Game <i>Barney</i></B></A></LI></DD>
+<DD><LI>	<A HREF="F1997M/Shoham/Academy.html"><B>The Game <i>Gnat</i></B></A></LI></DD>
+<DD><LI>	<A HREF="W1997A/Shoham/Academy.html"><B>The Game <i>Troi</i></B></A></LI></DD>
+
+<p><a name=DPP></a><DT><B><i>The Diplomacy Programming Project</i></b> (Danny Loeb)
+<DD><LI>    <A HREF="S1995M/Loeb/Project.html"><b>Challenges in Multiplayer Gaming by Computers</b></A></LI></DD>
+<DD><LI>    <A HREF="S1995M/Loeb/DPP_Open.html"><b>Openings by Computer</b></A></LI></DD>
+<DD><LI>    <A HREF="S1995R/Loeb/Observe.html"><b>The Observation Module</b></A></LI></DD>
+<DD><LI>    <A HREF="S1995R/Loeb/Bourse.html"><b>Computer Interpretation of Diplomacy Openings</b></A></LI></DD>
+<DD><LI>    <A HREF="F1995M/Loeb/Know.html"><b>What You Don't Know Can Help You</b></A></LI></DD>
+<DD><LI>    <A HREF="F1995R/Loeb/ret.html"><b>The Combinatorics of Retreats</b></A></LI></DD>
+<DD><LI>    <A HREF="W1995A/Loeb/Removes.html"><b>The Combinatorics of Adjustments</b></A></LI></DD>
+
+<p><a name=GM></a><DT><B><em>Game Master Information</em></B>
+<DD><LI>    <A HREF="W1995A/Beaulieu/undercontrol.html"><b>Under Control</b></A> (Stephen Beaulieu)</LI></DD>
+<DD><LI>    <A HREF="S1996M/Beaulieu/Control.html"><b>Rules for Excellent Mastering</b></A> (Stephen Beaulieu)</LI></DD>
+<DD><LI>    <A HREF="S1997R/Gordon/GMguide.html"><b>In Control -- The Penultimate Guide to Being a GM</b></A> (Dean Gordon)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Tarzan/assign.html"><b>Assigning Powers to Players in Diplomacy</b></A> (Tarzan)</LI></DD>
+
+<p><a name=History></a><DT><b><i>History Lessons</i></b>
+<dd><li><a href="S2016M/Burt/zimmermann.html"><b>The Zimmermann Telegram</b></a> (Kevin Burt)</li></dd>
+<dd><li><a href="S2016M/Burt/crypto.html"><b>Crypto: The Alchemy of Diplomacy</b></a> (Kevin Burt)</li></dd>
+
+<p><a name=Humor></a><DT><b><i>Humor</i></b>
+<DD><LI>    <A HREF="S1995R/Loeb/Odyssey.html"><b>1901: A Diplomatic Odyssey</b></A> (Danny Loeb)</LI></DD>
+<DD><LI>    <A HREF="S1996M/Hand/NTH-Pic.html"><b>North Sea to Picardy</b></A> (Manus Hand)</LI></DD>
+<DD><LI>    <A HREF="S1996M/Loeb/FTF.html"><b>The Face to Face Variant</b></A> (Danny Loeb)</LI></DD>
+<DD><LI>    <A HREF="F1996M/Chilton/Dip2K.html"><b>Diplomacy 2000</b></A> (Nic Chilton)</LI></DD>
+<DD><LI>    <A HREF="W1996A/Wolf/poem.html"><b>Juggernauty</b></A> (Clinton Wolf)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Anon/NoHolds.html"><b>No Holds Barred</b></A> (Amos Anon)</LI></DD>
+<DD><LI>    <A HREF="S1997R/Wolf/FatherBill.html"><b>Father Bill</b></A> (Clinton Wolf)</LI></DD>
+<DD><LI>    <A HREF="W1997A/Various/carols.html"><b>Songs for the Season</b></A> (Various)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Addison/7dudes.html"><b>Seven Little Dudes</b></A> (Rob Addison)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Hand/sinatra.html"><b>The Pouch Salutes The Chairman of the Board</b></A> (Manus Hand)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Moser/wrath.html"><b>The Wrath of the Diplomacy Gods</b></A> (Cameron Moser)</LI></DD>
+<DD><LI>    <A HREF="F1998M/vonKnorring/mansa.html"><b>The MANSA Charter</b></A> (Bjorn von Knorring)</LI></DD>
+<DD><LI>    <a HREF=S1999M/Rudd/abba.html><b>ABBA Plays Diplomacy</b></a> (Jack Rudd)</LI></DD>
+<DD><LI>    <a HREF=W2014A/Reynolds/limericks.htm><b>Diplomacy Limericks</b></a> (Harold Reynolds)</LI></DD>
+<DD><LI>    <a HREF=W2014A/Reynolds/letters.htm><b>Diplomacy By The Letters</b></a> (Harold Reynolds)</LI></DD>
+<dd><li><a href="S2015M/Reynolds/letters2.htm"><b>Diplomacy by the Letters, Part II &#8212; The Great Powers</b></a> (Harold Reynolds)</li></dd>
+<dd><li><a href="S2015M/Peery/cartoons.htm"><b>Newspaper Editorial Cartoons from World War I</b></a> (Larry Peery)</li></dd>
+<DD><LI>    <a HREF=W2015A/Burt/YesVirginia.html><b>Yes, Virginia!</b></a> (Kevin Burt)</LI></DD>
+<DD><LI>    <a HREF=W2015A/Burt/frog-n-scorpion.html><b>The Frog and the Scorpion</b></a> (Kevin Burt)</LI></DD>
+<DD><LI>    <a HREF=W2015A/Burt/letsgo.html><b>Let's go!</b></a> (Kevin Burt)</LI></DD>
+<DD><LI>    <a HREF=W2015A/Burt/blue.html><b>Blue Christmas</b></a> (Kevin Burt)</LI></DD>
+<DD><LI>    <a HREF=W2015A/Huys/stab.html><b>Stab</b></a> (Mario Huys)</LI></DD>
+<DD><LI>    <a HREF=W2015A/Hand/silent.html><b>Silent Friend</b></a> (Manus Hand)</LI></DD>
+<DD><LI>    <a HREF=W2015A/Burt/Rome.html><b>I'll be in Rome by Christmas</b></a> (Kevin Burt)</LI></DD>
+<DD><LI>    <a HREF=W2015A/Peery/Peerless.html><b>Ding Dong Mario's on High</b></a> (Larry Peery)</LI></DD>
+<DD><LI>    <a HREF=W2015A/Sibyl/Astrology.html><b>2016 Astrological Projections for Diplomacy Players</b></a> (Sibyl Astromancer)</LI></DD>
+<DD><LI>    <a HREF=W2015A/Reynolds/poem.html><b>A Holiday Poem</b></a> (Harold Reynolds)</LI></DD>
+<dd><li><a href="S2016M/DeGuerre/SwissNovice.html"><b>Switzerland for Novices</b></a> (Norm de Guerre)</li></dd>
+<dd><li><a href="S2016M/Reynolds/haiku.html"><b>A Diplomacy Haiku</b></a> (Harold Reynolds)</li></dd>
+
+<p><a name=Innovations></a><DT><B><i>Innovations</i></B>
+<DD><LI>    <A HREF="S1998R/Norman/VarLength.html"><b>Variable Length Tournament Diplomacy</b></A> (David Norman)</LI></DD>
+<DD><LI>    <A HREF="S1998R/Nichols/ratings2.html"><b>A Rating System for Diplomacy</b></A> (Anthony Nichols)</LI></DD>
+<DD><LI>    <A HREF="S1998R/Norman/Draws.html"><b>Scoring Draws</b></A> (David Norman)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Steinke/TieBreaker.html><b>Tournament Tie Breakers</b></a> (Robert Steinke)</LI></DD>
+
+<p><a name=Instruction></a><DT><b><i>Instruction</i></b>
+<DD><LI>    <A HREF="S1995M/Dreier/Newbie.html"><b>Running Newbie E-Mail Games</b></A> (Jamie Dreier)</LI></DD>
+<DD><LI>    <A HREF="S1995M/Mous/Survival.html"><b>The Diplomacy Survival Guide</b></A> (Vincent Mous)</LI></DD>
+<DD><LI>	<A HREF="W1995A/Sund/foreign.html"><B>For English Native Speakers Only?</B></A> (Bj&oslash;rn Tore Sund)</LI></DD>
+<DD><LI>	<A HREF="S1996M/Hand/Essay.html"><B>On The Greatness of The Game</B></A> (Manus Hand)</LI></DD>
+<DD><LI>    <A HREF="S1996R/Cain/truly.html"><b>"Yours Truly," The Diplomatic Signature</b></A> (David Cain)</LI></DD>
+<DD><LI>    <A HREF="W1996A/Regittko/tips.html"><b>Tips From the Masters</b></A> (Regittko, Dreier, and Schwarz)</LI></DD>
+<DD><LI>    <A HREF="W1996A/Massey/annotate.html"><b>An Annotated No-Press Game</b></A> (Doug Massey)</LI></DD>
+<DD><LI>    <A HREF="S1996R/Rosen/dippap.html"><b>Diplomacy and International Relations Theory</b></A> (David Rosen)</LI></DD>
+<DD><LI>    <A HREF="S1997R/Rosen/dippap2.html"><b>Diplomacy and Game Theory, part 2:  Rational Choice</b></A> (David Rosen)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Wheeler/Clausewitz.html"><b>On Diplomacy (parts I through IV)</b></A> (Joseph Wheeler)</LI></DD>
+<DD><LI>    <A HREF="S1997R/Wheeler/Clausewitz2.html"><b>On Diplomacy (parts V and VI)</b></A> (Joseph Wheeler)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Pearson/Curtain.html"><b>When the Iron Curtain Falls: Maintaining the Mass Alliance</b></A> (John Pearson)</LI></DD>
+<DD><LI>    <A HREF="F1997M/Bergman/Italy.html"><b>Go Fasta Go Fasta Go Fasta: Winning as Italy</b></A> (Leif Bergman)</LI></DD>
+<DD><LI>    <A HREF="F1997M/Lease/mercyethics.html"><b>The Ethics of Playing a Mercy Position</b></A> (Mike Lease)</LI></DD>
+<DD><LI>    <A HREF="F1997M/Dingle/Colonial.html"><b>Strategy for Colonial Diplomacy</b></A> (Greg Dingle)</LI></DD>
+<DD><LI>    <A HREF="F1997M/McLachlin/ELS.html"><b>Wielding Too Much Power:  Early Leader Syndrome</b></A> (Derek McLaughlin)</LI></DD>
+<DD><LI>    <A HREF="F1997M/Richardson/Unkind.html"><b>The Unkindest Cut of All: The Introduction</b></A> (Tim Richardson)</LI></DD>
+<DD><LI>    <A HREF="F1997R/Richardson/cuttwo.html"><b>The Unkindest Cut of All: Getting a Handle on Your Knife</b></A> (Tim Richardson)</LI></DD>
+<DD><LI>	<a href=F1997R/Makin/conceal.html><b>Concealing Your Identity in Gunboat Games</b></a> (Wes Makin)</LI></DD>
+<dd><li>	<a href=F1997R/Windsor/lawdip.html><b>Lawyer/Diplomat</b></a> (Paul Windsor)</li></dd>
+<dd><li>	<a href=W1997A/Swinnerton/Key.html><b>Playing the Key</b></a> (Tony Swinnerton)</li></dd>
+<dd><li>	<a href=W1997A/Kermanidis/super-al.html><b>Super-Alliances in the Modern Variant</b></a> (Theo Kermanidis)</li></dd>
+<dd><li>	<a href=S1998M/Ballad/diverse.html><b>Diversification</b></a> (Bobby Somebody)</li></dd>
+<dd><li>	<a href=S1998R/Windsor/caissa.html><b>Caissa at the Diplomacy Table</b></a> (Paul Windsor)</li></dd>
+<dd><li>	<a href=S1998R/Dorst/Complexity.html><b>Using Integrative Complexity to Predict Stabs</b></a> (Brahm Dorst)</li></dd>
+<dd><li>	<a href=S1998R/Ohlman/TrueBlue.html><b>True Blue</b></a> (Vaughn Ohlman)</li></dd>
+<dd><li>	<a href=S1998R/Black/DoStab.html><b>Concerning Stabbing</b></a> (Thaddeus Black)</li></dd>
+<dd><li>	<a href=W1998A/Windsor/Chainsaw.html><b>Chainsaw Diplomacy</b></a> (Paul Windsor)</li></dd>
+<dd><li>	<a href=W1998A/MarkB/Bounce.html><b>Like a Rubber Ball - Bouncing in Diplomacy</b></a> ("Murky" (Mark B))</li></dd>
+<dd><li>	<a href=S1999M/Windsor/point.html><b>What's Your Point?</b></a> (Paul Windsor)</li></dd>
+<dd><li>	<a href=S1999M/Woodhouse/tactics.html><b>Diplomatic Tactics</b></a> (Tom Woodhouse)</li></dd>
+<dd><li>	<a href=S1999M/Potocki/virtue.html><B>Are You Man Enough?</b></a> (Tom Potocki)</li></dd>
+<dd><li>	<a href=S1999R/Martin/how2win.html><B>How To Win Tournament Diplomacy (Revisited)</b></a> (Chris Martin)</li></dd>
+<dd><li>	<a href=S1999R/Hertzman/eye.html><B>The Unrelenting Eye, Part 1</b></a> (David Hertzman)</li></dd>
+<dd><li>	<a href=F1999M/Hertzman/Power.html><B>The Unrelenting Eye, Part 2</b></a> (David Hertzman)</li></dd>
+<dd><li>	<a href=S1999R/Windsor/caissa.html><B>Caissa Annotates a No-Press Game</b></a> (Paul Windsor)</li></dd>
+<dd><li>	<a href=S1999R/Yonkoski/alliance.html><B>The Grand Alliance</b></a> (Roger Yonkoski)</li></dd>
+<dd><li>	<a href=F1999M/Cohen/warrior.html><B>The Way of the Warrior</b></a> (David Cohen)</li></dd>
+<dd><li>	<a href=F1999M/Windsor/caissa.html><B>Caissa Finishes Annotating a No-Press Game</b></a> (Paul Windsor)</li></dd>
+<dd><li>	<a href=F1999R/Szykman/NoStabs.html><B>Avoiding Stabs 101</b></a> (Simon Szykman)</li></dd>
+<DD><LI>	<A HREF=F2000M/Clarke/growingup.html><b>Growing Up</b></a> (Brandon Clarke)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Martin/MOD2.html><b>Martin on Diplomacy: Play to Win</b></a> (Chris Martin)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Ray/italy.html><b>Winning With Italy</b></a> (Steve Ray)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Randall/sixtraits.html><b>The Six Traits of the Advanced Diplomacy Player</b></a> (Joshua Randall)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Brennan/Greece.html><b>So You Think You're a Diplomat</b></a> (Joe Brennan)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Hester/colonialfrance.html><b>Winning With France in Colonial</b></a> (B. Hester)</LI></DD>
+<dd><li><a href="S2016M/Leeds/alas.html"><b>Alas, Damn Warwick</b></a> (Rick Leeds)</li></dd>
+
+<p><a name=Interviews></a><DT><B><i>Interviews</i></B>
+<DD><LI>    <A HREF="S1995M/Nick/KenLowe.html"><b>Interview with Ken Lowe</b></A> (Nick Fitzpatrick)</LI></DD>
+<DD><LI>    <A HREF="S1995R/Hand/Plug.html"><b>Interview with Douglas Kent</b></A> (Manus Hand)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Nelson/England.html"><b>Interview with Andrew England</b></A> (Mark Nelson)</LI></DD>
+<DD><LI>    <A HREF="S1997R/Tarzan/new_interview.html"><b>Interview with Manus Hand</b></A> ("Tarzan")</LI></DD>
+<DD><LI>    <A HREF="S1998M/Nelson/Davis.html"><b>Interview with Fred C. Davis, Jr.</b></A> (Mark Nelson)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Nelson/larry_peery_interview.html"><b>Interview with Larry Peery</b></A> (Mark Nelson)</LI></DD>
+<DD><LI>    <A HREF="S1999R/Hasbro/Levay-interview.html"><b>Hasbro Interactive Speaks (Interview with Bill Levay of H.I.)</b></A> (Simon Szykman)</LI></DD>
+<DD><LI>    <A HREF="S1999R/Hasbro/Hurley-interview.html"><b>Meyer/Glass Speaks Too! (Interview with Todd Hurley of M/G)</b></A> (Manus Hand)</LI></DD>
+
+<p><a name=LMS></a><DT><B><i>Last Man Standing</i></B> (Mario Huys)
+<dd><LI>		<a href=F2015R/Huys/lms_berlin.htm><b>Operation Berlin</b></a></LI></dd>
+<dd><LI>		<a href=W2015A/Huys/lms_moscow.html><b>Operation Moscow</b></a></LI></dd>
+<dd><li><a href="S2016M/LMS/lms_rome.html"><b>Operation Rome</b></a></li></dd>
+
+<p><a name=Machiavelli></a><DT><B><i>Machiavelli</i></B>
+<DD><li>	<a href=S1999M/Barr/Machiavelli.html><b>Towards a Machiavelli Hall of Fame</b></a> (Neil Barr)</li></DD>
+<dd><LI>		<a href=F1999M/Duewer/machart.html><b>The State of the Art of the State</b></a> (Bruce Duewer)</LI></dd>
+<dd><LI>		<a href=F1999R/Duewer/tyrant.html><b>What Every Young Tyrant Should Know</b></a> (Bruce Duewer)</LI></dd>
+<dd><li>		<a href="W1999A/Duewer/moneymoney.html"><b>Money Money Money Money</b></a> (Bruce Duewer) </li></dd>
+<dd><li>		<a href="S2000M/Duewer/Articlemach4.html"><b>Tactical Toys for Young Tyrants</b></a> (Bruce Duewer)</li></dd>
+<DD><LI>	<A HREF="F2000M/Duewer/articlemach5.html"><b>The Power of the Purse</b></a> (Bruce Duewer)</LI></DD>
+<dd><li>		<a href="S2006R/Nahri/DPSu2006A%20Money%20Management%20in%20Machiavelli.htm"><b>Money Management in Machiavelli</a></b> (W. Narhi)</li></dd>
+<dd><li>		<a href="F2008M/Knewtson/machiavelli.htm"><b>Machiavelli: The Crash Course</b></a> (Stephen Knewston)</li></dd>
+<dd><li>		<a href="W2000A/Duewer/artpeace.html"><b>The Art of Peace</b></a>  (Bruce Duewer)</li></dd>
+<dd><li>		<a href="W2013A/Lidsell/money.htm"><b>Money, Money, Money &#8212; Must be Funny</b></a> (Bruce Duewer and Sergio Lidsell) </li></dd>
+<dd><li>		<a href="W2012A/Prieto/condottieri.htm"><b>Condottieri &#8212; A Site for Playing Machiavelli</a></b> (Jos&eacute; Antonio Martin Prieto) </li></dd>
+<dd><li>		<a href="S2014M/Lidsell/tricks.htm"><b>A Little Bag o'Tricks for Aspiring Tyrants</b></a> (Bruce Duewer and Sergio Lidsell)</li></dd>
+<dd><li>		<a href="S2014M/Ashman/htgr.htm"><b>Hitting the Ground Running</b></a> (Jon Ashman)</li></dd>
+<dd><li>		<a href="S2014M/Ashman/calculator.htm"><b>Machiavelli Loan Repayment JavaScript Application</b></a> (Jon Ashman)</li></dd>
+<dd><li>		<a href="S2014R/Lidsell/spending.htm"><b>Spending Like There is No Tomorrow</b></a> (Sergio Lidsell) </li></dd>
+<dd><li>		<a href="S2015R/Burt/princes.htm"><b>The Princes</b></a> (Kevin Burt)</li></dd>
+<dd><LI>		<a href="F2015M/Burt/menage.htm"><b>M&#233;nage &#224; Machiavelli</b></a> (Kevin Burt)</LI></dd>
+<dd><LI>		<a href="W2015A/Burt/ayatollah.html"><b>The Italian Ayatollah</b></a> (Kevin Burt)</LI></dd>
+<dd><li><a href="S2016M/Peery/dynasty.html"><b>The Mama Mias Dynasty</b></a> (Larry Peery)</li></dd>
+<dd><li><a href="S2016M/Burt/MostMoralMan.html"><b>A Most Moral Man</b></a> (Kevin Burt)</li></dd>
+
+<p><a name=Master></a><DT><B><i>Master Class</i></B>
+<DD><LI>    <A HREF="S1995M/Dreier/NoTheory.html"><b>The Lack of Opening Theory in Diplomacy</b></A> (Jamie Dreier)</LI></DD>
+<DD><LI>    <A HREF="F1995M/Dreier/Endgame.html"><b>The Endgame</b></A> (Jamie Dreier)</LI></DD>
+<DD><LI>    <A HREF="F1995R/Dreier/Endgame2.html"><b>The Endgame II</b></A> (Jamie Dreier)</LI></DD>
+<DD><LI>    <A HREF="W1995A/Dreier/Master.html"><b>The Endgame III</b></A> (Jamie Dreier)</LI></DD>
+<DD><LI>    <A HREF="S1996M/Dreier/Master.html"><b>Play Against The Average Player</b></A> (Jamie Dreier)</LI></DD>
+<DD><LI>    <A HREF="F1996M/Dreier/average.html"><b>Results of Playing The Average Player</b></A> (Jamie Dreier)</LI></DD>
+<DD><LI>    <A HREF="F2015M/Harris/austria.htm"><b>Austria for Experts</b></A> (Toby Harris)</LI></DD>
+<DD><LI>    <A HREF="F2015R/Harris/england.htm"><b>England for Experts</b></A> (Toby Harris)</LI></DD>
+<DD><LI>    <A HREF="W2015A/Harris/france.html"><b>France for Experts</b></A> (Toby Harris)</LI></DD>
+<dd><li><a href="S2016M/Harris/germany.html"><b>Germany for Experts</b></a> (Toby Harris)</li></dd>
+
+<p><a name=Newbie></a><DT><b><I>Newbie Reflections</I></b>
+<DD><LI>	<A HREF="S1995M/Lepley/Incoming.html"><B>Incoming: Spring 1995 Movement Issue</B></A> (Stephen Lepley)</LI></DD>
+<DD><LI>	<A HREF="S1995R/Lepley/Incoming.html"><B>Incoming: Spring 1995 Retreat Issue</B></A> (Stephen Lepley)</LI></DD>
+<DD><LI>	<A HREF="F1995M/Lepley/Incoming.html"><B>Incoming: Fall 1995 Movement Issue</B></A> (Stephen Lepley)</LI></DD>
+<DD><LI>	<A HREF="F1995R/Lepley/Incoming.html"><B>Incoming: Fall 1995 Retreat Issue</B></A> (Stephen Lepley)</LI></DD>
+<DD><LI>	<A HREF="W1995A/Lepley/Incoming.html"><B>Incoming: Winter 1995 Adjustment Issue</B></A> (Stephen Lepley)</LI></DD>
+<DD><LI>	<A HREF="S1996M/Lepley/Incoming.html"><B>Incoming: Spring 1996 Movement Issue</B></A> (Stephen Lepley)</LI></DD>
+<DD><LI>	<A HREF="S1996R/Lepley/Incoming.html"><B>Incoming: Spring 1996 Retreat Issue</B></A> (Stephen Lepley)</LI></DD>
+<DD><LI>	<A HREF="F1996M/Lepley/Incoming.html"><B>Incoming: Fall 1996 Movement Issue</B></A> (Stephen Lepley)</LI></DD>
+<DD><LI>	<A HREF="S1997M/Flesher/Baby.html"><B>Baby Steps</B></A> (Jared Flesher)</LI></DD>
+<DD><LI>	<A HREF="W1998A/Lascelle/Renewbie.html"><B>Observations of a Renewbie</B></A> (Hassan Lascelle)</LI></DD>
+<DD><LI>	<A HREF="F1999R/Torres/why.html"><B>What I've Learned In Three Months</B></A> (Jos&eacute; Torres)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Brennan/Newbie.html><b>What is a Newbie</b></a> (Joe Brennan)</LI></DD>
+<DD><LI>	<A HREF="S2001M/Fest/Reflections.html"><b>Reflections of a Born-Again Diplomacy Player</b></a> (J.T. Fest)</LI></DD>
+
+<p><a name=Openings></a><DT><B><i>Openings</i></B> (see also the sections on Press/No Press and Variants)
+<DD><LI>    <A HREF="../Online/Openings"><b>The Diplomacy Openings Library</b></A> (Loeb and Hand)</LI></DD>
+<DD><LI>    <A HREF="S1995M/Loeb/DPP_Open.html"><b>Openings by Computer</b></A> (Danny Loeb)</LI></DD>
+<DD><LI>    <A HREF="S1995R/Misc/Blast.html"><b>How Many Openings Are There?</b></A> (Loeb, Selhammar, Green, and Hand)</LI></DD>
+<DD><LI>    <A HREF="S1995M/Loeb/DPP_Open.html"><b>Openings by Computer</b></A> (Danny Loeb)</LI></DD>
+<DD><LI>    <A HREF="S1995R/Loeb/Bourse.html"><b>Computer Interpretation of Diplomacy Openings</b></A> (Danny Loeb)</LI></DD>
+<DD><LI>    <A HREF="S1995M/Dreier/NoTheory.html"><b>The Lack of Opening Theory in Diplomacy</b></A> (Jamie Dreier)</LI></DD>
+<DD><LI>    <A HREF="S1996R/Nelson/Openings95.html"><b>1995 Opening Custodian's Report, Part 1</b></A> (Mark Nelson)</LI></DD>
+<DD><LI>    <A HREF="F1996M/Nelson/Part2.html"><b>1995 Opening Custodian's Report, Part 2</b></A> (Mark Nelson)</LI></DD>
+<DD><LI>    <A HREF="F1996M/Nelson/Part3.html"><b>1995 Opening Custodian's Report, Part 3</b></a> (Mark Nelson)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Birsan/Sealion.html"><b>The Sealion Opening</b></a> (Edi Birsan)</LI></DD>
+<DD><LI>    <A HREF="F1997M/Oosten/WmandMary.html"><b>The William and Mary Opening</b></a> (Maarten Oosten)</LI></DD>
+<DD><li>	<a href=F1997R/Smithson/seaart.html><b>The Sealion Opening in Action</b></a> (Bif Smithson)</li></DD>
+<dd><li>	<a href=W1997A/Swinnerton/Key.html><b>Playing the Key</b></a> (Tony Swinnerton)</li></dd>
+<dd><li>	<a href=S1998M/Birsan/Lepanto.html><b>The Lepanto Opening</b></a> (Edi Birsan)</li></dd>
+<dd><li>	<a href=S1998M/Swinnerton/Scandinavia.html><b>Ruling Scandinavia as Germany</b></a> (Tony Swinnerton)</li></dd>
+<dd><li>	<a href=S1998M/Artigues/Sealion.html><b>The Sealion At Rest</b></a> (Ron Artigues)</li></dd>
+<dd><li>	<a href=S1998M/Anon/1901.html><b>A Statistical Look at 1901</b></a> ("The Scribe")</li></dd>
+<dd><li>	<a href=S1998R/Fuller/openings.html><b>Openings Revisited</b></a> (Dann Fuller)</li></dd>
+<dd><li>	<a href=S1999M/Brown/silesia.html><b>German Army to Silesia</b></a> (Greg Brown)</li></dd>
+<dd><li>	<a href=S1999R/Wolf/centrifuge.html><b>Centrifugal Force</b></a> (Clinton Wolf)</li></dd>
+<dd><li>	<a href=F1999R/Szykman/triple.html><b>The Newly Redesigned Western Triple</b></a> (Simon Szykman)</li></dd>
+<dd><li>	<a href=F1999R/Kermanidis/Bismark.html><b>The Bismarck Opening</b></a> (Theo Kermanidis)</li></dd>
+<DD><LI>	<A HREF=W1999A/Hand/bwl.html><b>The Blue Water Lepanto</b></a> (Manus Hand)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Wolf/eyeofthestorm.html><b>Eye of the Storm</b></a> (Clinton Wolf)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Goff/swedensituation.html><b>The Sweden Situation</b></a> (Andrew Goff)</LI></DD>
+<DD><LI>	<A HREF=F2000M/McClure/rockylepanto.html><b>The Rocky Lepanto</b></a> (Brendan McClure)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Pillie/bluewater.html><b>The Blue Water Lepanto Revisted</b></a> (Derek Pillie)</LI></DD>
+
+<p><a name=Peeriblah></a><DT><B><i>Peeriblah's Potpourri</i></B> (Larry Peery)
+<DD><LI>    <A HREF="F1995M/Peery/Intro.html"><b>Mona Lisa's Eyes</b></A></LI></DD>
+<DD><LI>    <A HREF="F1995M/Peery/Xenogogic.html"><b>XENOGOGIC</b></A></LI></DD>
+<DD><LI>    <A HREF="S1996R/Peery/Xeno.html"><b>XENOGOGIC II</b></A></LI></DD>
+<DD><LI>    <A HREF="F1995R/Peery/Peeriblah.html"><b>Diplomacy: A Matter of Real Estate</b></A></LI></DD>
+<DD><LI>    <A HREF="S1996R/Peery/loc.html"><b>Location, Location, Location... Sold!</b></A></LI></DD>
+<DD><LI>    <A HREF="W1996A/Peery/survey.html"><b>The Diplomacy Emotion Survey</b></A></LI></DD>
+<DD><LI>    <A HREF="F1997M/Peery/7Embassies.html"><b>Seven Embassies for Seven Dippers</b></A></LI></DD>
+<DD><LI>    <A HREF="F1997M/Peery/URwhatUeat.html"><b>Dippers Are What They Eat</b></A></LI></DD>
+<DD><LI>    <A HREF="F1997M/Peery/DoctorDip.html"><b>The Doctor of Diplomacy Program</b></A></LI></DD>
+<DD><LI>    <A HREF="S1998R/Peery/Chat.html"><b>Is it Time for a Diplomatic Pouch Chat Room?</b></A></LI></DD>
+<DD><LI>    <A HREF="F1998M/Peery/xeno.html"><b>Yes, It's Been A Long Hot Summer</b></A></LI></DD>
+<DD><LI>    <A HREF=F2000M/Peery/WDC-history.html><b>A History of World DipCon</b></a></LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/years.htm><b>Alfred and Brian &#8212; The Harvard Years</b></a></LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/real.htm><b>Modern Real World Real Women Diplomats</b></a></LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/HAK.htm><b>A Peerispective on Dr Henry Alfred Kissinger</b></a> (with Martin Burgdorf)</LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/kissinger.htm><b>Reviews of Henry Kissinger's "World Order", Part II</b></a></LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/watergate.htm><b>Diplomacy at the Watergate</b></a></LI></DD>
+<dd><li><a href="S2015M/Peery/21st.htm"><b>Diplomacy for the 21st Century</b></a></li></dd>
+<dd><li><a href="S2015M/Peery/growing.htm"><b>Growing the Hobby VII &#8212; December 7 2015, A Day to Celebrate</b></a></li></dd>
+<DD><LI>    <A HREF=W2015A/Peery/bataclan.html><b>Bataclan, Waterloo and the St. Bartholomew's Day Massacre</b></a></LI></DD>
+<DD><LI>    <A HREF=W2015A/Peery/rubens.html><b>The Diplomate who became a
+Billionaire</b></a></LI></DD>
+<DD><LI>    <A HREF=W2015A/Peery/congress1.html><b>The Congress of Vienna -
+Part I</b></a></LI></DD>
+<dd><li><a href="S2016M/Peery/BadassEgghead.html"><b>The Badass and the Egghead: LeMay and Schriever</b></a></li></dd>
+<dd><li><a href="S2016M/Peery/LittleFries.html"><b>The Congress of Vienna &mdash; The Little Fries Get Fried</b></a></li></dd>
+<dd><li><a href="S2016M/Peery/defeat.html"><b>Peeriblah Goes Down to Defeat</b></a></li></dd>
+
+<p><a name=Formats></a><DT><b><i>Play Formats</i></b>
+<DD><LI>    <A HREF="S1996R/Cain/classic.html"><b>Community Backstabbing</b></A> (David Cain)</LI></DD>
+<DD><LI>    <A HREF="S1996R/Setzer/Remember.html"><b>I'll Remember You</b></A> (Ray Setzer)</LI></DD>
+<DD><LI>    <A HREF="F1997M/Clarke/Auckland.html"><b>The Auckland Diplomacy Club</b></A> (Brandon Clarke)</LI></DD>
+<DD><LI>    <A HREF="F1997R/Glasson/Cat23.html"><b>All About Cat23</b></A> (Caitlin Glasson)</LI></DD>
+<dd><li>	<a href=S1999M/MarkB/No_GM.html><b>E-Mail Diplomacy Without a GM</b></a> ("Murky" (Mark B))</li></dd>
+<dd><li>	<a href=F1999R/Horton/tourney.html><b>Out Of My Depth</b></a> (Richard Horton)</li></dd>
+<dd><li>	<a href=F1999R/Hand/dpjudge.html><b>The DPjudge</b></a> (Manus Hand)</li></dd>
+<DD><LI>	<A HREF=F2000M/Norman/worldftf.html><b>Why We See Things The Way We Do</b></a> (David Norman and Brandon Clarke)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Norman/wdclocation.html><b>Discussion of the Location of WDC in 2003 and Beyond</b></a> (David Norman and Brandon Clarke)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Birsan/tournamentextremes.html><b>Tournament Practices: Contrasts in Extremes</b></a> (Edi Birsan)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Birsan/teamtournaments.html><b>Team Tournaments</b></a> (Edi Birsan)</LI></DD>
+<DD><LI>    <A HREF="S2002R/Miller/What_is_njudge.html"><b>What is njudge?</b></A> (Millis Miller)</LI></DD>
+
+<p><a name=Info></a><DT><B><i>Player Information</i></B>
+<DD><LI>	<A HREF="S1995M/Nelson/Latest.html"><B> Through the Looking Glass, Spring 1995 Movement Issue</B></A> (Mark Nelson)</LI></DD>
+<DD><LI>	<A HREF="F1995M/Nelson/RGDstats.html"><B>Through the Looking Glass, Fall 1995 Movement Issue</B></A> (Mark Nelson)</LI></DD>
+<DD><LI>    <A HREF="F1995M/Chilton/Survey.html"><b>The Internet Diplomacy Survey</b></A> (Nic Chilton)</LI></DD>
+<DD><LI>    <A HREF="F1995R/Self/pbem.html"><b>Who's Playing Internet Diplomacy?</b></A> (Matthew Self)</LI></DD>
+<DD><LI>	<A HREF="W1995A/Self/hof.html"><b>The Hall of Fame</b></A></LI></DD>
+<DD><LI>    <A HREF="W1995A/Davidson/poll.html"><b>The Great Diplomacy Poll</b></A> (Paul Davidson)</LI></DD>
+<DD><LI>    <A HREF="W1995A/Minshall/dsi.html"><b>The Diplomacy Skill Index</b></A> (Conrad Minshall)</LI></DD>
+<DD><LI>    <A HREF="S1996R/Szykman/WDC.html"><b>The World Wide Web of International Intrigue</b></A> (Szykman and Hand)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Szykman/survey.html"><b>Results of the Diplomatic Pouch Survey</b></A> (Simon Szykman)</LI></DD>
+<DD><LI>    <A HREF="S1997R/Peery/Emotions.html"><b>Results of the Diplomacy Emotion Survey</b></A></LI></DD>
+<DD><LI>    <A HREF="F1997M/Kauzlarich/Pins.html"><b>Pins and Magnets</b></a> (Scott Kauzlarich)</LI></DD>
+<DD><LI>    <A HREF="W1997A/Kinney/snailpub.html"><b>The Smell of the Copy Toner</b></a> (Mark Kinney)</LI></DD>
+<DD><LI>    <A HREF="S1998M/Lease/cheat.html"><b>Cheating Yourself</b></a> (Mark Kinney)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Anon/confession.html"><b>A Cheater's Confession</b></a> (Anonymous)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Gardner/reflections.html"><b>Reflections of a Teenage Zine Publisher</b></a> (Heath Gardner)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Mulholland/oops.html"><b>Oops! I Didn't See That Coming! Now What?</b></a> (Richard Mulholland)</LI></DD>
+<dd><li>	<a href=S1999M/Shields/survey.html><b>A PBEM Tournament Survey</b></a> (Matt Shields)</li></dd>
+<DD><li>	<a href=S1999M/Adams/inherit.html><b>We'll Inherit the Earth</b></a> (Richard Adams)</li></DD>
+<DD><li>	<a href=S1999R/Miller/rannestad.html><b>The Rannestad Convention</b></a> (Tim Miller)</li></DD>
+<DD><li>	<a href=S1999R/Hasbro/shots.html><b>A Sneak Peek (At Hasbro Interactive's Computer Diplomacy)</b></a> (Manus Hand)</li></DD>
+<DD><li>	<a href=F1999R/Birsan/Corps.html><b>Announcing the Diplomatic Corps</b></a> (Edi Birsan)</li></DD>
+<DD><li>	<a href=F1999R/Clarke/runit.html><b>How To Run A Diplomacy Tournament</b></a> (Brandon Clarke)</li></DD>
+<DD><LI>	<A HREF=F2000M/Degville/jdpr_user_guide.html><b>User's Guide to the JDPR</b></a> (David Degville)</LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/robots.htm><b>RoboDip and Robodots</b></a> (Larry Peery)</LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/idhof.htm><b>International Diplomacy Hall of Fame (IDHOF) Election Results</b></a> (Larry Peery)</LI></DD>
+<DD><LI>	<A HREF=W2014A/Holley/fury.htm><b>Hell Hath No Fury Like A Woman Stabbed</b></a> (Melinda Holley)</LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/roundtable.htm><b>A Roundtable Discussion of Diplomacy and Game Theory</b></a> (Kent, Hunter, Desper, Burgess, Abbott and Peery)</LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/photobank.htm><b>Is It Time To Revive the Hobby's Fotobank?</b></a> (Larry Peery)</LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/east.htm><b>Diplomacy in the Far East</b></a> (Zhang Fang, Dorian Love and Larry Peery)</LI></DD>
+<dd><li><a href="S2016M/Eddy/Buz.html"><b>Buz Eddy: <em>In Memoriam</em></b></a> (Various friends)</li></dd>
+
+<p><a name=Deposits></a><DT><b><i>Pouch Deposits</I></b> (The Editor and the Readership)
+<DD><LI>	<A HREF="S1995M/Hand/Deposits.html"><B>Spring 1995 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1995R/Hand/Deposits.html"><B>Spring 1995 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1995M/Szykman/Deposits.html"><B>Fall 1995 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1995R/Hand/Deposits.html"><B>Fall 1995 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W1995A/Hand/Deposits.html"><B>Winter 1995 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1996M/Hand/Deposits.html"><B>Spring 1996 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1996R/Hand/Deposits.html"><B>Spring 1996 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1996M/Hand/Deposits.html"><B>Fall 1996 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W1996A/Hand/Deposits.html"><B>Winter 1996 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1997M/Szykman/Deposits.html"><B>Spring 1997 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1997R/Szykman/Deposits.html"><B>Spring 1997 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1997M/Hand/Deposits.html"><B>Fall 1997 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1997R/Hand/Deposits.html"><B>Fall 1997 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W1997A/Hand/Deposits.html"><B>Winter 1997 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1998M/Hand/Deposits.html"><B>Spring 1998 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1998R/Hand/Deposits.html"><B>Spring 1998 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1998M/Hand/Deposits.html"><B>Fall 1998 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W1998A/Hand/Deposits.html"><B>Winter 1998 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1999M/Hand/Deposits.html"><B>Spring 1999 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S1999R/Hand/Deposits.html"><B>Spring 1999 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1999M/Hand/Deposits.html"><B>Fall 1999 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F1999R/Hand/Deposits.html"><B>Fall 1999 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W1999A/Clarke/Deposits.html"><B>Winter 1999 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S2000M/Shields/Deposits.html"><b>Spring 2000 Movement Issue</b></a></LI></DD>
+<DD><LI>	<A HREF="F2000M/Brase/Deposits.html"><b>Fall 2000 Movement Issue</b></a></LI></DD>
+<DD><LI>	<A HREF="W2000A/Shields/Deposits.html"><b>Winter 2000 Adjustment Issue</b></a></LI></DD>
+<DD><LI>	<A HREF="S2001M/Shields/Deposits.html"><b>Spring 2001 Movement Issue</b></a></LI></DD>
+<DD><LI>	<A HREF="F2001M/Hill/Deposits.html"><b>Fall 2001 Movement Issue</b></a></LI></DD>
+<DD><LI>	<A HREF="S2002M/Hawthorne/Deposits.html"><B>Spring 2002 Movement  Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S2002R/Hawthorne/Deposits.html"><B>Spring 2002 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F2002M/Hawthorne/Deposits.html"><B>Fall 2002 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="F2002R/Hawthorne/Deposits.html"><B>Fall 2002 Retreat Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W2002A/Hawthorne/Deposits.html"><B>Winter 2002 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="S2003M/Hawthorne/Deposits.html"><B>Spring 2003 Movement Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W2003A/Editor/Deposits.html"><B>Winter 2003 Adjustment Issue</B></A></LI></DD>
+<DD><LI>	<A HREF="W2014A/Editor/Deposits.htm"><B>Winter 2014 Adjustment Issue</B></A></LI></DD>
+
+<p><a name=Project></a><DT><b><i>The Pouch Project</i></b>
+<DD><LI>	<A HREF="W2014A/Babcock/news.htm"><B>Beginning the 21st Year</B></A> (Chris Babcock)</LI></DD>
+<DD><LI>	<A HREF="W2014A/Leeds/walking.htm"><B>Not Walking Kai</B></A> (Rick Leeds)</LI></DD>
+<DD><LI>	<A HREF="W2014A/Burgess/postal.htm"><B>The Postal Section of the Pouch, 20 Years On</B></A> (Jim Burgess)</LI></DD>
+<DD><LI>    <A HREF=W2014A/Peery/laureate.htm><b>Harold Reynolds, Diplomacy Laureate</b></a> (Larry Peery)</LI></DD>
+<DD><LI>	<A HREF="W2014A/McNamara/best.htm"><B>The Five Best Articles From Past Issues of The Pouch</B></A> (Peter McNamara)</LI></DD>
+<DD><LI>	<A HREF="W2015A/Babcock/letter.html"><B>The State of the Art and Science in Diplomacy</B></A> (Chris Babcock)</LI></DD>
+<dd><li><a href="S2016M/Hughes/befriending.html"><b>Befriending Diplomacy</b></a> (Chris Hughes)</li></dd>
+
+<p><a name=Press></a><DT><b><i>Press and NoPress</i></b>
+<DD><LI>    <A HREF="W1995A/Szykman/NoPress.html"><b>Communication in No-Press Diplomacy</b></A> (Simon Szykman)</LI></DD>
+<DD><LI>    <A HREF="W1996A/Massey/annotate.html"><b>An Annotated No-Press Game</b></A> (Doug Massey)</LI></DD>
+<DD><LI>    <A HREF="S1998M/Miller/press.html"><B>White Partial Press, Introductory Article</B></A> (Tim Miller)</LI></DD>
+<DD><LI>    <A HREF="S1998R/Miller/Press.html"><B>White Partial Press</B></A> (Tim Miller)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Miller/press.html"><B>White Partial Press, Part 2</B></A> (Tim Miller)</LI></DD>
+<DD><LI>    <A HREF="W1998A/Miller/press.html"><B>White Broadcast Press</B></A> (Tim Miller)</LI></DD>
+<DD><LI>    <A HREF="S1999M/Miller/press.html"><B>Grey Broadcast Press</B></A> (Tim Miller)</LI></DD>
+<dd><li>    <a href=S1998M/Yatchman/nopress.html><b>Thoughts on No-Press Opening Theory</b></a> (M. J. Yatchman)</li></dd>
+<dd><li>    <a href=S1998R/Clarke/NoPress.html><b>Other Thoughts on No-Press Opening Theory</b></a> (Brandon Clarke)</li></dd>
+<dd><li>    <a href=F1998M/Clarke/NoPress.html><b>Further Thoughts on No-Press Opening Strategy</b></a> (Brandon Clarke)</li></dd>
+<dd><li>    <a href=W1998A/Clarke/NoPress.html><b>Still More Thoughts on No-Press Opening Strategy</b></a> (Brandon Clarke)</li></dd>
+<dd><li>    <a href=S1999R/Windsor/caissa.html><B>Caissa Annotates a No-Press Game</b></a> (Paul Windsor)</li></dd>
+<DD><LI>    <A HREF=W2003A/Valoni/Lapland_Southern_Draw.html><b>The Lapland Southern Draw</b></a> (José Luis Fernández Valoni)</LI></DD>
+<dd><li><a href="S2015M/Guerre/50shades.htm"><b>50 Shades of Grey Press</b></a> (Norm de Guerre)</li></dd>
+<dd><li><a href="S2015M/Guerre/b&w.htm"><b>Grey Press in Black and White</b></a> (Norm de Guerre)</li></dd>
+
+<p><a name=Puzzles></a><DT><b><i>Puzzles</i></b> (See also <i>Sherlock Holmes, Consulting Diplomat</i>, below)
+<DD><LI>    <A HREF="F1997R/Szykman/DipSearch.html"><b>Supply Centers, Anyone?</b></A> (Simon Szykman)</LI></DD>
+<DD><LI>    <A HREF="http://devel.diplom.org/DP-cgi/cryptic"><b>A Diplomatic Cryptic</b></A> (Gary Kennedy)</LI></DD>
+<DD><LI>    <A HREF="http://devel.diplom.org/DP-cgi/DipSticks"><b>DipSticks</b></A> (Simon Szykman and Manus Hand)</LI></DD>
+<DD><LI>    <A HREF="S1998M/Szykman/solutions.html"><b>Solutions to Puzzles in W1997A</b></A> (Szykman, Hand, and Kennedy)</LI></DD>
+<DD><LI>    <A HREF="S1998M/Nichols/cryptic.html"><b>Diplomacy Cryptic II</b></A> (Tony Nichols)</LI></DD>
+<DD><LI>    <A HREF="S1998R/Nichols/grid.html"><b>Grid For Diplomacy Cryptic II</b></A> (Tony Nichols)</LI></DD>
+<DD><LI>    <A HREF="S1998R/Kieslich/SpyVsSpy.html"><b>A Cryptic Postcard -- A Black Spy Story</b></A> (Brian Kielsich)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Nichols/cryans.html"><b>Diplomacy Cryptic Answers</b></A> (Tony Nichols)</LI></DD>
+<DD><LI>    <A HREF="W1998A/Kieslich/cryptic-solution.html"><b>Solution to the Cryptic Postcard Puzzle</b></A> (Brian Kieslich)</LI></DD>
+<DD><LI>	<A HREF=F2000M/Szykman/Trivia.html><b>Diplomacy Boardgame Trivia</b></a> (Simon Szykman)</LI></DD>
+<DD><LI>    <a HREF=W2015A/Various/quiz.html><b>The Year in Trivia</b></a> (Larry Peery, Kevin Burt and Mario Huys)</LI></DD>
+
+<p><a name=Reference></a><DT><b><i>Reference</i></b>
+<DD><LI>    <A HREF="W1995A/Tactics"><b>Library of Diplomacy Tactics</b></A> (Matthew Self)</LI></DD>
+<DD><LI>    <A HREF="W1995A/Stalemates"><b>Stalemate Lines Again?</b></A> (Matthew Self)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Fitzpatrick/Numbers.html"><b>Boardman and Miller Numbers</b></A> (Nick Fitzpatrick)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Schwarz/Paradox.html"><b>Diplomacy Paradoxes</b></A> (Andy Schwarz)</LI></DD>
+<!-- <DD><LI>    <A HREF="Norman/judgelist.html"><b>Judge Variant List</b></a> (David Norman) -->
+<DD><LI>    <A HREF=W2014A/Peery/tribenet.htm><b>Cutting To The Chase &#8212; A Review of TribeNet</b></a> (Larry Peery)</LI></DD>
+
+<p><a name=Holmes></a><DT><b><i>Sherlock Holmes, Consulting Diplomat</i></b> (Various Contributors) 
+<DD><LI>	<A HREF="S1995M/Woolley/Puzzle.html"><B>The Double Elimination Conundrum</B></A> (John Woolley)</LI></DD>
+<DD><LI>	<A HREF="S1996M/Holmes"><B>The Hunt for The Venison Camper</B></A> (Szykman and Hand)</LI></DD>
+<dd><LI>	<A HREF="S1996R/Holmes"><B>More Venison Camper Clues</B></A> (Szykman and Hand)</LI></dd>
+<dd><LI>	<A HREF="F1996M/Holmes"><B>The Solution to The Venison Camper</B></A> (Manus Hand)</LI></dd>
+<DD><LI>	<A HREF="S1997R/Holmes/NMR.html"><B>The Riddle of the Mirrored Openings</B></A> (Graeme Ackland)</LI></DD>
+<DD><LI>	<A HREF="F1997M/Holmes/NMRSolved.html"><B>Solution to The Riddle of the Mirrored Openings</B></A> (Chuck Carroll)</LI></DD>
+<DD><LI>	<A HREF="F1997M/Holmes/Borders.html"><B>The Case of the Missing Border</B></A> (Graeme Ackland)</LI></DD>
+<DD><LI>	<A HREF="F1997R/Holmes/borders.html"><B>Solution to The Case of the Missing Border</B></A> (Jonathan McCue)</LI></DD>
+<DD><LI>	<A HREF="F1997R/Holmes/sultan.html"><B>The Dead-Letters Affair</B></A> (Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="W1997A/Holmes/letters.html"><B>Solution to The Dead-Letters
+		   Affair</B></A> (Eric Wagoner and Derek McLachlin)</LI></DD>
+<DD><LI>	<A HREF="W1997A/Holmes/refugee.html"><B>The Case of the Suwati Refugee</B></A> (Graeme Ackland)</LI></DD>
+<DD><LI>	<A HREF="S1998M/Holmes/solution.html"><B>Solution to The Case of the Suwati Refugee</B></A> (Graeme Ackland)</LI></DD>
+<DD><LI>	<A HREF="S1998M/Holmes/disarm.html"><B>The Great Disarmament Conundrum</B></A> (Graeme Ackland)</LI></DD>
+<DD><LI>	<A HREF="S1998R/Holmes/solution.html"><B>Solution to The Great Disarmament Conundrum</B></A> (Graeme Ackland)</LI></DD>
+<DD><LI>	<A HREF="S1998R/Holmes/hogman.html"><B>The Strange Case of the Confederation of Neutral States</B></A> (Graeme Ackland)</LI></DD>
+<DD><LI>	<A HREF="F1998M/Holmes/shift.html"><B>The Cultural Exchange Puzzle</B></A> (Graeme Ackland)</LI></DD>
+<DD><LI>	<A HREF="W1998A/Holmes/confed.html"><B>Solution to The Strange Case of the Confederation of Neutral States</B></A></LI></DD>
+<DD><LI>	<A HREF="W1998A/Holmes/culture.html"><B>Solution to The Cultural Exchange Puzzle</B></A></LI></DD>
+<DD><LI>    <A HREF="W1998A/Kieslich/Rudolph.html"><b>Reindeer Games</b></A> (Brian Kieslich)</LI></DD>
+<DD><LI>	<A HREF="W1998A/Holmes/holmes.html"><B>The Case of the Absent Professor</B></A> (Graeme Ackland)</LI></DD>
+<DD><LI>    <A HREF="F1999M/Holmes/solution.html"><b>Solution to the Case of the Absent Professor</b></A> (Graeme Ackland)</LI></DD>
+<DD><LI>    <A HREF="F1999M/Holmes/lethal.html"><b>The Case of the Lethal Alliance</b></A> (Eric Pederson)</LI></DD>
+<DD><LI>    <A HREF="F1999R/Holmes/Solution123.html"><b>Clues for The Case of the Lethal Alliance</b></A> (Eric Pederson)</LI></DD>
+<DD><LI>	<A HREF="S2002M/Holmes/Blind.html"><b>The Missing Master's Mystery</b></a> (Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="S2002R/Holmes/hints.html"><b>Clues to The Missing Master's Mystery</b></a> (Manus Hand and Eric Mead)</LI></DD>
+<DD><LI>	<A HREF="S2002R/Holmes/false.html"><b>The Curious Case of the False Start</b></a> (Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="F2002M/Holmes/SoLuTiOn.html"><b>Solution to "The Missing Master's Mystery"</b></a> (Eric Mead)</LI></DD>
+<DD><LI>	<A HREF="W2002A/Cohen/Holmes_Last_Order.html"><b>Death at the Calhamer Club</b></a> (David E Cohen)</LI></DD>
+<DD><LI>	<A HREF="F2003M/Cohen/Holmes_Last_Order_Solution.html"><b>First Solution to "Death at the Calhamer Club"</b></a> (David E Cohen)</LI></DD>
+<DD><LI>	<A HREF="W2003A/Cohen/Holmes_Last_Order_Solution2.html"><b>Second Solution to "Death at the Calhamer Club"</b></a> (David E. Cohen)</LI></DD>
+<DD><LI>	<A HREF="S2004M/Hand/falseSolution.html"><b>Solution to "The Curious Case of the False Start"</b></a> (Manus Hand and Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="F2007M/Holmes/Begone.html"><b>Begone And Back: A Basic Conundrum</b></a> (Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="W2007A/Hand/BegoneAgain.html"><b>Begone And Back: A Basic Conundrum Deciphered</b></a> (Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="F2008M/Holmes/BegoneConclusion.html"><b>Begone And Back: A Basic Conundrum Deciphered Entirely</b></a> (Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="F2008R/Hand/Moriarty.html"><b>A Challenge from Devonshire</b></a> (Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="S2012M/Holmes/index.html"><b>The Costly Case of the Last Man Standing</b></a> (Mario Huys and Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="W2012A/Holmes/devonshire.htm"><b>Solution to "A Challenge from Devonshire"</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="S2013M/Holmes/devonshire2.htm"><b>Answers to the Devonshire Solution Puzzles</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="S2013M/Holmes/misgivings1.htm"><b>Moriarty's Misgivings</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="F2013M/Huys/unraveling.htm"><b>Unraveling Moriarty</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="F2013R/Holmes/false.html"><b>The Curious Case of the False Start (reprint)</b></a> (Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="W2013A/Holmes/falseSolution.html"><b>Solution to "The Curious Case of the False Start" (reprint)</b></a> (Manus Hand and Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="S2014M/Holmes/study.htm"><b>Addendum to "The Curious Case of the False Start"</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="S2014M/Holmes/suwat.htm"><b>The Suwati Portage Conundrum</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="S2014R/Holmes/portage.htm"><b>Solution to The Suwati Portage Conundrum</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="F2014R/Holmes/bestof.htm"><b>The Best of Sherlock Holmes</b></a> (Ackland, Hand and Huys)</LI></DD>
+<DD><LI>	<A HREF="F2014R/Holmes/last.htm"><b>The Last Theorem of Suwat</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="W2014A/Holmes/lastsol.htm"><b>Solution to The Last Theorem of Suwat</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="S2015M/Holmes/lastman.htm"><b>The Costly Case of the Last Man Standing, Part 1 (reprint)</b></a> (Mario Huys and Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="S2015R/Holmes/lms_solution1.htm"><b>Solution to The Costly Case of the Last Man Standing, Part 1</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="F2015M/Holmes/lastman2.htm"><b>The Costly Case of the Last Man Standing, Part 2 (reprint)</b></a> (Mario Huys and Manus Hand)</LI></DD>
+<DD><LI>	<A HREF="W2015A/Holmes/lms_revelation2.html"><b>Revelation of The Costly Case of the Last Man Standing, Part 2</b></a> (Mario Huys)</LI></DD>
+<dd><li><a href="S2016M/Holmes/lms_sol2a.html"><b>Solution to The Costly Case of the Last Man Standing, Part 2</b></a> (Mario Huys)</li></dd>
+
+
+<p><a name=Szykman></a><DT><B><I>Szykman's World</i></B> (Simon Szykman)
+<DD><LI>    <A HREF="S1995M/Szykman/Dedicate.html"><b>Dedicated to the Game</b></A></LI></DD>
+<DD><LI>    <A HREF="S1995R/Szykman/History.html"><b>Diplomacy: An Historical Perspective</b></A></LI></DD>
+<DD><LI>    <A HREF="F1995M/Szykman/Art.html"><b>The Art of Diplomacy in The Art of War</b></A></LI></DD>
+<DD><LI>    <A HREF="W1995A/Szykman/NoPress.html"><b>Communication in No-Press Diplomacy</b></A></LI></DD>
+<DD><LI>    <A HREF="W1996A/Szykman/bridge.html"><b>Bridging the Gaps Between Diplomacy Communities</b></A></LI></DD>
+<DD><LI>    <A HREF="S1998M/Szykman/logo.html"><b>Maintaining the Status Quo (the aborted DP logo)</b></A></LI></DD>
+<DD><LI>    <A HREF="S1998M/Szykman/conspiracy.html"><b>Conspiracy Theory</b></A></LI></DD>
+<DD><LI>    <A HREF="W1998A/Szykman/paranoia.cgi"><b>Risk-Taking Experiment (Survey)</b></A></LI></DD>
+<DD><LI>    <A HREF="S1999R/Szykman/Experiment.html"><b>Results of the "Risk-Taking" Experiment</b></A></LI></DD>
+<DD><LI>    <A HREF="F1999M/Szykman/Update.html"><b>Updated Results of the "Risk-Taking" Experiment</b></A></LI></DD>
+<DD><LI>    <A HREF="F1999R/Leotard/perception.html"><b>Another Analysis of the "Risk-Taking" Experiment</b></A> (Marc Leotard)</LI></DD>
+<DD><LI>    <A HREF="F1999R/Dorst/psych.html"><b>An Application of the "Risk-Taking" Experiment</b></A> (Brahm Dorst)</LI></DD>
+<DD><LI>    <A HREF="F1999R/Szykman/NoStabs.html"><b>Avoiding Stabs 101</b></A></LI></DD>
+
+<p><a name=Variants></a><DT><B><i>Variants</i></B>
+<DD><LI>	<A HREF="S2002M/VonPowell/1900_Intro.html"><b>1900: A Diplomacy Variant</b></a> (B.M. Powell)</LI></DD>
+<DD><LI>	<A HREF="S2002M/VonPowell/switzin1900.html"><b>Switzerland in the 1900 Variant</b></a> (B.M. Powell)</LI></DD>
+<DD><LI>	<A HREF="S2002R/VonPowell/1900_AustriaHungary.html"><b>1900: Austria-Hungary</b></a> (B.M. Powell)</LI></DD>
+<DD><LI>	<A HREF="F2002M/Powell/1900_Britain.html"><b>1900: Britain</b></a> (B.M. Powell)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Szykman/Arpiesse.html"><b>Arpiesse Diplomacy</b></A> (Simon Szykman)</LI></DD>
+<DD><LI>    <A HREF="W1996A/Pitt/Dipper.html"><b>The Big Dipper looks at the Asia Variant</b></A> (Pitt Crandlemire)</LI></DD>
+<DD><LI>    <A HREF="S1995R/Szykman/Backseat.html"><b>The Backseat Driver Variant</b></A> (Simon Szykman)</LI></DD>
+<dd><li>	<a href=S1999M/Churchill/cantabrigia.html><b>Cantabrigia</b></a> (Alex Churchill)</li></dd>
+<DD><LI>    <A HREF="F1997M/Dingle/Colonial.html"><b>Strategy for Colonial Diplomacy</b></A> (Greg Dingle)</LI></DD>
+<DD><LI>    <A HREF="F1999M/Carl/crystal.html"><b>Crystal Ball Diplomacy</b></A> (Joe Carl)</LI></DD>
+<DD><LI>    <A HREF="F1999R/Birsan/escalation.html"><b>Escalation Diplomacy</b></A> (Edi Birsan)</LI></DD>
+<DD><LI>    <A HREF="F2002M/Kermanidis/Federation.html"><b>Federation Diplomacy</b></A> (Theo Kermanidis)</LI></DD>
+<DD><LI>    <A HREF="S1995M/Nelson/FantVars.html"><b>Problems in Fantasy Variant Creation</b></A> (Agar and Nelson)</LI></DD>
+<DD><LI>    <A HREF="S1995M/Nelson/Elric.html"><b>Elric of Melnibone: The Young Kingdoms Variants</b></A> (Nelson and Agar)</LI></DD>
+<DD><li><A HREF="F1996M/Bache/heptarchy.html"><b>Heptarchy: Britain at War</b></A> (Geoff Bache)</li></DD>
+<DD><li><A HREF="F1996M/Schwarz/hundf96m.html"><b>Hundred</b></A> (Schwarz, Coffey, and Eldred)</li></DD>
+<DD><LI>    <A HREF="S1996M/Shoham/ICFOS.html"><b>...It Came From Outer Space!</b></A> (Dan Percival)</LI></DD>
+<DD><li>	<a href="S2002R/Cohen/Maharajahs_Variant.html"><b>Design of a Variant: Maharajah's Diplomacy</b></a> (David E. Cohen)</li></DD>
+<DD><LI>    <A HREF="S1995M/Hand/Missing.html"><b>Missing Man Diplomacy</b></A> (Manus Hand)</LI></DD>
+<DD><LI>    <A HREF="W1995A/Mous/Modern.html"><b>Modern Times</b></A> (Vincent Mous)</LI></DD>
+<DD><LI>    <A HREF="S1996M/Mous/Modern2.html"><b>Modern English (Britain)</b></A> (Vincent Mous)</LI></DD>
+<DD><LI>    <A HREF="S1996R/Mous/egypt.html"><b>Alexandria Rises Again (Egypt)</b></A> (Mous and Desper)</LI></DD>
+<DD><LI>    <A HREF="F1996M/Mous/Modern.html"><b>The Fifth Republic (France)</b></A> (Vincent Mous)</LI></DD>
+<DD><LI>    <A HREF="W1996A/Mous/Modern.html"><b>The Fourth Reich (Germany)</b></A> (Vincent Mous)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Mous/Italy.html"><b>Forza Italia (Italy)</b></A> (Vincent Mous)</LI></DD>
+<DD><LI>    <A HREF="S1997R/Mous/NewOpenings.html"><b>Five Down, Five to Go (New Openings)</b></A> (Vincent Mous)</LI></DD>
+<DD><LI>    <A HREF="F1997M/Mous/Poland.html"><b>The Pole Position (Poland)</b></A> (Vincent Mous)</LI></DD>
+<DD><LI>    <A HREF="W1997A/Mous/Russia.html"><b>From Russia with Love (Russia)</b></A> (Vincent Mous)</LI></DD>
+<DD><LI>    <A HREF="S1998M/Mous/Spain.html"><b>The Spanish Armada (Spain)</b></A> (Vincent Mous)</LI></DD>
+<DD><LI>    <A HREF="W1998A/Mous/modern.html"><b>A Turkish Delight (Turkey)</b></A> (Vincent Mous)</LI></DD>
+<dd><LI>	<a href=W1997A/Kermanidis/super-al.html><b>Super-Alliances in the Modern Variant</b></a> (Theo Kermanidis)</LI></dd>
+<DD><LI>    <A HREF="W1995A/Payola"><b>Payola Diplomacy</b></A> (Manus Hand)</LI></DD>
+<DD><LI>    <A HREF="S1996M/Pitt/Dipper.html"><b>The Big Dipper looks at Payola</b></A> (Pitt Crandlemire)</LI></DD>
+<DD><LI>    <A HREF="W1996A/Tarzan/Basics.html"><b>A User's Guide to the Payola Variant: The Basics</b></A> ("Tarzan")</LI></DD>
+<DD><LI>    <A HREF="S1997R/Tarzan/Payola-2.html"><b>A User's Guide to the Payola Variant: Advanced Bribery</b></A> ("Tarzan")</LI></DD>
+<DD><LI>    <A HREF="F1997M/Mayer/Payola.html"><b>Overheard at the Ministry of Finance</b></A> (Frank Mayer)</LI></DD>
+<DD><LI>    <A HREF="S1998R/Cat/payola.html"><b>Tricks of the Trade</b></A> (Stimpson J. Cat)</LI></DD>
+<DD><LI>    <A HREF="S2002R/Torres/payola.html"><b>Why Aren't You Playing Payola?</b></A> (José Torres)</LI></DD>
+<DD><LI>    <A HREF="W1995A/Pitt/Shift.html"><b>The Big Dipper looks at Shift Variants</b></A> (Pitt Crandlemire)</LI></DD>
+<DD><LI>    <A HREF="W1995A/Schwarz/Touch.html"><b>Touch Diplomacy</b></A> (Andy Schwarz)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Pitre/Royale.html"><b>Diplomacy Royale</b></A> (John Pitre)</LI></DD>
+<DD><LI>    <A HREF="S1997M/Bache/dpart.html"><b>Heptarchy and Bretwalda: Twin Variants Based on Ancient Britain</b></A> (Geoff Bache)</LI></DD>
+<dd><li>    <a href=F1997R/Tarzan/SailHo.html><b>The Sail Ho! Variant</b></a> ("Tarzan")</li></dd>
+<DD><LI>    <A HREF="F1998M/Koehler/Migraine.html"><b>Migraine: A Diplomacy Variant</b></A> (Stephen Koehler)</LI></DD>
+<DD><LI>    <A HREF="F1998M/Agar/mapDesign.html"><b>Designing Maps For Diplomacy Variants</b></A> (Stephen Agar)</LI></DD>
+<DD><LI>    <A HREF="W1998A/Duewer/exchange.html"><b>The Exchange Variant</b></A> (Bruce Duewer)</LI></DD>
+<DD><LI>    <A HREF="S1999R/Rudd/devo.html"><b>Devolution Diplomacy</b></A> (Jack Rudd)</LI></DD>
+<DD><LI>	<A HREF="F2000M/Szykman/Reviews.html"><b>Three Variants Reviewed</b></a> (Simon Szykman)</LI></DD>
+<DD><LI>	<A HREF="F2000M/Hester/sengoku.html"><b>The Lotus Blossom</b></a> (B. Hester)</LI></DD>
+<DD><LI>	<A HREF="W2003A/Birsan/Card_Dip.html"><b>Card Diplomacy</b></a> (Edi Birsan)</LI></DD>
+<DD><LI>	<A HREF="W2003A/DziedzicLeake/1900_FG_alliance.html"><b>1900: The Franco-German Alliance</b></a> (Chris Dziedzic & Bill Leake)</LI></DD>
+<DD><LI>	<A HREF="W2003A/Mayer/PowersOfPayola.html"><b>Overheard at the Ministry of Finance: II. Powers of Payola -
+Some Comparisons with Diplomacy</b></a> (Frank Mayer)</LI></DD>
+<DD><LI>	<A HREF="F2013M/Huys/troubles.htm"><b>A Modern Look at 'The Troubles'</b></a> (Mario Huys)</LI></DD>
+<DD><LI>	<A HREF="W2014A/Powell/france3.htm"><b>In Defense of 1900's France, Part III</b></a> (Baron Powell)</LI></DD>
+<dd><li><a href="S2015M/Powell/1900change.htm"><b>A Possible Change to the 1900 Map</b></a> (Baron Powell)</li></dd>
+<dd><li><a href="S2015M/Huys/modern.htm"><b>The Modern Art of War</b></a> (Mario Huys)</li></dd>
+
+</dl>
+<br /><br />
+<img src="../Common/reddot.gif" height=2 width=100%>
+<center><table>
+<FORM ACTION="/DP-cgi/AT-DipPouchsearch-zine.cgi" METHOD=POST>
+
+<TR><TD align="right">Search the Zine for
+<INPUT NAME="search" VALUE="" size=30>
+
+<INPUT TYPE="image" SRC="/Excite/pictures/AT-search_button.gif" NAME="searchButton"
+HEIGHT=20 WIDTH=75 ALT="Search" BORDER=0></TD></TR>
+<INPUT TYPE="hidden" NAME="sp" VALUE="sp"
+<INPUT TYPE="hidden" NAME="smode" VALUE="subject">
+</FORM>
+</table></center>
+<img src="../Common/reddot.gif" height=2 width=100%>
+
+<H5>
+<p align=center><B>
+[	<a href="../Zine">The Zine</a> |
+	<a href="../Online">Online Resources</a> |
+	<a href="../Showcase">Showcase</a> |
+	<a href="../Postal">Postal</a> |
+	<a href="../Email">Email</a> |
+	<a href="../Face">Face to Face</a>
+]
+<center>
+<i>The Diplomatic Pouch is brought to you by
+<a href="../Council.html">the DP Council</a>.
+<br>The Zine section is maintained by
+John Coffin (<a href="mailto:jcoffin@diplom.org">jcoffin@diplom.org</a>).
+</body>
+</html>

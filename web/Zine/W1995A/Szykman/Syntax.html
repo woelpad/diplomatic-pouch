@@ -1,11 +1,16 @@
 <HTML>
+
 <HEAD>
+
 <TITLE>DP W1995A: Communication in No-Press Diplomacy</TITLE>
+
 </HEAD>
 <BODY BGCOLOR="#ffffff">
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toW1995A.gif" border=0></A>
 <BR clear=all>
+ 
 <hr><center>
 <H2>No Press Diplomacy</H2>
 <h3>Syntax</h3>
@@ -30,23 +35,25 @@ sections:<br>
 <a href="#support">Support Orders</a><br>
 <a href="#proxy">Proxy Orders</a><br>
 <a href="#other">Other Orders</a><br>
+
 <a name=movement></a>
 <p><b>Unit Movement Orders</b><p> There are two different types of movement
 orders.  The first is a &quot;standard&quot; move, which allows a unit to
 move from one space to an adjacent space.  The second type of move is a
 convoy move which allows an army to move from one coastal province to another
 via fleet convoys.  On the PBEM judges, the syntax for the standard move
-is:
+is:  
+
 <p>
-<samp>&lt;type&gt; &lt;s-prov&gt; &lt;moves&gt; &lt;d-prov&gt;
-</samp>
+ <samp>&lt;type&gt; &lt;s-prov&gt; &lt;moves&gt; &lt;d-prov&gt;
+</samp> 
 <p>
 and the syntax for an army being convoyed is:
 <p>
 <samp>&lt;type&gt; &lt;s-prov&gt; &lt;moves&gt; &lt;c-prov&gt;
 &lt;moves&gt; &lt;c-prov&gt; ... &lt;moves&gt; &lt;d-prov&gt;</samp> <p>
-where
-<p>
+where 
+<p> 
 <samp>&lt;type&gt;</samp> = &quot;a&quot;, &quot;army&quot;,
 &quot;f&quot;, &quot;fleet&quot;, or &lt;empty&gt;, <br>
 <samp>&lt;moves&gt;</samp> = &quot;-&quot;, &quot;->&quot;, &quot;m&quot;,
@@ -54,7 +61,7 @@ where
 to&quot;, <br> <samp>&lt;s-prov&gt;</samp> = source province, <br>
 <samp>&lt;d-prov&gt;</samp> = destination province, <br>
 <samp>&lt;c-prov&gt;</samp> = intermediate water province in a convoy
-route.  <br>
+route.  <br> 
 <p>
 For all moves (including those discussed in subsequent
 sections) the judge always checks that there is a unit present in the
@@ -71,8 +78,10 @@ destination province are coastal provinces, that all the intermediate
 convoy provinces are bodies of water and that the intermediate convoy
 provinces contain fleets.  Any army convoy move not satisfying all these
 criteria is rejected.
+
 <a name=convoy></a>
 <p><b>Fleet Convoy Orders</b><p>
+
 Fleet convoy orders allow one or more fleets to convoy armies from one
 coastal province to another.  On the PBEM judges, the syntax for a fleet
 convoy order is:  <p> <samp>&lt;type&gt; &lt;s-prov&gt; &lt;convoy&gt;
@@ -80,7 +89,7 @@ convoy order is:  <p> <samp>&lt;type&gt; &lt;s-prov&gt; &lt;convoy&gt;
 <p> <samp>&lt;convoy&gt;</samp> = &quot;c&quot;, &quot;convoy&quot;,
 &quot;convoys&quot;.  <p> Since only fleets can submit convoy orders and
 only armies can be convoyed, the judge checks to make sure that the first
-unit type in a convoy order is a fleet, that the second type is an army,
+unit type in a convoy order is a fleet, that the second type is an army, 
 and that the destination province for the army is not a body of water.
 Any orders where this is not true are rejected.  <p> However, the judge
 does <b>not</b> check to ensure that the convoying fleet is in a body of
@@ -95,6 +104,7 @@ a convoy order, that a fleet can order a convoy for an army in any province
 to any other land province (including Switzerland) regardless of whether a
 source and/or destination province is coastal or not, and irrespective of
 the presence of fleets along a possible convoy path.
+
 <a name=support></a>
 <p><b>Support Orders</b><p> The two types of support orders are to support
 a unit in its current position, or to support an attack.  The syntax for
@@ -115,8 +125,10 @@ fleets can not move to inland provinces, armies cannot support moves into
 water and fleets cannot support moves to inland provinces.  Because
 Switzerland is impassable, an army can not support an attack into
 Switzerland.  These moves will also be rejected by the judge.
+
 <a name=proxy></a>
 <p><b>Proxy Orders</b><p>
+
 While there are few no-press games where proxy orders are permitted,
 they're included here because there is the occasional game that does
 allow them.  On the PBEM judges, the syntax of the proxy order is:  <p>
@@ -124,8 +136,8 @@ allow them.  On the PBEM judges, the syntax of the proxy order is:  <p>
 where <p> <samp>&lt;proxy&gt;</samp> = &quot;p&quot;, &quot;proxy&quot;,
 &quot;proxy to&quot;,<br> <samp>&lt;power&gt;</samp> = the first two or
 more characters of a power name (for some reason, the judge does not accept
-the one character abbreviations that it accepts for press).
-<p>
+the one character abbreviations that it accepts for press).  
+<p> 
 When proxy is enabled, you can submit an order to proxy control of any unit
 - even units that do not belong to you - to another power.  You can also
 submit an order for any unit belonging to any power, though for you to
@@ -150,6 +162,7 @@ processed&quot; is not actually no order at all, but a hold order.  Thus,
 you can support a unit that you are proxying to somebody and if they don't
 order the unit, the unit will hold and receive support despite the fact
 that no order was submitted for the unit.
+
 <a name=other></a>
 <p><b>Other Orders</b>
 <p>
@@ -178,7 +191,9 @@ unless you have a free home supply center (though in a chaos game any
 supply center you own counts as a home supply center for this rule), you
 can't build fleets in inland provinces, etc.  Any orders that are not valid
 will be rejected by the judge.
+
 <P><hr><h4><center>
+
 Go back to:<br>
 <a href="NoPress.html">Introduction</a>
 <p>
@@ -187,19 +202,18 @@ Go on to:<br>
 <a href="Commentary.html">Commentary</a><br>
 </H4></center>
 <HR>
+
 <P>
 <B>Simon Szykman<BR>
 <B>(<A HREF="mailto:simon@diplom.org"><B>simon@diplom.org</B></A>)</B></B>
 <P>
 <I>If you wish to e-mail feedback on this article to the author,
 and clicking on the mail address above does not work for you,
-feel free to use the <A HREF="/Zine/W1995A/Common/DearDP.html"><I>&quot;Dear DP...&quot;</I></A>
+feel free to use the <A HREF="../Common/DearDP.html"><I>&quot;Dear DP...&quot;</I></A>
 mail interface.</I>
 <HR>
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toW1995A.gif" border=0></A>
 <BR clear=all>
 </body>
 </html>
-<!--
--->

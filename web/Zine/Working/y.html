@@ -1,0 +1,152 @@
+<html>
+<head>
+<head>
+<style>
+table.nonogram {
+	cellspacing: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+}
+table.nonogram td {
+	padding: 0px;
+	text-align: center;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+	min-width: 24px;
+	min-height: 24px;
+}
+table.nonogram td:nth-child(5n+1) {
+	border-right: 2px solid black;
+}
+table.nonogram tr:nth-child(5n+1) td {
+	border-bottom: 2px solid black;
+}
+table.nonogram td.hlegend {
+	text-align: right;
+	padding: 0 2px;
+}
+table.nonogram td.vlegend {
+	vertical-align: bottom;
+	padding: 2px 0;
+}
+table.nonogram td.corner {
+	text-align: right;
+	vertical-align: bottom;
+	background-color: #ffffff;
+	padding: 2px;
+	font-size: 4px;
+	font-family: "Courier";
+}
+input.action {
+	width: 24px;
+	height: 24px;
+	border-color: #f7f7f7;
+}
+::selection {
+	background: transparent;
+	color:inherit;
+}
+</style>
+<script>
+function initColors() {
+	var tables = document.getElementsByTagName('table');
+	for (var tx = 0; tx < tables.length; ++tx) {
+		var table = tables[tx];
+		if (table.className != 'nonogram') continue;
+		var rows = table.getElementsByTagName('tr');
+		var vlegends = rows[0].getElementsByTagName('td');
+		var corner = vlegends[0];
+		corner.className = 'corner';
+		corner.hue = 'x';
+		corner.drag = 0;
+		var blines = corner.innerHTML.split(/<br>/);
+		corner.innerHTML = '';
+		var spacer = '&nbsp;&nbsp;';
+		for (var bx = 0; bx < blines.length; ++bx) {
+			var paints = blines[bx].split(' ');
+			for (var px = 0; px < paints.length; ++px) {
+				var color = paints[px];
+				corner.innerHTML += '<input class="action" type="button" value="' + color + '" onclick="pickColor(this)">' + spacer;
+			}
+			corner.innerHTML += '<br>' + spacer + '<br>';
+		}
+		var buttons = corner.getElementsByTagName('input');
+		for (var bx = 0; bx < buttons.length; ++bx) {
+			button = buttons[bx];
+			button.corner = corner;
+			button.hue = button.value;
+			button.value = '';
+			adaptColor(button);
+		}
+		for (var vx = 1; vx < vlegends.length; ++vx) {
+			vlegends[vx].className = 'vlegend';
+		}
+		for (var rx = 1; rx < rows.length; ++rx) {
+			var row = rows[rx];
+			var cells = row.getElementsByTagName('td');
+			cells[0].className = 'hlegend';
+			for (var cx = 1; cx < cells.length; ++cx) {
+				var cell = cells[cx];
+				cell.hue = cell.innerHTML;
+				if (!cell.hue.length) cell.hue = '_';
+				cell.innerHTML = '';
+				if (cell.hue != ',') {
+					cell.onclick = new Function('changeColor(this)');
+					cell.onmousedown = new Function('changeColor(this, 1)');
+					cell.onmouseover = new Function('changeColor(this, 2)');
+					cell.onmouseup = new Function('changeColor(this, 3)');
+				}
+				cell.corner = corner;
+				adaptColor(cell);
+			}
+		}
+	}
+}
+function adaptColor(cell) {
+	switch (cell.hue) {
+		case 'x':
+			cell.style.backgroundColor = '#000000';
+			break;
+		case '.':
+			cell.style.backgroundColor = '#ffffff';
+			break;
+		case '_':
+			cell.style.backgroundColor = '#eeeeee';
+			break;
+		default:
+			cell.style.backgroundColor = '#ffffff';
+	}
+	cell.style.color = cell.style.backgroundColor;
+}
+function changeColor(cell, state) {
+	switch (state) {
+		case 1:
+			cell.corner.drag = 1;
+			break;
+		case 2:
+			if (!cell.corner.drag) return;
+			break;
+		case 3:
+			cell.corner.drag = 0;
+			break;
+	}
+	cell.hue = cell.corner.hue;
+	adaptColor(cell);
+}
+function pickColor(cell) {
+	cell.corner.hue = cell.hue;
+}
+</script>
+</head>
+<body onload="initColors()">
+<table class="nonogram">
+<tr><td>.<br>_ x</td><td>2<br>1</td><td>1<br>1</td><td>1<br>1</td><td>5</td></tr>
+<tr><td>1 1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1 1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>3</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>1 1</td><td></td><td></td><td></td><td></td></tr>
+<tr><td>2</td><td></td><td></td><td></td><td></td></tr>
+</table>
+</body>
+</html>

@@ -1,0 +1,342 @@
+From berlioz@nic.fi  Thu May 18 11:26:44 2000
+Received: from jakorasia.nic.fi (jakorasia.nic.fi [212.38.224.80])
+	by devel.diplom.org (8.9.3/8.9.3) with ESMTP id EAA23415
+	for <manus@diplom.org>; Thu, 18 May 2000 04:26:42 -0700 (PDT)
+Received: from netti.nic.fi (netti.nic.fi [212.38.224.82])
+	by jakorasia.nic.fi (8.9.3/8.9.3) with ESMTP id OAA22881
+	for <manus@diplom.org>; Thu, 18 May 2000 14:16:24 +0300 (EET DST)
+Date: Thu, 18 May 2000 14:26:14 +0300 (EET DST)
+From: Mikko Saari <berlioz@nic.fi>
+Reply-To: msaari@iki.fi
+To: manus@diplom.org
+Subject: Diplom.org website
+Message-ID: <Pine.GSO.4.21.0005181422270.28201-100000@netti.nic.fi>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Status: ORr
+
+I know that this sounds like pointless whining, but I really do have a
+point. I've been occasionally visiting your site with Lynx and noticed
+that the shortcut icons don't have ALT-texts - they are useless with only
+text. I know that they do have texts included and that you have text
+navigation in the bottom of each page, but why are you discriminating
+text-based users even that much? Especially, as HTML standards *require*
+ALT-tags for every image. It shouldn't be too much of a trouble, there's
+no harm done to anybody and lots of joy for us Lynx-users and to other
+people who surf without images. 
+
+And hey, Stephen Agar fixed the same thing on Diplomacy Archive...
+(though, his site was much worse)
+
+--
+Mikko Saari                         God of piston, god of steel
+msaari@iki.fi                       God is here behind the wheel
+http://www.melankolia.net/          I'm just working for the man
+
+
+From fred.leusch@unb.ca  Mon Jan 24 16:07:34 2000
+Received: from server.python.net (IDENT:qmailr@server.python.net [209.50.192.113])
+	by devel.diplom.org (8.9.3/8.9.3) with SMTP id IAA20100
+	for <dippouch@diplom.org>; Mon, 24 Jan 2000 08:07:29 -0800 (PST)
+Received: (qmail 5451 invoked by uid 1014); 24 Jan 2000 16:07:50 -0000
+Delivered-To: manus-dip@python.net
+Received: (qmail 30811 invoked from network); 24 Jan 2000 04:37:05 -0000
+Received: from devel.igo.org (HELO devel.diplom.org) (209.140.225.18)
+  by server.python.net with SMTP; 24 Jan 2000 04:37:05 -0000
+Received: from quartz.nbnet.nb.ca (mailserv.nbnet.nb.ca [198.164.200.18])
+	by devel.diplom.org (8.9.3/8.9.3) with ESMTP id UAA28901
+	for <manus@diplom.org>; Sun, 23 Jan 2000 20:36:40 -0800 (PST)
+Received: from ip010162010002 ([142.166.192.17]) by quartz.nbnet.nb.ca
+          (Post.Office MTA v3.5.3 release 223
+          ID# 607-58282U90000L90000S0V35) with SMTP id ca
+          for <manus@diplom.org>; Mon, 24 Jan 2000 00:36:39 -0400
+Message-ID: <000801bf6625$59ca0c60$020aa20a@nbnet.nb.ca>
+From: "Frederic Leusch" <fred.leusch@unb.ca>
+To: <manus@diplom.org>
+Subject: The Convoy Paradox
+Date: Mon, 24 Jan 2000 00:41:58 -0400
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_0005_01BF6603.D2215C80"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 5.00.2314.1300
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2314.1300
+Sender: manus@server.python.net
+Status: OR
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0005_01BF6603.D2215C80
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+Hey Manus,
+Just read your article (and Simon's) about the convoy paradox. I think =
+there is a third possible arbitration of that solution ... here it is:
+The French convoy from Bre is broken because the French fleet in ENG is =
+dislodged. It doesn't matter that the German and English fleet bounce, =
+the ante for ENG that turn is 2 units, and the French fleet has no =
+support, so it cannot keep ENG. Do you see what I am trying to say?
+Cheers,
+Fred Leusch
+
+From abriggs@iinet.net.au  Wed May 24 11:43:43 2000
+Received: from urban.iinet.net.au (urban.iinet.net.au [203.59.24.231])
+	by devel.diplom.org (8.9.3/8.9.3) with ESMTP id EAA05591;
+	Wed, 24 May 2000 04:43:39 -0700 (PDT)
+Received: from muzak.iinet.net.au (muzak.iinet.net.au [203.59.24.237])
+	by urban.iinet.net.au (8.8.7/8.8.7) with ESMTP id TAA08288;
+	Wed, 24 May 2000 19:43:34 +0800
+Received: from [203.59.62.7] (reggae-01-7.nv.iinet.net.au [203.59.62.7])
+	by muzak.iinet.net.au (8.8.5/8.8.5) with ESMTP id TAA22531;
+	Wed, 24 May 2000 19:43:28 +0800
+Mime-Version: 1.0
+Message-Id: <a04310100b5516ce332ce@[203.59.62.158]>
+Date: Wed, 24 May 2000 19:38:02 +0800
+To: manus@diplom.org, simon@diplom.org
+From: Anthony Briggs <abriggs@iinet.net.au>
+Subject: Eliminating the Paradox
+Content-Type: text/plain; charset="us-ascii" ; format="flowed"
+Status: ORr
+
+>Paradox-eliminating Rule Number 1: "If a convoyed army attacks a 
+>fleet that is supporting an action in or into a body of water that 
+>contains a convoying fleet, that support is not cut by the convoyed 
+>army under any circumstance (but a convoying army does cut all other 
+>supports normally)."
+>
+>Paradox-eliminating Rule Number 2: "If a situation arises in which 
+>an army's convoy order results in a paradoxical adjudication, the 
+>turn is adjudicated as if the convoying army had been ordered to 
+>hold."
+
+
+Just a thought - Why not add the following rule instead:
+
+"For the purposes of resolving conflicts, a convoyed army acts as if 
+attacking from the last fleet in it's convoy chain."
+
+This would rather neatly (IMHO) solve the paradox, since support 
+cannot be cut by a unit from the space you are supporting (Rule Ten, 
+cutting support).  The french army would bounce, and the English and 
+German fleets would stand off each other.  This wording would also 
+allow you to convoy armies to cut other people's support, as well, 
+which the current wording does not.
+
+It's also good from a real world sense, too, since it doesn't 
+introduce any new/strange elements into the game, it builds on 
+already existing rules, and the wording is pretty straightforward.
+
+Just my 2c worth :)
+
+Anthony
+
+-- 
+----------------------------------------------------
+HyPEraCtiVE?  HeY, WhO aRE YoU cALliNg HypERaCtIve?!
+aBRiGgS@IinET.NeT.aU
+----------------------------------------------------
+
+From ss8c@andrew.cmu.edu  Thu Jun  8 20:14:48 2000
+Received: from dribble.cme.nist.gov (dribble.cme.nist.gov [129.6.32.31])
+	by devel.diplom.org (8.9.3/8.9.3) with ESMTP id NAA13484
+	for <dippouch@devel.diplom.org>; Thu, 8 Jun 2000 13:14:44 -0700 (PDT)
+Received: from andrew.cmu.edu (goff.msid.cme.nist.gov [129.6.77.136])
+	by dribble.cme.nist.gov (8.9.3/8.9.3) with ESMTP id QAA07150;
+	Thu, 8 Jun 2000 16:14:40 -0400 (EDT)
+Message-ID: <393FFEB1.B297FA40@andrew.cmu.edu>
+Date: Thu, 08 Jun 2000 16:14:47 -0400
+From: Simon Szykman <ss8c@andrew.cmu.edu>
+Reply-To: ss8c@andrew.cmu.edu
+X-Mailer: Mozilla 4.73 (Macintosh; U; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+To: dippouch@devel.diplom.org, "ss8c@andrew.cmu.edu" <ss8c@andrew.cmu.edu>
+Subject: Re: Spyonit.com (fwd)
+References: <200006081903.MAA02533@devel.diplom.org>
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Status: ORr
+
+Manus,
+
+Below is a little item I wanted to include in the next issue of the
+Zine.  I'm not sure if it would work best as a Deposit or as an article.
+It's not really an article, so I would say a Deposit.  The only reason
+for putting it in as an article would be for better exposure since my
+one hesitation with having a Deposit would be that it would easily be
+missed.  If you also think it should be a Deposit, could I impose on 
+you by requesting that it receive top or near-top billing to improve 
+the chances of it not being overlooked?  Thanks!
+
+- Simon
+
+
+Wanted: Editions of Diplomacy and Information About Them
+
+I'm putting together a chronology and gallery of various editions of
+Diplomacy that have been put out.  I've identified around 20 different
+editions as well as several editions of Diplomacy variant games, and
+there are probably some that I don't know about.  Below is a list of
+editions I know about:
+
+UNITED STATES 
+  Allan Calhamer: 1958
+  Games Research Inc.: 1961, 1971
+  Avalon Hill Game Co.: 1976, 1982, 1992 (Deluxe edition)
+  New Avalon Hill Game Co. (Hasbro): 1999 (copyright 1999, released 2000)
+UNITED KINGDOM
+  Intellectual Diversions: several editions
+  Gibson's Games: Two different editions, both copyright 1989
+CANADA
+  Waddington's House of Games: one edition has rules copyright 1974 and
+      a map copyright 1971, a different edition has a gameboard with a
+      gold-colored backing.
+  Waddington Sanders: 1986
+FRANCE 
+  Parker: 1978
+  Descartes Editeur: 
+AUSTRALIA
+  Jedko:
+NETHERLANDS
+  Jumbo:
+GERMANY
+  Parker: 1977
+DIPLOMACY VARIANTS (ALL FROM UNITED STATES)
+  Colonial Diplomacy: 1994
+  Machiavelli - Battleline Games: 1977
+  Machiavelli - Avalon Hill: 1980, 1983, 1995
+  (Rumors regarding Hundred, Classical, Ard-Ri)
+
+I would be interested in any information anyone has about editions
+that are not on the above list.  If you know of an edition that is
+not listed above, please let me know.  
+
+Although I have been slowly gathering information about the editions
+listed above, in several cases my information is not complete,
+particularly for those editions that were published outside of the 
+United States.  If you have an edition of Diplomacy from outside of
+the U.S. and would be willing to provide me with some information,
+please drop me an email.
+
+Lastly, there are several non-U.S. editions that I would be interested
+in obtaining.  If you have an edition of Diplomacy from outside the U.S.
+and would be willing to consider selling or trading it, please let me
+know.
+
+Thanks very much.  I hope to have the chronology and gallery up on the
+web in one of the Fall issues of the Pouch Zine.
+
+- Simon
+
+
+From nobody  Sun Jun 11 19:07:38 2000
+Received: (from nobody@localhost)
+	by devel.diplom.org (8.9.3/8.9.3) id MAA18516;
+	Sun, 11 Jun 2000 12:07:36 -0700 (PDT)
+Date: Sun, 11 Jun 2000 12:07:36 -0700 (PDT)
+Message-Id: <200006111907.MAA18516@devel.diplom.org>
+From: pjt33@cam.ac.uk
+To: simon@diplom.org,
+        manus@diplom.org (Szykman & Hand, "Eliminating the Paradox")
+Subject: DipPouch article feedback
+Errors-To: manus@devel.diplom.org
+Status: OR
+
+It seems to me that an alternative way of fixing the paradox problem would be to make a fundamental alteration to the rules and say that if the total force trying to move in to a region is greater than the total force occupying that region then the unit occupying the region is forced to retreat. This is surely nearer the real-life situation, in that someone sitting in the middle of the battlefield is going to get rather shot up. In the example given, this would result in F(ENG) being forced to retreat, the convoy being broken and everything else bouncing. I can't think of any obvious ways in which it would result in new inconsistencies, provided it is applied uniformly and not just when paradoxes occur.
+If I've missed something obvious, then sorry for wasting your time; otherwise, is this change too fundamental or what are your opinions on it?
+
+Yours,
+
+Peter Taylor
+
+=====
+Peter Taylor
+pjt33@cam.ac.uk
+-------------------------------------------------------------------
+The e-mail address from which this message is sent was specified by
+the sender manually through a Web form, so it may be incorrect.
+
+From nobody  Mon Jun 12 16:40:29 2000
+Received: (from nobody@localhost)
+	by devel.diplom.org (8.9.3/8.9.3) id JAA06422
+	for manus@diplom.org; Mon, 12 Jun 2000 09:40:27 -0700 (PDT)
+Date: Mon, 12 Jun 2000 09:40:27 -0700 (PDT)
+Message-Id: <200006121640.JAA06422@devel.diplom.org>
+From: Kapriool@knoware.nl
+To: manus@diplom.org (Manus Hand [Publisher], General Feedback)
+Subject: DipPouch article feedback
+Errors-To: manus@devel.diplom.org
+Status: OR
+
+Paradox:
+My 'gut feeling' is based on the idea that a convoy is weaker than an attacking unit. In all that violence happening in the English Channel the convoy wouldn't have a chance. Therefore proposal 2 seems more logical.
+Ernst
+-------------------------------------------------------------------
+The e-mail address from which this message is sent was specified by
+the sender manually through a Web form, so it may be incorrect.
+
+From berlioz@nic.fi  Tue Jun 13 06:09:51 2000
+Received: from jakorasia.nic.fi (jakorasia.nic.fi [212.38.224.80])
+	by devel.diplom.org (8.9.3/8.9.3) with ESMTP id XAA10485
+	for <manus@diplom.org>; Mon, 12 Jun 2000 23:09:44 -0700 (PDT)
+Received: from netti.nic.fi (netti.nic.fi [212.38.224.82])
+	by jakorasia.nic.fi (8.9.3/8.9.3) with ESMTP id IAA06733
+	for <manus@diplom.org>; Tue, 13 Jun 2000 08:59:14 +0300 (EET DST)
+Date: Tue, 13 Jun 2000 09:09:37 +0300 (EET DST)
+From: Mikko Saari <berlioz@nic.fi>
+Reply-To: msaari@iki.fi
+To: manus@diplom.org
+Subject: Submission for the Diplomatic Pouch
+Message-ID: <Pine.GSO.4.21.0006130908140.29206-100000@netti.nic.fi>
+MIME-Version: 1.0
+Content-Type: TEXT/PLAIN; charset=US-ASCII
+Status: ORr
+
+Oops!.. You Stabbed Me Again!
+
+New lyrics: Mikko Saari (msaari@iki.fi)
+Original: "Oops!.. I Did It Again!" by Britney Spears
+
+I think you did it again 
+You made me believe, we're more than just friends
+Oh baby,
+It might seem like a stab
+But it doesn't make me angry
+'Cause to lose all my centers, that is just so typically me
+Oh baby baby
+
+Oops, you stabbed me again
+You played with my heart, that lost me the game
+Oh baby baby
+Oops, thought you were my friend, that you were sent from above
+You are not that innocent
+
+You see my problem is this: I'm dreamin' away
+Wishing that carebears they truly exist
+I cry watching the results
+Can't you see I'm a fool, in so many ways
+But to lose all my centers, that is just so typically me, baby
+Ohhhh   
+
+-Turkey, before you go there's something I want you to have.
+-Oh it's beautiful! But wait a minute isn't this... Bulgaria?
+-Yes, yes it is!
+-But I thought that Austria took it from me in the end
+-Well baby, I went there and got it for ya
+-Oh, you shouldn't have!
+
+Oops, you did it again to my centers
+I got eliminated from the game, oh baby
+Oops, I thought you were sent from above
+You are not that innocent
+
+
+--
+Mikko Saari                             God of piston, god of steel
+msaari@iki.fi                           God is here behind the wheel
+http://www.melankolia.net/              I'm just working for the man
+
+

@@ -2,253 +2,299 @@
 <html><head>
 <!-- ---------------------Header---------------------------------- -->
 <!-- ------------------------------------------------------------- -->
+
 <!---- Authored by Millis Miller ---->
 <!---- Published on the Pouch Zine with permissions ---->
 <!---- Created on November 11, 2004 ---->
 <!---- Last updated by Scott Webster on November 11, 2004 ---->
 <!---- Last reviewed by Randy Lawrence on November10, 2004  ---->
-<title>DP S2004M: Interview with Alain TÃ©sio</title>
+
+
+  <title>DP S2004M: Interview with Alain Tésio</title>
+
+  
 <!-- ----------------------Title---------------------------------- -->
 <!-- ------------------------------------------------------------- -->
+
 </head>
+
+
 <body style="background-color: rgb(255, 255, 255);">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/S2004M/"><img src="/Zine/Common/toS2004M.gif" align="right" border="0"></a>
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toS2004M.gif" align="right" border="0"></a>
 <br clear="all">
+
+
 <hr align="center" color="GRAY" size="1" width="100%">
 <br>
 <center>
-<h2>
-<big>Interview with Alain TÃ©sio</big><br>
-<small><small>creator of floc.net</small></small><br>
-</h2>
-<h3>
-<i>By Millis Miller</i><br>
-</h3>
+	<h2>
+		<big>Interview with Alain Tésio</big><br>
+		<small><small>creator of floc.net</small></small><br>
+	</h2>
+		
+	<h3>
+		<i>By Millis Miller</i><br>
+	</h3>
+	
 </center>
 <hr align="center" color="GRAY" size="1" width="100%">
+
+
 <!-- ----------------------Body----------------------------------- -->
 <!-- ------------------------------------------------------------- -->
+
 <center>
-<table style="width: 90%;" border="0">
-<tbody>
-<tr>
-<td>
-<!--
-<br>
-<big>
-<span style="font-weight: bold;">Used for Chapter Titles</span>
-</big>
-<br>
-<br>
+	<table style="width: 90%;" border="0">
+		<tbody>
+			<tr>
+			<td>
+<!--			
+			<br>
+			<big>
+			<span style="font-weight: bold;">Used for Chapter Titles</span>
+			</big>
+			<br>
+			<br>  
 -->
-<br>
-<br>
-<i>
-The following interview is with Alain TÃ©sio, responsible for one of the most
-important add-ons to the PBEM Diplomacy world, that of the automatic mapper
-<A HREF="http://www.floc.net/">floc.net</A>. For those not in the know,
-this allows games played either on the <A HREF="http://www.njudge.org/">njudge</A>
-or <A HREF="/dpjudge">DPJudge</A> (the latter also
-hosted on the same machine) to be graphically displayed. Gone are the
-days when players had to use colour pencils on paper maps to track
-their games, now they have an on-line system automatically updated.
-Indeed, such is its importance that any new variant must have
-floc.net support if it is to have a chance to succeed.
-</i>
-<br>
-<br>
-<Big><b>Q: </b></big>Firstly, tell us something about Alain TÃ©sio, the person.
-<br>
-<br>
-<blockquote>
-<b>I'm French, 31 years old, live in Paris, and am single. For work
-I'm designing and programming software for asset management.</b>
-</blockquote>
-<br>
-<br>
-<Big><b>Q: </b></big>What first got you interested in Diplomacy?
-<br>
-<br>
-<blockquote>
-<b>I played before I had internet with friends at school, along
-with many role-playing and strategy games. I started playing on
-internet in 1996. I'm not really good, just average.</b>
-</blockquote>
-<br>
-<br>
-<Big><b>Q: </b></big>Why did you decide to create a mapping service?
-<br>
-<br>
-<blockquote>
-<b>It started with some scripts I've been using locally when I
-played a lot, up to 30 NoPress games at a time. I liked the way
-<A HREF="http://www.badpets.net/Diplomacy/AtoZ/M.html">mapit</A>
-works with postscript templates. This was a good opportunity
-to learn how to build a website too. </b>
-</blockquote>
-<br>
-<br>
-<Big><b>Q: </b></big>How long did it take to do, and what were the difficulties involved?
-<br>
-<br>
-<blockquote>
-<b>A couple of hours a week for two years, difficulties were essentially it
-being my first online project, handling judge outputs which aren't meant
-to be read by programs.<br>
-<br>
-I didn't start from scratch: I don't write mapit postscript templates
-myself, I just add some minor fixes when I get a request. David Norman provides
-maps for <A HREF="http://www.ellought.demon.co.uk/variants.htm">new variants</A>
-tested on USTR, Manus Hand added the great center
-<A HREF="/manus/mapit/">center colorization stuff</A>
-and wrote the python implementation I'm running. Fernando Blesa from
-the <A HREF="http://groups.yahoo.com/group/MachFix">MachFix mailing list</A>
-maintains the version which handles Machiavelli variants. A lot of
-individuals send fixes  for existing maps, often variant creators. <br>
-<br>
-Even if mapit is great, it wasn't written for multiple variants, this
-lack of modularity makes it hard to fix bugs and add new features for
-all variants automatically.</b>
-</blockquote>
-<br>
-<br>
-<Big><b>Q: </b></big>How easy is it to maintain now, and what are
-the typical problems at the moment?
-<br>
-<br>
-<blockquote>
-<b>I had some hardware problems some months ago, it's a pain to recover
-from a hard disk crash and manage not to lose the data stored during
-the downtime. The mapping engine is stable now, most of the requests I
-get these days are updates for new variants and fixes to changes in judge
-outputs. I have a <A HREF="http://www.floc.net/cgi-bin/viewcvs.cgi/">cvs repository</A>
-for all the stuff, I think it can be considered as the reference for
-mapit now. (For the curious you can browse through changes for the
-code which parses <A HREF="http://www.floc.net/cgi-bin/viewcvs.cgi/scripts/receivemail.py">judge incoming mails</A>
-or <A HREF="http://www.floc.net/cgi-bin/viewcvs.cgi/mapit/dpmap.py">mapit</A>).
-A lot of people help and send fixes for maps, which is great.
-If you want to change something on a map, please follow these steps:<br>
-<br>
-<li>download a one page postscript file of a running game
-<li>make the modifications you want on it, check the output
-with <A HREF="http://www.cs.wisc.edu/~ghost/doc/AFPL/">Ghostscript</A>
-or some other postscript viewer
-<li>send me the original file you downloaded, and the modified one,
-so I can apply the changes to the template<br>
-<br>
-I'm not really good at tracking requests so I have a new system for
-keeping a trace of them; please submit bug/feature
-requests <A HREF="http://www.floc.net/issues">here</A>. If you sent me a
-mail and I didn't reply, or I said I'd do it and forgot, please also submit an issue.</b>
-</blockquote>
-<br>
-<br>
-<Big><b>Q: </b></big>What other Dip-related things are you hosting on your server?
-<br>
-<br>
-<blockquote>
-<b>My machine also hosts the <A HREF="http://www.floc.net/dpjudge/">DPJudge</A>
-by Manus Hand.  The DPJudge is a rewritten judge with similar mail
-format, a web interface and some other interesting things like
-the <A HREF="http://www.floc.net/dpjudge/">infamous Payola variant</A>. Also
-there is an njudge adjudicator <A HREF="mailto:usos@onesite.org">USOS</A> that
-I host too, run by a mysterious guy named Nightshade.<br>
-<br>
-You can see the games currently being tracked on floc.net
-<A HREF="http://www.floc.net/observer.py?value_status=1&amp;Statistics=Statistics&amp;statkey_1=judge&amp;title=Current+judge+load&amp;stat_sort_descending_1=on&amp;statkey_2=none&amp;recall_input_parameters=on&amp;statvaluemethod_1=rowcount&amp;format_display=html&amp;results_per_page=50&amp;totals_1=on&amp;stat_sort_2=-1&amp;stat_sort_1=0&amp;page=search">here</A>
-(at the least the ones I know about). <br>
-<br>
-I also have an online interface to the JDPR ratings database
-(some search pages which went a bit far), fed by data computed
-by Doug Massey. The <A HREF="http://groups.yahoo.com/group/judge_dip_database">JDD</A>
-project has been formed to make this semi-automatic with continuously updated ratings.</b>
-</blockquote>
-<br>
-<br>
-<Big><b>Q: </b></big>How much does it cost to run, and do you accept donations?
-<br>
-<br>
-<blockquote>
-<b>About $150/month for the machine and the connection (if you're ever looking
-for web hosting for dedicated servers, <A HREF="http://www.atjeu.com/">atjeu.com</A>
-is great). I don't need money, I use it for other personal purposes and
-to host my company's site which pays for part of the cost.<br>
-<br>
-Something I do need is someone to provide a mirror in case of downtime,
-so if you have a stable machine with some resources available (some gigs of
-disk space and cpu, bandwidth peaks only when my machine is out of order,
-running <A HREF="http://www.linux.org/">linux</A> or <A HREF="http://www.bsd.org/">bsd</A>)
-please tell me, I'll do the setup</b>
-</blockquote>
-<br>
-<br>
-<Big><b>Q: </b></big>Do you play Diplomacy at all?
-<br>
-<br>
-<blockquote>
-<b>Only one internet RT game and 2 board games during the last year
-because of real life constraints (it scares me just to think how it will
-be when I'll be married with children!).<br>
-<br>
-I planned to go to WTC 2004 this year, I had even booked my flight,
-but a real-life problem prevented my going at the last minute.</b>
-</blockquote>
-<br>
-<br>
-<Big><b>Q: </b></big>What does the future of PBEM Diplomacy hold for you?
-<br>
-<br>
-<blockquote>
-<b>I believe in unregulated markets, planning is evil.  Maybe I'll work
-on a semi-automatic ratings system if I find some time. Maybe some
-people will start a new judge implementation from scratch, with a
-database backend, web services and a fat client interface.</b>
-</blockquote>
-<br>
-<br>
-<i>Thank you Alain for your time and providing us this glimpse of your
-thoughts and involvement in this great hobby!</i>
-<br>
-<br>
-</td>
-</tr>
-</tbody>
-</table>
+
+
+			<br>
+      			<br>
+			<i>
+			The following interview is with Alain Tésio, responsible for one of the most 
+			important add-ons to the PBEM Diplomacy world, that of the automatic mapper 
+			<A HREF="http://www.floc.net/">floc.net</A>. For those not in the know, 
+			this allows games played either on the <A HREF="http://www.njudge.org/">njudge</A> 
+			or <A HREF="http://www.diplom.org/dpjudge">DPJudge</A> (the latter also 
+			hosted on the same machine) to be graphically displayed. Gone are the 
+			days when players had to use colour pencils on paper maps to track 
+			their games, now they have an on-line system automatically updated. 
+			Indeed, such is its importance that any new variant must have 
+			floc.net support if it is to have a chance to succeed.
+			</i>
+			<br>
+      			<br>
+			<Big><b>Q: </b></big>Firstly, tell us something about Alain Tésio, the person. 
+			<br>
+      			<br>
+      			<blockquote>
+			<b>I'm French, 31 years old, live in Paris, and am single. For work 
+			I'm designing and programming software for asset management.</b>
+			</blockquote>
+			<br>
+			<br>
+			
+			
+			<Big><b>Q: </b></big>What first got you interested in Diplomacy?
+			<br>
+      			<br>
+      			<blockquote>
+			<b>I played before I had internet with friends at school, along 
+			with many role-playing and strategy games. I started playing on 
+			internet in 1996. I'm not really good, just average.</b>
+			</blockquote>
+			<br>
+			<br>
+			
+			
+			<Big><b>Q: </b></big>Why did you decide to create a mapping service?
+			<br>
+      			<br>
+      			<blockquote>
+			<b>It started with some scripts I've been using locally when I 
+			played a lot, up to 30 NoPress games at a time. I liked the way 
+			<A HREF="http://www.badpets.net/Diplomacy/AtoZ/M.html">mapit</A>
+			works with postscript templates. This was a good opportunity 
+			to learn how to build a website too. </b>
+			</blockquote>
+			<br>
+			<br>
+			
+			
+			<Big><b>Q: </b></big>How long did it take to do, and what were the difficulties involved?  
+			<br>
+      			<br>
+      			<blockquote>
+			<b>A couple of hours a week for two years, difficulties were essentially it 
+			being my first online project, handling judge outputs which aren't meant 
+			to be read by programs.<br> 
+			<br>
+			I didn't start from scratch: I don't write mapit postscript templates 
+			myself, I just add some minor fixes when I get a request. David Norman provides 
+			maps for <A HREF="http://www.ellought.demon.co.uk/variants.htm">new variants</A> 
+			tested on USTR, Manus Hand added the great center 
+			<A HREF="http://www.diplom.org/manus/mapit/">center colorization stuff</A> 
+			and wrote the python implementation I'm running. Fernando Blesa from 
+			the <A HREF="http://groups.yahoo.com/group/MachFix">MachFix mailing list</A>
+ 			maintains the version which handles Machiavelli variants. A lot of 
+ 			individuals send fixes  for existing maps, often variant creators. <br>
+			<br>
+			Even if mapit is great, it wasn't written for multiple variants, this 
+			lack of modularity makes it hard to fix bugs and add new features for 
+			all variants automatically.</b>
+			</blockquote>
+			<br>
+			<br>
+			
+			
+			<Big><b>Q: </b></big>How easy is it to maintain now, and what are 
+			the typical problems at the moment?
+			<br>
+      			<br>
+      			<blockquote>
+			<b>I had some hardware problems some months ago, it's a pain to recover 
+			from a hard disk crash and manage not to lose the data stored during 
+			the downtime. The mapping engine is stable now, most of the requests I 
+			get these days are updates for new variants and fixes to changes in judge 
+			outputs. I have a <A HREF="http://www.floc.net/cgi-bin/viewcvs.cgi/">cvs repository</A> 
+			for all the stuff, I think it can be considered as the reference for 
+			mapit now. (For the curious you can browse through changes for the 
+			code which parses <A HREF="http://www.floc.net/cgi-bin/viewcvs.cgi/scripts/receivemail.py">judge incoming mails</A>
+ 			or <A HREF="http://www.floc.net/cgi-bin/viewcvs.cgi/mapit/dpmap.py">mapit</A>). 
+ 			A lot of people help and send fixes for maps, which is great. 
+ 			If you want to change something on a map, please follow these steps:<br>
+			<br> 
+			<li>download a one page postscript file of a running game
+			<li>make the modifications you want on it, check the output 
+			with <A HREF="http://www.cs.wisc.edu/~ghost/doc/AFPL/">Ghostscript</A> 
+			or some other postscript viewer
+			<li>send me the original file you downloaded, and the modified one,
+			 so I can apply the changes to the template<br>
+			<br>
+			I'm not really good at tracking requests so I have a new system for 
+			keeping a trace of them; please submit bug/feature 
+			requests <A HREF="http://www.floc.net/issues">here</A>. If you sent me a 
+			mail and I didn't reply, or I said I'd do it and forgot, please also submit an issue.</b>
+			</blockquote>
+			<br>
+			<br>
+			
+			
+			<Big><b>Q: </b></big>What other Dip-related things are you hosting on your server? 
+			<br>
+      			<br>
+      			<blockquote>
+			<b>My machine also hosts the <A HREF="http://www.floc.net/dpjudge/">DPJudge</A> 
+			by Manus Hand.  The DPJudge is a rewritten judge with similar mail 
+			format, a web interface and some other interesting things like 
+			the <A HREF="http://www.floc.net/dpjudge/">infamous Payola variant</A>. Also 
+			there is an njudge adjudicator <A HREF="mailto:usos@onesite.org">USOS</A> that 
+			I host too, run by a mysterious guy named Nightshade.<br>
+			<br>
+			You can see the games currently being tracked on floc.net 
+			<A HREF="http://www.floc.net/observer.py?value_status=1&amp;Statistics=Statistics&amp;statkey_1=judge&amp;title=Current+judge+load&amp;stat_sort_descending_1=on&amp;statkey_2=none&amp;recall_input_parameters=on&amp;statvaluemethod_1=rowcount&amp;format_display=html&amp;results_per_page=50&amp;totals_1=on&amp;stat_sort_2=-1&amp;stat_sort_1=0&amp;page=search">here</A> 
+			(at the least the ones I know about). <br>
+			<br>
+			I also have an online interface to the JDPR ratings database 
+			(some search pages which went a bit far), fed by data computed 
+			by Doug Massey. The <A HREF="http://groups.yahoo.com/group/judge_dip_database">JDD</A> 
+			project has been formed to make this semi-automatic with continuously updated ratings.</b>
+			</blockquote>
+			<br>
+			<br>
+
+			
+			<Big><b>Q: </b></big>How much does it cost to run, and do you accept donations?
+			<br>
+      			<br>
+      			<blockquote>
+			<b>About $150/month for the machine and the connection (if you're ever looking 
+			for web hosting for dedicated servers, <A HREF="http://www.atjeu.com/">atjeu.com</A> 
+			is great). I don't need money, I use it for other personal purposes and 
+			to host my company's site which pays for part of the cost.<br>
+			<br>
+			Something I do need is someone to provide a mirror in case of downtime, 
+			so if you have a stable machine with some resources available (some gigs of 
+			disk space and cpu, bandwidth peaks only when my machine is out of order, 
+			running <A HREF="http://www.linux.org/">linux</A> or <A HREF="http://www.bsd.org/">bsd</A>) 
+			please tell me, I'll do the setup</b>
+			</blockquote>
+			<br>
+			<br>
+			
+			
+			<Big><b>Q: </b></big>Do you play Diplomacy at all?
+			<br>
+      			<br>
+      			<blockquote>
+			<b>Only one internet RT game and 2 board games during the last year 
+			because of real life constraints (it scares me just to think how it will 
+			be when I'll be married with children!).<br>
+			<br>
+			I planned to go to WTC 2004 this year, I had even booked my flight, 
+			but a real-life problem prevented my going at the last minute.</b>
+			</blockquote>
+			<br>
+			<br>
+
+			<Big><b>Q: </b></big>What does the future of PBEM Diplomacy hold for you? 
+			<br>
+      			<br>
+      			<blockquote>
+			<b>I believe in unregulated markets, planning is evil.  Maybe I'll work 
+			on a semi-automatic ratings system if I find some time. Maybe some 
+			people will start a new judge implementation from scratch, with a 
+			database backend, web services and a fat client interface.</b>
+			</blockquote>
+			<br>
+			<br>
+			
+			<i>Thank you Alain for your time and providing us this glimpse of your 
+			thoughts and involvement in this great hobby!</i>
+			<br>
+			<br>			
+
+			</td>
+			</tr>
+		</tbody>
+	</table>
 </center>
+
+
+
+
 <!-- ----------------------Contact-Info--------------------------- -->
 <!-- ------------------------------------------------------------- -->
 <table style="width: 219px; height: 51px;">
-<tbody>
-<tr valign="bottom">
-<td>
-<br>
-<a href="mailto:millis@diplom.org"><img src="/Zine/Common/letter.gif" border="0"></a>
-<br>
-</td>
-<td>
-<b>Millis Miller
-<br>
-(<a href="mailto:millis@diplom.org">millis@diplom.org</a>)</b>
-</td>
-</tr>
-</tbody>
+
+
+
+
+	<tbody>
+		<tr valign="bottom">
+		<td>
+			<br>
+			<a href="mailto:millis@diplom.org"><img src="../../Common/letter.gif" border="0"></a>
+			<br>
+		</td>
+		<td>
+			<b>Millis Miller
+			<br>
+			(<a href="mailto:millis@diplom.org">millis@diplom.org</a>)</b>
+		</td>
+		</tr>
+	</tbody>
 </table>
+
 <br>
 <br>
 <br>
+
 <blockquote>
-<p align="center"><i>
-If you wish to e-mail feedback on this 	article to the author, and clicking on
-<br>
-the mail address above does not work for you, feel free to
-use the "<a href="/Zine/S2004M/Common/DearDP.html"><b>Dear DP...</b></a>" mail interface.</i></p>
+	<p align="center"><i>
+	If you wish to e-mail feedback on this 	article to the author, and clicking on 
+	<br> 
+	the mail address above does not work for you, feel free to 
+	use the "<a href="../Common/DearDP.html"><b>Dear DP...</b></a>" mail interface.</i></p>
 </blockquote>
+
+
+
 <!-- ----------------------Footer--------------------------------- -->
 <!-- ------------------------------------------------------------- -->
 <hr align="center" color="GRAY" size="1" width="100%">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/S2004M/"><img src="/Zine/Common/toS2004M.gif" align="right" border="0"></a>
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toS2004M.gif" align="right" border="0"></a>
+
 </body></html>
-<!--
--->

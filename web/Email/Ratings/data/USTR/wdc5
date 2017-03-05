@@ -1,0 +1,85 @@
+Welcome to David's test judge. This judge is intended mainly 
+for testing new variants, and changes to the judge code.
+ 
+ Judge address : ustr@diplom.org
+ Judgekeeper   : JudgeRequest@ellought.demon.co.uk
+
+ Game creation is disabled, so if you want to run a game on
+ USTR, then please contact the Judge Keeper at the above address.
+
+ :: Judge: USTR  Game: Wdc5  Variant: Standard Gunboat
+ :: Deadline: S1908MX Wed Aug  5 1998 00:00:32 PDT
+  
+  Game 'wdc5' has been terminated.
+  Use the 'resume' command to start it back up.
+
+  Summary of game 'wdc5' through F1907B.
+
+Master:        Douglas Stafford  stafford@shaw.wave.ca
+Austria:       Keith Schneider   ks@bcs.rochester.edu
+England:       Mark Dee          markdee@cdsnet.net
+France:        Roy Rink          kingroy@erols.com
+ from S1905M:  Randy Hudson      ime@netcom.com
+Germany:       Peter Taylor      pbt@stevensons.co.nz,pbtaylor@ww.co.nz
+Italy:         Wayne Williams    alnsys@swbell.net
+Russia:        Doug Stafford     stafford@shaw.wave.ca
+ from F1902M:  Doug Gray         penngray@netrover.com
+ from F1906M:  Josh Madrone      fox@wcinet.net
+Turkey:        Matthew Shields   fsmcs2@aurora.alaska.edu
+
+
+ Game parameters are/were as follows:
+Move    clock   -1 min  0.00 next   0.10 grace 168.00 delay 0.00 days SMTWTFS
+Retreat clock   -1 min  0.00 next   0.10 grace 168.00 delay 0.00 days SMTWTFS
+Adjust  clock   -1 min  0.00 next   0.10 grace 168.00 delay 0.00 days SMTWTFS
+  Access:  Any-site, Level: Any, Moderated, Dedication: -1000.
+ 	Variant: Standard, Gunboat.
+	Flags:   NoNMR, NoList, NoProxy, NoDIAS.
+ Press:   Grey, No Partial (except to Master).
+   Winning Centers: 18.
+ Index:   54
+   Judge: USTR.
+
+   Game Started: Tue Aug  4 17:14:18 1998
+   Game Finished: Wed Aug  5 00:15:25 1998
+
+  The game was won by Germany.
+
+
+Historical Supply Center Summary
+--------------------------------
+    Ven Nap Edi Lvp Par Por Bel Mun Ber Swe Stp Mos Con Smy Rum Ser Vie
+Year  Rom Tun Lon Bre Mar Spa Hol Kie Den Nor War Sev Ank Bul Gre Bud Tri
+1900 I I I . E E E F F F . . . . G G G . . . R R R R T T T . . . . A A A
+1901 I I I I E E E F F F . F F G G G G G . E R R R R T T T T R A A A A A
+1902 I I I I E E F F F F F F F G G G G G G E R R R R T T T T R A A A A A
+1903 I I I I E F E F F I F F F G G G G G G G R R R R T T T T R T A A A A
+1904 I I I I E F E F F I F F F G G G G G G G G G R R T T T T A T A A R A
+1905 I I I I E F E F F I F I F G G G G G G G G G G R T T T T A T T R R T
+1906 I I I I G G F F G I F F G G G G G G G G G G G R T T T T T T T R G T
+1907 I I I I G G G G G F F F G G G G G G G G G G G R T T T T T T T R G T
+
+
+
+History of Supply Center Counts
+-------------------------------
+Power    1900 '01 '02 '03 '04 '05 '06 '07           Player
+Austria     3   5   5   4   4   1                   Keith Schneider
+England     3   4   3   2   2   2 \                 Mark Dee
+
+France      3   5   7   6   6 \                     Roy Rink
+																						                        5   4   3           Randy Hudson
+Germany     3   5   6   7   9  10  15& 17*          Peter Taylor
+Italy       3   4   4   5   5   6   5   4           Wayne Williams
+Russia      4   5 \                                 Doug Stafford
+					5   5   3   3 \                 Doug Gray
+                                     2  2 \         Josh Madrone
+Turkey      3   4   4   5   5   7   8   8           Matthew Shields
+																																				 
+																																				 * = 1 unused build.
+																																				 & = 2 unused builds.
+
+																																				 Index is the sum of squares of the number of supply centers divided 
+																																				 by the number of players.  It is a measure of how far the game has 
+																																				 progressed.
+

@@ -3,93 +3,122 @@
 <title>DP S1999M: E-Mail Diplomacy without a GM</title>
 </head>
 <body bgcolor="#ffffff">
-<a href="/Zine/">
-<img align=left src="/Zine/Common/DPbutton.gif" border=0></a>
-<a href="/Zine/S1999M/">
-<img align=right src="/Zine/Common/toS1999M.gif" border=0></a>
-<br clear=all>
-<HR>
-<table width="100%">
-<tr align="center">
-<th>
-<font color=blue><h1>
-E-Mail Diplomacy without a GameMaster
-</H1><h2>
+<a href="../..">
+   <img align=left src="../../Common/DPbutton.gif" border=0></a>
+  <a href="..">
+   <img align=right src="../../Common/toS1999M.gif" border=0></a>
+  <br clear=all>
+  
+  <HR>
+  <table width="100%">
+   <tr align="center">
+    <th>
+     <font color=blue><h1>
+	E-Mail Diplomacy without a GameMaster
+	</H1><h2>
 Or...How to Play Without Being Cheated
 </h2>
-<h3>
-<em>Mark B. ("Murky")</em>
-</h3>
+     <h3>
+      <em>Mark B. ("Murky")</em>
+     </h3> 
 </font>
-</table>
+  </table>
 <p>
+
+
 <h3>Introduction</h3>
 In this article I will attempt to show a protocol where players can do just this.
+
 <p>
+
 The protocol will address the following problems:
 <ul>
 <li> How may power preferences be assigned in a fair manner?
-<li> How can players ensure that nobody can learn their moves before
+<li> How can players ensure that nobody can learn their moves before 
 they are ready to reveal them?
-<li> How can they make sure that every player has committed to a set of
+<li> How can they make sure that every player has committed to a set of 
 moves before <strong>any</strong> moves are revealed.
 </ul>
+
 It is assumed that each player has access to <a href="http://www.pgpi.com/">PGP</a>. Some other program
 could be used, but this is probably the most widely available. It is also assumed
 that players have exchanged public keys. You should look at the PGP pages for more information.
+
 <p>
+
 I shall address the easier problem of the game mechanics first, i.e. actually
 writing and processing the orders, only then will I discuss the <!a href="faq.htm#assign_powers">assigning of powers.<!/a.>
+
 <h3>Playing the game</h3>
+
 Let us start our hypothetical game.
+
 <p>
+
 Negotiations have taken place as usual, and players are ready to write their orders.
 These orders are written by each player and saved as a <!a href="crypdip1.txt">text file,<!/a,>
 and a copy is reproduced below.
+
 <p>
+
 In my examples I use filenames which make life easier for me as a web maintainer,
 ideally the players would use filenames to suit them, i.e. f_s1901m.txt
+
+
 <pre>
 These are orders for demonstration purposes in
 the article 'E-Mail Diplomacy without a GM' which
-may be found on
+may be found on 
+
 http://www.diplom.org/DipPouch/Zine/S1999M/MarkB/No_GM.html
 ------------------------------------------------
 Here are the orders for France in S1901M
+
 F Bre - MAO
 A Mar - Spa
 A Par - Bur
 ------------------------------------------------
 </pre>
-The player would then apply a hash function to this file. A hash function
+
+The player would then apply a hash function to this file. A hash function 
 is a mathematical function which produces a small string from an
 input. If the input changes slightly then the hash will change dramatically.
 It is very unlikely, if one has a good hash function, to be able to find two messages
 which hash to the same thing. Also, it is very hard to go from the hash function
 to the message. PGP, fortunately has a built in hash function - the hash function
 is then digitally signed, so that ONLY that player could have produced
-a given file. This means that players cannot subsequently disown a given
+a given file. This means that players cannot subsequently disown a given 
 hash - and that no player can produce a false set of orders for a given power.
+
 <p>
+
 The signed hash should be saved to it's own file.
+
 <p>
+
 To produce the signed hash, we issue the following command to PGP:
 <pre>
 pgp -sba <filename> -u <username>
+
 i.e.
+
 pgp -sba crypdip1.txt -u mark
 </pre>
 For more information about PGP commands type pgp -h
 <p>
-A file is produced called, in my case,
-<!a href="crypdip1.asc">crypdip1.asc,<!/a>, which is then sent to all
-players via a mailing list as an attachment to an e-mail. Each player
+A file is produced called, in my case,  
+<!a href="crypdip1.asc">crypdip1.asc,<!/a>, which is then sent to all 
+players via a mailing list as an attachment to an e-mail. Each player 
 will save the file in a safe place, it will be needed later.
+
 <p>
+
 Here is the signed hash of the above text file.
+
 <pre>
 -----BEGIN PGP MESSAGE-----
 Version: 2.6.3i
+
 iQEVAwUBNaSBjN0PDznLLHdpAQFSEwf/XWFv/7yNx0d8O8sZLEdM06CP+dydJPu/
 E1/k+o14Y2D7ydMTWxgsqmkG6pkNtgvoktiXOjYXrxtS1cH9sVb1cm1FHHAqIDrL
 xyL7dqVr6s7sZx/36BSXnIS/KAgEkcicy3rZRat/13ODIDgcepsgY62r7+dsvkqb
@@ -99,58 +128,81 @@ fHIlJvia86KL9446AZ8X2hehs24ZKqDNc+TpxwRpmv5hS2ibFnYQJg==
 =4RKz
 -----END PGP MESSAGE-----
 </pre>
+
 <p>
+
 That player is now committed to a set of orders.
+
 <p>
-Incidentally, if you are to work through these examples you'll
+
+Incidentally, if you are to work through these examples you'll 
 need to add my <a href="crypdipk.txt">my public key</a> to your keyring.
 <p>
-Once all players have committed to a set of orders, we can now reveal
+
+Once all players have committed to a set of orders, we can now reveal 
 the orders.
+
 <p>
-The text file containing the orders are sent as an attachment to the
-same mailing list as before, and the usual rules of Diplomacy are
+
+The text file containing the orders are sent as an attachment to the 
+same mailing list as before, and the usual rules of Diplomacy are 
 applied in order to process. There will need to be a prearrangement
-regarding the treatment of typos (e.g. A Bre-MAO instead of F Bre-MAO)
-and so on. The players would take it in turns to actually process the
+regarding the treatment of typos (e.g. A Bre-MAO instead of F Bre-MAO) 
+and so on. The players would take it in turns to actually process the 
 orders once the orders are revealed.
+
 <p>
-Obviously, each player would want to check whether the orders were changed
-at the last minute by someone who has seen the orders of his neighbours -
+
+Obviously, each player would want to check whether the orders were changed 
+at the last minute by someone who has seen the orders of his neighbours - 
 this is where the signed hash comes into play.
+
 <p>
-The player would save the order file to the same directory as the signed
+
+The player would save the order file to the same directory as the signed 
 hash and issue the following command.
+
 <pre>
 pgp <hashname> <ordername>
+
 i.e.
 pgp crypdip1.asc crypdip1.txt
 </pre>
+
 If the orders have not been changed then you'll see a message which says:
 <pre>
 Good signature from user <name>
 </pre>
+
 If there has been a problem then you will see a message which says:
 <pre>
 WARNING: Bad signature, doesn't match file contents!
 </pre>
-This error will occur if so much as a single character has been added,
+
+This error will occur if so much as a single character has been added, 
 removed, or changed. Each player can therefore be sure that the orders
 had not been changed.
+
 <p>
+
 In the event of a bad signature the player's units would be deemed to have
 all been ordered to stand.
+
 <p>
-There is a flaw with this system, namely that players will get to see who has
+
+There is a flaw with this system, namely that players will get to see who has 
 already written orders. This can be solved by making use of a third party
 who collects the hashes and publishes them when they are all submitted. Each
 player would check the hash and publically claim it before any orders are
-revealed. The third party does not need to be trusted to the same extent as
+revealed. The third party does not need to be trusted to the same extent as 
 a GM would, at worst they can say that 'Italy has committed to orders'.
+
 <h3>Assigning powers</h3>
-Now we need to discuss how powers are assigned to players without the
+Now we need to discuss how powers are assigned to players without the 
 use of a GM.
+
 <p>
+
 For this protocol, one player is needed to run the protocol, however this
 player will not be able to influence the protocol.
 <p>
@@ -158,23 +210,33 @@ The first step is for each player to commit to a power preference list, in exact
 the same way as they commit to a set of orders. When each is committed the orders
 are revealed, and checks are performed as above. I'll use the example in the FAQ as
 a demonstration.
+
 <TABLE border>
 <TR><TH valign=top></TH><TH valign=top>List</TH><TH valign=top>Meaning</TH></TR>
+
 <TR><TH valign=top>1</TH><TD valign=top>AE(GI)R</TD><TD valign=top>Austria most wanted, then England, Germany/Italy equal preference, if not Russia, if not then this player doesn't care.</TD></TR>
+
 <TR><TH valign=top>2</TH><TD valign=top>FRG</TD><TD valign=top>France, then Russia, then Germany</TD></TR>
+
 <TR><TH valign=top>3</TH><TD valign=top>(EFG)TI(AR)</TD><TD valign=top>England/Russia/France equal pref. Then Turkey, then Italy, if not then the remaining two have equal preference</TD></TR>
+
 <TR><TH valign=top>4</TH><TD valign=top>E</TD><TD valign=top>England - if not this player doesn't care</TD></TR>
+
 <TR><TH valign=top>5</TH><TD valign=top> </TD><TD valign=top>This player has no preference.</TD></TR>
+
 <TR><TH valign=top>6</TH><TD valign=top>FRA</TD><TD valign=top>France, then Russia, if not Austria, then</TD></TR>
+
 <TR><TH valign=top>7</TH><TD valign=top>GRA</TD><TD valign=top>Germany, then Russia, if not Austria, then don't care.</TD></TR>
+
 <TR><TH valign=top>8</TH><TD valign=top>%REG</TD><TD valign=top>This is a reserve player, who wants to play if Russia, England or Germany drops out.</TD></TR>
 </TABLE>
 <p>
-For initial power assignments we can ignore player 8.
+   For initial power assignments we can ignore player 8.
 <p>
-This would be resolved as follows :
+   This would be resolved as follows :
 <p>
-First, each player gets the first choice where it is unopposed.
+   First, each player gets the first choice where it is unopposed. 
+
 <p><DL>
 <DT>Austria<DD>Player 1
 <DT>England
@@ -191,15 +253,16 @@ First, each player gets the first choice where it is unopposed.
 <BR>6. FR
 <BR>7. GR
 <p>
-France England and Germany are all involved in conflict. We need
-a way to generate random decision - based on equal fairness to
-all. In particular, player 3 should not gain an unfair
-advantage - so if brackets are to be allowed it should be made
-clear that
-a weighting is to be applied to compensate for multiple choices.
+   France England and Germany are all involved in conflict. We need 
+   a way to generate random decision - based on equal fairness to 
+   all. In particular, player 3 should not gain an unfair 
+   advantage - so if brackets are to be allowed it should be made 
+   clear that
+   a weighting is to be applied to compensate for multiple choices.
+
 <p>
 The manager of the protocol would then send a message saying words to the effect
-that
+that 
 <blockquote></em>
 'France is now to be decided. Player 2 gets one shot at France, Player 6 gets one shot,
 and player 3 gets one third of a shot. I.e. Players 2 and 6 get 3 chances each, player 3 gets
@@ -210,14 +273,14 @@ player 2 gets France. If three then player 3 gets France, else player six gets F
 <p>
 A random number now needs to be generated in order to decide the ownership of France.
 This means that the player managing the protocol has no way of affecting the result, as
-the interpretation of the result is decided in advance. The problem becomes
-<strong>'how can a random number between zero and six inclusive be
-generated such that everyone is sure that no slight of hand was
+the interpretation of the result is decided in advance. The problem becomes 
+<strong>'how can a random number between zero and six inclusive be 
+generated such that everyone is sure that no slight of hand was 
 involved?'</strong>
 <p>
 Each player is asked to commit to a number between 0 and 6 - publishing the signed
-hash as usual. Note that hashes of previous number choices should not be reused,
-they should be generated afresh each time. Once all are published then the
+hash as usual. Note that hashes of previous number choices should not be reused, 
+they should be generated afresh each time. Once all are published then the 
 files containing the numbers are revealed.
 <p>
 The numbers are totalled, e.g. 0 + 4 + 3 + 6 + 6 + 2 + 5 = 26.
@@ -230,35 +293,36 @@ Note, if Player 3 does <i>not</i> get France, then they should still only get 1/
 Any individual player can affect the final result, but they cannot predict <em>how</em>
 they will affect it.
 <p>
-It is possible for a player to <em>cheat</em> by waiting for all other
-players to reveal their numbers, and then choosing whether or not to
-reveal their own number. They could claim a disk problem, for instance.
-Fortunately there is a way to get around this - and it looks complex.
-Fortunately the initial preparative stages can be automated and the
-final number revealing stages can only be performed by those who are
+It is possible for a player to <em>cheat</em> by waiting for all other 
+players to reveal their numbers, and then choosing whether or not to 
+reveal their own number. They could claim a disk problem, for instance. 
+Fortunately there is a way to get around this - and it looks complex. 
+Fortunately the initial preparative stages can be automated and the 
+final number revealing stages can only be performed by those who are 
 meant to perform them.
 <p>
-Each player could follow the following protocol, at the very least
-one player would follow the new protocol, and this player's number
+Each player could follow the following protocol, at the very least 
+one player would follow the new protocol, and this player's number 
 would be revealed last of all.
-<p>
-A player would choose their number, and then encrypt it with the
-public key of all other players (in the order specified below),
+<p> 
+A player would choose their number, and then encrypt it with the 
+public key of all other players (in the order specified below), 
 signing each stage with their own private key. These signatures
 would all be published.
 <p>
-I.e. if M is the message, Ea(M) means encrypt M with the key
-belonging to player A. Eab(M) means encrypt the message so that
-players A or B can decode it. S(M) is a signature - this time it
+I.e. if M is the message, Ea(M) means encrypt M with the key 
+belonging to player A. Eab(M) means encrypt the message so that 
+players A or B can decode it. S(M) is a signature - this time it 
 is left attached to the message.
 <p>
-The 'last number message' consists of an encryption of the
+
+The 'last number message' consists of an encryption of the 
 committed to number, and a series of signatures.
 <p>
 The player, A, first encrypts to players B, C, D and E. The reason for this
-will be discussed later. The resulting message would be signed, and the
-signature left attached. Then the player would encrypt to F and G, E and F,
-D and E, C and B, B and G. At each stage the message would be
+will be discussed later. The resulting message would be signed, and the 
+signature left attached. Then the player would encrypt to F and G, E and F, 
+D and E, C and B, B and G. At each stage the message would be 
 signed.
 <p>
 I.e. it consists of an e-mail containing the following attachments.
@@ -266,105 +330,132 @@ I.e. it consists of an e-mail containing the following attachments.
 <li>S(Ebg(S(Ebc(S(Ede(S(Eef(S(Efg(S(Ebcde(M))))))))))))
 <li>The detached file, S(M)
 </ul>
+
 <p>
 This may seem complex, but it is a simple matter to write a batch file
-to do this job, setting the private key password as an environment variable
+to do this job, setting the private key password as an environment variable 
 to save time.
+
 <p>
-Once all other numbers are published, A would reveal message M, and everyone
+Once all other numbers are published, A would reveal message M, and everyone 
 would check it with S(M). It is possible that player A would have two numbers,
-one for which the hash is encrypted, and one for the hash which is revealed.
-To save time one would continue to assign other powers - but in the
+one for which the hash is encrypted, and one for the hash which is revealed. 
+To save time one would continue to assign other powers - but in the 
 background the following protocol would be followed as a check that the player
-didn't try something weird by creating two different values for M for each
+didn't try something weird by creating two different values for M for each 
 message.
-<p>
+<p> 
+
 This protocol would also be followed if player A refused to reveal their
 value of M.
+
 <p>
-In order to reveal the number choice, all other players must work
-together to find it. HOWEVER, one player working alone could not
+
+In order to reveal the number choice, all other players must work 
+together to find it. HOWEVER, one player working alone could not 
 stop the decryption.
+
 <p>
+
 When the committed code was first sent, all players can check that it
-was published by player A.
+was published by player A. 
 <p>
-In order to begin to reveal the number, players B or G first decrypt
-the function
+
+In order to begin to reveal the number, players B or G first decrypt 
+the function 
 Ebg(S(Ebc(S(Ede(S(Eef(S(Efg(S(Ebcde(M))))))))))).
+
 <p>
-This reveals S(Ebc(S(Ede(S(Eef(S(Efg(S(Ebcde(M)))))))))), which is
-then published. All players can use the signature to check that
-B and G did not cheat - and if you want to be very paranoid,
-B and G can both check upon each other.
+
+This reveals S(Ebc(S(Ede(S(Eef(S(Efg(S(Ebcde(M)))))))))), which is 
+then published. All players can use the signature to check that 
+B and G did not cheat - and if you want to be very paranoid, 
+B and G can both check upon each other. 
+
 <p>
-Next either B or C can decrypt to produce
+
+Next either B or C can decrypt to produce 
 S(Ede(S(Eef(S(Efg(S(Ebcde(M)))))))), which is published.
+
 <p>
+
 This is repeated until either F or G produces S(Ebcde(M)).  Any player
-other than F or G can decrypt this.
+other than F or G can decrypt this. 
+
 <p>
-M is then published, players B, C, D, and E can vouch that it resulted
-from the decryption, A signed it and previously published S(M), and
-so F or G should believe it. The reason for this last stage is so
-that F and G cannot collude and decide not to reveal the number by
+
+M is then published, players B, C, D, and E can vouch that it resulted 
+from the decryption, A signed it and previously published S(M), and 
+so F or G should believe it. The reason for this last stage is so 
+that F and G cannot collude and decide not to reveal the number by 
 claiming a corrupt file - they do not know what the number is.
 Similarly, once S(Ebcde(M)) is published a conspiracy between players A to E
 is needed if F and G are to be deceived.
 <p>
+
 Therefore, the chance of cheating is minimal:
 <ul>
-<li> Player A cannot refuse to reveal their number except in the short
-term - though they can refuse to supply a number or provide
-an error which would mean that the decryption failed. This would be
-deemed in advance to their having supplied a zero (for instance).
-<li> Any one other player cannot unilaterally have an 'accident'
-in decryption which means that the message cannot be checked, as
-each stage can be done be one of two players.
-<li> In order to obtain M prematurely requires a conspiracy of 5 from
-6 players.
+<li> Player A cannot refuse to reveal their number except in the short 
+     term - though they can refuse to supply a number or provide
+     an error which would mean that the decryption failed. This would be 
+     deemed in advance to their having supplied a zero (for instance).
+
+<li> Any one other player cannot unilaterally have an 'accident' 
+     in decryption which means that the message cannot be checked, as
+     each stage can be done be one of two players.
+
+<li> In order to obtain M prematurely requires a conspiracy of 5 from 
+     6 players.
+
 <li> Should the protocol break down and two players
-relied upon at a given stage fail to decrypt, then player A can still
-reveal the number as S(M) is already published. After all -
-this protocol is purely to prevent cheating on the part of A. Once A
-is committed to the encryption string then they cannot change it once
-numbers start to be published.
+     relied upon at a given stage fail to decrypt, then player A can still
+     reveal the number as S(M) is already published. After all - 
+     this protocol is purely to prevent cheating on the part of A. Once A
+     is committed to the encryption string then they cannot change it once
+     numbers start to be published.
 </ul>
+
 <p>
+
 Once this protocol has assigned one power, we now eliminate that power
-from the lists and take a second pass to assign the next power. This is
+from the lists and take a second pass to assign the next power. This is 
 repeated until all powers are assigned.
+
 <p>
-So, there you have it, Diplomacy without a GM - the hardest thing you
-have to do is choose the powers - and even this is simple if the last
-player to reveal a number decides not to cheat - this encryption method
+
+So, there you have it, Diplomacy without a GM - the hardest thing you 
+have to do is choose the powers - and even this is simple if the last 
+player to reveal a number decides not to cheat - this encryption method 
 is merely to ensure that they can't!
+
 <p>
+
 Do let me know if you try it!
-<table>
-<tr valign="bottom">
-<td>
-<A HREF="mailto:murky@lspace.org">
-<IMG src="/Zine/Common/letter.gif" border="0"></A>
-</td>
-<td>
-<strong>Mark B. ("Murky")<br>
-(murky@lspace.org)</strong>
-</td>
-</tr>
-</table>
-<em>If you wish to e-mail feedback on this article to the author, click on
-the letter above. If that does not work, feel free to use the
-<A HREF="/Zine/S1999M/Common/DearDP.html">"<strong>Dear DP...</strong>"</A> mail
-interface.</em>
-<p>
-<hr>
-<A HREF="/Zine/">
-<IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/S1999M/">
-<IMG SRC="/Zine/Common/toS1999M.gif" border=0 ALIGN=right></A>
-<br clear=both>
+
+  <table>
+   <tr valign="bottom">
+    <td>
+     <A HREF="mailto:murky@lspace.org">
+      <IMG src="../../Common/letter.gif" border="0"></A>
+    </td>
+    <td>
+     <strong>Mark B. ("Murky")<br>
+      (murky@lspace.org)</strong>
+    </td>
+   </tr>
+  </table>
+   <em>If you wish to e-mail feedback on this article to the author, click on
+    the letter above. If that does not work, feel free to use the
+    <A HREF="../Common/DearDP.html">"<strong>Dear DP...</strong>"</A> mail
+    interface.</em>
+
+  <p>
+  <hr>
+  <A HREF="../..">
+   <IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+  <A HREF="..">
+   <IMG SRC="../../Common/toS1999M.gif" border=0 ALIGN=right></A>
+  <br clear=both> 
 </BODY>
 </HTML>
-<!--
--->
+

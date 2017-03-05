@@ -1,0 +1,9 @@
+Figuring /home/dippouch/public_html/Email/Ratings/data/USIN/basic3...
+Traceback (most recent call last):
+  File "storeGame", line 5, in ?
+    rating.storeGame()
+  File "/home/dippouch/public_html/Email/Ratings/rating.py", line 323, in storeGame
+    figureGame(fileName)
+  File "/home/dippouch/public_html/Email/Ratings/rating.py", line 226, in figureGame
+    share = payback * (game[power][guy][TURNS] / float(gamelength))
+UnboundLocalError: local variable 'payback' referenced before assignment

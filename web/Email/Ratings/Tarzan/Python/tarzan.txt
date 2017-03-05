@@ -1,0 +1,2 @@
+Reading in the Game Summaries from the USCA Judge
+Reading in the Game Summaries from the speed Judge

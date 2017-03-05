@@ -1,0 +1,7 @@
+# PCTeX Project File, Version 1.1
+	name: abyss314
+	texformat: plain
+	typesetmode: DVI
+abyss314.tex
+abyss314.log
+abyss314.DVI

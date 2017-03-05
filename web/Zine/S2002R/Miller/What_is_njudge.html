@@ -1,95 +1,137 @@
 <HTML>
 <HEAD>
 <TITLE>DP S2002R: What is njudge</TITLE>
+
 <!---- Authored by Millis Miller ---->
 <!---- Published on the Pouch Zine with permissions ---->
 <!---- Last Updated on 05/29/2002 ---->
 <!---- Updated by Edward Hawthorne ---->
+
 </HEAD>
+
+
 <BODY BGCOLOR="#ffffff">
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/S2002R/"><IMG align=right SRC="/Zine/Common/toS2002R.gif" border=0></A>
-<BR clear=both>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-<BR>
+
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toS2002R.gif" border=0></A>
+
+  <BR clear=both>
+  <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+  <BR>
+  
 <! ------------------------------------------------------------- >
 <! ------------------------------------------------------------- >
+
 <CENTER><H1>What is njudge?</H1>
 <H3><I>By Millis Miller</I></H3></CENTER>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+  <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
 <BR>&nbsp;
+
 <CENTER>
-<TABLE WIDTH="90%" BORDER="0">
-<TR>
-<TD ALIGN="JUSTIFY">
+  <TABLE WIDTH="90%" BORDER="0">
+    <TR>
+    <TD ALIGN="JUSTIFY">
 <P ALIGN="JUSTIFY">
 Many people have used the Ken Lowe Play by Email Diplomacy judge, often simply referred to as the '<I>Judge</I>', but perhaps it is not clear exactly what this is or how it was developed. Well, in this article, I will try to make it clear.
+
 <H4>The History</H4>
+
 <P ALIGN="JUSTIFY">In 1987, a person called Ken Lowe started working on a program to automatically adjudicate PBEM Diplomacy games. He wrote it in 'C' and designed it to run on a University of Washington system. It was given the name <I>Judge</I>, and quickly gained a large usage.
+
 <P ALIGN="JUSTIFY">When Ken Lowe decided to retire from the hobby and close the judge, he passed over its handling to David Kovar.  Around 1992, David started up USEF to replace the <I>Judge</I>. During the next few years, a number of other judges started, including USWI, USCA, ZADU. Initially, all the code maintenance was done by David himself, and as other judges started up, the other JKs, and then other members of the hobby, started to join in. However, for a long time, David kept the master copy of the code, and all changes made were sent to him for integrating back into the main source.
-<P ALIGN="JUSTIFY">When David was no longer able to host USEF at his work, he took an old Sun machine from his collection, and donated it to the hobby. This is currently hosting <A HREF="/">www.diplom.org</A>. With a machine now available and dedicated to the judge development, things moved on. The source code was made accessible to several people, and later put into RCS. Other services to the hobby were also put onto this machine, including at one time, five judges simultaneously running on <A HREF="/">diplom.org</A>.
+
+<P ALIGN="JUSTIFY">When David was no longer able to host USEF at his work, he took an old Sun machine from his collection, and donated it to the hobby. This is currently hosting <A HREF="http://www.diplom.org">www.diplom.org</A>. With a machine now available and dedicated to the judge development, things moved on. The source code was made accessible to several people, and later put into RCS. Other services to the hobby were also put onto this machine, including at one time, five judges simultaneously running on <A HREF="http://www.diplom.org">diplom.org</A>. 
+
 <P ALIGN="JUSTIFY">One of the problems with the source code was that it had been written by Ken Lowe as a project to learn C, and had then been maintained by many different people. As such, it was not in the best of states. So Nathan Wagner (then JK of USWI) decided he was going to take his own version of the code, put the entire code through a code layout program, fix all the warnings which were being
-generated during compile time, get it as close to ANSI C as possible, improve the implementation of some parts of the code etc. Thus was created Nathan's judge, or <I>njudge</I>.
-<P ALIGN="JUSTIFY">As time passed, the development stopped: David Norman maintained his judge for testing new variants, but new features weren't being added. In 1998, David and Manus Hand started work on USWJ, a judge that used the Ken Lowe source code, but had its input and much of its output through a web front end rather than e-mail. This got to the stage of having a game played on it, but was never set up for full operation, such as producing maps. However, this, together with the web interface Manus had put together to run <A HREF="/Zine/S2002R/Torres/payola.html">Payola</A> games, prompted Manus to write a new web-based judge from scratch, the <A HREF="/dpjudge">DPjudge</A>.
-<P ALIGN="JUSTIFY">At the end of 1999, I started work on the software and made many changes to it, both new features and some bug fixes. In 2000, Tim Miller and later  Greg Greenman, joined the group of developers. Since then, several new judges have been established with new releases of <I>njudge</I> running on them.
+generated during compile time, get it as close to ANSI C as possible, improve the implementation of some parts of the code etc. Thus was created Nathan's judge, or <I>njudge</I>. 
+
+<P ALIGN="JUSTIFY">As time passed, the development stopped: David Norman maintained his judge for testing new variants, but new features weren't being added. In 1998, David and Manus Hand started work on USWJ, a judge that used the Ken Lowe source code, but had its input and much of its output through a web front end rather than e-mail. This got to the stage of having a game played on it, but was never set up for full operation, such as producing maps. However, this, together with the web interface Manus had put together to run <A HREF="../Torres/payola.html">Payola</A> games, prompted Manus to write a new web-based judge from scratch, the <A HREF="/dpjudge">DPjudge</A>.
+
+<P ALIGN="JUSTIFY">At the end of 1999, I started work on the software and made many changes to it, both new features and some bug fixes. In 2000, Tim Miller and later  Greg Greenman, joined the group of developers. Since then, several new judges have been established with new releases of <I>njudge</I> running on them. 
+
 <H4>How it works</H4>
+
 <P ALIGN="JUSTIFY"><I>Njudge</I> is a set of programs that is (fairly) easily installable and runs on a Unix or Linux machine. It is written in 'C', and is reasonably  platform independent. It consists of a message processor, that reads incoming email and then decodes them to work out the commands, as well as a move processor, to perform the movements and other housekeeping tasks (late notifications, dedication adjustments etc.). It uses no special tools or databases, working with a set of files only, and typically occupies between 10Mb to over 100Mb (depending on number of games and activity). It can run on machines from an Intel '386 (or equivalent) upwards.
-<P ALIGN="JUSTIFY">It requires little special skills for the JudgeKeeper (JK) to maintain it, aside from simple system administration.
+
+<P ALIGN="JUSTIFY">It requires little special skills for the JudgeKeeper (JK) to maintain it, aside from simple system administration. 
+
 <H4>What has been changed</H4>
+
 <P ALIGN="JUSTIFY">Since work started in 1999, a whole host of things have been changed. Some of the most important can be summarised as:
-<BLOCKQUOTE>
-<li type="disc">Machiavelli bugs fixed</li>
-<li type="disc">Blind variant made functional</li>
-<li type="disc">Wing unit added</li>
-<li type="disc">Set absence command for specifying holidays</li>
-<li type="disc">'Chaos build bug' fixed</li>
-<li type="disc">Subject lines changed (to show judge, phase, game and message type)</li>
-<li type="disc">Two new ratio-based dedication ratings</li>
-<li type="disc">New variants added (Empire, SailHo, African2, 1898_Crowded to mention a few)</li>
-<li type="disc">Colonial Special Rules added</li>
-<li type="disc">Assorted small bugs corrected</li>
-<li type="disc">Code now stored in CVS</li>
-<li type="disc"><A HREF="http://www.njudge.org/">Website</A> added</li>
-</BLOCKQUOTE>
+
+	<BLOCKQUOTE>
+		<li type="disc">Machiavelli bugs fixed</li>
+		<li type="disc">Blind variant made functional</li>
+		<li type="disc">Wing unit added</li>
+		<li type="disc">Set absence command for specifying holidays</li>
+		<li type="disc">'Chaos build bug' fixed</li>
+		<li type="disc">Subject lines changed (to show judge, phase, game and message type)</li>
+		<li type="disc">Two new ratio-based dedication ratings</li>
+		<li type="disc">New variants added (Empire, SailHo, African2, 1898_Crowded to mention a few)</li>
+		<li type="disc">Colonial Special Rules added</li>
+		<li type="disc">Assorted small bugs corrected</li>
+		<li type="disc">Code now stored in CVS</li>
+		<li type="disc"><A HREF="http://www.njudge.org/">Website</A> added</li>
+	</BLOCKQUOTE>
+
 <H4>How it is maintained</H4>
-<P ALIGN="JUSTIFY">A long-existing mailing list is used to notify and discuss found problems or possible enhancements. It is then up to the maintainers to decide what will be done and by whom to fix it. Every so often, when the amount of changes made seems significant, a new release is made and those judge-keepers that want can upgrade their judges. Currently, the three active maintainers all run judges and these are usually kept up to date (<A HREF="mailto:dedo@faztek.org">DEDO</A>, <A HREF="mailto:ustx@spencersoft.com">USTX</A> and <A HREF="mailto:judge@gem.win.co.nz">NZMB</A>) with other judges changing less often. David Kovar maintains the repository of the judge software and the hardware it is stored on.
+
+<P ALIGN="JUSTIFY">A long-existing mailing list is used to notify and discuss found problems or possible enhancements. It is then up to the maintainers to decide what will be done and by whom to fix it. Every so often, when the amount of changes made seems significant, a new release is made and those judge-keepers that want can upgrade their judges. Currently, the three active maintainers all run judges and these are usually kept up to date (<A HREF="mailto:dedo@faztek.org">DEDO</A>, <A HREF="mailto:ustx@spencersoft.com">USTX</A> and <A HREF="mailto:judge@gem.win.co.nz">NZMB</A>) with other judges changing less often. David Kovar maintains the repository of the judge software and the hardware it is stored on. 
+
 <H4>What remains to be done</H4>
+
 <P ALIGN="JUSTIFY">There are many changes that could be done, but lack of time as well as minority interest tends to keep the list down. In general, things get done if there is someone who wants them done, and is prepared to put in the time to code it.
+
 <P ALIGN="JUSTIFY">Current items that are being worked on for future releases include:
-<BLOCKQUOTE>
-<li type="disc">Unified registration system, for all judges
-<li type="disc">JADES system to produce a single rating system
-<li type="disc">Internationalisation of help files
-<li type="disc">Addition of Machiavelli 1995 and Machiavelli scenarios
-<li type="disc">Setup option, so that game can be set to a specified position
-<li type="disc">Choosable home centres
-<li type="disc">USTV and USTR judges that test new variants
-<li type="disc">Enhancement of web-site, including a bug/enhancement tracking system.
-</BLOCKQUOTE>
+
+	<BLOCKQUOTE>
+		<li type="disc">Unified registration system, for all judges
+		<li type="disc">JADES system to produce a single rating system
+		<li type="disc">Internationalisation of help files
+		<li type="disc">Addition of Machiavelli 1995 and Machiavelli scenarios
+		<li type="disc">Setup option, so that game can be set to a specified position
+		<li type="disc">Choosable home centres
+		<li type="disc">USTV and USTR judges that test new variants
+		<li type="disc">Enhancement of web-site, including a bug/enhancement tracking system. 
+	</BLOCKQUOTE>
+
 <H4>How to participate</H4>
+
 <P ALIGN="JUSTIFY">New developers are always welcome to look at the code and provide their input. The main entry point for the project is <A HREF="http://www.njudge.org/">www.njudge.org</A>, where all the software can been seen (either as stored archives, or directly from the CVS version tree). Also, the maintenance list can be <A HREF="mailto:majordomo@devel.diplom.org?subject=subscribe
 judge-maint">joined</A>, its archives <A HREF="http://www.floc.net/exarch/judgemaint.html">
 consulted</A>, a list of judge codes <A HREF="http://www.sentex.ca/~nfitz/judge.codes">assigned</A> and the code version those active are <A HREF="http://gem.win.co.nz/judge/judgevers.html">running</A>.
-<P ALIGN="JUSTIFY">The project currently has three active developers (myself, Tim Miller and Greg Greenman) and one documentator (Christophe Courtois), with a host of people actively participating in the maintenance list, such as Alain TÃ©sio, Philippe Lalande and Kevin Roust, to name a few.
-<P ALIGN="JUSTIFY">If you want to participate, to provide suggestions, make enhancements or whatever, please join in!
+
+<P ALIGN="JUSTIFY">The project currently has three active developers (myself, Tim Miller and Greg Greenman) and one documentator (Christophe Courtois), with a host of people actively participating in the maintenance list, such as Alain Tésio, Philippe Lalande and Kevin Roust, to name a few.
+
+<P ALIGN="JUSTIFY">If you want to participate, to provide suggestions, make enhancements or whatever, please join in! 
+
+  
 <! ------------------------------------------------------------- >
 <! ------------------------------------------------------------- >
-<P><a href="mailto:millis@diplom.org"><IMG src="/Zine/Common/letter.gif" border="0"></A><BR>&nbsp;
+
+
+<P><a href="mailto:millis@diplom.org"><IMG src="../../Common/letter.gif" border="0"></A><BR>&nbsp;
 <b>Millis Miller<BR>
 (<a href="mailto:millis@diplom.org">millis@diplom.org</a>)</b>
+
+
 <CENTER><P>
 <I>If you wish to e-mail feedback on this article to the author, and clicking
-on the mail address above<BR>does not work for you, feel free to use the
-"<A HREF="/Zine/S2002R/Common/DearDP.html"><B>Dear DP...</B></A>" mail interface.</I></CENTER>
+on the mail address above<BR>does not work for you, feel free to use the 
+"<A HREF="../Common/DearDP.html"><B>Dear DP...</B></A>" mail interface.</I></CENTER>
 </TD>
 </TR>
 </TABLE>
+
 <P>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/S2002R/"><IMG align=right SRC="/Zine/Common/toS2002R.gif" border=0></A>
+  <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toS2002R.gif" border=0></A>
+
+
 </CENTER>
 </BODY>
 </HTML>
-<!--
--->
+
+

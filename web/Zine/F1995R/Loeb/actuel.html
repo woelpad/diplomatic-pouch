@@ -2,9 +2,11 @@
 <title>DP F1995R: The Retreat Strategy Finder</title>
 </head>
 <BODY BGCOLOR="#ffffff">
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/F1995R/"><IMG align=right SRC="/Zine/Common/toF1995R.gif" border=0></A>
+
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toF1995R.gif" border=0></A>
 <BR><BR><HR>
+
 <body>
 <h1>
 <center>How Does the Current Strategy Finder<BR>
@@ -17,7 +19,7 @@ Fortunately, during the building and retreat phases, the number of
 possible moves is never quite so astronomical.
 As we have seen, even in the worst possible case there
 are at most about 72 million possible retreat combinations (or about
-525 million
+525 million  
 including the option of disbanding). These are large numbers, but for
 a high-speed computer, it is feasible to consider each case in turn.
 Typically, only a couple of units retreat at one time, making for only a
@@ -55,19 +57,19 @@ before the preceding movement season.
 <p>
 However, looking ahead to future movement seasons will often be
 futile, because the computer is
-likely to be wrong about the
+likely to be wrong about the 
 opponents' moves and the mistakes will get compounded for each turn
 looked ahead.
 <p>
 The initial strategy finder written by Constantin Staykov
 (<a
 href="mailto:CSTAYKOFF@DT.euroview.fr"><tt>CSTAYKOFF@DT.euroview.fr</tt></a>)
-considered all possible combinations of retreats. However,
+ considered all possible combinations of retreats. However,
 when we introduced the notion of a multi-ply search, we
 chose to use search techniques in build or retreat
-phases that are less
+phases that are less 
 complete. With their increased efficiency, they can anticipate
-the following phase via a
+the following phase via a 
 recursive call to the strategic module of the program.  This enables
 efficient prediction of the results for retreats while planning the
 strategy of a movement phase.
@@ -76,7 +78,7 @@ To implement this technique, the retreat generator was
 rewritten by Gilles
 Schaeffer (<a href="mailto:schaeffe@clipper.ens.fr"
 ><tt>schaeffe@clipper.ens.fr</tt></a>).
-Groups of <i>related</i> retreats are
+Groups of <i>related</i> retreats are 
 studied simultaneously (using an evolutionary search, optimizing in
 turn for each involved country).
 <p>
@@ -90,7 +92,7 @@ Then two units <i>u</i> and <i>v</i> are considered
 retreating unit will only be related to itself.
 <p>
 Among related retreats, all combinations will be studied, and each
-alliance will move to maximize its minimum possible return.
+alliance will move to maximize its minimum possible return. 
 <p>
 Remember also that only a maximum
 of 11 units can retreat at one time (and usually many fewer).
@@ -100,11 +102,11 @@ than the original program.
 <P>
 <hr>
 Return to <a href="ret.html">main article</a>
+
 <hr>
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/F1995R/"><IMG align=right SRC="/Zine/Common/toF1995R.gif" border=0></A>
+
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toF1995R.gif" border=0></A>
 <BR><BR>
 </body>
 </html>
-<!--
--->

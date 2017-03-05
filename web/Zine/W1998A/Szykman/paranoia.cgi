@@ -1,20 +1,19 @@
+#!/home/dippouch/bin/python
 
+import os, cgi
+
+print 'Content-type: text/html\n'
+print \
+"""
 <html>
 <head>
-
-
-
-
 <title>DP W1998A: Risk-Taking Experiment </title>
 </head>
 <body bgcolor="#ffffff">
-
-
-
-<a href="/Zine/">
-   <img align=left src="/Zine/Common/DPbutton.gif" border=0></a>
-  <a href="/Zine/W1998A/">
-   <img align=right src="/Zine/Common/toW1998A.gif" border=0></a>
+<a href="../..">
+   <img align=left src="../../Common/DPbutton.gif" border=0></a>
+  <a href="..">
+   <img align=right src="../../Common/toW1998A.gif" border=0></a>
   <br clear=all>
   
   <HR>
@@ -30,8 +29,47 @@
      </h3>
   </table>
 <p align=justify>
+"""
 
+form = cgi.FieldStorage()
+if form.has_key('key'):
+	IP = form['key'].value
+	comments = q1 = q2 = q3 = q4 = q5 = None
+	if form.has_key('q1'): q1 = form['q1'].value
+	if form.has_key('q2'): q2 = form['q2'].value
+	if form.has_key('q3'): q3 = form['q3'].value
+	if form.has_key('q4'): q4 = form['q4'].value
+	if form.has_key('q5'): q5 = form['q5'].value
+	if form.has_key('comments'): comments = form['comments'].value
+	from data import data
+	data[IP] = [q1 ,q2 ,q3, q4, q5, comments]
+	file = open('data.py', 'w')
+	file.write('data = %s\n' % `data`)
+	file.close()
+	print '<H3 align=center><font color=red>'
+	print 'Thank you for your response!<p>'
+	print 'Look for the results in a future issue of The Pouch Zine!'
+	print '</font></H3>'
+	print """
+  <p align=justify>
+  <center>
+  <form><input type=button value="Back to the Article"
+  onClick=window.history.back()></form></center>
+  <hr>
+  <A HREF="../..">
+   <IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+  <A HREF="..">
+   <IMG SRC="../../Common/toW1998A.gif" border=0 ALIGN=right></A>
+  <br clear=both>
+ </body>
+</html>
 
+"""
+
+# --------------------------------------------------------
+	raise SystemExit
+
+print """
 I'm doing a little experiment to find out the relationship between risk-taking and expertise in Diplomacy.  In this experiment, you will be shown a Diplomacy map and the accompanying situation in a game in progress will be described.  All you need to do is answer five questions on a scale from 1 to 5 and submit the form.  Your participation will take very little time and will be much appreciated.
 <p align=justify>
 Below is a map illustrating a game in progress.  The scenario is as follows:  You are currently playing France.  You have been allied with Germany since the beginning of the game and are succeeding in eliminating England together.  Italy has been allied with Turkey since the beginning of the game.  Italy moved quickly to take out Austria, with some Turkish land support, while Turkey went straight for Russia.
@@ -42,11 +80,23 @@ If Italy is setting up to attack you, you could be in serious trouble (even with
 <p align=justify>
 The map appears below.  The brief questions follow the map.
 <p align=justify>
+"""
 
-<center><table border=5><tr><th><img src=map.gif></table></center>
+# --------------------------------------------------------------------
+# Decide which map to show them based on the odd/even-ness of their IP
+# --------------------------------------------------------------------
+IP = os.environ['REMOTE_ADDR']
+map = ['map.gif', 'MAP.GIF'][IP[-1] in '02468']
 
+# -------------------------------------------------------
+# Then you can show the map when you're ready, like this:
+# -------------------------------------------------------
+print '<center><table border=5><tr><th><img src=%s></table></center>' % map
+
+print \
+"""
 <form method=post action=paranoia.cgi>
-<input type=hidden name=key value=207.241.237.223>
+<input type=hidden name=key value=%s>
 <b>1.  On a scale from 1 to 5, please rate the likelihood that Italy is setting up to attack you.</b>
 <p align=justify>
 <table>
@@ -113,7 +163,7 @@ the next issue of The Pouch.
    <tr valign="bottom">
     <td>
      <A HREF="mailto:simon@diplom.org">
-      <IMG src="/Zine/Common/letter.gif" border="0"></A>
+      <IMG src="../../Common/letter.gif" border="0"></A>
     </td>
     <td>
      <strong>Simon Szykman<br>
@@ -123,25 +173,21 @@ the next issue of The Pouch.
   </table>
    <em>If you wish to e-mail feedback on this article to the author, click on
     the letter above. If that does not work, feel free to use the
-    <A HREF="/Zine/W1998A/Common/DearDP.html">"<strong>Dear DP...</strong>"</A> mail
+    <A HREF="../Common/DearDP.html">"<strong>Dear DP...</strong>"</A> mail
     interface.</em>
 
   <p align=justify>
   <hr>
-  <A HREF="/Zine/">
-   <IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-  <A HREF="/Zine/W1998A/">
-   <IMG SRC="/Zine/Common/toW1998A.gif" border=0 ALIGN=right></A>
+  <A HREF="../..">
+   <IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+  <A HREF="..">
+   <IMG SRC="../../Common/toW1998A.gif" border=0 ALIGN=right></A>
   <br clear=both>
  </body>
 </html>
 
+""" % IP
 
-
-
-
-
-
-<!--
--->
-
+# --------------------------------------------------------
+# AND THAT'S IT.  THIS FILE MUST HAVE EXECUTE PERMISSION!!
+# --------------------------------------------------------

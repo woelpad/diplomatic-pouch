@@ -2,26 +2,36 @@
 <HEAD>
 <TITLE>DP W1995A: Combinatorics of Adjustments</TITLE>
 </HEAD>
+
 <BODY BGCOLOR="#ffffff">
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toW1995A.gif" border=0></A>
 <BR clear=all><HR>
+
 <table cellspacing=5>
+
 <tr>
-<td><IMG height=165 SRC="/Zine/Common/Loeb.gif">
+
+<td><IMG height=165 SRC="../../Common/Loeb.gif">
+
 <td>
+
 <h2>The Diplomacy<br>Programming Project</H2><H1>
 The Combinatorics<BR>Of Adjustments</h1>
+
 <h2><i>Danny Loeb</i></h2>
+
 </table>
 <hr><p>
+
 <blockquote>
 <i>After the Fall moves have been played, and the
 retreats (if any) made, each player's number of
 units must be adjusted to equal the number of
 supply centers his Great Power controls.</i>
 </blockquote>
-<a href="/Zine/F1995R/Loeb/ret.html">Last issue</a> we discussed 
+
+<a href="../../F1995R/Loeb/ret.html">Last issue</a> we discussed 
 the complexity of the search problems posed to the computer diplomat
 by the retreat  
 phase in the game of diplomacy. In comparison, how difficult a problem
@@ -37,6 +47,8 @@ Per Westling (Linkoping, Sweden).
 The current version  programmed by Gilles Schaeffer
 (Bordeaux, ENS/Paris) is presented below. We conclude with possible 
 future developments.
+
+
 <h2>Search size</h2>
 The difficulty of a search problem is proportional to the number of
 the choices. 
@@ -53,6 +65,7 @@ movements. We can thus make a complete search of all possible retreats
 combinations. (Actually, we don't really consider all combinations,
 since "independent" retreats are optimized separately in order to gain
 time for a 2 or 3-ply look-ahead in our search.)
+
 <h2>How many removals are possible?</h2>
 <blockquote>
 <i>
@@ -96,6 +109,7 @@ By inspection we see that the largest number of choices, namely
 <b>24,310</b>, 
 arises when a 17-unit superpower is forced to remove roughly half of
 his forces.
+
 <h2>How many builds are possible?</h2>
 <blockquote>
 <i>
@@ -111,6 +125,7 @@ on which it is to appear, or the build is
 invalid).
 </i>
 </blockquote>
+
 The number of builds possible will vary depending upon:
 <ul>
 <li> Up to how many units may be built,
@@ -122,6 +137,7 @@ Since we are computing maximal numbers of build possibility, we can
 ignore
 the possibility that a center is occupied or
 owned by another power, and thus unavailable for a build.
+
 <h3>Turkey, England, Italy</h3>
 These powers have three coastal centers.
 <ol> 
@@ -129,6 +145,7 @@ These powers have three coastal centers.
 <li> 2x2 + 2x2 + 2x2 = <b>12</b> choices for two builds. (18 counting waives)
 <li> 2x2x2 = 8 choices for three builds. (<b>26</b> counting waives)
 </ol>
+
 <h3>Two coastal centers: France, Germany</h3>
 These powers have two coastal centers and one inland.
 <ol>
@@ -136,6 +153,7 @@ These powers have two coastal centers and one inland.
 <li> 2x2 + 2x1 + 2x1 = <b>8</b> choices for two builds. (13 counting waives)
 <li> 2x2x1 = 4 choices for three builds. (<b>17</b> counting waives)
 </ol>
+
 <h3>One coastal centers: Austria</h3>
 These powers have one coastal centers, and two inland.
 <ol>
@@ -143,6 +161,7 @@ These powers have one coastal centers, and two inland.
 <li> 1x1 + 2x1 + 2x1 = <b>5</b> choices for two builds. (9 counting waives)
 <li> 2x1x1 = 2  choices for three builds. (<b>11</b> counting waives)
 </ol>
+
 <h3>Russia</h3>
 Russia has 2 inland centers, a coastal center, and a bicoastal center.
 <ol>
@@ -152,6 +171,7 @@ Russia has 2 inland centers, a coastal center, and a bicoastal center.
 counting waives)
 <li> 3x2x1x1 = 6 choices for four builds. (<b>45</b> counting waives)
 </ol>
+
 Russia has the most choices to consider for its builds. Up to <b>45</b>
 counting waives when it has 4 builds.
 <p>
@@ -167,6 +187,7 @@ required by diplomatic constraints (eg. demilitarized zones) imposed
 by the negotiation module.
 Not counting waives then, Russia still has the most choices (<b>17</b>) when
 it has 2 or 3 builds.
+
 <h2>Open problem</h2>
 The total size of the search space is given by the product of the 
 number of the choices available to each player. How can we maximize
@@ -207,6 +228,7 @@ One possible solution with over 11 billion combinations is the following
 <tr><th colspan=3>Total<td align=center><b>11,426,088,960</b>
 </table>
 </center>
+
 <h2>Algorithms</h2>
 Even in the example given above, it might be possible to 
 program a computer to consider all of the possibilities.
@@ -256,6 +278,7 @@ options for each country.
 That is, each country finds the best adjustment for its alliance under
 the (false) assumption that all other countries will skip their
 adjustment phase.
+
 <h4>Possible Improvement</h4>
 Calculate the adjustment of country <i>i</i> under the assumption that
 only countries <i>i</i>+1  through 7 will skip their adjustment phase.
@@ -265,6 +288,7 @@ our country. (We should note however that the strategy finder
 as currently implemented has no knowledge about what country we play. 
 The strategy finder simply finds the best moves for all countries
 based on diplomatic constraints.)
+
 <h3>Secondary search</h3>
 If time is limited, for example if this search is part of 
 a recursive search, then the results of the preliminary search 
@@ -280,6 +304,7 @@ considered by the six other powers.
 As the search progresses, we assume that the moves being considered
 are practically optimal, and we therefore modify smaller and smaller
 subsets of adjustments orders at a time.
+
 <h4>Possible Improvements</h4>
 <strong>1. Combined Search</strong><P>
 These two phases of search could be combined as follows.
@@ -323,6 +348,7 @@ search has been specified.
 <li> Return first element of each old list with their
 values, and halt. 
 </ol>
+
 This algorithm combines the two searchs above into a single search.
 Each country is guaranteed to consider all of its options. 
 Moreover, no one country is especially privileged in its ability 
@@ -340,11 +366,13 @@ If all countries exhaust their lists, then each countries adjustment
 is optimal with respect to the adjustments being considered by the six
 other countries. We have thus found the "Nash equilibrium" we are
 looking for.
+
 <P><strong>2. Mixed Equilibria</strong><P>
 Occasionally, Nash equilibria involving pure strategies might fail to
 exist. It might be possible to detect an "infinite loop" in the above
 search using a hash table, and then use linear programming to find a mixed Nash
 equilibrium. 
+
 <P><strong>3. Disband and Build</strong><P>
 The 
 builds should be redesigned to interface with the retreats in a
@@ -360,6 +388,7 @@ factored in, and the results compared.
 In anticipating the number of builds, we will assume that any unit
 which can do so will capture an enemy or neutral supply center with
 its retreat. 
+
 <h2>For more...</h2>
 In conclusion, the problem of analyzing build combinations is slightly
 more difficult than the problem of analyzing retreat combinations, but
@@ -373,7 +402,7 @@ builds, and especially on testing the work done so far.
 <P>
 For more information, feel free to contact the author at the address
 below,
-read <a href="/Zine/list.html#DPP">previous articles</a> in this series, or
+read <a href="../../list.html#DPP">previous articles</a> in this series, or
 consult the <a href="http://www.labri.u-bordeaux.fr/~loeb/dpp">DPP Home
 Page</a>. 
 <p>
@@ -388,12 +417,10 @@ small games projects.
 <P>
 <I>If you wish to e-mail feedback on this article to the author,
 and clicking on the mail address above does not work for you,
-feel free to use the <A HREF="/Zine/W1995A/Common/DearDP.html"><I>&quot;Dear DP...&quot;</I></A>
+feel free to use the <A HREF="../Common/DearDP.html"><I>&quot;Dear DP...&quot;</I></A>
 mail interface.</I>
 <HR>
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/W1995A/"><IMG align=right SRC="/Zine/Common/toW1995A.gif" border=0></A>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toW1995A.gif" border=0></A>
 <BR clear=all>
 </body> </html>
-<!--
--->

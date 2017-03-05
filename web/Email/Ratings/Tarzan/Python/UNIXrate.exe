@@ -1,0 +1,5 @@
+#!/home/dippouch/bin/python
+
+import UNIXratings
+
+UNIXratings.check()

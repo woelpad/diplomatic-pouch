@@ -1,0 +1,423 @@
+<title>DP Online: The Diplomacy Openings Library</title>
+
+<BODY BGCOLOR="#ffffff">
+<script language=javascript>
+<!--
+	power = 'Turkey'
+	var varName = new Array()
+	var varDesc = new Array()
+	var u0 = new Array()
+	var u1 = new Array()
+	var u2 = new Array()
+	if (power == 'Russia') var u3 = new Array()
+	
+varName[0] = "tur-slingshot"
+u0[0] = 2
+u1[0] = 0
+u2[0] = 3
+varName[1] = "tur-crimean"
+u0[1] = 2
+u1[1] = 0
+u2[1] = 0
+varName[2] = "tur-bosph"
+u0[2] = 2
+u1[2] = 2
+u2[2] = 2
+varName[3] = "tur-aaaa"
+u0[3] = 1
+u1[3] = 0
+u2[3] = 0
+varName[4] = "tur-hedgehog"
+u0[4] = 2
+u1[4] = 2
+u2[4] = 0
+varName[5] = "tur-exch"
+u0[5] = 2
+u1[5] = 2
+u2[5] = 0
+varName[6] = "tur-bosph"
+u0[6] = 2
+u1[6] = 2
+u2[6] = 3
+varName[7] = "tur-rat"
+u0[7] = 2
+u1[7] = 0
+u2[7] = 4
+varName[8] = "tur-boston"
+u0[8] = 2
+u1[8] = 1
+u2[8] = 1
+varName[9] = "tur-pastiche"
+u0[9] = 2
+u1[9] = 0
+u2[9] = 2
+varName[10] = "tur-syria"
+u0[10] = 2
+u1[10] = 0
+u2[10] = 2
+varName[11] = "tur-shipodes"
+u0[11] = 2
+u1[11] = 3
+u2[11] = 1
+varName[12] = "tur-balkan"
+u0[12] = 2
+u1[12] = 0
+u2[12] = 1
+varName[13] = "tur-rusfrol"
+u0[13] = 0
+u1[13] = 0
+u2[13] = 0
+varDesc['comment'] = "--ABOUT THE TURKISH OPENINGS--</b><dd>"
+varDesc['comment'] += 'In general, there is no substitute for A Con-Bul. The orders for the other '
+varDesc['comment'] += 'two units may vary, but Con-Bul is nearly a given.  Because of this, and '
+varDesc['comment'] += 'the fact that F Ank-BLA '
+varDesc['comment'] += 'is so often equivalent to F Ank H, Turkey has the fewest named openings, '
+varDesc['comment'] += 'and consequently no need for a formal system of categorization has arisen. '
+varDesc['comment'] += 'As a result, the few openings for Turkey are individually (and often '
+varDesc['comment'] += 'colorfully) named. '
+varDesc['comment'] += ' '
+varDesc['tur-rat'] = "DESERT RAT OPENING</b><dd>"
+varDesc['tur-rat'] += "Richard Sharp's name for any opening using A Smy-Syr. "
+varDesc['tur-rat'] += ' '
+varDesc['tur-aaaa'] = "ASTONISHINGLY ARROGANT ANKARAN ASSAULT</b><dd>"
+varDesc['tur-aaaa'] += "Bruce Linsey's name for the fully commital opening sending all the Turkish "
+varDesc['tur-aaaa'] += 'units against Russia. '
+varDesc['tur-aaaa'] += ' '
+varDesc['tur-pastiche'] = "PASTICHE OPENING</b><dd>"
+varDesc['tur-pastiche'] += 'This gives Turkey more flexibility '
+varDesc['tur-pastiche'] += 'than most openings, as he can claim that A Smy H means that he '
+varDesc['tur-pastiche'] += 'is neither anti-Russian nor anti-Austrian. However, if he succeeds in '
+varDesc['tur-pastiche'] += 'getting into the Black Sea, the Turk still has significant options against '
+varDesc['tur-pastiche'] += 'either country '
+varDesc['tur-pastiche'] += 'in Fall. If a standoff occurs in the Black Sea, telling Russia that  '
+varDesc['tur-pastiche'] += 'Bul-Rum is coming may cause him to commit his Sevastopol fleet to Rumania, '
+varDesc['tur-pastiche'] += 'permitting '
+varDesc['tur-pastiche'] += 'Turkey to enter the Black Sea. Even if this fails, Constantinople will be '
+varDesc['tur-pastiche'] += 'open for a build in Winter, giving the Turk two fleets on his north coast. '
+varDesc['tur-pastiche'] += ' '
+varDesc['tur-hedgehog'] = "TURKISH HEDGEHOG</b><dd>"
+varDesc['tur-hedgehog'] += "Also called Sharp's Opening or Soak's Bane, the Turkish Hedgehog is Nicholas "
+varDesc['tur-hedgehog'] += "Whyte's name for the Bosphorous opening with Smyrna opening to Armenia "
+varDesc['tur-hedgehog'] += 'instead of to Ankara.  His thoughts on the opening are contained in '
+varDesc['tur-hedgehog'] += '<a target=_parent href=http://www.diplomacy-archive.com/resources/strategy/articles/turkish_hedghog.htm>his article '
+varDesc['tur-hedgehog'] += 'on the subject</a>.  Charles Steinhardt describes a Russian Attack continuation in <a target=_parent href=http://devel.diplom.org/Zine/S2000M/Steinhardt/Hedgehog.html>his article. '
+varDesc['tur-hedgehog'] += ' '
+varDesc['tur-crimean'] = "CRIMEAN CRUSHER </b><dd>"
+varDesc['tur-crimean'] += 'Turkey opening to Bul, BLA, and Arm is an aggressive opening '
+varDesc['tur-crimean'] += 'that allows all three pieces to be used against Russia in the '
+varDesc['tur-crimean'] += 'fall. Even if the fleet move succeeds, though, if Russia is in '
+varDesc['tur-crimean'] += 'Rum, Ukr and Sev, Turkey must still second guess Russia for a '
+varDesc['tur-crimean'] += 'second center if Austrian help is unavailable, and may lose BLA '
+varDesc['tur-crimean'] += 'in the process. '
+varDesc['tur-crimean'] += '<P> '
+varDesc['tur-crimean'] += 'This opening poses all sorts of problems for Russia. If she has '
+varDesc['tur-crimean'] += 'trustingly ordered F Sev-Rum she is in real trouble. Even if '
+varDesc['tur-crimean'] += 'she ordered, F Sev-BLA, she is going to have difficulty maintaining '
+varDesc['tur-crimean'] += 'her position. '
+varDesc['tur-crimean'] += ' '
+varDesc['tur-boston'] = "BOSTON STRANGLER</b><dd>"
+varDesc['tur-boston'] += "Richard Sharp's name for the opening: A Con-Bul, A Smy-Con, F "
+varDesc['tur-boston'] += 'Ank H (or misordered).  This deliberately allows Russian access '
+varDesc['tur-boston'] += 'to the Black Sea, yet provides Turkey with a measure of defense '
+varDesc['tur-boston'] += 'along his north coast.  The idea is to use the Russian fleet to '
+varDesc['tur-boston'] += 'support Balkan actions, fake an unsuccessful Turkish war, and '
+varDesc['tur-boston'] += 'eventually make its way to the Mediterranean using an arranged '
+varDesc['tur-boston'] += '(often Springtime) passage through Constantinople. '
+varDesc['tur-boston'] += ' '
+varDesc['tur-exch'] = "[BLACK SEA EXCHANGE]</b><dd>"
+varDesc['tur-exch'] += "Aron Ambrosiani's name for the Falltime continuation of the Turkish Hedgehog "
+varDesc['tur-exch'] += 'which allows an R/T alliance to get both fleets into the Mediterarnean. '
+varDesc['tur-exch'] += '<P> '
+varDesc['tur-exch'] += 'In Spring 1901, Russia opens F Sev-Bla, while '
+varDesc['tur-exch'] += 'Turkey opens the hedgehog. In fall 1901, Bla moves to Con, Arm to Sev '
+varDesc['tur-exch'] += 'and Con to Aegean Sea, and the Turkish A Bul can help a Russian '
+varDesc['tur-exch'] += 'army into Rumania. '
+varDesc['tur-exch'] += '<P> '
+varDesc['tur-exch'] += 'The really hard thing with this variant is to the amount of trust it requires. '
+varDesc['tur-exch'] += 'The Fall '
+varDesc['tur-exch'] += "moves are vital, since both countries move unsupported into each other's "
+varDesc['tur-exch'] += 'centers. '
+varDesc['tur-exch'] += ' '
+varDesc['tur-balkan'] = "BALKAN CONCENTRATION</b><dd>"
+varDesc['tur-balkan'] += 'Named by Manus Hand, this opening sends all the Turkish units '
+varDesc['tur-balkan'] += 'toward the center-rich Balkans.  Especially if the fleet move '
+varDesc['tur-balkan'] += 'succeeds, Turkey has a nice position for fall, able to exert pressure '
+varDesc['tur-balkan'] += 'on Serbia, Greece, and Rumania while defending his Bulgaria acquisition. '
+varDesc['tur-balkan'] += '<P> '
+varDesc['tur-balkan'] += 'Turkey can employ this opening when she is unsure of Russia but '
+varDesc['tur-balkan'] += 'does not want to move to Armenia. It may be that she has at least '
+varDesc['tur-balkan'] += 'a neutrality pact with Russia which includes a pre-arranged stand-off '
+varDesc['tur-balkan'] += 'in the Black Sea. Among other things, this can be used to deceive '
+varDesc['tur-balkan'] += 'players in believing Russia and Turkey are at war, even though '
+varDesc['tur-balkan'] += 'they are allied. '
+varDesc['tur-balkan'] += ' '
+varDesc['tur-rusfrol'] = "[RUSSIAN FROLIC]</b><dd>"
+varDesc['tur-rusfrol'] += "Allen Wells' name for the Austro-Turkish opening based on A Vie-Gal, A Bud-Rum, "
+varDesc['tur-rusfrol'] += 'A Con H, A Smy-Arm, F Ank-Bla. The key here is A Con H which, '
+varDesc['tur-rusfrol'] += "by eliminating Turkey's 1901 risk to Serbia, permits Austria "
+varDesc['tur-rusfrol'] += 'to move safely to Rumania. Discussed in issue 29 of <i>Diplomacy World</i>. '
+varDesc['tur-rusfrol'] += ' '
+varDesc['tur-syria'] = "[SYRIAN OPENING]</b><dd>"
+varDesc['tur-syria'] += "This extremely rare Fall 1901 continuation of a Pastiche Opening has Turkey's "
+varDesc['tur-syria'] += 'fleet (typically '
+varDesc['tur-syria'] += 'stood off from the Black Sea in Spring) move to Constantinople, and the Smyrna '
+varDesc['tur-syria'] += 'army moves to Syria. This permits Turkey to build on either coast, '
+varDesc['tur-syria'] += 'support himself either to AEG or BLA, send fleets to both '
+varDesc['tur-syria'] += 'AEG and EAS, or go in both directions. Notice how if Turkey does '
+varDesc['tur-syria'] += 'not choose a victim in 1901, his second army actually gets in '
+varDesc['tur-syria'] += 'the way, and must be ditched for full Winter 1901 freedom. '
+varDesc['tur-syria'] += ' '
+varDesc['tur-slingshot'] = "[SLINGSHOT JUGGERNAUT]</b><dd>"
+varDesc['tur-slingshot'] += "Manus Hand's Russo-Turkish opening, sending the Turkish fleet to the Black "
+varDesc['tur-slingshot'] += "Sea while Russia's fleet enters Armenia, with each power telling Austria the "
+varDesc['tur-slingshot'] += 'intent is to attack the other, and with both lobbying hard for Austrian '
+varDesc['tur-slingshot'] += 'support.  As the opening charade unfolds, the Turkish Black Sea fleet and '
+varDesc['tur-slingshot'] += "Ankara army dislodge Russia's fleet from Armenia, and with Sevastopol "
+varDesc['tur-slingshot'] += 'unavailable for a retreat, the fleet is forced to disband. '
+varDesc['tur-slingshot'] += 'Austria cannot blame Russia for trying the promised Turkish attack and '
+varDesc['tur-slingshot'] += 'being unable to retreat his fleet, and Russia commiserates with the "at '
+varDesc['tur-slingshot'] += 'least I have tied up all his units in the east" line, while both Russia '
+varDesc['tur-slingshot'] += 'and Turkey continue to plead for Austrian assistance in the coming '
+varDesc['tur-slingshot'] += 'conflict.  In 1902, however, the Turk convoys from Armenia through the '
+varDesc['tur-slingshot'] += "Black Sea to Bulgaria while Russia's now land-based forces hit the Austrian "
+varDesc['tur-slingshot'] += 'by surprise, typically supporting a Turkish attack on Serbia. '
+varDesc['tur-slingshot'] += ' '
+varDesc['tur-shipodes'] = "SHIP OF THE DESERT</b><dd>"
+varDesc['tur-shipodes'] += "Richard Sharp's name for the opening that "
+varDesc['tur-shipodes'] += 'allows Russia into the Black Sea, but provides an effective Fall '
+varDesc['tur-shipodes'] += 'defense against the Russian fleet (through use of a self-standoff in '
+varDesc['tur-shipodes'] += 'Ankara).  The advantage is that the fleet adjacent to Sevastopol causes '
+varDesc['tur-shipodes'] += 'fits for the Russian and pins at least one unit down while Austria or '
+varDesc['tur-shipodes'] += 'other powers begin an attack on Russia.  More importantly, with the build '
+varDesc['tur-shipodes'] += 'gained from Bulgaria, Turkey is usually able to put two fleets against the '
+varDesc['tur-shipodes'] += "Black Sea, and can usually force Russia's departure in 1902. "
+varDesc['tur-shipodes'] += ' '
+varDesc['tur-bosph'] = "BOSPHORUS OPENING</b><dd>"
+varDesc['tur-bosph'] += "Richard Sharp's name for the opening A Con-Bul and F Ank-Con. "
+varDesc['tur-bosph'] += 'There are two named variations: A Smy-Arm '
+varDesc['tur-bosph'] += '(the Armenia Variation, better known as '
+varDesc['tur-bosph'] += '<a target=_parent href=http://www.spoff.demon.co.uk/articles/turkhog.htm>The Turkish '
+varDesc['tur-bosph'] += 'Hedgehog</a>, and also '
+varDesc['tur-bosph'] += "called Sharp's Opening and Soak's Bane) and A Smy H "
+varDesc['tur-bosph'] += '(the Smyrna Variation). '
+varDesc['tur-bosph'] += '<P> '
+varDesc['tur-bosph'] += 'The intent here is, in the Fall, F Con-AEG, A Smy-Con (or HOLD) '
+varDesc['tur-bosph'] += 'for a western push. If Russia treacherously ordered F Sev-BLA, '
+varDesc['tur-bosph'] += 'Turkey can still defend. F Con-Ank, A Smy-Ank will hold all her '
+varDesc['tur-bosph'] += 'home supply centers and leave Ankara open for the build of a '
+varDesc['tur-bosph'] += 'fleet. '
+varDesc['tur-bosph'] += ' '
+
+// -->
+</script>
+	
+
+<BODY BGCOLOR="#ffffff">
+<p align=center>
+<A TARGET=_parent HREF="/DipPouch">
+<IMG SRC="/DipPouch/Common/DPLogo.gif"
+	ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A TARGET=_parent HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="/DipPouch/Common/DPLinks.gif"
+	ALT="Shortcuts" HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
+<BR clear=both>
+<img src="/DipPouch/Common/reddot.gif" height=2 width=100%%>
+<br clear=all>
+<center><H2>The Library of Diplomacy Openings</H2>
+<script language=JavaScript>
+<!--
+function newPower()
+{
+	window.parent.body.document.write('<H3 align=center><font color=red>')
+	window.parent.body.document.write('<blink>...Loading Data For ')
+	window.parent.body.document.write(document.forms[0].power.options[document.forms[0].power.selectedIndex].value)
+	window.parent.body.document.write('...Please Wait...</blink></font>')
+	window.parent.body.document.close()
+	window.location.replace(document.forms[0].power.options[document.forms[0].power.selectedIndex].value + '.html')
+	// document.forms[0].submit()
+}
+// -->
+</script>
+<table>
+<tr><th valign=right>
+	<form name=powerForm method=post action=openings>
+	Openings for&nbsp;<select name=power onChange=newPower()>
+
+<option value=Austria
+>Austria
+<option value=England
+>England
+<option value=France
+>France
+<option value=Germany
+>Germany
+<option value=Italy
+>Italy
+<option value=Russia
+>Russia
+<option value=Turkey
+ selected
+>Turkey
+
+	</select></form>
+	<script language=javascript>
+	<!--
+	function showDesc(key)
+	{
+		window.parent.body.document.write('<dl><dt><b>')
+		window.parent.body.document.write(varDesc[key] + '<p></dl>')
+	}
+	function updateOrder()
+	{
+		openg = document.forms[1].opening
+		key = openg.options[openg.selectedIndex].value
+		if (key == '') return
+		if (key != 'comment')
+		{
+			for (i in varName)
+			{
+				if (varName[i] == key)
+				{
+					document.forms[2].unit0.selectedIndex = u0[i] + 1
+					document.forms[2].unit1.selectedIndex = u1[i] + 1
+					document.forms[2].unit2.selectedIndex = u2[i] + 1
+					if (power == 'Russia')
+						document.forms[2].unit3.selectedIndex = u3[i] + 1
+					break
+				}
+			}
+		}
+		showDesc(key)
+		window.parent.body.document.close()
+	}
+	// -->
+	</script>
+	<th valign=left>
+	<form name=nameForm method=post action=openings target=body>
+	<select name=opening onchange=updateOrder()>
+	<option>--Choose or order an opening--
+
+<option value=comment
+ selected
+>--ABOUT THE TURKISH OPENINGS--
+<option value=tur-aaaa
+>ASTONISHINGLY ARROGANT ANKARAN ASSAULT
+<option value=tur-balkan
+>BALKAN CONCENTRATION
+<option value=tur-bosph
+>BOSPHORUS OPENING
+<option value=tur-boston
+>BOSTON STRANGLER
+<option value=tur-crimean
+>CRIMEAN CRUSHER 
+<option value=tur-rat
+>DESERT RAT OPENING
+<option value=tur-pastiche
+>PASTICHE OPENING
+<option value=tur-shipodes
+>SHIP OF THE DESERT
+<option value=tur-hedgehog
+>TURKISH HEDGEHOG
+<option value=tur-exch
+>[BLACK SEA EXCHANGE]
+<option value=tur-rusfrol
+>[RUSSIAN FROLIC]
+<option value=tur-slingshot
+>[SLINGSHOT JUGGERNAUT]
+<option value=tur-syria
+>[SYRIAN OPENING]
+</select><input type=hidden name=power value=Turkey></form>
+
+</table><table><tr><td>
+<script language=javascript>
+<!--
+function setChoice()
+{
+	leform = document.forms[2]
+	un0 = leform.unit0.options[leform.unit0.options.selectedIndex].value
+	un1 = leform.unit1.options[leform.unit1.options.selectedIndex].value
+	un2 = leform.unit2.options[leform.unit2.options.selectedIndex].value
+	if (power == 'Russia')
+		un3 = leform.unit3.options[leform.unit3.options.selectedIndex].value
+	shown = 0
+	for (i in varName)
+	{
+		if (u0[i] == un0 && u1[i] == un1 && u2[i] == un2
+		&& (power != 'Russia' || u3[i] == un3))
+		{
+			if (shown == 0)
+			{
+				shown = 1
+				for (j = 0; j < document.forms[1].opening.options.length; ++j)
+					if (document.forms[1].opening.options[j].value == varName[i])
+					{
+						document.forms[1].opening.selectedIndex = j
+						break
+					}
+			}
+			showDesc(varName[i])
+		}
+	}
+	if (shown == 0)
+	{
+		window.parent.body.document.write('<h3 align=center><font color=red>')
+		if (un0 == -1 || un1 == -1 || un2 == -1
+		|| (power == 'Russia' && un3 == -1))
+		{
+			window.parent.body.document.write('...Fill in Orders for All ' +
+				'Units to Look Up An Opening....')
+		}
+		else
+		{
+			window.parent.body.document.write('This Opening Is Unnamed ' +
+				'and No Information Exists For It!')
+		}
+		window.parent.body.document.write('</h3>')
+		document.forms[1].opening.selectedIndex = 0;
+	}
+	window.parent.body.document.close()
+}
+// -->
+</script>
+<form name=openForm method=post action=openings target=body>
+
+
+		<th valign=top>A Con <select name=unit0 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>HOLD
+<option value=1>-Ank
+<option value=2>-Bul
+</select>
+
+		<th valign=top>F Ank <select name=unit1 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-BLA
+<option value=1>HOLD
+<option value=2>-Con
+<option value=3>-Arm
+</select>
+
+		<th valign=top>A Smy <select name=unit2 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-Arm
+<option value=1>-Con
+<option value=2>HOLD
+<option value=3>-Ank
+<option value=4>-Syr
+</select>
+
+</table>
+<input type=hidden name=power value=Turkey>
+<input type=hidden name=opening value="byOrder">
+<HR>
+</form>
+<script language=JavaScript>
+<!--
+	showDesc('comment')
+	window.parent.body.document.close()
+// -->
+</script>
+

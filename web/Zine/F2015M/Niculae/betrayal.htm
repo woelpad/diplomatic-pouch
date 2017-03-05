@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>DP F2015M: Linguistic Harbingers of Betrayal</TITLE>
+
+<!-- ---------------------Header---------------------------------- -->
+<!-- ------------------------------------------------------------- -->
+
+<!---- Authored by  ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Created on September 23, 2006 ---->
+
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toF2015M.gif" align="right" border="0"></a>
+<br clear="all">
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
+
+
+<CENTER>
+<H1 id="linguistic-harbingers-of-betrayal">LINGUISTIC HARBINGERS OF BETRAYAL</H1>
+<h2>by Vlad Niculae</h2>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+</CENTER>
+<p>
+  <TABLE WIDTH="95%" BORDER="0" ALIGN="CENTER">
+      <TR>
+	      <TD ALIGN="JUSTIFY">
+
+<p>You just got a cable from Austria. Typically he's long-winded, somewhat obnoxious and stubborn&#8230; a high maintenance ally. Now, however, he's obliging, brief, and even pleasant. You wonder if something is up and whether you should protect your flank. His language, although friendly on the surface, might signify a future betrayal.</p>
+
+<p>Changes in conversation patterns are a topic of interest to academic researchers. We (Vlad Niculae and Jordan Boyd-Graber) and our colleagues (Srijan Kumar and Cristian Danescu-Niculescu-Mizil) took a shot at predicting betrayal from language signals in <b>Diplomacy</b>.</p>
+
+<h2 id="the-subtle-power-of-language">The Subtle Power of Language</h2>
+
+<p>Human language is an incredibly powerful communication device. and people can accomplish much by wielding it well. In <b>Diplomacy</b>, making the right argument could constitute the difference between victory and defeat. But language is leaky! The way we speak can unknowingly reveal a great deal of underlying context and social information about the speaker.</p>
+
+<p>Enabled by the availability of larger and larger online discussion forums to study, scientists at the intersection of statistical analysis, natural language processing and social sciences have uncovered surprising ways in which language can reveal things that the speaker might not intend, or even attempt to hide.</p>
+
+<p>Among many others, language has been found to reveal:</p>
+
+<ul>
+<li><em><a href="https://en.wikipedia.org/wiki/Stylometry">Whether an author is who she claims to be.</a></em> Even when trying to copy another's writing style, there are lower level patterns that the impersonator cannot easily hide nor mimic. These are often frequencies of pronouns and other <em>empty</em> words.</li>
+
+<li><em><a href="http://www.wwbp.org/personality-wc.html">What personality traits a speaker displays.</a></em> Studies have shown, for example, that <em>can't wait</em> is a more typically extraverted phrase, and <em>don't want to</em> is a sign of introversion in Facebook posts.</li>
+
+<li><em><a href="http://reviewskeptic.com/">Whether expressed opinions are deceptive.</a></em> For example, fake positive hotel reviews are overly positive and use more first person pronouns.</li>
+
+<li><em><a href="http://www.cs.cornell.edu/~cristian/Echoes_of_power.html">Which way the balance of power leans in a conversation.</a></em> People unintentionally copy phrase patterns when talking to someone they look up to.</li>
+
+</ul>
+
+<p>Motivated by such precedents, we set out to study the linguistic dynamics of lasting friendships.</p>
+
+<h2 id="sudden-but-inevitable-betrayal">Sudden but Inevitable Betrayal</h2>
+
+<p>Even the closest of friendships sometimes break down when one betrays for personal gain. Betrayal is a key dynamic in <b>Diplomacy</b>, where good alliances can end with an act of backstabbing. For this reason, the game provides an excellent platform for capturing &quot;organic&quot; betrayal. (Asking people to fake it in a lab wouldn't quite cut it.)</p>
+
+<p>Therefore, we devised a way to find backstabbing in a collection of online <b>Diplomacy</b> games. From the moves that were ordered, it's easy to tell when players support each other directly. However, attacks can take many forms. We used the following rules to determine aggressive moves with high certainty. We consider that A attacks B if:</p>
+
+<ul>
+<li>B is holding a territory that A moves into;</li>
+<li>B moves into one of A's home supply centers;</li>
+<li>B cuts A's support;</li>
+<li>B and A are adjacent and move onto one another's locations (in this case, A also attacks B);</li>
+<li>C does any of the above with B's support.</li>
+</ul>
+
+<p>Of course, in <b>Diplomacy</b> there are more subtle ways to be aggressive towards someone, such as not following up on a promise you made or not respecting a DMZ. These cannot be easily detected automatically, though, so we might be missing some attacks. For this reason, we identify <strong>strong alliances</strong>: sequences of games during which two players support each other repeatedly, frequently and reciprocally. In between such consistent supports, it's unlikely that there would be non-explicit attacks that we miss.</p>
+
+<p><strong>Betrayals</strong> happen when, after such a fruitful friendship, one of the players attacks the other. We require that at least two detectable attacks take place before declaring the couple to be at war. This way, it's unlikely that the attack was performed <em>for show</em>, to deceive another player.</p>
+<p>These two sets of rules work well together to guarantee that we're looking at actual betrayals. The messages exchanged between players confirm this upon manual inspection: the victims often react to betrayal with dismay (<em>Well, that move was sour&#8230;</em>) and fake confidence (<em>Of course I saw that coming a mile away!</em>). However, we want to look at what happens <em>before</em> betrayal takes place: any signals there would allow us to anticipate betrayal while it's in the betrayer's best interest to hide it. Since we can be certain about supports, but we might not know all aggressive moves, we only look at the seasons up to the final support in the sequence. We performed statistical analysis on the conversation from 250 examples of unambiguous betrayals, and 250 similar cases of solid friendships that are not followed by attacks until the end of the game.</p>
+
+<h2 id="balance">Balance</h2>
+
+<p>There are conversation attributes that could reveal affective or functional relationship dynamics, and we hoped these attributes would help shine light on the nature of betrayal. With this in mind, the key things we counted are:</p>
+
+<ul>
+<li><em>The proportion of <strong>positive sentiment</strong> sentences in each message</em>. The positivity of messages can show how a player is feeling (or wants to appear to be feeling).</li>
+
+<li><em>The average <strong>politeness</strong> level of the requests a player makes in a message.</em> People think differently of others depending on how polite they are when asking for things.</li>
+
+<li><em>The average number of <strong>planning</strong> words.</em> These are words like <em>next</em> or <em>later</em>, and can reveal how the players think about the future of the relationship.</li>
+</ul>
+
+<p>We found that balance is important. Betrayal happens in imbalanced relationships, while, in the alliances that survive, both players communicate with similar levels of positivity, politeness and planning. The imbalance that precedes betrayal is not apparent far in advance, only a few seasons before the treacherous act is committed.</p>
+
+<p>The figure below shows the change in the three attributes as betrayal approaches. In all three cases, when betrayal is far in the future, the relationships appear balanced. (Potentially, the plan to betray hasn't been formed yet in most cases.) Imbalance becomes visible in terms of positivity (top) and planning (bottom): the betrayer becomes very positive before the very end of the friendship, while the victim gradually plans more and more a couple of seasons before. In terms of politeness (middle), the victims are more likely to make less polite requests several seasons before the end. Before the final support, however, they are more polite, and it's the betrayers that become rude.</p>
+
+<div class="figure">
+<img src="betrayal.png" alt="Figure 1. Imbalance in alliances that break. The horizontal axis shows the number of seasons before the very final support order in the alliance. The vertical axes show the amount in which each feature is manifested." />
+
+<p class="caption">Figure 1. Imbalance in alliances that break. The horizontal axis shows the number of seasons before the very final support order in the alliance. The vertical axes show the amount in which each feature is manifested.</p>
+</div>
+
+<h2 id="thoughts">Thoughts</h2>
+
+<p>We designed our study in an attempt to find as much as possible about the language of betrayal. For this reason, we intentionally avoided modeling many things that would likely make better predictors. For instance, we didn't cover the cases where the people exchange very few messages or none at all. We didn't make use of the position of the players' units, nor did we analyze what actual orders are discussed. This gives our results the potential of holding in other scenarios of betrayal outside of <b>Diplomacy</b>, although that would have to be tested.</p>
+
+<p>Even so, with such rigorous constraints, the linguistic signal managed to <strong>predict betrayal</strong> at a better-than-chance level. An interesting challenge could be to combine this with game-specific signals in a <b>Diplomacy</b>-playing AI. From a more theoretical point of view, we will attempt to widen the impact of these observations and find similar dynamics in other types of long-term relationships. An ambitious parting question: would it be possible to pinpoint the very moment when somebody plans a future betrayal?</p>
+
+<p><em>Our complete study and other information is available at <a href="https://vene.ro/betrayal">https://vene.ro/betrayal</a>.</em></p>
+
+
+<BR/><BR/><TABLE>
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD><A href="mailto:vn66@cornell.edu"><IMG 
+      src="../../Common/letter.gif" border=0></A> </TD>
+    <TD><STRONG>Vlad Niculae<BR/>(<a href="mailto:vn66@cornell.edu">vn66@cornell.edu</a>)</STRONG> 
+  </TD></TR></TBODY></TABLE>
+<P>
+<I>If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the <A 
+href="../Common/DearDP.html">"<B>Dear 
+DP...</B>"</A> mail interface.</I> 
+</table><P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
+<a href="../"><img src="../../Common/toF2015M.gif" align="right" border="0"></a>
+
+
+</BODY></HTML>
+

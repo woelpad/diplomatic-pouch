@@ -1,0 +1,226 @@
+<html><head>
+<title>DP W2000A: The Art of Peace</title></head>
+<BODY BGCOLOR="#ffffff">
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toW2000A.gif" border=0></A>
+<BR clear=all><HR>
+</head>
+
+
+
+<body>
+
+<H1 align=center>The Alpine Not-So-Chicken</H1>
+<H2 align=center>Italian Attacks on France</H2>
+<H3 align=center><i>Steve Glinert</i></H3>
+<HR>
+
+
+
+
+
+
+
+<HTML><FONT  BACK="#ffffff" SIZE=3 PTSIZE=10>Subj:	<B> Re: To Stephen Glinert</FONT><FONT  SIZE=3 PTSIZE=10></B><BR>
+Date:	12/28/00 7:43:59 AM Pacific Standard Time<BR>
+From:	glinerts@home.com (Glinert Family)<BR>
+To:	MChirchill@cs.com<BR>
+</FONT><FONT  SIZE=3 PTSIZE=10><BR>
+</FONT><FONT  SIZE=3 PTSIZE=10>Ok. I've copied it into the body here.<BR>
+<BR>
+The Alpine Not-So-Chicken: Italian Attacks on France<BR>
+<BR>
+ So, you're all ready for another diplomacy game. You stick your hand into<BR>
+the box and draw.Italy. You mumble something about never winning, then go<BR>
+over your options for 01:<BR>
+<BR>
+1. Go and attack Austria, then watch Turkey and Russia eat you up.<BR>
+2. Lepanto for the 50th time, then moan as your attack fizzles and France<BR>
+sends 3 fleets into the Mediterranean.<BR>
+3. Sit around and wait, hoping for an opportunity that often never comes.<BR>
+<BR>
+Tired of these options? Then perhaps you should try the Western Lepanto, or<BR>
+the "Alpine-not-so-chicken".<BR>
+<BR>
+Italian attacks on France in the early game are often criticized as being<BR>
+easy to defend, too obvious, and not offering any gains. Yet this is not the<BR>
+case - perhaps a good France will see your attack coming, but it can be<BR>
+disguised, and it can hardly be considered easy to defend. In fact, right in<BR>
+fall 01, the typical Italian will have a 50% chance of delivering a knockout<BR>
+punch to France. Now, let's look at some of the basic ideas and difficulties<BR>
+of this system.<BR>
+<BR>
+A) The attack is obvious. Yes, you can never do an instant stab. You must<BR>
+move into Piedmont before you can attack France. But in fact, any other<BR>
+Italian attack, save an often-suicidal first turn stab of Austria, will be<BR>
+telegraphed. And as long as France is putting himself in an awkward position<BR>
+the turn you move into Piedmont, the move is still highly effective.<BR>
+B) This attack is easy to defend - I can't understand why this attack is so<BR>
+easy to defend. Italy throws 3 units at France (1 army, 2 fleets). France<BR>
+must counter with 2 fleets of his own, plus an army. Typically, that's at<BR>
+least half of his forces, leaving him a juicy target for Germany and<BR>
+England, who will most likely jump on the opportunity. If France doesn't get<BR>
+his F Brest down south fast, he's a goner.<BR>
+C) Not offering any gains - Huh? A successful attack guarantees Marseilles,<BR>
+Spain, and Portugal - you have a grip on these 3 (Portugal is iffy). You<BR>
+will also have targets to turn towards after killing France, in England,<BR>
+Germany, and Austria.<BR>
+<BR>
+The Diplomacy Behind attacking France<BR>
+<BR>
+The key to this tactic that is practically a must is a Central Alliance of<BR>
+Germany, AH, and Italy. Germany and AH should be allied from the start, and<BR>
+most Austro-Hungarians won't mind you going west. Germany should be happy to<BR>
+share in the booty of a dead France. As long as he pushes armies west, he's<BR>
+doing his job. In fact, if he arranges a Sealion attack on England with<BR>
+France, that works as well - F Brest heads north, so he will be at a 2-1<BR>
+disadvantage in the south. If England is going to the channel, then France's<BR>
+fate is completely sealed - and so are those Iberian SC's.<BR>
+<BR>
+One problem with this approach is that a smart France will see Italy and<BR>
+Germany talking a lot and be tipped off. The solution? Talk through AH.<BR>
+Italy and AH talking signals Lepanto, which France likes, and Germany/AH is<BR>
+typical.<BR>
+<BR>
+The Moves:<BR>
+<BR>
+Spring 01<BR>
+<BR>
+Ven-Pie<BR>
+Rom-Ven<BR>
+Nap-IoS<BR>
+<BR>
+This is the "nicer" version of this opening. You can still pull back from<BR>
+attacking France by swinging Pie-Tyr (the Alpine Chicken). Ideally, however,<BR>
+Italy has one major goal in 01: Keep Marseilles occupied. If France can get<BR>
+fleets in Spain and Marseilles, the Italian attack is gone. If he cannot<BR>
+build a F Mar, then Italy's 2-1 fleet advantage will tell. There is also a<BR>
+nastier version, that is also far more risky:<BR>
+<BR>
+Ven-Pie<BR>
+Rom-Tus<BR>
+Nap-TyS<BR>
+<BR>
+This is essentially saying to France, "My goal in this game is your death".<BR>
+In the fall, Tus gets convoyed to Tunis, or can follow-up into Piedmont if<BR>
+Marseilles is attacked. I would prefer the previous set of orders, however,<BR>
+since they reserve the option of switching plans. There is also the major<BR>
+drawback that if AH plays the popular Hedgehog and heads to Venice, you've<BR>
+just lost a home SC, if only temporarily.<BR>
+<BR>
+Fall 01<BR>
+Assuming France is in MAO, Burgundy, and Spain (this is the most common<BR>
+scenario, though English or German attacks on France could change this):<BR>
+<BR>
+This is the 50-50 scenario that will likely determine your success against<BR>
+France in a<BR>
+1-on-1 battle. France can either leave Marseilles open, move in with either<BR>
+Bur or Spa, or self-standoff. One order will defeat 3 of these options: Pie<BR>
+S Spa-Mar. There is a large risk entailed, since if France does leave<BR>
+Marseilles open and sticks his fleet on Spa (sc), you can pretty much give<BR>
+up on your attack, unless E/G join in the attack. Looking at it from the<BR>
+French side, however, if he leaves Marseilles open and you walk in, it's<BR>
+game over. So he will most likely cover himself, leaving me to recommend Pie<BR>
+S Spa-Mar, but perhaps only 70% of the time (keep the French on their toes).<BR>
+Take Tunis, obviously, and build F Naples. The 2nd build, if you get it, is<BR>
+generally F Rome.<BR>
+<BR>
+The Aftermath, and Long-Term Planning<BR>
+<BR>
+If you succeed in keeping Mar occupied, simply push your fleets in GOL and<BR>
+West Med, and watch Marseilles and Spain drop right into your hands. Getting<BR>
+support from Burgundy cut usually isn't too hard, just ask Germany. If there<BR>
+are French fleets in Portugal and Marseilles, Western Med is yours, but that<BR>
+isn't much - you need Gulf of Lyon. It will be a guessing game between MAO<BR>
+and GOL vs. TyS and WeMed, but eventually you can get in, and by then it's<BR>
+fairly certain one of E/G will have begun attacking France (hopefully<BR>
+Germany was doing this from the start).<BR>
+<BR>
+Assuming everything went well and France was crushed like a bug, what next?<BR>
+Well, you have 3 decent targets:<BR>
+<BR>
+England - if you control the MAO, and have at least 2 fleets to spare,<BR>
+England is a good target. NAO, the Irish Sea, and the Channel make good<BR>
+spots for fleets. You can convoy armies that have finished killing France up<BR>
+through MAO (Por-MAO-NAO-Liverpool works nicely).<BR>
+<BR>
+Germany - Essentially, the idea is that you're attacking Germany as if you'<BR>
+re France, but you can also come up right through Tyrolia, giving you a 2nd<BR>
+angle of attack. If you're fleets are tied up, or an attack against England<BR>
+would be too hard to pull off, swing those armies west and north (Burgundy<BR>
+supports Tyrolia - Munich is the objective).<BR>
+<BR>
+AH - Sure, he was your buddy, and attacking him used to be silly because of<BR>
+a killer R/T.but if the Eastern Triangle has sorted itself out in favour of<BR>
+AH, now is often the time to strike. If you can get a F Adriatic, F Ionian,<BR>
+and take Trieste, AH will often have trouble dealing with your naval<BR>
+superiority. This can be highlighted with an eventual convoy into Albania,<BR>
+which is usually the final nail in the coffin for AH.<BR>
+<BR>
+Personal Anecdotes and No-Press<BR>
+<BR>
+I have played quite a number of games as Italy, and have attacked France 3<BR>
+times. In all 3 of those games, my attacks have been successful, though 1<BR>
+was marred by an ill-thought out stab of AH. In the other two, I have 1<BR>
+18-SC win, and 1 two-way draw. The win involved stabbing a bloated AH after<BR>
+dealing with France, while the draw was with AH, after I attacked England.<BR>
+<BR>
+This opening, in my opinion, is the ideal Italian opening in no-press. With<BR>
+England and France bouncing in the channel 90% of the time, France will find<BR>
+itself with the dreaded 2-1 fleet disadvantage in the Med.<BR>
+<BR>
+<BR>
+Done.<BR>
+<BR>
+--Steve<BR>
+<BR>
+<BR>
+<BR>
+----- Original Message -----<BR>
+From: <MChirchill@cs.com><BR>
+To: <glinerts@home.com><BR>
+Sent: Wednesday, December 20, 2000 7:29 PM<BR>
+Subject: To Stephen Glinert<BR>
+<BR>
+<BR>
+><BR>
+> A couple of months ago, you sent in an article to the Diplomatic Pouch for<BR>
+> publication. I don't know if Manus or anyone ever got back to you on that.<BR>
+><BR>
+> Anyway, it appears that I'm the person who's putting together the next<BR>
+issue.<BR>
+> I'd like to take a look at the article you sent in, but I can't seem to<BR>
+get<BR>
+> the file to display properly. I was wondering if I could get you to resend<BR>
+> that to me, at this address.<BR>
+><BR>
+> Thanks for  your help,<BR>
+><BR>
+> - Matt Shields<BR>
+<BR>
+</XMP></FONT><FONT  COLOR="#0f0f0f" BACK="#fffffe" SIZE=3 PTSIZE=10><BR>
+<BR>
+----------------------- Headers --------------------------------<BR>
+Return-Path: <glinerts@home.com><BR>
+Received: from  rly-xa02.mx.aol.com (rly-xa02.mail.aol.com [172.20.105.71]) by air-xa03.mail.aol.com (v77.31) with ESMTP; Thu, 28 Dec 2000 10:43:59 -0500<BR>
+Received: from  femail3.rdc1.on.home.com (femail3.rdc1.on.home.com [24.2.9.90]) by rly-xa02.mx.aol.com (v77.27) with ESMTP; Thu, 28 Dec 2000 10:43:52 -0500<BR>
+Received: from cr217496a ([24.114.158.86]) by femail3.rdc1.on.home.com<BR>
+          (InterMail vM.4.01.03.00 201-229-121) with SMTP<BR>
+          id <20001228154336.YDTW22375.femail3.rdc1.on.home.com@cr217496a><BR>
+          for <MChirchill@cs.com>; Thu, 28 Dec 2000 07:43:36 -0800<BR>
+Message-ID: <000601c070e6$1ddebee0$569e7218@bloor1.on.wave.home.com><BR>
+From: "Glinert Family" <glinerts@home.com><BR>
+To: <MChirchill@cs.com><BR>
+References: <c3.c4ad0e5.2772a8f9@cs.com><BR>
+Subject: Re: To Stephen Glinert<BR>
+Date: Thu, 28 Dec 2000 10:52:00 -0500<BR>
+MIME-Version: 1.0<BR>
+Content-Type: text/plain;<BR>
+	charset="iso-8859-1"<BR>
+Content-Transfer-Encoding: 7bit<BR>
+X-Priority: 3<BR>
+X-MSMail-Priority: Normal<BR>
+X-Mailer: Microsoft Outlook Express 5.50.4133.2400<BR>
+X-MimeOLE: Produced By Microsoft MimeOLE V5.50.4133.2400<BR>
+<BR>
+</HTML>

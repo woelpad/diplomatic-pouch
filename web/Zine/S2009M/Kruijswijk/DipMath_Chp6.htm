@@ -1,23 +1,28 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
 <title>DP S2009M: The Math of Adjudication</title>
+
 <!-- Authored by Lucas B. Kruijswijk -->
 <!-- Published on the Pouch Zine with permissions -->
 <!-- Created on March 6, 2008 -->
+
 </head><body style="background-color: rgb(255, 255, 255);">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toS2009M.gif" align="right" border="0"></a>
 <br clear="all">
 <hr size="1" width="100%" align="center" style="color: GRAY">
+
 <center>
 <h1>The Math of Adjudication</h1>
 <h2>by Lucas Kruijswijk</h2>
 <hr size="1" width="100%" align="center" style="color: GRAY; margin-bottom: 15px">
 </center>
-<table width="95%" align="center" border="0">
-<tbody><tr>
-<td align="justify">
+  <table width="95%" align="center" border="0">
+      <tbody><tr>
+	      <td align="justify">
 <h2>A simple recursive guess algorithm that works in all cases</h2>
 <p>When I was writing the <a href="http://web.inter.nl.net/users/L.B.Kruijswijk/">DATC</a>,
 I had contact with a few people who were developing an adjudicator. One of them was Christian
@@ -28,9 +33,11 @@ to me that DipTool does not work with decisions based on partial information.</p
 <tr><td align="right" width="50%"><img src="figure9.png" width="159" height="263" alt="Figure 9" style="margin-right: 15px"/></td>
 <td align="left"><pre style="margin-left: 15px; font-size: 15px">England:
 F nwg -> nth
+
 Germany:
 F ska Supports F nth -> nwy
 F nth -> nwy
+
 Russia:
 F nwy -> nwg</pre>
 </td></tr></table>
@@ -88,105 +95,105 @@ cycles simply do not exist.</p>
 movement, convoy paradoxes, and cyclic dependent situations with only one resolution.
 For readers who cannot read C, I will explain what is going on afterwards:</p>
 <pre style="font-size: 15px; margin-left: 40px">
-1 /* Possible resolutions of an order. */
-2 #define FAILS 0
-3 #define SUCCEEDS 1
-4
-5 /* For each order we maintain the resolution. */
-6 int resolution[34];
-7
-8 /* The resolution of an order, can be in three states. */
-9 #define UNRESOLVED 0 /* Order is not yet resolved, the
-10                       * resolution has no meaningful
-11                       * value.
-12                       */
-13 #define GUESSING 1   /* The resolution contains a value,
-14                       * but it is only a guess.
-15                       */
-16 #define RESOLVED 2   /* The resolution contains a value,
-17                       * and is final.
-18                       */
-19 int state[34];
-20
-21 /* A dependency list is maintained, when a cycle is
-22  * detected. It is initially empty.
-23  */
-24 int dep_list[34];
-25 int nr_of_dep = 0;
-26
-27 /* Function: resolve(nr)
-28  * nr - The number of the order to be resolved.
-29  * Returns the resolution for that order.
-30  */
-31 int resolve(int nr) {
-32     int i, old_nr_of_dep, first_result, second_result;
-33
-34     /* If order is already resolved, just return
-35      * the resolution.
-36      */
-37     if (state[nr] == RESOLVED)
-38         return resolution[nr];
-39
-40     if (state[nr] == GUESSING) {
-41         /* Order is in guess state. Add the order
-42          * nr to the dependencies list, if it isn't
-43          * there yet and return the guess.
-44          */
-45         i = 0;
-46         while (i < nr_of_dep)
-47             if (dep_list[i++] == nr)
-48                 return resolution[nr];
-49         /* Order not found, add it. */
-50         dep_list[nr_of_dep++] = nr;
-51         return resolution[nr];
-52     }
-53     /* Remember how big the dependency list is before we
-54      * enter recursion.
-55      */
-56     old_nr_of_dep = nr_of_dep;
-57
-58     /* Set order in guess state. */
-59     resolution[nr] = FAILS;
-60     state[nr] = GUESSING;
-61
-62     /* Adjudicate order. */
-63     first_result = adjudicate(nr);
-64
-65     if (nr_of_dep == old_nr_of_dep) {
-66         /* No orders were added to the dependency list.
-67          * This means that the result is not dependent
-68          * on a guess.
-69          */
-70
-71         /* Set the resolution (ignoring the initial
-72          * guess). The order may already have the state
-73          * RESOLVED, due to the backup rule, acting
-74          * outside the cycle.
-75          */
-76         if (state[nr] != RESOLVED) {
-77             resolution[nr] = first_result;
-78             state[nr] = RESOLVED;
-79         }
-80         return first_result;
-81     }
-82
-83     if (dep_list[old_nr_of_dep] != nr) {
-84         /* The order is dependent on a guess, but not our
-85          * own guess, because it would be the first
-86          * dependency added. Add to dependency list,
-87          * update result, but state remains guessing
-88          */
-89         dep_list[nr_of_dep++] = nr;
-90         resolution[nr] = first_result;
-91         return first_result;
-92     }
-93     /* Result is dependent on our own guess. Set all
-94      * orders in dependency list to UNRESOLVED and reset
-95      * dependency list.
-96      */
-97     while (nr_of_dep > old_nr_of_dep)
-98         state[dep_list[--nr_of_dep]] = UNRESOLVED;
-99
+  1 /* Possible resolutions of an order. */
+  2 #define FAILS 0
+  3 #define SUCCEEDS 1
+  4
+  5 /* For each order we maintain the resolution. */
+  6 int resolution[34];
+  7
+  8 /* The resolution of an order, can be in three states. */
+  9 #define UNRESOLVED 0 /* Order is not yet resolved, the
+ 10                       * resolution has no meaningful
+ 11                       * value.
+ 12                       */
+ 13 #define GUESSING 1   /* The resolution contains a value,
+ 14                       * but it is only a guess.
+ 15                       */
+ 16 #define RESOLVED 2   /* The resolution contains a value,
+ 17                       * and is final.
+ 18                       */
+ 19 int state[34];
+ 20
+ 21 /* A dependency list is maintained, when a cycle is
+ 22  * detected. It is initially empty.
+ 23  */
+ 24 int dep_list[34];
+ 25 int nr_of_dep = 0;
+ 26
+ 27 /* Function: resolve(nr)
+ 28  * nr - The number of the order to be resolved.
+ 29  * Returns the resolution for that order.
+ 30  */
+ 31 int resolve(int nr) {
+ 32     int i, old_nr_of_dep, first_result, second_result;
+ 33
+ 34     /* If order is already resolved, just return
+ 35      * the resolution.
+ 36      */
+ 37     if (state[nr] == RESOLVED)
+ 38         return resolution[nr];
+ 39
+ 40     if (state[nr] == GUESSING) {
+ 41         /* Order is in guess state. Add the order
+ 42          * nr to the dependencies list, if it isn't
+ 43          * there yet and return the guess.
+ 44          */
+ 45         i = 0;
+ 46         while (i < nr_of_dep)
+ 47             if (dep_list[i++] == nr)
+ 48                 return resolution[nr];
+ 49         /* Order not found, add it. */
+ 50         dep_list[nr_of_dep++] = nr;
+ 51         return resolution[nr];
+ 52     }
+ 53     /* Remember how big the dependency list is before we
+ 54      * enter recursion.
+ 55      */
+ 56     old_nr_of_dep = nr_of_dep;
+ 57
+ 58     /* Set order in guess state. */
+ 59     resolution[nr] = FAILS;
+ 60     state[nr] = GUESSING;
+ 61
+ 62     /* Adjudicate order. */
+ 63     first_result = adjudicate(nr);
+ 64
+ 65     if (nr_of_dep == old_nr_of_dep) {
+ 66         /* No orders were added to the dependency list.
+ 67          * This means that the result is not dependent
+ 68          * on a guess.
+ 69          */
+ 70
+ 71         /* Set the resolution (ignoring the initial
+ 72          * guess). The order may already have the state
+ 73          * RESOLVED, due to the backup rule, acting
+ 74          * outside the cycle.
+ 75          */
+ 76         if (state[nr] != RESOLVED) {
+ 77             resolution[nr] = first_result;
+ 78             state[nr] = RESOLVED;
+ 79         }
+ 80         return first_result;
+ 81     }
+ 82
+ 83     if (dep_list[old_nr_of_dep] != nr) {
+ 84         /* The order is dependent on a guess, but not our
+ 85          * own guess, because it would be the first
+ 86          * dependency added. Add to dependency list,
+ 87          * update result, but state remains guessing
+ 88          */
+ 89         dep_list[nr_of_dep++] = nr;
+ 90         resolution[nr] = first_result;
+ 91         return first_result;
+ 92     }
+ 93     /* Result is dependent on our own guess. Set all
+ 94      * orders in dependency list to UNRESOLVED and reset
+ 95      * dependency list.
+ 96      */
+ 97     while (nr_of_dep > old_nr_of_dep)
+ 98         state[dep_list[--nr_of_dep]] = UNRESOLVED;
+ 99
 100     /* Do the other guess. */
 101     resolution[nr] = SUCCEEDS;
 102     state[nr] = GUESSING;
@@ -250,12 +257,12 @@ F bre -> mao</pre>
 as follows:</p>
 <pre style="font-size: 15px; margin-left: 40px">
 resolve(<i>par</i>)
-adjudicate(<i>par</i>)
-resolve(<i>bre</i>)
-adjudicate(<i>bre</i>)
-return SUCCEEDS (for adjudicate(<i>bre</i>))
-return SUCCEEDS (for resolve(<i>bre</i>))
-return SUCCEEDS (for adjudicate(<i>par</i>))
+   adjudicate(<i>par</i>)
+      resolve(<i>bre</i>)
+         adjudicate(<i>bre</i>)
+         return SUCCEEDS (for adjudicate(<i>bre</i>))
+      return SUCCEEDS (for resolve(<i>bre</i>))
+   return SUCCEEDS (for adjudicate(<i>par</i>))
 return SUCCEEDS (for resolve(<i>par</i>))
 </pre>
 <p>The only difference from the simple recursive algorithm (without guessing) is that the
@@ -271,8 +278,10 @@ RESOLVED state with resolution SUCCEEDS.</p>
 <td align="left"><pre style="margin-left: 15px; font-size: 15px">Turkey:
 F aeg -> ion
 F gre Supports F aeg -> ion
+
 Austria:
 F alb Supports F aeg -> ion
+
 Italy:
 A tun -> gre
 F ion Convoys A tun -> gre</pre>
@@ -294,16 +303,16 @@ look at the dependency graph:</p>
 <i>resolve</i> function and the <i>adjudicate</i> function:</p>
 <pre style="font-size: 15px; margin-left: 40px">
 <b>resolve(<i>aeg</i>)</b>
-adjudicate(<i>aeg</i>)
-resolve(<i>alb</i>)
-adjudicate(<i>alb</i>)
-return SUCCEEDS (for adjudicate(<i>alb</i>))
-return SUCCEEDS (for resolve(<i>alb</i>))
-resolve(<i>gre</i>)
-adjudicate(<i>gre</i>)
-resolve(<i>ion</i>)
-adjudicate(<i>ion</i>)
-<b>resolve(<i>aeg</i>)</b>
+   adjudicate(<i>aeg</i>)
+      resolve(<i>alb</i>)
+         adjudicate(<i>alb</i>)
+         return SUCCEEDS (for adjudicate(<i>alb</i>))
+      return SUCCEEDS (for resolve(<i>alb</i>))
+      resolve(<i>gre</i>)
+         adjudicate(<i>gre</i>)
+            resolve(<i>ion</i>)
+               adjudicate(<i>ion</i>)
+                  <b>resolve(<i>aeg</i>)</b>
 </pre>
 <p>In this case, it is assumed that <i>adjudicate(aeg)</i> will first call
 <i>resolve(alb)</i> and then <i>resolve(gre)</i>. This will lead to an early RESOLVED state
@@ -396,22 +405,22 @@ order is also added to the dependency list.</p>
 <p>The recursion was executed as follows:</p>
 <pre style="font-size: 15px; margin-left: 40px">
 <b>resolve(<i>aeg</i>)</b>
-adjudicate(<i>aeg</i>)
-resolve(<i>alb</i>)
-adjudicate(<i>alb</i>)
-return SUCCEEDS (for adjudicate(<i>alb</i>))
-return SUCCEEDS (for resolve(<i>alb</i>))
-resolve(<i>gre</i>)
-adjudicate(<i>gre</i>)
-resolve(<i>ion</i>)
-adjudicate(<i>ion</i>)
-<b>resolve(<i>aeg</i>)</b>
-return FAILS (for resolve(<i>aeg</i>))
-return SUCCEEDS (for adjudicate(<i>ion</i>))
-return SUCCEEDS (resolve(<i>ion</i>))
-return FAILS (for adjudicate(<i>gre</i>))
-return FAILS (for resolve(<i>gre</i>))
-return SUCCEEDS (for adjudicate(<i>aeg</i>))
+   adjudicate(<i>aeg</i>)
+      resolve(<i>alb</i>)
+         adjudicate(<i>alb</i>)
+         return SUCCEEDS (for adjudicate(<i>alb</i>))
+      return SUCCEEDS (for resolve(<i>alb</i>))
+      resolve(<i>gre</i>)
+         adjudicate(<i>gre</i>)
+            resolve(<i>ion</i>)
+               adjudicate(<i>ion</i>)
+                  <b>resolve(<i>aeg</i>)</b>
+                  return FAILS (for resolve(<i>aeg</i>))
+               return SUCCEEDS (for adjudicate(<i>ion</i>))
+            return SUCCEEDS (resolve(<i>ion</i>))
+         return FAILS (for adjudicate(<i>gre</i>))
+      return FAILS (for resolve(<i>gre</i>))
+   return SUCCEEDS (for adjudicate(<i>aeg</i>))
 </pre>
 <p>The <i>adjudicate</i> function of the Aegean Sea gives a positive result, despite the
 failure of the <i>support</i> from Greece. The <i>resolve</i> function will notice that the
@@ -439,15 +448,15 @@ for the other orders.</p>
 following recursion could appear:</p>
 <pre style="font-size: 15px; margin-left: 40px">
 <b>resolve(<i>y</i>)</b>
-adjudicate(<i>y</i>)
-resolve(<i>x</i>)
-adjudicate(<i>x</i>)
-resolve(<i>p</i>)
-adjudicate(<i>p</i>)
-<b>resolve(<i>y</i>)</b>
-resolve(<i>q</i>)
-adjudicate(<i>q</i>)
-<b>resolve(<i>y</i>)</b>
+   adjudicate(<i>y</i>)
+      resolve(<i>x</i>)
+         adjudicate(<i>x</i>)
+            resolve(<i>p</i>)
+               adjudicate(<i>p</i>)
+                  <b>resolve(<i>y</i>)</b>
+            resolve(<i>q</i>)
+               adjudicate(<i>q</i>)
+                  <b>resolve(<i>y</i>)</b>
 </pre>
 <p>In the third call of <i>resolve(y)</i> the <i>y</i> order is already in the dependency
 list. When back in the <i>resolve(q)</i> function, no increase in the dependency list is
@@ -539,20 +548,22 @@ algorithm. The following properties can be observed:</p>
 <li>The generic part is nicely separated from the equation code.</li>
 </ol>
 <p>And so, 10 years after I was first introduced to Diplomacy, finally, at last...</p>
+
 <p><a href="DipMath_Chp5.htm">PREV</a></p>
 <br><br><table>
-<tbody>
-<tr valign="bottom">
-<td><a href="mailto:editor@diplom.org"><img src="/Zine/Common/letter.gif" border="0"></a> </td>
-<td><strong>Lucas Kruijswijk<br>(<a href="mailto:L.B.Kruijswijk@inter.nl.net">L.B.Kruijswijk@inter.nl.net</a>)</strong>
-</td></tr></tbody></table>
+  <tbody>
+  <tr valign="bottom">
+    <td><a href="mailto:editor@diplom.org"><img src="../../Common/letter.gif" border="0"></a> </td>
+    <td><strong>Lucas Kruijswijk<br>(<a href="mailto:L.B.Kruijswijk@inter.nl.net">L.B.Kruijswijk@inter.nl.net</a>)</strong>
+  </td></tr></tbody></table>
+
 <i>If you wish to e-mail feedback on this article to the author, and clicking
-on the envelope above does not work for you, feel free to use the <a href="/Zine/S2009M/Common/DearDP.html">"<b>Dear
-DP...</b>"</a> mail interface.</i>
+on the envelope above does not work for you, feel free to use the <a href="../Common/DearDP.html">"<b>Dear
+DP...</b>"</a> mail interface.</i> 
 </td></tr></tbody></table>
 <hr size="1" width="100%" align="center" style="color: GRAY; margin-top: 15px">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href="../"><img src="../../Common/toS2009M.gif" align="right" border="0"></a>
+
 </body></html>
-<!--
--->

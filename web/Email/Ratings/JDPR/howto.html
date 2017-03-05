@@ -1,0 +1,192 @@
+<HTML>
+<HEAD>
+<TITLE>DP: Judge Diplomacy Player Ratings</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#ffffff">
+<p align=center>
+<A HREF="..">
+<IMG SRC="../../../Common/DPLogo.gif"
+ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="../../../Common/DPLinks.gif" ALT="Shortcuts"
+HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
+<br clear=all>
+<img src="../../../Common/reddot.gif" height=2 width=100%>
+
+<H1>Judge Diplomacy Player Ratings Calculation Details</H1>
+
+<H2>
+<BR>How to Check the Calculation of a Rating
+</H2>
+
+First, you need the
+<a href="http://devel.diplom.org/Email/Ratings/JDPR/data.zip">data</a>.
+This file is big -- 1.3M, which will unzip out to 6.5M or so.  The
+file contains line after line of the raw data needed to calculate
+JDPR ratings.  The format will look like this:
+
+<pre>
+Game: gamename.USEF.rate       Average Player Strength: 1194.83
+000154 Austria1                    1 gamename.USEF 1    1    1    0    1037 1017  21 1    Standard.
+000720 England1                    2 gamename.USEF 1    1    1    2.33 1441 1467   9 1    Standard.
+000315 France1                     3 gamename.USEF 1    1    1    0    1346 1314  32 1    Standard.
+006040 Germany1                    4 gamename.USEF 1    0.33 0.33 0.78  954  986   1 1    Standard.
+000236 Germany2                    4 gamename.USEF 1    0.66 0.66 1.54 1049 1103   2 1    Standard.
+001472 Italy1                      5 gamename.USEF 1    0.46 1    0     953  931  10 1    Standard.
+000534 Italy2                      5 gamename.USEF 1    0.53 0    0    1007 1007   1 1    Standard.
+000507 Russia1                     6 gamename.USEF 1    0.33 0.33 0.78  961  989   3 1    Standard.
+000126 Russia2                     6 gamename.USEF 1    0.66 0.66 1.54 1285 1319   4 1    Standard.
+003041 Turkey1                     7 gamename.USEF 1    0.06 1    0    1000  959   0 1    Standard.
+000230 Turkey2                     7 gamename.USEF 1    0.07 0    0     998  998   3 1    Standard.
+000415 Turkey3                     7 gamename.USEF 1    0.44 0    0     910  910  10 1    Standard.
+001263 Turkey4                     7 gamename.USEF 1    0.41 0    0    1350 1350  22 1    Standard.
+</pre>
+<p>
+The Strength line is just the weighted average of the players in the game.
+If you divide by 500, raise e to that power, and multiply by 7 (or the
+number of powers in the variant), you'd get the sum of strengths mentioned
+in the <a href="describe.html">JDPR description</a>.  I use it to easily
+determine which games had the most competitive field and also, when this
+value goes too high or too low, to detect a problem with my code.
+<p>The main data has ten columns.  They are:
+<ol>
+<li>ID number for the player -- unique for each *person*, but the same
+for all the email addresses and Judges used by that person, in all the games
+played by that person.
+<li>Player Name, as listed in the JDPR big list of
+<a href="players.html">players and ratings</a>.  All the aliases a player
+uses are thus combined into a single name.  In the example above, the
+names have been changed to protect the innocent.
+<li>Power controlled by the player -- for Standard Diplomacy, 1 = Austria,
+2 = England, etc.
+<li>The gamename and the judge.
+<li>The press value.  1 means broadcasts and partial press, 0.8 means
+broadcast only, 0.5 means no press, and 0.3 is real-time Diplomacy.  This
+is "P" in the calculation.
+<li>Pro-rate value for the player.  This is the percentage of time that
+a player spent at the helm of his power.  1 means the whole game,
+obviously.  "Sum of strengths" is prorated by time played and uses
+these numbers.
+<li>Share for the player.  If the power ends up being a win or a draw,
+then the people that played it will share the benefit according to time
+played and this number will equal the pro-rate value.  But if it's a
+loss, only the original player gets the damage (his share is 1, the
+subsequent replacement(s) get a 0).  Deltas to player ratings are
+determined using this number.
+<li>Points.  It's 7/N, for standard games, where N is the number of
+winner/drawers in the game.  If there's more than one player for a power,
+the points are pro-rated by time played, of course.  This is "S" in the
+calculation.
+<li>Initial rating.  Divide by 500, and raise e (2.718281828) to that power
+to get the number that's really important, the number that describes the
+player's ability in comparison to average, and to those in the game.  It's
+used to determine the "Sum of strengths" for the game (pro-rated by the
+pro-rate value for the player, given in column 6), and the "X" in the
+equation (which is pro-rated by the share value for the player, given in
+column 7).
+<li>Final rating.  This is the result of the calculation based on the
+the JDPR calculations for this game.
+<li>Games played by the player, before this one -- this is "E" in the
+JDPR calculations.  This only counts games
+that have an effect on his rating.  If a player had seven or more games
+coming into this one, he's considered "fully-rated".  The percentage of
+fully-rated players in a game (pro-rated by time played, of course), is
+"R" in the calculation.
+<li>The variant value.  This is between zero and one, and indicates the
+significance of the variant played upon the players' ratings.  Standard
+Diplomacy is 1.0, other variants might have lower values if the victory
+condition is less than (SC+2)/2, or if the ratio of SC's to powers playing
+the game is very small.  In general, both of these factors introduce more
+luck into the game and make the game less relevant for determining a
+player's rating.  This number is "A" in the calculation, and together
+with "P" and "R", are used to calculate the "value" of a game.
+</ol>
+<p>Let's take the data in this example and show how the new ratings were
+calculated:
+<pre>
+This was a Standard game, broadcast and partial press, since the press
+and variant values are both 1 (actually, there are a number of variants
+that also get a value of 1, but it makes no difference from the standpoint
+of the ratings).  Since both the pro-rates and the values add up to seven,
+it's a seven player game.  You can also tell that it was an EGR draw:
+the first player had a pro-rate of 1 and got 0 points, so he lost as
+Austria; the next player had a pro-rate of 1 and got 2.33, he shared in
+a 3-way as England; the next player lost as France; the next two shared
+Germany (the first for a third of the game, the second for two-thirds) and
+also got a 3-way, obviously; the next two shared a loss as Italy; the
+next two shared a 3-way result as Russia; and the last four took turns
+losing as Turkey.  Austria1, England1, France1, Italy1, Turkey3, and
+Turkey4 were all "fully-rated", so the ratio of fully rated players is
+(1+1+1+0.33+0.44+0.41)/7 = 0.60.
+
+A = 1.0
+P = 1.0
+R = 1 + 0.60 = 1.60
+V = 7.5 * A * P * R = 12.0
+
+Pro-rated Sum of Strengths = 76.37
+E = 1 + 40 / (10 + Games)
+X = 7 * Share * Player-strength / Sum of Strengths, for each player
+Delta = E*V*(S-X) for each player
+
+        Rating  Games   Stren.  E       X       S       Delta   New Rating
+Austria1 1037   21      7.96    2.29    0.73    0       -20     1017
+England1 1441    9      17.85   3.10    1.64    2.33    +26     1467
+France1  1346   32      14.76   1.95    1.35    0       -32     1314
+Germany1  954    1      6.74    4.64    0.21    0.78    +32      986
+Germany2 1049    2      8.15    4.33    0.50    1.54    +54     1103
+Italy1    953   10      6.73    3.00    0.62    0       -22      931
+Italy2   1007    1      7.49    4.64    0       0       0       1007
+Russia1   961    3      6.83    4.08    0.21    0.78    +28      989
+Russia2  1285    4      13.07   3.86    0.80    1.54    +34     1319
+Turkey1  1000    0      7.39    5.00    0.68    0       -41      959
+Turkey2   998    3      7.21    4.08    0       0       0        998
+Turkey3   910   10      6.17    3.00    0       0       0        910
+Turkey4  1350   22      14.88   2.25    0       0       0       1350
+</pre>
+<p>A few things to note about this game.  The players, in general, are
+much better than average (as the game strength of 1195 indicates).  As
+a result, the players with ratings around 1000 (Austria1, Italy1, and
+Turkey1, for example), weren't expected to get a full 1.0 points as their
+expected value.  The better players (England1, France1) were expected to
+get more than 1.0 points.  The system is devised to be fairly stable,
+in that the positive deltas to players' ratings should about balance out
+the negative ones.  This game is a bit strange in that regard, though,
+as it hands out an extra 59 points.  That's because some of the players
+that drove up the game's Sum of Strengths (Turkey4, in particular)
+didn't factor into the distribution of the deltas, since he was a
+replacement player for a losing power.  Also, the winners were all
+relatively inexperienced and thus had large E values, whereas the losers
+were more experienced and had smaller E values.  Strange indeed.
+<p>With this example and the
+<a href="describe.html">JDPR description</a>, you should be able to
+figure out why your rating did what it did in a particular game.
+<p>The database allows you to do two neat things:  you can recall any
+particular game by searching for "gamename.JUDG", and you can track the
+record over time of any one player by searching for the player name
+(or by using "grep", if you're into UNIX).  Armed with that, you can
+track the peaks and valleys of your rating and see if your general
+trend is one of improvement.
+<p>
+<img src="../../../Common/reddot.gif" height=2 width=100%>
+<H5>
+<p align=center>
+[       <a href="../../../Zine">The Zine</a> |
+        <a href="../../../Online">Online Resources</a> |
+        <a href="../../../Showcase">Showcase</a> |
+        <a href="../../../Postal">Postal</a> |
+        Email |
+        <a href="../../../Face">Face to Face</a>
+]
+<br>
+<i>The Diplomatic Pouch is brought to you by
+<a href="../../../Council.html">the DP Council</a>.
+<br>
+This page is maintained by <a href="mailto:masseyd@btv.ibm.com">Doug Massey</a>.
+<br>
+The Email Diplomacy section is maintained by <a href="mailto:lawyerted@prodigy.net">Ted Miller</a>.
+</i>
+
+</body>
+</html>

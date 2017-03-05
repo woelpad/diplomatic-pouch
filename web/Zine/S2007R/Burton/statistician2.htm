@@ -1,25 +1,33 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<TITLE>DP S2007R: The Statistician on SCs in 1901 & 1902</TITLE>
+
+<HTML><HEAD><TITLE>DP S2007R: The Statistician on SCs in 1901 & 1902</TITLE>
+
 <!-- ---------------------Header---------------------------------- -->
 <!-- ------------------------------------------------------------- -->
+
 <!---- Authored by  ---->
 <!---- Published on the Pouch Zine with permissions ---->
 <!---- Created on September 23, 2006 ---->
+
 </head>
+
 <body style="background-color: rgb(255, 255, 255);">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/S2007R/"><img src="/Zine/Common/toS2007R.gif" align="right" border="0"></a>
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toS2007R.gif" align="right" border="0"></a>
 <br clear="all">
 <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
+
+
 <CENTER>
 <H1>THE STATISTICIAN:<BR>SUPPLY CENTERS IN 1901 AND 1902</H1>
 <h2>by Josh Burton</h2>
 <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
 </CENTER>
+
 <h2>Introduction</h2>
 <p>
-In my <a href="/Zine/F2006M/Burton/DP_F2006M_best_powers.htm">first article</a>, I introduced FRIGATE, a program to perform large-scale statistical analysis of Diplomacy games.   I used FRIGATE to derive some long-winded answers to a very basic question: <i>What are the best powers to play?</i>  That's a good question to ask &#8212 at the very beginning of a game, before powers are assigned, assuming you're submitting a preference list.   But once you've been handed your colors, it's not much use.
+In my <a href="../../F2006M/Burton/DP_F2006M_best_powers.htm">first article</a>, I introduced FRIGATE, a program to perform large-scale statistical analysis of Diplomacy games.   I used FRIGATE to derive some long-winded answers to a very basic question: <i>What are the best powers to play?</i>  That's a good question to ask &#8212 at the very beginning of a game, before powers are assigned, assuming you're submitting a preference list.   But once you've been handed your colors, it's not much use.
 <p>
 The natural follow-up question is: once you know what power you're playing, <i>how should you play it?</i>  That's an incredibly complex question.  There are so many aspects of a Diplomacy game that it seems virtually impossible to sum them all up in a single, coherent set of rules.  There's obviously no "winning" strategy, since no power can survive for long without help.  The best Diplomacy players in the world are regularly eliminated when they play.  That is, in fact, one of the beautiful aspects of the game.
 <p>
@@ -32,10 +40,12 @@ Picture this: You've just begun a game of Standard Diplomacy.  You've been assig
 This question, framed as such, is easily answerable by statistical analysis.  FRIGATE can look at game summaries to determine the ownership of each supply center at the end of each year, including 1901 and 1902.  Thus it can determine the likelihood of a particular center ending up in a particular power's hands.  This is defined as that power's <i><b>Probability of Ownership</b></i>.  FRIGATE also knows the final outcome of each game, so it can determine the average number of Calhamer Points that a power can expect under certain conditions.  (Calhamer Points are awarded as follows: the winning/drawing powers receive 1 CP split evenly among them.)  The average number of CPs that a power can expect earn after occupying a supply center is called a <i><b>score</b></i>.
 <p>
 For example, if the database has 4 games, and 3 of them show Italy owning Tunis in Winter of 1901, then Italy's probability of ownership in Tunis in 1901 is 75% in this set.  If Italy went on to earn a victory in one of those games and four-way draws in the other two, then Italy's score, assuming he takes Tunis in 1901, is ( 1 + 1/4 + 1/4 ) / 3 = 50%.  With only four data points, this number isn't very reliable, but FRIGATE has an enormous database.
+
 <p>
 <h2>Results</h2>
 <p>
 For these results, I combine games of all press types, for a total of 8,525 games.  Due to rounding, percentages might not always add to exactly 100%.
+
 <center>
 <a name="table1">
 <table border="2">
@@ -391,7 +401,9 @@ For these results, I combine games of all press types, for a total of 8,525 game
         <th>
     </tr>
 </table>
+
 <p>
+
 <a name="table2">
 <table border="2">
     <caption><b>Table 2:</b><br><i>Probability of Ownership, 1902</i></caption>    <tr>
@@ -746,9 +758,11 @@ For these results, I combine games of all press types, for a total of 8,525 game
         <th>
     </tr>
 </table>
+
 <p>
 <br>
 <p>
+
 <a name="table3">
 <table border="2">
     <caption><b>Table 3:</b><br><i><b>Base Score</b> (8525 games)</i></caption>
@@ -772,7 +786,9 @@ For these results, I combine games of all press types, for a total of 8,525 game
 	<th><font color="olive">16.12%
     </tr>
 </table>
+
 <p>
+
 <a name="table4">
 <table border="2">
     <caption><b>Table 4:</b><br><i>Score Given Ownership, 1901</i></caption>
@@ -1013,7 +1029,9 @@ For these results, I combine games of all press types, for a total of 8,525 game
     </tr>
 </table>
 <blockquote><i><b>Note:</b> Scores that are based on an insufficiently small (<0.5%) or overwhelmingly large (>95%) sample size are not shown.  They would not give informative or accurate data.</i></blockquote>
+
 <p>
+
 <a name="table5">
 <table border="2">
     <caption><b>Table 5:</b><br><i>Score Given Ownership, 1902</i></caption>
@@ -1309,6 +1327,7 @@ For these results, I combine games of all press types, for a total of 8,525 game
 </table>
 <blockquote><i><b>Note:</b> Scores that are based on an insufficiently small (<0.5%) or overwhelmingly large (>95%) sample size are not shown.  They would not give informative or accurate data.</i></blockquote>
 </center>
+
 <p>
 <br>
 <p>
@@ -1324,10 +1343,12 @@ Here are some other statistical caveats to keep in mind:
     <li><u>Statistics are uncertain.</u> Another reason to be skeptical of the Austria-in-Naples conclusion is that Austria takes Naples in 1902 only 0.50% of the time.  His score is drawn from a small dataset, so it is subject to the vagaries of random numbers.  (For the statistically minded, the <a href="http://en.wikipedia.org/wiki/Standard_deviation">standard deviation</a> of this score is 5.34%, corresponding to a 30.90% chance that Austria's score after taking Naples is <i>less</i> than 11.68%.)
 <br><br>
     <li><u>Correlation does not prove causation.</u> In <a href="#table1">91.80%</a> of games, the Turk takes Bulgaria in 1901.  This seems to <i>hurt</i> his chances: his score drops from <a href="#table3">16.12%</a> to <a href="#table4">16.02%</a>.  Does that mean that Turks are wrong to always open with Con-Bul?  No.  Turkey often moves that army <i>beyond</i> Bulgaria &#8212 to Rumania, Serbia, or Greece &#8212 in Fall 1901.   Successfully vacating Bulgaria is a sign of progress, and thus the average non-Bulgaria-occupying Turk is better off than the average Bulgaria-occupying Turk.  Just because a power performs differently after taking a center doesn't mean that taking the center <i>caused</i> the change.
+
 </ul>
 <p>
 There's one final, very important, caveat: <u>You must play the players, not the board</u>! After staring at these tables for a while, you may come out with the impression that every power has a predetermined "best strategy".  This is completely untrue!  To win a <b>Diplomacy</b> game, you have to convince other players to trust you and cooperate with you.  No amount of tactical skill will save you if you're a terrible diplomat.  That's why all the scores in the tables above are far below 100%. The tables give suggestions based on averages, but your opponents aren't averages; they're real people. Even in no-press games, where you cannot communicate with fellow players directly, you must still maintain good relations with them or they will beat you to a pulp.
 </ul>
+
 <p>
 <h2>Analysis</h2>
 <p>
@@ -1392,6 +1413,7 @@ The balance of power over Rumania is not as even as with Belgium.  It tends to g
 </center>
 <br><br>
 These numbers suggest that Rumania, like Belgium, is worth fighting over in 1902, but not in 1901.  Securing Rumania in 1901 often requires a lot of effort &#8212 particularly for Austria, who has many other things to do with his three units.  In 1902, the Dual Monarch will probably be in Serbia, and the Turk will be in Bulgaria; at that point, Rumania becomes a natural, defensible extension of both of their spheres of influence.  Russia can afford to hold back &#8212 although most Russian players do not.  Despite Russians' best efforts, they often lose control of Rumania: note that Russia's probability of ownership <i>decreases</i> from 1901 to 1902.
+
 <p>
 <h4>Should Italy attack Austria?</h4>
 <p>
@@ -1434,6 +1456,7 @@ So goes the conventional wisdom.  But do the numbers support it?
 Italy can make huge gains from invading the Balkan/Austrian region.  The numbers in this table are enormous: for example, if Italy gains Serbia in 1901, this alone will more than double his score.  (This is undoubtedly because, not only is Serbia in the very heart of the Balkans, but Italian occupation of it in 1901 usually implies a cooperative Austrian.)  But some centers are more valuable than others.  Italy should aim for Serbia, Budapest, and Vienna.  Trieste and Greece are also helpful, but less so &#8212 probably because they can be dead-ends for expansion.  We've all seen an Italian player seize Trieste and then spend years supporting himself in place there, facing an angry Austrian determined to get his home center back.  Similarly, Italy sometimes sneaks a unit into Greece but then must support it constantly against Austrian or Turkish invasion.  Neither of these scenarios is great for Italy.
 <p>
 The lesson is clear: if you're Italy, and if you want to stab Austria, you've got to plunge the knife deep.  Don't just muscle into Trieste; perhaps sneak into Vienna, or set the Austrian up by convincing him to let your armies into the Balkans.  And be prepared to fight him for everything he's got.
+
 <p>
 <h4>Should Germany bounce Russia out of Sweden?</h4>
 <p>
@@ -1491,6 +1514,8 @@ The biggest numbers in this chart are not in Germany's column; they're in Russia
 What about Germany himself?  He benefits from the bounce, but it's a small benefit: he does 1.97% better when Sweden remains unowned than when it goes to Russia.  Germany should also be aware of the risk of capturing Sweden himself, which actually <i>hurts</i> his score.  When Germany takes Sweden it is often because the Russian, expecting a bounce, has decided to seek revenge by sailing into the Baltic Sea.  If Russia has tipped off England, then England may be able to sneak into Denmark in Fall 1901, leaving England in fine shape and Germany in a very sorry state.
 <p>
 My advice to German players: Ignore all these numbers, since they're inconclusive for you.  Realize that England needs the bounce more than you do.  And focus on the diplomacy!
+
+
 <p>
 <h2>Conclusions</h2>
 <p>
@@ -1498,22 +1523,25 @@ Using the FRIGATE program, I have provided data for the probability of ownership
 <p>
 It's important to keep these tips in perspective, of course.  Strategy and tactics are useful, but building and maintaining alliances is paramount.  Whenever there are more than two players left in a game, the brilliant tactician loses to the brilliant diplomat.  After all, the name of the game is <b>Diplomacy</b>!
 <p>
+
 <BR><BR><TABLE>
   <TBODY>
   <TR vAlign=bottom>
     <TD><A href="mailto:jburton@alumni.princeton.edu"><IMG 
-      src="/Zine/Common/letter.gif" border=0></A> </TD>
+      src="../../Common/letter.gif" border=0></A> </TD>
     <TD><STRONG>Josh Burton<BR>(<a href="mailto:jburton@alumni.princeton.edu">jburton@alumni.princeton.edu</a>)</STRONG> 
   </TD></TR></TBODY></TABLE>
 <P>
 <I>If you wish to e-mail feedback on this article to the author, and clicking 
 on the envelope above does not work for you, feel free to use the <A 
-href="/Zine/S2007R/Common/DearDP.html">"<B>Dear 
+href="../Common/DearDP.html">"<B>Dear 
 DP...</B>"</A> mail interface.</I> 
 <P>
 <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/S2007R/"><img src="/Zine/Common/toS2007R.gif" align="right" border="0"></a>
+
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href="../"><img src="../../Common/toS2007R.gif" align="right" border="0"></a>
+
+
 </BODY></HTML>
-<!--
--->
+

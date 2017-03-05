@@ -1,0 +1,60 @@
+This is pdfeTeXk, Version 3.141592-1.20a-2.2 (Web2c 7.5.3) (format=PLAIN 2007.6.1)  1 JUN 2007 18:22
+ Source specials enabled.
+ %&-line parsing enabled.
+**&plain abyss311.TEX
+(./abyss311.TEX  [1] [2] [3]
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+ [4]
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no … in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+Missing character: There is no ’ in font cmr10!
+ [5]
+Overfull \hbox (16.48666pt too wide) in paragraph at lines 633--642
+\tenrm you want to write any-thing there's al-ways more room, con-tact Doug! Se
+e http://www.whiningkentpigs.com/DW/|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\tenrm y
+.\kern-0.27779
+.\tenrm o
+.\tenrm u
+.\glue 3.33333 plus 1.66666 minus 1.11111
+.etc.
+
+[6]
+Overfull \hbox (113.31125pt too wide) in paragraph at lines 889--895
+[][]\tenrm I can't tell you more about their first disc, \tenit First Cut\tenrm
+ , than you can find on their web-site at http://www.cfmsites.com/morganstring/
+;|
+
+\hbox(7.5+2.5)x469.75499, glue set - 1.0
+.\hbox(0.0+0.0)x20.0
+.\special{src:889 abyss311.TEX}
+.\tenrm I
+.\glue 3.33333 plus 1.66498 minus 1.11221
+.\tenrm c
+.etc.
+
+[7] [8] [9] [10] [11] [12] [13] [14] [15] )
+Output written on abyss311.dvi (15 pages, 76620 bytes).

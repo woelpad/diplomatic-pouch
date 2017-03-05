@@ -1,295 +1,343 @@
+
 <HTML>
 <HEAD>
 <TITLE>DP Zine: 34th Special Edition -- Budapest | </TITLE>
+
 <!---- Authored by Eric Goodman ---->
 <!---- Published on the Pouch Zine with permissions ---->
 <!---- Created on March 2nd, 2003 ---->
 <!---- Updated by Edward Hawthorne, 04/04/03 ---->
+
 </HEAD>
+
+
 <BODY>
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/S2003M/"><IMG align=right SRC="/Zine/Common/SEIssue.gif" border=0></A>
-<BR clear=both>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-<BR>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/SEIssue.gif" border=0></A>
+
+  <BR clear=both>
+  <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+  <BR>
+  
 <! ------------------------------------------------------------- >
 <! ------------------------------------------------------------- >
+  
 <CENTER><H2>Do Players <I>Really</I> Hate to Play Austria?</H2>
 <H3><I>By&nbsp; Eric Goodman</I></H3></CENTER>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+  <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
 <CENTER><P>
-<TABLE WIDTH="90%" BORDER="0">
-<TR>
-<TD ALIGN="JUSTIFY">
+  <TABLE WIDTH="90%" BORDER="0">
+    <TR>
+    <TD ALIGN="JUSTIFY">
+
 <P ALIGN="JUSTIFY">As a fairly new member of RGD back in May of 2001, I joined a thread -- no doubt one of many -- discussing how powers are assigned on the judges. My complaint was that preference lists can't really be used as intended, because if I submit this preference list:  &nbsp;FEAGRIT
+
 <P ALIGN="JUSTIFY">I am much less likely to get assigned France than if I submitted the preference list: &nbsp;FEGRTIA
-<P ALIGN="JUSTIFY">This argument is based on the way the judge attempts to "maximize the happiness" of all players in the game in <A HREF="/Zine/F1998M/Tarzan/assign.html">Assigning&nbsp;Powers</A>. (See Tarzan's excellent article on power assignment methods in the <A HREF="/Zine/F1998M">F1998M</A> issue of the Pouch).
+
+<P ALIGN="JUSTIFY">This argument is based on the way the judge attempts to "maximize the happiness" of all players in the game in <A HREF="../../F1998M/Tarzan/assign.html">Assigning&nbsp;Powers</A>. (See Tarzan's excellent article on power assignment methods in the <A HREF="../../F1998M">F1998M</A> issue of the Pouch).
+
 <P ALIGN="JUSTIFY">I'm certainly not the first person to make (or rebut) this argument, but it was pointed out by Jody McCullough that the complaint is based on a number of assumptions. Most notably, it assumes there is a bias that against Austria among players, that this bias is strong, and that it is significant enough to affect power assignment in actual judge games. After some discussion, we decided to try and determine whether the perceived anti-Austria bias among players is real or assumed, and to determine what the impact of any such bias is.
+
 <P ALIGN="JUSTIFY">To attempt to discern the actual level of bias against Austria, I gathered preference lists that had been submitted by players in 251 Standard Diplomacy games and analyzed the power distributions in each list, looking for patterns. In a later article, Jody or I may further take the information gleaned here and investigate how these trends would affect actual power assignment on a judge, and how different power assignment algorithms might be more or less effective at removing any bias (assuming one exists) against Austria.
+
 <P ALIGN="JUSTIFY">The data that follows is based on reviewing 1505 preference lists from 251 standard Diplomacy games played on DEDO and USCA prior to December 2001. 11 games in which each player submitted a unique, one- power preference list and one game where all players submitted the same "[AEFGIRT]" list have been excluded from this analysis on the assumption that they represented "off judge" agreements about who would play what powers. At the time these games were run, no judges had implemented the "random power assignment" feature (set pref *), so this feature won't have any odd effect on the stats gathered so far.
+
 <P ALIGN="JUSTIFY">To rank the power's popularity, each power was given a point value corresponding to where it was placed on each preference list. That is, a power placed first on a preference list was given 1 point, and a power listed last a 7. Powers placed at the same preference level (in []'s) are each given the same score, which is the average of what they would have scored had they not been in brackets. As an example:
-<BLOCKQUOTE>
-<P>Pref list: FE[RT]GIA
-<UL>
-<LI>France: 1</LI>
-<LI>England: 2</LI>
-<LI>Russia: 3.5</LI>
-<LI>Turkey: 3.5</LI>
-<LI>Germany: 5</LI>
-<LI>Italy: 6</LI>
-<LI>Austria: 7</LI>
-</UL>
-</BLOCKQUOTE>
+
+	<BLOCKQUOTE>
+	<P>Pref list: FE[RT]GIA
+
+	<UL>
+		<LI>France: 1</LI>
+		<LI>England: 2</LI>
+		<LI>Russia: 3.5</LI>
+		<LI>Turkey: 3.5</LI>
+		<LI>Germany: 5</LI>
+		<LI>Italy: 6</LI>
+		<LI>Austria: 7</LI>
+	</UL>
+	</BLOCKQUOTE>
+
 <P>Powers not listed in a list were treated as being tied for last place on the preference list.
-<P ALIGN="JUSTIFY">Some people may object that trying to measure rankings is inappropriate, since there may be a bigger subjective difference between your first and second choice than there is between your second and third choices ‚Äì e.g., ‚ÄúI really want France, but failing that, I‚Äôd kind of prefer England over Germany‚Äù. However, since the judge does assign scores to each power in a preference list for its distribution algorithm, it seems appropriate to use its scoring system to weight the powers in a list.
+
+<P ALIGN="JUSTIFY">Some people may object that trying to measure rankings is inappropriate, since there may be a bigger subjective difference between your first and second choice than there is between your second and third choices ñ e.g., ìI really want France, but failing that, Iíd kind of prefer England over Germanyî. However, since the judge does assign scores to each power in a preference list for its distribution algorithm, it seems appropriate to use its scoring system to weight the powers in a list. 
+
 <P ALIGN="JUSTIFY">Note that only preferences of powers that actually submitted lists are included in the statistics I gathered. The alternative is to treat empty lists as "[AEFGIRT]" and to give each power 4 points.
+
 <P ALIGN="JUSTIFY">Obviously in this scoring system a lower number means a more favored country. So looking at all 1505 preference lists, here is the average score each country received based on the scoring outlined above:
-<BLOCKQUOTE>
-<UL>
-<LI>France: 2.78</LI>
-<LI>England: 3.30</LI>
-<LI>Russia: 3.75</LI>
-<LI>Turkey: 3.83</LI>
-<LI>Germany: 4.01</LI>
-<LI>Italy: 4.96</LI>
-<LI>Austria: 5.40</LI>
-</UL>
-</BLOCKQUOTE>
+
+	<BLOCKQUOTE>
+	<UL>
+		<LI>France: 2.78</LI>
+		<LI>England: 3.30</LI>
+		<LI>Russia: 3.75</LI>
+		<LI>Turkey: 3.83</LI>
+		<LI>Germany: 4.01</LI>
+		<LI>Italy: 4.96</LI>
+		<LI>Austria: 5.40</LI>
+	</UL>
+	</BLOCKQUOTE>
+
 <P ALIGN="JUSTIFY">Without worrying too much about standard deviations and chi-squared plots, it seems reasonable to assume from this data that the "average" player will submit a preference list that looks like: &nbsp;FE[RT]GIA
+
 <P ALIGN="JUSTIFY">So it is pretty clear, at least among past players on USCA and DEDO, that there is substantial bias towards France and against Austria.
+
 <P ALIGN="JUSTIFY">Another way to look at these numbers is to review the number of times a power was placed in a specific position on a preference list. Note that because the scoring system I used allows a power to end up with a fractional placement (1.5 if tied for first), I rounded all scores down to compile this chart. So two powers tied for first would all show up on this list as being in "first position" (1.5 points each), but three or four powers tied for first would all show up as "second" position (2-2.5 points each).
+
 <BR>&nbsp;
+
 <CENTER>
-<P><TABLE CELLPADDING="1" CELLSPACING="0" BORDER="0" BGCOLOR="BLACK">
-<TR>
-<TD>
-<TABLE CELLPADDING="3" CELLSPACING="1" WIDTH="600" BORDER="0">
-<TR>
-<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>Pos</CENTER></TH>
-<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>A</CENTER></TH>
-<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>E</CENTER></TH>
-<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>F</CENTER></TH>
-<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>G</CENTER></TH>
-<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>I</CENTER></TH>
-<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>R</CENTER></TH>
-<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>T</CENTER></TH>
-</TR>
-<TR>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>1</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>54 </CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>275</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>488</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>160</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>96</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>213</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>196</CENTER></TD>
-</TR>
-<TR>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>2</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>73</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>339</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>307</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>193</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>90</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>199</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>235</CENTER></TD>
-</TR>
-<TR>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>3</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>93</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>277</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>238</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>239</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>134</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>276</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>244</CENTER></TD>
-</TR>
-<TR>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>4</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>173</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>255</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>231</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>297</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>221</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>318</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>288</CENTER></TD>
-</TR>
-<TR>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>5</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>257</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>146</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>113</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>297</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>285</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>249</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>228</CENTER></TD>
-</TR>
-<TR>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>6</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>389</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>118</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>75</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>203</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>327</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>139</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>198</CENTER></TD>
-</TR>
-<TR>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>7</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>466</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>95</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>53</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>116</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>352</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>111</CENTER></TD>
-<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>116</CENTER></TD>
-</TR>
-</TABLE>
-</TD>
-</TR>
-</TABLE>
-<P>&nbsp;<P>Frequency in percentage (%) of power placement on a position on a preference list.
-<BR><IMG SRC="preflists.gif" WIDTH="640" HEIGHT="483" BORDER="0">
+	<P><TABLE CELLPADDING="1" CELLSPACING="0" BORDER="0" BGCOLOR="BLACK">
+	<TR>
+		<TD>
+		<TABLE CELLPADDING="3" CELLSPACING="1" WIDTH="600" BORDER="0">
+		<TR>
+			<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>Pos</CENTER></TH>
+			<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>A</CENTER></TH>
+			<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>E</CENTER></TH>
+			<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>F</CENTER></TH>
+			<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>G</CENTER></TH>
+			<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>I</CENTER></TH>
+			<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>R</CENTER></TH>
+			<TH WIDTH="75" HEIGHT="10" BGCOLOR="SILVER"><CENTER>T</CENTER></TH>
+		</TR>
+		<TR>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>1</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>54 </CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>275</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>488</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>160</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>96</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>213</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>196</CENTER></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>2</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>73</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>339</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>307</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>193</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>90</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>199</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>235</CENTER></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>3</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>93</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>277</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>238</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>239</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>134</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>276</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>244</CENTER></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>4</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>173</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>255</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>231</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>297</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>221</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>318</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>288</CENTER></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>5</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>257</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>146</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>113</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>297</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>285</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>249</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>228</CENTER></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>6</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>389</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>118</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>75</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>203</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>327</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>139</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>198</CENTER></TD>
+		</TR>
+		<TR>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>7</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>466</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>95</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>53</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>116</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>352</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>111</CENTER></TD>
+			<TD WIDTH="75" BGCOLOR="#FFFFFF"><CENTER>116</CENTER></TD>
+		</TR>
+		</TABLE>
+		</TD>
+	</TR>
+	</TABLE>
+
+	<P>&nbsp;<P>Frequency in percentage (%) of power placement on a position on a preference list.
+	<BR><IMG SRC="preflists.gif" WIDTH="640" HEIGHT="483" BORDER="0">
 </CENTER>
+
 <P ALIGN="JUSTIFY">On this list France's popularity is very clear. France is listed first on over 30% of all preference lists, and is listed in the top two on over 50%. Austria is a virtual mirror image of France's popularity, being listed last on about 30% of lists and in the bottom two on over 50% of all lists. England and Italy are less extreme versions of the same phenomenon, with England being listed in the top three 60% of the time and Italy in the bottom three with the same frequency.
+
 <P ALIGN="JUSTIFY">Going back to the argument that started this analysis, are these biases strong enough to mean that players willing to play Austria (e.g., that list them in the top 3 or 4 spaces) are disproportionately likely to receive Austria, regardless of what powers (other than Italy) might be listed above them? It would certainly seem so. If 85% of players are listing Austria at the bottom of their preference lists, it is a good bet that putting it above the middle point in your own list is likely to get that power assigned to you. But of course, that analysis is slated for a <I>later</I> article!
-<P ALIGN="JUSTIFY">However, another interesting note is as noted above, the 251 games reviewed had a total of 1505 preference lists. That actually translates to 6 preference lists submitted each game. So while the players submitting preference lists are certainly putting FE at the top and IA near the bottom, you can also expect there is a good chance that at least one player has not submitted any preference at all. (The original data gathered did not take into account game skill levels, so I can‚Äôt say whether this is more or less common in newbie games than others).
+
+<P ALIGN="JUSTIFY">However, another interesting note is as noted above, the 251 games reviewed had a total of 1505 preference lists. That actually translates to 6 preference lists submitted each game. So while the players submitting preference lists are certainly putting FE at the top and IA near the bottom, you can also expect there is a good chance that at least one player has not submitted any preference at all. (The original data gathered did not take into account game skill levels, so I canít say whether this is more or less common in newbie games than others).
+
 <P ALIGN="JUSTIFY">Another way of looking at the numbers, which may or may not be useful, is the comparative preference of each power on each preference lists:
+
 <BR>&nbsp;
+
 <CENTER>
-<P><TABLE CELLPADDING="1" CELLSPACING="0" BORDER="0" BGCOLOR="BLACK">
-<TR>
-<TD>
-<TABLE CELLPADDING="3" CELLSPACING="1" WIDTH="600" BORDER="0">
-<TR>
-<TD COLSPAN="9" WIDTH="600" BGCOLOR="SILVER"><CENTER><FONT SIZE="4">Disparaged</FONT></CENTER></TD>
-</TR>
-<TR>
-<TH WIDTH="92" HEIGHT="10" BGCOLOR="SILVER"><CENTER>Preference</CENTER></TH>
-<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>A</CENTER></TH>
-<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>E</CENTER></TH>
-<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>F</CENTER></TH>
-<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>G</CENTER></TH>
-<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>I</CENTER></TH>
-<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>R</CENTER></TH>
-<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>T</CENTER></TH>
-<TH WIDTH="93" HEIGHT="10" BGCOLOR="SILVER"><CENTER>Times preferred</CENTER></TH>
-</TR>
-<TR>
-<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>A</CENTER></TH>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>284</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>215</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>333</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>586</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>313</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>335</CENTER></TD>
-<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>2066</CENTER></TD>
-</TR>
-<TR>
-<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>E</CENTER></TH>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1117</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>535</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>865</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1061</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>823</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>820</CENTER></TD>
-<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>5221</CENTER></TD>
-</TR>
-<TR>
-<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>F</CENTER></TH>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1196</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>839</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>994</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1131</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>924</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>937</CENTER></TD>
-<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>6021</CENTER></TD>
-</TR>
-<TR>
-<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>G</CENTER></TH>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1031</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>520</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>389</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>931</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>615</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>649</CENTER></TD>
-<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>4135</CENTER></TD>
-</TR>
-<TR>
-<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>I</CENTER></TH>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>779</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>343</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>279</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>453</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>416</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>457</CENTER></TD>
-<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>2727</CENTER></TD>
-</TR>
-<TR>
-<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>R</CENTER></TH>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1070</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>553</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>456</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>749</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>972</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>716</CENTER></TD>
-<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>4516</CENTER></TD>
-</TR>
-<TR>
-<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>T</CENTER></TH>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1065</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>570</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>470</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>751</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>936</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>650</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
-<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>4442</CENTER></TD>
-</TR>
-<TR>
-<TH WIDTH="92" BGCOLOR="SILVER">Times disparaged</TH>
-<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>6258</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>3109</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>2344</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>4145</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>5617</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>3741</CENTER></TD>
-<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>3914</CENTER></TD>
-<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>&nbsp;</CENTER></TD>
-</TR>
-</TABLE>
-</TD>
-</TR>
-</TABLE>
+	<P><TABLE CELLPADDING="1" CELLSPACING="0" BORDER="0" BGCOLOR="BLACK">
+	<TR>
+		<TD>
+		<TABLE CELLPADDING="3" CELLSPACING="1" WIDTH="600" BORDER="0">
+		<TR>
+			<TD COLSPAN="9" WIDTH="600" BGCOLOR="SILVER"><CENTER><FONT SIZE="4">Disparaged</FONT></CENTER></TD>
+		</TR>
+		<TR>
+			<TH WIDTH="92" HEIGHT="10" BGCOLOR="SILVER"><CENTER>Preference</CENTER></TH>
+			<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>A</CENTER></TH>
+			<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>E</CENTER></TH>
+			<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>F</CENTER></TH>
+			<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>G</CENTER></TH>
+			<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>I</CENTER></TH>
+			<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>R</CENTER></TH>
+			<TH WIDTH="70" HEIGHT="10" BGCOLOR="SILVER"><CENTER>T</CENTER></TH>
+			<TH WIDTH="93" HEIGHT="10" BGCOLOR="SILVER"><CENTER>Times preferred</CENTER></TH>
+		</TR>
+		<TR>
+			<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>A</CENTER></TH>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>284</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>215</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>333</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>586</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>313</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>335</CENTER></TD>
+			<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>2066</CENTER></TD>
+		</TR>
+		<TR>
+			<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>E</CENTER></TH>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1117</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>535</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>865</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1061</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>823</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>820</CENTER></TD>
+			<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>5221</CENTER></TD>
+		</TR>
+		<TR>
+			<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>F</CENTER></TH>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1196</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>839</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>994</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1131</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>924</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>937</CENTER></TD>
+			<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>6021</CENTER></TD>
+		</TR>
+		<TR>
+			<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>G</CENTER></TH>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1031</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>520</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>389</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>931</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>615</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>649</CENTER></TD>
+			<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>4135</CENTER></TD>
+		</TR>
+		<TR>
+			<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>I</CENTER></TH>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>779</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>343</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>279</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>453</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>416</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>457</CENTER></TD>
+			<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>2727</CENTER></TD>
+		</TR>
+		<TR>
+			<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>R</CENTER></TH>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1070</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>553</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>456</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>749</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>972</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>716</CENTER></TD>
+			<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>4516</CENTER></TD>
+		</TR>
+		<TR>
+			<TH WIDTH="92" BGCOLOR="SILVER"><CENTER>T</CENTER></TH>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>1065</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>570</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>470</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>751</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>936</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>650</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#FFFFFF"><CENTER>---</CENTER></TD>
+			<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>4442</CENTER></TD>
+		</TR>
+		<TR>
+			<TH WIDTH="92" BGCOLOR="SILVER">Times disparaged</TH>
+			<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>6258</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>3109</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>2344</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>4145</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>5617</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>3741</CENTER></TD>
+			<TD WIDTH="70" BGCOLOR="#eeeeee"><CENTER>3914</CENTER></TD>
+			<TD WIDTH="93" BGCOLOR="#eeeeee"><CENTER>&nbsp;</CENTER></TD>
+		</TR>
+		</TABLE>
+		</TD>
+	</TR>
+	</TABLE>
 </CENTER>
-<P>&nbsp;
+
+	<P>&nbsp;
+
 <P ALIGN="JUSTIFY">This shows that, for instance, Austria is listed above England on 284 preference lists, whereas England is listed above Austria on 1117 lists. I'm not sure what this data shows directly, but it allows one to infer things like: when France is NOT listed first it's usually because England was listed above it -- or when Austria is not listed last it's usually because Italy was listed below it.
-<P ALIGN="JUSTIFY">There's more number crunching that could be done, but seeing as I've sat on this data since February of <I>2002</I> it‚Äôs probably time to publish it, huh?
+
+<P ALIGN="JUSTIFY">There's more number crunching that could be done, but seeing as I've sat on this data since February of <I>2002</I> itís probably time to publish it, huh?
+
+
 <BR>&nbsp;
+  
 <! ------------------------------------------------------------- >
 <! ------------------------------------------------------------- >
-<P><a href="mailto:ericgood@pacbell.net"><IMG src="/Zine/Common/letter.gif" border="0"></A><BR>&nbsp;
+
+<P><a href="mailto:ericgood@pacbell.net"><IMG src="../../Common/letter.gif" border="0"></A><BR>&nbsp;
 <b>Eric Goodman<BR>
 (<a href="mailto:ericgood@pacbell.net">ericgood@pacbell.net</a>)</b>
+
+
 <CENTER><P>
 <I>If you wish to e-mail feedback on this article to the author, and clicking
-on the mail address above<BR>does not work for you, feel free to use the
-"<A HREF="/Zine/S2003M/Common/DearDP.html"><B>Dear DP...</B></A>" mail interface.</I></CENTER>
+on the mail address above<BR>does not work for you, feel free to use the 
+"<A HREF="../Common/DearDP.html"><B>Dear DP...</B></A>" mail interface.</I></CENTER>
 </TD>
 </TR>
 </TABLE>
+
 <P>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/S2003M/"><IMG align=right SRC="/Zine/Common/SEIssue.gif" border=0></A>
+  <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/SEIssue.gif" border=0></A>
+
+
 </CENTER>
 </BODY>
 </HTML>
-<!--
--->
+
+
+

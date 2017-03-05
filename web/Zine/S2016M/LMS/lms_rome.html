@@ -1,0 +1,470 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>DP S2016M: Last Man Standing: Operation Rome</TITLE>
+
+<!-- ---------------------Header---------------------------------- -->
+<!-- ------------------------------------------------------------- -->
+
+<!---- Authored by  ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Created on September 23, 2006 ---->
+
+<style>
+.inputBox {
+	color:			#000000;
+	background:		#FFFFFF;
+	border-color:	#000000;
+	border-top:		1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-right:	1px solid;
+	font-family:	verdana;
+	font-size:		14px;
+}
+</style>
+<script>
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+		var args = arguments;
+		return this.replace(/{(\d)}/g, function(match, number) {
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+}
+function changeMap(selector, reference, content) {
+	var selected = selector.options[selector.selectedIndex];
+	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
+	var text = document.getElementById(selector.name + '.text');
+	image.src = anchor.href = reference.format(selected.value);
+	image.alt = text.innerHTML = content.format(selected.text);
+}
+</script>
+</head>
+
+<body style="background-color: rgb(255, 255, 255);">
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toS2016M.gif" align="right" border="0"></a>
+<br clear="all">
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
+
+
+<CENTER>
+<H1>LAST MAN STANDING: OPERATION ROME</H1>
+<h2>by Mario Huys</h2>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+</CENTER>
+<p>
+  <TABLE WIDTH="95%" BORDER="0" ALIGN="CENTER">
+      <TR>
+	      <TD ALIGN="JUSTIFY">
+
+<h3>All roads lead to Rome</h3>
+
+<p>An odd statement perhaps, since most roads so far led to Berlin. But if we
+focus on the location of Rome on the Diplomacy board, we can see that
+there's some truth to the adagio. Or rather, that the reverse, that all
+roads lead <i>through</i> Rome, is easy to refute. Rome is in the center of
+this small strip of land called the Italian boot, with the Tyrrhenian Sea
+on one side and the Adriatic separating it from the Balkans somewhere on
+the other side. For armies crossing East to West or vice versa it's easier
+to take the land route through Venice, while fleets will pass underneath
+through the Ionian. South-North passages will usually completely avoid the
+Italian boot.</p>
+
+<p>Things would improve a little if Rome were to be lumped together with
+Tuscany, as in the Milan variant. As it stands, Rome in the context of Last
+Man Standing is perhaps best remembered, or renowned, for the frequent
+difficulties one has in removing the army starting in it.
+This has to do in part with the fact that it's one of only four home
+centers that cannot be captured in the first year, not even with the help
+of a friendly convoy (involving in this case fleet Naples). The other
+centers are Liverpool, starting point of the English army that features in
+so many LMS puzzles, Moscow which we'll analyze below, and Smyrna, another
+center at the far end of the map. Compared to those Rome is pretty central
+on the map, and yet it's not easy to reach quickly.</p>
+
+<p>This in fact makes it all the more attractive as a final destination point,
+as units get the time to choose their paths. And that's what we're going to
+do here. Army Liverpool is prompted to find its way to Rome from Britannia,
+one of the furthest outposts of the Roman empire, to Rome to perform in the
+Circus and become the Last Gladiator (I mean Man) Standing. Bread and games!</p>
+
+<p align="center"><a href="images/lms_lvp-rom.gif" target="_blank"><img src="images/lms_lvp-rom.gif" width="50%" alt="Army Liverpool to Rome, After Winter 1903"/><br/><b>Army Liverpool to Rome, After Winter 1903<br/><i><small>Click to enlarge in separate window</small></i></b></a></p>
+
+<p><pre align=center>
+Austria (1/3) A Ven / Bud Ven Vie                
+England (1/6) A Tri / Edi Kie Lon Lvp Mun Tri    
+France  (0/3)         Bre Mar Par                
+Italy   (1/1) A Apu / Rom                        
+Russia  (1/7) F Rom / Ber Con Mos Nap Sev Stp War
+Turkey  (0/2)         Ank Smy                    
+</pre></p>
+
+<h3>See Naples and die</h3>
+
+<p>This phrase was popularized by Goethe, and so it's fitting that a German
+army triumphs in Naples, in the hopes that it dies on the spot and leaves
+us with an empty board. To get to the exact same end position as shown
+below, I offer the following riddle.
+<i>In old </i>Napoli<i>, one was born, one passed through, one returned, but only
+one survived to tell the tale.</i></p>
+
+<p align="center"><a href="images/lms_GA-nap17.gif" target="_blank"><img src="images/lms_GA-nap17.gif" width="50%" alt="German Army to Naples, After Winter 1904"/><br/><b>German Army to Naples, After Winter 1904<br/><i><small>Click to enlarge in separate window</small></i></b></a></p>
+
+<p><pre align=center>
+Austria (0/2)         Bud Vie                    
+England (0/4)         Bre Edi Lon Lvp            
+Germany (1/7) A Nap / Ber Kie Mar Mun Nap Par Ven
+Russia  (0/6)         Con Mos Sev Stp Tri War    
+Turkey  (0/3)         Ank Rom Smy                
+</pre></p>
+
+<h3>Army Liverpool to Moscow</h3>
+
+<p>I'm going to try and prove that it isn't all that difficult to reconstruct
+the whole game from just the single map that is given. Let's take a close
+look at it.</p>
+
+<p align="center"><a href="images/lms_lvp-mos13.gif" target="_blank"><img src="images/lms_lvp-mos13.gif" width="50%" alt="Army Liverpool to Moscow, After Winter 1903"/><br/><b>Army Liverpool to Moscow, After Winter 1903<br/><i><small>Click to enlarge in separate window</small></i></b></a></p>
+
+<p>The first thing to observe are the paths that the two raiders (the French
+and English armies) took, prominently marked by the centers they captured
+on the way. Since it's only 1903, they can have at most captured three each
+so far, at a distance of at the most two tempi between each. England
+captured Kiel and Berlin before landing in Warsaw. France captured Munich,
+Venice and Budapest before Sevastopol. But because there can only be three,
+we can deduce that Munich was taken by the second French army, A Par, while
+it was A Mar that took the three other and is still on the board. In
+principle any of the centers that England captured in Germany could also
+have been captured by a fleet, but for the French army there can be no
+doubt, because Budapest can be reached no earlier than 1902 and only by
+army Marseilles. It could move through Tyrolia instead of Venice, but what
+would be the point of that?</p>
+
+<p>Let us next consider the units that start the furthest away from the
+destination, because they define in great part how others must move,
+particularly the snipers sent out to intercept them. In the West we have F
+Bre and A Lvp (which we already know a lot about), in the South there's A
+Rom and F Nap. We're not so concerned about F Tri, because chances are good
+that it will either get dislodged in Fall 1901 or disbanded in Winter 1901,
+prompted by a loss of centers.</p>
+
+<p>We determined that A Lvp will make landfall in Kiel in Fall 1901. For that
+to happen F Kie must move to Heligoland Bight and one of the English fleets
+(probably F Lon) to the North Sea. France is gaining centers, so cannot
+disband its F Bre. Sevastopol is too far away and St. Petersburg can only
+be reached in Spring 1903, too late to be dislodged, since the (Austrian)
+attacker would otherwise appear on the After Winter 1903 map. This means
+that F Bre will need to be swept. This requires two snipers. The two sniper
+countries are Russia and Germany, since both will be completely eliminated
+in the end. Germany already has F Kie in the area. A German army would not
+be of much use, as most territories around the Bight and the North Sea are
+either a sea or a supply center. The better option is to call in the
+cavalry, in the form of F Stp/sc, which can reach the North Sea in just 4
+turns if moving through the Baltic Sea and Denmark. Combined they can sweep
+two fleets in 1902 (actually F Bre will attack F Lon in the North Sea
+first), so the remaining fleet, F Edi should try to reach St. Petersburg,
+where it will get dislodged by the Austrian army there, as this is still
+1902.</p>
+
+<p>Let's turn South. There the situation is slightly more complicated. We know
+that Italy takes Trieste, but we don't know if that will be in 1901 or
+1902, as it's the only center that Italy captures. If it's in 1902, then it
+can disband F Nap, but A Rom will probably still be in Rome after the first
+year, supporting A Mar into Venice to dislodge F Tri there, or moved up to
+Piedmont or Tyrolia. If it's in 1901, F Nap will still be around, as it's
+one of those units that cannot be dislodged in the first year. It would
+need to move to Trieste or Turkey to find a spot to die. Let's leave this
+open for a while and check up on Austria and Germany.</p>
+
+<p>Austria looks poised to lose centers. The only centers that it keeps in the
+end are Vienna and St. Petersburg, which it can only take in 1902. To get
+there, it needs to have at the end of 1901 an army in either Warsaw,
+Ukraine or Sevastopol. But why would we capture a center when we're trying
+to lose home centers? That makes the Ukraine the natural choice and favors
+the strategy of Italy taking Trieste in 1901.</p>
+
+<p>Germany has another problem. It's bound to lose all its home centers by
+1902, when A Lvp takes Berlin. Without any other centers it would
+effectively be eliminated at this point, something that the standard LMS
+rules forbid. To prevent this it should take a center in the first year and
+lose it in the third year. Why not take it in the second year? Because with
+only one center after 1901 its remaining unit, F Kie, would have the double
+task of eliminating the 2 fleets in the West and grab that extra center,
+something it clearly can't do in a single year.</p>
+
+<p>The only centers lost in the third year are those that have units on it on
+the After Winter 1903 map, Warsaw and Sevastopol. Only Warsaw can be
+reached by Germany in 1901, so that decides it. Now, Russia can do a
+similar thing to keep its numbers up. Keeping a maximum number of snipers
+around can only work to our advantage. We know that Budapest will be taken
+by France in 1902. Taking it in 1901 with A War accomplishes two things:
+Russia keeps its full strength and Austria can disband a second unit.</p>
+
+<p>The biggest remaining obstacle is to decide how to handle Turkey. As in the
+original Holmes story we can dedicate two Russian units to the task, F Sev
+and A Mos. Turkey still has all its home centers, but nothing else in 1903.
+Should we let it take Sevastopol in 1901? There seems to be no benefit in
+there. We can as well take out a first Turkish unit in Armenia and move
+another to Sevastopol in 1902. Or even beyond to Galicia or the Ukraine if
+convoying  to Rumania or Sevastopol first. Or even Moscow, since we know
+that Russia can retake it in 1903.</p>
+
+<p>What about F Nap? If we send it to Turkey, it would be in the Aegean Sea at
+the end of 1901. Then moving through Constantinople in the Spring, it would
+burst into the Black Sea in Fall. By strategically placing F Ank on its
+path and with F Sev in Armenia, it could first take out the Turkish fleet
+in F02, then A Con in Sevastopol in S03, before being dislodged in turn by
+A Mar in F03. Immensely effective, all thanks to that Russian fleet in
+Armenia.</p>
+
+<p>Let's try out what we've learned so far.</p>
+
+<p align="center">
+<a id="lms_lvp-mos.1901.anchor" href="images/lms_lvp-mos5.gif" target="_blank">
+<img id="lms_lvp-mos.1901.image" src="images/lms_lvp-mos5.gif" width="50%" alt="Army Liverpool to Moscow, After Winter 1901"/><br/>
+<b id="lms_lvp-mos.1901.text">Army Liverpool to Moscow, After Winter 1901</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-mos.1901" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-mos{0}.gif', 'Army Liverpool to Moscow, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5" selected>After Winter 1901</option>
+</select>
+</p>
+
+<p>There are a few units that haven't been mentioned yet, such as A Ven and A
+Vie. With the assistance of A Mun, we can set these up to dislodge the
+raider, A Ven. Note how A Bud moves around Galicia to get to the Ukraine
+without blocking A War.</p>
+
+<p align="center">
+<a id="lms_lvp-mos.1902.anchor" href="images/lms_lvp-mos9.gif" target="_blank">
+<img id="lms_lvp-mos.1902.image" src="images/lms_lvp-mos9.gif" width="50%" alt="Army Liverpool to Moscow, After Winter 1902"/><br/>
+<b id="lms_lvp-mos.1902.text">Army Liverpool to Moscow, After Winter 1902</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-mos.1902" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-mos{0}.gif', 'Army Liverpool to Moscow, {0}')">
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+</select>
+</p>
+
+<p>We can use A Ber either to remove A Par in Ber or F Edi in St. Petersburg.
+Since A Par can move all the way to Moscow and F Edi not, the choice is
+easy. But can we allow Turkey to take a Russian home center? No, because
+Russia would only have one left, which wouldn't be sufficient to reduce the
+unit count to three. Can we avoid it? Yes, by sending A Con to the Ukraine
+(again). Now, we would like very much to keep F Sev in the game, but in
+fact the two armies are more useful.</p>
+
+<p align="center">
+<a id="lms_lvp-mos.1903.anchor" href="images/lms_lvp-mos13.gif" target="_blank">
+<img id="lms_lvp-mos.1903.image" src="images/lms_lvp-mos13.gif" width="50%" alt="Army Liverpool to Moscow, After Winter 1903"/><br/>
+<b id="lms_lvp-mos.1903.text">Army Liverpool to Moscow, After Winter 1903</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-mos.1903" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-mos{0}.gif', 'Army Liverpool to Moscow, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</p>
+
+<p>Did you see this coming? Perhaps you were already satisfied obtaining a
+situation with four units in the last year? That would be close, but no
+cigar. Note also how the German army manages to end up in Finland, quite an
+uncommon sight.</p>
+
+<p align="center">
+<a id="lms_lvp-mos.1904.anchor" href="images/lms_lvp-mos17.gif" target="_blank">
+<img id="lms_lvp-mos.1904.image" src="images/lms_lvp-mos17.gif" width="50%" alt="Army Liverpool to Moscow, After Winter 1904"/><br/>
+<b id="lms_lvp-mos.1904.text">Army Liverpool to Moscow, After Winter 1904</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-mos.1904" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-mos{0}.gif', 'Army Liverpool to Moscow, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</p>
+
+<blockquote><i><a href="lms_lvp-mos.pdf" target="_blank">Click here</a> for the complete solution.</i></blockquote>
+
+<p>The final stage. Livonia would serve just as well, but given the prominence
+of the Ukraine in this solution, it's fitting to visit there one more time.</p>
+
+<h3>French army to St. Petersburg</h3>
+
+<p>Let's compare the problem map with the final map of the previous solution.</p>
+
+<p align="center"><a href="images/lms_mar-stp17.gif" target="_blank"><img src="images/lms_mar-stp17.gif" width="50%" alt="French army to St. Petersburg, After Winter 1904"/><br/><b>French army to St. Petersburg, After Winter 1904<br/><i><small>Click to enlarge in separate window</small></i></b></a></p>
+
+<p>You can observe that the whole Southern half up to the line Brest to
+Sevastopol is completely identical. This is an indication that for the most
+part the same approach can be followed there. It might turn out
+differently, but it's a good starting point.</p>
+
+<p>This then already answers the question about which French army is standing
+in St. Petersburg. Since A Mar reaches Sevastopol in 1903 and Sevastopol is
+two moves from St. Petersburg with Moscow (a home center) in between, it
+can be no other than this army. That was easy enough.</p>
+
+<p>Now let's look to the top of the map. There are several changes. London
+became French, Kiel is now German, as is Moscow, Warsaw is Austrian, and
+St. Petersburg of course is French.</p>
+
+<p>Since Kiel did not become English, but instead London became French, the
+natural conclusion is that A Lvp was disbanded in Winter. But who then took
+Berlin? It must have been an English fleet, arriving there in 1902 after
+passing through the Heligoland Bight. This is slightly problematic for F
+Kie, since it can't take up position in the Bight. Luckily there's also the
+Skagerrak.</p>
+
+<p>The most significant change compared to the Moscow map is that Germany is
+still in the game, with two centers even. That second center is Moscow,
+which is on the path from Sevastopol to St. Petersburg, the route that the
+French army is taking in the final year. Assuming that there will be four
+units left in the final year (which is generally easier to get to than
+three), Moscow will be occupied. Moreover Russia will have an army in
+Livonia, because that's the only place from where it can support the French
+army first to Moscow and then to St. Petersburg. With Livonia and Moscow
+already reserved, the fourth unit is going to have to come from Scandinavia
+or the waters surrounding it. And there's one perfect candidate for that in
+the form of the English fleet spending the Winter of 1902 in Berlin. Two
+seasons later it can be in the Gulf of Bothnia, next to St. Petersburg.</p>
+
+<p>With the grand strategy decided it's time to take out the board and put
+down the pieces. The finer details can be taken care of on the way.</p>
+
+<p align="center">
+<a id="lms_mar-stp.1901.anchor" href="images/lms_mar-stp5.gif" target="_blank">
+<img id="lms_mar-stp.1901.image" src="images/lms_mar-stp5.gif" width="50%" alt="Army Marseilles to St. Petersburg, After Winter 1901"/><br/>
+<b id="lms_mar-stp.1901.text">Army Marseilles to St. Petersburg, After Winter 1901</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mar-stp.1901" class="inputBox" onchange="changeMap(this, 'images/lms_mar-stp{0}.gif', 'Army Marseilles to St. Petersburg, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5" selected>After Winter 1901</option>
+</select>
+</p>
+
+<p>I used a small variation for the Italian armies, resulting in A Ven
+surviving and A Rom being removed. This allows both A Ber and A Vie to
+simply hold, but in some circumstances this added flexibility would allow
+to move them over to more desirable positions. Note also that Germany did
+not capture Warsaw, allowing Russia to build a unit. It's usually advisable
+to build one, but looking ahead I don't see any good use for this extra
+unit, so waived the build.</p>
+
+<p align="center">
+<a id="lms_mar-stp.1902.anchor" href="images/lms_mar-stp9.gif" target="_blank">
+<img id="lms_mar-stp.1902.image" src="images/lms_mar-stp9.gif" width="50%" alt="Army Marseilles to St. Petersburg, After Winter 1902"/><br/>
+<b id="lms_mar-stp.1902.text">Army Marseilles to St. Petersburg, After Winter 1902</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mar-stp.1902" class="inputBox" onchange="changeMap(this, 'images/lms_mar-stp{0}.gif', 'Army Marseilles to St. Petersburg, {0}')">
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+</select>
+</p>
+
+<p>All goes according to plan. A Con could again have moved on to the Ukraine,
+allowing for a third Russian sniper to remain. But in this case it's
+possible to clear the task with just two, so why have more? Meanwhile A Mos
+already took up position in Livonia, ahead of schedule.</p>
+
+<p align="center">
+<a id="lms_mar-stp.1903.anchor" href="images/lms_mar-stp13.gif" target="_blank">
+<img id="lms_mar-stp.1903.image" src="images/lms_mar-stp13.gif" width="50%" alt="Army Marseilles to St. Petersburg, After Winter 1903"/><br/>
+<b id="lms_mar-stp.1903.text">Army Marseilles to St. Petersburg, After Winter 1903</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mar-stp.1903" class="inputBox" onchange="changeMap(this, 'images/lms_mar-stp{0}.gif', 'Army Marseilles to St. Petersburg, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</p>
+
+<p>F Sev is acting precisely as outlined in the previous solution, where that
+plan had ultimately been abandoned. A postponed desert tastes double as
+sweet.</p>
+
+<p align="center">
+<a id="lms_mar-stp.1904.anchor" href="images/lms_mar-stp17.gif" target="_blank">
+<img id="lms_mar-stp.1904.image" src="images/lms_mar-stp17.gif" width="50%" alt="Army Marseilles to St. Petersburg, After Winter 1904"/><br/>
+<b id="lms_mar-stp.1904.text">Army Marseilles to St. Petersburg, After Winter 1904</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mar-stp.1904" class="inputBox" onchange="changeMap(this, 'images/lms_mar-stp{0}.gif', 'Army Marseilles to St. Petersburg, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</p>
+
+<blockquote><i><a href="lms_mar-stp.pdf" target="_blank">Click here</a> for the complete solution.</i></blockquote>
+
+<p>The end phase had already been spelled out. The Russians will surely know
+to appreciate the wine that the French army carried along. <i>Mission
+accompli.</i></p>
+
+<h3>Conclusions drawn</h3>
+
+<p>I have attempted to prove that it's feasible to solve LMS puzzles mostly
+from the information provided by the final map. It's not completely
+straightforward, otherwise there would be no challenge. It can get more
+complicated than this, enticing more mental gymnastics. But basically the
+techniques outlined here can be reused over and over again. Use them
+judiciously.</p>
+
+<p>I'm adding the games <a href="http://uk.diplom.org/?game=lvp-mos">lvp-mos</a>
+and <a href="http://uk.diplom.org/?game=mar-stp">mar-stp</a> to UKDP.
+These start off where they ended here, in the Winter of 1904. Hop over and
+join one to take it further past its logical conclusion.</p>
+
+<BR/><BR/><TABLE>
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD><A href="mailto:woelpad@gmail.com"><IMG 
+      src="../../Common/letter.gif" border=0></A> </TD>
+    <TD><STRONG>Mario Huys<BR/>(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)</STRONG> 
+  </TD></TR></TBODY></TABLE>
+<P>
+<I>If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the <A 
+href="../Common/DearDP.html">"<B>Dear 
+DP...</B>"</A> mail interface.</I> 
+</table><P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
+<a href="../"><img src="../../Common/toS2016M.gif" align="right" border="0"></a>
+
+
+</BODY></HTML>
+

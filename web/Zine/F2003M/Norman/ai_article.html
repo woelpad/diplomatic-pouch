@@ -2,79 +2,113 @@
 <HEAD>
 <META http-equiv="Content-Type" content="text/html; charset=windows-1252"></META>
 <TITLE>DP F2003M: The Diplomacy AI Development Environment (DAIDE) Project</TITLE>
+
 <!---- Authored by David Norman ---->
 <!---- Created on the DPZine March 25th, 2003 ---->
 <!---- Published on the Pouch Zine with permissions ---->
 <!---- Updated by Edward Hawthorne on 07/05/03 ---->
+
 </HEAD>
+
 <BODY TEXT="BLACK" LINK="BLUE" VLINK="BLUE" ALINK="RED">
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/F2003M/"><IMG align=right SRC="/Zine/Common/toF2003M.gif" border=0></A>
-<BR clear=both>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-<BR>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toF2003M.gif" border=0></A>
+
+  <BR clear=both>
+  <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+  <BR>
+  
 <! ------------------------------------------------------------- >
 <! ------------------------------------------------------------- >
+  
 <CENTER><H2>The Diplomacy AI Development Environment (DAIDE) Project</FONT></H2>
 <H3><I>By&nbsp; David Norman</I></H3></CENTER>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+  <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
 <CENTER><P>
-<TABLE WIDTH="90%" BORDER="0">
-<TR>
-<TD ALIGN="JUSTIFY">
+  <TABLE WIDTH="90%" BORDER="0">
+    <TR>
+    <TD ALIGN="JUSTIFY">
+
 <P ALIGN="JUSTIFY">Over the years, a number of people have attempted to write a Diplomacy AI - A computer program which can play Diplomacy. More well known ones include:
+
 <UL>
-<LI><P ALIGN="JUSTIFY">The Diplomacy Computer Game for DOS. Released by Avalon Hill in the 1980â€™s, a DOS program which would play No-press Diplomacy. A poor AI made it easy to beat.</P></LI>
-<LI><P ALIGN="JUSTIFY">The DPP, or Diplomacy Programming Project, by Daniel Loeb, from the early to mid 1990â€™s. Dannyâ€™s approach was to firstly work out the theory of multi-player games, for which he and several other people were awarded PhDâ€™s for their work, and then to put this theory into practice in order to write a Diplomacy AI. It played several no-press Judge games, and managed to achieve a three-way draw in one of them.</P></LI>
-<LI><P ALIGN="JUSTIFY">SeaNail, by Sean Lorber. Written in Visual Basic, SeaNail has played in a small number of Judge games, but has never achieved a successful result. SeaNail has had a lot of work put into the tactics engine, but currently still requires a human to enter an alliance matrix.</P></LI>
-<LI><P ALIGN="JUSTIFY">The Hasbro Diplomacy Game, written for Hasbro by Microprose, and released in 2000. Commonly acknowledged to be a very poor product, it has difficulty working out simple problems such as how England can take Norway in 1901 (and for the Hasbro AIâ€™s benefit, the answer isnâ€™t to open to NWG and NTH, and then order both of these units to move to Nwy).</P></LI>
+	<LI><P ALIGN="JUSTIFY">The Diplomacy Computer Game for DOS. Released by Avalon Hill in the 1980’s, a DOS program which would play No-press Diplomacy. A poor AI made it easy to beat.</P></LI>
+
+	<LI><P ALIGN="JUSTIFY">The DPP, or Diplomacy Programming Project, by Daniel Loeb, from the early to mid 1990’s. Danny’s approach was to firstly work out the theory of multi-player games, for which he and several other people were awarded PhD’s for their work, and then to put this theory into practice in order to write a Diplomacy AI. It played several no-press Judge games, and managed to achieve a three-way draw in one of them.</P></LI>
+
+	<LI><P ALIGN="JUSTIFY">SeaNail, by Sean Lorber. Written in Visual Basic, SeaNail has played in a small number of Judge games, but has never achieved a successful result. SeaNail has had a lot of work put into the tactics engine, but currently still requires a human to enter an alliance matrix.</P></LI>
+
+	<LI><P ALIGN="JUSTIFY">The Hasbro Diplomacy Game, written for Hasbro by Microprose, and released in 2000. Commonly acknowledged to be a very poor product, it has difficulty working out simple problems such as how England can take Norway in 1901 (and for the Hasbro AI’s benefit, the answer isn’t to open to NWG and NTH, and then order both of these units to move to Nwy).</P></LI>
 </UL>
+
 <P ALIGN="JUSTIFY">However, something that has not previously been attempted is to set up an environment where AIs can easily compete against each other without human help, or compete against a number of humans without an extra human to look after the AIs. That is what the Diplomacy AI Development Environment (DAIDE) project sets out to achieve.
+
 <P ALIGN="JUSTIFY">The environment contains a number of components. At the centre is the server, which runs the game. Each AI connects to the server via TCP/IP, so the AI can be on the same machine as the Server, or on another machine on the local network, or can connect over the internet. And because TCP/IP is a standard protocol, the AI can run on any platform and operating system that the author wants to write it on.
+
 <P ALIGN="JUSTIFY">The protocol has been designed to make writing an AI as easy as possible. It contains messages to do everything that is needed to do to create an AI - describing the variant, setting up the game, ordering units and receiving results, and sending press. The language is based on the language used in the DPP, and is designed for ease of handling by a piece of software, rather than for ease of use by a human.
+
 <P ALIGN="JUSTIFY">The press is written using a sequence of tokens. The way in which these tokens are used is completely defined by the protocol, so that the AI writer knows exactly what to expect. The press is further broken up into levels, starting from level 0 - No Press, and level 10 - where you can just make suggestions like peace or an alliance. Level 20 allows you to talk about specific moves. By level 60 you can start asking questions (e.g. Do you think there is an EF alliance?). And so it goes on. By level 130 (the top level), you can talk about most things you can using plain English (except of course, chatting about the weather...).
+
 <P ALIGN="JUSTIFY">So how far has the project got? Well we have a Server up and running. It does pretty much everything it is intended to do. We have a DLL written, which means that if you are programming in Windows, the TCP/IP communications are all handled for you. We have a C++ Client Framework, that does all the work of translating messages into structures containing the map and the current position, converting orders back into protocol messages, and provides a base class from which you can derive your AI, with all the simple stuff already done for you. We also have a Java Client Framework under development, which will do the same thing if you'd rather program in Java.
+
 <P ALIGN="JUSTIFY">We also have what is almost certainly going to be the best Client for a long time. The DAIDE Mapper. This puts a map on the screen, and lets a human enter orders using point-and-click. Hence by mixing AIs and Mappers, you can have a human vs computer game, or with seven Mappers, you can have an all human game.
-<P ALIGN="JUSTIFY">But most importantly, we have a few AIs. Nothing too complicated yet. We have HoldBot, which is an extremely good Bot at entering Hold orders, but hasn't actually worked out how to move. We have RandBot, which picks a random adjacent province for each unit, and moves there. And we have SmarterBot, which is like RandBot, except that it has worked out that moving to an SC you don't own in a Fall turn is a good idea.
+
+<P ALIGN="JUSTIFY">But most importantly, we have a few AIs. Nothing too complicated yet. We have HoldBot, which is an extremely good Bot at entering Hold orders, but hasn't actually worked out how to move. We have RandBot, which picks a random adjacent province for each unit, and moves there. And we have SmarterBot, which is like RandBot, except that it has worked out that moving to an SC you don't own in a Fall turn is a good idea. 
+
 <P ALIGN="JUSTIFY">However, at present, the cream of the crop is DumbBot. So called because it is still pretty stupid, but even so it is a big step up from SmarterBot. It does a small amount of tactical analysis, and generates moves which while often far from optimal, do show some signs of common sense. Despite having taken just 15 hours to write, it can make an awkward opponant.
+
 <P ALIGN="JUSTIFY">But probably the biggest achievement to date, is that DumbBot has become, as far as we are aware, the first ever computer AI player to achieve a solo against all-human opposition. Now admittedly, it was only a four player (Sail Ho! variant) game, and admittedly, the players did know which power the DumbBot was playing, and appear to have all independently decided that the best way to win the game was to take on the other humans first to get the advantage, and then turn on DumbBot for the solo. But even so, DumbBot was able to take advantage of the other players turning their backs on it, and then was able to push through and take the solo when it was available.
+
 <P ALIGN="JUSTIFY">There is obviously a long way to go until we have really competitive AIs playing the game, but these initial AIs do show that the system does work, does allow AIs to be written, and does allow them to play against each other, and against humans.
+
 <P ALIGN="JUSTIFY">So do you think you can write an AI? It doesn't take that much code - RandBot is written in C++ using the Client Framework, and is just 100 lines of code. Even DumbBot is only 1200 lines of code. You don't need to know anything about TCP/IP - the DLL does all that for you. You can use any language you like - C++, Java and VB are all been used already. And if you want to see how it's done, the source code for HoldBot, RandBot and DumbBot are all freely available.
+
 <P>Think you are up to it? Here are the next places to go:
+
 <UL>
-<LI><P ALIGN="JUSTIFY">For general information about Diplomacy AIs: <A HREF="http://www.starblood.org/scott/diplomacyAI.html">Scotts Sisson's AI</A> page <!-- http://www.starblood.org/scott/diplomacyAI.html --></P></LI>
-<LI><P ALIGN="JUSTIFY">For the TCP/IP DLL, and details of the low level protocol: <A HREF="http://uk.geocities.com/arr28/dipai/">Andrew Rose's AI</A> page<!-- : http://uk.geocities.com/arr28/dipai/ --></P></LI>
-<LI><P ALIGN="JUSTIFY">For the Server, Mapper, DumbBot, RandBot, HoldBot, and various source code samples: <A HREF="http://www.ellought.demon.co.uk/dipai">David Norman's AI</A> page<!-- : http://www.ellought.demon.co.uk/dipai --></P></LI>
-<LI><P ALIGN="JUSTIFY">And for discussions of developing AIs under the DAIDE project: The Yahoo DipAI mailing: <A HREF="mailto:dipai@yahoogroups.com">dipai@yahoogroups.com</A>. Click to <A HREF="dipai-subscribe@yahoogroups.com">subscribe</A><!-- , send a message to dipai-subscribe@yahoogroups.com -->.</P></LI>
+	<LI><P ALIGN="JUSTIFY">For general information about Diplomacy AIs: <A HREF="http://www.starblood.org/scott/diplomacyAI.html">Scotts Sisson's AI</A> page <!-- http://www.starblood.org/scott/diplomacyAI.html --></P></LI>
+
+	<LI><P ALIGN="JUSTIFY">For the TCP/IP DLL, and details of the low level protocol: <A HREF="http://uk.geocities.com/arr28/dipai/">Andrew Rose's AI</A> page<!-- : http://uk.geocities.com/arr28/dipai/ --></P></LI>
+
+	<LI><P ALIGN="JUSTIFY">For the Server, Mapper, DumbBot, RandBot, HoldBot, and various source code samples: <A HREF="http://www.ellought.demon.co.uk/dipai">David Norman's AI</A> page<!-- : http://www.ellought.demon.co.uk/dipai --></P></LI>
+
+	<LI><P ALIGN="JUSTIFY">And for discussions of developing AIs under the DAIDE project: The Yahoo DipAI mailing: <A HREF="mailto:dipai@yahoogroups.com">dipai@yahoogroups.com</A>. Click to <A HREF="dipai-subscribe@yahoogroups.com">subscribe</A><!-- , send a message to dipai-subscribe@yahoogroups.com -->.</P></LI>
 </UL>
+
 <P>And may the best Bot win!
+
 <P>&nbsp;
+
 </TD>
 </TR>
+  
 <! ------------------------------------------------------------- >
 <! ------------------------------------------------------------- >
+
 <TR>
-<TD><P><A HREF="mailto:david@ellought.demon.co.uk"><IMG src="/Zine/Common/letter.gif" border="0"></A>
+<TD><P><A HREF="mailto:david@ellought.demon.co.uk"><IMG src="../../Common/letter.gif" border="0"></A>
 </TD>
 </TR>
 <TR>
 <TD>
 <B>David Norman<br>
 (<A HREF="mailto:david@ellought.demon.co.uk">david@ellought.demon.co.uk</A>)</B>
+
 <BLOCKQUOTE>
-<CENTER><P><EM>If you wish to e-mail feedback on this article to the author, click on the letter above. If that does not work, feel free to use the "<A HREF="/Zine/F2003M/Common/DearDP.html"><B>Dear DP...</B></A>" mail interface.</EM>
+<CENTER><P><EM>If you wish to e-mail feedback on this article to the author, click on the letter above. If that does not work, feel free to use the "<A HREF="../Common/DearDP.html"><B>Dear DP...</B></A>" mail interface.</EM>
 </CENTER>
 </BLOCKQUOTE>
 </TD>
 </TR>
 </TABLE>
+
 <P>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/F2003M/"><IMG SRC="/Zine/Common/toF2003M.gif" border=0 ALIGN=right></A>
+  <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG SRC="../../Common/toF2003M.gif" border=0 ALIGN=right></A>
 <BR>&nbsp;
+
 </CENTER>
 </BODY>
 </HTML>
-<!--
--->

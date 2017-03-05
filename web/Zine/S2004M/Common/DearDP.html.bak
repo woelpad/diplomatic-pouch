@@ -1,0 +1,77 @@
+<!---- Authored by John Coffin ---->
+<!---- Created on February 8, 2004 ---->
+<!---- Last updated by Scott Webster on October 26, 2004 ---->
+
+<HTML>
+<HEAD>
+<TITLE>DP [ISSUE]: [TITLE]</TITLE>
+</HEAD>
+
+<! ---------------------Header---------------------------------- >
+<! ------------------------------------------------------------- >
+
+<BODY BGCOLOR="#FFFFFF">
+<A HREF="../.."><IMG ALIGN=LEFT SRC="../../Common/DPbutton.gif" BORDER=0></A>
+<A HREF=".."><IMG ALIGN=RIGHT SRC="../../Common/to[ISSUE].gif" BORDER=0></A>
+
+<BR CLEAR=BOTH>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<BR>
+  
+<! ----------------------Title---------------------------------- >
+<! ------------------------------------------------------------- >
+  
+<CENTER>  
+  <H1><IMG WIDTH=50 HSPACE=10 SRC="../../Common/letter.gif">Dear DP...</H1>
+  <H2>Your Feedback to The Diplomatic Pouch</H2>
+</CENTER>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<BR>
+
+<! ----------------------Body----------------------------------- >
+<! ------------------------------------------------------------- >
+
+<FORM METHOD="POST"
+ACTION="/cgi-bin/DearDP.cgi">
+<B>From (your e-mail address):</B><BR>
+<INPUT NAME="email" SIZE=30>
+<P>
+<B>To and Regarding:</B><BR>
+<SELECT NAME="sendto">
+<OPTION>swebster@diplom.org (Scott Webster [Co-Editor], General Feedback)
+<OPTION>abbey@worldpath.net (Randy Lawrence-Hurt [Co-Editor], General Feedback)
+<OPTION>editor@diplom.org (The Editors, "Pouch Deposits")
+<OPTION>david_e_cohen@yahoo.com (David E Cohen:  "Design of a Variant: Part III")
+<OPTION>manus@diplom.org (Manus Hand:  "Solution to the Curious Case of the False Start")
+<OPTION>abbey@worldpath.net (Randy Lawrence-Hurt:  "Is IT Broken?")
+<OPTION>jean-francois.georget@club-internet.fr (Jean-François GEORGET:  "Peloponnesian Wars")
+<OPTION>alastair@mosscottage.org.uk (Alastair Tomlinson:  "Those who can , teach.")
+<OPTION>sigge.lidsell@riksdagen.se (Sergio Lidsell:  "More News From The Italian Front")
+<OPTION>evandergeld@yahoo.com (Eva Vandergeld:  "Karaoke Diplomacy")
+<OPTION>millis@diplom.org (Millis Miller:  "Interview with Alan Tésio")
+
+<!--- cut-and-paste this section for each author (delete before publishing)
+<OPTION>[AUTHOR E-MAIL] ([AUTHOR NAME]:  "[ARTICLE TITLE]")
+--->
+
+</SELECT>
+
+<P>
+<B>Message:</B><BR>
+<TEXTAREA NAME="body" ROWS=16 COLS=60></TEXTAREA>
+<P><B>
+You may <INPUT TYPE="submit" VALUE="Send"> this email when done, or
+<INPUT TYPE="reset" VALUE="Clear"> the form and start all over.</B>
+</FORM>
+<BR>&nbsp;
+
+<! ----------------------Footer--------------------------------- >
+<! ------------------------------------------------------------- >
+
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<A HREF="../.."><IMG ALIGN=LEFT SRC="../../Common/DPbutton.gif" BORDER=0></A>
+<A HREF=".."><IMG ALIGN=RIGHT SRC="../../Common/toW2003A.gif" BORDER=0></A>
+<BR>
+
+</BODY>
+</HTML>

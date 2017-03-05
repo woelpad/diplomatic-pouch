@@ -1,0 +1,431 @@
+F StP/sc|A Mos|A War|F Sev
+
+-Lvn|-Ukr|-Sil|-BLA|rus-livlun
+HOLD|HOLD|HOLD|HOLD|rus-house
+
+-Fin|-Ukr|-Gal|-Rum|rus-lapland,rus-ukraine,rus-bulgam
+-Fin|-Ukr|-Gal|-BLA|rus-lapland,rus-ukraine,rus-hsj,rus-exch
+-Fin|-Ukr|-Sil|-BLA|rus-lapland,rus-ukraine,rus-exch
+-Fin|-Ukr|-Gal|HOLD|rus-lapland,rus-ukraine
+-Fin|-Ukr|-Pru|-BLA|rus-lapland,rus-ukraine,rus-exch
+-BOT|-Ukr|-Gal|-Rum|rus-ukr-aa,rus-bulgam
+-BOT|-Ukr|-Gal|-BLA|rus-ukraine,rus-hsj,rus-exch
+-BOT|-Ukr|-Gal|HOLD|rus-ukraine
+-BOT|-Ukr|HOLD|-Rum|rus-ukraine,rus-bulgam
+-BOT|-Ukr|HOLD|-BLA|rus-ukraine,rus-exch
+-BOT|-Ukr|-Sil|-BLA|rus-ukraine,rus-exch
+-BOT|-Ukr|-Sil|-Rum|rus-ukraine,rus-bulgam
+-BOT|-Ukr|-Pru|-Rum|rus-ukraine,rus-bulgam
+-BOT|-Ukr|-Pru|-BLA|rus-ukraine,rus-exch
+
+-BOT|-Sev|-Ukr|-Rum|rus-southern,rus-rumanian,rus-bulgam
+-BOT|-Sev|-Ukr|-BLA|rus-south-ta,rus-exch
+-BOT|-Sev|-Gal|-Rum|rus-southern,rus-bulgam
+-BOT|-Sev|-Gal|-BLA|rus-southern,rus-hsj,rus-exch
+-BOT|-Sev|-Sil|-Rum|rus-southern,rus-bulgam
+-BOT|-Sev|-Sil|-BLA|rus-southern,rus-exch
+-BOT|-Sev|-Ukr|-Arm|rus-southern,rus-slingshot
+-BOT|-Sev|HOLD|-Rum|rus-southern,rus-bulgam
+-BOT|-Sev|-Mos|-Rum|rus-southern,rus-bulgam
+-Fin|-Sev|HOLD|-Rum|rus-lapland
+-Fin|-Sev|-Gal|-BLA|rus-lapland,rus-hsj,rus-exch
+-Fin|-Sev|-Ukr|-Arm|rus-lapland,rus-bulgam
+
+-BOT|-StP|-Ukr|-BLA|rus-northern,rus-exch
+-BOT|-StP|-Ukr|-Rum|rus-north-ukr,rus-bulgam
+-BOT|-StP|-Ukr|HOLD|rus-northern
+-BOT|-StP|-Ukr|-Arm|rus-northern
+-Fin|-StP|-Ukr|-Rum|rus-lapland,rus-northern,rus-bulgam
+-BOT|-StP|-Gal|-Rum|rus-north-gal,rus-bulgam
+-BOT|-StP|-Gal|-BLA|rus-octopus,rus-hsj,rus-exch
+-BOT|-StP|-Lvn|-Rum|rus-north-liv,rus-magde,rus-bulgam
+-BOT|-StP|HOLD|-Rum|rus-northern,rus-bulgam
+-BOT|-StP|HOLD|-BLA|rus-northern
+-BOT|-StP|-Mos|-Rum|rus-northern,rus-bulgam
+-BOT|-StP|-Mos|-BLA|rus-northern,rus-hammer
+-BOT|-StP|-Pru|-BLA|rus-northern,rus-magde
+-BOT|-StP|-Pru|-Rum|rus-northern,rus-magde,rus-bulgam
+-BOT|-StP|-Lvn|-BLA|rus-northern,rus-magde
+-BOT|-StP|-Sil|-BLA|rus-northern,rus-magde
+-Fin|-StP|-Sil|-BLA|rus-lapland,rus-northern
+
+-BOT|-Lvn|-Ukr|-Rum|rus-liv-ukr,rus-bulgam
+-BOT|-Lvn|-Ukr|-BLA|rus-livonia,rus-exch
+-BOT|-Lvn|-Sil|-Rum|rus-livonia,rus-bulgam
+-BOT|-Lvn|-Pru|-Rum|rus-livonia,rus-bulgam
+-BOT|-Lvn|-Gal|-Rum|rus-livonia,rus-bulgam
+-BOT|-Lvn|HOLD|-BLA|rus-livonia
+-BOT|-Lvn|HOLD|-Rum|rus-livonia,rus-bulgam
+-BOT|-Lvn|-Sil|-BLA|rus-livonia
+
+-BOT|HOLD|-Ukr|-Rum|rus-inertia,rus-bulgam
+-BOT|HOLD|-Ukr|-BLA|rus-inertia,rus-exch
+-Fin|HOLD|HOLD|-Rum|rus-lapland,rus-bulgam
+
+-BOT|-War|-Gal|-Rum|rus-warsaw,rus-bulgam
+-BOT|-War|-Pru|-BLA|rus-warsaw
+-BOT|-War|-Sil|-Rum|rus-warsaw,rus-bulgam
+-BOT|-War|-Pru|-Rum|rus-warsaw,rus-bulgam
+-BOT|-War|-Sil|-BLA|rus-war-sil
+-BOT|-War|-Gal|HOLD|rus-warsaw
+-Fin|-War|-Pru|-Rum|rus-lapland,rus-bulgam
+-BOT|-War|-Gal|-BLA|rus-warsaw,rus-hsj,rus-exch
+
+comment|--ABOUT THE RUSSIAN OPENINGS--
+Russia has more possible opening moves than any other power.
+In order to produce a rationalised system for naming Russian
+openings, Richard Sharp introduced the following plan:
+<ol>
+<li>F StP/sc H openings are known as the Northern Houseboat Opening.
+<li>F StP/sc-Lvn is known as the Kronstadt Opening.
+<li>F StP/sc-Fin is known as the Lapland Lurch, but otherwise considered (for
+	the purpose of naming openings) as equivalent to a move to the Gulf of
+	Bothnia.  These openings are named after the order of A Moscow.
+There are therefore six systems for openings involving F StP/sc-BOT or
+F StP/sc-Fin:
+<ul>
+<li>The Inertia System (A Mos H),
+<li>the Livonia System (A Mos-Lvn),
+<li>the Northern System (A Mos-StP),
+<li>the Southern System (A Mos-Sev),
+<li>the Ukraine System (A Mos-Ukr), and
+<li>the Warsaw System (A Mos-War).
+</ul>
+</ol>
+END
+
+rus-ukr-aa|UKRAINE SYSTEM, AUSTRIAN ATTACK VARIANT
+Russia's second most popular opening, this
+generally means that Russia is confident he has a Turkish
+ally against Austria. A drawback is that the fleet in Rumania is
+poorly placed.
+<P>
+Russia must usually choose between a northern or southern strategy.
+This means putting her eggs in the appropriate basket. Here she
+is allied with Turkey against Austria. If there is a stand-off
+in Galicia or Rumania, there will be support for the same order
+in the Fall.
+END
+
+rus-inertia|INERTIA SYSTEM
+Richard Sharp's name for the Russian opening: F StP/sc-Fin/BOT,
+A Mos H. There is one named variant: A War-Ukr, the Ukraine variant.
+END
+
+rus-lapland|LAPLAND LURCH
+The F StP/sc-Fin opening. If Russia anticipates both A Nor-Fin
+and F Den-Swe in Spring of 1902 (after a Fall standoff in Sweden), F Fin can
+block both, but F BOT cannot. If Russia anticipates Germany building
+F Kie in Winter 1901, F Fin is much less threatening, making it much
+easier for Germany to move against England.
+<P>
+Regarding the Lapland Lurch, however, the <i>Gamer's Guide to Diplomacy</i>
+advises, "F StP/sc-BOT is the only reasonable opening for that unit. The
+alternatives, to Finland or Livonia, accomplish nothing. Put
+the fleet in its proper place: on water."
+<P>
+Mark Berch provides more information in
+<a target=_parent href=http://www.spoff.demon.co.uk/articles/asset.htm>his article
+devoted to the Lurch.</a>
+END
+
+rus-livlun|KRONSTADT OPENING (a.k.a. LIVONIAN LUNACY)
+Russia's F StP/sc-Lvn opening. If Russia wishes to distract Germany
+away from F Den-Swe in Fall 1901 with a threat to the Baltic, Lvn is
+a better place to make the threat, since it has no other good
+place to go. This opening is discussed in
+<a target=_parent href=http://www.spoff.demon.co.uk/articles/lunacy.htm>Mark Berch's
+article on the subject</a>.
+END
+
+rus-north-liv|NORTHERN SYSTEM, LIVONIA VARIANT
+The intent of this opening is to convoy the Warsaw army into Sweden in Fall
+of 1901, while posting the Moscow army in Finland.
+Popularized by Don Turnbull in an article on playing Russia published in
+<i>Games &amp; Puzzles</i>, the opening gives up to
+three units bearing on Norway in Spring 1902 -- but at the expense
+of serious exposure on the Southern Flank. This may be acceptable if
+Austria can be relied on to contain Turkey, but the lack of influence on
+Rumania deprives Russia of the near certainty of a build.
+At the time that Turnbull recommended this
+opening, the common opening move for F Kie was to Hol; it was
+unusual for Germany to move to Den. It was even more unusual
+for Germany to stand Russia out of Sweden. Hence, Russian players
+expected to take Sweden in Autumn 1901 as a matter of course. It
+was common for Russia to have six centres at the end of 1901, having
+taken Rumania and Sweden, and not unusual for Russia to be on seven, taking
+an Austrian centre as a result of Austria opening with a Balkan
+Gambit, allowing Russia into Galicia in Spring 1901. So the move
+to Livonia with intent to convoy to Sweden is not as strange as first
+appears. 
+<P>
+This is a Northern attack, against England. If Russia puts her
+eggs in that basket, she may as well trust Turkey and get into
+Rumania. Even if the Turks take Sevastopol, Russia may be able
+to make peace and concentrate on a northern offensive. There
+is nothing wrong with a Russo-Turkish alliance even when the
+Turks are overly greedy in the South. This opening threatens
+to keep England out of Norway while convoying an army into Sweden.
+To be really diabolical, order A StP-Fin, A Lvn-BOT-Swe, and
+build F StP/nc.
+END
+
+rus-livonia|LIVONIAN SYSTEM
+In Richard Sharp's rationalised system for naming Russian openings, the
+Livonian system refers to any Russian opening using the moves F StP/sc-Fin/BOT
+and A Mos-Lvn. There are three named variations: the Ukraine variation,
+the Galician Variation and the German Attack Variation (A War-Sil).
+END
+
+rus-north-gal|NORTHERN SYSTEM, GALICIA VARIATION
+This is the most pro-Turkey of all the Northern System openings.
+In this opening, Russia has simply not made up her mind. She
+is going after Austria and England at the same time. If she has
+alliances with France, Germany, Italy, and Turkey, these are
+not bad orders. They make the most of Russia's unique position
+on the board.
+END
+
+rus-north-ukr|NORTHERN SYSTEM, UKRAINE VARIATION
+This is about the lowest profile
+Russia can keep in the South and still send an army there, and
+may indicate Russia believes that there is triple R-A-T alliance
+to be had.
+END
+
+rus-northern|NORTHERN SYSTEM
+Richard Sharp's name for any Russian opening using the moves
+F StP/sc-BOT (or Fin) and A Mos-StP. There are seven named variations:
+<ol>
+<li>the Galician (A War-Gal, F Sev-Rum)
+<li>the Octopus  (A War-Gal, F Sev-BLA)
+<li>the Squid    (A War-Ukr, F Sev-BLA)
+<li>the Ukraine  (A War-Ukr, F Sev-Rum)
+<li>the Hammer   (A War-Mos)
+<li>the Livonian (A War-Lvn)
+<li>the German Attack (A War-Sil)
+</ol>
+END
+
+rus-octopus|NORTHERN SYSTEM, OCTOPUS VARIANT
+This opening appears to be very belligerent,
+but the southern moves can be sold as defensive measures to compensate
+for the fact that only one army is sent south. Neither Turkey
+nor Austria should feel seriously threatened, as Russia has apparently
+moved on the other as well, and a joint attack on both Austria
+and Turkey hardly seems likely if Russia also opens to StP.
+Often, at least one of the southern moves will be an arranged standoff.
+<p>
+Named by (and a favorite of) Richard Sharp, the Octupus combines
+a strong defense in the south with an uncommonly powerful assault
+on Scandinavia. The name presumably derives from the way the
+opening exploits Russia's interests in so many spheres, spreading
+tentacles into several areas.  The Russian player who opens with
+this can expect to upset England, who usually looks to Norway
+as his only guaranteed build -- in a game with an Octopus, only
+a full blown Northern Opening 
+(F Lon-NTH, F Edi-NWG, A Lon-Yor) from England will do. A variation
+of this opening, also named by Richard Sharp, is the
+Squid, which takes on both the corner powers with A War-Ukr.
+<P>
+Richard Sharp's complete thoughts on this, his favorite Russian
+opening, are in his
+<a target=_parent href=http://www.spoff.demon.co.uk/articles/octopus.htm>article
+on the subject</a>.
+END
+
+rus-rumanian|SOUTHERN SYSTEM, RUMANIAN OPENING
+The extremely southern commitment which sees Russia occupy Rumania,
+Ukraine, and Sevastopol. Thought anti-Austrian, but in fact is
+non-committal and mainly defensive (hence the choice of Ukraine
+over Galicia). Mos-Sev protects against a Turkish attack, and
+Rumania can be given two supports if Austria and Turkey are mobilizing
+to attack the Bear (which still might not be enough to keep the
+center, but it's as good as you can get).   The Rumanian Opening Proper
+sends Warsaw to Ukraine, but there are two named variants, the Galician
+and the German Attack (A War-Sil).
+END
+
+rus-southern|SOUTHERN SYSTEM
+Richard Sharp's name for any Russian opening using the moves
+F StP/sc-Fin/BOT and A Mos-Sev. There are five named variations:
+<ol>
+<li>the Inertia Variation (A War H)
+<li>the German Attack Variation (A War-Sil)
+<li>the Rumanian Opening (F Sev-Rum)
+<li>the Noah's Ark Variation (A War-Ukr, F Sev-Arm)
+<li>the Turkish Attack (A War-Ukr, F Sev-BLA)
+</ol>
+END
+
+rus-south-ta|SOUTHERN SYSTEM, TURKISH ATTACK VARIANT
+Russia's third most popular opening,
+this will turn out badly if Turkey orders F Ank-BLA
+(thus stalling two units) or if Austria enters Gal. Russia retains
+his options to either press an attack on Turkey, or content himself
+with Rum, and use F BLA to try to keep the upper hand in any
+subsequent Russo-Turkish alliance.
+<P>
+About this opening, <i>The Gamer's Guide to Diplomacy</i> says,
+"This is the anti-Turkish opening. In the Fall, A Sev-Arm promises
+to give the Sultan apoplexy. It also leaves Sev open for the
+build of a second fleet. If the Turks order F Ank-BLA they will
+be stood off. The fleet can then move to Rumania with support
+from Ukraine in the Fall again leaving Sev open for a second
+fleet. Some players prefer the alternative F Sev-Rum in the Spring.
+This is weaker, but does insure that A Mos-Sev succeeds so that
+Armenia may be threatened. However, this creates a guessing game
+around Rumania and Sevastopol if Turkey opens F Ank-BLA, A Con-Bul.
+It's even worse if Turkey also opens A Smy-Arm."
+END
+
+rus-ukraine|UKRAINE SYSTEM
+Richard Sharp's name for any Russian opening involving the moves
+F StP/sc-Fin/BOT, A Mos-Ukr. There are five named variations:
+<ol>
+<li>the Austrian Attack (A War-Gal, F Sev-Rum)
+<li>the Livonia Variation (A War-Lvn)
+<li>the German Attack Variation (A War-Sil)
+<li>the Southern Defence (A War-Gal, F Sev-BLA)
+<li>the Southern Houseboat Variation (A War-Gal, F Sev H)
+</ol>
+END
+
+rus-warsaw|WARSAW SYSTEM
+Richard Sharp's name for the openings involving F StP/sc-Fin/BOT
+and A Mos-War. There are three named variations:
+<ol>
+<li>the Galician (A War-Gal)
+<li>the German Attack (A War-Sil)
+<li>the Ukraine (A War-Ukr)
+</ol>
+END
+
+rus-liv-ukr|LIVONIAN SYSTEM, UKRAINE VARIATION
+This is a deliberately neutral opening and is more effective
+than it looks. Russia hopes for two new centers and positions
+her armies to cover her home centers in case of attack. At the
+same time, she will have a number of offensive options in Fall
+1901 (A Lvn-Swe or -Pru; A Ukr-Gal).
+END
+
+rus-war-sil|WARSAW SYSTEM, GERMAN ATTACK VARIANT
+This is an anti-German opening. A Wal-Sil is preferable to A
+War-Pru because it threatens two supply centers. The other army
+can cover Warsaw, or attack Prussia, or move to Sweden. In the
+last instance, F BOT-BAL is a killer in 1902. On occasion, Russia
+just gives up Sweden and moves F BOT-BAL in Fall 1901. Watch
+the German player have fits when that happens.  John Dennett
+wrote <a target=_parent href=http://www.spoff.demon.co.uk/articles/gerattac.htm>a
+complete article on the German Attack opening</a>.
+END
+
+rus-hsj|[HOP, STEP, AND JUMP OPENING]
+Named by Iain Forsyth, this Austro-Russian opening sends Budapest to
+Rumania, followed in the fall by a Russian convoy of A Rum-Ank. The Warsaw
+army is sent to Galicia as Springtime camouflage.
+END
+
+rus-house|NORTHERN HOUSEBOAT OPENING
+Richard Sharp's name for any opening in which F StP/sc holds in Spring 1901.
+If Russia wishes to concentrate entirely on the south, this is the best
+opening that can prove his intentions to England and Germany.  To Germany,
+this says that no offense will be offered, and to England it emphasizes
+that St. Petersburg will be defended.
+END
+
+rus-bulgam|[BULGARIAN GAMBIT]
+This Austro-Russian combination requires a careful diplomatic setup of
+Turkey, but guarantees to keep the Turk at three SC's by the end of 1901.
+Austria opens with Tri-Alb and Bud-Ser, while Russia sends the Sevastopol
+fleet to Rumania.  In the Fall, Turkey is convinced by one or both of
+Austria and Russia to attempt a move out of Bulgaria, and A/R combine to
+dislodge the unsupportable Bulgaria.  Doug Beyerlein wrote
+<a target=_parent href=http://www.spoff.demon.co.uk/articles/bulgarian.htm>an article
+on the Bulgarian Gambit</a>.
+END
+
+rus-slingshot|[SLINGSHOT JUGGERNAUT]
+Manus Hand's Russo-Turkish Southern System continuation, which has
+the Turkish Black Sea fleet and Ankara army dislodge Russia's fleet
+from Armenia.  With Sevastopol unavailable for a retreat, the fleet is
+forced to disband.  The opening is considered very safe for both parties,
+and results in an even safer "water-power/land-power" configuration of
+units.  Both Russia and Turkey lobby Austria intensely for support against
+the other power, and when the Russian attack through Armenia fails,
+Austria cannot blame Russia for trying and for
+being unable to retreat his fleet.  For his part, Russia offers the "at
+least I have tied up all his units in the east" line, while Turkey continues
+to request Austrian help for his successful anti-Russian crusade.  In 1902,
+however, the Turk convoys from Armenia through the Black Sea to Bulgaria
+while Russia's now land-based forces hit the Austrian by surprise, typically
+entering Galicia and supporting a Turkish attack on Serbia.
+END
+
+rus-magde|[MAGDEBURG]
+Named after the German ship wrecked during WWI in the Baltic, which gave Great
+Britain and Russia access to German naval codes for the remainder of the war,
+this is Manus Hand's Anglo-Russian continuation (usually to the Northern
+System).
+England's task is to convince Germany to open to Denmark and then move to
+stand Russia out of Sweden.  Russia opens to the Gulf of Bothnia, and, in
+cahoots with his English ally, assists in isolating the German for a strong
+1902 attack.  Russia avoids Sweden in Fall
+of 1901 and instead sails to the Baltic.  Simultaneously, England takes the
+vacated Denmark.  Norway can go to either England (the "Prince Louis
+Madgeburg") or Russia (if Russia opens with a Northern System; this is the
+"Benckendorff Magdeburg").  The Prince Louis (F NWG-Nor in Fall 1901) has
+the diplomatic advantage of allowing England to claim shock and continued
+friendship with Germany, but the Benckendorff can be used to force a Spring
+disband of the German fleet (NWG HOLD in Fall 1901, then NWG-Nor and NTH-SKA
+in Spring 1902 while Russia moves her Norway army to Finland and sends a newly
+built fleet into the Gulf of Bothnia), forcing the German to play a unit
+short in Fall of 1902.
+END
+
+rus-exch|[BLACK SEA EXCHANGE]
+Aron Ambrosiani's name for the southern system follow-up which allows an
+R/T alliance to get both fleets into the Mediterarnean.
+<P>
+In Spring 1901, Russia opens F Sev-Bla, while
+Turkey opens the hedgehog. In fall 1901, Bla moves to Con, Arm to Sev
+and Con to Aegean Sea, and the Turkish A Bul can help a Russian
+army into Rumania.
+<P>
+The really hard thing with this variant is to the amount of trust it requires.
+The Fall
+moves are vital, since both countries move unsupported into each other's
+centers.
+END
+
+rus-hammer|[NORTHERN HAMMER]
+<a href=mailto:tarod@winternet.com>Brian Landwehr's</a> variation on the
+Octopus which sends all of the Russian land strength into Scandinavia.
+While this opening is thoroughly unorthodox and requires some heavy
+diplomacy early on, it takes advantage of the fact that often
+Russia's southern border is more flexible and negotiable than its
+northern border is. In the north, you're either winning or losing, where
+your southern border can flex a bit more. The 
+Northern Hammer is an all-out attack on England with just a
+touch of defense. In practice, it is much like the Octopus with a slight
+twist.
+<P>
+The fleets open to both open to the water (the move to the Black is usually
+an arranged bounce), with Moscow moving to St. Petersburg
+and Warsaw to Moscow.
+The move of the Warsaw army to Moscow sets you up for good diplomacy with
+almost everyone on the board. Germany and Austria are happy with you for
+moving directly away (and may think you've lost your mind). You can sell a
+defensive theory to Turkey (A Mos S F Sev <i>ad infinitum</i>) and England at
+this point sees nothing worse than he normally would in an Octopus. I
+mean, at least you didn't move to Lvn, right?
+<P>
+In Fall, Rumania and Sweden are taken, if you've done your diplomacy right,
+and the armies follow into the north, with St. Petersburg moving to Finland,
+and Moscow to St. Petersburg.
+This sets you up to kick England, and probably Germany, out of Scandinavia
+in no time flat. It's strange enough that it puts people off their guard
+and effective enough that it scares them just enough to keep people in
+line if you succeed.
+END 
+

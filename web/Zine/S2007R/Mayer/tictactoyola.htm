@@ -1,15 +1,19 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<TITLE>DP S2007R: Overheard at the Ministry of Finance III</TITLE>
+
+<HTML><HEAD><TITLE>DP S2007R: Overheard at the Ministry of Finance III</TITLE>
+
 <!-- ---------------------Header---------------------------------- -->
 <!-- ------------------------------------------------------------- -->
+
 <!---- Authored by  ---->
 <!---- Published on the Pouch Zine with permissions ---->
 <!---- Created on September 23, 2006 ---->
+
 </head>
+
 <body style="background-color: rgb(255, 255, 255);">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/S2007R/"><img src="/Zine/Common/toS2007R.gif" align="right" border="0"></a>
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toS2007R.gif" align="right" border="0"></a>
 <br clear="all">
 <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY"> 
 <TABLE>
@@ -26,15 +30,22 @@
       <H3 align=center><FONT color=green>or Learning from Tic-Tac-Toyola</FONT></H3>
       <H2 align=center><I>Frank Mayer</I></H2></I></TD></TR></TBODY></TABLE><!p>
 <HR>
-<P><blockquote><i><b>Editor's Note:</b> Frank has already written two articles in this series on the Payola variant: one way back <a href="/Zine/F1997M/Mayer/Payola.html">in the Fall 1997 Movement issue</a>, and another <a href="/Zine/W2003A/Mayer/PowersOfPayola.html">in the Winter 2003 Adjustment issue</a>. Here he continues the series with a detailed look at the mathematics behind Payola bidding tactics.
+
+
+<P><blockquote><i><b>Editor's Note:</b> Frank has already written two articles in this series on the Payola variant: one way back <a href="../../F1997M/Mayer/Payola.html">in the Fall 1997 Movement issue</a>, and another <a href="../../W2003A/Mayer/PowersOfPayola.html">in the Winter 2003 Adjustment issue</a>. Here he continues the series with a detailed look at the mathematics behind Payola bidding tactics.
 </i></blockquote>
+
 <h4>Scene:</h4>
 <P>The Tortoise and Achilles are passing the time of day in their prison on a desert island location so obscure that it doesn't even appear as a supply centre on the Imperial map. Top secret documents describe them as evil masterminds, deadly terrorists apprehended when quick-witted Homeland Security agents intercepted their email exchanges planning an attack on England. They referred to their plot by the code name "Sea Lion".
 <P> 
 <P>Achilles: How do we get out of here? The food is abysmal. I don't have my heel guard with me and you're almost all out of turtle wax! 
+
 <P>Tortoise: Well, something tells me we're going to be here for a while. We might as well amuse ourselves. I've a challenge for you.
+
 <P>Achilles: Oh ho! Let's see!
+
 <P>Tortoise: Here it is:<br><br>
+
 <CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=3 WIDTH=113>
 <TR BGCOLOR="#ff0000" VALIGN="TOP"><TD WIDTH="33%">&nbsp;</TD>
 <TD WIDTH="33%">
@@ -54,9 +65,14 @@
 </TR>
 </TABLE>
 </CENTER>
+
 <U><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">Fig 1</U>: White to move and win</font><br><br>
+
+
 <P>Achilles: Aaaiii!! You've been locked up too long, my friend. Don't you know I'm the world champion of Venetian-blind-crystal ball-exchange-zero sum diplomacy? I ask you, is that a problem for me?
+
 <P>Tortoise: Too hard? Well, all right. Try this one:<br><br>
+
 <CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=3 WIDTH=113>
 <TR BGCOLOR="#ff0000" VALIGN="TOP"><TD WIDTH="33%">&nbsp;</TD>
 <TD WIDTH="33%">
@@ -76,14 +92,22 @@
 </TR>
 </TABLE>
 </CENTER>
+
 <U><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">Fig 2</U>: White's move, Black to win
 </FONT><br><br>
+
 <P>Achilles: Hrrmmmfff????
+
 <P>Tortoise: The answer, of course, is two and a half. Yes, that's right. Black can force a win if (and only if) he has more than two and a half times as much money as white. 
+
 <h2>Introducing Tic-Tac-Toyola</h2>
+
 <P>The position in Figure 2 is taken from a game of Tic-Tac-Toyola, a toy domain invented to study Payola bidding. A toy domain is a simplified version of some object of study. A well-chosen toy domain is simple enough to allow a solution, while retaining enough fidelity to allow generalisation back to the original problem. Let's take a closer look at the Tortoise's challenge:
+
 <P>How can player O (hereafter called 'Naughty') hope to stop player X (a.k.a. Crosser) in the position shown in figure 2? He couldn't, if he were playing the familiar childhood game of Naughts and Crosses. But here a layer has been added, so that player control over 'their' units is only indirect. Welcome to the world of Tic-Tac-Toyola, whose rules are quite simple:
+
 <OL>
+
 <LI>Xs and Os are alternately entered on the grid, X being entered first.</LI>
 <LI>Crosser wins if he can get three Xs in a row first. Otherwise Naughty is the victor. (So there is always a winner.)</LI>
 <LI>Players manage accounts of "money" in continuous units (think silver dust instead of Payola's silver coins). They bid each turn to determine placement of the upcoming entry. Placement is decided by the higher bid, and the corresponding amount subtracted from the higher bidder's account balance.</LI>
@@ -92,10 +116,15 @@
 <P>The Tortoise's challenge was to find the cut-off ratio, <FONT FACE="Verdana" SIZE=2>b*</FONT> corresponding to the situation in figure 2. The cut-off ratio is the lowest number such that Naughty can force a win whenever his account balance exceeds <FONT FACE="Verdana" SIZE=2>b*</FONT> times Crosser's account balance. If the funding ratio lies below <FONT FACE="Verdana" SIZE=2>b*</FONT>, then Crosser can force his way to victory.
 <h2>Mapping Game Play</h2>
 <P>A helpful tool for visualising the possibilities of play is a <I>Game Tree</I>. The game tree is made up of "nodes" connected in a mother-daughter relationship. (A node can have many daughters but only one mother.) One node, known as the "root", is unique in being motherless. (A consequence of these mixed metaphors is that the root node is conventionally shown at the <I>top</I> of the game tree). 
+
 <P>The game tree provides an inventory of all possible game sequences. The root corresponds to the initial game position. Each daughter node corresponds to a position arising from a distinctive entry on the next turn. The top two levels of our game tree are given in figure 3:<br><br>
+
 <CENTER><IMG src="Pruned.jpg" WIDTH=593 HEIGHT=165></CENTER>
+
 <FONT FACE="Verdana" SIZE=2><U><P ALIGN="CENTER">Fig 3</U>: First two levels of the Game Tree<br><br></font>
+
 <P>Daughter nodes are computed until they correspond to a won position. (The middle daughter is such a case.) Returning to the tree analogy, such daughterless nodes are called <I>Leaves</I>. As a practical matter, we also designate any position from which one side is guaranteed victory as a leaf. An example is shown in figure 4:<br><br> 
+
 <CENTER><TABLE BORDER CELLSPACING=1 CELLPADDING=1 WIDTH=102>
 <TR><TD WIDTH="33%" VALIGN="TOP">
 <FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">O</FONT></TD>
@@ -118,121 +147,194 @@
 </TR>
 </TABLE>
 </CENTER>
+
 <U><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">Fig 4</U>: An Honorary O-Leaf
 </FONT><br><br>
+
+
 <P>Even though two spaces are still open, Naughty is certain of a win, as Crosser has no hope of getting three Xs in a row.
 <h2>Pruned Trees, Cut-off Ratios, and Optimal Bidding</h2>
 <P>We will show that the game tree geometry contains "map" and "unit placement&quot; information, as well as encoding the cut-off ratio and each player's optimal bidding strategy at each node. 
+
 <P>First, we would like to show that a cut-off ratio really exists: It should be clear that a player with an overwhelming financial advantage can guarantee a successful outcome. If, for instance, there were <FONT FACE="Verdana" SIZE=2>M</FONT> open places remaining, and one player were richer by a factor in excess of <FONT FACE="Verdana" SIZE=2>M</FONT>, then that richer player could force his will by bidding at each turn slightly in excess of his opponent's account balance. But how do we know there isn't some mid range of relative financial strengths for which neither player would be able to force the outcome?
+
 <P>Suppose that <FONT FACE="Verdana" SIZE=2>B</FONT> is the lowest value of account balance ratio that lets Crosser force a win. Then, for any ratio account balance ratio less than <FONT FACE="Verdana" SIZE=2>B</FONT> there is some sequence of bids that Naughty could use to deny Crosser victory. In other words, once the account balance ratio falls below the threshold, Naughty is in a position to force the win himself. This guarantees the existence of the cut-off ratio (henceforth known as COR). Thus, a player's ability to win is determined by his relative financial strength as compared to the COR value. Further, the set of COR values (one for each node) determines the optimal bid strategy, since they tell him how much he can afford to bid to drive the game in an attractive direction without running afoul of the COR criterion applicable to the daughter node. 
+
 <P>We wish to develop a procedure for computing the CORs. Without loss of generality, we can simplify the computation by limiting attention to just a portion of the game tree. Any (non-final) game position will have multiple continuations for its next move, each corresponding to a distinct daughter node. We arrange these daughter nodes in order of increasing CORs. The node with the largest COR corresponding to the game continuation for which Naughty will have the hardest time winning (i.e. he must have the greatest financial advantage in order to win). Clearly, Crosser will bid on this outcome and Naughty will bid on the daughter node with the lowest COR. 
+
 <P>In addition to the two nodes mentioned, there may be other daughter nodes with intermediate COR values. Such nodes correspond to situations of intermediate attractiveness for both players. Clearly, neither player should place his top bid on such an intermediate situation. But perhaps smaller bids from both players could combine to select an intermediate COR node? In fact, we can neglect this possibility. Each player would only bid on an intermediate node if the resulting outcome (position plus financial strength) is at least as attractive for him as the outcome of the respective extreme COR case. The suggestion that Crosser and Naughty could team up to produce a situation that would be superior for each of them is untenable. (Two person games are zero sum, meaning they admit no sensible possibility for cooperation). While a joint bid could conceivably lead to an outcome without loss of attractiveness to each player, these cases can safely be ignored, as they have no bearing on determining the game winner. 
+
 <P>Consequently, we restrict the game tree to include just maximum and minimum COR daughters of each node, limiting study to the pruned binary game tree in figure 5:<br><br>  
+
 <P ALIGN="CENTER"><IMG SRC="Binary.gif" WIDTH=666 HEIGHT=623>
+
 <U><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER">Fig 5</U>: Pruned Game Tree
 </FONT>
 <P>Some conventions are introduced to simplify discussion of the tree. Left daughters always represent Crosser's favoured continuation, right daughters the continuation most attractive to Naughty. Each node is numbered distinctly, with the daughter of node <FONT FACE="Verdana" SIZE=2>N</FONT>  being labelled <FONT FACE="Verdana" SIZE=2>2N</FONT> (left) and <FONT FACE="Verdana" SIZE=2>2N + 1</FONT> (right). Node 1 is assigned to the game starting position (root). 
+
 <P>Nodes 2, 6, 15, 28 and 29 are all leaves. Green leaves correspond to wins for Crosser, while yellow leaves represent Naughty victories. 
+
 <P>How can we compute the COR values? First we derive a relationship between the CORs of a node and its two daughters. Then, we make use of the special situation at the leaves, whose COR values are self-evident, as our starting point for climbing the tree. 
+
 <P>Suppose we have arrived at some node <FONT FACE="Verdana" SIZE=2>N</FONT>, and the account balances are Naughty: <FONT FACE="Verdana" SIZE=2>L</FONT> and Crosser: <FONT FACE="Verdana" SIZE=2>L * b<SUB>N</SUB></FONT>, where <FONT FACE="Verdana" SIZE=2>b<SUB>N</SUB></FONT> is the COR value for node <FONT FACE="Verdana" SIZE=2>N</FONT>. Now Crosser would like to move forward to node <FONT FACE="Verdana" SIZE=2>2N</FONT> and is willing to bid up to an amount <FONT FACE="Verdana" SIZE=2>D<SUB>x</SUB></FONT>, where <FONT FACE="Verdana" SIZE=2>D<SUB>x</SUB></FONT> is chosen so that the ratio of Crosser to Naughty account balances at node <FONT FACE="Verdana" SIZE=2>2N</FONT> [in other words <FONT FACE="Verdana" SIZE=2>L * b<SUB>N</SUB> - D<sub>x</sub></FONT> divided by <FONT FACE="Verdana" SIZE=2>L</FONT>] would be equal <FONT FACE="Verdana" SIZE=2>b<SUB>2N</SUB></FONT>. Naughty, on the other hand, would like to drive the game toward node <FONT FACE="Verdana" SIZE=2>2N+1</FONT>, and is likewise ready to bid up to an amount <FONT FACE="Verdana" SIZE=2>D<SUB>o</SUB></FONT>, chosen so that the ratio of Crosser to Naughty account balances at node <FONT FACE="Verdana" SIZE=2>2N+1</FONT> [in other words, <FONT FACE="Verdana" SIZE=2>L * b<SUB>N</SUB></FONT> divided by <FONT FACE="Verdana" SIZE=2>L - D<SUB>o</SUB></FONT>] would be equal to <FONT FACE="Verdana" SIZE=2>b<SUB>2N+1</SUB></FONT>. Since we are examining a cut-off condition, the two bids (<FONT FACE="Verdana" SIZE=2>D</FONT> values) must be equal. Combining these results gives a the formula relating <FONT FACE="Verdana" SIZE=2>b<SUB>N</SUB></FONT> to the COR values at the daughter nodes:
+
 <P ALIGN="CENTER"><FONT FACE="Verdana" SIZE=2>b<SUB>N</SUB> =</FONT><FONT FACE="Symbol" SIZE=2> </FONT><FONT FACE="Verdana" SIZE=2> b<SUB>2N+1</SUB> * (1 + b<SUB>2N</SUB> / (1 + b<SUB>2N+1</SUB>)</FONT>
+
 <P>Now, what are the COR values at the lowest rung (leaves)? Since Crosser would be ready to run down his account balance to zero in order to reach a left (green) leaf, we can assign a COR value of 0 to these nodes. Likewise, Naughty's willingness to empty his account to reach a yellow node, means that we should assign these nodes a COR value of infinity.  Figure 6 shows the pruned game tree with COR values and each player's optimal bidding level, expressed in terms of a percentage of his remaining account balance. <br><br>
 <P ALIGN="CENTER"><IMG SRC="COR_Bestplay.gif" WIDTH=599 HEIGHT=490></FONT>
 <FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER"><U>Fig 6</U>: Cut-off Ratios and Optimal Bidding Levels
+
 </FONT>
+
 <P>Two rules determine the optimal bids for each player: 
 <ol>
 <LI>Naughty bids a portion of his account balance equivalent to the increment of COR over the left side daughter (<FONT FACE="Verdana" SIZE=2>b<SUB>N</SUB> - b<SUB>2N</SUB></FONT>)</LI>
 <LI>The optimal bidding percentages for the two players stand to each other in the ratio of the node's COR value.</LI></OL>
+
+
 <P>Generally a player will not know his opponent's account balance, and so he will be unaware of his financial position with respect to the COR values. That is not an obstacle to our analysis, as<B> <U>the optimal bidding procedure does not require any knowledge the opponent's account balance</B>.</U> <U>By allocating capital at each turn in accordance with the C and N prescriptions in the game tree, a player can be guaranteed to win, insofar as a win is achievable</U>. 
+
 <P>The working of the optimal bidding prescription can be easily grasped: Imagine that the initial ratio of funding corresponded to the COR. The bidding prescription would then qualify to produce a draw at each turn against optimal bidding by his opponent. But what if a player were funded in excess of the COR?  In this case following the bidding prescription maintains a positive increment over COR at each daughter node. This advantage allows the player with superior financing (relative to the COR) to navigate to a winning leaf.
 <h2>Initial Assessment</h2>
 <P>Before applying results to Payola, it is useful to recapitulate what we've learnt. One of the first things to strike the eye is the very different feel of a game record based on game tree geometry and a more conventional record, for instance, a 3x3 matrix annotated with the order of moves. Whereas the conventional presentation emphasises a time axis, the annotated game tree presents an all-at-once (non-sequential) encapsulation of the entire range of possible play developments. 
+
 <P>A quick scan of the annotated game tree reveals the most critical moves. These are the nodes with high <FONT FACE="Verdana" SIZE=2>C</FONT> and/or <FONT FACE="Verdana" SIZE=2>N</FONT> values. In contrast, if the outcome of a turn were immaterial, then the two daughter nodes would have identical CORs, and the mother node would be annotated with <FONT FACE="Verdana" SIZE=2>N=C=</FONT>0. Otherwise stated: at nodes where left and right daughter COR values are similar, there is little difference between outcomes and the optimal bidding will be low.
+
 <P>The Tic-Tac-Toyola analysis provides a procedure for preparing optimal bids without the need to estimate his opponent's account balance or to anticipate an opponent's bids. Rather than engaging in a battle of wits to marginally outbid an opponent, players treat their bid as a judiciously chosen threshold, and are equanimous as to whether their bid is accepted. An accepted bid advances his position; while a rejected bid promises an equivalent improvement in his relative financial strength. 
 <h2>Intermezzo: The Return of Achilles and the Tortoise</h2> 
 <P>Achilles: Well that's all very interesting, Mr. T, but I'm afraid I don't understand why you call it Tic-Tac-Toyola. Wasn't it supposed to show something about Payola? Or perhaps there is some connection with small Japanese automobiles?
+
 <P>Tortoise: Not at all, my dear Achilles. The article aims at helping Payolaphiles to put their bidding on scientific footing. 
+
 <P>Achilles: But how? You've leaned heavily on Tic-Tac-Toyola being a two-person game. A zero sum game, you called it. Or maybe you've invented a new 2-player Payola variant?
+
 <P>Tortoise: No, that's not right either. A two-player variant would hardly be Payola. The author created Tic-Tac-Toyola (I assume you are know we are mere characters created as conduits for the author's erudite speculation) because he thought it had something to teach about Payola.
+
 <P>Achilles: Characters in a story? Heavens, Mr. Tortoise, don't unnerve me! I'm still trying to come to terms with life on this desert island. Besides, I noticed you didn't deal with my objection. You wouldn't be trying to confuse me, would you? 
+
 <P>Tortoise: Trying to confuse you? Would a Payola player stoop so low? But as far as your objections go...
+
 <P>You are right that in looking at Tic-Tac-Toyola we relied heavily on its zero-sum character. Multiparty games (like Payola and diplomacy) are very different. For one thing: speed matters. It is no good having an optimal algorithm that could guarantee victory after 10 game years if another player, by taking calculated risks, gets there in 6.  
+
 <P>And then, multiparty games, like Payola, are social endeavours with a very strong non-zero-sum character between pairs of players. It's fair to say that success comes largely from a player's "teamability" as well as his ability to implement his agenda within his team. So while judicious capital allocation is certainly important, it is most definitely not a magic key to victory. Every experienced player knows this. 
+
 <P>Finally, even in a Payola game between just two players (for instance, a variant where units of "third" powers act according to bids from the two active players; or perhaps a "normal" game where two players, each with 17 centres, face off - how exciting!), there is an important practical problem with modelling the full range of play in a game tree: the number of nodes simply grows too quickly to manage. 
 <P> 
 <P>Achilles (Thinking this through, frowning): .. That's well said, Mr. Tortoise. But then I really don't understand the point of Tic-Tac-Toyology.  
+
 <P>Tortoise: We can use Tic-Tac-Toyology, as you aptly call it, because most tactical encounters in Payola are localised 1-on-1 operations, which can be practically and effectively treated as time limited engagements. Once we separate out strategic questions, such as who to fight, what worth to assign to particular SCs and how to much to value one's own savings compared to the damage inflicted to an opponent's account, insights from Tic-Tac-Toyola can help to guide our bidding. 
+
 <P>Furthermore, even though Tic-Tac-Toyology can't be enlisted as the driver for strategic decisions, we will see that it can play the role of a valuable strategic consultant. We'll see that Tic-Tac-Toyola concepts are exportable into Payola: the game tree, N- and C-values, and the cut-off ratio each remain meaningful concepts that can be harnessed to improve Payola play.
+
 <P>At this point, I think some examples may be helpful:
+
 <h2>A Simple Scenario</h2>
+
 <P>We begin with a very simple situation. Consider the case of Italy trying to maintain ownership of Tunisia against a French fleet located in North Africa before the Spring turn. We assume there aren't any other units near enough to influence play. We set our time horizon at one year and assume that keeping Tunis is worth 20 AgP to Italy, and that Italy reckons French spending as important as his own. Now we ask: how much should Italy bid to control the fleet in Spring and Fall? 
+
 <P>We see that Italy will retain Tunisia if he can control the French fleet either Spring <U>or</U> Fall. (In the Spring he will seek to order the fleet out of reach). It follows that our<I> operations tree</I> has three leaves:
 <ul>
 <li><b>Case 1:</b> Italy bids some amount <FONT FACE="Verdana" SIZE=2>A<SUB>1</SUB></FONT> in the Spring and controls the French fleet. Italy's <I>cost function</I> is, thus, <FONT FACE="Verdana" SIZE=2>- A<SUB>1
 </SUB></FONT><br><br>
 <li><b>Case 2:</b> Italy bids some amount <FONT FACE="Verdana" SIZE=2>A<SUB>1</SUB></FONT> in the Spring and his bid is not accepted. In the Fall Italy bids an amount <FONT FACE="Verdana" SIZE=2>A<SUB>2</SUB></FONT> and takes control of the French fleet. Here, Italy's cost function is <FONT FACE="Verdana" SIZE=2>- A<SUB>2</SUB> + A<SUB>1</SUB></FONT> (the excess in Italian spending over presumptive French spending)<br><br> 
+
 <li><b>Case 3:</b> Italy Spring bid of <FONT FACE="Verdana" SIZE=2>A<SUB>1</SUB></FONT> is not accepted. In the Fall Italy bids an amount <FONT FACE="Verdana" SIZE=2>A<SUB>2</SUB></FONT> and his bid is again rejected. This time Italy's cost function is <FONT FACE="Verdana" SIZE=2>A<SUB>2</SUB> + A<SUB>1</SUB> - S</FONT>, that is, the damage caused to the French account, less the value of losing Tunisia (<FONT FACE="Verdana" SIZE=2>S</FONT>=20).
 </ul>
 <P>We've simplified by assuming that France's cost for outbidding Italy is the amount of the Italian bid. This is only strictly true when the game is played according to the <A HREF="http://en.wikipedia.org/wiki/Vickrey_auction">Ebayola rule</A>. With normal Payola bidding, the positive terms in the cost functions represent minimum possible values. (We'll produce a more general treatment in a later example.) 
+
 <P>How does Italy go about choosing the A values (his Spring and Fall bids)? When we examined Tic-Tac-Toyola we saw that the players bidding levels were carefully chosen so that the player was indifferent as to which branch of the game tree was being followed. (Bids were adjusted to remove any branch preferences). The same applies here: the cost functions for all three cases should be identical. This means Italy should bid 5 AgP in the Spring and, if that bid was not successful, follow up with 10 AgP in the Fall. For this case, where Italy seeks to control a unit either in Spring or Fall, he should plan for his Fall spending to double his Spring bid. 
+
 <P>This prescription works for the case where a unit has to be controlled either during Spring or Fall. What about cases where a unit has to be controlled in <U>both</U> Spring <U>and</U> Fall? This is, in fact, the situation encountered by France in the above example. Consequently, the same operation tree applies. The 2:1 Fall to Spring optimal bidding ratio applies as well, so that Tun ownership goes to the player assigning the higher evaluation for this centre. This is easily verified by repeating the above calculation, where cost functions for the three cases are: <FONT FACE="Verdana" SIZE=2>- B<SUB>1</SUB> - B<SUB>2</SUB> + S</FONT> (control in Spring and Fall and so take Tunis); <FONT FACE="Verdana" SIZE=2>- B<SUB>1</SUB> + B<SUB>2</SUB></FONT> (control in Spring but not in Fall), and <FONT FACE="Verdana" SIZE=2>B<SUB>1</SUB></FONT> (failure to control in Spring). 
 <h2>A Slightly More Complicated Scenario</h2>
 <P>Of course, most tactical situations are more complicated than the case above. We'd like to demonstrate the solution process for a multiple units scenario. Consider the situation in figure 7. It is pre-Spring, with a French fleet in Pie. Rom and Mar are both owned by Italy. This time Italy is not able to displace the French fleet out of range in the Spring. Yet, Italy still has a preference for the Springtime outcome: Italy would rather see France enter the Fall season with fleet in Tus than in Mar, as the Italian army provides an extra defensive option for protecting Rom in the Fall. How much should Italy allocate to draw Pie to Tus in the Spring and how much for Fall-time defence?<br><br>
+
+
 <p>
 <CENTER><IMG src="Scenario.gif"></CENTER>
+
+
 <p><blockquote><FONT FACE="Verdana" SIZE=2><P ALIGN="CENTER"><U>Fig 7</U>: Italy prefers to draw the French fleet to Tuscany in the Spring, as that creates an extra opportunity for defence</blockquote></FONT>
+
 <P>There are four cases to consider. Seen from Italy's perspective: 
+
 <ul><li><b>Case 1:</b> Italy bids <FONT FACE="Verdana" SIZE=2>A<SUB>1</SUB></FONT> in the Spring and this bid is rejected (the French fleet will then start in Mar in the Fall). Italy then bids <FONT FACE="Verdana" SIZE=2>A<SUB>2</SUB></FONT> to move the French fleet out of Mar and this bid is similarly rejected. France captures Mar and the cost function to Italy is -<FONT FACE="Symbol" SIZE=2>a</FONT><SUB><FONT FACE="Verdana" SIZE=2>IF</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><SUB><FONT FACE="Verdana" SIZE=2>F</SUB>A<SUB>1</SUB> - </FONT><FONT FACE="Symbol" SIZE=2>a</FONT><SUB><FONT FACE="Verdana" SIZE=2>IF</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><SUB><FONT FACE="Verdana" SIZE=2>F</SUB>A<SUB>2</SUB> + S<SUB>I</SUB></FONT>  
 </ul>
 <P>Here we have introduced two new parameters: the <I>spending satisfaction ratio</I>: <FONT FACE="Symbol" SIZE=2>a</FONT><FONT FACE="Verdana" SIZE=2><SUB>IF</SUB></FONT> and the <I>overbid factor</I>: <FONT FACE="Symbol" SIZE=2>b</FONT><FONT FACE="Verdana" SIZE=2><SUB>F</SUB></FONT>.
+
 <P>A player benefits from each AgP by which an enemy's account is reduced. Yet reduction in an enemy's account is not generally equivalent to the same amount added to one's own account. The spending satisfaction ratio models this distinction; <FONT FACE="Symbol" SIZE=2>a</FONT><FONT FACE="Verdana" SIZE=2><SUB>IF</SUB></FONT> being defined as the number of AgPs Italy can spend for each spent by France so that Italy considers himself to have broken even (apart from any net exchange of supply centres). Note that <FONT FACE="Symbol" SIZE=2>a</FONT><FONT FACE="Verdana" SIZE=2><SUB>XY</SUB></FONT> is not a derived from the tactical position. Rather, it is determined from strategic considerations.
+
 <P>The overbid factor accounts for the fact that the cost for outbidding an opponent is generally some factor greater than unity above the opponent's bid. By indexing <FONT FACE="Symbol" SIZE=2>b</FONT><FONT FACE="Verdana" SIZE=2><SUB>F</SUB></FONT>, we account for variations in players' ability to read their opponents.
 <ul>
 <li><b>Case 2:</b> Italy bids <FONT FACE="Verdana" SIZE=2>A<SUB>1</SUB></FONT> in the Spring and this bid is rejected (the French fleet goes to Mar). Italy then bids <FONT FACE="Verdana" SIZE=2>A<SUB>2</SUB></FONT> to move the French fleet out of Mar and this time the bid is accepted. Italy retains his centres with cost function to Italy is -<FONT FACE="Symbol" SIZE=2>a</FONT><FONT FACE="Verdana" SIZE=2><SUB>IF</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><FONT FACE="Verdana" SIZE=2><SUB>F</SUB>A<SUB>1</SUB> + A<SUB>2</SUB></FONT> 
 </ul>
 <P>The next two cases the French fleet is ordered to Tus in the Spring: Italy can frustrate France's attempt at capturing Rom by controlling either the French fleet or the Italian army, and can distribute his Fall spending allocation for this operation arbitrarily between the two units. Here we consider two sub-cases: either France bids twice as much as Italy in the Fall to be certain to gain control of both units; or France spends nothing in the Fall and consequently fails to capture Rom.
+
 <P>Of course, these sub-cases are only the two most extreme among a continuum of possibilities. It is also possible that France might fail to control one of the army/fleet pair and still bear the cost for a successful bid on the remaining unit. Or France might gain control of both units at a price only slightly higher than Italy's bid. However, <U>to make a fair comparison, we must compare like with like</U>: The end-of-year outcome for cases 1 and 2 correspond to completely determinant results. It is therefore appropriate to focus on these sub-cases.
+
 <P>Generalising slightly, if there were <FONT FACE="Verdana" SIZE=2>N</FONT> units that could influence the outcome in Rom (the French fleet and <FONT FACE="Verdana" SIZE=2>N-1</FONT> other units), all of which must be controlled for France to make Rom, then France would be required to outspend Italy by a factor of <FONT FACE="Verdana" SIZE=2>N</FONT> in order to capture the centre. Here <FONT FACE="Verdana" SIZE=2>N</FONT> is assumed to be two or more.
 <ul>
 <li><b>Case 3:</b> Italy bids <FONT FACE="Verdana" SIZE=2>A<SUB>1</SUB></FONT> in the Spring and this bid is accepted (the French fleet goes into Fall in Tus). Italy then bids <FONT FACE="Verdana" SIZE=2>B<SUB>2</SUB></FONT> in blocking actions distributed between the French fleet and the Italian army, but is outbid by France for control of both units. Italy loses Rom and has the cost function to Italy is <FONT FACE="Verdana" SIZE=2>A<SUB>1</SUB> - N</FONT><FONT FACE="Symbol" SIZE=2>a</FONT><FONT FACE="Verdana" SIZE=2><SUB>IF</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><FONT FACE="Verdana" SIZE=2><SUB>F</SUB>B<SUB>2</SUB> + S<SUB>I
 </SUB></FONT><br><br>
 <li><b>Case 4:</b> Italy bids <FONT FACE="Verdana" SIZE=2>A<SUB>1</SUB></FONT> in the Spring and this bid is accepted (the French fleet goes into Fall in Tus). Italy then bids <FONT FACE="Verdana" SIZE=2>B<SUB>2</SUB></FONT> in blocking actions distributed between the French fleet and the Italian army and inhibits France's progress. Italy retains his centres with cost function to Italy is <FONT FACE="Verdana" SIZE=2>A<SUB>1</SUB> + B<SUB>2</SUB></FONT></ul> 
+
 <P>Equating the four cost functions:
+
 <center><FONT FACE="Symbol" SIZE=2><P>-a</FONT><SUB><FONT FACE="Verdana" SIZE=2>IF</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><SUB><FONT FACE="Verdana" SIZE=2>F</SUB>A<SUB>1</SUB> - </FONT><FONT FACE="Symbol" SIZE=2>a</FONT><SUB><FONT FACE="Verdana" SIZE=2>IF</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><SUB><FONT FACE="Verdana" SIZE=2>F</SUB>A<SUB>2</SUB> + S<SUB>I
 </SUB></FONT><FONT FACE="Symbol" SIZE=2><P>-a</FONT><SUB><FONT FACE="Verdana" SIZE=2>IF</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><SUB><FONT FACE="Verdana" SIZE=2>F</SUB>A<SUB>1</SUB> + A<SUB>2
 </SUB><P>A<SUB>1</SUB> - N</FONT><FONT FACE="Symbol" SIZE=2>a</FONT><SUB><FONT FACE="Verdana" SIZE=2>IF</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><SUB><FONT FACE="Verdana" SIZE=2>F</SUB>B<SUB>2</SUB> + S<SUB>I
 </SUB><P>A<SUB>1</SUB> + B<SUB>2
 </SUB></FONT></center>
 <P>gives
+
 <P><center><IMG SRC="Italiancost.gif" WIDTH=194 HEIGHT=138></center>
+
 <P>If we take </FONT><FONT FACE="Symbol" SIZE=2>a</FONT><FONT FACE="Verdana" SIZE=2><SUB>IF</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><FONT FACE="Verdana" SIZE=2><SUB>F</SUB></FONT> = 1 and assume Italy values his SCs at 24 AgP, (reasonable values for many game situations), we would expect Italian bids of 2:F Pie - Tus (Spring) and, depending on the Spring outcome, either of 12&gt;F Mar - Lyo, or 8 AgP arbitrarily distributed between A Nap - Rom and F Tus H (Fall). 
+
 <P>We notice that <U>for the purpose of optimal bid calculations, tactical situations are categorisable in terms of a tally of &quot;and&quot;s and &quot;or&quot;s applying to the number of units that need to be controlled</U>. So, for instance, Italy, to defend his holdings, has to control the French fleet in the Fall, <I>or</I> control the French fleet in the Spring <I>and</I> control either the French fleet <I>or</I> the Italian army in the Fall. By interchanging all occurrences of &quot;or&quot;s and &quot;and&quot;s in the unit tally, we construct a description of the opponent's (France's) position. Both players are confronted with the same four cases, and France's cost functions correspond closely with their Italian equivalents: 
+
 <center><FONT FACE="Verdana" SIZE=2><P>X<SUB>1</SUB></FONT> + <FONT FACE="Verdana" SIZE=2>X<SUB>2</SUB></FONT> - <FONT FACE="Verdana" SIZE=2>S<SUB>F</FONT>
 </SUB><FONT FACE="Verdana" SIZE=2><P>X<SUB>1</SUB></FONT> - <FONT FACE="Symbol" SIZE=2>a</FONT><SUB><FONT FACE="Verdana" SIZE=2>FI</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><SUB><FONT FACE="Verdana" SIZE=2>I</SUB>X<SUB>2
 </SUB></FONT><FONT FACE="Symbol" SIZE=2><P>-a</FONT><SUB><FONT FACE="Verdana" SIZE=2>FI</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><SUB><FONT FACE="Verdana" SIZE=2>I</SUB>X<SUB>1</SUB> + Y<SUB>2</SUB> - S<SUB>F
 </SUB></FONT><FONT FACE="Symbol" SIZE=2><P>-a</FONT><SUB><FONT FACE="Verdana" SIZE=2>FI</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><SUB><FONT FACE="Verdana" SIZE=2>I</SUB>X<SUB>1</SUB> </FONT><FONT FACE="Symbol" SIZE=2>- a</FONT><SUB><FONT FACE="Verdana" SIZE=2>FI</SUB></FONT><FONT FACE="Symbol" SIZE=2>b</FONT><SUB><FONT FACE="Verdana" SIZE=2>I</SUB>Y<SUB>2</SUB>/N</FONT></center>
+
 <P>Here French bids of <FONT FACE="Verdana" SIZE=2>X<SUB>1</SUB></FONT>, <FONT FACE="Verdana" SIZE=2>X<SUB>2</SUB></FONT>, and <FONT FACE="Verdana" SIZE=2>Y<SUB>2</SUB></FONT> compete against the Italian bids of <FONT FACE="Verdana" SIZE=2>A<SUB>1</SUB></FONT>, <FONT FACE="Verdana" SIZE=2>A<SUB>2</SUB></FONT> and <FONT FACE="Verdana" SIZE=2>B<SUB>2</SUB></FONT>. We can calculate that the French bidding levels as:
+
 <center><P><IMG SRC="Frenchcost.gif" WIDTH=200 HEIGHT=140></center>
+
 <P>Apparently, French bid levels closely resemble their Italian counterparts, with 1/<FONT FACE="Verdana" SIZE=2>N</FONT> substituting for <FONT FACE="Verdana" SIZE=2>N</FONT>. This substitution, following exchange of &quot;and&quot; and &quot;or&quot; in the unit tally, it is very evocative of a similar transformation between serial and parallel electrical networks. It strongly hints at a <U>general procedure for computing optimal bid levels for arbitrarily complicated tactical encounters</U>. (Care to try? A 10 AgP reward is hereby offered to the first person to send the correct solution to the <I>Letters to the Editor</I>).
-<P>If France chose the same <FONT FACE="Verdana" SIZE=2>S</FONT> and <FONT FACE="Symbol" SIZE=2>ab</FONT> values as Italy, heâ€™d bid 2:F Pie - Mar in the Spring and (depending on the Springtime outcome) either 12:F Mar H or 8:F Tus - Rom <U>and</U> 8!A Nap - Rom in the Fall. We see that with <FONT FACE="Symbol" SIZE=2>ab</FONT> set by both players to unity, the centre goes to whichever of the two players set the higher supply centre valuation. 
+
+<P>If France chose the same <FONT FACE="Verdana" SIZE=2>S</FONT> and <FONT FACE="Symbol" SIZE=2>ab</FONT> values as Italy, he’d bid 2:F Pie - Mar in the Spring and (depending on the Springtime outcome) either 12:F Mar H or 8:F Tus - Rom <U>and</U> 8!A Nap - Rom in the Fall. We see that with <FONT FACE="Symbol" SIZE=2>ab</FONT> set by both players to unity, the centre goes to whichever of the two players set the higher supply centre valuation. 
+
 <P>We note that the presence of the defending Italian army makes it 40% more expensive for France to capture a supply centre than for Italy to defend: <FONT FACE="Verdana" SIZE=2>c<SUB>F</SUB> + S<SUB>F</SUB></FONT> and <FONT FACE="Verdana" SIZE=2>c<SUB>I</SUB></FONT> give the minimum differential spending for attack and defence, respectively. Thus, if France succeeds in capturing a centre, we can assume he has outspent Italy by at least <FONT FACE="Verdana" SIZE=2>c<SUB>F</SUB> + S<SUB>F</SUB> = 7/12 S<SUB>F</SUB></FONT>. In comparison, if Italy succeeded in defending his SCs, he will have outspent France by at least <FONT FACE="Verdana" SIZE=2>c<SUB>I</SUB></FONT> = 5/12 <FONT FACE="Verdana" SIZE=2>S<SUB>I</SUB></FONT> (always assuming one's opponent is bidding optimally).
+
 <h2>Analysis and Interpretation</h2>
+
 <P>With these formulas in hand we can examine how the results from a typical bidding calculation can be interpreted and applied. We begin by exploring the relevance of the cost functions parameters <FONT FACE="Symbol" SIZE=2>a</FONT> and <FONT FACE="Symbol" SIZE=2>b</FONT>: (for convenience we will sometimes suppress the indexes).
+
 <P>Remember that <FONT FACE="Symbol" SIZE=2>a</FONT><FONT FACE="Verdana" SIZE=2><SUB>12</SUB></FONT> was defined as the maximum number of AgPs player 1 can spend for each AgP spent by player 2, so that player 1 still feels satisfied with the outcome of a tactical engagement. This spending satisfaction ratio encodes country X's policy toward country Y: 
+
 <OL>
+
 <LI>Low (positive) </FONT><FONT FACE="Symbol" SIZE=2>a</FONT> is characteristic of placidity or half-hearted aggression, possibly indicative of an emerging alliance. <br><br>
 <LI>Generally, a player values his own silver above damage done to an opponent's account balance. However, in a fight to the finish carried out in isolation between two players of roughly equal strength, a spending satisfaction ratio close to 1 is appropriate. <br><br>
 <LI>An <FONT FACE="Symbol" SIZE=2>a</FONT> in excess of 1 can apply for a player confronting a much weak adversary. In this case the superior player may be counting on the likelihood of improving his relative financial advantage even while outspending his opponent. The high <FONT FACE="Symbol" SIZE=2>a</FONT> approach also promotes a quick finish, facilitating elimination of the weaker player, thereby cutting off his income stream. (End of year income increments, having been neglected in Tic-Tac-Toyology, reappears here as a strategic influence).<br><br>
 <LI>Finally, a negative spending satisfaction ratio applies for an ally. The more one's own success and survival are dependent on an ally's fortunes, the more strongly negative the spending satisfaction ratio. With <FONT FACE="Symbol" SIZE=2>a</FONT> approaching -1, one does well to spend heavily to promote one's ally's objectives. <br><br>
 <LI>In addition, high (positive) <FONT FACE="Symbol" SIZE=2>a</FONT> goes along with a readiness to spend. A lower <FONT FACE="Symbol" SIZE=2>a</FONT> accompanies a more parsimonious playing style.</OL>
+
+
 <P>In contrast to <FONT FACE="Symbol" SIZE=2>a</FONT>; <FONT FACE="Symbol" SIZE=2>b</FONT>, the overbid factor, is not an independent variable. <FONT FACE="Symbol" SIZE=2>b</FONT> is 1 more than a player's average overage (the excess cost of a successful bid above the highest hostile bid) and is included to account for the fact that an outbidding opponent may encounter costs significantly above a player's own bid level. Players who are very good at reading their opponents may have a <FONT FACE="Symbol" SIZE=2>b</FONT> only slightly greater than 1; whereas less careful and more eager bidders may have an overbid factor as high as 2, or even higher.
+
 <P>As a mediator of spending readiness, <FONT FACE="Symbol" SIZE=2>ab</FONT> influences the outcome of tactical engagements, so that a <U>lower level of contentiousness (i.e. a lower <FONT FACE="Symbol" SIZE=2>ab</FONT><I> for both players</I>) favours the player with the less pronounced spending requirement</U>. Quantitatively; the minimum ratio <FONT FACE="Verdana" SIZE=2>S<SUB>F</SUB>*/S<SUB>I</SUB>*</FONT> required for France to capture a supply centre in the previous example, increases from 1 to (<FONT FACE="Verdana" SIZE=2>N=</FONT>)2 as <FONT FACE="Symbol" SIZE=2>ab</FONT> drops from one to zero. (Here we have fixed <FONT FACE="Symbol" SIZE=2>ab</FONT> for the two players to be equal). 
-<P>Next, weâ€™d like to reprise the notion of the cut-off ratio developed in Tic-Tac-Toyola. The COR was defined as a goal achievement threshold, so it is tempting to identify it with the ratio <FONT FACE="Verdana" SIZE=2>S<SUB>F</SUB>*/S<SUB>I</SUB>*</FONT>. However, in addition to representing a threshold, Tic-Tac-Toyola's COR measured the attractiveness/difficulty of a position. (The lower the COR, the less exacting the financial requirements for victory). In Payola, the cost function is the natural measure of the difficulty of a position. The cost function is a key concept and bears detailed examination.
+
+<P>Next, we’d like to reprise the notion of the cut-off ratio developed in Tic-Tac-Toyola. The COR was defined as a goal achievement threshold, so it is tempting to identify it with the ratio <FONT FACE="Verdana" SIZE=2>S<SUB>F</SUB>*/S<SUB>I</SUB>*</FONT>. However, in addition to representing a threshold, Tic-Tac-Toyola's COR measured the attractiveness/difficulty of a position. (The lower the COR, the less exacting the financial requirements for victory). In Payola, the cost function is the natural measure of the difficulty of a position. The cost function is a key concept and bears detailed examination.
+
 <P>We have already cited the relationship between the cost function and optimal bidding. But the cost function also provides important input to strategic decisions. Most transparently: aggregating relevant changes in cost function values over multiple theatres provides one useful estimate of the incentive for changing (or maintaining) the diplomatic posture toward another player. 
+
 <P>Cost function comparisons are also useful as a guide to resources allocation between (i.e. not just within) theatres. Theatre-to-theatre comparisons are furthermore useful input for AgP-free operations: For instance, deciding on whether to enter the Russian theatre via a retreat Gal-Ukr, or to engage Germany by retreating Gal-Sil. (Similar remarks apply for builds and disbands). 
+
 <P>In principle, the cost function's usefulness as a common measure for comparing different theatres could equally be applied to extensions of Payola: for instance, to a variant in which a player managed a single current account used to control powers on multiple boards.
-<P>Finally, in analogy to the <FONT FACE="Verdana" SIZE=2>N</FONT>- and <FONT FACE="Verdana" SIZE=2>C</FONT>-values in the Tic-Tac-Toyola game tree, weâ€™d like to say something about allocation of capital between Spring and Fall seasons. In the first (simple) case, we saw that each player does well to bid one third of the total funds he has allocated to a theatre in the Spring. This leaves him ready to `double upâ€™ in the Fall. 
+
+<P>Finally, in analogy to the <FONT FACE="Verdana" SIZE=2>N</FONT>- and <FONT FACE="Verdana" SIZE=2>C</FONT>-values in the Tic-Tac-Toyola game tree, we’d like to say something about allocation of capital between Spring and Fall seasons. In the first (simple) case, we saw that each player does well to bid one third of the total funds he has allocated to a theatre in the Spring. This leaves him ready to `double up’ in the Fall. 
 <P>What is the Fall to Spring spending ratio in the second (more complicated) scenario, and how is it affected by the appearance of <FONT FACE="Symbol" SIZE=2>ab</FONT>? Typical values for <FONT FACE="Symbol" SIZE=2>ab</FONT> between countries at war range from about 0,8 to about 1,3. Examining the bid levels in our sample problems shows that, within this range, <FONT FACE="Symbol" SIZE=2>ab</FONT> has only very minor effect on the allocation of capital between Spring and Fall. For the second, more complicated, scenario, we can calculate a fairly generally reliable result by substituting the canonical value of 1 for <A NAME="here"></A><FONT FACE="Symbol" SIZE=2>ab</FONT>. Then both <FONT FACE="Verdana" SIZE=2>A<SUB>2</SUB>/A<SUB>1</SUB></FONT> and <FONT FACE="Verdana" SIZE=2>X<SUB>2</SUB>/X<SUB>1</SUB></FONT> are given by the expression:
 <br><br>
 <center><P><IMG SRC="FallSpring.gif" WIDTH=161 HEIGHT=44></center>
@@ -240,34 +342,44 @@
 <P>The Fall to Spring spending ratio starts at <FONT FACE="Symbol">&#165;</FONT>
  for <FONT FACE="Verdana" SIZE=2>N</FONT>=1 (i.e. no Spring bidding if there is no unit to compete with the French fleet), decreasing then in the sequence 6, 4, 10/3,.. with addition of fixed defenders. In all such cases, the Fall to Spring spending ratio exceeds 2 (the value computed for the simple case).
 <h2>Quality Check: (Why) Does it Work?</h2>
-<P>Does the Tic-Tac-Toyology method really work for Payola and, if so, why hasnâ€™t it made an appearance in the analyses of other games? The game tree concept is not new. It is a typical starting point for game analyses. However, for all but the simplest games, the game tree grows too rapidly to permit forward calculation to the leaves. Therefore, it not viable to use straightforward backward regression to evaluate prior game situations. Instead, one typically relies on heuristics. That is: evaluation of a game situation based on a set of positional and material characteristics. Heuristics are a collection of ad-hoc, experiential principles. They are by nature untestable except by performance comparison with other heuristics.
-<P>The Payola game tree grows very quickly. Yet we aspire to exact calculation, at least within the confines of the selected time horizon. Is it reasonable to entertain this hope and, if so, what special characteristics of Payola make the Tic-Tac-Toyology analogy viable? To answer these questions, Iâ€™ll briefly compare Payola with two other popular games: chess and go.
+<P>Does the Tic-Tac-Toyology method really work for Payola and, if so, why hasn’t it made an appearance in the analyses of other games? The game tree concept is not new. It is a typical starting point for game analyses. However, for all but the simplest games, the game tree grows too rapidly to permit forward calculation to the leaves. Therefore, it not viable to use straightforward backward regression to evaluate prior game situations. Instead, one typically relies on heuristics. That is: evaluation of a game situation based on a set of positional and material characteristics. Heuristics are a collection of ad-hoc, experiential principles. They are by nature untestable except by performance comparison with other heuristics.
+
+<P>The Payola game tree grows very quickly. Yet we aspire to exact calculation, at least within the confines of the selected time horizon. Is it reasonable to entertain this hope and, if so, what special characteristics of Payola make the Tic-Tac-Toyology analogy viable? To answer these questions, I’ll briefly compare Payola with two other popular games: chess and go.
+
 <P>More effort has gone into automating chess into than to any other game, and impressive results have been attained. Today's machines play on par or better than the best human players. This has been accomplished through the use of powerful hardware as well as sophisticated (but still ad-hoc) heuristic routines mimicking human judgement. What is the potential for applying Tic-Tac-Toyology concepts to chess?
+
 <P>As it turns out, Payola presents a much more favourable domain than chess for Tic-Tac-Toyology modelling: The action radius for Payola's pieces is much more limited in both space and time. (The only theoretical exception, namely the long convoy, is for practical reasons quite rare in Payola.) It is therefore easy to divide up the board into isolated theatres, each with a clear unit participation catalogue. In effect, we replace the problem of modelling play on a circa 70 space map, with modelling play on about 7 maps, each with circa 10 spaces (a much easier problem) and then we may neglect some of the sub-maps. 
+
 <P>Chess modelling is also complicated by indeterminacy in the time horizon: It is normal in chess for a series of series of forced or semi-forced moves to collapse a portion of the tree. In contrast, the very high level of unpredictability <U>for all participants</U> in each Payola turn strongly depreciates the value of look ahead, to the point where a 2- or 3-ply assessment is very close to perfect. 
+
 <P>What about the game of go? Go superficially resembles Payola in that the direct action radius of each unit is 1 square. In fact, it might be realistic to apply Tic-Tac-Toyola principles to the <I>early phase</I> of a go game, or, better still, to <I>goyola</I> (players bid to control stone placement). We compute the cost functions in the various active theatres, then select the most auspicious move. This might seem an all the more promising approach, as go(yola) is pure tactics (according to our understanding of the word, in which strategy refers exclusively to multi-player aspects.) 
+
 <P>Why is it then that no one has ever developed a program that could play a passable game of go? The critical obstacle to a computational solution for go is the potential explosive growth of each unit's effective action radius during the course of play. Whereas Payola remains a game of shifting, but nevertheless clearly distinct (i.e. no more than weakly coupled) tactical theatres, go theatres will merge, to the extent where a single endgame move can have a momentous impact on extremely remote localities. What's more, the range of given move can be difficult to characterise. These features get in the way of any program to decompose the game tree into a collection of computationally less demanding game saplings. 
 <h2>Conclusion</h2>
-<P>A long article merits a short conclusion. Keeping with a commendable tradition, Iâ€™ll frame it around a recapitulation, and begin with an important caveat. Lest anyone get the wrong idea: Tic-Tac-Toyology, standing on its own, is <U>not</U> a candidate for automating play. To mention just one limitation: Tic-Tac-Toyology has no facility for analysing recent player behaviour and weighing the results with other influences to decide on a diplomatic posture (i.e. the spending satisfaction ratios). This would be a task for a separate strategy module. 
+<P>A long article merits a short conclusion. Keeping with a commendable tradition, I’ll frame it around a recapitulation, and begin with an important caveat. Lest anyone get the wrong idea: Tic-Tac-Toyology, standing on its own, is <U>not</U> a candidate for automating play. To mention just one limitation: Tic-Tac-Toyology has no facility for analysing recent player behaviour and weighing the results with other influences to decide on a diplomatic posture (i.e. the spending satisfaction ratios). This would be a task for a separate strategy module. 
+
 <P>Tic-Tac-Toyology could be realised into an effective tactics module for managing local encounters. Better said, Tic-Tac-Toyology could provide a tactics module plus; serving as a valued consultant to a strategic module on specific questions, for instance, with costs assessments for various diplomatic postures. Further, a Tic-Tac-Toyology module could also play a major role in deciding questions half way between strategy and tactics. For instance: which of an enemy's SCs to target, and how hard to fight to defend each of one's own SCs. On a more modest level, even short of an implementation, Tic-Tac-Toyola concepts have potential for improving play. 
+
 <P><i>Positis ponendis.</i>
+
 <BR><BR><TABLE>
   <TBODY>
   <TR vAlign=bottom>
     <TD><A href="mailto:affaldssakt@hotmail.com
 "><IMG 
-      src="/Zine/Common/letter.gif" border=0></A> </TD>
+      src="../../Common/letter.gif" border=0></A> </TD>
     <TD><STRONG>Frank Mayer<BR>(<a href="mailto:affaldssakt@hotmail.com">affaldssakt@hotmail.com</a>)</STRONG> 
   </TD></TR></TBODY></TABLE>
 <P>
 <I>If you wish to e-mail feedback on this article to the author, and clicking 
 on the envelope above does not work for you, feel free to use the <A 
-href="/Zine/S2007R/Common/DearDP.html">"<B>Dear 
+href="../Common/DearDP.html">"<B>Dear 
 DP...</B>"</A> mail interface.</I> 
 <P>
 <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/S2007R/"><img src="/Zine/Common/toS2007R.gif" align="right" border="0"></a>
+
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href="../"><img src="../../Common/toS2007R.gif" align="right" border="0"></a>
+
+
 </BODY></HTML>
-<!--
--->

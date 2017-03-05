@@ -1,0 +1,75 @@
+From Manus.Hand@evolving.com Fri Feb 28 12:48 PST 1997
+Received: from citadel.evolving.com (citadel.evolving.com [198.202.204.162]) by devel.diplom.org (8.8.3/8.7.3) with SMTP id MAA01136 for <dippouch@devel.diplom.org>; Fri, 28 Feb 1997 12:48:52 -0800 (PST)
+Received: from valiant.evolving.com (valiant.evolving.com [198.202.204.66]) by citadel.evolving.com (8.6.12/8.6.9) with ESMTP id NAA00108 for <dippouch@devel.diplom.org>; Fri, 28 Feb 1997 13:44:50 -0700
+Received: from hoss.evolving.com (hoss.evolving.com [204.31.198.6]) by valiant.evolving.com (8.6.12/8.6.9) with ESMTP id NAA06846 for <dippouch@devel.diplom.org>; Fri, 28 Feb 1997 13:44:45 -0700
+Received: (from manus@localhost) by hoss.evolving.com (8.6.12/8.6.12) id NAA19187 for dippouch@devel.diplom.org; Fri, 28 Feb 1997 13:44:43 -0700
+Received: from ns-1.sni.net (ns-1.sni.net [199.117.27.21]) by teal.sni.net (8.6.12/8.6.9) with ESMTP id MAA08856 for <mhand@teal.sni.net>; Fri, 28 Feb 1997 12:27:57 -0700
+Received: from algw2.lucent.com (algw2.lucent.com [205.147.213.2])
+	by ns-1.sni.net (8.8.5/8.8.5) with SMTP id KAA05660
+	for <mhand@csn.com>; Fri, 28 Feb 1997 10:48:10 -0700 (MST)
+Received: from emsr1.emsr.lucent.com by alig2.firewall.lucent.com (SMI-8.6/EMS-L sol2)
+	id MAA28772; Fri, 28 Feb 1997 12:47:39 -0500
+Received: by emsr1.emsr.lucent.com (SMI-8.6/EMS-1.2 Solaris/emsr)
+	id MAA25198 for csn.com!mhand; Fri, 28 Feb 1997 12:46:05 -0500
+Message-Id: <199702281746.MAA25198@emsr1.emsr.lucent.com>
+From: pnovak@ihlpr.ih.lucent.com
+Date: 28 Feb 97 11:45:00 -0600
+To: mhand@csn.com
+Subject: thanks for queues
+Sender: Manus.Hand@evolving.com
+Content-Type: text
+Content-Length: 2149
+Status: O
+
+manus:
+
+in r.g.d, i've seen some negative posts related to the game queueing
+system you helped set up.  you've always responded to them (eg, making
+folks type in their email address twice, allowing a GM to get N 
+more players, etc) quickly and responsibly.
+
+i generally don't feel the need to pat people on the back. 
+but after that one moron toasted dave kleiman because USIN went
+down when dave was on an announced vacation, i'm trying to do
+it a little more.  i really like the queueing system and 
+just wanted to say thanks to you and the others who created 
+and maintain it.
+
+one thing i've never seen mentioned (but i don't read everything) 
+is that the queueing system should give a much better understanding 
+of what types of games players want, which should be useful to 
+GMs who want to create their own games.     
+
+with that in mind, you might consider widening the menu of choices 
+that people have to choose from to include more games and variants.  
+eg, perhaps some player would like a standard/48 hour weekend included
+game, but that's not offered, so he either accepts the closest choice
+or doesn't sign up at all.   or perhaps allowing players to request
+a game type somehow.  eg, if i would like to try a 'chaos' game, it
+would be nice if there were a way to tell the queueing system that.
+
+an additional thought is that in rcg it seems like several GMs have
+indicated that people sign up in the queues, but then do not signon
+to the game.  perhaps because they mistyped their email address,
+and if so, the double-entry should greatly reduce those errors.
+have you considered the possibility of the queueing system sending
+email to the address that the player entered, and putting the player
+in the queue if and only if the player responds in some magic
+way to the queue's email?   this is just a thought, perhaps 
+impractical.  
+
+please consider all of this very friendly suggestions.   thanks
+very much for all the work you have done and if the queueing
+system never changes, you've still sold me with what you've
+already provided.  
+
+thanks.
+
+no hard feelings when you stab me.
+
+no reply needed
+
+paul novak
+pnovak@lucent.com
+
+

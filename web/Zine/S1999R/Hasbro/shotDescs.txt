@@ -1,0 +1,35 @@
+shot2.jpg:  the initial screen after the main title animation (which
+            I didn't capture, but which are REAL nice -- also between
+            every game-year is some real nice animation).
+shot3.jpg:  one of the game setup pages.  I chose "single player" and
+            now I get to pick which power I am and which are to be CD
+            (if any).  I set myself up as England and let AI run the
+            other six powers.
+shot4.jpg:  around the table. We can see that Germany and Russia are
+            talking in room 1, and Italy is in room 2 alone.  From this
+            screen you can go into an empty room or a room into which
+            you are invited by players already there.  Once in a room
+            (see shot5, shot8 below), you can invite another player in
+            by clicking on his flag on the right side of the screen.
+shot5.jpg:  inside a meeting room.  We invited Germany into this room
+            and he came in.  He is shown upper left.
+shot7.jpg:  a look at the "attitude" settings.  By adjusting these,
+            the sentences you construct in negotiation  with the
+            AI powers are made more or less threatening.
+shot8.jpg:  in a meeting room with the Italian (shown at left).
+            the scrolling area at bottom shows negotiations so far;
+            we invited Italy into this room, then asked him to
+            attack France, then he said yes.  We asked him by
+            clicking on his face, then on the cannon along the
+            top (for attack) then on the French flag at right,
+            which put the sentence in the little text area below
+            the map, then we hit the "Send" button.
+shot9.jpg:  here's the whole crew reassembled; now it's time to
+            put in orders
+shot10.jpg: when entering orders for your power, they show in the
+            scrolling window and you see the lines.  You do this by
+            point and click on the units and spaces, with pop-up
+            menu to choose from move, support, hold, convoy.
+shot11.jpg: after processing of orders, showing orders scrolled in
+            box, and lines representing the orders performed
+shot12.jpg: at the end of each year, center and unit totals are shown

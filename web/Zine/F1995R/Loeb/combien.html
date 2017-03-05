@@ -1,20 +1,24 @@
 <html> <head>
 <title>DP F1995R: How many possible moves are there in a
-retreat phase?</title>
+     retreat phase?</title>
 </head>
+
 <BODY BGCOLOR="#ffffff">
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/F1995R/"><IMG align=right SRC="/Zine/Common/toF1995R.gif" border=0></A>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toF1995R.gif" border=0></A>
 <BR><BR><HR>
+
+
 <h1>
 <center>
 How Many Possible Moves<BR>
 Are There in a Retreat Phase?</center></h1>
 <hr>
+
 <h2>Number of Dislodgements</h2>
 To force a retreat or a disband, the unit must be attacked by
 at least two units. Neither the unit retreating nor the two units
-attacking it
+attacking it  
 may be one of the two attackers of some other retreating unit.
 Thus, each retreat or disband requires three distinct units.
 Given that there are only 34 supply centers on the board, and therefore
@@ -27,6 +31,7 @@ An example clearly shows that these 11 dislodgements could easily
 <a href="example1.html">all be forced disbands!</a>  They may also
 all eleven be ordinary retreats, and we shall be leading up to an example
 where the number of possibilities for these 11 retreats is maximized.
+
 <h2>In the beginning, ...</h2>
 Actually, in 1901, there are only 22 units on the board, so by similar
 reasoning to that above, there can be no more than 7 simultaneous
@@ -39,34 +44,36 @@ only <i>F Tri</i> and <i>A Ven</i> border at all!)
 <p>
 In Fall 1901, there can be at most six dislodgements.
 <ul>
-<li> How can that be done?
-<li> Why can't there be seven?
-</ul>
+  <li> How can that be done?
+  <li> Why can't there be seven?
+</ul>       
 Try to resolve these questions yourself before peeking at <a
 href="example3.html">the answers</a>.
+
 <h3>Open Questions</h3>
 <ul>
-<li> Try to do a similar analysis for Spring 1902. (Best answers to
-appear in the S1996R issue.)
-<li> How about Fall 1902? ...
-<li> When is the earliest turn for which 11 dislodgements are
-possible?
+  <li> Try to do a similar analysis for Spring 1902. (Best answers to
+       appear in the S1996R issue.) 
+  <li> How about Fall 1902? ...
+  <li> When is the earliest turn for which 11 dislodgements are
+       possible?
 </ul>
+
 <h2>Maximum Number of Combinations</h2>
 In order to search for the best retreat, we must consider all
-possible <b>combinations</b> of retreats.
+possible <b>combinations</b> of retreats. 
 The worst case to
 consider must not only have a large number of units retreating
 simultaneously, but each unit must have a large number of possible
 retreats.
 <p>
 According to the <a href="rules.html">rules</a>,
-a unit must retreat to: "<i>a space to
+a unit must retreat to: "<i>a space to        
 which it could ordinarily move if unopposed by
-other units</i>.... <i>The unit may not retreat, however, to any space
+other units</i>.... <i>The unit may not retreat, however, to any space 
 which is occupied, nor to the space its attacker
 came from</i>...." At least one neighboring space is sure to be
-occupied. (The one which supported the attack.)
+occupied. (The one which supported the attack.) 
 Thus, the number of legal retreats is two fewer than
 the number of legal moves <b>unless</b> the support and/or the attack
 came from a space to which the attacked unit could not legally move.
@@ -76,39 +83,53 @@ inland province, or an army can be attacked from off-shore.)
 Here is a list of the spaces from which there are the most legal
 moves. (Adjustments have been made for the exceptions mentioned
 above.)
+
 <hr>
 <h3><center>Spaces With Many Retreat Possibilities</h3>
 <table border=2 cellpadding=2 cellspacing=0>
 <TR><TD align=center><B>Unit</B>
 <TD align=center><B>Neighbors</B><TD align=center><B>Max # Retreats</B></TR>
+
 <TR><TD align=center>F NTH
 <TD align=center>yor edi nwg nor ska den hel hol bel eng lon
 <TD align=center>9</TR>
+
 <TR><TD align=center>F MAO
 <TD align=center>nao iri eng bre gas spa por spa naf wes<TD align=center>8</TR>
+
 <TR><TD align=center>F ION
 <TD align=center>tun tys nap apu adr alb gre aeg eas<TD align=center>7</TR>
+
 <TR><TD align=center>F ENG
 <TD align=center>mao iri wal lon nth bel pic bre<TD align=center>6</TR>
+
 <TR><TD align=center>F BAL
 <TD align=center>lvn pru ber kie den swe bot<TD align=center>5</TR>
+
 <TR><TD align=center>A BUR
 <TD align=center>mar gas par pic bel ruh mun<TD align=center>5</TR>
+
 <TR><TD align=center>A GAL
 <TD align=center>war ukr rum bud vie boh sil<TD align=center>5</TR>
+
 <TR><TD align=center>A MUN
 <TD align=center>bur ruh kie ber sil boh tyr<TD align=center>5</TR>
+
 <TR><TD align=center>F TYS
 <TD align=center>wes lyo tus rom nap ion tun<TD align=center>5</TR>
+
 <TR><TD align=center>F NOR
 <TD align=center>ska nth nwg bar stp swe
-<TD align=center>5 (if attacked from Fin)</TR>
+    <TD align=center>5 (if attacked from Fin)</TR>
+
 <TR><TD align=center>A RUM
 <TD align=center>ser bud gal ukr sev bul
 <TD align=center>5 (if attacked from BLA)</TR>
+
 <TR><TD align=center>A TRI
 <TD align=center>tyr vie bud ser alb ven
 <TD align=center>5 (if attacked from ADR)</TR>
+
 <TR><TD align=center>A VEN
 <TD align=center>tyr tus rom pie apu tri
 <TD align=center>5 (if attacked from ADR)</TR>
@@ -122,6 +143,7 @@ in the case of <i>F Aeg, F Bla, A Con, F Den, F Lyo, F Nwg, A Ser, A Sil,
 F Swe, A Tyr, A War</i>, and <i>F Wes</i>. Also, <i>U Kie</i>, and
 <i>F Spa/sc</i> if attacked from certain neighbors.)
 <hr>
+
 Choosing, then, the eleven units with the most retreat possibities from off
 the list shown above, for the purposes of arranging for all these units to
 be dislodged at once,
@@ -131,16 +153,16 @@ possibilities. (Or 1,410,877,440 including the possibility of disbanding.)
 <p>
 However, certain of these spaces are adjacent to each other.  To wit:
 <ul>
-<li> MAO <-> Eng <-> Nth <- Nor
-<li> Bur <-> Mun
-<li> Gal <-> Rum
-<li> Ven <-> Tri
-<li> Ion <-> TyS
+  <li> MAO <-> Eng <-> Nth <- Nor
+  <li> Bur <-> Mun
+  <li> Gal <-> Rum
+  <li> Ven <-> Tri     
+  <li> Ion <-> TyS
 </ul>
 Obviously, a unit retreating from one of these spaces limits the choices of a
 neighboring retreating unit.
 Similarly, a unit <i>A</i> supporting <i>B</i> in an attack on a unit
-<i>C</i> could conceivably
+<i>C</i> could conceivably 
 limit the retreat choices of some  unit <i>D</i>.
 Thus, we can not attain the total of 236,250,000 possible retreat
 combinations.
@@ -200,30 +222,33 @@ smaller due to the shared retreat
 locations (that is, although the fleets in the Gulf of Lyon and the
 Mid-Atlantic are both eligible to retreat to the south coast of Spain,
 only one of them, at most, may do so).
+
 <H3>Open Problems</H3>
 <ul>
-<li>Calculate the number of unique board positions which could result
-from the situation described; in other words, reduce the figures given
-above by accounting for the shared
-retreat spaces.  (Best answer to appear in an update of this
-column.)
-<li>How many retreat combinations can appear in Fall 1901? (Best
-answers to appear in an update of this column.)
-<li>In Spring 1902? (Best answers to appear in the S1996R issue.)
-<li>How about Fall 1902? ...
-</ul>
+  <li>Calculate the number of unique board positions which could result
+	  from the situation described; in other words, reduce the figures given
+	  above by accounting for the shared
+      retreat spaces.  (Best answer to appear in an update of this
+      column.)
+  <li>How many retreat combinations can appear in Fall 1901? (Best
+      answers to appear in an update of this column.)
+  <li>In Spring 1902? (Best answers to appear in the S1996R issue.)
+  <li>How about Fall 1902? ...
+</ul>       
+
 Actually, positions with so many possible retreat combinations are
 especially rare. It would be interesting to undertake a statistical
 analysis of game histories with regard to the number of units
 retreating at one time, and how many legal retreat combinations are
 available. Any volunteers?
+
 <hr>
 Return to <a href="ret.html">main article</a>
+
 <hr>
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/F1995R/"><IMG align=right SRC="/Zine/Common/toF1995R.gif" border=0></A>
+
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toF1995R.gif" border=0></A>
 <BR><BR>
 </body>
 </html>
-<!--
--->

@@ -1,0 +1,1052 @@
+From manus@server.python.net  Thu May 27 20:12:50 1999
+Received: from server.python.net (IDENT:qmailr@server.python.net [209.50.192.113])
+	by devel.diplom.org (8.9.3/8.9.3) with SMTP id NAA02964
+	for <dippouch@diplom.org>; Thu, 27 May 1999 13:12:46 -0700 (PDT)
+From: manus@server.python.net
+Received: (qmail 898 invoked by uid 1014); 27 May 1999 18:53:38 -0000
+Message-ID: <19990527185338.897.qmail@server.python.net>
+Subject: Re: Hasbro Diplomacy Unleashed
+To: THurley@meyerglass.com
+Date: Thu, 27 May 1999 14:53:38 -0400 (EDT)
+In-Reply-To: <00ae01bea86c$4a6dd980$78c8a8c0@CHMGI.COM> from "Todd Hurley" at May 27, 99 01:11:06 pm
+Reply-To: manus@diplom.org
+Content-Type: text
+Status: RO
+
+
+Okay, let's see here.  These are in no particular order.
+
+First, some groundwork.
+
+Tell us a little bit about yourself.  (Others you get in on this "interview"
+should do the same, of course.)
+
+Size of the development team involved in the Dip project?
+
+How many were familiar with Diplomacy beforehand?  (And how familiar?)
+
+How long did the development take?
+
+What language was it written in (just for my own info, actually)?
+
+Diplomacy is rather unique among games in its variability, and as you know,
+a jillion different "variants" exist.  Was any thought given to making the
+product adaptable for other maps?  If so, how easy would it be for the hobby
+to set up a map "plug-in" collection or to work with you and Hasbro to
+provide for the expandability of the game?
+
+What would you say were the most difficult hurdles?
+
+I see that you mentioned Ken Lowe's judge.  Was the actual (spaghetti) code
+ever referenced?
+
+Is the Ken Lowe rule that convoy paths must be explicitly spelled out used
+(frankly, I hope it is)?  If not, how are the "unwanted convoy" and the
+convoy disruption rule handled?
+
+How is Pandin's Paradox handled?
+
+How much material on tactics is provided with the game?  That is, is a
+"help" system in place that actually incorporates the "Library of Diplomacy
+Openings" and "The Library of Diplomacy Tactics" (examples from The Pouch)
+into it?
+
+Speaking of The Pouch, I am curious as to whether it was used (and if so,
+how heavily) as a source of information for you and your team.
+
+Are you aware of any upgrades that Hasbro has planned for you guys to
+do in the near or longer term?
+
+Are you aware that you have the best job in the world, having been paid to
+code a Diplomacy adjudicator?  Are you guys hiring?
+
+Please tell us a little bit about the AI.  How are negotiations handled?
+How complicated can they get?  Do you simply propose moves (or ask for
+certain moves NOT to be made) and get a yes/no answer [which could be a
+lie]?  And receive similar proposals deom the AI players?  Are DMZ's
+negotiated by the AI players?  How about medium to long-term goals,
+such as a division of a specific set of SC's to be taken?
+
+Is the system meant for real-time play only or are PBEM-esque games
+(lasting weeks and months) possible.  That is, must all players who wish
+to communicate with each other be "online" with each other at all times
+during the game?  If so, I assume that (a) games can be saved until all
+players are online again if a break is needed and (b) PBEM games are being
+left to the existing systems (i.e., the judges)??
+
+Assuming a "real-time" mode is played, how are deadlines set and handled?
+How about deadline misses?  Do powers get put into civil disorder?  How
+are deadlines extended by players if more time is wanted/needed?
+
+Is there a turn rollback mechanism?
+
+Is there any restriction on "press"?  I have heard that there is a "chat"
+room concept into which you can invite any other player(s), but is there
+also the ability to send messages for reading later (a la PBEM)?
+
+Did you enjoy working on the project?
+
+Were any members of the development team involved in the organized Diplomacy
+hobby before the project?
+
+As a result of the project, have any members of the team become interested
+in the game when they were not before?
+
+Have any members of the team become sick to death of Diplomacy?  :-)
+
+Those of us who use the Ken Lowe judge are very happy that you are
+making the new product compatible with input and output from the judges.
+Can you tell us more fully exactly what is being done?
+
+I talked a bit about map variants.  How expandible is the product so that
+it could handle more involved variants, such as my "Payola" and "Crystal Ball"
+variants?  (Obviously, I would love to see them implemented or implementable
+if I have to do them myself :-)
+
+The hobby considers itself to be the game's greatest asset and would like
+to be involved in making sure that Diplomacy is implemented and marketed
+in a way the game deserves.  Do you know of any plans by you or Hasbro to
+involve representatives of the hobby in any advisory or quality control
+capacity?
+
+As you are aware, there are a great many Diplomacy tournaments and
+conventions scheduled every year around the world.  Will your company
+or Hasbro be attending or promoting these types of hobby activities?
+
+Do you have any knowledge of the NON-computer version of the game that
+Hasbro will release?  (If so, similar follow-up questions, such as do you know
+if Hasbro plans to include hobby promoting material in the boxed sets the
+way Avalon Hill used to do for the Postal hobby?)
+
+When do I sit to be videotaped and put on the "Tips from the Experts" part of
+the CD?  (Like Steve Mizerak in my "Virtual Pool 2" game :-)
+
+(Actually, this isn't a bad idea if you haven't already thought of it.
+Allan Calhamer, inventor of the game, would be nice to have immortalized
+on CD in your product -- I have his postal address if you need it.  Other
+hobby legends (other than me, that it :-) like Edi Birsan should also
+be considered.)
+
+The Diplomacy hobby is truly international, as is made testament by the annual
+world championships.  Some of the best face-to-face players in the world come
+from France and Sweden, and these players have become very good friends of
+mine and of other hobbyists here, via the World Championships and through
+e-mail.  I have two questions here.   First, is your product multi-lingual
+(I won't presume that it automatically runs outgoing player-to-player messages
+through a http://babelfish.altavista.digital.com-like translator to render
+them into the chosen language of the recipient, though that would be very
+very cool and you might want to consider adding it, rather than forcing the
+players to do the translation themselves), but rather I'm just asking if the
+code itself has been internationalized?  Secondly, European nations use
+alternate game-ending rules than do Americans.  That is, Frenchmen play
+only the first eight game-years, and Swedes play only the first nine.
+This differs from the American way of playing until the game is won or
+drawn.  Does your product support such alternate rules?
+
+Could your product be used in a tournament setting, and if so, how much
+help would it be?  (That is, would a tournament-arranger be included or
+possible, that would "score" and "seed" rounds using any of the accepted
+Diplomacy scoring systems?)
+
+Are you sure you don't want to hire me, if not as a coder, then as the
+guy who thinks up all this great new stuff for you to do?
+
+Well, that's all I can think of for the first batch of questions.  I look
+forward to your responses and thank you VERY MUCH for taking the time
+to do this!!!
+
+Stab you soon,
+Manus
+
+From DLocke@meyerglass.com  Sat Jun  5 20:19:05 1999
+Received: from server.python.net (IDENT:qmailr@server.python.net [209.50.192.113])
+	by devel.diplom.org (8.9.3/8.9.3) with SMTP id NAA01949
+	for <dippouch@diplom.org>; Sat, 5 Jun 1999 13:19:03 -0700 (PDT)
+Received: (qmail 5350 invoked by uid 1014); 5 Jun 1999 18:58:54 -0000
+MBOX-Line: From DLocke@meyerglass.com Wed Jun 02 18:35:32 1999 remote from starship.python.net
+Delivered-To: manus@server.python.net
+Received: (qmail 7614 invoked from network); 2 Jun 1999 18:35:29 -0000
+Received: from gw.meyerglass.com (HELO meyerglass.com) (207.112.147.73)
+  by server.python.net with SMTP; 2 Jun 1999 18:35:29 -0000
+Received: from dlocke [192.168.200.130] by meyerglass.com [192.168.200.1] with SMTP (MDaemon.v2.7.SP4.R) for <manus@server.python.net>; Wed, 02 Jun 1999 14:51:16 -0500
+Message-ID: <001101bead42$b0e384a0$82c8a8c0@dlocke.CHMGI>
+From: "David Locke" <DLocke@meyerglass.com>
+To: <manus@server.python.net>
+Subject: Answers to questions
+Date: Wed, 2 Jun 1999 14:55:55 -0700
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+	boundary="----=_NextPart_000_000E_01BEAD08.04631AE0"
+X-Priority: 3
+X-MSMail-Priority: Normal
+X-Mailer: Microsoft Outlook Express 4.72.3110.1
+X-MimeOLE: Produced By Microsoft MimeOLE V4.72.3110.3
+X-MDaemon-Deliver-To: manus@server.python.net
+X-Return-Path: DLocke@meyerglass.com
+Sender: manus@server.python.net
+Status: O
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_000E_01BEAD08.04631AE0
+Content-Type: text/plain;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+OK, let me make a quick pass at this list.
+
+
+
+
+----- Original Message -----
+From: <manus@server.python.net>
+To: <THurley@meyerglass.com>
+Sent: Thursday, May 27, 1999 1:53 PM
+Subject: Re: Hasbro Diplomacy Unleashed
+
+
+>
+> Okay, let's see here. These are in no particular order.
+>
+> First, some groundwork.
+>
+> Tell us a little bit about yourself. (Others you get in on this
+"interview"
+> should do the same, of course.)
+>
+
+I am an Assistant Producer on this project, interfacing with you and the
+community at large is one of the many duties assigned to me. I am also 
+one
+of the Dip players previous to the project.
+
+Here is some info on the rest of the team.
+
+Mark Manyen is our Studio Head and has been in computer games since 
+1986,
+working on titles like the Chessmaster Series.
+
+Jim Haldy is the Meyer/Glass Producer on Diplomacy, he ia a 12 year 
+veteran
+of the games business with over 50 titles shipped.
+
+David Locke is our Senior Designer and has been involved in all aspects 
+of
+computer games for 10 years.
+
+Kurt Mitchell is the Lead Artist on Diplomacy.
+
+
+
+> Size of the development team involved in the Dip project?
+>
+8 people, full time, and a few others that helped out.
+
+> How many were familiar with Diplomacy beforehand? (And how familiar?)
+>
+4 of the 8 above were familiar before starting, all of the designers and
+producers.
+
+> How long did the development take?
+>
+We started in April 1998, and we expect to ship in October 1999.
+
+> What language was it written in (just for my own info, actually)?
+>
+C/C++ and very tiny bits of Intel assembly, mostly for graphics 
+performance.
+
+> Diplomacy is rather unique among games in its variability, and as you
+know,
+> a jillion different "variants" exist. Was any thought given to making 
+the
+> product adaptable for other maps? If so, how easy would it be for the
+hobby
+> to set up a map "plug-in" collection or to work with you and Hasbro to
+> provide for the expandability of the game?
+>
+We are providing only the standard map (Eroupe 1901). We started out the
+project thinking that we would do a bunch of maps, but, as we started on 
+the
+"Classic" map we found that the art time required was tremendous and 
+stepped
+back to a more do-able set of maps, which is 1 I am sorry to say. I 
+would
+assume that other maps may be sold as expansion packs if the original 
+game
+sells well enough to warrant them.
+
+The art requirements, as expalined to me, are great and I am not sure 
+that I
+understand them myself.
+
+
+> What would you say were the most difficult hurdles?
+>
+The hardest part of the project is the AI and rules engine. The rules
+because of the "human" nature of them. I mean that the rules are written 
+is
+a way for humans to understand by a leap of intuition, coding them and 
+all
+the strange quirks was very difficult. The AI is by far the biggest
+problem, I mean how do you go about emulating a human and human thought
+process? Odi has been working on the AI since the beginning and will
+continue until gold master.
+
+
+> I see that you mentioned Ken Lowe's judge. Was the actual (spaghetti)
+code
+> ever referenced?
+
+I think someone here read it and decided that we would not use it. We 
+did
+use it to verify that we were getting the same results from our "judge" 
+and
+as a model for the compromises to code the rules.
+
+>
+> Is the Ken Lowe rule that convoy paths must be explicitly spelled out 
+used
+> (frankly, I hope it is)? If not, how are the "unwanted convoy" and the
+> convoy disruption rule handled?
+>
+
+Yes, you must specifiy each fleet in the convoy chain for the army being
+convoyed. This is one of the places we looked to the internet judge code
+for solutions.
+
+
+> How is Pandin's Paradox handled?
+>
+I am not familiar with that... Please send examples and I will get back 
+to
+you.
+
+
+> How much material on tactics is provided with the game? That is, is a
+> "help" system in place that actually incorporates the "Library of
+Diplomacy
+> Openings" and "The Library of Diplomacy Tactics" (examples from The 
+Pouch)
+> into it?
+>
+We have our computer players selecting opening moves from a list of
+"standard" opening moves in order to give the computer player a better 
+Fall
+1901 and Spring 1902 position to work from. Some of these moves came 
+from
+The Pouch, some from our own games. We have not yet implemented help or 
+a
+tutorial.
+
+> Speaking of The Pouch, I am curious as to whether it was used (and if 
+so,
+> how heavily) as a source of information for you and your team.
+>
+We read it and we did use some of the information (see opening moves 
+above).
+
+> Are you aware of any upgrades that Hasbro has planned for you guys to
+> do in the near or longer term?
+>
+Nope. We assume that the sales numbers will drive expansions.
+
+> Are you aware that you have the best job in the world, having been 
+paid to
+> code a Diplomacy adjudicator? Are you guys hiring?
+>
+We do know that we have the best jobs in the world, not just due to the
+Diplomacy Project but because we create games. Are we hiring? hmmm....
+that's a loaded question. If I say yes, will I get flooded with resumes?
+Actually we are not currently in a hiring mode, we are a small developer 
+in
+Chicago and need to sign a new contract in order to do any hiring. The
+diplomacy team already has a new project, but, we are looking for 
+another
+title for our other team. We may be hiring soon...
+
+
+> Please tell us a little bit about the AI. How are negotiations 
+handled?
+> How complicated can they get? Do you simply propose moves (or ask for
+> certain moves NOT to be made) and get a yes/no answer [which could be 
+a
+> lie]? And receive similar proposals deom the AI players? Are DMZ's
+> negotiated by the AI players? How about medium to long-term goals,
+> such as a division of a specific set of SC's to be taken?
+>
+
+The game has a negotiation phase which is broken down into two areas; 
+the assembly room where all players ( including AI ) start, and the 
+meeting rooms where players go off to negotiate in private. Up to six 
+players can be in a meeting room at one time. Within the meeting room 
+human players can construct offers for other human players and also AI 
+players. At the same time players will receive offers from other human 
+players and AI players. These offers can include allying ( or not ), 
+attacking, moves, convoys, DMZs, bounces, and hearsay. You and the other 
+players, both human and AI, are free to except or decline these offers. 
+But in no way are you or the AI players bound to their acceptance. The 
+AI prioritizes its goals and compares that with offers made to control 
+its movement. The best AI ( we will have three ) will plan and look more 
+turns out.
+
+
+
+
+> Is the system meant for real-time play only or are PBEM-esque games
+> (lasting weeks and months) possible. That is, must all players who 
+wish
+> to communicate with each other be "online" with each other at all 
+times
+> during the game? If so, I assume that (a) games can be saved until all
+> players are online again if a break is needed and (b) PBEM games are 
+being
+> left to the existing systems (i.e., the judges)??
+>
+
+We will have four play modes in Diplomacy; Single player against 
+computer opponents, Multi-player over a LAN or the Internet, Hot Seat 
+for multiple players on one computer, and a PBEM mode.
+
+
+> Assuming a "real-time" mode is played, how are deadlines set and 
+handled?
+> How about deadline misses? Do powers get put into civil disorder? How
+> are deadlines extended by players if more time is wanted/needed?
+>
+
+Diplomacy has the ability to set timers for each of the game phases. If 
+a timer is set on and runs out of time, the game will try to advance to 
+the next phase. For players who want no time limits, all of the timers 
+can be turned off.
+
+
+> Is there a turn rollback mechanism?
+>
+
+No.=20
+
+
+> Is there any restriction on "press"? I have heard that there is a 
+"chat"
+> room concept into which you can invite any other player(s), but is 
+there
+> also the ability to send messages for reading later (a la PBEM)?
+>
+
+In a multi-player game, messages are sent to where you are; if you are 
+in the assembly, than all other players in the assembly can see your 
+message. Likewise, if you are in a meeting room, only those players in 
+the meeting room will get the message. You must understand that we are 
+recreating the board game and the look and feel is meant to be that of 
+players sitting around playing face to face.
+
+
+> Did you enjoy working on the project?
+>
+This question is unfair to ask at this time.
+
+> Were any members of the development team involved in the organized
+Diplomacy
+> hobby before the project?
+>
+Nope, sorry...
+
+> As a result of the project, have any members of the team become 
+interested
+> in the game when they were not before?
+>
+All of the team members have shown interest in playing to varying 
+degrees,
+again not really a fair question at this time.
+
+> Have any members of the team become sick to death of Diplomacy? :-)
+>
+No Comment. ;)
+
+> Those of us who use the Ken Lowe judge are very happy that you are
+> making the new product compatible with input and output from the 
+judges.
+> Can you tell us more fully exactly what is being done?
+>
+Play by e-mail will be part of the product, but, we have not nailed down 
+the
+exact implementation
+
+
+> I talked a bit about map variants. How expandible is the product so 
+that
+> it could handle more involved variants, such as my "Payola" and 
+"Crystal
+Ball"
+> variants? (Obviously, I would love to see them implemented or
+implementable
+> if I have to do them myself :-)
+>
+No map or rule variants can be done at this time.
+
+> The hobby considers itself to be the game's greatest asset and would 
+like
+> to be involved in making sure that Diplomacy is implemented and 
+marketed
+> in a way the game deserves. Do you know of any plans by you or Hasbro 
+to
+> involve representatives of the hobby in any advisory or quality 
+control
+> capacity?
+>
+I am not aware of any
+
+> As you are aware, there are a great many Diplomacy tournaments and
+> conventions scheduled every year around the world. Will your company
+> or Hasbro be attending or promoting these types of hobby activities?
+>
+
+That is really a Hasbro question. They own the rights and are publishing 
+the game. They have done some promoting of titles in the past, so I 
+would hope that they will do so with Diplomacy.
+
+
+> Do you have any knowledge of the NON-computer version of the game that
+> Hasbro will release? (If so, similar follow-up questions, such as do 
+you
+know
+> if Hasbro plans to include hobby promoting material in the boxed sets 
+the
+> way Avalon Hill used to do for the Postal hobby?)
+>
+
+Sorry, no idea.
+
+
+> When do I sit to be videotaped and put on the "Tips from the Experts" 
+part
+of
+> the CD? (Like Steve Mizerak in my "Virtual Pool 2" game :-)
+>
+> (Actually, this isn't a bad idea if you haven't already thought of it.
+> Allan Calhamer, inventor of the game, would be nice to have 
+immortalized
+> on CD in your product -- I have his postal address if you need it. 
+Other
+> hobby legends (other than me, that it :-) like Edi Birsan should also
+> be considered.)
+>
+
+This again would be a Hasbro thing.
+
+
+> The Diplomacy hobby is truly international, as is made testament by 
+the
+annual
+> world championships. Some of the best face-to-face players in the 
+world
+come
+> from France and Sweden, and these players have become very good 
+friends of
+> mine and of other hobbyists here, via the World Championships and 
+through
+> e-mail. I have two questions here. First, is your product 
+multi-lingual
+> (I won't presume that it automatically runs outgoing player-to-player
+messages
+> through a http://babelfish.altavista.digital.com-like translator to 
+render
+> them into the chosen language of the recipient, though that would be 
+very
+> very cool and you might want to consider adding it, rather than 
+forcing
+the
+> players to do the translation themselves), but rather I'm just asking 
+if
+the
+> code itself has been internationalized? Secondly, European nations use
+> alternate game-ending rules than do Americans. That is, Frenchmen play
+> only the first eight game-years, and Swedes play only the first nine.
+> This differs from the American way of playing until the game is won or
+> drawn. Does your product support such alternate rules?
+>
+
+To the first question, yes. We will localize in 6 or 7 languages. Also, 
+within the game, if you use the icons to negotiate with, it will display 
+in the correct language of the other player. That means if each player 
+used a version with a different language, they could play a game. 
+Secondly, we are working on a game editor which will give some 
+flexibility in the game. We hope to be able to set various victory 
+conditions.
+
+
+> Could your product be used in a tournament setting, and if so, how 
+much
+> help would it be? (That is, would a tournament-arranger be included or
+> possible, that would "score" and "seed" rounds using any of the 
+accepted
+> Diplomacy scoring systems?)
+>
+
+It is not designed for this. It is meant to be a stand alone product for 
+gamers.
+
+
+> Are you sure you don't want to hire me, if not as a coder, then as the
+> guy who thinks up all this great new stuff for you to do?
+>
+
+Then Dave Locke would have nothing to do ;).
+
+
+> Well, that's all I can think of for the first batch of questions. I 
+look
+> forward to your responses and thank you VERY MUCH for taking the time
+> to do this!!!
+>
+> Stab you soon,
+> Manus
+>
+
+
+
+------=_NextPart_000_000E_01BEAD08.04631AE0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD W3 HTML//EN">
+<HTML>
+<HEAD>
+
+<META content=3Dtext/html;charset=3Diso-8859-1 
+http-equiv=3DContent-Type>
+<META content=3D'"MSHTML 4.72.3110.7"' name=3DGENERATOR>
+</HEAD>
+<BODY bgColor=3D#ffffff>
+<DIV><FONT size=3D2>
+<P>OK, let me make a quick pass at this list.<BR><BR><BR><BR><BR>----- 
+Original=20
+Message -----<BR>From: &lt;</FONT><A 
+href=3D"mailto:manus@server.python.net"><FONT=20
+size=3D2>manus@server.python.net</FONT></A><FONT size=3D2>&gt;<BR>To: 
+&lt;</FONT><A=20
+href=3D"mailto:THurley@meyerglass.com"><FONT=20
+size=3D2>THurley@meyerglass.com</FONT></A><FONT size=3D2>&gt;<BR>Sent: 
+Thursday, May=20
+27, 1999 1:53 PM<BR>Subject: Re: Hasbro Diplomacy=20
+Unleashed<BR><BR><BR>&gt;<BR>&gt; Okay, let's see here. These are in no=20
+particular order.<BR>&gt;<BR>&gt; First, some 
+groundwork.<BR>&gt;<BR>&gt; Tell=20
+us a little bit about yourself. (Others you get in on=20
+this<BR>&quot;interview&quot;<BR>&gt; should do the same, of=20
+course.)<BR>&gt;<BR><BR>I am an Assistant Producer on this project, 
+interfacing=20
+with you and the<BR>community at large is one of the many duties 
+assigned to me.=20
+I am also one<BR>of the Dip players previous to the project.<BR><BR>Here 
+is some=20
+info on the rest of the team.<BR><BR>Mark Manyen is our Studio Head and 
+has been=20
+in computer games since 1986,<BR>working on titles like the Chessmaster=20
+Series.<BR><BR>Jim Haldy is the Meyer/Glass Producer on Diplomacy, he ia 
+a 12=20
+year veteran<BR>of the games business with over 50 titles 
+shipped.<BR><BR>David=20
+Locke is our Senior Designer and has been involved in all aspects 
+of<BR>computer=20
+games for 10 years.<BR><BR>Kurt Mitchell is the Lead Artist on=20
+Diplomacy.<BR><BR><BR><BR>&gt; Size of the development team involved in 
+the Dip=20
+project?<BR>&gt;<BR>8 people, full time, and a few others that helped=20
+out.<BR><BR>&gt; How many were familiar with Diplomacy beforehand? (And 
+how=20
+familiar?)<BR>&gt;<BR>4 of the 8 above were familiar before starting, 
+all of the=20
+designers and<BR>producers.<BR><BR>&gt; How long did the development=20
+take?<BR>&gt;<BR>We started in April 1998, and we expect to ship in 
+October=20
+1999.<BR><BR>&gt; What language was it written in (just for my own info, 
+
+actually)?<BR>&gt;<BR>C/C++ and very tiny bits of Intel assembly, mostly 
+for=20
+graphics performance.<BR><BR>&gt; Diplomacy is rather unique among games 
+in its=20
+variability, and as you<BR>know,<BR>&gt; a jillion different=20
+&quot;variants&quot; exist. Was any thought given to making the<BR>&gt; 
+product=20
+adaptable for other maps? If so, how easy would it be for 
+the<BR>hobby<BR>&gt;=20
+to set up a map &quot;plug-in&quot; collection or to work with you and 
+Hasbro=20
+to<BR>&gt; provide for the expandability of the game?<BR>&gt;<BR>We are=20
+providing only the standard map (Eroupe 1901). We started out 
+the<BR>project=20
+thinking that we would do a bunch of maps, but, as we started on=20
+the<BR>&quot;Classic&quot; map we found that the art time required was=20
+tremendous and stepped<BR>back to a more do-able set of maps, which is 1 
+I am=20
+sorry to say. I would<BR>assume that other maps may be sold as expansion 
+packs=20
+if the original game<BR>sells well enough to warrant them.<BR><BR>The 
+art=20
+requirements, as expalined to me, are great and I am not sure that=20
+I<BR>understand them myself.<BR><BR><BR>&gt; What would you say were the 
+most=20
+difficult hurdles?<BR>&gt;<BR>The hardest part of the project is the AI 
+and=20
+rules engine. The rules<BR>because of the &quot;human&quot; nature of 
+them. I=20
+mean that the rules are written is<BR>a way for humans to understand by 
+a leap=20
+of intuition, coding them and all<BR>the strange quirks was very 
+difficult. The=20
+AI is by far the biggest<BR>problem, I mean how do you go about 
+emulating a=20
+human and human thought<BR>process? Odi has been working on the AI since 
+the=20
+beginning and will<BR>continue until gold master.<BR><BR><BR>&gt; I see 
+that you=20
+mentioned Ken Lowe's judge. Was the actual (spaghetti)<BR>code<BR>&gt; 
+ever=20
+referenced?<BR><BR>I think someone here read it and decided that we 
+would not=20
+use it. We did<BR>use it to verify that we were getting the same results 
+from=20
+our &quot;judge&quot; and<BR>as a model for the compromises to code the=20
+rules.<BR><BR>&gt;<BR>&gt; Is the Ken Lowe rule that convoy paths must 
+be=20
+explicitly spelled out used<BR>&gt; (frankly, I hope it is)? If not, how 
+are the=20
+&quot;unwanted convoy&quot; and the<BR>&gt; convoy disruption rule=20
+handled?<BR>&gt;<BR><BR>Yes, you must specifiy each fleet in the convoy 
+chain=20
+for the army being<BR>convoyed. This is one of the places we looked to 
+the=20
+internet judge code<BR>for solutions.<BR><BR><BR>&gt; How is Pandin's 
+Paradox=20
+handled?<BR>&gt;<BR>I am not familiar with that... Please send examples 
+and I=20
+will get back to<BR>you.<BR><BR><BR>&gt; How much material on tactics is 
+
+provided with the game? That is, is a<BR>&gt; &quot;help&quot; system in 
+place=20
+that actually incorporates the &quot;Library of<BR>Diplomacy<BR>&gt;=20
+Openings&quot; and &quot;The Library of Diplomacy Tactics&quot; 
+(examples from=20
+The Pouch)<BR>&gt; into it?<BR>&gt;<BR>We have our computer players 
+selecting=20
+opening moves from a list of<BR>&quot;standard&quot; opening moves in 
+order to=20
+give the computer player a better Fall<BR>1901 and Spring 1902 position 
+to work=20
+from. Some of these moves came from<BR>The Pouch, some from our own 
+games. We=20
+have not yet implemented help or a<BR>tutorial.<BR><BR>&gt; Speaking of 
+The=20
+Pouch, I am curious as to whether it was used (and if so,<BR>&gt; how 
+heavily)=20
+as a source of information for you and your team.<BR>&gt;<BR>We read it 
+and we=20
+did use some of the information (see opening moves above).<BR><BR>&gt; 
+Are you=20
+aware of any upgrades that Hasbro has planned for you guys to<BR>&gt; do 
+in the=20
+near or longer term?<BR>&gt;<BR>Nope. We assume that the sales numbers 
+will=20
+drive expansions.<BR><BR>&gt; Are you aware that you have the best job 
+in the=20
+world, having been paid to<BR>&gt; code a Diplomacy adjudicator? Are you 
+guys=20
+hiring?<BR>&gt;<BR>We do know that we have the best jobs in the world, 
+not just=20
+due to the<BR>Diplomacy Project but because we create games. Are we 
+hiring?=20
+hmmm....<BR>that's a loaded question. If I say yes, will I get flooded 
+with=20
+resumes?<BR>Actually we are not currently in a hiring mode, we are a 
+small=20
+developer in<BR>Chicago and need to sign a new contract in order to do 
+any=20
+hiring. The<BR>diplomacy team already has a new project, but, we are 
+looking for=20
+another<BR>title for our other team. We may be hiring 
+soon...<BR><BR><BR>&gt;=20
+Please tell us a little bit about the AI. How are negotiations 
+handled?<BR>&gt;=20
+How complicated can they get? Do you simply propose moves (or ask 
+for<BR>&gt;=20
+certain moves NOT to be made) and get a yes/no answer [which could be 
+a<BR>&gt;=20
+lie]? And receive similar proposals deom the AI players? Are 
+DMZ's<BR>&gt;=20
+negotiated by the AI players? How about medium to long-term 
+goals,<BR>&gt; such=20
+as a division of a specific set of SC's to be taken?<BR>&gt;</P>
+<P>The game has a negotiation phase which is broken down into two areas; 
+the=20
+assembly room where all players ( including AI ) start, and the meeting 
+rooms=20
+where players go off to negotiate in private. Up to six players can be 
+in a=20
+meeting room at one time. Within the meeting room human players can 
+construct=20
+offers for other human players and also AI players. At the same time 
+players=20
+will receive offers from other human players and AI players. These 
+offers can=20
+include allying ( or not ), attacking, moves, convoys, DMZs, bounces, 
+and=20
+hearsay. You and the other players, both human and AI, are free to 
+except or=20
+decline these offers. But in no way are you or the AI players bound to 
+their=20
+acceptance. The AI prioritizes its goals and compares that with offers 
+made to=20
+control its movement. The best AI ( we will have three ) will plan and 
+look more=20
+turns out.</P>
+<P>&nbsp;</P>
+<P><BR>&gt; Is the system meant for real-time play only or are 
+PBEM-esque=20
+games<BR>&gt; (lasting weeks and months) possible. That is, must all 
+players who=20
+wish<BR>&gt; to communicate with each other be &quot;online&quot; with 
+each=20
+other at all times<BR>&gt; during the game? If so, I assume that (a) 
+games can=20
+be saved until all<BR>&gt; players are online again if a break is needed 
+and (b)=20
+PBEM games are being<BR>&gt; left to the existing systems (i.e., the=20
+judges)??<BR>&gt;</P>
+<P>We will have four play modes in Diplomacy; Single player against 
+computer=20
+opponents, Multi-player over a LAN or the Internet, Hot Seat for 
+multiple=20
+players on one computer, and a PBEM mode.</P>
+<P><BR>&gt; Assuming a &quot;real-time&quot; mode is played, how are 
+deadlines=20
+set and handled?<BR>&gt; How about deadline misses? Do powers get put 
+into civil=20
+disorder? How<BR>&gt; are deadlines extended by players if more time is=20
+wanted/needed?<BR>&gt;</P>
+<P>Diplomacy has the ability to set timers for each of the game phases. 
+If a=20
+timer is set on and runs out of time, the game will try to advance to 
+the next=20
+phase. For players who want no time limits, all of the timers can be 
+turned=20
+off.</P>
+<P><BR>&gt; Is there a turn rollback mechanism?<BR>&gt;</P>
+<P>No. </P>
+<P><BR>&gt; Is there any restriction on &quot;press&quot;? I have heard 
+that=20
+there is a &quot;chat&quot;<BR>&gt; room concept into which you can 
+invite any=20
+other player(s), but is there<BR>&gt; also the ability to send messages 
+for=20
+reading later (a la PBEM)?<BR>&gt;</P>
+<P>In a multi-player game, messages are sent to where you are; if you 
+are in the=20
+assembly, than all other players in the assembly can see your message. 
+Likewise,=20
+if you are in a meeting room, only those players in the meeting room 
+will get=20
+the message. You must understand that we are recreating the board game 
+and the=20
+look and feel is meant to be that of players sitting around playing face 
+to=20
+face.</P>
+<P><BR>&gt; Did you enjoy working on the project?<BR>&gt;<BR>This 
+question is=20
+unfair to ask at this time.<BR><BR>&gt; Were any members of the 
+development team=20
+involved in the organized<BR>Diplomacy<BR>&gt; hobby before the=20
+project?<BR>&gt;<BR>Nope, sorry...<BR><BR>&gt; As a result of the 
+project, have=20
+any members of the team become interested<BR>&gt; in the game when they 
+were not=20
+before?<BR>&gt;<BR>All of the team members have shown interest in 
+playing to=20
+varying degrees,<BR>again not really a fair question at this 
+time.<BR><BR>&gt;=20
+Have any members of the team become sick to death of Diplomacy?=20
+:-)<BR>&gt;<BR>No Comment. ;)<BR><BR>&gt; Those of us who use the Ken 
+Lowe judge=20
+are very happy that you are<BR>&gt; making the new product compatible 
+with input=20
+and output from the judges.<BR>&gt; Can you tell us more fully exactly 
+what is=20
+being done?<BR>&gt;<BR>Play by e-mail will be part of the product, but, 
+we have=20
+not nailed down the<BR>exact implementation</P>
+<P><BR>&gt; I talked a bit about map variants. How expandible is the 
+product so=20
+that<BR>&gt; it could handle more involved variants, such as my=20
+&quot;Payola&quot; and &quot;Crystal<BR>Ball&quot;<BR>&gt; variants? 
+(Obviously,=20
+I would love to see them implemented or<BR>implementable<BR>&gt; if I 
+have to do=20
+them myself :-)<BR>&gt;<BR>No map or rule variants can be done at this=20
+time.<BR><BR>&gt; The hobby considers itself to be the game's greatest 
+asset and=20
+would like<BR>&gt; to be involved in making sure that Diplomacy is 
+implemented=20
+and marketed<BR>&gt; in a way the game deserves. Do you know of any 
+plans by you=20
+or Hasbro to<BR>&gt; involve representatives of the hobby in any 
+advisory or=20
+quality control<BR>&gt; capacity?<BR>&gt;<BR>I am not aware of 
+any<BR><BR>&gt;=20
+As you are aware, there are a great many Diplomacy tournaments 
+and<BR>&gt;=20
+conventions scheduled every year around the world. Will your 
+company<BR>&gt; or=20
+Hasbro be attending or promoting these types of hobby 
+activities?<BR>&gt;</P>
+<P>That is really a Hasbro question. They own the rights and are 
+publishing the=20
+game. They have done some promoting of titles in the past, so I would 
+hope that=20
+they will do so with Diplomacy.</P>
+<P><BR>&gt; Do you have any knowledge of the NON-computer version of the 
+game=20
+that<BR>&gt; Hasbro will release? (If so, similar follow-up questions, 
+such as=20
+do you<BR>know<BR>&gt; if Hasbro plans to include hobby promoting 
+material in=20
+the boxed sets the<BR>&gt; way Avalon Hill used to do for the Postal=20
+hobby?)<BR>&gt;</P>
+<P>Sorry, no idea.</P>
+<P><BR>&gt; When do I sit to be videotaped and put on the &quot;Tips 
+from the=20
+Experts&quot; part<BR>of<BR>&gt; the CD? (Like Steve Mizerak in my 
+&quot;Virtual=20
+Pool 2&quot; game :-)<BR>&gt;<BR>&gt; (Actually, this isn't a bad idea 
+if you=20
+haven't already thought of it.<BR>&gt; Allan Calhamer, inventor of the 
+game,=20
+would be nice to have immortalized<BR>&gt; on CD in your product -- I 
+have his=20
+postal address if you need it. Other<BR>&gt; hobby legends (other than 
+me, that=20
+it :-) like Edi Birsan should also<BR>&gt; be considered.)<BR>&gt;</P>
+<P>This again would be a Hasbro thing.</P>
+<P><BR>&gt; The Diplomacy hobby is truly international, as is made 
+testament by=20
+the<BR>annual<BR>&gt; world championships. Some of the best face-to-face 
+players=20
+in the world<BR>come<BR>&gt; from France and Sweden, and these players 
+have=20
+become very good friends of<BR>&gt; mine and of other hobbyists here, 
+via the=20
+World Championships and through<BR>&gt; e-mail. I have two questions 
+here.=20
+First, is your product multi-lingual<BR>&gt; (I won't presume that it=20
+automatically runs outgoing player-to-player<BR>messages<BR>&gt; through 
+a=20
+</FONT><A href=3D"http://babelfish.altavista.digital.com-like/"><FONT=20
+size=3D2>http://babelfish.altavista.digital.com-like</FONT></A><FONT 
+size=3D2>=20
+translator to render<BR>&gt; them into the chosen language of the 
+recipient,=20
+though that would be very<BR>&gt; very cool and you might want to 
+consider=20
+adding it, rather than forcing<BR>the<BR>&gt; players to do the 
+translation=20
+themselves), but rather I'm just asking if<BR>the<BR>&gt; code itself 
+has been=20
+internationalized? Secondly, European nations use<BR>&gt; alternate 
+game-ending=20
+rules than do Americans. That is, Frenchmen play<BR>&gt; only the first 
+eight=20
+game-years, and Swedes play only the first nine.<BR>&gt; This differs 
+from the=20
+American way of playing until the game is won or<BR>&gt; drawn. Does 
+your=20
+product support such alternate rules?<BR>&gt;</P>
+<P>To the first question, yes. We will localize in 6 or 7 languages. 
+Also,=20
+within the game, if you use the icons to negotiate with, it will display 
+in the=20
+correct language of the other player. That means if each player used a 
+version=20
+with a different language, they could play a game. Secondly, we are 
+working on a=20
+game editor which will give some flexibility in the game. We hope to be 
+able to=20
+set various victory conditions.</P>
+<P><BR>&gt; Could your product be used in a tournament setting, and if 
+so, how=20
+much<BR>&gt; help would it be? (That is, would a tournament-arranger be 
+included=20
+or<BR>&gt; possible, that would &quot;score&quot; and &quot;seed&quot; 
+rounds=20
+using any of the accepted<BR>&gt; Diplomacy scoring 
+systems?)<BR>&gt;</P>
+<P>It is not designed for this. It is meant to be a stand alone product 
+for=20
+gamers.</P>
+<P><BR>&gt; Are you sure you don't want to hire me, if not as a coder, 
+then as=20
+the<BR>&gt; guy who thinks up all this great new stuff for you to=20
+do?<BR>&gt;</P>
+<P>Then Dave Locke would have nothing to do ;).</P>
+<P><BR>&gt; Well, that's all I can think of for the first batch of 
+questions. I=20
+look<BR>&gt; forward to your responses and thank you VERY MUCH for 
+taking the=20
+time<BR>&gt; to do this!!!<BR>&gt;<BR>&gt; Stab you soon,<BR>&gt;=20
+Manus<BR>&gt;<BR></P></FONT></DIV></BODY></HTML>
+
+------=_NextPart_000_000E_01BEAD08.04631AE0--
+
+
+From manus@server.python.net  Mon Jun  7 18:11:15 1999
+Received: from server.python.net (IDENT:qmailr@server.python.net [209.50.192.113])
+	by devel.diplom.org (8.9.3/8.9.3) with SMTP id LAA10968
+	for <dippouch@diplom.org>; Mon, 7 Jun 1999 11:11:12 -0700 (PDT)
+From: manus@server.python.net
+Received: (qmail 26119 invoked by uid 1014); 7 Jun 1999 16:50:50 -0000
+Message-ID: <19990607165050.26118.qmail@server.python.net>
+Subject: Re: Flyers in the Dip games
+To: ahgames@hasbro.com (Levay Bill)
+Date: Mon, 7 Jun 1999 12:50:50 -0400 (EDT)
+In-Reply-To: <91A8371C0441D211AEC900A0C92CC65235AEFE@MEGATRON> from "Levay, Bill" at Jun 7, 99 01:34:55 pm
+Reply-To: manus@diplom.org
+Content-Type: text
+Status: RO
+
+> Steve Arthur in marketing says that he would "entertain the idea of a
+> flyer", but does not have the budget to print them himself. He says that you
+> would have to provide preprinted pieces (which have to be approved by Hasbro
+> first.) If this sounds acceptable, I'll send you his address, and you can
+> take over from there.
+> 
+Hmmm.  Well, I definitely want to do the flyers, but it sounds like you're
+saying the hobby (which has $0 to its collective name) would have to print
+a gazillion flyers and ship them to someone?
+
+If so, this doesn't seem doable.  Pointing new players to The Pouch is a
+Good Thing, but it won't bring anyone (well, me) any of the money necessary
+to advertise for them to come.
+
+I guess I was just thinking that even a little blurb stuck at the tail of
+the rules booklet in a box or something, like:
+
+        Join the International Community of Diplomacy Hobbyists!
+   Visit The Diplomatic Pouch -- the home of Diplomacy on the Internet
+                      http://www.diplom.org/DipPouch
+            Face-to-Face Play Including Tournament Coverage
+                     Play By Mail, Play By E-Mail
+        Strategy and Tactics Information and an Online Magazine
+
+would be nice.
+
+As you say, this would need to be approved by Hasbro, but I guess I would hope
+that the printing costs would be picked up by them.  If you could perhaps
+tell me who at Hasbro would need to be contacted to okay text like this
+and to perhaps make some call on how it could be included in the packaging,
+I would appreciate it.  (Or would this be a Steve Arthur if we're just talking
+about mooching an inch or so on a page already in your printing plans?)
+
+Thanks for all your help!
+
+Manus
+

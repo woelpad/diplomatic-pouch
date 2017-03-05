@@ -1,0 +1,338 @@
+From manus@diplom.org Thu Aug 21 16:21 PDT 1997
+Received: from starship.python.net ([207.25.124.13]) by devel.diplom.org (8.8.3/8.7.3) with ESMTP id QAA01938 for <dippouch@diplom.org>; Thu, 21 Aug 1997 16:21:29 -0700 (PDT)
+Received: (from manus@localhost) by starship.python.net (8.8.4/8.7.1) id QAA21682 for dippouch@diplom.org; Thu, 21 Aug 1997 16:21:26 -0700
+Received: (from agent@localhost) by teal.sni.net (8.8.5/8.6.9) id QAA02397 for <mhand@teal.sni.net>; Thu, 21 Aug 1997 16:25:14 -0600 (MDT)
+Received: from mailman.sni.net(199.117.27.25) by teal.sni.net via smap (V2.0)
+	id xma002356; Thu, 21 Aug 97 16:24:58 -0600
+Received: from cantva.canterbury.ac.nz (SYSTEM@cantva.canterbury.ac.nz [132.181.30.3]) by mailman.sni.net (8.8.5/8.7.3) with ESMTP id PAA08450 for <manus@diplom.org>; Thu, 21 Aug 1997 15:23:25 -0700 (PDT)
+Received: from loft70 ("port 1335"@[132.181.35.70])
+ by csc.canterbury.ac.nz (PMDF V5.1-8 #17207)
+ with SMTP id <01IMQJHTHQVAC698FD@csc.canterbury.ac.nz> for manus@diplom.org; Fri,
+ 22 Aug 1997 10:24:40 +1200
+Date: Fri, 22 Aug 1997 10:26:42 +1300
+From: Jared M Keen <JMK60@student.canterbury.ac.nz>
+Subject: Diplomacy opening
+To: manus@diplom.org
+Message-id: <01IMQJHTICJCC698FD@csc.canterbury.ac.nz>
+Organization: University of Canterbury
+MIME-version: 1.0
+X-Mailer: Pegasus Mail for Win32 (v2.52)
+Content-transfer-encoding: 7BIT
+Priority: normal
+Comments: Authenticated sender is <JMK60@pophost.canterbury.ac.nz>
+Sender: manus@diplom.org
+Content-Type: text/plain; charset=US-ASCII
+Content-Length: 308
+Status: RO
+
+Hi,
+
+Just incase you were interested someone in a game I was playing did a 
+new opening.
+
+As Germany:
+F Kie - HEL
+A Ber - Sil
+A Mun - Kie
+
+I have no idea what his plan is, if he does by some strange chance do 
+someting useful with this move I will mail you.
+By the way, Thanks for the web page.
+
+Jared Keen
+
+
+From manus@diplom.org Mon Sep  8 12:23 PDT 1997
+Received: from starship.python.net ([207.25.124.13]) by devel.diplom.org (8.8.3/8.7.3) with ESMTP id MAA02918 for <dippouch@diplom.org>; Mon, 8 Sep 1997 12:23:24 -0700 (PDT)
+Received: (from manus@localhost) by starship.python.net (8.8.4/8.7.1) id MAA28835 for dippouch@diplom.org; Mon, 8 Sep 1997 12:23:22 -0700
+Received: (from agent@localhost) by teal.sni.net (8.8.5/8.6.9) id KAA13632 for <mhand@teal.sni.net>; Mon, 8 Sep 1997 10:23:50 -0600 (MDT)
+Received: from mailman.sni.net(199.117.27.25) by teal.sni.net via smap (V2.0)
+	id xma013606; Mon, 8 Sep 97 10:23:43 -0600
+Received: from beach.frankfurt.netsurf.de (root@beach.frankfurt.netsurf.de [194.64.181.2]) by mailman.sni.net (8.8.5/8.7.3) with ESMTP id JAA14686 for <manus@diplom.org>; Mon, 8 Sep 1997 09:17:55 -0700 (PDT)
+Received: from none.compuserve.com (board-78.darmstadt.netsurf.de [194.163.86.110])
+	by beach.frankfurt.netsurf.de (8.8.5/8.8.5) with ESMTP id SAA09270;
+	Mon, 8 Sep 1997 18:23:13 +0200 (MET DST)
+Message-ID: <3414260F.A3D32D9E@darmstadt.netsurf.de>
+Date: Mon, 08 Sep 1997 18:21:38 +0200
+From: Frank Mayer <Frank.Mayer@darmstadt.netsurf.de>
+Reply-To: Frank.Mayer@darmstadt.netsurf.de
+X-Mailer: Mozilla 4.01 [en] (Win95; I)
+MIME-Version: 1.0
+To: revref@nb.net, manus@diplom.org
+Subject: Re: Payola Variant
+X-Priority: 3 (Normal)
+References: <341428F6.76F6@nb.net>
+Sender: manus@diplom.org
+Content-Type: multipart/alternative; boundary="------------3E143BA03AF2DF7FE5E0B1EC"
+Content-Length: 2814
+Status: O
+
+
+--------------3E143BA03AF2DF7FE5E0B1EC
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+Hello Doug!
+
+Thanks for your comments regarding modifying the SC payoff in Payola.
+
+While there is good basis for concluding that an adjustment is
+necessary, I have to agree with you that the alternative of making the
+SC payoff proportional to the Hand values is not perfect, and the
+discussion of how the adjustment is to be made is really fully open.
+
+In your message, you suggested an alternative SC-payoff scheme with two
+components:
+
+
+   * a 'generic value' based on the attractiveness of ownership, for
+     which you would propose Silver could be used
+   * a value adjustment so that each countries home centres have an
+     increased payoff for that country alone, with possibly a capital HC
+     having an even higher country specific differential.
+
+One thought that occurs to me, is that the second point would likely
+increase the initial survivability of each power. In Payola we have seen
+that Austria is frequently at a disadvantage. One of the goals in any
+change to SC payoff would be to correct this. Your scheme (do you have a
+name for it?) might help by making it harder for Austria to be
+surrounded and swallowed right at the outset.
+
+Was this what you were thinking?
+
+
+frank
+
+
+
+
+
+
+
+
+
+--------------3E143BA03AF2DF7FE5E0B1EC
+Content-Type: text/html; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+
+<HTML>
+Hello Doug!
+
+<P>Thanks for your comments regarding modifying the SC payoff in Payola.
+
+<P>While there is good basis for concluding that an adjustment is necessary,
+I have to agree with you that the alternative of making the SC payoff proportional
+to the Hand values is not perfect, and the discussion of how the adjustment
+is to be made is really fully open.
+
+<P>In your message, you suggested an alternative SC-payoff scheme with
+two components:
+<BR>&nbsp;
+<UL>
+<LI>
+a 'generic value' based on the attractiveness of ownership, for which you
+would propose Silver could be used</LI>
+
+<LI>
+a value adjustment so that each countries home centres have an increased
+payoff for that country alone, with possibly a capital HC having an even
+higher country specific differential.</LI>
+</UL>
+One thought that occurs to me, is that the second point would likely increase
+the initial survivability of each power. In Payola we have seen that Austria
+is frequently at a disadvantage. One of the goals in any change to SC payoff
+would be to correct this. Your scheme (do you have a name for it?) might
+help by making it harder for Austria to be surrounded and swallowed right
+at the outset.
+
+<P>Was this what you were thinking?
+<BR>&nbsp;
+
+<P>frank
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;
+<BR>&nbsp;</HTML>
+
+--------------3E143BA03AF2DF7FE5E0B1EC--
+
+
+From manus@diplom.org Mon Sep  8 12:23 PDT 1997
+Received: from starship.python.net ([207.25.124.13]) by devel.diplom.org (8.8.3/8.7.3) with ESMTP id MAA02922 for <dippouch@diplom.org>; Mon, 8 Sep 1997 12:23:30 -0700 (PDT)
+Received: (from manus@localhost) by starship.python.net (8.8.4/8.7.1) id MAA28841 for dippouch@diplom.org; Mon, 8 Sep 1997 12:23:29 -0700
+Received: (from agent@localhost) by teal.sni.net (8.8.5/8.6.9) id HAA21005 for <mhand@teal.sni.net>; Mon, 8 Sep 1997 07:36:47 -0600 (MDT)
+Received: from mailman.sni.net(199.117.27.25) by teal.sni.net via smap (V2.0)
+	id xma020915; Mon, 8 Sep 97 07:36:07 -0600
+Received: from ruby.nb.net (ruby.nb.net [207.113.179.32]) by mailman.sni.net (8.8.5/8.7.3) with ESMTP id GAA13085 for <manus@diplom.org>; Mon, 8 Sep 1997 06:30:20 -0700 (PDT)
+Received: from beans-04.nb.net ([207.113.188.204]) by ruby.nb.net
+          (Netscape Mail Server v2.02) with SMTP id AAA16754;
+          Mon, 8 Sep 1997 09:34:50 -0400
+Message-ID: <341428F6.76F6@nb.net>
+Date: Mon, 08 Sep 1997 09:33:58 -0700
+From: "Doug Essinger" <revref@nb.net>
+Reply-To: revref@nb.net
+X-Mailer: Mozilla 3.01Gold (Win95; U; 16bit)
+MIME-Version: 1.0
+To: Frank.Mayer@darmstadt.netsurf.de
+CC: manus@diplom.org
+Subject: Payola Variant
+Content-Transfer-Encoding: 7bit
+Sender: manus@diplom.org
+Content-Type: text/plain; charset=us-ascii
+Content-Length: 1720
+Status: O
+
+Frank,
+
+I have read your article about the relative costs of each supply center,
+and your comments about designing a variant based on this information.
+
+In giving your comments some thought, I have come to the tentative
+conclusion that setting a supply center's revenue generation value on
+its cost of maintanence is not realistic, and provides little in the way
+of creating new reasons for going after a center since the costs of
+acquisition and maintenance is directly proportional.
+
+However, I think that to base the supply center's revenue generation
+value on its attractiveness (which seems to me to be well defined by
+your "silver" metric) would add a very interesting dynamic. And I think
+that the "financial" dynamic of which supply centers to conquer can be
+enhanced by a second, simple addition: increase the value of home supply
+centers for their original owner. Let me explain.
+
+First, I would take your "silver" metric and use it to assign generic
+revenue generation values to each supply center. This should relatively
+well reflect the attractiveness of ownership. Then I would add another
+bit of revenue generation value to the home supply centers of each
+country **for that country only**; I would also have the country's
+capital generate a bit more revenue than the other two centers.
+
+An example: the "silver" metric assigns a revenue generation value of 11
+to Trieste, 9 to Vienna, and 10 to Budapest. (These are just numbers
+pulled out of the proverbial hat.) That would be the revenue generated
+for any country other than Austria that controlled these centers. For
+Austria, I would add another 1 AgP to Vienna and Budapest, and 2 to
+Vienna for being a home supply center.
+
+What do you think?
+
+Doug
+
+
+From manus@diplom.org Mon Sep  8 12:23 PDT 1997
+Received: from starship.python.net ([207.25.124.13]) by devel.diplom.org (8.8.3/8.7.3) with ESMTP id MAA02926 for <dippouch@diplom.org>; Mon, 8 Sep 1997 12:23:36 -0700 (PDT)
+Received: (from manus@localhost) by starship.python.net (8.8.4/8.7.1) id MAA28847 for dippouch@diplom.org; Mon, 8 Sep 1997 12:23:35 -0700
+Received: (from agent@localhost) by teal.sni.net (8.8.5/8.6.9) id LAA20431 for <mhand@teal.sni.net>; Mon, 8 Sep 1997 11:12:27 -0600 (MDT)
+Received: from mailman.sni.net(199.117.27.25) by teal.sni.net via smap (V2.0)
+	id xma020390; Mon, 8 Sep 97 11:12:06 -0600
+Received: from ruby.nb.net (ruby.nb.net [207.113.179.32]) by mailman.sni.net (8.8.5/8.7.3) with ESMTP id KAA24046 for <manus@diplom.org>; Mon, 8 Sep 1997 10:06:18 -0700 (PDT)
+Received: from beans-05.nb.net ([207.113.188.205]) by ruby.nb.net
+          (Netscape Mail Server v2.02) with SMTP id AAA6319;
+          Mon, 8 Sep 1997 13:10:47 -0400
+Message-ID: <34145B97.1DA8@nb.net>
+Date: Mon, 08 Sep 1997 13:09:59 -0700
+From: "Doug Essinger" <revref@nb.net>
+Reply-To: revref@nb.net
+X-Mailer: Mozilla 3.01Gold (Win95; U; 16bit)
+MIME-Version: 1.0
+To: Frank.Mayer@darmstadt.netsurf.de
+CC: manus@diplom.org
+Subject: Re: Payola Variant
+References: <341428F6.76F6@nb.net> <3414260F.A3D32D9E@darmstadt.netsurf.de>
+Content-Transfer-Encoding: 7bit
+Sender: manus@diplom.org
+Content-Type: text/plain; charset=us-ascii
+Content-Length: 2756
+Status: O
+
+Frank Mayer wrote:
+ 
+> Hello Doug!
+> 
+> Thanks for your comments regarding modifying the SC payoff in Payola.
+> 
+> While there is good basis for concluding that an adjustment is
+> necessary, I have to agree with you that the alternative of making the
+> SC payoff proportional to the Hand values is not perfect, and the
+> discussion of how the adjustment is to be made is really fully open.
+> 
+> In your message, you suggested an alternative SC-payoff scheme with
+> two components:
+> 
+> 
+>    * a 'generic value' based on the attractiveness of ownership, for
+>      which you would propose Silver could be used
+>    * a value adjustment so that each countries home centres have an
+>      increased payoff for that country alone, with possibly a capital
+>      HC having an even higher country specific differential.
+> 
+> One thought that occurs to me, is that the second point would likely
+> increase the initial survivability of each power. In Payola we have
+> seen that Austria is frequently at a disadvantage. One of the goals in
+> any change to SC payoff would be to correct this. Your scheme (do you
+> have a name for it?) might help by making it harder for Austria to be
+> surrounded and swallowed right at the outset.
+> 
+> Was this what you were thinking?
+
+First things first -- no, I haven't thought of a name for this scheme.
+Give me some time, though, and I might be able to do so. 
+
+Second, you are correct in deducing that **one** of the reasons for
+suggesting this scheme is to increase the initial survivability of each
+country. (I am currently playing in my first Payola game -- as Austria.
+And I will confirm your observations that it is very difficult to
+survive as Austria!)
+
+However, there was another reason for this suggestion. As I thought
+about the schemes, it seemed to me that this scheme "reflected real
+life" better; in real life, citizens would generate more revenue for
+their own rulers than for foreign occupiers.
+
+In addition, I feel that this scheme will provide some interesting game
+dynamics. First, I believe the higher country-specific revenue
+differential for a capital SC would mimic the emotional ties to a
+capital which seems to exist in real life by giving a greater financial
+payout for the capital than for the other centers. Second, I believe
+that the country-specific differential would create a pull toward a
+country trying to defend its own territory by giving a greater reward in
+higher income for a home center than for a neutral.
+
+Toward giving my thoughts greater clarity, would you be able to send me
+the details of the "silver" metric you and Manus originally created?
+With that in hand, I could shape a specific proposal for my idea (and
+probably have thought of a name for this in the process).
+
+Doug
+
+
+From manus@diplom.org Sun Oct 19 21:54 PDT 1997
+Received: from starship.python.net ([207.25.124.13]) by devel.diplom.org (8.8.3/8.7.3) with ESMTP id VAA11385; Sun, 19 Oct 1997 21:54:19 -0700 (PDT)
+Received: (from manus@localhost) by starship.python.net (8.8.4/8.7.1) id VAA13714 for dippouch@diplom.org; Sun, 19 Oct 1997 21:54:17 -0700
+Received: (from agent@localhost) by teal.csn.net (8.8.5/8.6.9) id PAA17523 for <mhand@teal.csn.net>; Sun, 19 Oct 1997 15:06:29 -0600 (MDT)
+Received: from mailman.sni.net(199.117.27.25) by teal.csn.net via smap (V2.0)
+	id xma017517; Sun, 19 Oct 97 15:06:26 -0600
+Received: from devel.diplom.org (devel.diplom.org [205.179.145.131]) by mailman.sni.net (8.8.5/8.7.3) with ESMTP id OAA12455 for <manus@diplom.org>; Sun, 19 Oct 1997 14:02:48 -0700 (PDT)
+Received: (from nobody@localhost) by devel.diplom.org (8.8.3/8.7.3) id OAA08195; Sun, 19 Oct 1997 14:06:23 -0700 (PDT)
+Date: Sun, 19 Oct 1997 14:06:23 -0700 (PDT)
+Message-Id: <199710192106.OAA08195@devel.diplom.org>
+From: fsc100@aol.com
+Subject: DipPouch article feedback
+Errors-To: manus@diplom.org
+Sender: manus@diplom.org
+Content-Type: text
+Content-Length: 436
+Status: O
+
+About the pins and magnet article.  Nothing personal, but have people thought that if they are already using their computers for PBEM, that they can use a map program that can be downloaded?  
+
+It is easy, paperless, and pretty good. 
+-------------------------------------------------------------------
+The e-mail address from which this message is sent was specified by
+the sender manually through a Web form, so it may be incorrect.
+
+

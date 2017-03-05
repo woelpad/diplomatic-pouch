@@ -1,0 +1,214 @@
+From Christian.Charlebois@nspco.com  Wed Jul 22 17:20:34 1998
+Received: from polaris.nspco.com (polaris.nspco.com [206.10.243.2]) by devel.diplom.org (8.8.8/8.7.3) with ESMTP id KAA27215 for <dippouch@diplom.org>; Wed, 22 Jul 1998 10:20:23 -0700 (PDT)
+Received: from polaris.nspco.com (root@localhost)
+	by polaris.nspco.com with ESMTP id MAA02305
+	for <dippouch@diplom.org>; Wed, 22 Jul 1998 12:20:18 -0500 (CDT)
+Received: from mnmail02.nspco.com (mnmail02.nspco.com [151.215.239.42])
+	by polaris.nspco.com with ESMTP id MAA02301
+	for <dippouch@diplom.org>; Wed, 22 Jul 1998 12:20:18 -0500 (CDT)
+Received: by mnmail02.nspco.com with Internet Mail Service (5.5.1960.3)
+	id <P23709LK>; Wed, 22 Jul 1998 12:20:16 -0500
+Message-ID: <A158394F25F2D11184D800805FCCFB4804D3E4@MNMAIL07>
+From: "Charlebois, Christian" <Christian.Charlebois@nspco.com>
+To: "'dippouch@diplom.org'" <dippouch@diplom.org>
+Subject: Solution to the Cryptic Postcard
+Date: Wed, 22 Jul 1998 12:20:16 -0500
+MIME-Version: 1.0
+X-Mailer: Internet Mail Service (5.5.1960.3)
+Content-Type: text/plain
+Status: RO
+
+Wednesday:
+The Italian arrived in Vienna and the Austrian arrived in Rome.
+
+Thursday:
+The Englishman arrived in Paris and the Russian arrived in Ankara(?)
+
+Friday:
+The German arrived in London.
+
+Saturday:
+The Frenchman arrived in Moscow.
+
+Sunday:
+The Turk arrived in Berlin.
+
+From sdamer@epicsys.com  Thu Jul 23 16:01:50 1998
+Received: from gateway.epicsys.com (gateway.binc.net [205.173.177.66]) by devel.diplom.org (8.8.8/8.7.3) with SMTP id JAA28739 for <dippouch@diplom.org>; Thu, 23 Jul 1998 09:01:32 -0700 (PDT)
+Received: by gateway.epicsys.com (AIX 4.1/UCB 5.64/4.03)
+      id AA12256; Thu, 23 Jul 1998 10:46:10 -0500
+Received: from exchange.epicsys.com(172.17.1.117) by gateway via smap (V1.3)
+	id sma040142; Thu Jul 23 10:45:55 1998
+Received: by exchange.epicsys.com with Internet Mail Service (5.0.1460.8)
+	id <KD2VLYR8>; Thu, 23 Jul 1998 11:00:42 -0500
+Message-Id: <2E54ADBA8A53D111904900A0C97278DF01886049@exchange.epicsys.com>
+From: Steven Damer <sdamer@epicsys.com>
+To: "'dippouch@diplom.org'" <dippouch@diplom.org>
+Subject: Solution (and quibble)
+Date: Thu, 23 Jul 1998 11:00:40 -0500
+X-Mailer: Internet Mail Service (5.0.1460.8)
+Status: RO
+
+London spied on Berlin
+Paris spied on Rome
+Berlin spied on St. Petersburg
+Rome spied on Vienna
+Vienna spied on London
+Constantinople spied on Paris
+St. Petersburg spied on Constantinople
+
+Steve
+P.S.
+Technically speaking, and army can travel from any coastal province to any
+other coastal province in 6 months, which would imply the following matrix
+of times:
+                   L  P  B  R  V  C  S
+London             X  3  3  1  2  1  1		
+Paris              3  X  3  2  3  2  2 
+Berlin             3  3  X  2  3  2  1
+Rome               1  2  2  X  2  1  1
+Vienna             2  3  3  2  X  2  2
+Constantinople     1  2  2  1  2  X  1
+St. Petersburg     1  2  1  1  2  1  X
+
+Therefore at least 5 of the spies were taking the scenic route, which makes
+the puzzle insoluble.
+
+From Derrick.Scholl@eng.Sun.COM  Thu Jul 30 17:15:12 1998
+Received: from mercury.Sun.COM (mercury.Sun.COM [192.9.25.1]) by devel.diplom.org (8.8.8/8.7.3) with SMTP id KAA11596 for <dippouch@diplom.org>; Thu, 30 Jul 1998 10:14:57 -0700 (PDT)
+Received: from sunmail1.Sun.COM ([129.145.1.2]) by mercury.Sun.COM (SMI-8.6/mail.byaddr) with SMTP id KAA17067 for <dippouch@diplom.org>; Thu, 30 Jul 1998 10:13:55 -0700
+Received: from jurassic.eng.sun.com by sunmail1.Sun.COM (SMI-8.6/SMI-4.1)
+	id KAA10704 for <dippouch@diplom.org>; Thu, 30 Jul 1998 10:13:52 -0700
+Received: from wakko.eng.sun.com (wakko [129.146.82.125])
+	by jurassic.eng.sun.com (8.9.1+Sun/8.9.1) with SMTP id KAA26093;
+	Thu, 30 Jul 1998 10:13:53 -0700 (PDT)
+Received: from wakko by wakko.eng.sun.com (SMI-8.6/SMI-SVR4)
+	id KAA28591; Thu, 30 Jul 1998 10:12:19 -0700
+Message-Id: <199807301712.KAA28591@wakko.eng.sun.com>
+Date: Thu, 30 Jul 1998 10:12:18 -0700 (PDT)
+From: Derrick Scholl <Derrick.Scholl@eng.Sun.COM>
+Reply-To: Derrick Scholl <Derrick.Scholl@eng.Sun.COM>
+Subject: A Cryptic Postcard
+To: dippouch@diplom.org
+Cc: drscholl@jurassic.eng.Sun.COM
+MIME-Version: 1.0
+Content-Type: TEXT/plain; charset=us-ascii
+Content-MD5: eUeZ//hcPZEEkADRaKb3Zg==
+X-Mailer: dtmail 1.2.0 CDE Version 1.2 SunOS 5.6 sun4u sparc 
+Status: RO
+
+I actually found the easiest way to do this was to make a grid
+like Brian suggested, but fill in the blanks with the number
+of days it would take to get from each capitol to every other
+one.  Then, knowing that I needed 2 threes, 2 fours, and 1 each
+five, six, and seven, only one solution was possible.
+
+On Wednesday , Germany spied on Vienna and Austria spied on Rome.
+On Thursday, England spied on Moscow, and Russia spied on London.
+On Friday, Italy spied on Paris
+On Saturday, Turkey spied on Germany
+On Sunday, France spied on Ankara
+
+'Twas much fun, Thanks!
+
+Derrick
+
+From Derrick.Scholl@eng.Sun.COM  Thu Jul 30 21:01:39 1998
+Received: from mercury.Sun.COM (mercury.Sun.COM [192.9.25.1]) by devel.diplom.org (8.8.8/8.7.3) with SMTP id OAA27534 for <dippouch@devel.diplom.org>; Thu, 30 Jul 1998 14:01:25 -0700 (PDT)
+Received: from sunmail1.Sun.COM ([129.145.1.2]) by mercury.Sun.COM (SMI-8.6/mail.byaddr) with SMTP id NAA27224 for <dippouch@devel.diplom.org>; Thu, 30 Jul 1998 13:59:24 -0700
+Received: from jurassic.eng.sun.com by sunmail1.Sun.COM (SMI-8.6/SMI-4.1)
+	id NAA07683 for <dippouch@devel.diplom.org>; Thu, 30 Jul 1998 13:59:22 -0700
+Received: from wakko.eng.sun.com (wakko [129.146.82.125])
+	by jurassic.eng.sun.com (8.9.1+Sun/8.9.1) with SMTP id NAA01231
+	for <dippouch@devel.diplom.org>; Thu, 30 Jul 1998 13:59:22 -0700 (PDT)
+Received: from wakko by wakko.eng.sun.com (SMI-8.6/SMI-SVR4)
+	id NAA28871; Thu, 30 Jul 1998 13:57:48 -0700
+Message-Id: <199807302057.NAA28871@wakko.eng.sun.com>
+Date: Thu, 30 Jul 1998 13:57:48 -0700 (PDT)
+From: Derrick Scholl <Derrick.Scholl@eng.Sun.COM>
+Reply-To: Derrick Scholl <Derrick.Scholl@eng.Sun.COM>
+Subject: Re: A Cryptic Postcard
+To: dippouch@devel.diplom.org
+MIME-Version: 1.0
+Content-Type: TEXT/plain; charset=us-ascii
+Content-MD5: 35FK6Je/+t5VoBGmlseTuA==
+X-Mailer: dtmail 1.2.0 CDE Version 1.2 SunOS 5.6 sun4u sparc 
+Status: RO
+
+Manus,
+
+Well color me embarrassed.  I guess that makes a difference.
+
+How about:
+Wed:   Germany - St. Petersburg & Italy - Vienna
+Thurs: England - Berlin & Russia - Ankara
+Fri:   France - Rome
+Sat:   Austria - London
+Sun:   Turkey - Paris
+
+Thanks for pointing out my error.
+
+Derrick
+
+> From: dippouch@devel.diplom.org
+> Subject: Re: A Cryptic Postcard
+> To: Derrick.Scholl@Eng
+> Date: Thu, 30 Jul 1998 13:40:37 -0700 (PDT)
+> Mime-Version: 1.0
+> 
+> 
+> I will pass this on to Brian, but I think you missed one small point.
+> 
+> In 1901, the capital of Russia was St. Petersburg, not Moscow....
+> 
+> Manus
+> 
+> > 
+> > I actually found the easiest way to do this was to make a grid
+> > like Brian suggested, but fill in the blanks with the number
+> > of days it would take to get from each capitol to every other
+> > one.  Then, knowing that I needed 2 threes, 2 fours, and 1 each
+> > five, six, and seven, only one solution was possible.
+> > 
+> > On Wednesday , Germany spied on Vienna and Austria spied on Rome.
+> > On Thursday, England spied on Moscow, and Russia spied on London.
+> > On Friday, Italy spied on Paris
+> > On Saturday, Turkey spied on Germany
+> > On Sunday, France spied on Ankara
+> > 
+> > 'Twas much fun, Thanks!
+> > 
+> > Derrick
+> > 
+> 
+
+From smittelbach@pharmosan.com  Fri Aug 28 18:10:22 1998
+Received: from mail.cso.net (atlas.cso.net [194.106.224.13]) by devel.diplom.org (8.8.8/8.7.3) with ESMTP id LAA08627 for <dippouch@diplom.org>; Fri, 28 Aug 1998 11:10:06 -0700 (PDT)
+Received: from pharmosan.com by mail.cso.net (8.8.7/8.8.7)
+          id SAA23395; Fri, 28 Aug 1998 18:00:55 GMT
+Message-ID: <35E6F1C4.523F5DB5@pharmosan.com>
+Date: Fri, 28 Aug 1998 20:07:00 +0200
+From: "Mag. Sigismund Mittelbach" <smittelbach@pharmosan.com>
+Organization: PHARMOSAN
+X-Mailer: Mozilla 4.04 [en] (Win95; I)
+MIME-Version: 1.0
+To: dippouch@diplom.org
+Subject: (no subject)
+Content-Type: text/plain; charset=us-ascii
+Content-Transfer-Encoding: 7bit
+Status: RO
+
+Greetings,
+
+    I am sending the solution for "A Cryptic Postcard":
+
+Italy spied on Austria,
+Austria spied on England,
+Turkey spied on France,
+England spied on Germany,
+France spied on Italy,
+Germany spied on Russia,
+and Russia spied on Turkey
+
+T. Mittelbach
+

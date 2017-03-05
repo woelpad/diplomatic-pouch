@@ -1,573 +1,748 @@
 <html>
+
 <head>
-<title>
-DP F1998M: Assigning Powers to Players
-</title>
+  <title>
+   DP F1998M: Assigning Powers to Players
+  </title>
 </head>
 <body bgcolor="#ffffff">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/F1998M/"><img src="/Zine/Common/toF1998M.gif" align="right" border="0"></a>
+
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toF1998M.gif" align="right" border="0"></a>
 <br clear="both">
+
 <hr>
 <table>
-<tr>
-<th>
-<IMG hspace=20 BORDER = 10 ALIGN=LEFT SRC ="/Zine/Common/tarz-fbi.jpg">
-</th>
-<td>
-<h1 ALIGN=CENTER>Assigning Powers<br>To Players in Diplomacy</h1>
-<h3 ALIGN=CENTER><i>by "Tarzan"</i></h3>
-</td>
-</tr>
+   <tr>
+    <th>
+     <IMG hspace=20 BORDER = 10 ALIGN=LEFT SRC ="../../Common/tarz-fbi.jpg">
+    </th>
+    <td>
+     <h1 ALIGN=CENTER>Assigning Powers<br>To Players in Diplomacy</h1>
+     <h3 ALIGN=CENTER><i>by "Tarzan"</i></h3>
+    </td>
+   </tr>
 </table>
+
 <a NAME="Intro"><hr><h3>Introduction</h3></a>
+
 <p>It is hard to find any basic rule of any game that is defied with more regularity than is Diplomacy's rule for power assignment.  According to the 1976 version of the Avalon Hill (AH) Diplomacy rules:</p>
+
 <p><dl><dd><b><i>"At the start of the game, the players draw lots to determine which Great Power each will represent.  This is the only element of chance in the game."</i></b></dl></p>
+
 <p>Well, I'm not even sure I know what a "lot" is, but we all pretty much understand the concept.  Namely, that powers are assigned in some sort of "random" fashion.  It has become somewhat commonplace in many Diplomacy circles to consistently violate this rule.  How many different methods can you think of for assigning powers?  You might be surprised at how many methods are in use out there.  I know I was!</p>
+
 <p>What follows is a methodical development, discussion, and analysis of the various methods employed for power assignement.  While the methods discussed in this article can be referenced in any desired sequence, I encourage the reader to read the article from top to bottom, as many of the methods build on the previous methods.</p>
-<p><i>The impetus for this article comes from an intense discussion I participated in with several prominent Diplomacy personalities (who shall remain nameless for their own "safety" <IMG SRC = /Zine/Common/smiley.gif>).  Additionally, I received several responses from members of the <a href=news://rec.games.diplomacy>rec.games.diplomacy</a> newsgroup, who also contributed to this article.</i></p>
+
+<p><i>The impetus for this article comes from an intense discussion I participated in with several prominent Diplomacy personalities (who shall remain nameless for their own "safety" <IMG SRC = ../../Common/smiley.gif>).  Additionally, I received several responses from members of the <a href=news://rec.games.diplomacy>rec.games.diplomacy</a> newsgroup, who also contributed to this article.</i></p>
+
+
 <a NAME="Examples"><hr><h3>A Word About the Examples Used in this Article</h3></a>
+
 <p>For the purpose of the discussion which follows, all examples will refer to "Standard" Diplomacy.  That is, the game consists of seven players, each of which are assigned one of the seven "Great Powers," namely:  Austria, England, France, Germany, Italy, Russia, and Turkey.</p>
+
+
 <a NAME="Swapping"><hr><h3>A Word About "Swapping" Powers</h3></a>
+
 <p>Some game Masters (GMs) allow players to "swap" powers amongst themselves after the powers are assigned (but before the game starts).  Certain problems may arise when this is permitted.  Players might intentionally "swap" their assigned power so that they may play the same power(s) over and over again, thus never achieving a well-rounded experience.  Players might select their power based on the strengths/weaknesses (or other factors) of the players who will be playing their neighboring powers.  Additionally, if the same group of players faced one another in a large series of games, the players' performances might not accurately reflect the players' respective skill levels.</p></p>
+
+
 <a NAME = Randomness><hr><h3>A Word About "Randomness"</h3></a>
+
 <p>At various points in the following discussion, some degree of "randomness" will be required.  Usually, there are several different options as to how to proceed.  For example:  to select a player "at random," you could easily write each player's name on a slip of paper, place all the slips of paper in a hat and then "blindly" select one slip of paper from the hat.  If a power must be selected "at random," this process could be repeated, this time writing the powers' names on the slips of paper.  These processes can also be simulated using a computer random number generator.</p>
+
+
 <a NAME = Order><hr><h3>Placing the Players into an "Order"</h3></a>
+
 <p><a HREF = OnebyOne>Method 1</a> (and its variations) requires that the players first be placed into some sort of "order."  This "order" may be <a HREF = #Randomness>random</a> or may have varying degrees of deliberateness.  A more deliberate "ordering" may be as trivial as sorting the players by:  height, age, time they arrived to play, etc...  Numerous other criteria may be used and is only limitted by the creativity of the players involved.  When possible, a random "ordering" is usually desired.</p>
+
+
 <a NAME = PrefLists><hr><h3>A Word About Preference Lists</h3></a>
+
 <p>Some methods of power assignment permit each player to submit a "Preference List" to the GM prior to the start of the game.  This list ranks the different powers from most to least preferred.  Note that each Power may only be listed once.  A sample Preference List might be:</p>
+
 <dl><dt><dd><b>Preference List: &nbsp;&nbsp; England, France, Russia, Turkey, Italy, Austria, Germany</b></dl>
+
 <p>This list could be abbreviated (using the first letter of each power's name) as:</p>
+
 <dl><dt><dd><b>Preference List: &nbsp;&nbsp; EFRTIAG</b></dl>
+
 <p>A Preference List may be "complete," listing each of the different powers <b>exactly once</b> (as in the example above).  Alternatively, some methods allow "partial" (or "incomplete") Preference Lists.  A "partial" Preference List does not necessarily list all of the different powers (it may even list NO powers!).  Note that a "complete" Preference List is one type of a "partial" Preference List</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 2> Sample "partial" Preference Lists
-<tr><th> Preference List			<th> Comment
-<tr><th ALIGN = LEFT> FIR			<td> &nbsp;
-<tr><th ALIGN = LEFT> E				<td> only one power listed
-<tr><th ALIGN = LEFT> GIRTAEF			<td> also a "complete" Preference List
-<tr><th ALIGN = LEFT> "an empty list"	<td> no powers listed
+	<tr><th COLSPAN = 2> Sample "partial" Preference Lists
+	<tr><th> Preference List			<th> Comment
+	<tr><th ALIGN = LEFT> FIR			<td> &nbsp;
+	<tr><th ALIGN = LEFT> E				<td> only one power listed
+	<tr><th ALIGN = LEFT> GIRTAEF			<td> also a "complete" Preference List
+	<tr><th ALIGN = LEFT> "an empty list"	<td> no powers listed
 </table></center></p>
+
 <p>Preference Lists may permit "groupings" of powers.  Each player places the powers into "groups," each "group" containing one (or more) powers.  A power may not be placed into more than one "group."  If two (or more) powers are preferred equally, then they are placed into the same group.  Each player then ranks his "groups," from most to least preferred, and submits this ranking in the form of a Preference List.  "Grouped" Preference Lists may also be "complete" or "partial" (as described above).  "Groups" can be designated by brackets, "[" and "]".</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 2> Sample "grouped" Preference Lists
-<tr><th> Preference List		<th> Comment
-<tr><th ALIGN = LEFT> [EFT][GAR][I]			<td> also a "complete" Preference List
-<tr><th ALIGN = LEFT> [EFTGARI]			<td> all 7 powers are preferred equally
-<tr><th ALIGN = LEFT> [E][F][T][G][A][R][I]	<td> NO powers are equally preferred
-<tr><th ALIGN = LEFT> [EF][I][TA]			<td> also a "partial" Preference List
-<tr><th ALIGN = LEFT> [T]				<td> only one power listed
-<tr><th ALIGN = LEFT> "an empty list"		<td> no powers listed
+	<tr><th COLSPAN = 2> Sample "grouped" Preference Lists
+	<tr><th> Preference List		<th> Comment
+	<tr><th ALIGN = LEFT> [EFT][GAR][I]			<td> also a "complete" Preference List
+	<tr><th ALIGN = LEFT> [EFTGARI]			<td> all 7 powers are preferred equally
+	<tr><th ALIGN = LEFT> [E][F][T][G][A][R][I]	<td> NO powers are equally preferred
+	<tr><th ALIGN = LEFT> [EF][I][TA]			<td> also a "partial" Preference List
+	<tr><th ALIGN = LEFT> [T]				<td> only one power listed
+	<tr><th ALIGN = LEFT> "an empty list"		<td> no powers listed
 </table></center></p>
+
+
 <a NAME = Methods><hr><h3>Methods of Power Assignment</h3></a>
+
 <p>Each of the methods for assigning powers to players may be conceptually placed into one of three categories.  These categories are based on when the actual assignment is made.  That is, a power may be assigned to each player one-at-a-time, all players may be assigned a power at the same time (simultaneously) or the players may be assigned powers without any sort of organization:</p>
+
 <ul>
-<li><a HREF = #Anarchy>Method 0</a>:  No Oranization
-<li><a HREF = #OneByOne>Method 1</a>:  One Player at-a-time
-<li><a HREF = #Simultaneous>Method 2</a>:  Simultaneously
+	<li><a HREF = #Anarchy>Method 0</a>:  No Oranization
+	<li><a HREF = #OneByOne>Method 1</a>:  One Player at-a-time
+	<li><a HREF = #Simultaneous>Method 2</a>:  Simultaneously
 </ul>
+
 <p>If no organization is used, then power assignment is made in no orderly fashion whatsoever.  Alternatively, the players may first be placed in some sort of "order" and are then each assigned a power, one at-a-time.  Finally, some methods assign powers to all players simultaneously.</p>
+
+
 <a NAME = Anarchy><hr><h3>Method 0:  "Anarchy"</h3></a>
+
 <b><i><dl>
-<dd>Players shout out, grab pieces, wrestle each other to the ground, etc...
+	<dd>Players shout out, grab pieces, wrestle each other to the ground, etc...
 in an attempt to decide which player plays which power.
 </dl></i></b>
-<p>Using this method (if you can even call it that), there is no semblance of organization, fairness or theory to deciding which player will play which power.  Actually, some players consider this a variant, since using this method has the potential of making Diplomacy a "contact sport." <IMG SRC = /Zine/Common/smiley.gif></p>
+
+<p>Using this method (if you can even call it that), there is no semblance of organization, fairness or theory to deciding which player will play which power.  Actually, some players consider this a variant, since using this method has the potential of making Diplomacy a "contact sport." <IMG SRC = ../../Common/smiley.gif></p>
+
+
 <a NAME = OneByOne><hr><h3>Method 1:  Assigning Powers Player-by-Player, one at-a-time</h3></a>
+
 <p>This method has two components:</p>
+
 <ul>
-<li> placing the players into some sort of "<a HREF = #Order>order</a>"
-<li> "processing" the players, one at-a-time
+	<li> placing the players into some sort of "<a HREF = #Order>order</a>"
+	<li> "processing" the players, one at-a-time
 </ul>
+
 <p>The list of players is "processed" in the determined "order," one player at-a-time.  At the time of a given player's "processing," (s)he is assigned one of the currently unassigned powers.  There are 3 variations on this method:</p>
+
 <ul>
-<li><a HREF = #Random>Variation A</a>:  Truly Random Power Assignment
-<li><a HREF = #OnTheFly>Variation B</a>:  Players select their Powers "on the fly"
-<li><a HREF = #Prefs>Variation C</a>:  Players select their Powers based on their Preference Lists
+	<li><a HREF = #Random>Variation A</a>:  Truly Random Power Assignment
+	<li><a HREF = #OnTheFly>Variation B</a>:  Players select their Powers "on the fly"
+	<li><a HREF = #Prefs>Variation C</a>:  Players select their Powers based on their Preference Lists
 </ul>
+
+
 <a NAME = Random><hr><h3>Method 1, Variation A:  Truly Random Power Assignment</h3></a>
+
 <b><i><ol>
-<li>The players are placed into some sort of "<a HREF = #Order>order</a>"
-<li>As each player is "processed," he is <a HREF = #Randomness>randomly</a> assigned one of the currently unassigned powers.
+	<li>The players are placed into some sort of "<a HREF = #Order>order</a>"
+	<li>As each player is "processed," he is <a HREF = #Randomness>randomly</a> assigned one of the currently unassigned powers.
 </ol></i></b>
+
 <p>Note that using this method players have no influence whatsoever as to which power they play.  Thus, over a large series of games, players will (on average) have an equal opportunity to play each power.  Additionally, if the same group of players faced one another in a large series of games, the players' performances would accurately reflect the players' respective skill levels.</p>
+
 <p>If desired, players can be given more influence over the power they are assigned as demonstrated in the next variation.</p>
+
+
 <a NAME="OnTheFly"><hr><h3>Method 1, Variation B:  Players Select their Powers "on the fly"</h3></a>
+
 <b><i><ol>
-<li>The players are placed into some sort of "<a HREF = #Order>order</a>"
-<li>As each player is "processed," he names which of the currently unassigned powers he will play.
+	<li>The players are placed into some sort of "<a HREF = #Order>order</a>"
+	<li>As each player is "processed," he names which of the currently unassigned powers he will play.
 </ol></i></b>
+
 <p>In this method, since players choose their power (with the knowledge of who will be playing the already assigned powers), certain problems may arise.  Players might intentionally choose to play the same power(s) over and over again, thus never achieving a well-rounded experience.  Players might select their power based on the strengths/weaknesses (or other factors) of the players who will be playing their neighboring powers.  The results of a large series of games would thus less accurately reflect the players' actual skill levels.</p>
+
 <p>The bias over who plays the other powers, seen with this variation, can be eliminated by using Preference Lists, as demonstrated in the next variation.</p>
+
+
 <a NAME="Prefs"><hr><h3>Method 1 - Variation C:  Players Select their Powers based on their Preference Lists</h3></a>
+
 <b><i><ol>
-<li>Each player submits a <a HREF = #PrefLists>Preference List</a> to the GM.
-<li>The players are placed into some sort of "<a HREF = #Order>order</a>"
-<li>As each player is "processed," his Preference List is "consulted" to determine which of the (currently) unassigned powers he will play, as follows:
-<ul>
-<li>The player is assigned a power from the "group" appearing earliest on his preference list, which contains one (or more) unassigned powers.  If this "group" contains more than one unassigned power, then one of the unassigned powers in this group is chosen at random and assigned to the player.
-<li>If there are no unassigned powers on the player's preference list, then this player is "skipped over" and is not assigned any power (just yet).  The remaining players are "processed" as usual.
-</ul>
-<li>Once all players have been "processed," any player who has not yet been assigned a power is randomly assigned one of the remaining unassigned powers.
+	<li>Each player submits a <a HREF = #PrefLists>Preference List</a> to the GM.
+	<li>The players are placed into some sort of "<a HREF = #Order>order</a>"
+	<li>As each player is "processed," his Preference List is "consulted" to determine which of the (currently) unassigned powers he will play, as follows:
+	<ul>
+		<li>The player is assigned a power from the "group" appearing earliest on his preference list, which contains one (or more) unassigned powers.  If this "group" contains more than one unassigned power, then one of the unassigned powers in this group is chosen at random and assigned to the player.
+		<li>If there are no unassigned powers on the player's preference list, then this player is "skipped over" and is not assigned any power (just yet).  The remaining players are "processed" as usual.
+	</ul>
+	<li>Once all players have been "processed," any player who has not yet been assigned a power is randomly assigned one of the remaining unassigned powers.
 </ol></i></b>
+
 <p>For example, let's assume that the players have been randomly placed in the following order for "processing" and that they have submitted the following preference lists:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 2> INITIALLY
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> FIAGRTE
-<tr><td> Manus           <th> ERTIFAG
-<tr><td> Dave            <th> FTGRIAE
-<tr><td> Tarzan          <th> TEFRAGI
-<tr><td> Simon           <th> IRTEAGF
-<tr><td> Cheeta          <th> TIFEARG
-<tr><td> Petar           <th> EFAIRTG
+	<tr><th COLSPAN = 2> INITIALLY
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> FIAGRTE
+	<tr><td> Manus           <th> ERTIFAG
+	<tr><td> Dave            <th> FTGRIAE
+	<tr><td> Tarzan          <th> TEFRAGI
+	<tr><td> Simon           <th> IRTEAGF
+	<tr><td> Cheeta          <th> TIFEARG
+	<tr><td> Petar           <th> EFAIRTG
 </table></center></p>
+
 <p>First, we "process" Cornelius' preference list.  His first choice is France, so he is assigned this power.  Next, Manus' preference list is "processed."  His first choice is England, so he is assigned this power.  We now "process" Dave, whose first choice is France.  Since France has already been assigned, we proceed to Dave's second choice, Turkey.  Dave is thus assigned this power.  We continue in this fashion, "processing" Tarzan, Simon, Cheeta and Petar (in this order), producing the following results:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 3> FINAL OUTCOME
-<tr><th>Order<br>Processed  <th> Player<br>Name  <th> Power<br>Assigned
-<tr><td ALIGN = CENTER> 1   <td> Cornelius      <td> France
-<tr><td ALIGN = CENTER> 2   <td> Manus           <td> England
-<tr><td ALIGN = CENTER> 3   <td> Dave            <td> Turkey
-<tr><td ALIGN = CENTER> 4   <td> Tarzan          <td> Russia
-<tr><td ALIGN = CENTER> 5   <td> Simon           <td> Italy
-<tr><td ALIGN = CENTER> 6   <td> Cheeta          <td> Austria
-<tr><td ALIGN = CENTER> 7   <td> Petar           <td> Germany
+	<tr><th COLSPAN = 3> FINAL OUTCOME
+	<tr><th>Order<br>Processed  <th> Player<br>Name  <th> Power<br>Assigned
+	<tr><td ALIGN = CENTER> 1   <td> Cornelius      <td> France
+	<tr><td ALIGN = CENTER> 2   <td> Manus           <td> England
+	<tr><td ALIGN = CENTER> 3   <td> Dave            <td> Turkey
+	<tr><td ALIGN = CENTER> 4   <td> Tarzan          <td> Russia
+	<tr><td ALIGN = CENTER> 5   <td> Simon           <td> Italy
+	<tr><td ALIGN = CENTER> 6   <td> Cheeta          <td> Austria
+	<tr><td ALIGN = CENTER> 7   <td> Petar           <td> Germany
 </table></center></p>
+
 <p><i>An example where "grouped" Preference Lists are permitted:</i></p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 2> INITIALLY
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Jim             <th> [F][I][AG][RTE]
-<tr><td> Sally           <th> [RET][I][F][A][G]
-<tr><td> Ben             <th> [F][TG][R][IA][E]
-<tr><td> Stephane        <th> [TE][FR][AGI]
-<tr><td> Richard         <th> [IARE][T][G][F]
-<tr><td> Frank           <th> [TIF][EA][RG]
-<tr><td> Jennifer        <th> [EF][AIR][TG]
+	<tr><th COLSPAN = 2> INITIALLY
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Jim             <th> [F][I][AG][RTE]
+	<tr><td> Sally           <th> [RET][I][F][A][G]
+	<tr><td> Ben             <th> [F][TG][R][IA][E]
+	<tr><td> Stephane        <th> [TE][FR][AGI]
+	<tr><td> Richard         <th> [IARE][T][G][F]
+	<tr><td> Frank           <th> [TIF][EA][RG]
+	<tr><td> Jennifer        <th> [EF][AIR][TG]
 </table></center></p>
+
 <p>First, we "process" Jim's preference list.  His first choice consists of the "group" consisting of only France.  Thus, Jim is assigned this power.</p>
+
 <p>Next, Sally's preference list is "processed."  Her first choice consists of the "group" comprised of Russia, England and Turkey.  Since all 3 of these powers are (currently) still unassigned, one of them is chosen at random.  Assume that England was randomly chosen and that Sally was assigned this power.</p>
+
 <p>We now move on and "process" Ben's preference list.  His first choice consists of the "group" consisting only of France.  Since France has has already been assigned, we proceed to Ben's second choice, the "group" consisting of Turkey and Germany.  These two powers are both (currently) unassigned.  Assume that Turkey was chosen randomly and assigned to Ben.</p>
+
 <p>Stephane's preference list is "processed" next.  His first choice consists of the "group" of Turkey and England, both of which have already been assigned.  We thus move on to Stephane's second choice, the "group" of France and Russia.  France has already been assigned, but Russia is still available.  Thus, Stephane is assigned Russia.</p>
+
 <p>We now continue by "processing" Richard's preference list.  Richard's first choice is the "group" of Italy, Austria, Russia and England.  Russia and England have already been assigned, but Italy and Austria are still both available.  We pick one of these at random.  Assume Italy is selected and assigned to Richard.</p>
+
 <p>We continue in this fashion, "processing" Frank and Jennifer.  This produces the following results:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 3> FINAL OUTCOME
-<tr><th>Order<br>Processed  <th> Player<br>Name  <th> Power<br>Assigned
-<tr><td ALIGN = CENTER> 1   <td> Jim             <td> France
-<tr><td ALIGN = CENTER> 2   <td> Sally           <td> England
-<tr><td ALIGN = CENTER> 3   <td> Ben             <td> Turkey
-<tr><td ALIGN = CENTER> 4   <td> Stephane        <td> Russia
-<tr><td ALIGN = CENTER> 5   <td> Richard         <td> Italy
-<tr><td ALIGN = CENTER> 6   <td> Frank           <td> Austria
-<tr><td ALIGN = CENTER> 7   <td> Jennifer        <td> Germany
+	<tr><th COLSPAN = 3> FINAL OUTCOME
+	<tr><th>Order<br>Processed  <th> Player<br>Name  <th> Power<br>Assigned
+	<tr><td ALIGN = CENTER> 1   <td> Jim             <td> France
+	<tr><td ALIGN = CENTER> 2   <td> Sally           <td> England
+	<tr><td ALIGN = CENTER> 3   <td> Ben             <td> Turkey
+	<tr><td ALIGN = CENTER> 4   <td> Stephane        <td> Russia
+	<tr><td ALIGN = CENTER> 5   <td> Richard         <td> Italy
+	<tr><td ALIGN = CENTER> 6   <td> Frank           <td> Austria
+	<tr><td ALIGN = CENTER> 7   <td> Jennifer        <td> Germany
 </table></center></p>
+
 <p><i>An example where "partial" Preference Lists are permitted:</i></p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 2> INITIALLY
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Lynn            <th> EFRTIAG
-<tr><td> Rick            <th> EGRAT
-<tr><td> Gordon          <th> F
-<tr><td> Heath           <th> GEF
-<tr><td> Tim             <th> TAEFGI
-<tr><td> Doug            <th> no powers listed
-<tr><td> Andrew          <th> EFTI
+	<tr><th COLSPAN = 2> INITIALLY
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Lynn            <th> EFRTIAG
+	<tr><td> Rick            <th> EGRAT
+	<tr><td> Gordon          <th> F
+	<tr><td> Heath           <th> GEF
+	<tr><td> Tim             <th> TAEFGI
+	<tr><td> Doug            <th> no powers listed
+	<tr><td> Andrew          <th> EFTI
 </table></center></p>
+
 <p>In the usual fashion, we assign England to Lynn, Germany to Rick and France to Gordon (note that this is the only power on Gordon's list).  Heath's preference list consists of Germany, England and France, all of which have already been assigned.  There are no further choices on Heath's list, thus we "skip over" him (for now).
+
 <p>Turkey is assigned to Tim and we move on to Doug's preference list.  Doug has not listed any powers on his list.  Thus, we also "skip over" him (for now).  We continue by assigning Italy to Andrew.</p>
+
 <p>We have now "processed" all the players.  Heath and Doug were both "skipped over."  Austria and Russia are still available.  Thus, these two powers are assigned randomly to these two players.  Assume that Austria was assigned to Doug and Russia was assigned to Heath.  The following results are produced by this method:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 3> FINAL OUTCOME
-<tr><th>Order<br>Processed  <th> Player<br>Name  <th> Power<br>Assigned
-<tr><td ALIGN = CENTER> 1   <td> Lynn            <td> England
-<tr><td ALIGN = CENTER> 2   <td> Rick            <td> Germany
-<tr><td ALIGN = CENTER> 3   <td> Gordon          <td> France
-<tr><td ALIGN = CENTER> 4   <td> Heath           <td> Russia
-<tr><td ALIGN = CENTER> 5   <td> Tim             <td> Turkey
-<tr><td ALIGN = CENTER> 6   <td> Doug            <td> Austria
-<tr><td ALIGN = CENTER> 7   <td> Andrew          <td> Italy
+	<tr><th COLSPAN = 3> FINAL OUTCOME
+	<tr><th>Order<br>Processed  <th> Player<br>Name  <th> Power<br>Assigned
+	<tr><td ALIGN = CENTER> 1   <td> Lynn            <td> England
+	<tr><td ALIGN = CENTER> 2   <td> Rick            <td> Germany
+	<tr><td ALIGN = CENTER> 3   <td> Gordon          <td> France
+	<tr><td ALIGN = CENTER> 4   <td> Heath           <td> Russia
+	<tr><td ALIGN = CENTER> 5   <td> Tim             <td> Turkey
+	<tr><td ALIGN = CENTER> 6   <td> Doug            <td> Austria
+	<tr><td ALIGN = CENTER> 7   <td> Andrew          <td> Italy
 </table></center></p>
+
+
 <a NAME = Simultaneous><hr><h3>Method 2: Simultaneous "Consideration" of all Players</h3></a>
+
 <p>Rather than assign powers on a player-by-player basis (as in <a HREF = #OneByOne>Method 1</a>) players may be "processed" simultaneously.  That is, rather than "process" one player's Preference List  at-a-time, we can "consider" all of the players' Preference Lists prior to power assignment.  There are 3 variations on this method:</p>
+
 <ol>
-<li><a HREF = #TopMost>Variation A</a>:  Simultaneously "Consider" only the "Top-Most" Choice from each Player's Preference List
-<li><a HREF = #BottomMost>Variation B</a>:  Simultaneously "Consider" only the "Bottom-Most" Choice from each Player's Preference List
-<li><a HREF = #Entire>Variation C</a>:  Simultaneously "Consider" the Entire Preference List of All Players
+	<li><a HREF = #TopMost>Variation A</a>:  Simultaneously "Consider" only the "Top-Most" Choice from each Player's Preference List
+	<li><a HREF = #BottomMost>Variation B</a>:  Simultaneously "Consider" only the "Bottom-Most" Choice from each Player's Preference List
+	<li><a HREF = #Entire>Variation C</a>:  Simultaneously "Consider" the Entire Preference List of All Players
 </ol>
+
+
 <a NAME = TopMost><hr><h3>Method 2, Variation A: Simultaneously "Consider" only the "Top-Most" Choice from each Player's Preference List</h3></a>
+
 <p>This method attempts to give the <b>most</b> players their "top-most" choice from their Preference List.</p>
+
 <b><i><ol>
-<li>Each player submits a <a HREF = #PrefLists>Preference List</a> to the GM.  "Partial" and "grouped" Preference lists are NOT permitted.
-<li>The "top-most" choice (only) from each player's Preference List is considered simultaneously:
-<ul>
-<li>As many players as possible are given their "top-most" choice.
-<li>If the same power is listed as the "top-most" choice for more than one player, then this power is randomly assigned to one of these players.
-<li>All assigned powers are now crossed off from the players' Preference Lists.
-<li>This process is repeated until all players have been assigned a power.
-</ul>
+	<li>Each player submits a <a HREF = #PrefLists>Preference List</a> to the GM.  "Partial" and "grouped" Preference lists are NOT permitted.
+	<li>The "top-most" choice (only) from each player's Preference List is considered simultaneously:
+	<ul>
+		<li>As many players as possible are given their "top-most" choice.
+		<li>If the same power is listed as the "top-most" choice for more than one player, then this power is randomly assigned to one of these players.
+		<li>All assigned powers are now crossed off from the players' Preference Lists.
+		<li>This process is repeated until all players have been assigned a power.
+	</ul>
 </ol></i></b>
+
 <p>For example, let's again consider these players who have submitted the following Preference Lists:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 2> INITIALLY
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> GEFTARI
-<tr><td> Cheeta          <th> RTGIEFA
-<tr><td> Manus           <th> ETRAFIG
-<tr><td> Tarzan          <th> FETRIGA
-<tr><td> Simon           <th> EFATGIR
-<tr><td> Dave            <th> RTEFAIG
-<tr><td> Petar           <th> EFRTIAG
+	<tr><th COLSPAN = 2> INITIALLY
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> GEFTARI
+	<tr><td> Cheeta          <th> RTGIEFA
+	<tr><td> Manus           <th> ETRAFIG
+	<tr><td> Tarzan          <th> FETRIGA
+	<tr><td> Simon           <th> EFATGIR
+	<tr><td> Dave            <th> RTEFAIG
+	<tr><td> Petar           <th> EFRTIAG
 </table></center></p>
+
 <p>We simultaneously consider the top choice from each player's Preference List.  Since Cornelius is the only player who has Germany as his top choice, he is automatically assigned this power.  Similarly, Tarzan is assigned France.</p>
+
 <p>Cheeta and Dave both have Russia as their top choice.  Thus, we randomly assign one of them Russia (perhaps by tossing a coin?).  Assume that Dave won the coin toss and is assigned Russia.  Similarly, Manus, Simon and Petar all have England as their top choice.  Assume that Manus gets lucky and is assigned England.</p>
+
 <p>We have now completed consideration of the top choice from each player's Preference List.  We now cross off the powers which have been assigned (namely, Germany, France, Russia and England).  This produces the following list of players and their (now updated) Preference Lists:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name <th> Preference<br>List
-<tr><td> Cornelius	<th> assigned Germany
-<tr><td> Cheeta		<th> <font color = red>R</font>T<font color = red>G</font>I<font color = red>EF</font>A
-<tr><td> Manus		<th> assigned England
-<tr><td> Tarzan		<th> assigned France
-<tr><td> Simon		<th> <font color = red>EF</font>AT<font color = red>G</font>I<font color = red>R</font>
-<tr><td> Dave		<th> assigned Russia
-<tr><td> Petar		<th> <font color = red>EFR</font>TIA<font color = red>G</font>
-<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
+	<tr><th> Player<br>Name <th> Preference<br>List
+	<tr><td> Cornelius	<th> assigned Germany
+	<tr><td> Cheeta		<th> <font color = red>R</font>T<font color = red>G</font>I<font color = red>EF</font>A
+	<tr><td> Manus		<th> assigned England
+	<tr><td> Tarzan		<th> assigned France
+	<tr><td> Simon		<th> <font color = red>EF</font>AT<font color = red>G</font>I<font color = red>R</font>
+	<tr><td> Dave		<th> assigned Russia
+	<tr><td> Petar		<th> <font color = red>EFR</font>TIA<font color = red>G</font>
+	<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
 </table></center></p>
+
 <p>We now repeat the same process using the (now) updated Preference Lists.  Again, we simultaneously consider only the top choice from each player's list (ignoring the "crossed off" choices).</p>
+
 <p>Simon is the only player to have Austria as his (current) top choice, so he is assigned this power.  Cheeta and Petar both have Turkey as their (current) top choice.  Assume that Cheeta wins the coin toss and is assigned Turkey.  The Preference Lists now appear as:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> assigned Germany
-<tr><td> Cheeta          <th> assigned Turkey
-<tr><td> Manus           <th> assigned England
-<tr><td> Tarzan          <th> assigned France
-<tr><td> Simon           <th> assigned Austria
-<tr><td> Dave            <th> assigned Russia
-<tr><td> Petar		<th> <font color = red>EFRT</font>I<font color = red>AG</font>
-<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> assigned Germany
+	<tr><td> Cheeta          <th> assigned Turkey
+	<tr><td> Manus           <th> assigned England
+	<tr><td> Tarzan          <th> assigned France
+	<tr><td> Simon           <th> assigned Austria
+	<tr><td> Dave            <th> assigned Russia
+	<tr><td> Petar		<th> <font color = red>EFRT</font>I<font color = red>AG</font>
+	<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
 </table></center></p>
+
 <p>Once more, we repeat this process.  Petar is the only player left.  He has Italy as his (current) top choice, which he is assigned accordingly.  The outcome, using this method for the given example, may be summarized as follows:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 3> FINAL OUTCOME
-<tr><th> Player<br>Name  <th> Power<br>Assigned <th> Preference<br>List<br>Choice
-<tr><td> Cornelius      <td> Germany		<td ALIGN = CENTER> 1
-<tr><td> Cheeta          <td> Turkey		<td ALIGN = CENTER> 2
-<tr><td> Manus           <td> England		<td ALIGN = CENTER> 1
-<tr><td> Tarzan          <td> France		<td ALIGN = CENTER> 1
-<tr><td> Simon           <td> Austria		<td ALIGN = CENTER> 3
-<tr><td> Dave            <td> Russia		<td ALIGN = CENTER> 1
-<tr><td> Petar           <td> Italy			<td ALIGN = CENTER> 5
-<tr><th COLSPAN = 2> AVERAGE				<th>  2.0
+	<tr><th COLSPAN = 3> FINAL OUTCOME
+	<tr><th> Player<br>Name  <th> Power<br>Assigned <th> Preference<br>List<br>Choice 
+	<tr><td> Cornelius      <td> Germany		<td ALIGN = CENTER> 1
+	<tr><td> Cheeta          <td> Turkey		<td ALIGN = CENTER> 2
+	<tr><td> Manus           <td> England		<td ALIGN = CENTER> 1
+	<tr><td> Tarzan          <td> France		<td ALIGN = CENTER> 1
+	<tr><td> Simon           <td> Austria		<td ALIGN = CENTER> 3
+	<tr><td> Dave            <td> Russia		<td ALIGN = CENTER> 1
+	<tr><td> Petar           <td> Italy			<td ALIGN = CENTER> 5
+	<tr><th COLSPAN = 2> AVERAGE				<th>  2.0
 </table></center></p>
+
 <p>Note that 4 players received their first choice for power assignment and that the "average player" received his 2nd choice.  No player received anything worse than his 5th choice.</p>
+
 <p>This method emphasizes assigning as <b><i>many</i></b> players as possible their <b><i>top</i></b> ranked choices from their Preference List, even at the expense of other players (notice that 1 player received his 5th choice rather than a more middle ranked choice).  Conceptually, this method attempts to "satisfy" as many players as possible, even if this means "dissatisfying" a few players.  Contrast this approach to the approach used in the next variation.</p>
+
+
 <a NAME = BottomMost><hr><h3>Method 2, Variation B: Simultaneously "Consider" only the "Bottom-Most" Choice from each Player's Preference List</h3></a>
+
 <p>This method attempts to give the <b>fewest</b> players their "bottom-most" choice from their Preference List.</p>
+
 <b><i><ol>
-<li>Each player submits a <a HREF = #PrefLists>Preference List</a> to the GM.  "Partial" and "grouped" Preference lists are NOT permitted.
-<li>The "bottom-most" choice (only) from each player's Preference List is considered simultaneously:
-<ul>
-<li>The "bottom-most" choice is "crossed off" from as many players' Preference Lists as possible.
-<li>If the same power is listed as the "bottom-most" choice for more than one player, then this power is "crossed off" of one of these players' Preference Lists, chosen at random.
-<li>If any power is listed on only one player's Preference List, then this player is assigned that power.
-<li>If any player's Preference List has only one power listed which has not been "crossed off," then this player is assigned that power and this power is removed from the other players' Preference Lists.
-<li>This process is repeated until all players have been assigned a power.
-</ul>
+	<li>Each player submits a <a HREF = #PrefLists>Preference List</a> to the GM.  "Partial" and "grouped" Preference lists are NOT permitted.
+	<li>The "bottom-most" choice (only) from each player's Preference List is considered simultaneously:
+	<ul>
+		<li>The "bottom-most" choice is "crossed off" from as many players' Preference Lists as possible.
+		<li>If the same power is listed as the "bottom-most" choice for more than one player, then this power is "crossed off" of one of these players' Preference Lists, chosen at random.
+		<li>If any power is listed on only one player's Preference List, then this player is assigned that power.
+		<li>If any player's Preference List has only one power listed which has not been "crossed off," then this player is assigned that power and this power is removed from the other players' Preference Lists.
+		<li>This process is repeated until all players have been assigned a power.
+	</ul>
 </ol></i></b>
+
 <p>Let's again consider the same players and their Preference Lists:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 2> INITIALLY
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> GEFTARI
-<tr><td> Cheeta          <th> RTGIEFA
-<tr><td> Manus           <th> ETRAFIG
-<tr><td> Tarzan          <th> FETRIGA
-<tr><td> Simon           <th> EFATGIR
-<tr><td> Dave            <th> RTEFAIG
-<tr><td> Petar           <th> EFRTIAG
+	<tr><th COLSPAN = 2> INITIALLY
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> GEFTARI
+	<tr><td> Cheeta          <th> RTGIEFA
+	<tr><td> Manus           <th> ETRAFIG
+	<tr><td> Tarzan          <th> FETRIGA
+	<tr><td> Simon           <th> EFATGIR
+	<tr><td> Dave            <th> RTEFAIG
+	<tr><td> Petar           <th> EFRTIAG
 </table></center></p>
+
 <p>First, we simultaneously consider the bottom choice from each player's Preference List.  Since Cornelius is the only player who has Italy as his bottom choice, Italy is crossed off from his list.  Similarly, Russia is crossed off of Simon's list.</p>
+
 <p>Cheeta and Tarzan have both listed Austria as their bottom choice.  Thus, we select one of these two players at random.  Assume that Cheeta was selected and Austria is thus crossed off from her list.  Similarly, Manus, Dave and Petar have all listed Germany as their bottom choice.  Assume that this time Petar gets lucky and Germany is removed from his list.</p>
+
 <p>We have now completed consideration of the lowest choice from each player's preference list.  This produces the following list of players and their (now updated) preference lists:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name	 <th> Preference<br>List
-<tr><td> Cornelius      <th> GEFTAR<font color = red>I</font>
-<tr><td> Cheeta          <th> RTGIEF<font color = red>A</font>
-<tr><td> Manus           <th> ETRAFIG
-<tr><td> Tarzan          <th> FETRIGA
-<tr><td> Simon           <th> EFATGI<font color = red>R</font>
-<tr><td> Dave            <th> RTEFAIG
-<tr><td> Petar           <th> EFRTIA<font color = red>G</font>
-<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
+	<tr><th> Player<br>Name	 <th> Preference<br>List
+	<tr><td> Cornelius      <th> GEFTAR<font color = red>I</font>
+	<tr><td> Cheeta          <th> RTGIEF<font color = red>A</font>
+	<tr><td> Manus           <th> ETRAFIG
+	<tr><td> Tarzan          <th> FETRIGA
+	<tr><td> Simon           <th> EFATGI<font color = red>R</font>
+	<tr><td> Dave            <th> RTEFAIG
+	<tr><td> Petar           <th> EFRTIA<font color = red>G</font>
+	<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
 </table></center></p>
+
 <p>We now repeat the same process using the (now) updated Preference Lists.  Again we simultaneously consider only the bottom choice from each player's list (ignoring the "crossed off" choices).</p>
+
 <p>Cornelius is the only player to have Russia as his (current) bottom choice, so Russia is removed from his list.  Similarly, France is removed from Cheeta's list and Italy is crossed off of Simon's list.</p>
+
 <p>Manus and Dave have both listed Germany as their (current) bottom choice.  Assume that Dave is chosen at random and Germany is removed from his list.  Similarly, Tarzan and Petar both have Austria as their (current) bottom choice.  Assume that Tarzan wins the coin toss and Austria is removed from his list.  The updated Preference Lists now appear as:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> GEFTA<font color = red>RI</font>
-<tr><td> Cheeta          <th> RTGIE<font color = red>FA</font>
-<tr><td> Manus           <th> ETRAFIG
-<tr><td> Tarzan          <th> FETRIG<font color = red>A</font>
-<tr><td> Simon           <th> EFATG<font color = red>IR</font>
-<tr><td> Dave            <th> RTEFAI<font color = red>G</font>
-<tr><td> Petar           <th> EFRTIA<font color = red>G</font>
-<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> GEFTA<font color = red>RI</font>
+	<tr><td> Cheeta          <th> RTGIE<font color = red>FA</font>
+	<tr><td> Manus           <th> ETRAFIG
+	<tr><td> Tarzan          <th> FETRIG<font color = red>A</font>
+	<tr><td> Simon           <th> EFATG<font color = red>IR</font>
+	<tr><td> Dave            <th> RTEFAI<font color = red>G</font>
+	<tr><td> Petar           <th> EFRTIA<font color = red>G</font>
+	<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
 </table></center></p>
+
 <p>We now continue this same process using the updated Preference Lists, repeatedly.  Assume that after several repetitions the Preference Lists are as follows:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> GEF<font color = red>TARI</font>
-<tr><td> Cheeta          <th> RTGI<font color = red>EFA</font>
-<tr><td> Manus           <th> ETRAF<font color = red>IG</font>
-<tr><td> Tarzan          <th> FETR<font color = red>IGA</font>
-<tr><td> Simon           <th> EF<font color = red>ATGIR</font>
-<tr><td> Dave            <th> RTE<font color = red>FAIG</font>
-<tr><td> Petar           <th> EFR<font color = red>TIAG</font>
-<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> GEF<font color = red>TARI</font>
+	<tr><td> Cheeta          <th> RTGI<font color = red>EFA</font>
+	<tr><td> Manus           <th> ETRAF<font color = red>IG</font>
+	<tr><td> Tarzan          <th> FETR<font color = red>IGA</font>
+	<tr><td> Simon           <th> EF<font color = red>ATGIR</font>
+	<tr><td> Dave            <th> RTE<font color = red>FAIG</font>
+	<tr><td> Petar           <th> EFR<font color = red>TIAG</font>
+	<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
 </table></center></p>
+
 <p>Notice that Cheeta is the only player who still has Italy on her list.  Thus, she is assigned Italy.  For the same reason, Manus is assigned Austria.  This produces the following Preference Lists:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> GEF<font color = red>TARI</font>
-<tr><td> Cheeta          <th> assigned Italy
-<tr><td> Manus           <th> assigned Austria
-<tr><td> Tarzan          <th> FETR<font color = red>IGA</font>
-<tr><td> Simon           <th> EF<font color = red>ATGIR</font>
-<tr><td> Dave            <th> RTE<font color = red>FAIG</font>
-<tr><td> Petar           <th> EFRT<font color = red>IAG</font>
-<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> GEF<font color = red>TARI</font>
+	<tr><td> Cheeta          <th> assigned Italy
+	<tr><td> Manus           <th> assigned Austria
+	<tr><td> Tarzan          <th> FETR<font color = red>IGA</font>
+	<tr><td> Simon           <th> EF<font color = red>ATGIR</font>
+	<tr><td> Dave            <th> RTE<font color = red>FAIG</font>
+	<tr><td> Petar           <th> EFRT<font color = red>IAG</font>
+	<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
 </table></center></p>
+
 <p>Notice that Cornelius is the only player who still has Germany on his list.  Thus, he is assigned Germany, as follows:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> assigned Germany
-<tr><td> Cheeta          <th> assigned Italy
-<tr><td> Manus           <th> assigned Austria
-<tr><td> Tarzan          <th> FETR<font color = red>IGA</font>
-<tr><td> Simon           <th> EF<font color = red>ATGIR</font>
-<tr><td> Dave            <th> RTE<font color = red>FAIG</font>
-<tr><td> Petar           <th> EFRT<font color = red>IAG</font>
-<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> assigned Germany
+	<tr><td> Cheeta          <th> assigned Italy
+	<tr><td> Manus           <th> assigned Austria
+	<tr><td> Tarzan          <th> FETR<font color = red>IGA</font>
+	<tr><td> Simon           <th> EF<font color = red>ATGIR</font>
+	<tr><td> Dave            <th> RTE<font color = red>FAIG</font>
+	<tr><td> Petar           <th> EFRT<font color = red>IAG</font>
+	<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
 </table></center></p>
+
 <p>We again continue in a similar fashion, removing Russia from Tarzan's list, France from Simon's list, England from Dave's list and Turkey from Petar's list.  This produces the following (updated) Preference Lists:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> assigned Germany
-<tr><td> Cheeta          <th> assigned Italy
-<tr><td> Manus           <th> assigned Austria
-<tr><td> Tarzan          <th> FET<font color = red>RIGA</font>
-<tr><td> Simon           <th> E<font color = red>FATGIR</font>
-<tr><td> Dave            <th> RT<font color = red>EFAIG</font>
-<tr><td> Petar           <th> EFR<font color = red>TIAG</font>
-<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> assigned Germany
+	<tr><td> Cheeta          <th> assigned Italy
+	<tr><td> Manus           <th> assigned Austria
+	<tr><td> Tarzan          <th> FET<font color = red>RIGA</font>
+	<tr><td> Simon           <th> E<font color = red>FATGIR</font>
+	<tr><td> Dave            <th> RT<font color = red>EFAIG</font>
+	<tr><td> Petar           <th> EFR<font color = red>TIAG</font>
+	<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
 </table></center></p>
+
 <p>Notice that Simon has only one choice left on his list, England.  So, he is assigned this power and England is removed from the other players' lists.  The (updated) Preference Lists appear as:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> assigned Germany
-<tr><td> Cheeta          <th> assigned Italy
-<tr><td> Manus           <th> assigned Austria
-<tr><td> Tarzan          <th> F<font color = red>E</font>T<font color = red>RIGA</font>
-<tr><td> Simon           <th> assigned England
-<tr><td> Dave            <th> RT<font color = red>EFAIG</font>
-<tr><td> Petar           <th> <font color = red>E</font>FR<font color = red>TIAG</font>
-<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> assigned Germany
+	<tr><td> Cheeta          <th> assigned Italy
+	<tr><td> Manus           <th> assigned Austria
+	<tr><td> Tarzan          <th> F<font color = red>E</font>T<font color = red>RIGA</font>
+	<tr><td> Simon           <th> assigned England
+	<tr><td> Dave            <th> RT<font color = red>EFAIG</font>
+	<tr><td> Petar           <th> <font color = red>E</font>FR<font color = red>TIAG</font>
+	<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
 </table></center></p>
+
 <p>Once more we repeat this process.  Russia is crossed off of Petar's list, as he is the only player to list Russia as his (current) bottom choice.  However, this leaves Petar with only one choice on his list, France.  So, Petar is assigned France and France is removed from the other players' lists, as follows:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> assigned Germany
-<tr><td> Cheeta          <th> assigned Italy
-<tr><td> Manus           <th> assigned Austria
-<tr><td> Tarzan          <th> <font color = red>FE</font>T<font color = red>RIGA</font>
-<tr><td> Simon           <th> assigned England
-<tr><td> Dave            <th> RT<font color = red>EFAIG</font>
-<tr><td> Petar           <th> assigned France
-<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> assigned Germany
+	<tr><td> Cheeta          <th> assigned Italy
+	<tr><td> Manus           <th> assigned Austria
+	<tr><td> Tarzan          <th> <font color = red>FE</font>T<font color = red>RIGA</font>
+	<tr><td> Simon           <th> assigned England
+	<tr><td> Dave            <th> RT<font color = red>EFAIG</font>
+	<tr><td> Petar           <th> assigned France
+	<tr><td COLSPAN = 2><b><i>"crossed off" choices are shown in <font color = red>red</font></i></b>
 </table></center></p>
+
 <p>Now I, Tarzan, have only one choice remaining on my list: Turkey.  So, I am assigned this power and Turkey is removed from the other players' lists.  This leaves Dave with Russia.</p>
+
 <p>The outcome, using this method for the given example, may be summarized as follows:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 3> FINAL OUTCOME
-<tr><th> Player<br>Name  <th> Power<br>Assigned	<th> Preference<br>List<br>Choice
-<tr><td> Cornelius      <td> Germany		<td ALIGN = CENTER> 1
-<tr><td> Cheeta          <td> Italy			<td ALIGN = CENTER> 4
-<tr><td> Manus           <td> Austria		<td ALIGN = CENTER> 4
-<tr><td> Tarzan          <td> Turkey		<td ALIGN = CENTER> 3
-<tr><td> Simon           <td> England		<td ALIGN = CENTER> 1
-<tr><td> Dave            <td> Russia		<td ALIGN = CENTER> 1
-<tr><td> Petar           <td> France		<td ALIGN = CENTER> 2
-<tr><th> &nbsp;          <th> AVERAGE		<th>  2.3
+	<tr><th COLSPAN = 3> FINAL OUTCOME
+	<tr><th> Player<br>Name  <th> Power<br>Assigned	<th> Preference<br>List<br>Choice 
+
+	<tr><td> Cornelius      <td> Germany		<td ALIGN = CENTER> 1
+	<tr><td> Cheeta          <td> Italy			<td ALIGN = CENTER> 4
+	<tr><td> Manus           <td> Austria		<td ALIGN = CENTER> 4
+	<tr><td> Tarzan          <td> Turkey		<td ALIGN = CENTER> 3
+	<tr><td> Simon           <td> England		<td ALIGN = CENTER> 1
+	<tr><td> Dave            <td> Russia		<td ALIGN = CENTER> 1
+	<tr><td> Petar           <td> France		<td ALIGN = CENTER> 2
+	<tr><th> &nbsp;          <th> AVERAGE		<th>  2.3
 </table></center></p>
+
 <p>Note that no player received anything worse than his 4th choice and that the "average player" received his 2nd or 3rd (2.3) choice.  Only 3 players received their 1st choice.</p>
+
 <p>This method (in contrast to <a HREF = #TopMost>Variation A</a>), emphasizes assigning as <b><i>few</i></b> players as possible their <b><i>lowest</i></b> ranked choices from their Preference List, even at the expense of other players (notice that only 3 players received their 1st choice).  Conceptually, this method attempts to avoid "dissatisfying" players, even if this means providing less "satisfaction" for a few players.</p>
+
+
 <a NAME = Entire><hr><h3>Method 2, Variation C: Simultaneously "Consider" the Entire Preference List of All Players</h3></a>
+
 <b><i><ol>
-<li>Each player submits a <a HREF = #PrefLists>Preference List</a> to the GM.  "Partial" and "grouped" Preference lists are <b>not</b> permitted.
-<li>All choices from each player's Preference List are considered simultaneously and power assignments are made so as to produce a "best" solution for the entire group of players.
+	<li>Each player submits a <a HREF = #PrefLists>Preference List</a> to the GM.  "Partial" and "grouped" Preference lists are <b>not</b> permitted.
+	<li>All choices from each player's Preference List are considered simultaneously and power assignments are made so as to produce a "best" solution for the entire group of players.
 </ol></i></b>
+
 <p><i>Note:  this method was inspired by <a HREF = mailto:dykevader@golden.net?subject=Power_Assignment_Article>Cait</a>, who shared his "Formula One" method with me.  According to Cait, a similar method is employed in Formula One Stock Car races to determine pole positions.</i></p>
+
 <p>Rather than attempt to "satisfy" as many players as possible (as in <a HREF = #TopMost>Variation A</a>) or "dissatisfy" as few players as possible (as in <a HREF = #BottomMost>Variation B</a>), the power assignment method can instead seek a "best solution" for the <b><i>entire group of players</i></b>.</p>
+
 <p>To determine this "best solution" the power assignment method must be evaluated according to how "satisfied" or "dissatisfied" each player is with the power he is assigned.  That is, a player who receives his top ranked choice is most "satisfied"; whereas, a player who receives his lowest ranked choice is least "satisfied" (or most "dissatisfied").  The group's overall satisfaction score is merely the summation of the individual players' satisfaction scores.</p>
+
 <p>To determine an individual player's satisfaction score, a table is useful, such as:</p>
+
 <p><center>
 <table BORDER = 5>
-<tr><th COLSPAN = 2> INDIVIDUAL PLAYER'S<br>SATISFACTION SCORE TABLE
-<tr><th> Preference<br>List<br>Choice<br>Received	<th> Satisfaction<br>"Score"
-<tr><td ALIGN = CENTER> 1st					<td ALIGN = CENTER> 9
-<tr><td ALIGN = CENTER> 2nd					<td ALIGN = CENTER> 7
-<tr><td ALIGN = CENTER> 3rd					<td ALIGN = CENTER> 5
-<tr><td ALIGN = CENTER> 4th					<td ALIGN = CENTER> 3
-<tr><td ALIGN = CENTER> 5th					<td ALIGN = CENTER> 2
-<tr><td ALIGN = CENTER> 6th					<td ALIGN = CENTER> 1
-<tr><td ALIGN = CENTER> 7th					<td ALIGN = CENTER> 0
+	<tr><th COLSPAN = 2> INDIVIDUAL PLAYER'S<br>SATISFACTION SCORE TABLE
+	<tr><th> Preference<br>List<br>Choice<br>Received	<th> Satisfaction<br>"Score"
+	<tr><td ALIGN = CENTER> 1st					<td ALIGN = CENTER> 9
+	<tr><td ALIGN = CENTER> 2nd					<td ALIGN = CENTER> 7
+	<tr><td ALIGN = CENTER> 3rd					<td ALIGN = CENTER> 5
+	<tr><td ALIGN = CENTER> 4th					<td ALIGN = CENTER> 3
+	<tr><td ALIGN = CENTER> 5th					<td ALIGN = CENTER> 2
+	<tr><td ALIGN = CENTER> 6th					<td ALIGN = CENTER> 1
+	<tr><td ALIGN = CENTER> 7th					<td ALIGN = CENTER> 0
 </table></center></p>
+
 <p>Thus, a player who receives his 1st choice from his Preference List is most "satisfied" and has a satisfaction score of 9.  A player who receives his 7th choice is least "satisfied" (or most "dissatisfied") and has a satisfaction score of 0.  As an example, let's again consider the same players and their Preference Lists:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 2> INITIALLY
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Cornelius      <th> GEFTARI
-<tr><td> Cheeta          <th> RTGIEFA
-<tr><td> Manus           <th> ETRAFIG
-<tr><td> Tarzan          <th> FETRIGA
-<tr><td> Simon           <th> EFATGIR
-<tr><td> Dave            <th> RTEFAIG
-<tr><td> Petar           <th> EFRTIAG
+	<tr><th COLSPAN = 2> INITIALLY
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Cornelius      <th> GEFTARI
+	<tr><td> Cheeta          <th> RTGIEFA
+	<tr><td> Manus           <th> ETRAFIG
+	<tr><td> Tarzan          <th> FETRIGA
+	<tr><td> Simon           <th> EFATGIR
+	<tr><td> Dave            <th> RTEFAIG
+	<tr><td> Petar           <th> EFRTIAG
 </table></center></p>
 </table></center></p>
+
 <p>We can translate these Preference Lists into a table, as follows:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 8> PLAYERS' PREFERENCE LISTS TABLE
-<tr><th ROWSPAN = 2> Player<br>Name  <th COLSPAN = 7> Preference List Choice #<br> for each Power
-<tr>				<th> A  <th> E  <th> F  <th> G  <th> I  <th> R  <th> T
-<tr><td> Cornelius	<td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 2nd  <td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 4th
-<tr><td> Cheeta		<td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 4th  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 2nd
-<tr><td> Manus		<td ALIGN = CENTER> 4th  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 2nd
-<tr><td> Tarzan		<td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 2nd  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 4th  <td ALIGN = CENTER> 3rd
-<tr><td> Simon		<td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 2nd  <td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 4th
-<tr><td> Dave		<td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 4th  <td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 2nd
-<tr><td> Petar		<td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 2nd  <td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 4th
+	<tr><th COLSPAN = 8> PLAYERS' PREFERENCE LISTS TABLE
+	<tr><th ROWSPAN = 2> Player<br>Name  <th COLSPAN = 7> Preference List Choice #<br> for each Power
+	<tr>				<th> A  <th> E  <th> F  <th> G  <th> I  <th> R  <th> T
+	<tr><td> Cornelius	<td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 2nd  <td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 4th
+	<tr><td> Cheeta		<td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 4th  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 2nd
+	<tr><td> Manus		<td ALIGN = CENTER> 4th  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 2nd
+	<tr><td> Tarzan		<td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 2nd  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 4th  <td ALIGN = CENTER> 3rd
+	<tr><td> Simon		<td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 2nd  <td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 4th
+	<tr><td> Dave		<td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 4th  <td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 2nd
+	<tr><td> Petar		<td ALIGN = CENTER> 6th  <td ALIGN = CENTER> 1st  <td ALIGN = CENTER> 2nd  <td ALIGN = CENTER> 7th  <td ALIGN = CENTER> 5th  <td ALIGN = CENTER> 3rd  <td ALIGN = CENTER> 4th
 </table></center></p>
+
 <p>Thus, Cornelius' has listed Austria as his 5th choice, England as his 2nd choice, France as his 3rd choice, etc...</p>
+
 <p>We now create a Group Satisfaction Table by substituting the corresponding satisfaction score for each power on each player's Preference List, as follows:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 8> GROUP SATISFACTION TABLE
-<tr><th ROWSPAN = 2> Player<br>Name  <th COLSPAN = 7> Satisfaction "Score"<br> for each Power
-<tr>				<th> A  <th> E  <th> F  <th> G  <th> I  <th> R  <th> T
-<tr><td> Cornelius	<td ALIGN = CENTER> 2  <td ALIGN = CENTER> 7  <td ALIGN = CENTER> 5  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 0  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 3
-<tr><td> Cheeta		<td ALIGN = CENTER> 0  <td ALIGN = CENTER> 2  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 5  <td ALIGN = CENTER> 3  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 7
-<tr><td> Manus		<td ALIGN = CENTER> 3  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 2  <td ALIGN = CENTER> 0  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 5  <td ALIGN = CENTER> 7
-<tr><td> Tarzan		<td ALIGN = CENTER> 0  <td ALIGN = CENTER> 7  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 2  <td ALIGN = CENTER> 3  <td ALIGN = CENTER> 5
-<tr><td> Simon		<td ALIGN = CENTER> 5  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 7  <td ALIGN = CENTER> 2  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 0  <td ALIGN = CENTER> 3
-<tr><td> Dave		<td ALIGN = CENTER> 2  <td ALIGN = CENTER> 5  <td ALIGN = CENTER> 3  <td ALIGN = CENTER> 0  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 7
-<tr><td> Petar		<td ALIGN = CENTER> 1  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 7  <td ALIGN = CENTER> 0  <td ALIGN = CENTER> 2  <td ALIGN = CENTER> 5  <td ALIGN = CENTER> 3
-<tr><th> Maximum		<th> 5  <th> 9  <th> 9  <th> 9  <th> 3  <th> 9  <th> 7
+	<tr><th COLSPAN = 8> GROUP SATISFACTION TABLE
+	<tr><th ROWSPAN = 2> Player<br>Name  <th COLSPAN = 7> Satisfaction "Score"<br> for each Power
+	<tr>				<th> A  <th> E  <th> F  <th> G  <th> I  <th> R  <th> T
+
+	<tr><td> Cornelius	<td ALIGN = CENTER> 2  <td ALIGN = CENTER> 7  <td ALIGN = CENTER> 5  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 0  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 3
+	<tr><td> Cheeta		<td ALIGN = CENTER> 0  <td ALIGN = CENTER> 2  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 5  <td ALIGN = CENTER> 3  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 7
+	<tr><td> Manus		<td ALIGN = CENTER> 3  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 2  <td ALIGN = CENTER> 0  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 5  <td ALIGN = CENTER> 7
+	<tr><td> Tarzan		<td ALIGN = CENTER> 0  <td ALIGN = CENTER> 7  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 2  <td ALIGN = CENTER> 3  <td ALIGN = CENTER> 5
+	<tr><td> Simon		<td ALIGN = CENTER> 5  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 7  <td ALIGN = CENTER> 2  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 0  <td ALIGN = CENTER> 3
+	<tr><td> Dave		<td ALIGN = CENTER> 2  <td ALIGN = CENTER> 5  <td ALIGN = CENTER> 3  <td ALIGN = CENTER> 0  <td ALIGN = CENTER> 1  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 7
+	<tr><td> Petar		<td ALIGN = CENTER> 1  <td ALIGN = CENTER> 9  <td ALIGN = CENTER> 7  <td ALIGN = CENTER> 0  <td ALIGN = CENTER> 2  <td ALIGN = CENTER> 5  <td ALIGN = CENTER> 3
+
+	<tr><th> Maximum		<th> 5  <th> 9  <th> 9  <th> 9  <th> 3  <th> 9  <th> 7
 </table></center></p>
+
 <p>Thus, if Cornelius is assigned Austria (his 5th choice), he would have a satisfaction score of two, if he was assigned England (his 2nd choice), his satisfaction score would be seven, etc...</p>
+
 <p>Our goal is to produce the highest satisfaction score for the entire group.  From the Group Satisfaction Table (above) we can see that the maximum satisfaction score theoretically possible for the entire group is 51 (the sum of 5, 9, 9, 9, 3, 9, and 7).  Although the theoretical maximum is not always attainable, in this case we can achieve this maximum with the following power assignments:</p>
+
 <p><center><table BORDER = 5>
-<tr><th COLSPAN = 4> FINAL OUTCOME
-<tr><th> Player<br>Name  <th> Power<br>Assigned  <th> Preference<br>List<br>Choice  <th> Satisfaction<br>Rating
-<tr><td> Cornelius	<td> Germany	<td ALIGN = CENTER> 1	<td ALIGN = CENTER> 9
-<tr><td> Cheeta		<td> Italy		<td ALIGN = CENTER> 4	<td ALIGN = CENTER> 3
-<tr><td> Manus		<td> Turkey		<td ALIGN = CENTER> 2	<td ALIGN = CENTER> 7
-<tr><td> Tarzan		<td> France		<td ALIGN = CENTER> 1	<td ALIGN = CENTER> 9
-<tr><td> Simon		<td> Austria	<td ALIGN = CENTER> 3	<td ALIGN = CENTER> 5
-<tr><td> Dave		<td> Russia		<td ALIGN = CENTER> 1	<td ALIGN = CENTER> 9
-<tr><td> Petar		<td> England	<td ALIGN = CENTER> 1	<td ALIGN = CENTER> 9
-<tr><th COLSPAN = 2> TOTAL			<th> 13			<th> 51
-<tr><th COLSPAN = 2> AVERAGE			<th> 1.9			<th> 7.3
+	<tr><th COLSPAN = 4> FINAL OUTCOME
+	<tr><th> Player<br>Name  <th> Power<br>Assigned  <th> Preference<br>List<br>Choice  <th> Satisfaction<br>Rating
+
+	<tr><td> Cornelius	<td> Germany	<td ALIGN = CENTER> 1	<td ALIGN = CENTER> 9
+	<tr><td> Cheeta		<td> Italy		<td ALIGN = CENTER> 4	<td ALIGN = CENTER> 3
+	<tr><td> Manus		<td> Turkey		<td ALIGN = CENTER> 2	<td ALIGN = CENTER> 7
+	<tr><td> Tarzan		<td> France		<td ALIGN = CENTER> 1	<td ALIGN = CENTER> 9
+	<tr><td> Simon		<td> Austria	<td ALIGN = CENTER> 3	<td ALIGN = CENTER> 5
+	<tr><td> Dave		<td> Russia		<td ALIGN = CENTER> 1	<td ALIGN = CENTER> 9
+	<tr><td> Petar		<td> England	<td ALIGN = CENTER> 1	<td ALIGN = CENTER> 9
+	<tr><th COLSPAN = 2> TOTAL			<th> 13			<th> 51
+	<tr><th COLSPAN = 2> AVERAGE			<th> 1.9			<th> 7.3
 </table></center></p>
+
 <p>With this method, four players received their 1st choice and no player received anything worse than his fourth choice.  The "average player" recieved his first or second choice (1.9), with an "average" satisfaction score of 7.3.</p>
+
 <p>This method (in contrast to <a HREF = #TopMost>Variation A</a> or <a HREF = #BottomMost>Variation B</a>), emphasizes providing the highest level of group "satisfaction" (rather than concerning itself with individual players).  That is, the group's outcome is maximized at the expense of any one individual player (with the understanding, of course, that each individual player is also part of the group).</p>
+
 <p>Note that satisfaction scores are all <b><i>relative</i></b> to one another.  That is, for this example, a player who receives his 6th choice (satisfaction score of 1) is one-fifth as "satisfied" as a player who receives his third choice (satisfaction score of five) and is one-ninth as "satisfied" as a player who receives his 1st choice (satisfaction score of nine).</p>
+
 <p>Interestingly, there is no limit to the variety of Satisfaction Score Tables which can be employed with this method.  Your imagination and creativity are the only limiting factors.  You could even allow players to input their own Satisfaction Score Tables (perhaps by giving each player a fixed number of "points" to assign to each of the seven categories?).  What follows are a few examples of alternative Satisfaction Score Tables:</p>
+
 <blockquote>
 <p><center><table ALIGN = LEFT BORDER = 5>
-<tr><th COLSPAN = 2> INDIVIDUAL PLAYER'S<br>SATISFACTION SCORE TABLE
-<tr><th> Preference<br>List<br>Choice<br>Received	<th> Satisfaction<br>"Score"
-<tr><td ALIGN = CENTER> 1st					<td ALIGN = CENTER> 20
-<tr><td ALIGN = CENTER> 2nd					<td ALIGN = CENTER> 20
-<tr><td ALIGN = CENTER> 3rd					<td ALIGN = CENTER> 10
-<tr><td ALIGN = CENTER> 4th					<td ALIGN = CENTER> 5
-<tr><td ALIGN = CENTER> 5th					<td ALIGN = CENTER> 3
-<tr><td ALIGN = CENTER> 6th					<td ALIGN = CENTER> 1
-<tr><td ALIGN = CENTER> 7th					<td ALIGN = CENTER> 0
-<tr><td COLSPAN = 2 WIDTH = 250><p>This table attempts to ensure that players receive their 1st or 2nd choice (note the rapid drop-off for the 3rd or worse choices).</p>
+	<tr><th COLSPAN = 2> INDIVIDUAL PLAYER'S<br>SATISFACTION SCORE TABLE
+	<tr><th> Preference<br>List<br>Choice<br>Received	<th> Satisfaction<br>"Score"
+	<tr><td ALIGN = CENTER> 1st					<td ALIGN = CENTER> 20
+	<tr><td ALIGN = CENTER> 2nd					<td ALIGN = CENTER> 20
+	<tr><td ALIGN = CENTER> 3rd					<td ALIGN = CENTER> 10
+	<tr><td ALIGN = CENTER> 4th					<td ALIGN = CENTER> 5
+	<tr><td ALIGN = CENTER> 5th					<td ALIGN = CENTER> 3
+	<tr><td ALIGN = CENTER> 6th					<td ALIGN = CENTER> 1
+	<tr><td ALIGN = CENTER> 7th					<td ALIGN = CENTER> 0
+	<tr><td COLSPAN = 2 WIDTH = 250><p>This table attempts to ensure that players receive their 1st or 2nd choice (note the rapid drop-off for the 3rd or worse choices).</p>
 </table></center></p>
+
 <p><center><table ALIGN = RIGHT BORDER = 5>
-<tr><th COLSPAN = 2> INDIVIDUAL PLAYER'S<br>SATISFACTION SCORE TABLE
-<tr><th> Preference<br>List<br>Choice<br>Received	<th> Satisfaction<br>"Score"
-<tr><td ALIGN = CENTER> 1st					<td ALIGN = CENTER> 12
-<tr><td ALIGN = CENTER> 2nd					<td ALIGN = CENTER> 11
-<tr><td ALIGN = CENTER> 3rd					<td ALIGN = CENTER> 8
-<tr><td ALIGN = CENTER> 4th					<td ALIGN = CENTER> 5
-<tr><td ALIGN = CENTER> 5th					<td ALIGN = CENTER> 0
-<tr><td ALIGN = CENTER> 6th					<td ALIGN = CENTER> 0
-<tr><td ALIGN = CENTER> 7th					<td ALIGN = CENTER> 0
-<tr><td COLSPAN = 2 WIDTH = 250><p>This table attempts to ensure that players do not receive any of their last three choices (all scored at 0).</p>
+	<tr><th COLSPAN = 2> INDIVIDUAL PLAYER'S<br>SATISFACTION SCORE TABLE
+	<tr><th> Preference<br>List<br>Choice<br>Received	<th> Satisfaction<br>"Score"
+	<tr><td ALIGN = CENTER> 1st					<td ALIGN = CENTER> 12
+	<tr><td ALIGN = CENTER> 2nd					<td ALIGN = CENTER> 11
+	<tr><td ALIGN = CENTER> 3rd					<td ALIGN = CENTER> 8
+	<tr><td ALIGN = CENTER> 4th					<td ALIGN = CENTER> 5
+	<tr><td ALIGN = CENTER> 5th					<td ALIGN = CENTER> 0
+	<tr><td ALIGN = CENTER> 6th					<td ALIGN = CENTER> 0
+	<tr><td ALIGN = CENTER> 7th					<td ALIGN = CENTER> 0
+	<tr><td COLSPAN = 2 WIDTH = 250><p>This table attempts to ensure that players do not receive any of their last three choices (all scored at 0).</p>
 </table></center></p>
+
 <br clear=both>
+
 <p><center><table ALIGN = LEFT BORDER = 5>
-<tr><th COLSPAN = 2> INDIVIDUAL PLAYER'S<br>SATISFACTION SCORE TABLE
-<tr><th> Preference<br>List<br>Choice<br>Received	<th> Satisfaction<br>"Score"
-<tr><td ALIGN = CENTER> 1st					<td ALIGN = CENTER> 0
-<tr><td ALIGN = CENTER> 2nd					<td ALIGN = CENTER> 1
-<tr><td ALIGN = CENTER> 3rd					<td ALIGN = CENTER> 2
-<tr><td ALIGN = CENTER> 4th					<td ALIGN = CENTER> 5
-<tr><td ALIGN = CENTER> 5th					<td ALIGN = CENTER> 2
-<tr><td ALIGN = CENTER> 6th					<td ALIGN = CENTER> 1
-<tr><td ALIGN = CENTER> 7th					<td ALIGN = CENTER> 0
-<tr><td COLSPAN = 2 WIDTH = 250><p>This table attempts to ensure that players receive their "middle" ranked choices and not their top or bottom choices!</p>
+	<tr><th COLSPAN = 2> INDIVIDUAL PLAYER'S<br>SATISFACTION SCORE TABLE
+	<tr><th> Preference<br>List<br>Choice<br>Received	<th> Satisfaction<br>"Score"
+	<tr><td ALIGN = CENTER> 1st					<td ALIGN = CENTER> 0
+	<tr><td ALIGN = CENTER> 2nd					<td ALIGN = CENTER> 1
+	<tr><td ALIGN = CENTER> 3rd					<td ALIGN = CENTER> 2
+	<tr><td ALIGN = CENTER> 4th					<td ALIGN = CENTER> 5
+	<tr><td ALIGN = CENTER> 5th					<td ALIGN = CENTER> 2
+	<tr><td ALIGN = CENTER> 6th					<td ALIGN = CENTER> 1
+	<tr><td ALIGN = CENTER> 7th					<td ALIGN = CENTER> 0
+	<tr><td COLSPAN = 2 WIDTH = 250><p>This table attempts to ensure that players receive their "middle" ranked choices and not their top or bottom choices!</p>
 </table></center></p>
+
 <p><center><table ALIGN = RIGHT BORDER = 5>
-<tr><th COLSPAN = 2> INDIVIDUAL PLAYER'S<br>SATISFACTION SCORE TABLE
-<tr><th> Preference<br>List<br>Choice<br>Received	<th> Satisfaction<br>"Score"
-<tr><td ALIGN = CENTER> 1st					<td ALIGN = CENTER> 0
-<tr><td ALIGN = CENTER> 2nd					<td ALIGN = CENTER> 0
-<tr><td ALIGN = CENTER> 3rd					<td ALIGN = CENTER> 1
-<tr><td ALIGN = CENTER> 4th					<td ALIGN = CENTER> 2
-<tr><td ALIGN = CENTER> 5th					<td ALIGN = CENTER> 4
-<tr><td ALIGN = CENTER> 6th					<td ALIGN = CENTER> 6
-<tr><td ALIGN = CENTER> 7th					<td ALIGN = CENTER> 9
-<tr><td COLSPAN = 2 WIDTH = 250><p>This table attempts to ensure that players receive their lower ranked choices!</p>
+	<tr><th COLSPAN = 2> INDIVIDUAL PLAYER'S<br>SATISFACTION SCORE TABLE
+	<tr><th> Preference<br>List<br>Choice<br>Received	<th> Satisfaction<br>"Score"
+	<tr><td ALIGN = CENTER> 1st					<td ALIGN = CENTER> 0
+	<tr><td ALIGN = CENTER> 2nd					<td ALIGN = CENTER> 0
+	<tr><td ALIGN = CENTER> 3rd					<td ALIGN = CENTER> 1
+	<tr><td ALIGN = CENTER> 4th					<td ALIGN = CENTER> 2
+	<tr><td ALIGN = CENTER> 5th					<td ALIGN = CENTER> 4
+	<tr><td ALIGN = CENTER> 6th					<td ALIGN = CENTER> 6
+	<tr><td ALIGN = CENTER> 7th					<td ALIGN = CENTER> 9
+	<tr><td COLSPAN = 2 WIDTH = 250><p>This table attempts to ensure that players receive their lower ranked choices!</p>
 </table></center></p>
+
 <br clear=both>
 </blockquote>
+
 <a NAME= Hybrids><hr><h3>"Hybrid" Methods</h3></a>
+
 <p>Many of the methods described above may be combined in various ways to create new methods of power assignment.</p>
+
 <p>For example, assume that we wish to assign powers based on players' Preference Lists, but still permit players the option of designating a "random" power assignment.  This can easily be managed by allowing players to submit a Preference List consisting of the single word "random."  Players who opt for a "random" power assignment are processed first.  The remaining players are then processed according to the chosen method of power assignment.</p>
+
 <p>Permitting this sort of "hybridization" allows players more flexibility with their Preference Lists.  Thus, a "hybrid" series of players' Preference Lists could include:  "grouped" Preference Lists, "parital" Preference Lists and "random" designations, for example:</p>
+
 <p><center><table BORDER = 5>
-<tr><th> Player<br>Name  <th> Preference<br>List
-<tr><td> Ken             <td ALIGN = CENTER> [G][E][F][I][R][T][A]
-<tr><td> Joel            <td ALIGN = CENTER> "random"
-<tr><td> Nicolas         <td ALIGN = CENTER> [EF][G]
-<tr><td> Michael         <td ALIGN = CENTER> no powers listed
-<tr><td> Chris           <td ALIGN = CENTER> [EFTI]
-<tr><td> Paul            <td ALIGN = CENTER> [G]
-<tr><td> Chad            <td ALIGN = CENTER> [AI][FRTG][E]
+	<tr><th> Player<br>Name  <th> Preference<br>List
+	<tr><td> Ken             <td ALIGN = CENTER> [G][E][F][I][R][T][A]
+	<tr><td> Joel            <td ALIGN = CENTER> "random"
+	<tr><td> Nicolas         <td ALIGN = CENTER> [EF][G]
+	<tr><td> Michael         <td ALIGN = CENTER> no powers listed
+	<tr><td> Chris           <td ALIGN = CENTER> [EFTI]
+	<tr><td> Paul            <td ALIGN = CENTER> [G]
+	<tr><td> Chad            <td ALIGN = CENTER> [AI][FRTG][E]
 </table></center></p>
+
+
 <a NAME = Conclusion><hr><h3>A Final Word</h3></a>
+
 <p>Well, that more or less wraps things up.  While I can't claim to have enumerated every possible power assignment method in existence, I believe that I've at least touched on the different concepts used in designing power assignement methods.  As I have already alluded, the methods described above are just the beginning.  Your creativity and inventiveness can lead you to all sorts of new and exciting combinations.  So, next time you sit down to play Diplomacy have some fun and try out a method you've never used before.  The outcome just might surprise you!<p>
+
 <hr>
+
 <table>
-<tr VALIGN = BOTTOM>
-<td><a HREF = "MailTo:Tarzan_MonkeyMan@BigFoot.com">
-<IMG BORDER = 0 SRC = "/Zine/Common/letter.gif"></a></td>
-<td><strong>Tarzan<br> (Tarzan_MonkeyMan@BigFoot.com)</strong></td>
+	<tr VALIGN = BOTTOM>
+		<td><a HREF = "MailTo:Tarzan_MonkeyMan@BigFoot.com">
+		<IMG BORDER = 0 SRC = "../../Common/letter.gif"></a></td>
+	<td><strong>Tarzan<br> (Tarzan_MonkeyMan@BigFoot.com)</strong></td>
 </tr>
 </table>
+
 <p><i>If you wish to E-Mail feedback on this article to the author, click on the
 letter above.  If that does not work, feel free to use the
-<a HREF = "/Zine/F1998M/Common/DearDP.html"> "<b>Dear DP...</b>"</a> mail interface.</i></p>
+<a HREF = "../Common/DearDP.html"> "<b>Dear DP...</b>"</a> mail interface.</i></p>
+
 <hr>
-<a HREF = "/Zine/"><IMG border=0 ALIGN = LEFT SRC = "/Zine/Common/DPbutton.gif"></a>
-<a HREF = "/Zine/F1998M/"><IMG border=0 ALIGN = RIGHT SRC = "/Zine/Common/toF1998M.gif"></a>
+
+<a HREF = "../.."><IMG border=0 ALIGN = LEFT SRC = "../../Common/DPbutton.gif"></a>
+<a HREF = ".."><IMG border=0 ALIGN = RIGHT SRC = "../../Common/toF1998M.gif"></a>
+
 <br CLEAR = BOTH>
+
 </BODY>
 </HTML>
-<!--
--->

@@ -1,19 +1,21 @@
 <TITLE>
-DP S1995R: The Diplomacy Programming Project -- The Observation Module
+	DP S1995R: The Diplomacy Programming Project -- The Observation Module
 </TITLE>
 <BODY BGCOLOR="#ffffff">
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/S1995R/"><IMG align=right SRC="/Zine/Common/toS1995R.gif" border=0></A>
+
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toS1995R.gif" border=0></A>
 <BR><BR><HR>
-<IMG align=left hspace=10 height=200 SRC="/Zine/Common/Loeb.gif">
+
+<IMG align=left hspace=10 height=200 SRC="../../Common/Loeb.gif">
 <H2>Danny Loeb</H2>
 <H3>The Diplomacy Programming Project</H3>
 <h1> The<BR>Observation<BR>Module </h1>
 <HR>
 In the S1995M issue of Diplomatic Pouch,
-we described the functioning
+ we described the functioning
 of the strategy finder, that is the strategic code on which our
-Bordeaux Diplomat is based.
+Bordeaux Diplomat is based. 
 This lower brain of the diplomat does all the calculations and thus
 forms the basis for the decisions taken by the upper brain, or
 negotiator part of the diplomat.
@@ -33,8 +35,8 @@ along with the value of the resulting position of all countries.
 <p>
 The negotiator determines these diplomatic constraints in two ways:
 <ul>
-<li> by negotiating with the other players, and
-<li> by observing the moves made on the board
+  <li> by negotiating with the other players, and
+  <li> by observing the moves made on the board      
 </ul>
 In this article, we will discuss the observation module which is
 responsable for this second task. This module has been partially
@@ -45,7 +47,7 @@ The program was written in LCS (a version of SML developped in
 Toulouse for parallel processing). It takes as input the adjudicated
 moves from a single season, and a friendliness matrix. The program
 output a revised friendliness matrix. This 7 by 7 matrix of real
-numbers indicates the
+numbers indicates the  
 love/hate relationship between each pair of players. Positive values
 indicate friendliness and negative values indicate animosity.
 <p>
@@ -57,82 +59,82 @@ the English Channel. If the diplomat judged that such a move gained
 little for England, then he would be given a low StabLimit. Thus, even
 if England finally did make peace with France, the program would
 continue to anticipate that a stab would be made under similar
-circumstances.
+circumstances. 
 <p>
 The following factors are used to update the Friendliness Matrix.
 (Factors not yet implemented are in paratheses.)
 <ul>
-<li> <b>Violation of Specific Agreements</b>. Agreements not to
-occupy a certain space <b>DMZ ...</b>, to make certain moves
-<b>XDO ...</b>, or to <b>not</b> make certain moves <b>NOT(XDO
-...)</b> can be automatically verified. A bonus
-is given in case of respect. In case of
-violation, a penalty  is given,
-(and the "ambassador" process for the
-nation in question is signalled so that it can ask for an
-explanation. The bonus achieved by stabbing or ignored by
-refusing to stab are computed, and stored as STABLIMIT data
-while updating friendliness accordingly.)
-<li> (<b>Violation of General Agreements</b> such as "peace"
-<b>PCE</b> or absence of agreement in the case of  a
-silent partner. Use strategy finder to check if moves
-correspond better to those where
-countries are allied and to those where country is not allied.)
-<li> <b>Coordinated Moves</b>. If a country supports or convoys the
-units of another country <b>SUP, CNV, CTO</b>, this indicates
-that the two countries are probably coordinating their moves,
-and a bonus is awarded.
-If a support or convoy was refused <b>NSO</b>, then this may
-indicate a possible stable, and a small penalty is given.
-<li> <b>Attacks</b>. Penalties are given for all conflicts,
-according to whether support was <b>CUT</b>, units bounced
-<b>BNC</b>, or the attacked totally failed <b>FLD</b>.  An
-especially big penalty is given if the defender is forced to
-retreat <b>RET</b>.
-<li> <b>Movement</b>. If an attempt is made to move, convoy, retreat, build
-or destroy a unit of player X, then compare distance to the
-nearest supply center of player Y        with the attempted
-supply center. The distance is calculated according to whether
-the unit is an army of a fleet. In the case of units being
-built or destroyed, the distance is considered "infinite" for a
-non-existant unit.
-This change in distance is filtered (0-1 is a big difference,
-4-5 hardly counts at all) and reduced by 50% if move failed
-<b>FLD</b> or bounced <b>BNC</b>.
-This filter function with first derivative negative, second
-positive, serves to weight the distance between the unit and
-player in question. The larger the distance, the less the
-importance of that unit.
-We weight successful advances more heavily than unsuccessful
-attacks.
-<li> <b>History</b>. To take into account the history of the game,
-we add in a 70% of the previous friendliness matrix.
-<li> (<b>Size</b>.        The fact that builds are always considered
-agressive and removal are always considered friendly will allow
-us to concentrate on our most dangerous opponents. However,
-additional penalties must be given to any country much closer
-to victory than the other country. This could be measured by
-number of supply centers, or better by how far many moves would
-be needed to capture 18 under ideal circumstances.)
-<li> <b>Symmetry</b> The friendliness is stored in a matrix F.
-F is replaced with F + F-transpose. This represents the fact
-that friendliness is a symmetrical relationship. The
-relationship between X and Y is the same as that between Y and
-X.
-<li> <b>Transitivity</b>. F is then replaced with F plus a small
-multiple        of F^2. This means that the friends of our
-friends and the enemies or our enemies have a tendancy to be
-our friends, and the friends of our enemies and the enemies of
-our friends have a tendancy to be our enemies.
-</ul>
-We thus calculate the friendliness matrix.
+  <li> <b>Violation of Specific Agreements</b>. Agreements not to
+       occupy a certain space <b>DMZ ...</b>, to make certain moves
+       <b>XDO ...</b>, or to <b>not</b> make certain moves <b>NOT(XDO
+       ...)</b> can be automatically verified. A bonus 
+       is given in case of respect. In case of
+       violation, a penalty  is given,
+       (and the "ambassador" process for the
+       nation in question is signalled so that it can ask for an
+       explanation. The bonus achieved by stabbing or ignored by
+       refusing to stab are computed, and stored as STABLIMIT data
+       while updating friendliness accordingly.)
+  <li> (<b>Violation of General Agreements</b> such as "peace"
+       <b>PCE</b> or absence of agreement in the case of  a
+       silent partner. Use strategy finder to check if moves
+       correspond better to those where 
+       countries are allied and to those where country is not allied.)
+  <li> <b>Coordinated Moves</b>. If a country supports or convoys the
+       units of another country <b>SUP, CNV, CTO</b>, this indicates
+       that the two countries are probably coordinating their moves,
+       and a bonus is awarded.
+       If a support or convoy was refused <b>NSO</b>, then this may
+       indicate a possible stable, and a small penalty is given.
+  <li> <b>Attacks</b>. Penalties are given for all conflicts,
+       according to whether support was <b>CUT</b>, units bounced
+       <b>BNC</b>, or the attacked totally failed <b>FLD</b>.  An
+       especially big penalty is given if the defender is forced to
+       retreat <b>RET</b>.
+  <li> <b>Movement</b>. If an attempt is made to move, convoy, retreat, build
+       or destroy a unit of player X, then compare distance to the
+       nearest supply center of player Y        with the attempted 
+       supply center. The distance is calculated according to whether
+       the unit is an army of a fleet. In the case of units being
+       built or destroyed, the distance is considered "infinite" for a
+       non-existant unit.  
+       This change in distance is filtered (0-1 is a big difference,
+       4-5 hardly counts at all) and reduced by 50% if move failed
+       <b>FLD</b> or bounced <b>BNC</b>.
+       This filter function with first derivative negative, second
+       positive, serves to weight the distance between the unit and
+       player in question. The larger the distance, the less the
+       importance of that unit.
+       We weight successful advances more heavily than unsuccessful
+       attacks.
+  <li> <b>History</b>. To take into account the history of the game,
+       we add in a 70% of the previous friendliness matrix.
+  <li> (<b>Size</b>.        The fact that builds are always considered
+       agressive and removal are always considered friendly will allow
+       us to concentrate on our most dangerous opponents. However,
+       additional penalties must be given to any country much closer
+       to victory than the other country. This could be measured by
+       number of supply centers, or better by how far many moves would
+       be needed to capture 18 under ideal circumstances.)
+  <li> <b>Symmetry</b> The friendliness is stored in a matrix F. 
+       F is replaced with F + F-transpose. This represents the fact
+       that friendliness is a symmetrical relationship. The
+       relationship between X and Y is the same as that between Y and
+       X. 
+  <li> <b>Transitivity</b>. F is then replaced with F plus a small
+       multiple        of F^2. This means that the friends of our
+       friends and the enemies or our enemies have a tendancy to be
+       our friends, and the friends of our enemies and the enemies of
+       our friends have a tendancy to be our enemies.
+</ul>  
+We thus calculate the friendliness matrix.         
 We use so many different critirea so that it is as difficult as
 possible to fake true friendship or true war.
 Alliance thresholds are determined from this friendliness matrix in
 order to divide the seven countries into about 4 "blocs" or
-"alliances". These
-blocs are used as parameters of the strategy
-finder in its calculations.
+"alliances". These 
+blocs are used as parameters of the strategy 
+finder in its calculations. 
 <p>
 The rules allow 15 minutes for negotiation after a movement phase.
 Our observation module requires about 15 seconds to calculate the new
@@ -147,13 +149,12 @@ Universite de Bordeaux I<BR>
 <P>
 <i>If you wish to e-mail feedback on this article to the author, and clicking
 on the mail address above does not work for you, feel free to use the "<b>Dear
-DP...</b>" mail interface, which is <A HREF="/Zine/S1995R/Common/DearDP.html">located
+DP...</b>" mail interface, which is <A HREF="../Common/DearDP.html">located
 here...</A>.</i>
+
 <HR>
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/S1995R/"><IMG align=right SRC="/Zine/Common/toS1995R.gif" border=0></A>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toS1995R.gif" border=0></A>
 <BR><BR>
 </body>
 </html>
-<!--
--->

@@ -1,0 +1,428 @@
+F Tri|A Bud|A Vie
+
+#	-------------------------------------
+#	ROADHOG OPENINGS:  F TRI H, A BUD-RUM
+#	-------------------------------------
+HOLD|-Rum|-Bud|aus-roadhog,aus-hsj
+HOLD|-Rum|-Gal|aus-roadhog,aus-hsj,aus-rusfrol
+#	---------------------------------------
+#	HOUSEBOAT OPENINGS:  F TRI H, A BUD-SER
+#	---------------------------------------
+HOLD|-Ser|-Gal|aus-housboat
+HOLD|-Ser|HOLD|aus-housboat-cri,aus-housboat-par
+HOLD|-Ser|-Boh|aus-housboat-nth
+HOLD|-Ser|-Bud|aus-housboat-hun,aus-kenkey
+HOLD|-Ser|-Tyr|aus-housboat-tyr
+#	-------------------------------
+#	BLUE WATER OPENINGS:  F TRI-ADR
+#	-------------------------------
+-ADR|HOLD|-Gal|aus-bwo,aus-housboat
+-ADR|-Rum|-Bud|aus-bwo,aus-hsj
+-ADR|-Rum|-Gal|aus-bwo,aus-hsj,aus-rusfrol,aus-panther
+-ADR|-Rum|-Tri|aus-bwo,aus-hsj
+-ADR|-Rum|-Tyr|aus-bwo,aus-hsj
+-ADR|-Ser|-Bud|aus-bwo,aus-kenkey
+-ADR|-Ser|-Tyr|aus-bwo,aus-bwl
+-ADR|-Ser|-Tri|aus-bwo,aus-bwl
+-ADR|-Ser|-Gal|aus-bwo,aus-panther
+-ADR|-Tri|-Tyr|aus-bwo,aus-italy
+#	-----------------------------------------------
+#	GALICIAN GAMBIT OPENINGS:  F TRI-ALB, A BUD-GAL
+#	-----------------------------------------------
+-Alb|HOLD|HOLD|aus-sd
+#	-----------------------------------------------
+#	GALICIAN GAMBIT OPENINGS:  F TRI-ALB, A BUD-GAL
+#	-----------------------------------------------
+-Alb|-Gal|-Gal|aus-hogal
+-Alb|-Gal|-Tri|aus-galgam
+#	-----------------------------------------------
+#	RUMANIAN GAMBIT OPENINGS:  F TRI-ALB, A BUD-RUM
+#	-----------------------------------------------
+-Alb|-Rum|-Bud|aus-rumgam-mcg,aus-hsj
+-Alb|-Rum|-Gal|aus-rumgam-road,aus-warthog,aus-rusfrol
+-Alb|-Rum|-Tri|aus-rumgam,aus-hsj
+-Alb|-Rum|-Tyr|aus-rumgam-tyr,aus-hsj
+#	---------------------------------------------
+#	BALKAN GAMBIT OPENINGS:  F TRI-ALB, A BUD-SER
+#	---------------------------------------------
+-Alb|-Ser|HOLD|aus-balgam,aus-bulgam
+-Alb|-Ser|-Bud|aus-balgam-bud,aus-kenkey,aus-ionian,aus-bulgam
+-Alb|-Ser|-Boh|aus-balgam-boh,aus-bulgam
+-Alb|-Ser|-Gal|aus-balgam-gal,aus-bulgam
+-Alb|-Ser|-Tri|aus-balgam-tri,aus-ionian,aus-bulgam
+-Alb|-Ser|-Tyr|aus-balgam-tyr,aus-bulgam
+-Alb|-Ser|S Ven-Tyr|aus-balgam-vie,aus-bulgam
+#	-------------------------------------------------
+#	TYROLESE GAMBIT:  F TRI-ALB, A BUD-TRI, A VIE-TYR
+#	-------------------------------------------------
+-Alb|-Tri|-Tyr|aus-tyrgam
+#	-----------------------------
+#	HEDGEHOG OPENINGS:  F TRI-VEN
+#	-----------------------------
+-Ven|-Rum|-Gal|aus-hedgehog
+-Ven|-Gal|-Tyr|aus-hedgehog-alp
+-Ven|-Gal|S Bud-Gal|aus-hedgehog-dpv
+-Ven|-Ser|-Bud|aus-hedgehog,aus-kenkey
+-Ven|-Ser|-Gal|aus-hedgehog-sou
+-Ven|-Ser|-Tyr|aus-hedgehog
+-Ven|-Rum|-Boh|aus-hedgehog-ffv,aus-hsj
+-Ven|S Vie-Gal|-Gal|aus-hedgehog-por
+#	---------------
+#	BUTLER OPENINGS
+#	---------------
+-Alb|-Vie|-Tyr|aus-gambit-but
+-Alb|-Vie|-Boh|aus-gambit-but
+-Ven|-Vie|-Tyr|aus-hedgehog-but
+-Ven|-Vie|-Boh|aus-hedgehog-but
+-ADR|-Vie|-Tyr|aus-bluewater-but
+-ADR|-Vie|-Boh|aus-bluewater-but
+
+comment|--ABOUT THE AUSTRIAN OPENINGS--
+The Austrian openings are categorized in the following groups:
+<ul>
+<li>Roadhog Openings (F Tri H, A Bud-Rum)
+<li>Houseboat Openings (F Tri H, A Bud-Ser)
+<li>Hedgehog Openings (F Tri-Ven)
+<li>Blue Water Openings (F Tri-ADR)
+<li>Gambit Openings (F Tri-Alb)
+<ul>
+<li>Balkan Gambit Openings (A Bud-Ser)
+<li>Galician Gambit Openings (A Bud-Gal)
+<li>Rumanian Gambit Openings (A Bud-Rum)
+<li>Tyrolese Gambit Opening (A Bud-Tri, A Vie-Tyr)
+</ul>
+</ul>
+END
+
+aus-gambit-but|BUTLER GAMBIT
+Named after Christian Butler, the Butler Gambit sends both armies north,
+abandoning the Balkans for an immediate attack on Germany.  It should be
+used only if assistance against a belligerent German is guaranteed, and
+if free passage to Greece and a safe Trieste is guaranteed.
+END
+
+aus-hedgehog-but|BUTLER HEDGEHOG (NANAMAVEU)
+Named after Christian Butler, the Butler Hedgehog (also called the
+Nanamaveu) is an abandonment of the Balkans in favor of an all out
+attack on Italy (or an application of early pressure on Germany).
+It should be used only if the Turk can be counted on to allow later
+Balkan growth for Austria, and Russia is friendly, if not dedicated
+to a full German attack.
+END
+
+aus-bluewater-but|BUTLER BLUE WATER (MANAWEG)
+Named after Christian Butler, the Butler Blue Water (also called the
+Manaweg) is an abandonment of the Balkans which puts Italy in a
+position to look for gains in the north.
+END
+
+aus-sd|SITTING DUKE
+Owen Kavanaugh's name for the ineffectual Austrian opening which sends only
+Trieste to Albania.  Once played in a game in which Italy solicited and
+received permission for a Key Opening, the opening succeeded in resolving
+a brewing Russo-Turkish war, since they found something they could do
+together.
+END
+
+aus-balgam|BALKAN GAMBIT
+The Balkan Gambit is any opening sending Trieste to Albania and Budapest to
+Serbia.  The gambit here is that Austria will find a friendly Italian and
+Russian, who will allow the dual monarchy to achieve two builds, from Greece
+and Serbia, without fear of losing any of the Austrian home centers.  In the
+Balkan Gambit, the burden of defense is left mostly to the Vienna army. What
+the Austrian player does with that unit depends on whom he distrusts most.
+In its pure form, the Vienna army is ordered to hold, but the gambit has a
+number of variants, based on the order for the Vienna army:
+<ul>
+<li>the Bohemia Aberration,
+<li>the Budapest Variation,
+<li>the Galician Variation, 
+<li>the Trieste Variation, 
+<li>the Tyrolean Variation, 
+<li>the Vienna Lemming Variation.
+</ul>
+Concerning the pure Balkan Gambit (A Vie H), the <i>Gamer's Guide to
+Diplomacy</i> says that "this non-move may keep everybody happy, but it is
+very passive and not recommended. It allows the defense of A Vie-Bud, A
+Ser-Bud if Russia has ordered A War-Gal. (However, if Russia then orders A
+Gal S Ser-Bud the result could be only one build or none in 1901!)"
+END
+aus-balgam-boh|BALKAN GAMBIT, BOHEMIA ABERRATION
+Richard Sharp's name for the opening F Tri-Alb, A Bud-Ser, A
+Vie-Boh. Also known as Fisher's Folly.
+<P>
+About this variant, <i>The Gamer's Guide to Diplomacy</i> says,
+"A Vie-Boh is marginal: if Russia is absolutely friendly,
+and if there is definitely an Anglo-German alliance against France,
+it provides good options. It will help preserve the Balance of
+power in the west."
+END
+aus-balgam-bud|BALKAN GAMBIT, BUDAPEST VARIATION
+The Balkan Gambit with A Vie-Bud. Austria thus takes no defensive
+measures against Italy or Russia. In return, he has two pieces
+adjacent to Rum. He can also accept Russian support into Bul
+and still have A Bud-Ser. See Ionian Gauntlet and Key Opening.
+END
+aus-balgam-gal|BALKAN GAMBIT, GALICIAN VARIATION
+The Balkan Gambit with A Vie-Gal. The opening defends against Russian entry
+into Galicia, and when the Austrian succeeds in taking Galicia, he has
+two units on Rumania plus the threat to Warsaw -- which may well distract
+a Ukraine army away from Rumania.  On the down side, this opening risks the loss
+of Trieste. But if the move to Galicia fails, Austria has shielded two home
+centres from attack, and is in a decent position to limit further mischief
+from any Italian army that does get into Trieste.
+<P>
+The <i>Gamer's Guide to Diplomacy</i> notes that, "here the object of distrust
+is Russia.  If Turkey is friendly (F Alb-Gre) may still succeed. Austria thus
+has the possibility of 3 builds.  The Fall 1901 move A Gal-Ukr is also made
+possible." This provides a devastating position for 1902.
+END
+aus-balgam-tri|BALKAN GAMBIT, TRIESTE VARIATION
+The Balkan Gambit with A Vie-Tri, designed to defend against
+Italy. The paradox is that an Italian attack is more likely to
+begin with A Ven-Tyr rather than A Ven-Tri. If there is a A Tyr,
+A Ven you can still force Italy to guess (Vie or supported attack
+on Tri), being able to divert A Ser to defend Tri. This is the
+single most popular Austrian opening.
+<P>
+The <i>Gamer's Guide to Diplomacy</i> says,
+"this is virtually <i>the</i> opening for Austria. It is followed
+by F Alb-Gre and A Ser S Alb-Gre, gaining two centers. Austria should
+make no other opening without sound and sufficient reason.
+In this opening, the object of distrust is Italy, though the Trieste
+army can still defend against Russia if she opened to Galicia. As in
+The Galician Variation, however, the defense is primarily a guessing game."
+END
+aus-balgam-tyr|BALKAN GAMBIT, TYROLIAN VARIATION
+Richard Sharp's name for the opening: F Tri-Alb, A Bud-Ser, A
+Vie-Tyr. Useful if you suspect that Italy will open with the
+Tyrolian attack and if you can trust Russia.
+END
+aus-balgam-vie|BALKAN GAMBIT, VIENNA LEMMING VARIATION
+Richard Sharp's name for the opening: F Tri-Alb, A Bud-Ser, A
+Vie S A Ven-Tyr. The fact that this opening has been named means that
+apparently someone has used it.
+END
+
+aus-bwo|BLUE WATER OPENING
+Any opening sending the Trieste fleet to the Adriatic Sea.
+The von Metzke Blitz (a.k.a. the Italian Attack) is recognized as
+a variant of the Blue Water Opening.
+END
+
+aus-galgam|GALICIAN GAMBIT
+Richard Sharp's name for the opening: F Tri-Alb, A Vie-Tri, and A Bud-Gal.
+END
+aus-hogal|GALICIAN GAMBIT, HEAD-ON GALICIAN VARIANT
+The Head-On Galician is Richard Sharp's name for the opening: F Tri-Alb,
+A Vie-Gal and A Bud-Gal.  Sure to keep Galicia vacant or Austrian, it is
+among the safer Gambits, but relies entirely on Italian and Turkish 
+friendship to be able to earn a single 1901 build.
+END
+
+aus-hedgehog|HEDGEHOG
+Any Austrian opening which orders the Trieste fleet into Venice.
+In its pure form, the Hedgehog sends Vienna to Galicia and Budapest to Rumania.
+A number of variants exist, based on the orders given to the Austrian armies:
+<ul>
+<li>Alpine Variation
+<li>Porcupine Variation
+<li>Dead Porcupine Variation
+<li>Fisher's Folly
+<li>Southern Hedgehog
+</ul>
+Richard Sharp's
+<a target=_parent href=http://www.spoff.demon.co.uk/articles/hedgehog.htm>article on the
+Hedgehog</a> provides more information, and Richard Hucknall, in his
+<a target=_parent href=http://www.spoff.demon.co.uk/articles/asset.htm><i>The Hedgehog:
+An Asset ot Liability?</i></a>, provides some counterpoint.
+END
+aus-hedgehog-alp|HEDGEHOG, ALPINE VARIATION
+Richard Sharp's name for the opening: F Tri-Ven, A Vie-Tyr, and A Bud-Gal.
+END
+aus-hedgehog-dpv|HEDGEHOG, DEAD PORCUPINE VARIATION
+Richard Sharp's name for the opening: F Tri-Ven, A Vie S Bud-Gal.
+END
+aus-hedgehog-ffv|HEDGEHOG, FISHER'S FOLLY VARIATION
+Richard Sharp's name for the opening: F Tri-Ven, A Bud-Rum, A Vie-Boh.
+END
+aus-hedgehog-por|HEDGEHOG, PORCUPINE VARIATION
+Richard Sharp's name for the opening: F Tri-Ven, A Bud S Vie-Gal.
+END
+aus-hedgehog-sou|HEDGEHOG, SOUTHERN VARIATION
+Better known as the Southern Hedgehog. The opening: F Tri-Ven, A Bud-Ser,
+and A Vie-Gal.  Named and popularised by Richard Sharp. 
+END
+
+aus-hsj|[HOP, STEP AND JUMP OPENING]
+Named by Iain Forsyth, this Austro-Russian opening sends Budapest to
+Rumania, followed in the fall by a Russian convoy of A Rum-Ank. The Warsaw
+army is sent to Galicia as Springtime camouflage.
+END
+
+aus-roadhog|ROADHOG
+Any Austrian opening that orders Trieste to HOLD and Budapest to Rumania.
+END
+
+aus-housboat|HOUSEBOAT OPENING
+The Houseboat is Richard Sharp's name for any opening in which the Trieste
+fleet is ordered to HOLD, and Budapest is sent to Serbia.  In its pure form
+(also known as the Southern Variation), Vienna is ordered to Galicia.  A
+number of variants exist, based on the order given to the Vienna army:
+<ul>
+<li>Crichton's Variation
+<li>Hungarian Variation
+<li>Paranoia Defense
+<li>Northern Houseboat
+<li>Tyrolian Variation
+</ul>
+END
+aus-housboat-nth|HOUSEBOAT, NORTHERN VARIATION
+Manus Hand's name for the Houseboat opening that sends Vienna to Bohemia.
+END
+aus-housboat-cri|HOUSEBOAT, CRICHTON'S VARIATION
+Richard Sharp's name for the opening used by David Crichton in
+a game in Dolchstoss (DS19): F Tri H, A Bud-Ser, A Vie H.
+END
+aus-housboat-hun|HOUSEBOAT, HUNGARIAN VARIATION
+Also known as the Hungarian Houseboat. Richard Sharp's name for the opening:
+F Tri H, A Bud-Ser, A Vie-Bud.
+END
+aus-housboat-tyr|HOUSEBOAT, HUNGARIAN VARIATION
+Also known as the Tyrolian Houseboat. Richard Sharp's name for the opening:
+F Tri H, A Bud-Ser, A Vie-Tyr.
+END
+aus-housboat-par|HOUSEBOAT, PARANOIA DEFENCE
+Richard Sharp's name for the opening: A Vie S F Tri, A Bud-Ser.  This is
+simply Crichton's Houseboat with a meaningless twist.  A silly opening indeed,
+useless even in no-press games, as its meaning is unfathomable.
+END
+
+aus-ionian|[IONIAN GAUNTLET]
+Edi Birsan's take-charge opening for Austria: in Fall, Serbia goes for Greece,
+the other army is sent to Serbia, and the Austrian fleet moves to the Ionian
+Sea.  This gives Austria a more forward position for Spring 1902, at the risk
+of losing Greece.
+END
+
+aus-italy|BLUE WATER OPENING, VON METZKE BLITZ
+Also known as the Italian Attack, this is one example of the many fully
+committal attacks that can be launched
+in Spring 1901, in this case by Austria on Italy. As such it is a suitable
+contrast with the Hedgehog opening.  If Italy opens with A Rom-Nap, he's lost
+Venice -- though the Balkans are for Russia and Turkey to carve up. This
+opening is invariably popular with Turkey, Italy's perennial rival in the
+Mediterranean, but is usually regarded as one of the more "bizarre" openings.
+Being Conrad von Metzke's favourite Austrian opening, it is known as the
+von Metzke Blitz or the von Metzke Opening.  Some claim that the poor
+statistics for Austria in the early days of the hobby are due in part to
+Conrad's penchant for both Austria and this opening.
+<P>
+The <i>Gamer's Guide to Diplomacy</i> says, "This seemingly suicidal set of
+orders has on rare occasions given good results.  These orders might be used
+in the special circumstance that Austria is allied with Russia <b>and</b>
+Turkey. The alliance strategy would call for the rapid destruction of Italy in
+order to hit France and break into the Atlantic. Even so, Austria is usually
+foolish to give up Serbia."
+END
+
+aus-kenkey|[KENDALL KEY OPENING]
+A variation on the Key in which Austria orders A Bud S A Ser-Rum
+in Fall of 1901. Thus, the Aus attack on Russia is delayed until F01 to
+allow a Russo-Turkish war to develop. (The variant was discussed by Alan
+Wells in issue #6 of <i>Dot Happy</i>.)
+END
+
+aus-rumgam|RUMANIAN GAMBIT
+A series of Austrian openings named by Richard Sharp involving
+the moves F Tri-Alb and A Bud-Rum. There are three named variations:
+<ul>
+<li>The Balkan Roadhog (A Vie-Gal).
+<li>McGivern's Gambit (A Vie-Bud),
+<li>Tyroleses Variation (A Vie-Tyr).
+</ul>
+END
+aus-rumgam-road|RUMANIAN GAMBIT, BALKAN ROADHOG VARIANT
+The variant of the Rumanian Gambit which sends Vienna to Galicia.
+<P>
+Tony Swinnerton's Diplomatic Pouch article, "<A
+HREF=http://devel.diplom.org/DipPouch/Zine/W1997A/Swinnerton/Lepanto.html
+TARGET=_top>Playing the Key Lepanto</A>," recommends it in conjunction with
+an unusual Italian/Austrian alliance opening.
+
+END
+aus-rumgam-mcg|RUMANIAN GAMBIT, McGIVERN'S GAMBIT VARIANT
+McGivern's Gambit is the variant of the Rumanian Gambit that sends
+Vienna to Budapest.
+END
+aus-rumgam-tyr|RUMANIAN GAMBIT, TYROLESES VARIATION
+The variant of the Rumanian Gambit which sends Vienna to Tyrolia.
+END
+
+aus-rusfrol|[RUSSIAN FROLIC]
+Allen Wells' name for the Austro-Turkish opening based on A Vie-Gal, A Bud-Rum,
+A Con H, A Smy-Arm, F Ank-Bla. The key here is A Con H which,
+by eliminating Turkey's 1901 risk to Serbia, permits Austria
+to move safely to Rum. Discussed in issue 29 of <i>Diplomacy World</i>.
+END
+
+aus-tyrgam|TYROLESE GAMBIT
+Richard Sharp's name for the opening: F Tri-Alb, A Bud-Tri, A Vie-Tyr.
+END
+
+aus-warthog|RUMANIAN GAMBIT, WARTHOG VARIANT
+The Warthog is Richard Sharp's name for the rarely-used Austrian opening
+(0.87%): F Tri-Alb, A Vie-Gal and, A Bud-Rum. Richard writes that it is
+"a new name for something resembling a Hedgehog, but not as pretty."
+END
+
+aus-bulgam|[BULGARIAN GAMBIT]
+This Austro-Russian combination requires a careful diplomatic setup of
+Turkey, but guarantees to keep the Turk at three SC's by the end of 1901.
+Austria opens with Tri-Alb and Bud-Ser, while Russia sends the Sevastopol
+fleet to Rumania.  In the Fall, Turkey is convinced by one or both of
+Austria and Russia to attempt a move out of Bulgaria, and A/R combine to
+dislodge the unsupportable Bulgaria.  Doug Beyerlein wrote
+<a target=_parent href=http://www.spoff.demon.co.uk/articles/bulgarian.htm>an article
+on the Bulgarian Gambit</a>.
+END
+
+aus-panther|[PANTHER]
+This Fall Austro-Italo-German continuation of the Blue Water
+Opening was named by Dan Abbott after Kaiser Wilhelm II's sending the German
+gunboat <i>Panther</i> to Africa in 1911.  The opening presents a combined
+front by the Central Powers (A/G/I) in an attempt to guarantee control of
+Africa and the Gibraltar block by controlling the Mediterranean.  To do this,
+the rivals Mediterranean powers (France and Turkey) must be taught a lesson.
+<P>
+In Spring, Austria opens to pressure the Ionian, while Italy does a Swiss
+Lepanto and Germany opens to Burgundy and Holland.  The pure Panther sees
+occupation of Serbia and Kiel in Spring 1901, but other variations are
+possible, which also put pressure on Russia.
+<P>
+In Fall, the Italian army in Apulia is convoyed to Albania by the Austrian
+fleet, while Italy takes Tunis, and both Germany and Italy continue to
+harass France in Marseilles, Burgundy, and Belgium.  While France is
+occupied by pressure on his entire eastern border, Turkey sees two hostile
+fleets coming at him.  The remaining two powers, England and Russia, should
+be pleased by the opening. Russia is able to not only get in on the
+Turkish party but also appeased by Germany's lack of Scandinavian force.
+England is also satisfied with the Scandinavian lines and can help out with
+France.
+END
+aus-bwl|[BLUE WATER LEPANTO]
+Manus Hand's Fall 1901 continuation of the Blue Water Opening has Austria
+virtually forcing himself into Italy's Lepanto convoy chain by the creation
+of a perceived threat to Venice that forces Italy to take Tunis by fleet,
+vacating the Ionian Sea.
+The Austrian (who opened to the Adriatic) sails
+to the Ionian in Fall of 1901 to be the victim of an arranged dislodgement
+by the Italian fleets in Naples and Tunis.  Austria's fleet then surprises
+Turkey by retreating eastward to form part of the convoy chain that carries
+the Italian army to Anatolia.  Described in
+<a target=_parent href=/Zine/W1999A/Hand/bwl.html>an article
+in The Pouch Zine</a> by Manus Hand and in
+<a target=_parent href=/Zine/F2000M/Pillie/bluewater.html>a follow-up article</a> by
+Derek Pillie.
+END
+

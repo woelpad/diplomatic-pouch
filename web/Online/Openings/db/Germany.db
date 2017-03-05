@@ -1,0 +1,377 @@
+F Kie|A Ber|A Mun
+#	-----------------------------------------
+#	ANSCHLUSS OPENINGS:  A Ber-Kie, F Kie-Den
+#	-----------------------------------------
+-Den|-Kie|HOLD|ger-anschluss
+-Den|-Kie|-Bur|ger-anschluss
+-Den|-Kie|-Boh|ger-anschluss
+-Den|-Kie|-Sil|ger-ansch-sil
+-Den|-Kie|-Tyr|ger-anschluss,ger-nta,ger-koniggratz
+#	-----------------------------------------
+#	RHINELAND OPENINGS:  A Ber-Mun, F Kie-Den
+#	-----------------------------------------
+-Den|-Mun|-Ruh|ger-rhineland
+-Den|-Mun|-Bur|ger-rhineland
+#	------------------------------------------
+#	BLITZKRIEG OPENINGS:  A Ber-Kie, A Mun-Ruh
+#	------------------------------------------
+-Den|-Kie|-Ruh|ger-blitz-den,ger-jutland,ger-sealion
+-Hol|-Kie|-Ruh|ger-blitz-hol,ger-wmandmary
+-BAL|-Kie|-Ruh|ger-blitz-bal
+-HEL|-Kie|-Ruh|ger-blitz
+#	-----------------------------------------
+#	WESTERN BARBAROSSA:  A Ber-Kie, F Kie-BAL
+#	-----------------------------------------
+-BAL|-Kie|-Sil|ger-wesbarb
+#	-----------------------------
+#	PRUSSIAN OPENINGS:  A Ber-Pru
+#	-----------------------------
+-HEL|-Pru|-Ruh|ger-prussian
+-BAL|-Pru|-Kie|ger-centrifuge
+-BAL|-Pru|-Sil|ger-barb
+-Den|-Pru|-Sil|ger-barb
+-Hol|-Pru|-Sil|ger-barb
+#	-----------------------------------------
+#	DUTCH BOY OPENINGS:  A Ber-Kie, F Den-HEL
+#	-----------------------------------------
+-HEL|-Kie|-Bur|ger-dike
+#	-------------------------------------
+#	DUTCH OPENINGS:  A Ber-Kie, F Kie-Hol
+#	-------------------------------------
+-Hol|-Kie|-Bur|ger-holland-burg,ger-panther
+-Hol|-Kie|-Tyr|ger-holland,ger-nta,ger-koniggratz
+-Hol|-Kie|-Boh|ger-holland
+-Hol|-Kie|-Sil|ger-holland
+#	--------------------------------------
+#	GAMBIT OPENINGS:  A Ber-Mun, F Kie-Hol
+#	--------------------------------------
+-Hol|-Mun|-Bur|ger-panther
+-Hol|-Mun|-Ruh|ger-danish
+#	-----------------------------
+#	SILESIAN OPENINGS:  A Ber-Sil
+#	-----------------------------
+-Hol|-Sil|-Tyr|ger-silesian,ger-koniggratz
+-Hol|-Sil|-Bur|ger-panther
+HOLD|-Sil|S Ber-Sil|ger-silesian
+-Den|-Sil|-Ruh|ger-frederich,ger-silesian
+-Den|-Sil|-Boh|ger-slav
+-Den|-Sil|-Bur|ger-silesian
+-Den|-Sil|HOLD|ger-silesian
+#	---------------------------------
+#	BERLIN DEFENSE OPENINGS:  A Ber H
+#	---------------------------------
+-Den|HOLD|-Kie|ger-berlin
+-Den|HOLD|-Ruh|ger-berlin
+
+comment|--ABOUT THE GERMAN OPENINGS--
+The German openings are categorized as follows:  if the Berlin army is sent to
+Kiel, then if Munich opens to Ruhr, the opening is a Blitzkrieg opening, and
+if Munich does <i>not</i> open to Ruhr, 
+the opening is named according to the order of the Kiel fleet.
+Otherwise (if Berlin does <i>not</i> open to Kiel) the opening is categorized
+based on the order given to the Berlin army.
+<ul>
+<li>Blitzkrieg Openings  (A Ber-Kie, A Mun-Ruh)
+<li>Anschluss Openings   (A Ber-Kie, F Kie-Den)
+<li>Dutch Openings       (A Ber-Kie, F Kie-Hol)
+<li>Dutch Boy Openings   (A Ber-Kie, F Kie-HEL)
+<li>Western Barbarossa   (A Ber-Kie, F Kie-BAL)
+<li>Gambit Openings      (A Ber-Mun, F Kie-Hol)
+<li>Rhineland Openings   (A Ber-Mun, F Kie-Den)
+<li>Prussian Openings    (A Ber-Pru)
+<li>Silesian Openings    (A Ber-Sil)
+<li>Berlin Defense       (A Ber H)
+</ul>
+END
+
+ger-berlin|BERLIN DEFENSE
+Any German opening in which Berlin is ordered to HOLD.  These openings
+guard against a Russian entry into the east without committing the German
+to an attack.
+END
+
+ger-dike|DUTCH BOY OPENING
+Named by Manus Hand, Dutch Boy openings involve F Kie-HEL
+and A Ber-Kie.  This move applies pressure to the North
+Sea (in combination with a French fleet in the Channel) but is a rather
+poor substitute for F Kie-Den.  The advantage is that if France is to make
+the attack on the North Sea, Germany may occupy Denmark with an army rather
+than a fleet, giving him immediate convoy possibilities.  The Dutch Boy is
+also useful in combination with a Russian Northern System opening.  With
+a Russian army in St. Petersburg after Spring of 1901, and with pressure
+on England's North Sea fleet, the only sure English build in Norway must
+be taken by vacating the North Sea, and Germany can take advantage of this
+by HEL-NTH, while still covering Holland and Denmark with armies.
+END
+
+ger-centrifuge|CENTRIFUGE
+Clinton Wolf's name for the Prussian opening that includes F Kie-BAL and
+A Mun-Kie.  Followed by a convoy to Denmark,
+and then by the addition of another fleet in Winter, which
+is used to completely plug the waters from Kiel to St. Petersburg,
+the Centrifuge is described in full in
+<a target=_top href=/DipPouch/Zine/S1999R/Wolf/centrifuge.html>a Diplomatic
+Pouch Zine article on the opening</a>.
+END
+
+ger-wesbarb|WESTERN BARBAROSSA
+Any opening sending F Kie-Bal with A Ber-Kie.  This opening allows for the
+taking of Denmark (or Holland) with an army and Germany threatens a fleet
+move to the Gulf of Bothnia.  In combination with Mun-Sil, Russia can see
+two of his units with early worries.
+END
+
+ger-anschluss|ANSCHLUSS OPENING
+Richard Sharp's strategic notion that Germany should, in the
+early game, strive to keep Austria strong to reduce both powers
+vulnerability as central (and surrounded) powers. Although they
+take their name from the annexation of Austria by Nazi-Germany
+in March 1938, Anschluss alliances are generally regarded as
+essentially pro-Austrian, with Germany using diplomatic leverage
+to discourage other powers -- in particularly Russia (with the
+threat of standing him out of Sweden in 1901) -- from attacking
+his ally. Tactically, Anschluss openings entail F Kie-Den and
+A Ber-Kie.  Munich either HOLDs or stands off in Burgundy or Tyrolia
+(the pure Anschluss), or even enters Tyrolia or Bohemia, with Italy
+told that this unit will aid Austria if Italy attacks. The advantage
+for Germany is that it is statistically evident that Germany is far
+less likely to win if Austria is eliminated early in the game.
+There are three variants:
+<ul>
+<li>Sudetenland Variant  (A Mun-Boh);
+<li>Tyrolean Variant  (A Mun-Tyr);
+<li>Silesia Variant   (A Mun-Sil).
+</ul>
+The pure Anschluss is Germany's fourth most common opening. Unless a standoff
+in Burgundy occurs, it bespeaks an aggressive German player almost certainly
+allied with England. A standoff is more ambiguous, but may be Germany's attempt
+to head off a France-England-Russian blitz.
+<P>
+<i>[Notice that the opening using Mun-Ruh is not considered an Anschluss
+opening.  Rather, this is the Danish Blitzkreig, the most popular German
+opening.]</i>
+END
+
+ger-ansch-sil|ANSCHLUSS, SILESIA VARIANT
+This opening shows Munich's role as &quot;swing&quot; unit. The
+order alerts Russia to an attack but put him in some difficulty.
+Germany can still change attack (A Sil-Gal) in the Fall. A common
+alternative, A Mun-Kie, A Ber-Pru is much weaker. A Russian attack
+(A War-Sil, A Mos-War) will put Germany at a disadvantage. There
+is also no way to change tack save retreat (A Pru-Ber).
+END
+
+ger-rhineland|RHINELAND OPENING
+Named by Manus Hand, this opening gives Germany two units to attack Burgundy
+in Fall, while providing a say in the Lowlands and Scandinavia.  One advantage
+to this opening is that if France has entered Burgundy, Germany is sure to
+protect Munich without risking the inability to build a fleet at either or
+both of his ports.  If an Anglo-French attack is foreseen, the Sudetenland is
+a good choice.
+END
+
+ger-barb|PRUSSIAN OPENING, THE BARBAROSSA
+This opening, named by Richard Sharp, is Germany's most aggressive
+opening towards the east, sending Mun-Sil and Ber-Pru. Note that both
+Holland and Belgium are ignored, virtually asking for an English convoy
+to Holland. In addition to the
+Barbarossa Proper (F Kie-BAL), there are two variations: the Danish variant
+(F Kie-Den) and the Dutch variant (F Kie-Hol).
+END
+
+ger-blitz|BLITZKRIEG OPENING
+The Blitzkrieg openings involve a westward move by the German armies,
+with Berlin moving to Kiel and Munich to Ruhr.  These are far and away 
+the most common German openings, and there are three named variants:
+<ul>
+<li>Danish Variant (F Kie-Den)
+<li>Dutch Variant (F Kie-Hol)
+<li>Baltic Variant (F Kie-BAL)
+</ul>
+END
+ger-blitz-hol|BLITZKRIEG OPENING, DUTCH VARIATION
+This is the second most popular German
+opening. Compared to the Danish Blitzkrieg, this trades German influence
+in Scandinavia for a stronger hand in Belgium, plus a slightly
+stronger defensive position.
+<P>
+This is the basic opening where England is an ally, Russia is
+neutral, and France is the objective. Even so, nothing has yet
+been done to antagonize France directly. Ruhr can go to Begiuml
+with Holland's support, or can defend Munich if the French entered Burgundy.
+In the latter event, F Hol-Bel still denies the center to France.
+F Hol could also support an English unit into Belgium.
+END
+ger-blitz-den|BLITZKREIG OPENING, DANISH VARIANT
+This is the most popular German opening, and also the most popular
+opening for any country. It guarantees two neutrals against any offense,
+gives Germany leverage in Sweden and Belgium, and usually will offend
+no one. If no one has moved adjacent to him, he will have great
+flexibility in Fall, and all home centres will be open for builds.
+<P>
+This is the basic opening where France is an ally, Russia is
+neutral or suspect, and England is the objective. The Denmark fleet can deny
+Sweden to Russia. Germany also has a lock on Holland (A Kie-Hol,
+A Ruh S A Kie-Hol), and can defend Berlin and still take
+Holland (so long as England does not stop him).
+END
+ger-blitz-bal|BLITZKRIEG OPENING, BALTIC VARIANT
+Also known as the Baltic Opening, this is a German attack starting in
+Scandinavia rather than in the Polish
+corridor.  The fall continuation is F BAL-Swe, A Kie-Den, A Ruh-Hol/Bel. If
+Sweden is taken, BAL can be retaken via F Swe S Kie-BAL, followed
+by F BAL C Den-Lvn! If not, F BAL S Den-Swe, plus, new armies
+enter Polish corridor. Requires solid knowledge of English, French
+(and Italian) intentions.
+END
+
+ger-silesian|SILESIAN OPENING
+Any involving the move A Ber-Sil.  The following named variants exist:
+<ul>
+<li>Frederich Variation
+<li>Slavic Attack
+</ul>
+END
+ger-frederich|SILESIAN OPENING, FREDERICH VARIANT
+Also known as the Frederich Opening, this opening was named by John Mark.
+France should be pleased and more inclined to move against England, and Silesia
+can guard Munich against A Bur-Mun just as well as Kiel can. It also gives
+protection against A War-Sil.
+END
+ger-slav|SILESIAN OPENING, SLAVIC ATTACK
+Again, Munich is the &quot;swing.&quot; Here Germany goes after
+Russia <i>and</i> Austria, or Austria alone. Both armies threaten Galicia
+as well as two supply centers. Against Austria alone, A Boh-Vie,
+A Sil-Gal will hurt.
+END
+
+ger-holland|DUTCH OPENING
+Richard Sharp's name for any German opening using F Kie-Hol and
+A Ber-Kie. There are three named variations: the Burgundy Attack, the
+Silesian and the Tyrolian. There are no prizes for guessing what
+the differences are.
+END
+
+ger-holland-burg|DUTCH OPENING, BURGUNDY ATTACK VARIANT
+This is Germany's third most common
+opening, and a standoff in Bur may well be arranged. This is
+Germany's most westerly oriented opening, and its success is
+usually dependent on who, if anyone, has entered the English
+Channel.
+<P>
+This is almost the same as the Dutch Blitzkrieg (where Munich moves to Ruhr).
+It shows the role of A Mun as Germany's &quot;swing&quot; unit.
+It sets the tone and direction of Germany's opening. England
+is an ally, Russia is neutral, and France is the objective. The
+attack on Burgundy is a direct assault on France. It may stand
+off an unsupported French move to Burgundy. If Germany's attack
+succeeds, the blow to French defenses is serious.&quot;
+END
+
+ger-jutland|[JUTLAND GAMBIT]
+Edi Birsan's Fall continuation of the Danish Blitzkrieg, which delays the
+choice of first victim until Spring of 1902.  The Fall 1901 orders are:
+F Den-SKA, A Kie-Den, and A Ruh-Hol. Note that Germany writes off Belgium
+entirely, but is a little less vulnerable to a double cross in the north.
+END
+
+ger-nta|[NORTHERN TIER ALLIANCE OPENING]
+This fall continuation is based on an E/F/G triple alliance.
+England convoys to Denmark, with A Mar-Pie and A Mun-Tyr for an immediate
+southern attack.
+Subsequently, England builds a minimum of fleets, France builds
+mostly F Mar. (The opening was named by Richard Hucknall in FOE #57)
+END
+
+ger-prussian|PRUSSIAN OPENING
+Richard Sharp's name for any opening which uses the move A Ber-Pru.
+The most famous named variant is the Barbarossa, which sends Munich to Silesia
+to launch a full-scale war on Russia.
+END
+
+ger-sealion|[SEALION]
+Edi Birsan's strong anti-English continuation of the Danish
+Blitzkrieg, as detailed in his <A
+HREF=http://devel.diplom.org/DipPouch/Zine/S1997M/Birsan/Sealion.html
+TARGET=_top>Diplomatic Pouch Article</A>.
+<P>
+Supported by a French fleet in the English Channel, Germany forces his way
+into the North Sea in Fall of 1901, while taking Denmark and Holland with
+armies.  In Spring of 1902, Germany and France both attempt convoys onto
+England, and at least one is guaranteed to succeed.  Named after Hitler's
+plan to attack England from out of the Low Countries, this opening gained
+rapid popularity in the late 1990's in e-mail play.
+One example is Bif Smithson's Diplomatic Pouch article <A
+HREF=http://devel.diplom.org/DipPouch/Zine/F1997R/Smithson/seaart.html
+TARGET=_top>The Sealion Opening in Action</A>.
+END
+
+ger-koniggratz|[KONIGGRATZ FREAKOUT]
+Edi Birsan's offbeat German-Italian continuation to Italy's Alpine Chicken
+Opening.  With A Ven S Pie-Tyr in the Fall, the German army in Tyrolia is 
+dislodged, allowing it to retreat to whichever of Vienna
+or Trieste Austria leaves open. In addition to this benefit, Italy's opening
+move to Piedmont provides some assurance to Germany that the French army in
+Burgundy will not be tempted to go for Munich,
+especially if Germany notified France that he will open A Mun-Tyr.
+END
+
+ger-wmandmary|[WILLIAM AND MARY OPENING]
+William Oosten's alternative to the Sealion is detailed
+in his Diplomatic Pouch article, "<A
+HREF=http://devel.diplom.org/DipPouch/Zine/F1997M/Oosten/WmandMary.html
+TARGET=_top>The William and Mary Opening</A>:"
+<P>
+"Given a friendly Russia and a hostile Italy, Germany opens seemingly
+anti-French, while France rushes south. By 1902, France and Germany
+join their navies to acquire the English Channel and the North
+Sea. Once F/G rule the waves, they have their way with England."
+<P>
+Germany moves his fleet into Belgium, while the French fleet
+presumably bounces in the English Channel in the Spring and 
+goes to the Mid-Atlantic in the Fall. All this is maintains a peaceful
+attitude towards England until the Winter builds - 2 fleets.
+Criticism of this opening is that Germany, with 3 builds, might be too
+strong, since France might have to defend Marseilles and only get 1.
+END
+
+ger-danish|DANISH GAMBIT
+Don Scheifler's name for the opening involving Kiel-Holland and Berlin-Munich.
+It passes on the build from Denmark the first year, in order
+to gain position against France, usually picking up both Holland and Belgium.
+It is very effective at splitting an F/E alliance that may have been
+planned against Germany, causing England to become involved in a war against
+Russia.   Germany is often able to choose his ally the second year, either
+taking Denmark with Russia's help, or moving against France with help from
+England.  The strong western front also helps convince Italy to move to
+Pie/Wes in Spring '02.   Or with good negotiating, a fleet build in Kiel can
+even gain France as an ally against England.  The opening provides a Kaiser
+with a great number of options, while throwing western neighbors off balance
+during the first crucial years.  In the pure Danish Gambit, Munich opens to
+Ruhr.  If it opens to Burgundy, the opening can be
+transformed into a Panther opening.
+END
+
+ger-panther|[PANTHER]
+This Fall Austro-Italo-German continuation 
+was named by Dan Abbott after Kaiser Wilhelm II's sending the German
+gunboat <i>Panther</i> to Africa in 1911.  The opening presents a combined
+front by the Central Powers (A/G/I) in an attempt to guarantee control of
+Africa and the Gibraltar block by controlling the Mediterranean.  To do this,
+the rivals Mediterranean powers (France and Turkey) must be taught a lesson.
+<P>
+In Spring, Austria opens to pressure the Ionian, while Italy does a Swiss
+Lepanto and Germany opens to Burgundy and Holland.  The pure Panther sees
+occupation of Serbia and Kiel in Spring 1901, but other variations are
+possible, which also put pressure on Russia.
+<P>
+In Fall, the Italian army in Apulia is convoyed to Albania by the Austrian
+fleet, while Italy takes Tunis, and both Germany and Italy continue to
+harass France in Marseilles, Burgundy, and Belgium.  While France is
+occupied by pressure on his entire eastern border, Turkey sees two hostile
+fleets coming at him.  The remaining two powers, England and Russia, should
+be pleased by the opening. Russia is able to not only get in on the
+Turkish party but also appeased by Germany's lack of Scandinavian force.
+England is also satisfied with the Scandinavian lines and can help out with
+France.
+END

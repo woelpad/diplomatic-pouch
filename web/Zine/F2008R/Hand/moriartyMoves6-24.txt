@@ -1,0 +1,303 @@
+:: Judge: USDP  Game: moriarty  Variant: standard payola
+:: Deadline: S1901M Mon 15 Sep 2008 19:40 GMT
+:: URL: http://www.diplom.org/dpjudge?game=moriarty
+
+Starting position for Spring of 1901.  (moriarty.S1901M)
+
+Austria: Army Budapest.
+Austria: Army Vienna.
+Austria: Fleet Trieste.
+
+England: Fleet Edinburgh.
+England: Fleet London.
+England: Army Liverpool.
+
+France: Fleet Brest.
+France: Army Marseilles.
+France: Army Paris.
+
+Germany: Fleet Kiel.
+Germany: Army Berlin.
+Germany: Army Munich.
+
+Italy: Fleet Naples.
+Italy: Army Rome.
+Italy: Army Venice.
+
+Russia: Army Warsaw.
+Russia: Army Moscow.
+Russia: Fleet Sevastopol.
+Russia: Fleet St Petersburg (south coast).
+
+Turkey: Fleet Ankara.
+Turkey: Army Constantinople.
+Turkey: Army Smyrna.
+
+Ownership of supply centers:
+
+Austria:    Budapest, Trieste, Vienna.
+England:    Edinburgh, London, Liverpool.
+France:     Brest, Marseilles, Paris.
+Germany:    Berlin, Kiel, Munich.
+Italy:      Naples, Rome, Venice.
+Russia:     Moscow, Sevastopol, St Petersburg, Warsaw.
+Turkey:     Ankara, Constantinople, Smyrna.
+Unowned:    Belgium, Bulgaria, Denmark, Greece, Holland, Norway, Portugal,
+            Rumania, Serbia, Spain, Sweden, Tunis.
+
+The deadline for the first orders is Monday 15 September 2008 19:40 GMT.
+
+
+
+From dpjudge@diplom.org Fri Sep  5 22:02:49 2008
+Subject: Diplomacy results moriarty S1901M
+
+:: Judge: USDP  Game: moriarty  Variant: standard
+:: Deadline: S1901M Fri 5 Sep 2008 22:00 EDT
+:: URL: http://www.diplom.org/dpjudge?game=moriarty
+
+Movement results for Spring of 1901.  (moriarty.S1901M)
+
+Austria: Army Budapest -> Rumania.
+Austria: Army Vienna -> Tyrolia.
+Austria: Fleet Trieste -> Venice.
+
+England: Fleet Edinburgh HOLD.
+England: Fleet London -> North Sea.
+England: Army Liverpool -> Wales.
+
+France: Fleet Brest -> English Channel.
+France: Army Marseilles HOLD.
+France: Army Paris HOLD.
+
+Germany: Fleet Kiel -> Baltic Sea.
+Germany: Army Berlin -> Prussia.
+Germany: Army Munich -> Ruhr.
+
+Italy: Fleet Naples HOLD.
+Italy: Army Rome HOLD.
+Italy: Army Venice -> Piedmont.
+
+Russia: Army Warsaw -> Silesia.
+Russia: Army Moscow -> St Petersburg.
+Russia: Fleet Sevastopol -> Armenia.
+Russia: Fleet St Petersburg (south coast) -> Livonia.
+
+Turkey: Fleet Ankara -> Black Sea.
+Turkey: Army Constantinople -> Smyrna.
+Turkey: Army Smyrna -> Syria.
+
+The next phase of 'moriarty' will be Movement for Fall of 1901.
+The deadline for orders will be Friday 12 September 2008 22:00 EDT.
+
+From dpjudge@diplom.org Sat Sep 13 00:01:58 2008
+Subject: Diplomacy results moriarty F1901M
+
+:: Judge: USDP  Game: moriarty  Variant: standard
+:: Deadline: F1901M Fri 12 Sep 2008 23:59 EDT
+:: URL: http://www.diplom.org/dpjudge?game=moriarty
+
+Movement results for Fall of 1901.  (moriarty.F1901M)
+
+Austria: Army Rumania -> Black Sea -> Constantinople.
+Austria: Army Tyrolia -> Munich.
+Austria: Fleet Venice HOLD.
+
+England: Fleet North Sea -> Belgium.
+England: Fleet Edinburgh -> North Sea.
+England: Army Wales -> English Channel -> Brest.
+
+France: Army Paris HOLD.
+France: Fleet English Channel CONVOY English Army Wales -> Brest.
+France: Army Marseilles HOLD.
+
+Germany: Fleet Baltic Sea SUPPORT Army Prussia -> Livonia.
+Germany: Army Ruhr -> Holland.
+Germany: Army Prussia -> Livonia.
+
+Italy: Fleet Naples HOLD.
+Italy: Army Piedmont HOLD.
+Italy: Army Rome HOLD.
+
+Russia: Army Silesia -> Berlin.
+Russia: Army St Petersburg -> Norway.
+Russia: Fleet Armenia -> Ankara.
+Russia: Fleet Livonia HOLD. (*dislodged, destroyed*)
+
+Turkey: Fleet Black Sea CONVOY Austian Army Rumania -> Constantinople.
+Turkey: Army Syria HOLD.
+Turkey: Army Smyrna HOLD.
+
+
+Ownership of supply centers:
+
+Austria:    Budapest, Constantinople, Munich, Trieste, Venice, Vienna.
+England:    Belgium, Brest, Edinburgh, London, Liverpool.
+France:     Marseilles, Paris.
+Germany:    Holland, Kiel.
+Italy:      Naples, Rome.
+Russia:     Ankara, Berlin, Moscow, Norway, Sevastopol, St Petersburg, Warsaw.
+Turkey:     Smyrna.
+Unowned:    Bulgaria, Denmark, Greece, Portugal,
+            Rumania, Serbia, Spain, Sweden, Tunis.
+
+Austria:     6 Supply centers,  3 Units:  Builds   3 units.
+England:     5 Supply centers,  3 Units:  Builds   2 units.
+France:      2 Supply centers,  3 Units:  Removes  1 unit.
+Germany:     2 Supply centers,  3 Units:  Removes  1 unit.
+Italy:       2 Supply centers,  3 Units:  Removes  1 unit.
+Russia:      7 Supply centers,  3 Units:  Builds   4 units.
+Turkey:      1 Supply center,   3 Units:  Removes  2 units.
+
+The next phase of 'moriarty' will be Adjustments for Winter of 1901.
+The deadline for orders will be Tuesday 16 September 2008 00:00 EDT.
+
+From dpjudge@diplom.org Fri Jul 18 03:22:47 2008
+Subject: Diplomacy results moriarty W1901A
+
+:: Judge: USDP  Game: moriarty  Variant: standard
+:: Deadline: F1901B Fri 18 Jul 2008 09:00 GMT
+:: URL: http://www.diplom.org/dpjudge?game=moriarty
+
+Adjustment orders for Winter of 1901.  (moriarty.W1901A)
+
+Austria:    Build WAIVED.
+Austria:    Build WAIVED.
+Austria:    Build WAIVED.
+England:    Build WAIVED.
+England:    Build WAIVED.
+France:     Removes the army in Marseilles.
+Germany:    Removes the army in Livonia.
+Italy:      Removes the fleet in Naples.
+Russia:     Build WAIVED.
+Russia:     Build WAIVED.
+Russia:     Build WAIVED.
+Russia:     Build WAIVED.
+Turkey:     Removes the army in Syria.
+Turkey:     Removes the fleet in the Black Sea.
+
+The next phase of 'moriarty' will be Movement for Spring of 1902.
+The deadline for orders will be Monday 21 July 2008 03:20 GMT.
+
+From dpjudge@diplom.org Mon Jul 21 03:22:54 2008
+Subject: Diplomacy results moriarty S1902M
+
+:: Judge: USDP  Game: moriarty  Variant: standard
+:: Deadline: S1902M Mon 21 Jul 2008 03:20 GMT
+:: URL: http://www.diplom.org/dpjudge?game=moriarty
+
+Movement results for Spring of 1902.  (moriarty.S1902M)
+
+Austria: Fleet Venice HOLD. (*dislodged, destroyed*)
+Austria: Army Constantinople SUPPORT Turkish Army Smyrna -> Ankara.
+Austria: Army Munich -> Burgundy.
+
+England: Fleet North Sea -> Holland.
+England: Army Brest HOLD. (*dislodged, destroyed*)
+England: Fleet Belgium -> Picardy.
+
+France: Fleet English Channel SUPPORT Army Paris -> Brest.
+France: Army Paris -> Brest.
+
+Germany: Army Holland -> Ruhr.
+Germany: Fleet Baltic Sea HOLD.
+
+Italy: Army Rome -> Venice.
+Italy: Army Piedmont SUPPORT Army Rome -> Venice.
+
+Russia: Army Norway -> Sweden.
+Russia: Fleet Ankara HOLD. (*dislodged, destroyed*)
+Russia: Army Berlin -> Kiel.
+
+Turkey: Army Smyrna -> Ankara.
+
+
+The next phase of 'moriarty' will be Movement for Fall of 1902.
+The deadline for orders will be Tuesday 22 July 2008 03:20 GMT.
+
+
+:: Judge: USDP  Game: moriarty  Variant: standard
+:: Deadline: F1901M Fri 12 Sep 2008 23:59 EDT
+:: URL: http://www.diplom.org/dpjudge?game=moriarty
+
+Movement results for Fall of 1902.  (moriarty.F1902M)
+
+Austria: Army Constantinople -> Smyrna.
+Austria: Army Burgundy -> Paris.
+
+England: Fleet Picardy HOLD. (*dislodged, destroyed*)
+England: Fleet Holland HOLD. (*dislodged, destroyed*)
+
+France: Fleet English Channel SUPPORT Army Brest -> Picardy.
+France: Army Brest -> Picardy.
+
+Germany: Army Ruhr SUPPORT Russian Army Kiel -> Holland.
+Germany: Fleet Baltic Sea CONVOY Russian Army Sweden -> Kiel.
+
+Italy: Army Venice -> Tyrolia.
+Italy: Army Piedmont -> Marseilles.
+
+Russia: Army Sweden -> Baltic Sea -> Kiel.
+Russia: Army Kiel -> Holland.
+
+Turkey: Army Ankara -> Armenia.
+
+
+Ownership of supply centers:
+
+Austria:    Budapest, Constantinople, Munich, Paris, Smyrna, Trieste,
+            Venice, Vienna.
+England:    Belgium, Brest, Edinburgh, London, Liverpool.
+Italy:      Marseilles, Naples, Rome.
+Russia:     Ankara, Berlin, Holland, Kiel, Moscow, Norway, Sevastopol,
+            St Petersburg, Warsaw.
+Unowned:    Bulgaria, Denmark, Greece, Portugal,
+            Rumania, Serbia, Spain, Sweden, Tunis.
+
+Austria:     8 Supply centers,  2 Units:  Builds   6 units.
+England:     5 Supply centers,  0 Units:  Builds   5 units.
+France:      0 Supply centers,  2 Units:  Removes  2 units.
+Germany:     0 Supply centers,  2 Units:  Removes  2 units.
+Italy:       3 Supply centers,  2 Units:  Builds   1 unit.
+Russia:      9 Supply centers,  2 Units:  Builds   7 units.
+Turkey:      0 Supply centers,  1 Unit:   Removes  1 unit.
+
+The next phase of 'moriarty' will be Adjustments for Winter of 1902.
+The deadline for orders will be Tuesday 16 September 2008 00:00 EDT.
+
+From dpjudge@diplom.org Fri Jul 18 03:22:47 2008
+Subject: Diplomacy results moriarty W1901A
+
+:: Judge: USDP  Game: moriarty  Variant: standard
+:: Deadline: F1901B Fri 18 Jul 2008 09:00 GMT
+:: URL: http://www.diplom.org/dpjudge?game=moriarty
+
+Adjustment orders for Winter of 1901.  (moriarty.W1901A)
+
+Austria:    Build WAIVED.
+Austria:    Build WAIVED.
+Austria:    Build WAIVED.
+Austria:    Build WAIVED.
+Austria:    Build WAIVED.
+Austria:    Build WAIVED.
+England:    Build WAIVED.
+England:    Build WAIVED.
+England:    Build WAIVED.
+England:    Build WAIVED.
+England:    Build WAIVED.
+France:     Removes the army in Picardy.
+France:     Removes the fleet in the English Channel.
+Germany:    Removes the army in Ruhr.
+Germany:    Removes the fleet in the Baltic Sea.
+Italy:      Build WAIVED.
+Russia:     Build WAIVED.
+Russia:     Build WAIVED.
+Russia:     Build WAIVED.
+Russia:     Build WAIVED.
+Russia:     Build WAIVED.
+Russia:     Build WAIVED.
+Russia:     Build WAIVED.
+Turkey:     Removes the army in Armenia.
+
+The next phase of 'moriarty' will be Movement for Spring of 1902.
+The deadline for orders will be Monday 21 July 2008 03:20 GMT.

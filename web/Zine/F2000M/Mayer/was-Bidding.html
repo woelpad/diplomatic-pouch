@@ -1,0 +1,90 @@
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1252">
+<META NAME="Generator" CONTENT="Microsoft Word 97">
+<TITLE>Overheard at the Ministry of Finance 2</TITLE>
+</HEAD>
+<BODY LINK="#0000ff">
+
+<B><P>Introduction</P>
+</B>
+<P>Payola is a diplomacy variant with an added layer between the players and the units. Each player manages an account of silver pieces (AgP), which she bids in an effort to get units to do behave to her liking. Accounts are incremented after each build phase by an amount depending on the number of supply centres under each players' control. </P>
+
+<P>Just as in diplomacy, payola has two movement phases for every 'payoff' phase. Players have to decide how to distribute AgP over multiple seasons and multiple units to achieve some strategic goal. Pitt Crandlemire brought up the question of how to distribute financing in his article <A HREF="http://www.diplom.org/Zine/S1996M/Pitt/Dipper.html">http://www.diplom.org/Zine/S1996M/Pitt/Dipper.html</A>. Pitt suggested that players divide Spring and Fall spending about evenly. Manus Hand, inventor and 'owner' of Payola, examined player behaviour in one game in <A HREF="http://devel.diplom.org/DipPouch/Zine/W1995A/Payola/strategy.html">http://devel.diplom.org/DipPouch/Zine/W1995A/Payola/strategy.html</A>. Manus concluded that players tended split spending between Fall and Spring about 2:1. Neither article looked at the distribution question systematically. </P>
+
+<P>In this article I will be introducing a method to help with AgP distribution decisions. The method presupposes a player has set a value on a strategic value of the goal to be achieved and a time span in which to achieve it. Although the method is conceived to apply to <I>theatre engagements</I> - isolated battles between two players where all involved units give highest priority to the strategic goal for the duration of the engagement - the method might also be generalisable to more complicated situations. It will turn out that a split of at least 2-1 between Fall and Spring spending is indeed quite good rule of thumb for many positions, with higher factors being more appropriate for closed positions. </P>
+
+<P>To illustrate the method I will be using a toy domain. A toy domain is simplification of the space in which an algorithm is applied. Toy domains are often used for concept generation and sanity checking. I've chosen my toy domain to elucidate the concepts behind the method. Later I will have to generalise to the payola, else I will have failed to show that the method is validity for payola. </P>
+
+<P>The toy domain I chose (from an idea in <A HREF="http://www.diplom.org/Zine/W1995A/Payola/notes.html">http://www.diplom.org/Zine/W1995A/Payola/notes.html</A>) is payola tic-tac-toe [PT3]. PT3 is like the familiar game with Xs and Os are alternately placed on a 3x3 matrix. However, instead of the players each being in control of the placement of respectively the Xs and Os, placement is decided, like in payola, by the highest bid. Some rules for PT3 are: </P>
+
+<OL>
+
+<LI>There is always a winner. The X player wins by getting 3 in a row. If the X player fails to win, then victory goes to the O player. </LI>
+<LI>Players are given a sum of 'money' in continuous units  - think silver dust instead of payola's silver coins - at the start of the game. The motivation for using continuous units is to simplify handling of tie bids. In case of a tie bid the O-player's choice is given precedent. </LI>
+<LI>Players have to make their money last 'til the end. There are no income phases.</LI>
+<LI>As in payola, accounts are debited by the amount of successful bids.</LI>
+<LI>Successful bids are published each 'season'. In effect each player knows the other's account balance.</LI>
+
+<P>Before demonstrating the optimal strategy for PT3, I'd like to note some of the essential differences between PT3 and payola:</P>
+<LI VALUE=1>PT3 is a zero sum game. There are no opportunities for cooperation.</LI>
+<LI>PT3 is guaranteed to end after a finite number of seasons.</LI>
+<LI>There is only one unit to be bid on each season.</LI>
+<LI>There are differences about how money is handled (no income seasons, continuous currency, and especially open account books..).</LI></OL>
+
+
+<B><P>The Method Applied to Payola Tic-Tac-Toe</P>
+</B>
+<P>The first step in illustrating the method will be to show how PT3 can be played on a tree instead of on a matrix.</P>
+<P> </P>
+<P>The 'root' of the tree corresponds to the null state (empty 3x3 matrix). The 'daughters' of each node are then all the possible positions that can arise in the next move. Thus the root has nine daughters, 9x8=72 grand-daughters and so on. The sequence of moves in a game can be described by a path through the tree. </P>
+
+<P>Each branch of the tree must ultimately end in a victory for either the X-player or the O-player. Thus all lowest level nodes (leaves) can be marked with a X or an O to show the victor. We also mark each node corresponding to a position from which a player can force a victory (regardless of the account values) with the victorious player's designation as well. Examples of O-nodes are shown in figure 1:</P>
+<P ALIGN="CENTER"><IMG SRC="Image3.gif" WIDTH=286 HEIGHT=248></P>
+<B><U><P ALIGN="CENTER">Figure 1</U>: Examples of O-leaves</P>
+</B>
+<P>All nodes above the leaf level correspond to situations in which either player could conceivably win. In this case the outcome will depend on the bids of the two players as well as on their account balances. These mixed nodes are marked <FONT FACE="Symbol">&Auml;.</P>
+</FONT><P> </P>
+<P>Figure 2 shows what a typical pruned lower section of the PT3 tree might look like: </P>
+<P ALIGN="CENTER">  <IMG SRC="Image4.gif" WIDTH=286 HEIGHT=248></P>
+<B><U><P ALIGN="CENTER">Figure 2</B></U>: <B>Typical Pruned Section of the Payola Tic-Tac-Toe Tree </P>
+</B>
+<P>Remembering that the lowest level nodes (leaves) consist exclusively of Xs and Os, it follows that the leaves' immediate antecedent's (their 'mother' nodes) must be mixed. (If all sibling leaves were of one gender - all Xs or all Os - then the outcome would determined. Hence the mother would be a leaf - a contradiction.)</P>
+
+<P>We see that the player that reaches one of the lowest level mixed nodes with the most money can win by outbidding her opponent to reach one of 'her' leaves. The victory condition for the X-player at the lowest level mixed nodes is thus A<FONT SIZE=1>X</FONT> &gt; A<FONT SIZE=1>O</FONT>, where A<FONT SIZE=1>X</FONT> and A<FONT SIZE=1>O</FONT> are the account balances of the two players. </P>
+<P> </P>
+<P>We want to show how to determine the victory condition at any node in terms of the victory conditions for its children nodes. Since we know the victory condition at the lowest level mixed nodes, we can repeat the procedure, propagating the victory condition all the way to the root, thereby solving PT3.  </P>
+
+<P>Suppose the (already determined) victory conditions for the X-player at each of the N mixed children are given by:</P>
+
+<P>A<FONT SIZE=1>X</FONT> &gt; b<FONT SIZE=1>1</FONT> * A<FONT SIZE=1>O</FONT>,   </P>
+<P>A<FONT SIZE=1>X</FONT> &gt; b<FONT SIZE=1>2</FONT> * A<FONT SIZE=1>O</FONT>,  ...  </P>
+<P>A<FONT SIZE=1>X</FONT> &gt; b<FONT SIZE=1>N</FONT> * A<FONT SIZE=1>O</P>
+</FONT><P>Where </P>
+<P>b<FONT SIZE=1>N</FONT> <FONT FACE="Symbol">³</FONT> b<FONT SIZE=1>N-1</FONT> <FONT FACE="Symbol">³ </FONT>... <FONT FACE="Symbol">³</FONT> b<FONT SIZE=1>1</P>
+</FONT><P>We assume b<FONT SIZE=1>N</FONT> <FONT FACE="Symbol">&gt;</FONT> b<FONT SIZE=1>1</FONT>. If not, then the victory condition at the mother node is the same as the victory condition at the children nodes. Two special cases are b<FONT SIZE=1>k</FONT>= 0, corresponding to an X-node, and  b<FONT SIZE=1>k</FONT> = <FONT FACE="Symbol">¥</FONT>, corresponding to an O-node.</P>
+
+<P>First let's look at the case where there are only two b values, b<FONT SIZE=1>N</FONT> and b<FONT SIZE=1>1</FONT>, so that the X-player will bid some amount D<FONT SIZE=1>X</FONT> on node 1 and bid zero on node N. We have to look at two outcomes. Either the O-player outbids the X-player (by a minuscule amount) to get to node N or else the X-player's bid is successful. For the X-player to be sure of a win, she has to be able to succeed in both cases:</P>
+
+<P>In the first case, we take A<FONT SIZE=1>NX</FONT> = A<FONT SIZE=1>X</FONT>   and A<FONT SIZE=1>NO</FONT> = A<FONT SIZE=1>O</FONT> - D<FONT SIZE=1>X</FONT>  where 'N' refers to account balances at the node N. Then for the X-player to win we have to have</P>
+
+<P>A<FONT SIZE=1>NX</FONT> &gt; b<FONT SIZE=1>N</FONT> * A<FONT SIZE=1>NO</FONT>   that is    A<FONT SIZE=1>X</FONT> &gt; b<FONT SIZE=1>N</FONT> * (A<FONT SIZE=1>O</FONT> - D<FONT SIZE=1>X</FONT>)     so that     D<FONT SIZE=1>X</FONT> &gt; A<FONT SIZE=1>O</FONT> - A<FONT SIZE=1>X</FONT> / b<FONT SIZE=1>N</P>
+</FONT><P>In the second case we have to have </P>
+<P>A<FONT SIZE=1>1X</FONT> &gt; b<FONT SIZE=1>1</FONT> * A<FONT SIZE=1>1O</FONT>    that is    A<FONT SIZE=1>X</FONT> - D<FONT SIZE=1>X</FONT>  &gt; b<FONT SIZE=1>1</FONT> * A<FONT SIZE=1>O</FONT>      so that      D<FONT SIZE=1>X</FONT> &lt; A<FONT SIZE=1>X</FONT> - b<FONT SIZE=1>1</FONT> * A<FONT SIZE=1>O</FONT> </P>
+<P>The two inequalities on D<FONT SIZE=1>X</FONT> will be fulfilled if and only if </P>
+<P><IMG SRC="Image5.gif" WIDTH=156 HEIGHT=58></P>
+<P>This is the mother node victory condition for the X-player in case there are only two children nodes. </P>
+
+<P>What about cases where there are more than 2 children nodes? Wouldn't it be possible to end up at some sister scenario K, with K between 2 and N-1? Yes, perhaps. But if both players act rationally this will not affect the victory condition. Here's why: the X-player will only bid an amount on scenario K that promises </P>
+<P>b<FONT SIZE=1>K</FONT> <FONT FACE="Symbol">£</FONT> <IMG SRC="Image6.gif" WIDTH=85 HEIGHT=58></P>
+<P>where A<FONT SIZE=1>KX</FONT> &gt; b<FONT SIZE=1>K</FONT> * A<FONT SIZE=1>KO</FONT> is the victory condition at node K</P>
+<P>Similarly, the O-player will only bid an amount on a scenario K that guarantees that </P>
+<P>b<FONT SIZE=1>K</FONT> <FONT FACE="Symbol">³</FONT><IMG SRC="Image6.gif" WIDTH=85 HEIGHT=58></P>
+<P>Since neither the X- nor the O-player alone can force selection of a K scenario with b<FONT SIZE=1>K</FONT> different from victory condition for X (nodes 1 and N), it follows that the presence of the nodes 2, .., N-1 do not affect the victory condition. The optimal play for each player is to bid an amount between A<FONT SIZE=1>O</FONT> - A<FONT SIZE=1>X</FONT> / b<FONT SIZE=1>N</FONT> and A<FONT SIZE=1>X</FONT> - b<FONT SIZE=1>1</FONT> * A<FONT SIZE=1>O</FONT>. </P>
+
+<P>Figure 3 shows the typical pruned section of the PT3 tree from figure 2 with the victory conditions written in:</P>
+<P ALIGN="CENTER"><IMG SRC="Image7.gif" WIDTH=286 HEIGHT=248></P>
+<B><U><P ALIGN="CENTER">Figure 3</B></U>: <B>Solved Section of the PT3 Tree </P>
+</B>
+<P>&nbsp;</P></BODY>
+</HTML>
