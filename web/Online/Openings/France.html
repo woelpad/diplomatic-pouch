@@ -1,0 +1,664 @@
+<title>DP Online: The Diplomacy Openings Library</title>
+
+<BODY BGCOLOR="#ffffff">
+<script language=javascript>
+<!--
+	power = 'France'
+	var varName = new Array()
+	var varDesc = new Array()
+	var u0 = new Array()
+	var u1 = new Array()
+	var u2 = new Array()
+	if (power == 'Russia') var u3 = new Array()
+	
+varName[0] = "fra-picardy"
+u0[0] = 0
+u1[0] = 4
+u2[0] = 2
+varName[1] = "fra-maginot"
+u0[1] = 0
+u1[1] = 0
+u2[1] = 0
+varName[2] = "fra-belgian"
+u0[2] = 0
+u1[2] = 1
+u2[2] = 2
+varName[3] = "fra-entente"
+u0[3] = 0
+u1[3] = 1
+u2[3] = 2
+varName[4] = "fra-norman"
+u0[4] = 2
+u1[4] = 4
+u2[4] = 0
+varName[5] = "fra-engdef"
+u0[5] = 1
+u1[5] = 4
+u2[5] = 1
+varName[6] = "fra-wmandmary"
+u0[6] = 1
+u1[6] = 4
+u2[6] = 1
+varName[7] = "fra-gaspic"
+u0[7] = 0
+u1[7] = 2
+u2[7] = 2
+varName[8] = "fra-piedmont"
+u0[8] = 0
+u1[8] = 3
+u2[8] = 1
+varName[9] = "fra-lisbon"
+u0[9] = 0
+u1[9] = 3
+u2[9] = 1
+varName[10] = "fra-english"
+u0[10] = 1
+u1[10] = 4
+u2[10] = 0
+varName[11] = "fra-sealion"
+u0[11] = 1
+u1[11] = 4
+u2[11] = 0
+varName[12] = "fra-northlimp"
+u0[12] = 1
+u1[12] = 5
+u2[12] = 2
+varName[13] = "fra-atlantic"
+u0[13] = 0
+u1[13] = 1
+u2[13] = 0
+varName[14] = "fra-engmag"
+u0[14] = 1
+u1[14] = 0
+u2[14] = 0
+varName[15] = "fra-lisbon"
+u0[15] = 0
+u1[15] = 2
+u2[15] = 3
+varName[16] = "fra-piedmont"
+u0[16] = 0
+u1[16] = 3
+u2[16] = 0
+varName[17] = "fra-english"
+u0[17] = 1
+u1[17] = 4
+u2[17] = 2
+varName[18] = "fra-sealion"
+u0[18] = 1
+u1[18] = 4
+u2[18] = 2
+varName[19] = "fra-vinmaginot"
+u0[19] = 0
+u1[19] = 2
+u2[19] = 0
+varName[20] = "fra-burgundy"
+u0[20] = 0
+u1[20] = 4
+u2[20] = 0
+varName[21] = "fra-vineyard"
+u0[21] = 0
+u1[21] = 1
+u2[21] = 1
+varName[22] = "fra-lisbon"
+u0[22] = 0
+u1[22] = 1
+u2[22] = 1
+varName[23] = "fra-biscay"
+u0[23] = 3
+u1[23] = 4
+u2[23] = 0
+varName[24] = "fra-english"
+u0[24] = 1
+u1[24] = 1
+u2[24] = 2
+varName[25] = "fra-northdash"
+u0[25] = 1
+u1[25] = 1
+u2[25] = 2
+varName[26] = "fra-gascony"
+u0[26] = 0
+u1[26] = 4
+u2[26] = 1
+varName[27] = "fra-lisbon"
+u0[27] = 0
+u1[27] = 4
+u2[27] = 1
+varName[28] = "fra-gaspic"
+u0[28] = 2
+u1[28] = 4
+u2[28] = 1
+varName[29] = "fra-beau"
+u0[29] = 3
+u1[29] = 2
+u2[29] = 1
+varDesc['comment'] = "--ABOUT THE FRENCH OPENINGS--</b><dd>"
+varDesc['comment'] += 'The French openings are categorized by the order given to the Brest fleet, '
+varDesc['comment'] += 'as follows: '
+varDesc['comment'] += '<ul> '
+varDesc['comment'] += '<li>Manche (or English Attack) Openings (F Bre-ENG) '
+varDesc['comment'] += '<li>Atlantic Openings (F Bre-MAO) '
+varDesc['comment'] += '<li>Biscay Openings (F Bre-Gas) '
+varDesc['comment'] += '<li>Norman Openings (F Bre-Pic) '
+varDesc['comment'] += '</ul> '
+varDesc['comment'] += 'Many of the variants of each of these openings are recognized by unique names. '
+varDesc['comment'] += '<P> '
+varDesc['comment'] += 'A big French problem is that she has almost too many possible openings. The '
+varDesc['comment'] += 'price of guessing wrong is often grim. In general, a valid French strategy is '
+varDesc['comment'] += 'to get Spain and Portugal in the opening, even at the price of losing a home '
+varDesc['comment'] += 'center.  For France, such a loss is frequently only temporary if her diplomacy '
+varDesc['comment'] += 'is sharp. '
+varDesc['comment'] += ' '
+varDesc['fra-biscay'] = "BISCAY OPENING</b><dd>"
+varDesc['fra-biscay'] += 'This opening is viewed as pro-English and pro-Italian in that France moves '
+varDesc['fra-biscay'] += 'to take Iberia without worrying either of those powers with the possibility, '
+varDesc['fra-biscay'] += 'however slight, that he might forego one of the centers there to apply naval '
+varDesc['fra-biscay'] += 'pressure in the Fall. '
+varDesc['fra-biscay'] += ' '
+varDesc['fra-engmag'] = "MANCHE OPENING, ENGLISH MAGINOT</b><dd>"
+varDesc['fra-engmag'] += 'This is a legitimate alternative approach for taking Belgium, or the '
+varDesc['fra-engmag'] += 'opening can be used when an Anglo-German attack is believed to be imminent.  '
+varDesc['fra-engmag'] += ' '
+varDesc['fra-burgundy'] = "ATLANTIC OPENING, BURGUNDY VARIANT</b><dd>"
+varDesc['fra-burgundy'] += 'In this very common Atlantic opening (better known as the Burgundy Opening), '
+varDesc['fra-burgundy'] += 'there may be an arranged standoff in Burgundy, which guards Burgundy, permits '
+varDesc['fra-burgundy'] += 'both Iberian centres to be taken, and still gives France some say in Belgium. '
+varDesc['fra-burgundy'] += 'However, if A Par-Bur succeeds, Brest is less protected.  If Par-Bur fails and '
+varDesc['fra-burgundy'] += 'Italy enters Piedmont, France has a guessing game to play in deciding whether '
+varDesc['fra-burgundy'] += 'to protect Marseilles or guarantee himself Spain. '
+varDesc['fra-burgundy'] += '<P> '
+varDesc['fra-burgundy'] += 'The <i>Gamer\'s Guide to Diplomacy</i> calls this opening "essentially '
+varDesc['fra-burgundy'] += 'defensive. If A Par-Bur succeeds, France can try for Belgium, threaten Munich, '
+varDesc['fra-burgundy'] += 'or protect Marseilles." '
+varDesc['fra-burgundy'] += ' '
+varDesc['fra-gaspic'] = "ATLANTIC OPENING, GASPIC VARIANT</b><dd>"
+varDesc['fra-gaspic'] += "The Gaspic Opening is Richard Sharp's name for the Norman opening that "
+varDesc['fra-gaspic'] += 'sends the Paris army to Gascony in an attempt to take both Iberian '
+varDesc['fra-gaspic'] += 'centers. '
+varDesc['fra-gaspic'] += ' '
+varDesc['fra-atlantic'] = "ATLANTIC OPENING</b><dd>"
+varDesc['fra-atlantic'] += 'Any opening sending the Brest fleet to the Mid-Atlantic Ocean.  There are '
+varDesc['fra-atlantic'] += 'a many named variants: '
+varDesc['fra-atlantic'] += '<ul> '
+varDesc['fra-atlantic'] += '<li>Maginot Opening '
+varDesc['fra-atlantic'] += '<li>Gascony Opening '
+varDesc['fra-atlantic'] += '<li>Gaspic Opening '
+varDesc['fra-atlantic'] += '<li>Picardy Opening '
+varDesc['fra-atlantic'] += '<li>Vineyard Opening '
+varDesc['fra-atlantic'] += '<li>Italian Attack '
+varDesc['fra-atlantic'] += '<li>Piedmont System '
+varDesc['fra-atlantic'] += '</ul> '
+varDesc['fra-atlantic'] += ' '
+varDesc['fra-norman'] = "NORMAN OPENING</b><dd>"
+varDesc['fra-norman'] += 'Any French Opening sending the fleet to Picardy.  The typical intent is '
+varDesc['fra-norman'] += 'a pro-English occupation of Belgium, with pressure applied on Munich from '
+varDesc['fra-norman'] += 'Burgundy.  If Belgium does not go to France, he is saddled with only one '
+varDesc['fra-norman'] += 'build from Iberia. '
+varDesc['fra-norman'] += ' '
+varDesc['fra-vineyard'] = "ATLANTIC OPENING, THE VINEYARD</b><dd>"
+varDesc['fra-vineyard'] += 'In the Vineyard Opening, France conducts himself with pro-English intentions, '
+varDesc['fra-vineyard'] += 'but moves to enable an army to protect Brest against a Channel invasion.  If '
+varDesc['fra-vineyard'] += 'England proves trustworthy, the Iberian centers can both be taken by armies '
+varDesc['fra-vineyard'] += 'in Fall. '
+varDesc['fra-vineyard'] += '<P> '
+varDesc['fra-vineyard'] += 'The idea is to arrange a stand-off with Germany in '
+varDesc['fra-vineyard'] += 'Bur and then capture Spain from Marseilles and Portugal via convoy, leaving '
+varDesc['fra-vineyard'] += 'France with F MAO and more options for 1902. This opening gained popularity '
+varDesc['fra-vineyard'] += "in the 1980's in British postal circles. "
+varDesc['fra-vineyard'] += '<P> '
+varDesc['fra-vineyard'] += 'This opening is used in case the Germans try a stab. Perhaps Belgium can be '
+varDesc['fra-vineyard'] += 'picked up, too. In either case, Marseilles is covered. This opening '
+varDesc['fra-vineyard'] += 'can be used in alliance with England, where a strong push into '
+varDesc['fra-vineyard'] += 'the Mediterranean is desired, and Germany is neutral. '
+varDesc['fra-vineyard'] += ' '
+varDesc['fra-picardy'] = "ATLANTIC OPENING, PICARDY VARIANT</b><dd>"
+varDesc['fra-picardy'] += 'This variant of the Atlantic Opening, known simply as the Picardy Opening, '
+varDesc['fra-picardy'] += "preserves France's options in "
+varDesc['fra-picardy'] += 'Belgium without antagonizing any of his neighbours by entering the Channel '
+varDesc['fra-picardy'] += 'or Burgundy, and provides some flexibility in defending Brest, either '
+varDesc['fra-picardy'] += 'by tempting the English fleet with support into Belgium, defending '
+varDesc['fra-picardy'] += 'Brest with the Picardy army, or doing a self-standoff in Brest. '
+varDesc['fra-picardy'] += '<P> '
+varDesc['fra-picardy'] += 'This is more offensive than the Burgundy Opening but more limited. '
+varDesc['fra-picardy'] += 'The order always succeeds. From Picardy, France can try for Belgium, '
+varDesc['fra-picardy'] += 'defend Paris if Germany gets into Burgundy, or defend Brest if '
+varDesc['fra-picardy'] += 'England slips into the Channel. This should only be tried when '
+varDesc['fra-picardy'] += 'France is certain of German friendship. '
+varDesc['fra-picardy'] += ' '
+varDesc['fra-wmandmary'] = "[WILLIAM AND MARY OPENING]</b><dd>"
+varDesc['fra-wmandmary'] += "Maarten Oosten's alternative to the Sealion is detailed "
+varDesc['fra-wmandmary'] += 'in his Diplomatic Pouch article, "<A '
+varDesc['fra-wmandmary'] += 'HREF=http://devel.diplom.org/DipPouch/Zine/F1997M/Oosten/WmandMary.html '
+varDesc['fra-wmandmary'] += 'TARGET=_top>The William and Mary Opening</A>:" '
+varDesc['fra-wmandmary'] += '<P> '
+varDesc['fra-wmandmary'] += '"Given a friendly Russia and a hostile Italy, Germany opens seemingly '
+varDesc['fra-wmandmary'] += 'anti-French, while France rushes south. By 1902, France and Germany '
+varDesc['fra-wmandmary'] += 'join their navies to acquire the English Channel and the North '
+varDesc['fra-wmandmary'] += 'Sea. Once F/G rule the waves, they have their way with England." '
+varDesc['fra-wmandmary'] += '<P> '
+varDesc['fra-wmandmary'] += 'Germany moves his fleet into Belgium, while the French fleet '
+varDesc['fra-wmandmary'] += 'presumably bounces in the English Channel in the Spring and  '
+varDesc['fra-wmandmary'] += 'goes to the Mid-Atlantic in the Fall. All this is maintains a peaceful '
+varDesc['fra-wmandmary'] += 'attitude towards England until the Winter builds - 2 fleets. '
+varDesc['fra-wmandmary'] += 'Criticism of this opening is that Germany, with 3 builds, might be too '
+varDesc['fra-wmandmary'] += 'strong, since France might have to defend Marseilles and only get 1. '
+varDesc['fra-wmandmary'] += ' '
+varDesc['fra-northlimp'] = "MANCHE OPENING, NORTHERN LIMP</b><dd>"
+varDesc['fra-northlimp'] += "Richard Sharp's name for the Manche opening that uses A Par-Pic and "
+varDesc['fra-northlimp'] += 'A Mar H. While the Northern Dash with an arranged standoff in Burgundy is '
+varDesc['fra-northlimp'] += 'the more common move, the limp is useful if Germany does not agree to the '
+varDesc['fra-northlimp'] += 'standoff, but cannot be completely trusted not to enter Burgundy.  If he '
+varDesc['fra-northlimp'] += 'refrains, Marseilles is in position to take Spain in Fall; if he <i>does</i> '
+varDesc['fra-northlimp'] += 'enter Burgundy, the French home centers can be safeguarded while France '
+varDesc['fra-northlimp'] += 'tries to engineer a build elsewhere. '
+varDesc['fra-northlimp'] += ' '
+varDesc['fra-sealion'] = "[SEALION]</b><dd>"
+varDesc['fra-sealion'] += "Edi Birsan's strong continuation of the English Attack opening, "
+varDesc['fra-sealion'] += 'as detailed in his <A '
+varDesc['fra-sealion'] += 'HREF=http://devel.diplom.org/DipPouch/Zine/S1997M/Birsan/Sealion.html '
+varDesc['fra-sealion'] += 'TARGET=_top>Diplomatic Pouch Article</A>. '
+varDesc['fra-sealion'] += '<P> '
+varDesc['fra-sealion'] += 'Supported by the French fleet in the English Channel, Germany forces his way '
+varDesc['fra-sealion'] += 'into the North Sea in Fall of 1901, while France takes Belgium and Portugal '
+varDesc['fra-sealion'] += 'with his armies.  In Spring of 1902, Germany and France both attempt convoys '
+varDesc['fra-sealion'] += "onto England, and at least one is guaranteed to succeed.  Named after Hitler's "
+varDesc['fra-sealion'] += 'plan to attack England from out of the Low Countries, this opening gained '
+varDesc['fra-sealion'] += "rapid popularity in the late 1990's in e-mail play. "
+varDesc['fra-sealion'] += "One example is Bif Smithson's Diplomatic Pouch article <A "
+varDesc['fra-sealion'] += 'HREF=http://devel.diplom.org/DipPouch/Zine/F1997R/Smithson/seaart.html '
+varDesc['fra-sealion'] += 'TARGET=_top>The Sealion Opening in Action</A>. '
+varDesc['fra-sealion'] += ' '
+varDesc['fra-beau'] = "BISCAY OPENING, BEAUJOLAIS NOUVEAU</b><dd>"
+varDesc['fra-beau'] += "The French equivalent of England's Yorkshire Pudding opening, the <i>Beaujolais "
+varDesc['fra-beau'] += 'Nouveau</i> is actually much more useful.  It was mentioned in a very early '
+varDesc['fra-beau'] += "issue of the 'zine <i>Vienna</i>.  According to Aron Ambrosiani, the Swedish "
+varDesc['fra-beau'] += 'player Per Larsson has been known to use this opening, taking a solo victory '
+varDesc['fra-beau'] += 'with it at the 1998 LinCon convention. '
+varDesc['fra-beau'] += ' '
+varDesc['fra-english'] = "MANCHE OPENING (a.k.a. ENGLISH ATTACK)</b><dd>"
+varDesc['fra-english'] += 'Any French opening that sends the fleet into the English Channel. English '
+varDesc['fra-english'] += 'Attack (or Manche) Openings account in popularity for one-quarter of all '
+varDesc['fra-english'] += 'French openings. '
+varDesc['fra-english'] += 'There are a number of named variants: '
+varDesc['fra-english'] += '<ul> '
+varDesc['fra-english'] += '<li>English Defense '
+varDesc['fra-english'] += '<li>English Maginot '
+varDesc['fra-english'] += '<li>Northern Dash '
+varDesc['fra-english'] += '<li>Northern Limp '
+varDesc['fra-english'] += '</ul> '
+varDesc['fra-english'] += 'It is commonly acknowledged that England is the trickiest power '
+varDesc['fra-english'] += 'to eliminate, courtesy of its island position and inevitable '
+varDesc['fra-english'] += 'emphasis on building fleets. Consequently, some players believe '
+varDesc['fra-english'] += 'that France must contain its northern neighbour early in the '
+varDesc['fra-english'] += 'game, and at all costs prevent England putting a fleet into the '
+varDesc['fra-english'] += 'Channel. F Bre-ENG may therefore be intended to stand off F Lon-ENG '
+varDesc['fra-english'] += 'rather than to actually threaten the English home centres. Alternatively, '
+varDesc['fra-english'] += 'this can be a bid by France to take Belgium, perhaps coupled '
+varDesc['fra-english'] += 'with the move A Par-Bur or A Par-Pic, in which case the name '
+varDesc['fra-english'] += 'may be a misnomer. This is not the most popular opening for the French '
+varDesc['fra-english'] += 'fleet: it is unlikely to result in a centre gain for France (unlike the '
+varDesc['fra-english'] += "Atlantic Opening's F Bre-MAO), and compromises an assault on England by "
+varDesc['fra-english'] += 'most likely pinning down the Fleet in Brest, where the French player would '
+varDesc['fra-english'] += 'rather be building a second fleet. '
+varDesc['fra-english'] += ' '
+varDesc['fra-northdash'] = "MANCHE OPENING, NORTHERN DASH</b><dd>"
+varDesc['fra-northdash'] += 'This extremely pro-Italy opening is the ultimate in ignoring '
+varDesc['fra-northdash'] += 'Iberia. It discourages other powers from going for Belgium, while '
+varDesc['fra-northdash'] += 'preserving anti-German (if A Mar-Bur succeeds) or anti-English '
+varDesc['fra-northdash'] += '(if F Bre-ENG succeeds) options for Fall 1901 and beyond. '
+varDesc['fra-northdash'] += '<p> '
+varDesc['fra-northdash'] += 'The Northern Dash contrasts markedly with the Maginot Opening. '
+varDesc['fra-northdash'] += 'It is believed that the name was originally coined by Nicky '
+varDesc['fra-northdash'] += 'Palmer. '
+varDesc['fra-northdash'] += 'It is debatable whether the opening is aggressively defensive or '
+varDesc['fra-northdash'] += 'defensively aggressive: it could be seen as a French version of the Austrian '
+varDesc['fra-northdash'] += 'Hedgehog openings, standing off attacks from England (F Lon-ENG) '
+varDesc['fra-northdash'] += 'and Germany (A Mun-Bur); alternatively, it could be regarded '
+varDesc['fra-northdash'] += 'as an all-out bid for Belgium or attack on England. As a defensive '
+varDesc['fra-northdash'] += 'posture, it can only be regarded as a sign of failed diplomacy, '
+varDesc['fra-northdash'] += 'since if France can trust neither of his neighbours in 1901, '
+varDesc['fra-northdash'] += "he is surely doomed. Moreover, it doesn't even offer complete "
+varDesc['fra-northdash'] += 'protection, as an Italian opening to Piedmont would expose Marseilles; '
+varDesc['fra-northdash'] += 'as an offensive, it may be applauded for making such a distinct '
+varDesc['fra-northdash'] += 'commitment against England (a power that many Diplomacy players '
+varDesc['fra-northdash'] += "regard as France's greatest threat in the early years, and which "
+varDesc['fra-northdash'] += 'needs to be eliminated early if it is to be eliminated at all). '
+varDesc['fra-northdash'] += 'However, the opening will deprive France of two certain builds '
+varDesc['fra-northdash'] += 'in 1901 (Spain and Portugal) unless Marseilles is stood off by Germany, '
+varDesc['fra-northdash'] += 'and this will weaken France in 1902. Less severe is the Atlantic '
+varDesc['fra-northdash'] += 'Opening equivalent, the Belgian Gambit. '
+varDesc['fra-northdash'] += ' '
+varDesc['fra-piedmont'] = "ATLANTIC OPENING, PIEDMONT SYSTEM</b><dd>"
+varDesc['fra-piedmont'] += 'Any Atlantic Opening sending Marseilles to Piedmont.  A standoff in Piedmont '
+varDesc['fra-piedmont'] += 'may be arranged, which can be of great value to France, as it permits him to '
+varDesc['fra-piedmont'] += 'take Spain without having to guess the intentions of any Italian army. '
+varDesc['fra-piedmont'] += 'The standoff also provides Italy with good camouflage if he intends '
+varDesc['fra-piedmont'] += 'to make a grab for Trieste in Fall of 1901. Otherwise, entry into Piedmont '
+varDesc['fra-piedmont'] += 'by France is more likely to be a back door attack on Germany than an '
+varDesc['fra-piedmont'] += 'attack on Italy. (See the German Northern Tier Alliance Opening.)  '
+varDesc['fra-piedmont'] += '<P> '
+varDesc['fra-piedmont'] += 'About the standard Piedmont System opening (A Par-Gas), the '
+varDesc['fra-piedmont'] += "<i>Gamer's Guide to Diplomacy</a> says, "
+varDesc['fra-piedmont'] += '"this attack on Italy can sometimes yield stunning results. The '
+varDesc['fra-piedmont'] += 'fall orders can include A Pie-Ven or Tus. The latter is actually '
+varDesc['fra-piedmont'] += 'a little better because in 1902 the army threatens two Italian '
+varDesc['fra-piedmont'] += 'centers. This sequence presumes a three-way Western alliance and '
+varDesc['fra-piedmont'] += 'England/Germany are attacking Russia." '
+varDesc['fra-piedmont'] += ' '
+varDesc['fra-entente'] = "[ENTENTE CORDIAL]</b><dd>"
+varDesc['fra-entente'] += "Stephen Agar's Anglo-French follow up to the Belgian opening.  He describes "
+varDesc['fra-entente'] += 'the opening in <a target=_parent href=http://www.spoff.demon.co.uk/articles/entente.htm>an '
+varDesc['fra-entente'] += 'complete article</a>. '
+varDesc['fra-entente'] += ' '
+varDesc['fra-gascony'] = "ATLANTIC OPENING, GASCONY VARIANT</b><dd>"
+varDesc['fra-gascony'] += 'The pro-German Atlantic Opening (better known as the Gascony Opening) '
+varDesc['fra-gascony'] += 'that sends the armies into Spain and Gascony. '
+varDesc['fra-gascony'] += 'This denies France any say in Belgium, but provides him with a self-standoff in '
+varDesc['fra-gascony'] += 'either Marseilles or in Brest if there are units in Piedmont or the Channel. It '
+varDesc['fra-gascony'] += 'also gives France the ability to take both Iberian builds and still have the '
+varDesc['fra-gascony'] += 'fleet free to enter English or Italian waters in Fall 1901 or Spring 1902. '
+varDesc['fra-gascony'] += "The drawback is that the armies will be holed up in Iberia by year's end, "
+varDesc['fra-gascony'] += 'and will take a while to return to action. '
+varDesc['fra-gascony'] += '<P> '
+varDesc['fra-gascony'] += 'This can be tried when there is a strong chance of an Italian '
+varDesc['fra-gascony'] += 'attack. If Italy orders A Ven-Pie, France can order (in Fall '
+varDesc['fra-gascony'] += '1901) A Gas-Mar, A Spa-Mar, F MAO-Por. Hopefully (barring an unwanted '
+varDesc['fra-gascony'] += 'support from Italy), Marseilles will be vacant for the build of a fleet, '
+varDesc['fra-gascony'] += 'which can be used to pull armies out of Iberia and into action. '
+varDesc['fra-gascony'] += ' '
+varDesc['fra-engdef'] = "MANCHE OPENING, ENGLISH DEFENCE</b><dd>"
+varDesc['fra-engdef'] += "Richard Sharp's name for the Manche opening F Bre-ENG, A Mar-Spa and "
+varDesc['fra-engdef'] += 'A Par-Gas.  This opening assures two builds, and is considered a '
+varDesc['fra-engdef'] += 'a very pro-German and pro-Italian opening.  Typically, it indicates that France '
+varDesc['fra-engdef'] += 'expects F Lon-ENG. '
+varDesc['fra-engdef'] += '<P> '
+varDesc['fra-engdef'] += 'The <i>Gamer\'s Guide to Diplomacy</i> calls this "the best that '
+varDesc['fra-engdef'] += 'can be done in the event of dark suspicions '
+varDesc['fra-engdef'] += 'about England. Hopefully, France has an alliance with Germany. '
+varDesc['fra-engdef'] += 'It is not advisable to attack England this early, but if England '
+varDesc['fra-engdef'] += 'is going to try for the channel, she must be stopped. France '
+varDesc['fra-engdef'] += 'can still get Spain and Portugal this way, and those gains are '
+varDesc['fra-engdef'] += 'almost indispensable to French survival." '
+varDesc['fra-engdef'] += ' '
+varDesc['fra-vinmaginot'] = "THE VINEYARD MAGINOT</b><dd>"
+varDesc['fra-vinmaginot'] += 'This opening results in the same position going into Fall 1901 as '
+varDesc['fra-vinmaginot'] += 'the Vineyard Opening (Mar-Bur, Par-Gas, Bre-MAO), as long as the '
+varDesc['fra-vinmaginot'] += 'move to Burgundy is not bounced by Germany.  If the move is bounced, '
+varDesc['fra-vinmaginot'] += 'however, this opening is considered more pro-Italy and anti-Germany '
+varDesc['fra-vinmaginot'] += 'in that Marseilles, rather than Paris, is vacated. '
+varDesc['fra-vinmaginot'] += ' '
+varDesc['fra-belgian'] = "ATLANTIC OPENING, BELGIAN GAMBIT</b><dd>"
+varDesc['fra-belgian'] += 'The Atlantic Opening variant that brings two units to bear on Belgium. '
+varDesc['fra-belgian'] += 'Unless there is a standoff in Burgundy, France is able to mount a supported '
+varDesc['fra-belgian'] += 'attack on Belgium without worrying England with a fleet move in or near '
+varDesc['fra-belgian'] += 'northern waters.  For the better chance on Belgium (and pressure on '
+varDesc['fra-belgian'] += 'Munich), France passes up one of the two Iberia centers. '
+varDesc['fra-belgian'] += ' '
+varDesc['fra-maginot'] = "ATLANTIC OPENING, MAGINOT VARIANT</b><dd>"
+varDesc['fra-maginot'] += 'This opening, known simply as the Maginot Opening, is the most popular '
+varDesc['fra-maginot'] += 'French opening. '
+varDesc['fra-maginot'] += 'It assures that France can have a say in all three of her bordering '
+varDesc['fra-maginot'] += 'neutrals, and, if Italy enters Piedmont, Marseilles can be guarded without '
+varDesc['fra-maginot'] += 'risk to Spain. The mere threat to Munich usually pins down the German '
+varDesc['fra-maginot'] += 'army, making Belgium and Ruhr more accessible in Fall of 1901. '
+varDesc['fra-maginot'] += '<p> '
+varDesc['fra-maginot'] += 'This strong opening assumes an understanding with England over the English '
+varDesc['fra-maginot'] += 'Channel, and though it must be regarded as anti-German, the opening '
+varDesc['fra-maginot'] += 'still allows France the opportunity to take three neutral centres '
+varDesc['fra-maginot'] += 'in Autumn (with A Bur-Bel, A Mar-Spa and F MAO-Por). Naming it '
+varDesc['fra-maginot'] += 'after the Maginot Line has emphasized its defensive qualities, '
+varDesc['fra-maginot'] += 'but there can be no doubt that the opening poses a direct threat '
+varDesc['fra-maginot'] += 'to Munich, and may signal a frontal assault on Germany by an '
+varDesc['fra-maginot'] += 'Anglo-French alliance. This is both a strength and a failing, '
+varDesc['fra-maginot'] += 'as it exposes France to a stab from England and is likely to '
+varDesc['fra-maginot'] += 'cause maximum offense to a neighbour who is not usually an initial '
+varDesc['fra-maginot'] += 'threat to France. However, it does assure the French player of '
+varDesc['fra-maginot'] += "a say in Belgium's future (a useful bargaining chip even if France "
+varDesc['fra-maginot'] += 'cannot take the centre himself) without leaving Burgundy unguarded '
+varDesc['fra-maginot'] += '-- and still allows him to take both the Iberian centres in 1901. '
+varDesc['fra-maginot'] += '<P> '
+varDesc['fra-maginot'] += 'The <i>Gamer\'s Guide to Diplomacy</i> calls this opening "a more powerful '
+varDesc['fra-maginot'] += 'defense against Germany [than The Burgundy Opening] because A Par-Bur '
+varDesc['fra-maginot'] += 'always succeeds.  France can thus be assured of Spain and Portugal no matter '
+varDesc['fra-maginot'] += 'what Italy does. However, her fleet is relegated to a weaker position '
+varDesc['fra-maginot'] += 'in Portugal." '
+varDesc['fra-maginot'] += ' '
+varDesc['fra-lisbon'] = "[LISBON LEAPFROG]</b><dd>"
+varDesc['fra-lisbon'] += "Mark Berch's name for the Falltime continuation which sees the army in "
+varDesc['fra-lisbon'] += 'Gascony convoyed to Portugal.  He provides a complete write-up in '
+varDesc['fra-lisbon'] += '<a target=_parent href=http://www.spoff.demon.co.uk/articles/lisbon.htm>his article '
+varDesc['fra-lisbon'] += 'on the subject</a>. '
+varDesc['fra-lisbon'] += ' '
+
+// -->
+</script>
+	
+
+<BODY BGCOLOR="#ffffff">
+<p align=center>
+<A TARGET=_parent HREF="/DipPouch">
+<IMG SRC="/DipPouch/Common/DPLogo.gif"
+	ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A TARGET=_parent HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="/DipPouch/Common/DPLinks.gif"
+	ALT="Shortcuts" HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
+<BR clear=both>
+<img src="/DipPouch/Common/reddot.gif" height=2 width=100%%>
+<br clear=all>
+<center><H2>The Library of Diplomacy Openings</H2>
+<script language=JavaScript>
+<!--
+function newPower()
+{
+	window.parent.body.document.write('<H3 align=center><font color=red>')
+	window.parent.body.document.write('<blink>...Loading Data For ')
+	window.parent.body.document.write(document.forms[0].power.options[document.forms[0].power.selectedIndex].value)
+	window.parent.body.document.write('...Please Wait...</blink></font>')
+	window.parent.body.document.close()
+	window.location.replace(document.forms[0].power.options[document.forms[0].power.selectedIndex].value + '.html')
+	// document.forms[0].submit()
+}
+// -->
+</script>
+<table>
+<tr><th valign=right>
+	<form name=powerForm method=post action=openings>
+	Openings for&nbsp;<select name=power onChange=newPower()>
+
+<option value=Austria
+>Austria
+<option value=England
+>England
+<option value=France
+ selected
+>France
+<option value=Germany
+>Germany
+<option value=Italy
+>Italy
+<option value=Russia
+>Russia
+<option value=Turkey
+>Turkey
+
+	</select></form>
+	<script language=javascript>
+	<!--
+	function showDesc(key)
+	{
+		window.parent.body.document.write('<dl><dt><b>')
+		window.parent.body.document.write(varDesc[key] + '<p></dl>')
+	}
+	function updateOrder()
+	{
+		openg = document.forms[1].opening
+		key = openg.options[openg.selectedIndex].value
+		if (key == '') return
+		if (key != 'comment')
+		{
+			for (i in varName)
+			{
+				if (varName[i] == key)
+				{
+					document.forms[2].unit0.selectedIndex = u0[i] + 1
+					document.forms[2].unit1.selectedIndex = u1[i] + 1
+					document.forms[2].unit2.selectedIndex = u2[i] + 1
+					if (power == 'Russia')
+						document.forms[2].unit3.selectedIndex = u3[i] + 1
+					break
+				}
+			}
+		}
+		showDesc(key)
+		window.parent.body.document.close()
+	}
+	// -->
+	</script>
+	<th valign=left>
+	<form name=nameForm method=post action=openings target=body>
+	<select name=opening onchange=updateOrder()>
+	<option>--Choose or order an opening--
+
+<option value=comment
+ selected
+>--ABOUT THE FRENCH OPENINGS--
+<option value=fra-atlantic
+>ATLANTIC OPENING
+<option value=fra-belgian
+>ATLANTIC OPENING, BELGIAN GAMBIT
+<option value=fra-burgundy
+>ATLANTIC OPENING, BURGUNDY VARIANT
+<option value=fra-gascony
+>ATLANTIC OPENING, GASCONY VARIANT
+<option value=fra-gaspic
+>ATLANTIC OPENING, GASPIC VARIANT
+<option value=fra-maginot
+>ATLANTIC OPENING, MAGINOT VARIANT
+<option value=fra-picardy
+>ATLANTIC OPENING, PICARDY VARIANT
+<option value=fra-piedmont
+>ATLANTIC OPENING, PIEDMONT SYSTEM
+<option value=fra-vineyard
+>ATLANTIC OPENING, THE VINEYARD
+<option value=fra-biscay
+>BISCAY OPENING
+<option value=fra-beau
+>BISCAY OPENING, BEAUJOLAIS NOUVEAU
+<option value=fra-english
+>MANCHE OPENING (a.k.a. ENGLISH ATTACK)
+<option value=fra-engdef
+>MANCHE OPENING, ENGLISH DEFENCE
+<option value=fra-engmag
+>MANCHE OPENING, ENGLISH MAGINOT
+<option value=fra-northdash
+>MANCHE OPENING, NORTHERN DASH
+<option value=fra-northlimp
+>MANCHE OPENING, NORTHERN LIMP
+<option value=fra-norman
+>NORMAN OPENING
+<option value=fra-vinmaginot
+>THE VINEYARD MAGINOT
+<option value=fra-entente
+>[ENTENTE CORDIAL]
+<option value=fra-lisbon
+>[LISBON LEAPFROG]
+<option value=fra-sealion
+>[SEALION]
+<option value=fra-wmandmary
+>[WILLIAM AND MARY OPENING]
+</select><input type=hidden name=power value=France></form>
+
+</table><table><tr><td>
+<script language=javascript>
+<!--
+function setChoice()
+{
+	leform = document.forms[2]
+	un0 = leform.unit0.options[leform.unit0.options.selectedIndex].value
+	un1 = leform.unit1.options[leform.unit1.options.selectedIndex].value
+	un2 = leform.unit2.options[leform.unit2.options.selectedIndex].value
+	if (power == 'Russia')
+		un3 = leform.unit3.options[leform.unit3.options.selectedIndex].value
+	shown = 0
+	for (i in varName)
+	{
+		if (u0[i] == un0 && u1[i] == un1 && u2[i] == un2
+		&& (power != 'Russia' || u3[i] == un3))
+		{
+			if (shown == 0)
+			{
+				shown = 1
+				for (j = 0; j < document.forms[1].opening.options.length; ++j)
+					if (document.forms[1].opening.options[j].value == varName[i])
+					{
+						document.forms[1].opening.selectedIndex = j
+						break
+					}
+			}
+			showDesc(varName[i])
+		}
+	}
+	if (shown == 0)
+	{
+		window.parent.body.document.write('<h3 align=center><font color=red>')
+		if (un0 == -1 || un1 == -1 || un2 == -1
+		|| (power == 'Russia' && un3 == -1))
+		{
+			window.parent.body.document.write('...Fill in Orders for All ' +
+				'Units to Look Up An Opening....')
+		}
+		else
+		{
+			window.parent.body.document.write('This Opening Is Unnamed ' +
+				'and No Information Exists For It!')
+		}
+		window.parent.body.document.write('</h3>')
+		document.forms[1].opening.selectedIndex = 0;
+	}
+	window.parent.body.document.close()
+}
+// -->
+</script>
+<form name=openForm method=post action=openings target=body>
+
+
+		<th valign=top>F Bre <select name=unit0 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-MAO
+<option value=1>-ENG
+<option value=2>-Pic
+<option value=3>-Gas
+</select>
+
+		<th valign=top>A Mar <select name=unit1 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>S Par-Bur
+<option value=1>-Bur
+<option value=2>-Gas
+<option value=3>-Pie
+<option value=4>-Spa
+<option value=5>HOLD
+</select>
+
+		<th valign=top>A Par <select name=unit2 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-Bur
+<option value=1>-Gas
+<option value=2>-Pic
+<option value=3>H
+</select>
+
+</table>
+<input type=hidden name=power value=France>
+<input type=hidden name=opening value="byOrder">
+<HR>
+</form>
+<script language=JavaScript>
+<!--
+	showDesc('comment')
+	window.parent.body.document.close()
+// -->
+</script>
+

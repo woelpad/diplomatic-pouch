@@ -1,0 +1,156 @@
+
+OWLS games
+
+===
+
+A SMY - CON					133		53%
+A SMY - ARM					 61		23%
+A SMY - ANK					 38		16%
+A SMY H						 19		 8%
+A SMY - SYR					  1		 -
+
+Total						252
+
+===
+
+												Conquered second centre
+												YES		NO		NOT ATTEMPTED
+A SMY - CON (133)
+	Fall move:
+	A CON - BUL
+		succeeded			32		24%			32
+		failed				64		48%					64
+	A CON - ANK				 7		 5%							 7
+	A CON - RUM
+		succeeded			 3		 2%			 3		
+		failed				 3		 2%					 3
+	A CON H					 7		 5%							 7
+	A CON S A BUL			 8		 6%							 8
+	A CON - SMY				 8		 6%							 8
+	A CON - SEV (fail) 		 1		 -					 1
+
+												35		68		30
+												26%		51%		23%
+
+
+===
+
+Fall move A CON - BUL/RUM succeeded (35)
+
+
+ALLIANCE												13
+	Austrian alliance					 
+		8x	A-T vs R
+		1x	A-T vs I
+	Alliance against Austria			 
+		1x	R-T vs A
+		1x 	I-T vs A
+	Magic
+		2x	Support BUL-RUM from Austria and Russia
+
+DISTRACTING WAR ELSEHWERE								15
+	Austria at war						
+		5x	A-R war (about RUM)
+		5x 	A-I war
+	Russia at war
+		5x	Russia focuses on north
+
+OTHER								 					 4
+	3x	NMR
+	1x	Gross tactical stupidity from Russia
+
+===
+
+Raw data
+
+All numbers below are DPJudge owls_ game numbers
+Games can be found at http://www.floc.net/dpjudge/?game=owls_[game number]
+So see http://www.floc.net/dpjudge/?game=owls_193 for the Turkish WIN with A SMY H and F ANK - BLA
+
+A SMY H + F ANK - CON
+		154, 134, 129, 128, 114, 06, 191, 227, 254, 52, 59, 62, 72, 78, 94, 98
+
+A SMY H + F ANK - BLA
+		193 (Turkish WIN)
+		35 (German win)
+		86 (BUT -CON in F1901; eliminated)
+
+A SMY - ANK
+		+ F ANK - CON		31
+			168, 16, 139, 138, 133, 127, 125, 105, 02, 171, 176, 187, 213, 220,
+			223, 226, 235, 237, 240, 26, 261, 37, 43, 44, 46, 54, 56, 58, 63, 68,
+			99
+		+ F ANK - BLA		 7
+			150 (draw), 17 (draw), 39 (draw), 40 (loss), 70 (draw), 88 (interesting; draw), 
+			262 destroy F SEV (loss)		
+		
+A SMY - ARM
+		152, 15, 146, 140, 131, 122, 119, 116, 115, 111, 11, 108, 106, 104, 01, 172, 
+		174, 177, 179, 18, 181, 185, 190, 192, 195, 20, 200, 201, 202, 204, 211, 212,
+		216, 217, 224, 228, 230, 25, 255, 257, 263, 27, 29, 32, 38, 41, 42, 45, 47,
+		49, 61, 65, 66, 67, 76, 81, 83, 91, 95, 116, 166
+
+A SMY - CON
+		*number*: Russia invades ARM in Fall 1901
+	A CON - BUL succeeded
+		Russia makes major effort in north AND does F SEV - RUM
+			161, 124, 221, 60
+		idem AND does F SEV - ARM
+			*186*, 
+		Austrian alliance against Russia
+			*160* Spring 1902, *158* Spring 1902, 03, 19, 238, 30, 71, 73
+		Austrian alliance against Italy
+			248
+		A-R war in RUM
+			147, 137, 21, 210, 256 
+		A-I war
+			93, 141, 113, 225, 92
+		Russian alliance against Austria
+			249
+		Italian alliance against Austria
+			231 (disguised as Key Lepanto)
+		Support from both Austria and Russia
+			87, 132
+		Other
+			162: Russian NMR while Austria defends against Russia
+			198: stupid Russian tactics in RUM
+			155: Austrian NMR S1901
+			143: Austrian NMR F1901
+	A CON - BUL bounced
+		+ incursion in ARM
+			Spring 1902: 189 (Turkey wins), 206, 218, 74
+			Autumn 1901: 84 (but retreat in Spring 1902), 96 (SMY conquered 1902)
+		+ no incursion in ARM
+			169, 165, 163, 159, 156, 153, 148, 144, 142, 130, 121, 120, 12, 107,
+			103, 101, 10, 08, 07, 05, 170, 173, 175, 182 (odd play), 184 (beautiful Austrian stab),
+			194, 196, 203, 205, 207, 209, 215, 218, 229, 23, 239, 24, 241, 242,
+			243, 246, 250, 251, 252, 258, 259, 28, 34, 36, 55, 57, 64, 69, 75, 80,
+			82, 85, 89, 90
+	A CON H
+		167, 164, 117, 22, 233, 33, 77
+	A CON S A BUL
+		157, 123, 199, 219 (unnecessary)
+		136, 110, 234, *48* (F RUM/A SER, but no attack)
+	A CON - ANK
+		151, 118, 97 (due to Russian F SEV - ARM)
+		178  (due to Russian threat A SEV - ARM)
+		180 (self-bounce with F ARM in ANK)
+		247 (to destroy southern Russia fleet in ARM)
+		260 (no clue why)
+	A CON - SMY
+		149 (+ F BLA - CON; Russian deal, obviously)
+		135, 126, 102, 222, 232, 244, 79 (for BUILD F CON)
+	NMR
+		13, 197, 253, 31
+	A CON - RUM C F BLA
+		109, 112 (succeed; northern action Russia)
+		53 (succeed; tactical errors)
+		Fail: *09* Spring 1902, 04, *188* (Spring 1902)
+	A CON - SEV C F BLA
+		208 (fail)
+
+A SMY - SYR
+	245
+					
+
+

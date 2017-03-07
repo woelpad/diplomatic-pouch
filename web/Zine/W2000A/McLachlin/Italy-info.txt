@@ -1,0 +1,27 @@
+
+
+   Matt,
+
+   Attached are two files.  The large one is the main body of the text, while
+   the smaller one is a list of the games used in the study.  A link should
+   be created from the main text to this list at the place indicated in the
+   text.  I have also indicated in the text places where I would like links
+   to various other sites; I believe I have all the URLs correct.  The link
+   should be on the word or phrase immediately before the URL.
+
+   Also, there are a number of tables in the text.  After each table is a
+   table legend describing the table.  I'd like the legends clearly offset
+   from the main text and associated with the table, so that everything makes
+   sense to the reader.  (I'm sure this will be obvious to you.)
+
+   Finally, I did not give the article a title in the file.  The article is
+   called "A Study of Italian Wins on the Judges".  Not very exciting; if you
+   can think of a better title let me know.
+
+   If anything is not clear about the article or you need any other
+   information just let me know.
+
+   Thanks, and good luck with the Pouch issue.
+
+   Derek
+derek@chait-sgi.rockefeller.edu

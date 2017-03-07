@@ -1,0 +1,342 @@
+F Bre|A Mar|A Par
+#	-----------------------------
+#	ATLANTIC OPENINGS:  F Bre-MAO
+#	-----------------------------
+-MAO|S Par-Bur|-Bur|fra-maginot
+-MAO|-Bur|-Bur|fra-atlantic
+-MAO|-Bur|-Gas|fra-vineyard,fra-lisbon
+-MAO|-Bur|-Pic|fra-belgian,fra-entente
+-MAO|-Gas|H|fra-lisbon
+-MAO|-Gas|-Bur|fra-vinmaginot
+-MAO|-Gas|-Pic|fra-gaspic
+-MAO|-Pie|-Gas|fra-piedmont,fra-lisbon
+-MAO|-Pie|-Bur|fra-piedmont
+-MAO|-Spa|-Bur|fra-burgundy
+-MAO|-Spa|-Pic|fra-picardy
+-MAO|-Spa|-Gas|fra-gascony,fra-lisbon
+#	---------------------------
+#	MANCHE OPENINGS:  F Bre-ENG
+#	---------------------------
+-ENG|S Par-Bur|-Bur|fra-engmag
+-ENG|-Spa|-Bur|fra-english,fra-sealion
+-ENG|-Spa|-Pic|fra-english,fra-sealion
+-ENG|-Spa|-Gas|fra-engdef,fra-wmandmary
+-ENG|HOLD|-Pic|fra-northlimp
+-ENG|-Bur|-Pic|fra-english,fra-northdash
+#	---------------------------
+#	NORMAN OPENINGS:  F Bre-Pic
+#	---------------------------
+-Pic|-Spa|-Bur|fra-norman
+-Pic|-Spa|-Gas|fra-gaspic
+#	---------------------------
+#	BISCAY OPENINGS:  F Bre-Gas
+#	---------------------------
+-Gas|-Gas|-Gas|fra-beau
+-Gas|-Spa|-Bur|fra-biscay
+
+comment|--ABOUT THE FRENCH OPENINGS--
+The French openings are categorized by the order given to the Brest fleet,
+as follows:
+<ul>
+<li>Manche (or English Attack) Openings (F Bre-ENG)
+<li>Atlantic Openings (F Bre-MAO)
+<li>Biscay Openings (F Bre-Gas)
+<li>Norman Openings (F Bre-Pic)
+</ul>
+Many of the variants of each of these openings are recognized by unique names.
+<P>
+A big French problem is that she has almost too many possible openings. The
+price of guessing wrong is often grim. In general, a valid French strategy is
+to get Spain and Portugal in the opening, even at the price of losing a home
+center.  For France, such a loss is frequently only temporary if her diplomacy
+is sharp.
+END
+
+fra-norman|NORMAN OPENING
+Any French Opening sending the fleet to Picardy.  The typical intent is
+a pro-English occupation of Belgium, with pressure applied on Munich from
+Burgundy.  If Belgium does not go to France, he is saddled with only one
+build from Iberia.
+END
+
+fra-beau|BISCAY OPENING, BEAUJOLAIS NOUVEAU
+The French equivalent of England's Yorkshire Pudding opening, the <i>Beaujolais
+Nouveau</i> is actually much more useful.  It was mentioned in a very early
+issue of the 'zine <i>Vienna</i>.  According to Aron Ambrosiani, the Swedish
+player Per Larsson has been known to use this opening, taking a solo victory
+with it at the 1998 LinCon convention.
+END
+
+fra-belgian|ATLANTIC OPENING, BELGIAN GAMBIT
+The Atlantic Opening variant that brings two units to bear on Belgium.
+Unless there is a standoff in Burgundy, France is able to mount a supported
+attack on Belgium without worrying England with a fleet move in or near
+northern waters.  For the better chance on Belgium (and pressure on
+Munich), France passes up one of the two Iberia centers.
+END
+fra-burgundy|ATLANTIC OPENING, BURGUNDY VARIANT
+In this very common Atlantic opening (better known as the Burgundy Opening),
+there may be an arranged standoff in Burgundy, which guards Burgundy, permits
+both Iberian centres to be taken, and still gives France some say in Belgium.
+However, if A Par-Bur succeeds, Brest is less protected.  If Par-Bur fails and
+Italy enters Piedmont, France has a guessing game to play in deciding whether
+to protect Marseilles or guarantee himself Spain.
+<P>
+The <i>Gamer's Guide to Diplomacy</i> calls this opening "essentially
+defensive. If A Par-Bur succeeds, France can try for Belgium, threaten Munich,
+or protect Marseilles."
+END
+fra-english|MANCHE OPENING (a.k.a. ENGLISH ATTACK)
+Any French opening that sends the fleet into the English Channel. English
+Attack (or Manche) Openings account in popularity for one-quarter of all
+French openings.
+There are a number of named variants:
+<ul>
+<li>English Defense
+<li>English Maginot
+<li>Northern Dash
+<li>Northern Limp
+</ul>
+It is commonly acknowledged that England is the trickiest power
+to eliminate, courtesy of its island position and inevitable
+emphasis on building fleets. Consequently, some players believe
+that France must contain its northern neighbour early in the
+game, and at all costs prevent England putting a fleet into the
+Channel. F Bre-ENG may therefore be intended to stand off F Lon-ENG
+rather than to actually threaten the English home centres. Alternatively,
+this can be a bid by France to take Belgium, perhaps coupled
+with the move A Par-Bur or A Par-Pic, in which case the name
+may be a misnomer. This is not the most popular opening for the French
+fleet: it is unlikely to result in a centre gain for France (unlike the
+Atlantic Opening's F Bre-MAO), and compromises an assault on England by
+most likely pinning down the Fleet in Brest, where the French player would
+rather be building a second fleet.
+END
+fra-engdef|MANCHE OPENING, ENGLISH DEFENCE
+Richard Sharp's name for the Manche opening F Bre-ENG, A Mar-Spa and
+A Par-Gas.  This opening assures two builds, and is considered a
+a very pro-German and pro-Italian opening.  Typically, it indicates that France
+expects F Lon-ENG.
+<P>
+The <i>Gamer's Guide to Diplomacy</i> calls this "the best that
+can be done in the event of dark suspicions
+about England. Hopefully, France has an alliance with Germany.
+It is not advisable to attack England this early, but if England
+is going to try for the channel, she must be stopped. France
+can still get Spain and Portugal this way, and those gains are
+almost indispensable to French survival."
+END
+fra-engmag|MANCHE OPENING, ENGLISH MAGINOT
+This is a legitimate alternative approach for taking Belgium, or the
+opening can be used when an Anglo-German attack is believed to be imminent. 
+END
+fra-atlantic|ATLANTIC OPENING
+Any opening sending the Brest fleet to the Mid-Atlantic Ocean.  There are
+a many named variants:
+<ul>
+<li>Maginot Opening
+<li>Gascony Opening
+<li>Gaspic Opening
+<li>Picardy Opening
+<li>Vineyard Opening
+<li>Italian Attack
+<li>Piedmont System
+</ul>
+END
+fra-gascony|ATLANTIC OPENING, GASCONY VARIANT
+The pro-German Atlantic Opening (better known as the Gascony Opening)
+that sends the armies into Spain and Gascony.
+This denies France any say in Belgium, but provides him with a self-standoff in
+either Marseilles or in Brest if there are units in Piedmont or the Channel. It
+also gives France the ability to take both Iberian builds and still have the
+fleet free to enter English or Italian waters in Fall 1901 or Spring 1902.
+The drawback is that the armies will be holed up in Iberia by year's end,
+and will take a while to return to action.
+<P>
+This can be tried when there is a strong chance of an Italian
+attack. If Italy orders A Ven-Pie, France can order (in Fall
+1901) A Gas-Mar, A Spa-Mar, F MAO-Por. Hopefully (barring an unwanted
+support from Italy), Marseilles will be vacant for the build of a fleet,
+which can be used to pull armies out of Iberia and into action.
+END
+fra-gaspic|ATLANTIC OPENING, GASPIC VARIANT
+The Gaspic Opening is Richard Sharp's name for the Norman opening that
+sends the Paris army to Gascony in an attempt to take both Iberian
+centers.
+END
+fra-maginot|ATLANTIC OPENING, MAGINOT VARIANT
+This opening, known simply as the Maginot Opening, is the most popular
+French opening.
+It assures that France can have a say in all three of her bordering
+neutrals, and, if Italy enters Piedmont, Marseilles can be guarded without
+risk to Spain. The mere threat to Munich usually pins down the German
+army, making Belgium and Ruhr more accessible in Fall of 1901.
+<p>
+This strong opening assumes an understanding with England over the English
+Channel, and though it must be regarded as anti-German, the opening
+still allows France the opportunity to take three neutral centres
+in Autumn (with A Bur-Bel, A Mar-Spa and F MAO-Por). Naming it
+after the Maginot Line has emphasized its defensive qualities,
+but there can be no doubt that the opening poses a direct threat
+to Munich, and may signal a frontal assault on Germany by an
+Anglo-French alliance. This is both a strength and a failing,
+as it exposes France to a stab from England and is likely to
+cause maximum offense to a neighbour who is not usually an initial
+threat to France. However, it does assure the French player of
+a say in Belgium's future (a useful bargaining chip even if France
+cannot take the centre himself) without leaving Burgundy unguarded
+-- and still allows him to take both the Iberian centres in 1901.
+<P>
+The <i>Gamer's Guide to Diplomacy</i> calls this opening "a more powerful
+defense against Germany [than The Burgundy Opening] because A Par-Bur
+always succeeds.  France can thus be assured of Spain and Portugal no matter
+what Italy does. However, her fleet is relegated to a weaker position
+in Portugal."
+END
+fra-northdash|MANCHE OPENING, NORTHERN DASH
+This extremely pro-Italy opening is the ultimate in ignoring
+Iberia. It discourages other powers from going for Belgium, while
+preserving anti-German (if A Mar-Bur succeeds) or anti-English
+(if F Bre-ENG succeeds) options for Fall 1901 and beyond.
+<p>
+The Northern Dash contrasts markedly with the Maginot Opening.
+It is believed that the name was originally coined by Nicky
+Palmer.
+It is debatable whether the opening is aggressively defensive or
+defensively aggressive: it could be seen as a French version of the Austrian
+Hedgehog openings, standing off attacks from England (F Lon-ENG)
+and Germany (A Mun-Bur); alternatively, it could be regarded
+as an all-out bid for Belgium or attack on England. As a defensive
+posture, it can only be regarded as a sign of failed diplomacy,
+since if France can trust neither of his neighbours in 1901,
+he is surely doomed. Moreover, it doesn't even offer complete
+protection, as an Italian opening to Piedmont would expose Marseilles;
+as an offensive, it may be applauded for making such a distinct
+commitment against England (a power that many Diplomacy players
+regard as France's greatest threat in the early years, and which
+needs to be eliminated early if it is to be eliminated at all).
+However, the opening will deprive France of two certain builds
+in 1901 (Spain and Portugal) unless Marseilles is stood off by Germany,
+and this will weaken France in 1902. Less severe is the Atlantic
+Opening equivalent, the Belgian Gambit.
+END
+fra-northlimp|MANCHE OPENING, NORTHERN LIMP
+Richard Sharp's name for the Manche opening that uses A Par-Pic and
+A Mar H. While the Northern Dash with an arranged standoff in Burgundy is
+the more common move, the limp is useful if Germany does not agree to the
+standoff, but cannot be completely trusted not to enter Burgundy.  If he
+refrains, Marseilles is in position to take Spain in Fall; if he <i>does</i>
+enter Burgundy, the French home centers can be safeguarded while France
+tries to engineer a build elsewhere.
+END
+fra-picardy|ATLANTIC OPENING, PICARDY VARIANT
+This variant of the Atlantic Opening, known simply as the Picardy Opening,
+preserves France's options in
+Belgium without antagonizing any of his neighbours by entering the Channel
+or Burgundy, and provides some flexibility in defending Brest, either
+by tempting the English fleet with support into Belgium, defending
+Brest with the Picardy army, or doing a self-standoff in Brest.
+<P>
+This is more offensive than the Burgundy Opening but more limited.
+The order always succeeds. From Picardy, France can try for Belgium,
+defend Paris if Germany gets into Burgundy, or defend Brest if
+England slips into the Channel. This should only be tried when
+France is certain of German friendship.
+END
+fra-piedmont|ATLANTIC OPENING, PIEDMONT SYSTEM
+Any Atlantic Opening sending Marseilles to Piedmont.  A standoff in Piedmont
+may be arranged, which can be of great value to France, as it permits him to
+take Spain without having to guess the intentions of any Italian army.
+The standoff also provides Italy with good camouflage if he intends
+to make a grab for Trieste in Fall of 1901. Otherwise, entry into Piedmont
+by France is more likely to be a back door attack on Germany than an
+attack on Italy. (See the German Northern Tier Alliance Opening.) 
+<P>
+About the standard Piedmont System opening (A Par-Gas), the
+<i>Gamer's Guide to Diplomacy</a> says,
+"this attack on Italy can sometimes yield stunning results. The
+fall orders can include A Pie-Ven or Tus. The latter is actually
+a little better because in 1902 the army threatens two Italian
+centers. This sequence presumes a three-way Western alliance and
+England/Germany are attacking Russia."
+END
+
+fra-vinmaginot|THE VINEYARD MAGINOT
+This opening results in the same position going into Fall 1901 as
+the Vineyard Opening (Mar-Bur, Par-Gas, Bre-MAO), as long as the
+move to Burgundy is not bounced by Germany.  If the move is bounced,
+however, this opening is considered more pro-Italy and anti-Germany
+in that Marseilles, rather than Paris, is vacated.
+END
+
+fra-vineyard|ATLANTIC OPENING, THE VINEYARD
+In the Vineyard Opening, France conducts himself with pro-English intentions,
+but moves to enable an army to protect Brest against a Channel invasion.  If
+England proves trustworthy, the Iberian centers can both be taken by armies
+in Fall.
+<P>
+The idea is to arrange a stand-off with Germany in
+Bur and then capture Spain from Marseilles and Portugal via convoy, leaving
+France with F MAO and more options for 1902. This opening gained popularity
+in the 1980's in British postal circles.
+<P>
+This opening is used in case the Germans try a stab. Perhaps Belgium can be
+picked up, too. In either case, Marseilles is covered. This opening
+can be used in alliance with England, where a strong push into
+the Mediterranean is desired, and Germany is neutral.
+END
+fra-biscay|BISCAY OPENING
+This opening is viewed as pro-English and pro-Italian in that France moves
+to take Iberia without worrying either of those powers with the possibility,
+however slight, that he might forego one of the centers there to apply naval
+pressure in the Fall.
+END
+
+fra-sealion|[SEALION]
+Edi Birsan's strong continuation of the English Attack opening,
+as detailed in his <A
+HREF=http://devel.diplom.org/DipPouch/Zine/S1997M/Birsan/Sealion.html
+TARGET=_top>Diplomatic Pouch Article</A>.
+<P>
+Supported by the French fleet in the English Channel, Germany forces his way
+into the North Sea in Fall of 1901, while France takes Belgium and Portugal
+with his armies.  In Spring of 1902, Germany and France both attempt convoys
+onto England, and at least one is guaranteed to succeed.  Named after Hitler's
+plan to attack England from out of the Low Countries, this opening gained
+rapid popularity in the late 1990's in e-mail play.
+One example is Bif Smithson's Diplomatic Pouch article <A
+HREF=http://devel.diplom.org/DipPouch/Zine/F1997R/Smithson/seaart.html
+TARGET=_top>The Sealion Opening in Action</A>.
+END
+
+fra-entente|[ENTENTE CORDIAL]
+Stephen Agar's Anglo-French follow up to the Belgian opening.  He describes
+the opening in <a target=_parent href=http://www.spoff.demon.co.uk/articles/entente.htm>an
+complete article</a>.
+END
+
+fra-wmandmary|[WILLIAM AND MARY OPENING]
+Maarten Oosten's alternative to the Sealion is detailed
+in his Diplomatic Pouch article, "<A
+HREF=http://devel.diplom.org/DipPouch/Zine/F1997M/Oosten/WmandMary.html
+TARGET=_top>The William and Mary Opening</A>:"
+<P>
+"Given a friendly Russia and a hostile Italy, Germany opens seemingly
+anti-French, while France rushes south. By 1902, France and Germany
+join their navies to acquire the English Channel and the North
+Sea. Once F/G rule the waves, they have their way with England."
+<P>
+Germany moves his fleet into Belgium, while the French fleet
+presumably bounces in the English Channel in the Spring and 
+goes to the Mid-Atlantic in the Fall. All this is maintains a peaceful
+attitude towards England until the Winter builds - 2 fleets.
+Criticism of this opening is that Germany, with 3 builds, might be too
+strong, since France might have to defend Marseilles and only get 1.
+END
+
+fra-lisbon|[LISBON LEAPFROG]
+Mark Berch's name for the Falltime continuation which sees the army in
+Gascony convoyed to Portugal.  He provides a complete write-up in
+<a target=_parent href=http://www.spoff.demon.co.uk/articles/lisbon.htm>his article
+on the subject</a>.
+END

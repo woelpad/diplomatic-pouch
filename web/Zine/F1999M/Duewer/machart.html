@@ -2,12 +2,14 @@
    <TITLE>DP F1999M: Machiavelli</TITLE>
 </HEAD>
 <BODY bgcolor=white>
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/F1999M/"><IMG align=right SRC="/Zine/Common/toF1999M.gif" border=0></A>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toF1999M.gif" border=0></A>
 <BR clear=both><HR>
+
 <H1 align=center>
 Machiavelli - State of the Art of the State</H1>
 <H2 align=center><i>Bruce Duewer</i></H2>
+
 Machiavelli is one of my favorite variants, and my favorite that is supported
 both by the Ken Lowe Internet judges and is in print. That I
 happen to be relatively good
@@ -27,6 +29,7 @@ and many GMs:
 <LI>How will the Judge screw up?</LI>
 <LI>What do we do when the Judge screws up?</LI>
 </UL>
+
 <HR><H3 align=center>
 <font color=red><u>Section I: The Rules</u></font></H3>
 The Judge implementation of Machiavelli is based on the original release,
@@ -66,8 +69,10 @@ inconsistently by the judge and will be addressed in that respect in sections
 II and III. GM's are welcomed to include a statement in the house
 rules for games either affirming or denying agreement with this document
 until we produce something more official.
+
 <P>
 <b>Anchored Cities</b>
+
 <ul>
 <li>The only place fleets can convert to garrisons, and garrisons can convert
 to fleets is in fortified cities with anchors. This is true in any phase.
@@ -96,6 +101,7 @@ or during the process of assasination.
 </ul>
 <p>
 <b>Variable Incomes</b>
+
 <ul>
 <li>Variable incomes are tied to who can use the home area the roll is tied
 to, <u>not</u> ownership of the capital of the home area. If a power controls
@@ -174,6 +180,7 @@ to gain a new home area, and all their territory goes neutral. They do
 <i>not</i> live on in the new home area in this case.</FONT>
 </ul>
 <p><b>Counter-Bribes</b>
+
 <UL>
 <li>Counterbribes can only be in multiples of 3d.
 <li>Counterbribes can only be used to protect units (that is, you can't counter
@@ -307,7 +314,9 @@ I'm assuming that my interpretations in Section 1 are correct. Any
 judge coders who are motivated to do so are welcome to shrink this section.
 In my opinion, adding additional ownership checks at certain key points would
 do the most good for an easy change.
+
 <p><b>
+
 Retreat City Ownership Bug</b>
 <ul>
 <li><u>Description</u>
@@ -319,6 +328,7 @@ to be that units in retreat are in a strange kind of limbo, where the check
 to see if they get the what they retreated to is overruled if someone else
 took the province that season and thus might have gotten the city under
 a different retreat.
+
 <li><u>Fixes</u><br>
 <ol>
 <li>If this doesn't involve a home city, happens in a season besides
@@ -337,6 +347,7 @@ and reprocessing are the valid ones.
 </ol>
 </ul>
 <p><b>
+
 Missing Ownership Checks</b>
 <ul>
 <li><u>Description</u>
@@ -354,11 +365,13 @@ the game state as it should be. Often data file modification is needed.
 See section III.
 </ul>
 <p><b>
+
 Repeated Rolls Bug</b>
 <ul>
 <li><u>Description</u><br>
 Some versions of the judge (such as that in use on  USEF) will get stuck in a
 pattern where the same famine, plague, etc. rolls occur year after year.
+
 <li><u>Fixes</u><br>
 <ol>
 <li>Bite the bullet and move the game to another judge. Moves should
@@ -371,11 +384,13 @@ move to another judge. Reshuffle the powers and start over if gunboat,
 otherwise the GM need not bother with the reshuffle.
 </ol></ul>
 <p><b>
+
 Negative or Out of Bounds Rolls</b>
 <ul>
 <li><u>Description</u><br>
 This occurs in some versions of the judge code, and usually affects income.
 Often it results in a power getting much larger income than it should.
+
 <li><u>Fix</u><br>
 Master rerolls manually to replace the invalid rolls, but leaves
 the valid ones for the same turn. If it simply resulted in extra income,
@@ -383,6 +398,7 @@ things are easy, a few extraneous counterbribes can take care of the extra
 cash. For rebellions and such,&nbsp; editing judge files may be needed.
 </ul>
 <p><b>
+
 Extra Special Units</b>
 <ul>
 <li><u>Description</u><br>
@@ -394,6 +410,7 @@ Master rolls back turn and eliminates the build order or purchase
 order that led to the extra special unit.
 </ul>
 <p><b>
+
 Truncated Order Reports</b>
 <ul>
 <li><u>Description</u><br>
@@ -405,6 +422,7 @@ end of message marker. Keven Roust reported one such incident
 to the Judge Maintenance mailing list, where a bribe had the effect of
 clearing a rebellion. The tacked on message to the bribe line due
 to this was just long enough to place a period on an otherwise blank line.
+
 <li><u>Fixes</u><br>
 <ol><li>
 The JK can get the actual expected message contents with a little
@@ -424,15 +442,18 @@ being careful about line endings.
 </ol>
 </ul>
 <p><b>
+
 Frankenstien's Autonomous Garrison</b>
 <ul>
 <li><u>Description</u><br>
 When a unit is made autonomous by a bribe, it will retain the last order
 given it. This is wrong; it should hold.
+
 <li><u>Fix</u><br>
 Rollback and make the garrison hold.
 </ul>
 <p><b>
+
 Illegal Conversion Retreats Allowed</b>
 <ul>
 <li><u>Description</u><br>
@@ -440,6 +461,7 @@ Sometimes the Judge will allow a retreat that should not be possible. One
 example of this is allowing a unit to retreat into a city in rebellion
 against it, another is if a conversion to garrision is allowed when a unit
 has been dislodged by a conversion.
+
 <li><u>Fixes</u><br>
 <ol><li>
 If retreats haven't happened, tell the player the illegal retreat
@@ -448,12 +470,14 @@ is not an option.
 to a disband.
 </ol></ul>
 <p><b>
+
 Illegal Venice Retreats Allowed</b>
 <ul>
 <li><u>Description</u><br>
 A unit in Venice that is dislodged is allowed by the judge to retreat to
 garrison form. This creates a situation where two units occupy the same
 space, and various bad things can then occur.
+
 <li><u>Fixes</u><br>
 <ol>
 <li>If retreats haven't happened, tell the player the illegal retreat
@@ -462,12 +486,14 @@ is not an option.
 to a disband.
 </ol></ul>
 <p><b>
+
 Mishandling of 3d multiple rules</b>
 <ul>
 <li><u>Description</u><br>
 The judge allows people to enter counter-bribes that are not multiples
 of 3d, and rather than rounding down to the nearest 3d will actually let
 the excess cause bribes to fail.
+
 <li><u>Fix</u><br>
 If this causes a bribe to fail that should have succeeded, roll back the game,
 and change the counterbribe to the proper amount (the largest multiple
@@ -476,10 +502,12 @@ another counterbribe that will not affect the outcome of the turn to burn
 the extra money the player ordered.
 </ul>
 <p><b>
+
 Victory Not Detected</b>
 <ul>
 <li><u>Description</u><br>
 The judge is not very good at detecting when someone has reached a victory.
+
 <li><u>Fix</u><br>
 The Master should note when a player wins, and manually make all
 the powers agree to a concession to the power that won, so that the records
@@ -499,7 +527,10 @@ Unreal Dislodgements of Convoys</b>
 	Roll back the turn and change the orders involved in making the
 	standoff so that the convoying fleet is not actually attacked, and
 	all units wind up where they should.
+
+
 <p><b>
+
 Paradox Situations</b>
 <ul>
 <li><u>Description</u><br>
@@ -530,6 +561,8 @@ read section III now.
 </dl>
 <HR><H3 align=center>
 <font color=red><u>Section III: Dealing With Bugs</u></font></H3>
+
+
 <p><b>
 Rollbacks</b>
 <ul>
@@ -594,19 +627,23 @@ judges than others, but I've found that almost all JKs are willing to send
 you the necessary files, and then put them in place when you return them.
 So I describe what I know of the file setup here to help you when you start
 hacking on it.
+
 <P>The judge keeps the files for each game mostly in its own directory,&nbsp;
 with the directory name being the name of the game preceeded by a capital
 D. Some of the game info is also in the dip.master file, but this is all
 information which is duplicated in the directory as well.
+
 <P>The files G001, G002, etc are the files used to store all the indepth
 information about the game state. These are what you need from the GM;
 specifically, you need the one for the phase which you which
 <BR>to change the state for. The phase identifier is the first line in
 the file.
+
 <P>After this, is a list of units. If all you need to do is add, remove,
 or move a unit around, this is easy to do. Note that the the power IDs
 are the same as the press IDs, and autonomous units are identified using
 the &amp; character.
+
 <P>After a <tt>-1</tt> token, comes the next section which can be somewhat more
 confusing. It is a series of values regaring provinces laid out in a semi-horizontal
 fashion. The <tt>N:</tt> lines is the first letter of the province name, n: lines
@@ -619,12 +656,14 @@ some tests on USVT, but if I recall correctly, they represent various sorts of o
 that of owning the province, owning the city, and counting the city as
 a home city. The final line is <tt>F:</tt>, which I think contains the flags associated
 with the province and city (famine and such).
+
 <P>After the sections of <tt>N:</tt> et al, comes a set of lines that are pairs
 of <tt>D:</tt> and <tt>A:</tt> lines. The <tt>D:</tt> lists the treasury of the power, then 12 more
 numbers. I assume they have something to do with debt, but haven't out
 the details yet. The <tt>A:</tt> line lists the power, then the assasination chits
 owned by that power. Note that while most of the information in the game
 data file is visible to all players, the assasination chit data is not.
+
 <P>The next sections are playerlists of the normal sort from <tt>dip.master</tt>,
 fairly similar to what you'd find in a normal Diplomacy game. You shouldn't
 need to mess with them, except perhaps the cash and unit count entries,
@@ -636,10 +675,11 @@ them back in (the last section [between the "<tt>-2</tt>" and "<tt>-</tt>" tags]
 once he has the fixed <tt>DXXX</tt> file).
 <HR>
 </dl>
+
 <P>
 <table>
 <tr valign="bottom">
-<td><A HREF="mailto:beduewer@eos.ncsu.edu"><IMG src="/Zine/Common/letter.gif" border="0"></A>
+<td><A HREF="mailto:beduewer@eos.ncsu.edu"><IMG src="../../Common/letter.gif" border="0"></A>
 </td>
 <td>
 <strong>Bruce Duewer<br>
@@ -650,16 +690,16 @@ once he has the fixed <tt>DXXX</tt> file).
 <p>
 <i>If you wish to e-mail feedback on this article to the author, and clicking
 on the envelope above does not work for you, feel free to use the
-<A HREF="/Zine/F1999M/Common/DearDP.html">
+<A HREF="../Common/DearDP.html">
 "<b>Dear DP...</b>"</A> mail interface.</i>
 <p>
 <HR>
-<A HREF="/Zine/"><IMG align=left SRC="/Zine/Common/DPbutton.gif" border=0></A>
-<A HREF="/Zine/F1999M/"><IMG align=right SRC="/Zine/Common/toF1999M.gif" border=0></A>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toF1999M.gif" border=0></A>
 <BR clear=both>
+
 </BODY>
 </HTML>
+
 </BODY>
 </HTML>
-<!--
--->

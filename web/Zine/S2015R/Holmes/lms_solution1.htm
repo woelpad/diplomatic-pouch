@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>DP S2015R: Solution to the Last Man Standing</title>
+<style>
+.inputBox {
+	color:			#000000;
+	background:		#FFFFFF;
+	border-color:	#000000;
+	border-top:		1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-right:	1px solid;
+	font-family:	verdana;
+	font-size:		14px;
+}
+</style>
+<script>
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+		var args = arguments;
+		return this.replace(/{(\d)}/g, function(match, number) {
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+}
+function changeMap(selector, reference, content) {
+	var selected = selector.options[selector.selectedIndex];
+	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
+	var text = document.getElementById(selector.name + '.text');
+	image.src = anchor.href = reference.format(selected.value);
+	image.alt = text.innerHTML = content.format(selected.text);
+}
+</script>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0" /></a>
+<a href=".."><img src="../../Common/toS2015R.gif" align="right" border="0" /></a>
+<br clear="all" />
+<hr align="center" width="100%" size="-1" color="gray" />
+<! ------------------------------------------------------------- >
+
+<! ----------------------- M A S T H E A D --------------------- >
+<TABLE cellSpacing=5 width="90%" align=center>
+  <TBODY>
+  <TR>
+    <TD width=120>
+		<IMG src="../../Common/Holmes.gif" width=120 align=left> 
+    <TD>
+		<H2>Sherlock Holmes,
+		<BR>Consulting Diplomat 
+		<P><FONT size=4>
+		<B>by Mario Huys,
+		<BR>Master &AElig;nigmatist 
+		</B>
+		</FONT>
+	</td>
+  </TR>
+  </TBODY>
+</TABLE>
+<! ------------------------------------------------------------- >
+
+<! ------------------------ S U B H E A D ---------------------- >
+<H2 align=center>
+<HR align=center width="100%" color=gray SIZE=-1>
+Solution to The Costly Case of the Last Man Standing
+<HR align=center width="100%" color=gray SIZE=-1>
+</H2>
+<! ------------------------------------------------------------- >
+
+<p>
+  <TABLE WIDTH="95%" BORDER="0" ALIGN="CENTER">
+      <TR>
+	      <TD ALIGN="JUSTIFY">
+
+<blockquote><i><p>Our devoted readers will remember that in our last issue, Dr John Watson provided us with a revised recounting of another one of Holmes' most fascinating cases, <a href="../../S2015M/Holmes/lastman.htm">The Costly Case of the Last Man Standing</a>. In this issue, he now provides us with the first part of the solution.</p>
+
+<p>When last we left our heroes, Holmes had just provided Watson with a valuable hint,
+having made an astonishing deduction about the positioning of forces&#8230;</p>
+</i></blockquote>
+
+<p>"First of all, how did you deduce that the final destination of the English army was Berlin?" I was not going to let my friend Holmes off the hook that easily. For all I knew, he just had taken an educated guess, attributing the reluctance of Sir Malcolm to mention the city or its reigning Power to the patriotic distaste of Britons for Germany, the aggressor in the past war.</p>
+
+<p>But Holmes would not be caught at that game. "Because of the fact that there were only three pieces left in the final year."</p>
+
+<p>My bewilderment must have been obvious, for Holmes decided to put me at ease. "My dear Watson, you are familiar with the typical ending of a Last Man Standing game, are you not?"</p>
+
+<p>"I certainly am. The final act often takes the form of a hunt. One of the remaining units belongs to a power with only one center left. This center is the bait and the unit is the driver, luring the prey to the bait and keeping it there to give the hunter a clean shot, then clearing out to allow the hunter full credit. In Sir Malcolm's game the bait is Berlin, and whoever owns Berlin owns nothing else, but still has a unit in play. He is the driver, whether or not he is Germany. Turkey is the prey, England the hunter. Turkey steps into Berlin in Spring, where he gets trapped. In Fall England dislodges Turkey from Berlin with support from our non-German. After retreating off the board only two units are left. But as England took the last center, the non-German needs to disband in Winter, leaving England as the Last Man Standing."</p>
+
+<p>Holmes frowned. "Very colorful, but rather limiting. The Baron could just as well have made the Turk survive instead of the Englishman. There's in fact little difference between hunter and prey. I'm sure you can do better." </p>
+
+<p>"Be that as it is. There's another variation that I've heard of. It divides the powers in just two camps, Raiders and Snipers. Raiders are those powers that seek to capture centers to force other powers to disband. They need to be attacked and dislodged to remove them from the game. Capturing their centers gains you little, as they will usually have a surplus. Snipers on the other hand attack units to force them off the board. Loss of centers (or hideouts) forces them to disband. They will be the powers that get eliminated completely, therefore dislodging their units serves no purpose. "</p>
+
+<p>Holmes' eyes seemed to light up. "Spoken like a true soldier. Crude, but useful. There may be times when a Raider needs to be a Sniper and vice versa, but on the whole the analogy is adequate."</p>
+
+<p>"In this game the Englishman and the Turk both are Raiders and the non-German a Sniper," I added. "I believe you can also have just one Raider in the final year,  but there needs to be a Sniper, as the game always ends with the elimination of one power at the hands of another."</p>
+
+<!-- <p>"Now to solve this problem, it's important to realize the exact boundaries of the game format. You gave an example with three units in the final year, all belonging to different powers. This is a must, as a game cannot be concluded if two of the units belong to the same power. It's also possible to have just two units left, one raider and one guard (what you called the hunter and the driver). In this case the raider simply captures the last center. But what is the maximum number of units?" </p> -->
+
+<p>"Indeed, a game can also have just two units in the final year instead of the three in our game. Tell me then, what is the maximum number of units that can still be reduced to one in a single year?"</p>
+
+<p>I considered this for a moment. "Four? One unit can already be dislodged during Spring, the second in Fall and the third disbands in Winter. But what does this have to do with Sir Malcolm's game?"</p>
+
+<p>"Everything and nothing," he replied mysteriously. "Let me tell you how I determined that Berlin is the final destination. A few days ago I received a request from my friend Douglas Waltman, freshly released from His Majesty's penitentiary system and now lead editor of the magazine called <u><i>Diplomacy in Kent</i></u>."</p>
+
+<p>I jumped up as if a bullet had just passed me by an inch. "<u><i>Diplomacy in Kent</i></u>? DK? My dear Sherlock, you must know that DK has made it its mission to drive the venerable Zine out of the market."</p>
+
+<p>"Just a form of healthy competition. Some would argue that the Zine held a monopoly for much too long."</p>
+
+<p>"But you just said that they hired a criminal! They don't even bother to stay within the limitations of the Law anymore."</p>
+
+<p>"Dear Watson, the Law doesn't always punish the evildoer. Waltman's 'crime' was that he wanted to save his company from financial ruin from a mistake he had made. His actions only ended up compounding the problem, and the company was sure to make him the scapegoat to recoup their losses. He's a perfectly sociable guy with an uncanny way of getting to information, of which I have been a beneficiary myself. I'm sure that's what must have appealed to his new employer."</p>
+
+<p>"This doesn't change the fact that you're aiding the archrival of the magazine that's publishing your stories."</p>
+
+<p>"You mean 'your' stories, as they were all penned and signed by you. You still have a tendency of making them more sensational than required, I might add. But I certainly feel no obligation towards your publisher, and therefore I was perfectly within my rights to send off my small monograph elsewhere."</p>
+
+<p>"Oh Lord, I see that I'm faced with a <i>fait accompli</i>," I sighed. I wasn't looking forward to the next contract negotiations with the publisher of the Zine. "Well then, what was this request?"</p>
+
+<p>"Waltman gave me the following task. In a game of Last Man Standing where no neutral centers are taken and all powers still have a unit at the end of 1902, the English army in Liverpool is the lone survivor at the end of 1904 in a capital of one of the other Great Powers. What are the capitals that he can end up in?"</p>
+
+<p>I was shocked, but to avoid the stigma of being too sensational, I will not say that I was shocked in the extreme, even if I was. "But Holmes, these are the exact conditions that Baron Herv&eacute; set out for his game. If these were leaked before the game was played, the bets could be declared null and void as the informed players might have gotten an unfair advantage."</p>
+
+<p>"There's a chance they might, but one would first have to prove that the Baron had intentionally caused this leak. For a fact Waltman did not draw this connection, even though he, like the rest of the City, knew that the Baron was attending this conference. Besides, nothing much could be gleaned from this other than that army Liverpool would be favored. In a room filled with patriotic Englishmen such a bet would not amount to much gain."</p>
+
+<p>"But what about the capital? Would not solving the puzzle give an advantage when betting on the destination?"</p>
+
+<p>"No."</p>
+
+<p>"No?!"</p>
+
+<p>"No, because, as I discovered, the destination can be any of the six capitals, be it Paris, Berlin, Moscow, Rome, Vienna or Ankara."</p>
+
+<p>"I don't quite understand this. How can you then confidently say that the true destination is Berlin if all are equally likely?"</p>
+
+<p>"Because of the other details given by Sir Malcolm concerning the final year. In the first place that there were only three units left. This in itself is already sufficient to whittle it down to the German and the Russian capital, for in all other cases there are still four units left going into the final year. And Moscow is one of the few home centers on the board that cannot be captured in the first year, contrary to what we were told. Let me show that to you."</p>
+
+<p>Sherlock opened his drawer and searched through the riffraff of papers piled up in there.</p>
+
+<p>"Here I have the maps of the end of 1903 for each game. As you can see, each of them has four units, except on the Berlin and Moscow map."</p>
+
+<p align="center">
+<a id="DK.anchor" href="images/LastManG.gif" target="_blank">
+<img id="DK.image" src="images/LastManG.gif" width="50%" alt="LMS: Army Liverpool to Berlin, After Winter 1903"/><br/>
+<b id="DK.text">LMS: Army Liverpool to Berlin, After Winter 1903</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Destination:</b>
+<select name="DK" class="inputBox" onchange="changeMap(this, 'images/LastMan{0}.gif', 'LMS: Army Liverpool to {0}, After Winter 1903')">
+<option value="G">Berlin</option>
+<option value="R">Moscow</option>
+<option value="I">Rome</option>
+<option value="A">Vienna</option>
+<option value="F">Paris</option>
+<option value="T">Ankara</option>
+</select>
+</p>
+
+<p>"You didn't do them in color?" I asked him. "It's hard to tell now who owns what and whether any neutrals were taken."</p>
+
+<p>"The publisher of <u><i>Diplomacy in Kent</i></u> is in some financial trouble and curtailing his production expenses. Except for its iconic cover art, he's shunning color printing completely. Of course, the full litany of moves accompanying each game gives all the information needed. The maps are simply there for a visual confirmation. And to save on space they are limited to showing the situation at the end of each year. You are aware that DK is a notably thinner magazine than the voluminous Zine," he said mockingly. "I can however not share more than these maps without embarrassing my friend Waltman."</p>
+
+<p>My estimation of DK as a threat to the Zine was rapidly dwindling. Perhaps I could use that to my advantage when renegotiating my contract.</p>
+
+<p>"I see here the Berlin map. But Holmes, the units are labeled E, A and G. There's no T and it looks like Berlin is still German or possibly Austrian. This differs severely from the game that Sir Malcolm described."</p>
+
+<p>The great detective waived my concerns gingerly away. "Those kinds of substitutions are easy to make once the basic solution is established. Let me demonstrate."</p>
+
+<p>As Holmes took out the pieces from the box and arranged them in their starting position, I tried to figure out what power would have owned Berlin before the start of the final year. Sir Malcolm had indeed mentioned that it was among the centers captured in the first year.<p>
+
+<p>"Sherlock," I said quietly, "I think I know who took Berlin. It must be Russia. Only his armies can reach Berlin in 1901, either directly starting from Warsaw, or by convoy through the Baltic Sea if starting from Moscow. All the other units need at least three movement turns."</p>
+
+<p>"Well done. Now, in what camp does this put Russia?"</p>
+
+<p>"He's a Sniper. And when I look at your Berlin map, so is Germany, as all his other home centers are occupied."</p>
+
+<p>"He could still own a center elsewhere. But the premise is good. Well, the board has been set up. Let us proceed."</p>
+
+<p>Pipe in hand, he had his other hand hovering over the board, his long, emaciated fingers touching the pieces as he explained his reasoning. "Last Man Standing is at its core a game of convergence. The ultimate act sees the remaining units converge on the destination center. But even before that pieces from different parts of the board can be seen flowing towards this single point, like rivers to a basin. There are however a number of units that can never reach it in time. The fleet in Sevastopol for example would need many more years than the four set forth in the problem. The same is true for the Turkish and Austrian fleets, while the Italian fleet can barely manage the feat, being exactly eight tempi away from Berlin. Although not impossible, there's a more expeditious way to deal with these fleets."</p>
+
+<p>I was still taking this in, when Holmes, to my delight, started off with a very classic opening. </p>
+
+<p>"We'll begin with the old and trusted push from Trieste to Venice, evacuating the Italian army to Tyrolia, and pulling Marseilles to take out the Austrian fleet come Fall. Provided Italy gains no centers, this will enable us to disband Naples in the Winter."</p>
+
+<p>"So Italy is a Sniper and France and Austria Raiders, since one gains a center and the other loses a unit."</p>
+
+<p>"On the face of it, yes, but don't judge just yet. We now move to Russia. Russia must lose its home centers before Germany, given that none are adjacent to Berlin. Germany is of no help there, as we need Raiders, not Snipers, to take centers. There are three such powers nearby, Austria, Turkey and England. We'll send one unit each, Budapest, Constantinople and Edinburgh, so that Warsaw and Sevastopol are captured in the first year and the other two in the second year. </p>
+
+<p>"Russia will survive into 1903 by way of Berlin. We'll send army Warsaw to take it, as army Moscow is needed for a different task, that of sweeping the remaining Turkish units. Let's move the fleet to the Black Sea and Moscow follow from behind on its way to Armenia. Constantinople can simply hold in Spring and be convoyed to Sevastopol in Fall."</p>
+
+<p>I felt a vague familiarity with these moves, but I couldn't quite remember in which of the many puzzles of reduction that this had played a role.</p> 
+
+<p>"Army Vienna can be sent to Bohemia, where it gets sandwiched between the Italian army in Tyrolia and the German army in Silesia, arriving there from Berlin. Notice the serpentine line from Rome to Silesia. When you have a line like that, avoid creating gaps or putting pieces of the same color in adjacent spaces, so that you can continue to dislodge units season after season. We will push down to Bohemia while inserting the French army in Venice, resulting in an alternation of Italian, French, Italian and German armies that can be further contracted."</p>
+
+<p>"I get it. The snake eats itself up from the interior, bringing head and tail closer together until only two pieces remain. Only these can be snipers, everything in between should be raiders."</p>
+
+<p>He nodded approvingly and drew on his pipe before continuing. </p>
+
+<p>"Turning to the West now, the crucial question is where army Liverpool will land. It could be convoyed in Fall to Kiel or somewhere along the French Atlantic coast or even North-Africa. But not on any neutral center, as no such centers can be captured according to the Baron's rules. If we wait one extra turn and arrange the fleets for the purpose, it can reach about any coastal center, from St. Petersburg in the far North to Smyrna in the far South."</p>
+
+<p>"Why send it so far away if the final destination is Berlin? Convoy it to Kiel and clobber any raider coming near until it's time for the final showdown with Turkey."</p>
+
+<p>He smiled at my youthful expression. "That is reasonable, but for reasons I will explain later we need the German fleet in the Baltic. The best landing spot is Brest, home to the French Atlantic fleet."</p>
+
+<p>"Forcing her to disband?" </p>
+
+<p>"Almost. Observe that Marseilles is heading for Venice. Even without Brest France would still own three centers. Unless&#8230;  we let Munich capture a second French center."</p>
+
+<p>"Paris, right? Another capital captured in the first year. Wasn't that what Sir Malcolm said? Interesting, the Sniper Germany captures a center and the Raider France loses one. Unless France is a Sniper after all, and will be eliminated?"</p>
+
+<p>"I need to disappoint you. Like Italy no French centers will be targeted after the first year. But letting Germany keep its numbers after the loss of Berlin is actually a good thing. Those German snipers will be needed everywhere in the following seasons."</p>
+
+<p>After finishing the Spring season, my friend did not lose much time executing the Fall and Winter moves. Apart from the French and Italian fleets the only real surprise was the disband of the Russian army in Berlin, where I would have expected the St.  Petersburg fleet, which hadn't yet moved, to be the more obvious choice. But he waived it away in his usual wait-and-see manner. </p>
+
+<p align="center">
+<a id="1901.anchor" href="images/LastMan5.gif" target="_blank">
+<img id="1901.image" src="images/LastMan5.gif" width="50%" alt="Last Man Standing, After Winter 1901"/><br/>
+<b id="1901.text">Last Man Standing, After Winter 1901</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="1901" class="inputBox" onchange="changeMap(this, 'images/LastMan{0}.gif', 'Last Man Standing, {0}')">
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5" selected>After Winter 1901</option>
+</select>
+</p>
+
+<p>Methodical as he was, he proceeded the second year in the same order as the first, starting in the center. </p>
+
+<p>"We need to start moving Rome towards Berlin, because that's the point of convergence for all surviving units." He made Venice dislodge Tyrolia with support from Bohemia and Rome follow into Venice, reducing the snake to three segments of different colors. 
+
+<p>In Turkey the Russian army in Armenia, aided by the fleet in the Black Sea, swept away the Turkish fleet in Ankara with Smyrna moving into the vacated spot. </p>
+<p>Russia's Northern fleet cleared out of St. Petersburg to the Gulf of Bothnia to make room for the English fleet moving in from the Barents Sea. The Turkish army moved up to Moscow, but the Austrian army stayed in Warsaw.</p> 
+
+<p>"Why don't you move Warsaw to Livonia so that it can attack the English fleet in St. Petersburg?" I asked. "What, wait and see?" </p>
+
+<p>After moving the French army from Gascony to Burgundy and the English fleet from the Channel to Picardy, he moved on to the Fall season in the same quiet fashion. Venice dislodged Tyrolia once more supported by Bohemia. Ankara returned to Armenia taking out the Turkish army. The other Turkish army continued his Northern trek to St. Petersburg, dislodging the English fleet with aid from the Russian fleet there, while Warsaw captured Moscow, reducing Russian ownership to just Berlin. Something similar happened in France, where the German army moved out of Paris to dislodge the second English fleet with French support, allowing the English army to claim Paris and drop Germany to two centers. To top it off he let the fleet from Kiel sail into the Baltic Sea before finally breaking his silence.</p> 
+
+<p>"This is the part where you see the Baron making deliberate choices. He could just as well have moved the Austrian army to St. Petersburg as you suggested, or swap the English and French armies around. But he preferred England and Turkey over Austria and France, no doubt with his audience in mind."</p>
+
+<p>He now removed the two Russian units in Armenia and the Black Sea and the German army in Bohemia. "Observe that each Power is left with just one unit, except for Germany who still has two."</p>
+
+<p>"I admit it's quite a marvel. As must have a great number of people at yesterday's exhibition game. It's the mark of a true artist."</p>
+
+<p align="center">
+<a id="1902.anchor" href="images/LastMan9.gif" target="_blank">
+<img id="1902.image" src="images/LastMan9.gif" width="50%" alt="Last Man Standing, After Winter 1902"/><br/>
+<b id="1902.text">Last Man Standing, After Winter 1902</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="1902" class="inputBox" onchange="changeMap(this, 'images/LastMan{0}.gif', 'Last Man Standing, {0}')">
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+</select>
+</p>
+
+<p>"And now for the <i>pi&egrave;ce de r&eacute;sistance</i>, as the Baron is fond of saying, a convoy across two sea spaces, the Gulf of Bothnia and the Baltic Sea, to move the Turkish army from St. Petersburg to Kiel in one turn."</p>
+
+<p>"I love those long convoys. Can there be a second convoy in Fall with the Austrian army?"</p>
+
+<p>"That would be asking for too much. We simply put the army in Livonia where it can be dislodged by the two fleets. Meanwhile Italy moves to Munich and England dislodges France with support from Germany. In the Fall we see once more that a choice was made between England and Italy. Italy could have supported the German army to Burgundy, but instead it's the Turkish army who supports England to Munich."</p>
+
+<p>"You're telling me then that the Baron could have chosen any of the raiding Powers to become the Last Man Standing with just some small adjustments?"</p>
+
+<p>"In fact even Germany and Russia can survive if you play it right. It's a nice diversion if you care to work it out."</p>
+
+<p>After enacting the Fall dislodgements, Germany was effectively eliminated, having lost its two remaining home centers, and so he disbanded the two German units. </p>
+
+<p align="center">
+<a id="1903.anchor" href="images/LastMan13.gif" target="_blank">
+<img id="1903.image" src="images/LastMan13.gif" width="50%" alt="Last Man Standing, After Winter 1903"/><br/>
+<b id="1903.text">Last Man Standing, After Winter 1903</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="1903" class="inputBox" onchange="changeMap(this, 'images/LastMan{0}.gif', 'Last Man Standing, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</p>
+
+<p>"The final act. The Russian fleet sails from Livonia into the Baltic Sea, while the Turkish army moves to Berlin. For extra effect the Baron directs the English army to Kiel to make it appear as if Russia might still support Turkey against England. But since Berlin is the center owned by Russia, the outcome is a foregone conclusion."</p>
+
+<p align="center">
+<a id="1904.anchor" href="images/LastMan17.gif" target="_blank">
+<img id="1904.image" src="images/LastMan17.gif" width="50%" alt="Last Man Standing, After Winter 1904"/><br/>
+<b id="1904.text">Last Man Standing, After Winter 1904</b><br/>
+<b><i><small>Click to enlarge in separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="1904" class="inputBox" onchange="changeMap(this, 'images/LastMan{0}.gif', 'Last Man Standing, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</p>
+
+<blockquote><i><a href="LastManStanding.pdf" target="_blank">Click here</a> for the complete solution.</i></blockquote>
+
+<p>Holmes relaxed in his chair. "I don't think we've seen the end of this story yet. The motivations of Baron Herv&eacute; van Rompuy-Leterme are a source of curiosity. Tonight's game should be fascinating."</p>
+
+
+<! ---------------------- S I G N A T U R E -------------------- >
+<p align="justify">
+<b>&mdash; Dr John H. Watson</b>
+<table>
+<tbody>	<tr valign="top">
+		<td>	<a href="mailto:manus@diplom.org"><img src="../../Common/letter.gif" border="0"></a>
+		</td>
+		<td align="left">	<b>	via Mario Huys
+				(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+				<br />and Manus Hand
+				(<a href="mailto:manus@diplom.org">manus@diplom.org</a>)
+			</b> 
+		</td>
+	</tr>
+</tbody>
+</table>
+<p>
+<i>
+	If you wish to e-mail feedback on this article to the author,
+	and clicking on the envelope above does not work for you, feel free 
+	to use the <a href="../../Working/Common/DearDP.html">"<b>Dear 
+	DP...</b>"</a> mail interface.
+</i>
+</p>
+
+</table><P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
+<a href="../"><img src="../../Common/toS2015R.gif" align="right" border="0"></a>
+
+
+</body>
+</html>
+

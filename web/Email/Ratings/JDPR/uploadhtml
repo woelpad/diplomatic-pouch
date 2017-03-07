@@ -1,0 +1,22 @@
+cd public_html
+cd Email
+cd Ratings
+cd JDPR
+put top5093.html
+put top5094.html
+put top5095.html
+put top5096.html
+put top5097.html
+put top5098.html
+put top5099.html
+put top5000.html
+put attop100.html
+put players.html
+put topgames.html
+put games.html
+put jdpr.html
+cd ..
+cd DRR
+put drr.html
+put rrgames.html
+bye

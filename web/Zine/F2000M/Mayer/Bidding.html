@@ -1,0 +1,246 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="Author" content="Frank Mayer">
+   <title>DP F2000M: Overheard at the Ministry of Finance II</title>
+</head>
+<BODY bgcolor=white>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toF2000M.gif" border=0></A>
+<BR clear=both><HR>
+
+<center>
+<h1>
+Overheard at the Ministry of Finance</h1></center>
+
+<H2 align=center><i>Part II:  Bidding</i></H2>
+<H3 align=center><i>By Frank Mayer</i></h3>
+
+<hr WIDTH="100%"></center>
+
+<!-- article w/ H3 section headings -->
+<H3>Introduction</H3>
+<P>Payola is a Diplomacy variant with an added layer between the players and
+the units. Each player manages an account of silver pieces (AgP), which is
+used to offer
+bids in an effort to get units to do issue orders to the player's liking.
+The finances of each power are
+incremented after each build phase by an amount determined by the number of
+supply centres under that power's control. </P>
+
+<P>Just as in Diplomacy, Payola has two movement phases for every "payoff"
+phase. Players have to decide how to distribute AgP over multiple seasons and
+multiple units to achieve some strategic goal. Pitt Crandlemire, the 1996 World
+Champion, brought up the question of how to distribute financing in his Pouch
+Zine article <A
+HREF="http://www.diplom.org/Zine/S1996M/Pitt/Dipper.html">The Big Dipper Looks at Payola</A>.  In that article,
+Pitt suggested that players divide Spring and Fall spending about evenly. Manus
+Hand, inventor and 'owner' of Payola, examined actual player behaviour in a typical game in
+<A
+HREF="http://devel.diplom.org/DipPouch/Zine/W1995A/Payola/strategy.html">some
+notes on Payola strategy</A>.
+Manus concluded that players tended to split spending between Fall and Spring
+about 2:1. Neither of these articles, however, looked at the distribution question systematically.
+</P>
+
+<P>In this article I will be introducing a method to help with AgP distribution
+decisions. The method presupposes a player has set a value on a strategic
+goal to be achieved and a time span in which to achieve that goal. Although the
+method is conceived to apply to <I>theatre engagements</I> (isolated battles
+between two players where all involved units give highest priority to the
+strategic goal for the duration of the engagement), the method might also be
+applicable to more complicated situations.
+What we will find is that it will turn out that a split of
+at least 2-1 between Fall and Spring spending is indeed quite good rule of
+thumb for many positions, with higher factors being more appropriate for closed
+positions. </P>
+
+<P>To illustrate the method, I will be using a toy domain. A toy domain is
+simplification of the space in which an algorithm is applied. Toy domains are
+often used for concept generation and sanity checking. I've chosen my toy
+domain to elucidate the concepts behind the method. Later I will have to
+generalise to Payola Diplomacy, or I will have failed to show that the method is
+valid for that, more complicated, domain. </P>
+
+<P>The toy domain I chose (from an idea in Manus's <A
+HREF="http://www.diplom.org/Zine/W1995A/Payola/notes.html">Payola
+annotations</A>)
+is Payola Tic-Tac-Toe [which I will abbreviate as "PT3"]. PT3 is like the
+familiar game in which X's and O's are
+alternately placed on a three-by-three matrix. However,
+instead of the two players each being
+in control of the placement of either all of the X's or all of the O's
+(respectively), placement is
+decided, like in Payola Diplomacy, by the highest bid.
+Some rules for PT3 are: </P>
+
+<OL>
+<LI>There is always a winner. The X player wins by getting three in a row. If the X player fails to win, then victory goes to the O player. </LI>
+<LI>Players are given a sum of 'money' in continuous units  -- think silver <i>dust</i> instead of Payola Diplomacy's silver coins -- at the start of the game. The motivation for using continuous units is to simplify handling of tie bids. In case of a tie bid the O-player's choice is given precedent. </LI>
+<LI>Players have to make their money last until the end of the game. There are no income phases.</LI>
+<LI>As in Payola Diplomacy, accounts are debited by the amount of successful bids.</LI>
+<LI>Successful bids are published each 'season.' In effect each player knows the other player's account balance.</LI>
+</OL>
+<P>Before demonstrating the optimal strategy for PT3, I'd like to note some of the essential differences between PT3 and Payola Diplomacy:</P>
+<OL>
+<LI>PT3 is a zero sum game. There are no opportunities for cooperation.</LI>
+<LI>PT3 is guaranteed to end after a finite number of seasons.</LI>
+<LI>There is only one unit to be bid on each season (either an X or an O,
+in turn -- in Payola Diplomacy, all units on the board are always "on the
+auction block").</LI>
+<LI>There are differences about how money is handled (no income seasons, continuous currency, and especially open account books).</LI></OL>
+</ol>
+
+<H3>The Method Applied to Payola Tic-Tac-Toe</H3>
+<P>The first step in illustrating the method will be to show how PT3 can be
+played on a tree instead of on a matrix.</P>
+
+<P>The 'root' of the tree corresponds to the null state (empty 3x3 matrix). The
+'daughters' of each node are then all of the possible positions that can arise in
+the next move. If we ignore the symmetry of certain configurations, the root
+of the tree has nine daughters, 72 grand-daughters (eight for each of the nine daughters) and so
+on. The sequence of moves in a game can be described by a path through the
+tree. </P>
+
+<P>Each branch of the tree must ultimately end in a victory for either the
+X-player or the O-player. Thus all lowest level nodes (leaves) can be marked
+with a X or an O to show the victor. Any parent nodes for which <i>all</i>
+the daughter nodes are the same can also be marked with either an X or
+an O (whichever the daughter nodes contain).  These are positions from
+which a player can force a victory (regardless of the account
+values).
+We will call any node that is marked (with an X or an O) a "leaf."
+Examples of positions which are O-Leaves
+are shown in Figure 1:</P>
+
+<P ALIGN="CENTER"><IMG SRC="Image3.gif" WIDTH=286 HEIGHT=248></P>
+<B><P ALIGN="CENTER">Figure 1: Examples of O-Leaves</P> </B>
+
+<P>All nodes above the leaf level correspond to situations in which either
+player could conceivably win. In this case the outcome will depend on the bids
+of the two players as well as on their account balances. These mixed nodes are
+marked <FONT FACE="Symbol">&Auml;.</FONT></P>
+
+<P>Figure 2 shows what a typical pruned lower section of the PT3 tree might look like: </P>
+
+<P ALIGN="CENTER">  <IMG SRC="Image4.gif" WIDTH=286 HEIGHT=248></P>
+<B><P ALIGN="CENTER">Figure 2: Typical Pruned Section of the Payola Tic-Tac-Toe Tree </P> </B>
+
+<P>Remembering that the lowest level nodes (leaves) consist exclusively of X's
+and O's, it follows that the leaves' immediate antecedent's (their 'mother'
+nodes) must be mixed.</p>
+
+<P>We see that the player that reaches one of the lowest level mixed (non-leaf) nodes with
+the most money can win by outbidding his opponent to reach one of "his" leaves.
+The victory condition for the X-player at the lowest level mixed nodes is thus
+A<SUB>X</SUB> &gt; A<SUB>O</SUB>, where A<SUB>X</SUB> and A<SUB>O</SUB> are the
+account balances of the two players. </P>
+
+<P>We want to show how to determine the victory condition at any node in terms of the victory conditions for its children nodes. Since we know the victory condition at the lowest level mixed nodes, we can repeat the procedure, propagating the victory condition all the way to the root, thereby solving PT3.</P>
+
+<P>Suppose the (already determined) victory conditions for the X-player at each of the N mixed children nodes are given by:</P>
+<dl>
+<dd>
+<P>A<SUB>X</SUB> &gt; b<SUB>1</SUB> * A<SUB>O</SUB>,
+<br>A<SUB>X</SUB> &gt; b<SUB>2</SUB> * A<SUB>O</SUB>,  ...
+<br>A<SUB>X</SUB> &gt; b<SUB>N</SUB> * A<SUB>O</SUB></P>
+</dd>
+</dl>
+<P>where </P>
+<dl><dd>
+b<SUB>N</SUB> <FONT FACE="Symbol">³</FONT> b<SUB>N-1</SUB> <FONT
+FACE="Symbol">³ </FONT>... <FONT FACE="Symbol">³</FONT> b<SUB>1</SUB>
+</dd></dl>
+
+<P>We assume b<SUB>N</SUB> <FONT FACE="Symbol">&gt;</FONT> b<SUB>
+1</SUB>. If not, then the victory condition at the mother node is the
+same as the victory condition at the children nodes. Two special cases are
+b<SUB>k</SUB>= 0, corresponding to an X-node, and  b<SUB>k</FONT>
+ = <FONT FACE="Symbol">¥</FONT>, corresponding to an O-node.</P>
+
+<P>First let's look at the case where there are only two b values, b<SUB>
+N</SUB> and b<SUB>1</SUB>, so that the X-player will bid some
+amount D<SUB>X</SUB> on node 1 and bid zero on node N. We have to look
+at two outcomes. Either the O-player outbids the X-player (by a minuscule
+amount) to get to node N or else the X-player's bid is successful. For the
+X-player to be sure of a win, she has to be able to succeed in both cases:</P>
+
+<P>In the first case, we take A<SUB>NX</SUB> = A<SUB>X</SUB>
+and A<SUB>NO</SUB> = A<SUB>O</SUB> - D<SUB>X</SUB>
+where 'N' refers to account balances at the node N. Then for the X-player to
+win we have to have</P>
+
+<dl><dd>
+A<SUB>NX</SUB> &gt; b<SUB>N</SUB> * A<SUB>NO</SUB>   that is A<SUB>X</SUB> &gt; b<SUB>N</SUB> * (A<SUB>O</SUB> - D<SUB>X</SUB>)     so that     D<SUB>X</SUB> &gt; A<SUB>O</SUB> - A<SUB>X</SUB> / b<SUB>N</SUB>
+</dd></dl>
+
+<P>In the second case we have to have </P>
+<dl><dd>
+A<SUB>1X</SUB> &gt; b<SUB>1</SUB> * A<SUB>1O</SUB>
+</dd></dl>
+that is
+<dl><dd>
+A<SUB>X</SUB> - D<SUB>X</SUB>  &gt; b<SUB>1</SUB> * A<SUB>O</SUB>
+</dd></dl>
+so that
+<dl><dd>
+D<SUB>X</SUB> &lt; A<SUB>X</SUB> - b<SUB>1</SUB> * A<SUB>O</SUB>
+</dd></dl>
+
+<P>The two inequalities on D<SUB>X</SUB> will be fulfilled if and only if </P>
+
+<dd><IMG SRC="Image5.gif" WIDTH=156 HEIGHT=58></dd>
+
+<P>This is the mother node victory condition for the X-player in case there are only two children nodes. </P>
+
+<P>What about cases where there are more than 2 children nodes? Wouldn't it be possible to end up at some sister scenario K, with K between 2 and N-1? Yes, perhaps. But if both players act rationally this will not affect the victory condition. Here's why: the X-player will only bid an amount on scenario K that promises </P>
+<dd><table><tr><td valign=center>
+b<SUB>K</FONT> <FONT FACE="Symbol">£</FONT></td><td><IMG SRC="Image6.gif" WIDTH=85 HEIGHT=58></td></tr></table></dd>
+
+<P>where A<SUB>KX</SUB> &gt; b<SUB>K</sub> * A<SUB>KO</sub> is the victory condition at node K</P>
+
+<P>Similarly, the O-player will only bid an amount on a scenario K that guarantees that </P>
+
+<dd><table><tr><td valign=center>
+b<SUB>K</SUB> <FONT FACE="Symbol">³</FONT></td><td><IMG SRC="Image6.gif" WIDTH=85 HEIGHT=58></td><tr></table>
+</dd>
+<P>Since neither the X- nor the O-player alone can force selection of a K
+scenario with b<SUB>K</SUB> different from victory condition for X (nodes 1
+and N), it follows that the presence of the nodes 2, .., N-1 do not affect the
+victory condition. The optimal play for each player is to bid an amount between
+A<SUB>O</SUB> - A<SUB>X</SUB> / b<SUB>N</SUB> and A<SUB>X</SUB> -
+b<SUB>1</SUB> * A<SUB>O</SUB>. </P>
+
+<P>Figure 3 shows the typical pruned section of the PT3 tree from Figure 2 with the victory conditions written in:</P>
+
+<P ALIGN="CENTER"><IMG SRC="Image7.gif" WIDTH=286 HEIGHT=248></P>
+<B><U><P ALIGN="CENTER">Figure 3</B></U>: <B>Solved Section of the PT3 Tree </P>
+</B>
+
+<!-- article w/ H3 section headings -->
+
+<P align=justify>
+<table>
+<tr valign="bottom">
+<td><A HREF="mailto:Frank.Mayer@darmstadt.netsurf.de"><IMG src="../../Common/letter.gif" border="0"></A>
+</td>
+<td>
+<strong>Frank Mayer<br>
+(Frank.Mayer@darmstadt.netsurf.de)</strong>
+</td>
+</tr>
+</table>
+<p>
+<i>If you wish to e-mail feedback on this article to the author, and clicking
+on the envelope above does not work for you, feel free to use the
+<A HREF="../Common/DearDP.html">
+"<b>Dear DP...</b>"</A> mail interface.</i>
+<p>
+<HR>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toF2000M.gif" border=0></A>
+<BR clear=both>
+
+
+</body>
+</html>

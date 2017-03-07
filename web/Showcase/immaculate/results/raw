@@ -1,0 +1,673 @@
+>From dpjudge@diplom.org Sun Dec  3 15:08:24 2000
+Subject: Diplomacy game immaculate starting
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: S1901M Wed 6 Dec 2000 14:00 PDT
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Starting position for Spring of 1901.  (immaculate.S1901M)
+
+Austria:  Army Budapest.
+Austria:  Army Vienna.
+Austria:  Fleet Trieste.
+
+England:  Fleet Edinburgh.
+England:  Fleet London.
+England:  Army Liverpool.
+
+France:   Fleet Brest.
+France:   Army Marseilles.
+France:   Army Paris.
+
+Germany:  Fleet Kiel.
+Germany:  Army Berlin.
+Germany:  Army Munich.
+
+Italy:    Fleet Naples.
+Italy:    Army Rome.
+Italy:    Army Venice.
+
+Russia:   Army Warsaw.
+Russia:   Army Moscow.
+Russia:   Fleet Sevastopol.
+Russia:   Fleet St Petersburg (south coast).
+
+Turkey:   Fleet Ankara.
+Turkey:   Army Constantinople.
+Turkey:   Army Smyrna.
+
+Ownership of supply centers:
+
+Austria:  Budapest, Trieste, Vienna. 
+England:  Edinburgh, London, Liverpool. 
+France:   Brest, Marseilles, Paris. 
+Germany:  Berlin, Kiel, Munich. 
+Italy:    Naples, Rome, Venice. 
+Russia:   Moscow, Sevastopol, St Petersburg, Warsaw. 
+Turkey:   Ankara, Constantinople, Smyrna. 
+Unowned:  Belgium, Bulgaria, Denmark, Greece, Holland, Norway, Portugal, 
+          Rumania, Serbia, Spain, Sweden, Tunis. 
+
+
+The deadline for the first orders is Wednesday 6 December 2000 14:00 PDT.
+
+>From dpjudge@diplom.org Thu Dec 14 06:43:04 2000
+Subject: Diplomacy results immaculate S1901M
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: S1901M Wed 6 Dec 2000 14:00 PDT
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Movement results for Spring of 1901.  (immaculate.S1901M)
+
+Austria: Army Budapest -> Serbia.
+Austria: Army Vienna -> Trieste.
+Austria: Fleet Trieste -> Albania.
+
+England: Fleet Edinburgh -> Norwegian Sea.
+England: Fleet London -> North Sea.
+England: Army Liverpool -> Yorkshire.
+
+France: Fleet Brest -> Mid-Atlantic Ocean.
+France: Army Marseilles SUPPORT Army Paris -> Burgundy.
+France: Army Paris -> Burgundy.
+
+Germany: Fleet Kiel -> Denmark.
+Germany: Army Berlin -> Kiel.
+Germany: Army Munich -> Ruhr.
+
+Italy: Fleet Naples -> Ionian Sea.
+Italy: Army Rome -> Apulia.
+Italy: Army Venice HOLD.
+
+Russia: Army Warsaw -> Silesia.
+Russia: Army Moscow -> Warsaw.
+Russia: Fleet Sevastopol -> Rumania.
+Russia: Fleet St Petersburg (south coast) -> Gulf of Bothnia.
+
+Turkey: Fleet Ankara -> Black Sea.
+Turkey: Army Constantinople -> Bulgaria.
+Turkey: Army Smyrna -> Armenia.
+
+The next phase of 'immaculate' will be Movement for Fall of 1901.
+The deadline for orders will be Monday 18 December 2000 05:40 PDT.
+
+>From dpjudge@diplom.org Tue Dec 19 11:09:32 2000
+Subject: Diplomacy results immaculate F1901M
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1901M Mon 18 Dec 2000 05:40 PDT
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Movement results for Fall of 1901.  (immaculate.F1901M)
+
+Austria: Fleet Albania -> Trieste.
+Austria: Army Trieste -> Serbia.
+Austria: Army Serbia -> Bulgaria.
+
+England: Fleet Norwegian Sea -> Norway.
+England: Fleet North Sea CONVOY Army Yorkshire -> Holland.
+England: Army Yorkshire -> North Sea -> Holland.  (*bounce*)
+
+France: Fleet Mid-Atlantic Ocean -> Portugal.
+France: Army Burgundy -> Belgium.
+France: Army Marseilles -> Spain.
+
+Germany: Fleet Denmark -> Sweden.  (*bounce*)
+Germany: Army Kiel -> Berlin.
+Germany: Army Ruhr -> Holland.  (*bounce*)
+
+Italy: Army Apulia -> Ionian Sea -> Greece.
+Italy: Fleet Ionian Sea CONVOY Army Apulia -> Greece.
+Italy: Army Venice HOLD.
+
+Russia: Army Warsaw -> Ukraine.
+Russia: Army Silesia -> Warsaw.
+Russia: Fleet Rumania SUPPORT Austrian Army Serbia -> Bulgaria.
+Russia: Fleet Gulf of Bothnia -> Sweden.  (*bounce*)
+
+Turkey: Fleet Black Sea SUPPORT Army Armenia -> Sevastopol.
+Turkey: Army Bulgaria SUPPORT Austrian Army Serbia -> Rumania.  (*void, dislodged*)
+Turkey: Army Armenia -> Sevastopol.
+
+The following units were dislodged:
+
+The Turkish army in Bulgaria can retreat to Constantinople.
+
+The next phase of 'immaculate' will be Retreats for Fall of 1901.
+The deadline for orders will be Tuesday 9 January 2001 17:00 PDT.
+
+>From dpjudge@diplom.org Tue Jan  9 01:43:12 2001
+Subject: Diplomacy results immaculate F1901R
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1902R Tue 9 Jan 2001 17:00 PDT
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Retreat orders for Fall of 1901.  (immaculate.F1901R)
+
+Turkey:    Army Bulgaria -> Constantinople.
+
+
+Ownership of supply centers:
+
+Austria:  Budapest, Bulgaria, Serbia, Trieste, Vienna. 
+England:  Edinburgh, London, Liverpool, Norway. 
+France:   Belgium, Brest, Marseilles, Paris, Portugal, Spain. 
+Germany:  Berlin, Denmark, Kiel, Munich. 
+Italy:    Naples, Rome, Greece, Venice. 
+Russia:   Moscow, Rumania, St Petersburg, Warsaw. 
+Turkey:   Ankara, Constantinople, Sevastopol, Smyrna. 
+Unowned:  Greece, Holland, Tunis, Sweden. 
+
+Austria:   5 Supply centers,  3 Units:  Builds   2 units.
+England:   4 Supply centers,  3 Units:  Builds   1 unit.
+France:    6 Supply centers,  3 Units:  Builds   3 units.
+Germany:   4 Supply centers,  3 Units:  Builds   1 unit.
+Italy:     4 Supply centers,  3 Units:  Builds   1 unit.
+Russia:    4 Supply centers,  4 Units:  Builds   0 units.
+Turkey:    4 Supply centers,  3 Units:  Builds   1 unit.
+
+The next phase of 'immaculate' will be Adjustments for Winter of 1901.
+The deadline for orders will be Wednesday 20 December 2000 10:00 PDT.
+
+>From dpjudge@diplom.org Thu Dec 21 17:42:37 2000
+Subject: Diplomacy results immaculate W1901A
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1901B Wed 20 Dec 2000 10:00 PDT
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Adjustment orders for Winter of 1901.  (immaculate.W1901A)
+
+Austria:   Builds an army in Budapest.
+Austria:   Builds an army in Vienna.
+England:   Builds a fleet in Edinburgh.
+France:    Builds an army in Paris.
+France:    Builds an army in Brest.
+France:    Builds a fleet in Marseilles.
+Germany:   Builds a fleet in Kiel.
+Italy:     Builds a fleet in Naples.
+Turkey:    Builds an army in Constantinople.
+Turkey:    Builds a fleet in Smyrna.
+
+The next phase of 'immaculate' will be Movement for Spring of 1902.
+The deadline for orders will be Monday 25 December 2000 16:40 PDT.
+
+>From dpjudge@diplom.org Wed Jan  3 02:08:45 2001
+Subject: Diplomacy results immaculate S1902M
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: S1902M Mon 25 Dec 2000 16:40 PDT
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Movement results for Spring of 1902.  (immaculate.S1902M)
+
+Austria: Army Vienna -> Galicia.  (*bounce*)
+Austria: Fleet Trieste HOLD.
+Austria: Army Serbia SUPPORT Army Bulgaria.
+Austria: Army Bulgaria HOLD.
+Austria: Army Budapest -> Galicia.  (*bounce*)
+
+England: Fleet North Sea -> Skagerrak.
+England: Fleet Edinburgh -> North Sea.
+England: Fleet Norway -> Sweden.
+England: Army Yorkshire HOLD.
+
+France: Fleet Portugal -> Mid-Atlantic Ocean.
+France: Army Paris -> Burgundy.
+France: Fleet Brest -> Picardy.
+France: Army Spain -> Gascony.
+France: Fleet Marseilles -> Spain (south coast).
+France: Army Belgium SUPPORT German Army Ruhr -> Holland.
+
+Germany: Fleet Denmark SUPPORT English Fleet Norway -> Sweden.
+Germany: Army Ruhr -> Holland.
+Germany: Army Berlin HOLD.
+Germany: Fleet Kiel SUPPORT Army Ruhr -> Holland.
+
+Italy: Army Venice HOLD.
+Italy: Army Greece SUPPORT Austrian Army Bulgaria.
+Italy: Fleet Naples -> Ionian Sea.
+Italy: Fleet Ionian Sea -> Eastern Mediterranean.
+
+Russia: Army Warsaw -> Moscow.
+Russia: Fleet Rumania SUPPORT Army Ukraine -> Sevastopol.
+Russia: Army Ukraine -> Sevastopol.  (*bounce*)
+Russia: Fleet Gulf of Bothnia -> St Petersburg (south coast).
+
+Turkey: Fleet Black Sea SUPPORT Army Sevastopol.
+Turkey: Army Sevastopol HOLD.
+Turkey: Army Constantinople HOLD.
+Turkey: Fleet Smyrna -> Aegean Sea.
+
+The next phase of 'immaculate' will be Movement for Fall of 1902.
+The deadline for orders will be Monday 8 January 2001 01:00 PDT.
+
+>From dpjudge@diplom.org Mon Jan  8 18:07:33 2001
+Subject: Diplomacy results immaculate F1902M
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1902M Mon 8 Jan 2001 01:00 PDT
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Movement results for Fall of 1902.  (immaculate.F1902M)
+
+Austria: Army Vienna -> Galicia.  (*bounce*)
+Austria: Army Budapest -> Galicia.  (*bounce*)
+Austria: Army Serbia SUPPORT Army Bulgaria.
+Austria: Army Bulgaria SUPPORT Army Serbia.  (*cut*)
+Austria: Fleet Trieste HOLD.
+
+England: Army Yorkshire -> North Sea -> Denmark.
+England: Fleet Sweden SUPPORT Army Yorkshire -> Denmark.
+England: Fleet Skagerrak SUPPORT Army Yorkshire -> Denmark.
+England: Fleet North Sea CONVOY Army Yorkshire -> Denmark.
+
+France: Fleet Picardy -> Belgium.
+France: Army Belgium -> Ruhr.
+France: Army Burgundy -> Munich.  (*bounce*)
+France: Army Gascony -> Burgundy.  (*bounce*)
+France: Fleet Spain (south coast) HOLD.
+France: Fleet Mid-Atlantic Ocean -> Portugal.
+
+Germany: Army Berlin -> Munich.  (*bounce*)
+Germany: Army Holland HOLD.
+Germany: Fleet Kiel SUPPORT Fleet Denmark -> Helgoland Bight.
+Germany: Fleet Denmark -> Helgoland Bight.
+
+Italy: Army Greece SUPPORT Austrian Army Bulgaria.
+Italy: Fleet Ionian Sea -> Tunis.
+Italy: Army Venice HOLD.
+Italy: Fleet Eastern Mediterranean -> Aegean Sea.
+
+Russia: Fleet Rumania SUPPORT Army Moscow -> Sevastopol.  (*cut*)
+Russia: Army Moscow -> Sevastopol.
+Russia: Fleet St Petersburg (south coast) HOLD.
+Russia: Army Ukraine SUPPORT Army Moscow -> Sevastopol.
+
+Turkey: Army Sevastopol SUPPORT Fleet Black Sea -> Rumania.  (*cut, dislodged*)
+Turkey: Fleet Black Sea -> Rumania.  (*bounce*)
+Turkey: Fleet Aegean Sea -> Smyrna.
+Turkey: Army Constantinople -> Bulgaria.  (*bounce*)
+
+The following units were dislodged:
+
+The Turkish army in Sevastopol can retreat to Armenia.
+
+The next phase of 'immaculate' will be Retreats for Fall of 1902.
+The deadline for orders will be Tuesday 9 January 2001 17:00 PDT.
+
+>From dpjudge@diplom.org Tue Jan  9 01:43:12 2001
+Subject: Diplomacy results immaculate F1902R
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1902R Tue 9 Jan 2001 17:00 PDT
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Retreat orders for Fall of 1902.  (immaculate.F1902R)
+
+Turkey:    Army Bulgaria -> Armenia.
+
+
+Ownership of supply centers:
+
+Austria:  Budapest, Bulgaria, Serbia, Trieste, Vienna. 
+England:  Denmark, Edinburgh, London, Liverpool, Norway, Sweden. 
+France:   Belgium, Brest, Marseilles, Paris, Portugal, Spain. 
+Germany:  Berlin, Holland, Kiel, Munich. 
+Italy:    Naples, Rome, Tunis, Greece, Venice. 
+Russia:   Moscow, Rumania, Sevastopol, St Petersburg, Warsaw. 
+Turkey:   Ankara, Constantinople, Smyrna. 
+
+Austria:   5 Supply centers,  5 Units:  Builds   0 units.
+England:   6 Supply centers,  4 Units:  Builds   2 units.
+France:    6 Supply centers,  6 Units:  Builds   0 units.
+Germany:   4 Supply centers,  4 Units:  Builds   0 units.
+Italy:     5 Supply centers,  4 Units:  Builds   1 unit.
+Russia:    5 Supply centers,  4 Units:  Builds   1 unit.
+Turkey:    3 Supply centers,  4 Units:  Removes  1 unit.
+
+
+The next phase of 'immaculate' will be Adjustments for Winter of 1902.
+The deadline for orders will be Wednesday 10 January 2001 00:40 PDT.
+
+>From dpjudge@diplom.org Wed Jan 10 09:23:14 2001
+Subject: Diplomacy results immaculate W1902A
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1902B Wed 10 Jan 2001 00:40 PDT
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Adjustment orders for Winter of 1902.  (immaculate.W1902A)
+
+England:   Builds a fleet in Edinburgh.
+England:   Builds an Army in London.
+Italy:     Builds a Fleet in Naples.
+Russia:    Builds an Army in Moscow.
+Turkey:    Removes the Army in Armenia.
+
+The next phase of 'immaculate' will be Movement for Spring of 1903.
+The deadline for orders will be Monday 15 January 2001 08:20 PDT.
+
+>From dpjudge@diplom.org Mon Jan 15 12:02:57 2001
+Subject: Diplomacy results immaculate S1903M
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: S1903M Mon 15 Jan 2001 09:20 PST
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Movement results for Spring of 1903.  (immaculate.S1903M)
+
+Austria: Army Vienna -> Galicia.  (*bounce*)
+Austria: Army Budapest -> Galicia.  (*bounce*)
+Austria: Army Serbia SUPPORT Army Bulgaria.
+Austria: Army Bulgaria SUPPORT Army Serbia.
+Austria: Fleet Trieste HOLD.
+
+England: Army Denmark HOLD.
+England: Fleet Sweden -> Baltic Sea.  (*bounce*)
+England: Fleet Skagerrak SUPPORT Army Denmark.
+England: Fleet North Sea CONVOY Army London -> Norway.
+England: Fleet Edinburgh -> Norwegian Sea.
+England: Army London -> North Sea -> Norway.
+
+France: Fleet Belgium -> Holland.
+France: Army Ruhr SUPPORT Army Belgium -> Holland.
+France: Army Gascony -> Burgundy.
+France: Army Burgundy -> Munich.
+France: Fleet Portugal -> Mid-Atlantic Ocean.
+France: Fleet Spain (south coast) -> Western Mediterranean.
+
+Germany: Fleet Kiel -> Baltic Sea.  (*bounce*)
+Germany: Fleet Helgoland Bight SUPPORT Army Holland -> Kiel.
+Germany: Army Holland -> Kiel.
+Germany: Army Berlin HOLD.
+
+Italy: Fleet Naples -> Ionian Sea.
+Italy: Fleet Aegean Sea -> Smyrna.  (*bounce*)
+Italy: Fleet Tunis HOLD.
+Italy: Army Greece SUPPORT Austrian Army Bulgaria.
+Italy: Army Venice HOLD.
+
+Russia: Fleet Rumania SUPPORT Army Ukraine -> Sevastopol.
+Russia: Army Ukraine -> Sevastopol.
+Russia: Army Sevastopol -> Armenia.
+Russia: Army Moscow -> St Petersburg.
+Russia: Fleet St Petersburg (south coast) -> Livonia.
+
+Turkey: Army Constantinople HOLD.
+Turkey: Fleet Smyrna SUPPORT Army Constantinople.  (*cut*)
+Turkey: Fleet Black Sea SUPPORT Army Constantinople.
+
+The next phase of 'immaculate' will be Movement for Fall of 1903.
+The deadline for orders will be Monday 15 January 2001 08:20 PDT.
+
+>From dpjudge@diplom.org Thu Jan 25 11:32:02 2001
+Subject: Diplomacy results immaculate F1903M
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1903M Thu 18 Jan 2001 12:00 PST
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Movement results for Fall of 1903.  (immaculate.F1903M)
+
+Austria: Army Vienna -> Galicia.
+Austria: Army Budapest -> Rumania.
+Austria: Army Serbia SUPPORT Army Budapest -> Rumania.
+Austria: Army Bulgaria -> Constantinople.  (*bounce*)
+Austria: Fleet Trieste HOLD.
+
+England: Army Denmark HOLD.
+England: Army Sweden -> Baltic Sea.
+England: Fleet Skagerrak SUPPORT Fleet Sweden -> Baltic Sea.  (*void*)
+England: Fleet North Sea SUPPORT Army Denmark.
+England: Fleet Norwegian Sea -> Barents Sea.
+England: Army Norway HOLD.
+
+France: Fleet Mid-Atlantic Ocean -> Western Mediterranean.
+France: Fleet Western Mediterranean -> Tyrrhenian Sea.
+France: Fleet Holland SUPPORT Army Ruhr -> Kiel.
+France: Army Ruhr -> Kiel.
+France: Army Munich -> Tyrolia.
+France: Army Burgundy -> Munich.
+
+Germany: Army Berlin -> Kiel.  (*bounce*)
+Germany: Fleet Helgoland Bight SUPPORT Fleet Kiel -> Denmark.
+Germany: Fleet Kiel -> Denmark.  (*bounce, dislodged*)
+
+Italy: Fleet Aegean Sea SUPPORT Fleet Ionian Sea -> Eastern Mediterranean.
+Italy: Fleet Ionian Sea -> Eastern Mediterranean.
+Italy: Fleet Tunis HOLD.
+Italy: Army Venice HOLD.
+Italy: Army Greece HOLD.
+
+Russia: Fleet Rumania -> Black Sea.  (*bounce*)
+Russia: Fleet Livonia -> Gulf of Bothnia.
+Russia: Army Armenia -> Ankara.  (*bounce*)
+Russia: Army Sevastopol -> Rumania.  (*bounce*)
+Russia: Army St Petersburg -> Norway.  (*bounce*)
+
+Turkey: Army Constantinople HOLD.
+Turkey: Fleet Black Sea -> Ankara.  (*bounce*)
+Turkey: Fleet Smyrna SUPPORT Army Constantinople.
+
+
+The following units were dislodged:
+
+The German army in Kiel with no valid retreats was destroyed.
+The Russian fleet in Rumania with no valid retreats was destroyed.
+
+Ownership of supply centers:
+
+Austria:  Budapest, Bulgaria, Rumania, Serbia, Trieste, Vienna. 
+England:  Denmark, Edinburgh, London, Liverpool, Norway, Sweden. 
+France:   Belgium, Brest, Holland, Kiel, Marseilles, Munich, Paris, Portugal,
+          Spain. 
+Germany:  Berlin.
+Italy:    Naples, Rome, Tunis, Greece, Venice. 
+Russia:   Moscow, Sevastopol, St Petersburg, Warsaw. 
+Turkey:   Ankara, Constantinople, Smyrna. 
+
+Austria:   6 Supply centers,  5 Units:  Builds   1 unit.
+England:   6 Supply centers,  6 Units:  Builds   0 units.
+France:    9 Supply centers,  6 Units:  Builds   3 units.
+Germany:   1 Supply center,   2 Units:  Removes  1 unit.
+Italy:     5 Supply centers,  5 Units:  Builds   0 units.
+Russia:    4 Supply centers,  4 Units:  Builds   0 units.
+Turkey:    3 Supply centers,  3 Units:  Builds   0 units.
+
+
+The next phase of 'immaculate' will be Adjustments for Winter of 1903.
+The deadline for orders will be Friday 26 January 2001 18:00 PST.
+
+>From dpjudge@diplom.org Sat Jan 27 04:42:45 2001
+Subject: Diplomacy results immaculate W1903A
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1903B Fri 26 Jan 2001 18:00 PST
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Adjustment orders for Winter of 1903.  (immaculate.W1903A)
+
+Austria:   Builds an army in Vienna.
+France:    Builds an army in Paris.
+France:    Builds a fleet in Brest.
+France:    Builds a fleet in Marseilles.
+Germany:   Removes the fleet in the Helgoland Bight.
+
+The next phase of 'immaculate' will be Movement for Spring of 1904.
+The deadline for orders will be Tuesday 30 January 2001 04:40 PST.
+
+>From dpjudge@diplom.org Fri Feb 23 02:07:04 2001
+Subject: Diplomacy results immaculate S1904M
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: S1904M Tue 30 Jan 2001 04:40 PST
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Movement results for Spring of 1904.  (immaculate.S1904M)
+
+Austria: Fleet Trieste -> Venice.  (*bounce*)
+Austria: Army Vienna HOLD.
+Austria: Army Galicia SUPPORT Army Rumania.
+Austria: Army Serbia SUPPORT Army Bulgaria.
+Austria: Army Rumania HOLD.
+Austria: Army Bulgaria HOLD.
+
+England: Army Norway -> St Petersburg.  (*bounce*)
+England: Army Denmark HOLD.
+England: Fleet Barents Sea SUPPORT Army Norway -> St Petersburg.
+England: Fleet Baltic Sea -> Livonia.
+England: Fleet Skagerrak -> Sweden.
+England: Fleet North Sea HOLD.
+
+France: Army Kiel -> Berlin.
+France: Fleet Holland -> Kiel.
+France: Army Munich -> Silesia.
+France: Army Tyrolia -> Venice.  (*bounce*)
+France: Fleet Tyrrhenian Sea -> Naples.
+France: Fleet Western Mediterranean -> Tyrrhenian Sea.
+France: Fleet Brest -> Mid-Atlantic Ocean.
+France: Army Paris -> Burgundy.
+France: Fleet Marseilles -> Piedmont.
+
+Germany: Army Berlin -> Prussia.
+
+Italy: Fleet Tunis SUPPORT Fleet Aegean Sea -> Ionian Sea.
+Italy: Fleet Eastern Mediterranean SUPPORT Fleet Aegean Sea -> Ionian Sea.
+Italy: Fleet Aegean Sea -> Ionian Sea.
+Italy: Army Greece HOLD.
+Italy: Army Venice HOLD.
+
+Russia: Army Armenia SUPPORT Army Sevastopol.
+Russia: Army Sevastopol SUPPORT Army Armenia.
+Russia: Army St Petersburg HOLD.
+Russia: Fleet Gulf of Bothnia SUPPORT Army St Petersburg.
+
+Turkey: Army Constantinople HOLD.
+Turkey: Fleet Black Sea -> Ankara.
+Turkey: Fleet Smyrna HOLD.
+
+The next phase of 'immaculate' will be Movement for Fall of 1904.
+The deadline for orders will be Monday 26 February 2001 02:00 PST.
+
+>From dpjudge@diplom.org Sun Feb 25 12:20:15 2001
+Subject: Diplomacy results immaculate F1904M
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1904M Mon 26 Feb 2001 02:00 EST
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Movement results for Fall of 1904.  (immaculate.F1904M)
+
+Austria: Fleet Trieste SUPPORT French Army Tyrolia -> Venice.
+Austria: Army Vienna HOLD.
+Austria: Army Galicia -> Warsaw.
+Austria: Army Serbia SUPPORT Army Bulgaria -> Greece.
+Austria: Army Rumania -> Ukraine.
+Austria: Army Bulgaria -> Greece.
+
+England: Fleet Sweden -> Gulf of Bothnia.  (*bounce*)
+England: Fleet Livonia -> Baltic Sea.
+England: Fleet North Sea -> Holland.  (*bounce*)
+England: Fleet Barents Sea SUPPORT Army Norway -> St Petersburg.
+England: Army Norway -> St Petersburg.
+England: Army Denmark -> Kiel.  (*bounce*)
+
+France: Fleet Mid-Atlantic Ocean -> Western Mediterranean.  (*bounce*)
+France: Fleet Piedmont -> Tuscany.
+France: Fleet Naples SUPPORT Fleet Tyrrhenian Sea -> Rome.
+France: Army Berlin HOLD.
+France: Army Silesia SUPPORT Austrian Army Galicia -> Warsaw.
+France: Army Tyrolia -> Venice.
+France: Fleet Tyrrhenian Sea -> Rome.
+France: Army Burgundy -> Belgium.
+France: Fleet Kiel -> Holland.  (*bounce*)
+
+Germany: Army Prussia -> Warsaw.  (*bounce*)
+
+Italy: Fleet Tunis -> Western Mediterranean.  (*bounce*)
+Italy: Fleet Ionian Sea -> Tyrrhenian Sea.
+Italy: Fleet Eastern Mediterranean -> Ionian Sea.
+Italy: Army Greece HOLD.  (*dislodged*)
+Italy: Army Venice -> Rome.  (*bounce, dislodged*)
+
+Russia: Army Sevastopol -> Moscow.
+Russia: Army Armenia -> Sevastopol.
+Russia: Army St Petersburg HOLD.  (*dislodged*)
+Russia: Fleet Gulf of Bothnia SUPPORT Army St Petersburg.  (*cut*)
+
+Turkey: Army Constantinople HOLD.
+Turkey: Fleet Ankara HOLD.
+Turkey: Fleet Smyrna -> Aegean Sea.
+
+The following units were dislodged:
+
+The Italian army in Venice can retreat to Piedmont or Apulia.
+The Italian army in Greece can retreat to Albania.
+The Russian army in St Petersburg can retreat to Finland.
+
+The next phase of 'immaculate' will be Retreats for Fall of 1904.
+The deadline for orders will be Monday 26 February 2001 12:20 EST.
+
+
+>From dpjudge@diplom.org Tue Jan  9 01:43:12 2001
+Subject: Diplomacy results immaculate F1904R
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1902R Tue 9 Jan 2001 17:00 PDT
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Retreat orders for Fall of 1904.  (immaculate.F1904R)
+
+Italy:    Army Venice -> Piedmont.
+Italy:    Army Greece DISBAND.
+Russia:   Army St Petersburg -> Finland.
+
+
+Ownership of supply centers:
+
+Austria:  Budapest, Bulgaria, Greece, Rumania, Serbia, Trieste, Vienna, Warsaw.
+England:  Denmark, Edinburgh, London, Liverpool, Norway, St Petersburg, Sweden. 
+France:   Belgium, Berlin, Brest, Holland, Kiel, Marseilles, Munich, Naples,
+          Paris, Portugal, Rome, Spain, Venice.
+Italy:    Tunis.
+Russia:   Moscow, Sevastopol.
+Turkey:   Ankara, Constantinople, Smyrna. 
+
+Austria:   8 Supply centers,  6 Units:  Builds   2 units.
+England:   7 Supply centers,  6 Units:  Builds   1 unit.
+France:   13 Supply centers,  9 Units:  Builds   4 units.
+Germany:   0 Supply centers,  1 Units:  Removes  1 unit.
+Italy:     1 Supply center,   3 Units:  Removes  2 units.
+Russia:    2 Supply centers,  4 Units:  Removes  2 units.
+Turkey:    3 Supply centers,  3 Units:  Builds   0 units.
+
+
+The next phase of 'immaculate' will be Adjustments for Winter of 1904.
+The deadline for orders will be Friday 26 January 2001 18:00 PST.
+
+>From dpjudge@diplom.org Sat Jan 27 04:42:45 2001
+Subject: Diplomacy results immaculate W1904A
+
+:: Judge: USDP  Game: immaculate  Variant: standard xtalball
+:: Deadline: F1903B Fri 26 Jan 2001 18:00 PST
+:: URL: http://www.diplom.org/dpjudge?game=immaculate
+
+Adjustment orders for Winter of 1904.  (immaculate.W1904A)
+
+Austria:   Builds an army in Budapest.
+Austria:   1 unused build pending.
+England:   Builds a fleet in London.
+France:    Builds an army in Paris.
+France:    Builds a fleet in Brest.
+France:    Builds a fleet in Marseilles.
+Germany:   Removes the army in Prussia.
+Italy:     Removes the fleet in the Ionian Sea.
+Italy:     Removes the fleet in the Tyrrhenian Sea.
+Russia:    Removes the army in Sevastopol.
+Russia:    Removes the army in Moscow.
+
+The next phase of 'immaculate' will be Movement for Spring of 1905.
+The deadline for orders will be Tuesday 30 January 2001 04:40 PST.

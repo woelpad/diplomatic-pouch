@@ -1,0 +1,182 @@
+<title>DP Online: Time Travel Diplomacy</title>
+
+<H1 align=center>Time Travel Diplomacy</H1>
+<H2 align=center>Manus Hand, Pitt Crandlemire, and Wes Makin</H2>
+
+<dl>
+
+<dt><b>I. Introduction</b>
+<dd>
+In Time Travel Diplomacy (TTD), the armies and fleets of a power may be
+ordered to transport themselves through time.  These pieces, then, can
+make surprise appearances behind enemy lines, and suddenly occupy and
+take foreign supply centers.
+<P>
+Units are ordered to move <tt>FROM</tt> and <tt>TO</tt> specified future
+phases of the game, without moving from one location to another.  This is
+important to note.  A unit moving through time does <i>not</i> move through
+space -- it does <i>not</i> change locations.
+
+<p>
+<dt><b>II. New Orders</b>
+<dd>
+On any movement phase, in addition to the well-known support, convoy,
+move, and hold orders, players have at their disposal two time travel orders,
+the <tt>FROM</tt> and <tt>TO</tt> orders.
+<!-- p>
+Note that Time Travel orders are only allowed in <i>Spring</i> phases;
+they are <i>not</i> permitted during <i>Fall</i> movement phases.
+-->
+<P>
+The maximum number of time travel orders that may be issued on any turn
+by each player is the number of supply centers then controlled by the
+smallest, uneliminated player in the game.
+
+<P>
+<dl>
+<dt><b>II.1 The <tt>FROM</tt> Order</b>
+<dd>
+The <tt>FROM</tt> order is used to call a unit <i>back</i> from some
+future turn of the game.  The order must specify:
+<ul>
+<li>a unit type (army or fleet),
+<li>a single location (from which the unit moves and where the unit will
+    attempt to materialize on the present turn), and
+<li>the game-turn from which the unit is to travel.
+</ul>
+<P>
+The game-turn from which a unit is ordered to travel must be no less than
+one and no more than six game-turns (three game-years) ahead of the present
+phase. <!-- , and must
+be a Spring phase. -->  For example, in Spring of 1901, units may be ordered
+<tt>FROM</tt> any future movement phase up to and including 
+Spring of 1904.
+<P>
+<tt>FROM</tt> orders function mechanically like any move attempt made from
+an adjacent space; that is, units ordered <tt>FROM</tt> the future may be
+stood off and may be supported in their attempt to materialize.
+<P>
+An example <tt>FROM</tt> order would be:  <tt>Fleet Brest FROM S1902</tt>.
+This order calls for a fleet (owned by the ordering power) to (attempt to)
+materialize in Brest on the present turn.  Additionally, <i>regardless of
+whether the <tt>FROM</tt> order succeeds or is stood off,</i> the ordering
+power is <i>committed</i> by this order (under penalty described  in rule
+III.1, below) to
+have a fleet in place at Brest at the beginning of Spring, 1902.
+<p>
+A power may <b>not</b> call two units <tt>FROM</tt> the same time and place.
+That is, once a <tt>FROM</tt> order has been given specifying a unit,
+location, and time, the player may not, in <i>any</i> later phase, issue another
+<tt>FROM</tt> order that specifies the same time and place.
+
+<P>
+<dt><b>II.2 The <tt>TO</tt> Order</b>
+<dd>
+The <tt>TO</tt> order allows a player to send one of his units into the
+future.  Like the <tt>FROM</tt> order, the phase to which a player may
+(attempt to) send a unit with a <tt>TO</tt> order must be a no more than
+three game-years ahead of the present phase.
+<P>
+When the specified movement phase arrives, units that had been sent
+<tt>TO</tt> that phase may be stood off and may be supported in their
+attempt to materialize if the corresponding <tt>FROM</tt> order is issued
+by the player.  If such 
+a unit is stood off, it is simply considered to have been destroyed.
+<P>
+An example <tt>TO</tt> order would be <tt>Army Moscow TO S1904</tt>.
+Such an order might be used if Moscow was in danger of falling into enemy
+hands.  It obliges the enemy to remember to defend Moscow against a coming
+future invasion.
+<P>
+Tactically, the <tt>TO</tt> order can be used to free up extra builds.
+By sending units in poor locations off the board,
+the player may find himself able to build more new units in the coming
+adjustment phase than he would otherwise have been able to build.
+<P>
+Additionally, a <tt>TO</tt> order, in combination with a <tt>FROM</tt>
+order issued for the same location, can be used to swap an army for a fleet
+or vice-versa.  For example, <tt>A BER TO S1902</tt> and <tt>F BER FROM
+S1904</tt> has the effect of putting a fleet in Berlin instead of an army.
+</dl>
+
+<p>
+<dt><b>III. Temporal Loops</b>
+<P>
+<dl>
+<dt><b>III.1 Paradoxes</b>
+<dd>
+If a player issues a <tt>FROM</tt> order and then does <b>not</b> have the
+specified unit in place at the beginning of the specified future phase,
+the player may not issue orders for <i>any</i> of his units on that turn.
+All units owned by that power creating the "paradox" will <tt>HOLD</tt>
+for that turn.
+
+<p>
+<dt><b>III.2 Loop Closure Not Required</b>
+<dd>
+Notice that if a paradox is avoided by the existence of a unit that was
+mentioned in a previously given <tt>FROM</tt> order, all requirements on the
+player are immediately lifted.  That is, while a player is free to do so, he
+is not <i>required</i> to issue the corresponding <tt>TO</tt>
+order for any <tt>FROM</tt> order that he had earlier used to call a unit
+from the future.  To avoid the paradox penalty, he must only be <i>able</i>
+to issue such an order.
+<p>
+For example, if a fleet in Skagerrak is called
+back from Spring 1903 during the Spring 1901 turn, and if such a fleet (not
+necessarily the same fleet, but one owned by the same
+power) is indeed in Skagerrak at the beginning of Spring 1903 (thus avoiding
+the paradox penalty), this fleet does
+<i>not</i> need to be ordered <tt>TO</tt> the past.  It may be
+given <i>any</i>
+valid order (including not only that <tt>TO</tt> order, but any other
+<tt>TO</tt> order, or any move, support, hold, or convoy order).
+<P>
+Similarly, units which are ordered <tt>TO</tt> a future phase need
+<i><b>not</b></i>
+be issued the corresponding <tt>FROM</tt> order when that future phase
+arrives.  Any power neglecting to issue such an order is not penalized in
+any way other than by the loss of the unit that would otherwise have (attempted
+to) materialize.
+</dl>
+
+<p>
+<dt><b>IV. Game Termination</b>
+<dd>
+<dl>
+<P>
+<dt><b>IV.1 Victory</b>
+<dd>
+If at the conclusion of a Fall movement or retreat phase, a player has reached
+the game's victory condition, the game continues from that point until
+the beginning of the latest game-turn that had been mentioned in any
+<tt>FROM</tt> order that had been issued by the would-be victorious power.
+<P>
+For this continuation, the would-be victor must specify whether or not time
+travel orders (<tt>FROM</tt> and <tt>TO</tt>) are to be permitted.  After each
+Fall movement or retreat phase during this continuation period, any player
+controlling the majority of supply centers is entitled to dictate whether
+time travel orders are to be allowed in the coming year.
+<P>
+If, after playing until the beginning of the latest game-turn mentioned in any
+<tt>FROM</tt> order issued by the would-be victor, no paradox exists that was
+caused by that player <b>and</b> if that player controls more supply
+centers than any other single player, he is declared the winner and the game
+is over.
+<P>
+If, however, the player is forced to suffer the paradox penalty of having his
+units <tt>HOLD</tt> during the turn about to begin <b>or</b> if the player
+does <b>not</b> control more supply centers than does any other player, the
+game simply continues, with time travel orders permitted.  At the conclusion of
+that game-year, victory conditions are checked anew.
+
+<P>
+<dt><b>IV.2 Draws</b>
+<dd>
+Draws equally rewarding all surviving players may be declared by the players
+at any time.  In such cases, any pending potential paradoxes are ignored and
+the game ends immediately.
+
+</dl>
+
+</dl>

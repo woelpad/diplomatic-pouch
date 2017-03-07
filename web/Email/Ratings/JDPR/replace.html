@@ -1,0 +1,107 @@
+<HTML>
+<HEAD>
+<TITLE>DP: Judge Diplomacy Player Ratings</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#ffffff">
+<p align=center>
+<A HREF="..">
+<IMG SRC="../../../Common/DPLogo.gif"
+ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="../../../Common/DPLinks.gif" ALT="Shortcuts"
+HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
+<br clear=all>
+<img src="../../../Common/reddot.gif" height=2 width=100%>
+
+<H1> Judge Diplomacy Player Ratings -- Replacement Policy </H1>
+
+What happens if one of the original powers is replaced?  Well, it depends.
+<p>
+<DL>
+<DT>
+If that power is eventually eliminated or survived someone else's win or
+NoDIAS draw -- in other words, it doesn't win any of the points from the
+game -- then this happens:
+<DD>
+<P>
+The strength of the power (for the purposes of calculating the strength
+of the game, which is the denominator in the equation to determine the
+expected scores (X) for all the players) is the pro-rated average of all
+the players that were that power during the game.  So, given this example:
+<P>
+Germany 1:  Rated 890, played from S1901M to F1903R<br>
+Germany 2:  Rated 1140, played from F1903B to F1909B and eliminated.<br>
+<p>
+The strength of Germany is 14/45 times the power of Germany 1, plus 31/45
+times the power of Germany 2 -- that's pro-rated by phases played.
+<p>
+Using e^(R/500) to determine the strength of a player from his rating,
+we see it's 0.31 * 5.93 + 0.69 * 9.78, or 8.59.  That's the strength of
+a player who's rated 1075 (since 500 * ln(8.59) = 1075), which seems
+about right.
+<p>
+Strengths for the other powers are generated the same way, and expected
+values are seven times the strength of a power, divided by the sum of
+the strengths of the seven powers.  This number will average 1.0.
+<p>
+For Germany, though, the first power is assigned a expected value as
+though he had played the whole game, whereas all replacements have an
+expected value (X) of 0.  So if this game had a total strength of 51.22,
+then X for Germany 1 would be 7 * 5.93 / 51.22 = 0.81, and X for
+Germany 2 would be 0.0. S for both would be 0.0, since Germany was
+eliminated.  So Germany 1 would suffer a full-sized hit to his rating,
+whereas Germany 2 wouldn't change at all.  Germany 2 doesn't even have
+this game added to his total of games played.
+<p>
+<DT>
+If the power with multiple players eventually shares in the draw or wins
+the game, then this happens:
+<DD>
+<P>
+The strength of the power is calculated the same way as above -- a
+pro-rated average of the players who ran the power during the game.
+<p>
+The expected values are also pro-rated, though.  So in the example
+above (we'll assume the game ended in F1909B in a AEGIR draw), X for
+Germany 1 is 0.31 * 5.93 * 7 / 51.22 = 0.25 and X for Germany 2 is
+0.69 * 9.78 * 7 / 51.22 = 0.92.
+<p>
+The points won from the game are pro-rated as well.  For Germany 1,
+that's 0.31 * 7 / 5 = 0.43; for Germany 2, it's 0.69 * 7 / 5 = 0.97.
+These values are used as usual to figure out the Delta by which each
+player's rating goes up or down, based on this game.
+<P>
+Note that for Germany 2, his score (0.97) barely exceeded his expectation
+(0.92), which means his rating will go up only a little bit.  If it
+had been a six-way draw or if his opponents had lower ratings (which
+would have increased his expected score), he might have had a lower
+score than expectation.  In the case of a replacement player, he would
+NOT lower his rating based on this game -- it would remain unchanged.
+Replacement players can't lower their ratings -- ever!  However, if you
+thinking of puffing up your JDPR rating by taking on lots of replacement
+positions, here's a word of warning -- it's a slow, laborious way to
+do so, and what gain you make will only leave you *overrated* for the
+games you *do* start (which will cause your rating to drop back towards
+its "actual" value).
+<p>
+</dl>
+<img src="../../../Common/reddot.gif" height=2 width=100%>
+<H5>
+<p align=center>
+[       <a href="../../../Zine">The Zine</a> |
+        <a href="../../../Online">Online Resources</a> |
+        <a href="../../../Showcase">Showcase</a> |
+        <a href="../../../Postal">Postal</a> |
+        Email |
+        <a href="../../../Face">Face to Face</a>
+]
+<br>
+<i>The Diplomatic Pouch is brought to you by
+<a href="../../../Council.html">the DP Council</a>.
+<br>
+The Email Diplomacy section is maintained by <a href="mailto:lawyerted@prodigy.net">Ted Miller</a>.
+</i>
+
+</body>
+</html>

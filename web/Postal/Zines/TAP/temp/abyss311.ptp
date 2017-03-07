@@ -1,0 +1,12 @@
+# PCTeX Project File, Version 1.1
+	name: abyss311
+	texformat: plain
+	typesetmode: DVI
+abyss311.TEX
+	wndpos: 1 -1 -1 -4 -30 22 29 714 397
+	zorder: 1
+	edit: 36857
+abyss311.log
+abyss311.DVI
+	wndpos: 3 -1 -1 -4 -30 66 87 740 528
+	zorder: 0

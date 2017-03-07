@@ -1,0 +1,32 @@
+#!/home/dippouch/bin/python
+
+import string
+
+def doit(dict, total, indent = ''):
+	per = 0.0
+	for i in range(8):
+		if dict.has_key(i):
+			print '%s%d-way: %4d == %6.2f%%' % (indent, i, dict[i],
+				float(dict[i]) * 100 / total)
+			per = per + dict[i]
+	print '%stotal: %4d == %6.2f%%' % (indent, per, per * 100 / total)
+
+dict = {}
+
+file = open('allResults')
+lines = file.readlines()
+for line in lines:
+	word = string.split(line)
+	size = len(word)
+	dict[size] = dict.get(size, 0) + 1
+	for i in word:
+		if not dict.has_key(i): dict[i] = {}
+		dict[i][size] = dict[i].get(size, 0) + 1
+total = doit(dict, len(lines))
+keys = dict.keys()
+keys.sort()
+for i in keys:
+	if type(i) != type(0):
+		print i
+		doit(dict[i], len(lines), '\t')
+

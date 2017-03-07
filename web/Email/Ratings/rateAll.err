@@ -1,0 +1,12 @@
+Traceback (innermost last):
+  File "rateGame", line 29, in ?
+    map(rating.figureGame, list)
+  File "rating.py", line 241, in figureGame
+    if player[guy][GAME].has_key(gameName):
+AttributeError: 'string' object has no attribute 'has_key'
+Traceback (innermost last):
+  File "rateGame", line 29, in ?
+    map(rating.figureGame, list)
+  File "rating.py", line 241, in figureGame
+    if player[guy][GAME].has_key(gameName):
+AttributeError: 'string' object has no attribute 'has_key'

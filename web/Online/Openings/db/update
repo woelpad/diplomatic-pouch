@@ -1,0 +1,13 @@
+#!/bin/ksh
+
+if [ $# = 0 ]
+then
+	list="Austria England France Germany Italy Russia Turkey"
+else
+	list=$*
+fi
+for i in $list
+do
+	print $i
+	python ./nopenings $i > ../$i.html
+done

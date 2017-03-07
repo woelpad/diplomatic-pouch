@@ -1,81 +1,142 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML><HEAD>
-<TITLE>DP F2013R: Creepy Crawlies - Machiavelli, Part II</TITLE>
+
+<HTML><HEAD><TITLE>DP F2013R: Creepy Crawlies - Machiavelli, Part II</TITLE>
+
 <!-- ---------------------Header---------------------------------- -->
 <!-- ------------------------------------------------------------- -->
+
 <!---- Authored by  ---->
 <!---- Published on the Pouch Zine with permissions ---->
 <!---- Created on September 23, 2006 ---->
+
 </head>
+
 <body style="background-color: rgb(255, 255, 255);">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton2.gif" align="left" border="0"></a>
-<a href="/Zine/F2013R/"><img src="/Zine/Common/toF2013R.gif" align="right" border="0"></a>
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toF2013R.gif" align="right" border="0"></a>
 <br clear="all">
 <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
+
+
 <CENTER>
 <H1>CREEPY CRAWLIES:<BR/>HOW TO PLAY MACHIAVELLI,<BR/>PART II</H1>
 <h2>by Bruce Duewer & Sergio Lidsell</h2>
 <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
 </CENTER>
 <p>
-<TABLE WIDTH="95%" BORDER="0" ALIGN="CENTER">
-<TR>
-<TD ALIGN="JUSTIFY">
+  <TABLE WIDTH="95%" BORDER="0" ALIGN="CENTER">
+      <TR>
+	      <TD ALIGN="JUSTIFY">
+
+
+
 <p>Yes, the nJudge does still have a couple of known bugs, and probably several unknown bugs. This articles purpose is to help players and GMs, that use the nJudge automated judges, identify and handle those bugs. The first part of the article is a list of the most important ones, with a short description of the fix. The second part discusses in depth how to actually perform a fix.</p>
-<p>Let us know if you know of more bugs. Suspect bugs should be reported to the GM of your game. The GM will then thoroughly check the game for player errors or mistakes and perhaps contact some ‚Äúauthority‚Äù for a second opinion. If, at this point, all other possible explanations have been excluded, the issue should be reported to the nJudge bug tracking web site.</p>
-<p>If you are interested in a description of the old bugs see <a href="/Zine/F1999M/Duewer/machart.html">Bruce‚Äôs article</a> and <a href="/Zine/S2004M/lidsell/MachVIII.html">Sergio‚Äôs article</a> about the fixes.</p>
-<h2 align="center">Section I: Eeh, what‚Äôs up, Bugs?</h2>
-<p>For the purposes of this list we‚Äôre assuming the version 2 nJudge rules interpretations. Any coders who are motivated to do so are welcome to shrink this section. The list is current as of nJudge version 1.7.6.7 (may 14 2009 build with post-1.7.6 hotfixes applied). The number within parenthesis refers to the <a href="http://www.njudge.org/bugzilla3/index.cgi">Bugzilla</a> id.</p>
+
+<p>Let us know if you know of more bugs. Suspect bugs should be reported to the GM of your game. The GM will then thoroughly check the game for player errors or mistakes and perhaps contact some ìauthorityî for a second opinion. If, at this point, all other possible explanations have been excluded, the issue should be reported to the nJudge bug tracking web site.</p>
+
+<p>If you are interested in a description of the old bugs see <a href="../../F1999M/Duewer/machart.html">Bruceís article</a> and <a href="../../S2004M/lidsell/MachVIII.html">Sergioís article</a> about the fixes.</p>
+
+<h2 align="center">Section I: Eeh, whatís up, Bugs?</h2>
+
+<p>For the purposes of this list weíre assuming the version 2 nJudge rules interpretations. Any coders who are motivated to do so are welcome to shrink this section. The list is current as of nJudge version 1.7.6.7 (may 14 2009 build with post-1.7.6 hotfixes applied). The number within parenthesis refers to the <a href="http://www.njudge.org/bugzilla3/index.cgi">Bugzilla</a> id.</p>
+
 <h3>Bugs alive and kicking</h3>
+
 <h4>Wrongful elimination</h4>
+
 <p>Elimination may erroneously occur before retreats. Should the retreat have made the player survive the GM has to roll back and cleverly edit orders to correct this or edit the seed file. (#464)</p>
+
 <p>But even worse is that erroneous elimination due to a bribe can happen before moves. This will only happen when a power has one sole unit in the last home city or province controlled, and that unit in is bought or, if a garrison, turned autonomous. If caused by turning a garrison autonomous the problem is best solved by postponing the bribe until the following season and ordering hold for the affected unit. If it happens by buying a unit there is no good advice as any solution may affect the game. (#534)</p>
+
 <h4>In unfriendly straits</h4>
+
 <p>The straits rules are complicated and one permutation was missed. When an enemy unit advances into e.g. Messina and bounces, any move by the Messina controlling player between GON and ION will fail. This is easily corrected by rolling back the game and ordering the bouncing unit  to hold instead. (#511)</p>
+
 <p>A similar bug occurs if the unit controlling e.g. MES is disbanded or bought. In that case control does not lapse or pass to the new owner and any move between GON and ION by any other power than the old owner of Messina will fail. This is much trickier to correct as it could require two rollbacks to solve. (#537)</p>
+
 <h4>Give a little helping rebel hand</h4>
+
 <p>Besieged G allowed to convert with rebellion support in the 2nd siege turn. This happened when a creative player (who obviously had not bothered to read the rules) caused rebellion in the containing province. Easily solved with a rollback. (#521)</p>
+
 <h4>Spy vs Spy</h4>
+
 <p>There is a report of a turn being processed before all orders were in. This would severly disrupt a game should it happen. We have no really good advice on how to handle this. (#543)</p>
-<h4>Frankensteins‚Äôs siege</h4>
+
+<h4>Frankensteinsís siege</h4>
+
 <p>The judge may not correctly lift a siege if a player changes the besieging units orders to support or hold. (#529)</p>
+
 <h3>And some annoying features&#8230</h3>
+
 <h4>Rebels loves Venice</h4>
+
 <p>Well, we managed to quash all illegal Venice retreat bugs, but forgot to correct the retreat info message. The judge will wrongly tell players that a retreat into a rebelling Venice is possible. Adjudication is correct though, so the happy player believing he could retreat will suddenly lose a fleet causing the GM work to correct this. (#512)</p>
+
 <h4>Build-disband stumble</h4>
+
 <p>Ordering to disband a special unit in the same order set (e-mail) as a build of a special unit will raise an error message in the nJudge response mail. You have to first send an e-mail with a disband order and then send another email with a build order (#383).</p>
+
 <p>A similar problem occurs if a player orders to buy two special units in the same order set (e-mail). In that case the player should issue an Expense #: none for both orders (# is the expense identifier, a number between 1 and 4) (#548). The judge should in this case void both expenses and flag them as an order error.</p>
+
 <h3>Quick, quick! Do something! We're gonna crash!</h3>
+
 <p>Short list of bugs solved by post-1.7.6 hotfixes. Mainly intended for judge keepers.</p>
+
 <ul>
 <li>Solved in ma_retreat.c vers. 1.8: Rebellion changes ownership and is not removed (#425 and #489).</li>
 <li>Solved in ma_build_basic.c vers. 1.9: Spurious judge/game crashes (#522, reappearance of #303).</li>
 <li>Solved in ma_build.c vers. 1.16: Build/disband G/A in same province (#541). Do notice that this bug still affects build/disbands of special units.</li>
 <li>Solved in draw.c vers. 1.19: Concessions and duplex game support (#549).</li>
-<li>Solved in ma_porder.c vers. 1.29: Conquered home countries lost when only the cities were lost (#532).</li>
+<li>Solved in ma_porder.c vers. 1.29: Conquered home countries lost when only the cities were lost (#532).</li>  
+
 </ul>
+
+
 <h2 align="center">Section II: Dealing With Bugs</h2>
+
 <h3>Rollbacks</h3>
-<p>Rollbacks are a simple judge mechanism whereby a processed turn is returned to a state before the turn. All players‚Äô orders are set to the state they were immediately before processing. At this point, the GM can change the orders or expenses of any power using the "become" command. Once they have all been set to what is necessary to overcome the results of a given bug, the "process" command is used to move the game forward again. Simple, eh?</p>
+ 
+<p>Rollbacks are a simple judge mechanism whereby a processed turn is returned to a state before the turn. All playersí orders are set to the state they were immediately before processing. At this point, the GM can change the orders or expenses of any power using the "become" command. Once they have all been set to what is necessary to overcome the results of a given bug, the "process" command is used to move the game forward again. Simple, eh?</p> 
+
 <p>Well, actually there are side effects. While use of seed values for the semi-random dice generation routines means that usually rolls should be the same when a phase is reprocessed, all this really does is make it so that if nothing is changed the rolls will remain the same. If something is changed (say a power is eliminated) this may cause additional rolls to occur or not occur and thus things get out of sync, and for essential game purposes a whole new set of rolls is created.</p>
+
 <p>The principle we suggest is that if the moves were wrong, the rolls may also have been wrong, and the <i>right</i> rolls are those that occur after the rollback. Of course, sometimes an error occurs that in order to fix it by rollback it would be necessary to roll back for multiple movement or build phases. In this case, roll changes may affect too much so it is no longer okay to throw out the old rolls &#8212; anything a player has had to act on should not be pulled out from under them.</p>
+
 <p>The principle we have used in more complex cases are cash wasting bribes (see below) or having player give money, if possible, to another player.</p>
+
 <h3>Predictions</h3>
+
 <p>Before you process a rolled back turn you should run the predict command. The command will give the Master a prediction of the current turn, using orders already entered, even if those are incomplete.</p>
-<h3>Cash Wasting Bribes</h3>
+
+<h3>Cash Wasting Bribes</h3> 
+
 <p>Sometimes a power will have more cash than they should. An easy way to get rid of this cash is for the master to add (or require the player to add) a counter-bribe or bribe for something that will have no effect on the game. For example, a large counterbribe on a unit no one who can throw a bribe has adjacency to (in an Adjacency game). Or an attempt to purchase where the purchase offer is less than 18d.</p>
-<h3>Moving a game to a different Judge</h3>
-<p>Sometimes it is necessary to move a game to another Judge in order for it to continue. Assuming this is done without the availability of the data files, but with at least a listing of the proper game state, the normal way to do this is for all the players to sign on to a new game on the new judge setting their preference list as appropriate to the circumstance. Then the Master enters the necessary orders to bring the game up to proper current positions and bank state (remembering to borrow money at the right times is one of the harder things, as is dealing with rebellions being in the wrong place during assassinations. If you make the assassinations happen sooner, you've got more time to correct this). Finally, the Master may have to have the final state somewhat different from the real one (ex, famine locations if the rolls were valid to create them). In this case, he will have to either modify the judge files or do various order adjustments before each processing until things can be brought back into sync.</p>
-<p>Alternately, if one has the data files, or can create them, they can be moved to the new judge. See the techniques discussed below.</p>
-<h3>Editing Data Files</h3>
-<p>Sometimes, this is the only way to fix a problem. It is easier on some judges than others, but I've found that almost all JKs are willing to send you the necessary files, and then put them in place when you return them. So I describe what I know of the file setup here to help you when you start hacking on it.
-The judge keeps the files for each game mostly in its own directory, with the directory name being the name of the game preceded by a capital D. Some of the game info is also in the dip.master file, but this is all information which is duplicated in the directory as well.</p>
-<p>The files G001, G002, etc are the files used to store all the in depth information about the game state. These are what you need from the GM; specifically you need the file of the phase for which you need to change the state. The phase identifier is the first line in the file.</p>
+
+<h3>Moving a game to a different Judge</h3> 
+
+<p>Sometimes it is necessary to move a game to another Judge in order for it to continue. Assuming this is done without the availability of the data files, but with at least a listing of the proper game state, the normal way to do this is for all the players to sign on to a new game on the new judge setting their preference list as appropriate to the circumstance. Then the Master enters the necessary orders to bring the game up to proper current positions and bank state (remembering to borrow money at the right times is one of the harder things, as is dealing with rebellions being in the wrong place during assassinations. If you make the assassinations happen sooner, you've got more time to correct this). Finally, the Master may have to have the final state somewhat different from the real one (ex, famine locations if the rolls were valid to create them). In this case, he will have to either modify the judge files or do various order adjustments before each processing until things can be brought back into sync.</p> 
+
+<p>Alternately, if one has the data files, or can create them, they can be moved to the new judge. See the techniques discussed below.</p> 
+
+<h3>Editing Data Files</h3> 
+
+<p>Sometimes, this is the only way to fix a problem. It is easier on some judges than others, but I've found that almost all JKs are willing to send you the necessary files, and then put them in place when you return them. So I describe what I know of the file setup here to help you when you start hacking on it. 
+The judge keeps the files for each game mostly in its own directory, with the directory name being the name of the game preceded by a capital D. Some of the game info is also in the dip.master file, but this is all information which is duplicated in the directory as well.</p> 
+
+<p>The files G001, G002, etc are the files used to store all the in depth information about the game state. These are what you need from the GM; specifically you need the file of the phase for which you need to change the state. The phase identifier is the first line in the file.</p> 
+
 <p>After this, is a list of units. If all you need to do is add, remove, or move a unit around, this is easy to do. Note that the power IDs are the same as the press IDs, and autonomous units are identified using the & character.</p>
+
 <p><table border="0" align="center"><tr><td align="left">Example:</td></tr><tr><td><code>Am A Austria<br/>Fm G Mil<br/>&m G Sav</code></td></tr></table></p>
+
 <p>After a -1 token, comes the next section, which can be somewhat more confusing. It is a series of values for province state laid out in a semi-horizontal fashion. The N: lines is the first letter of the province name, n: lines are the next two. The odd thing here is that the file uses three letter abbreviations, which are not unique and in fact some repeat (there are three Wes entries for example). Determining which is which can be interesting. The next lines are the O:, C: and H: which show ownership of province, City and starting Home. The final line is F:, which contains flags famine and such.</p>
+
 <p>Actually it is a vertical representation of horizontal table (go figure?), so it will make more sense if you transpose it back to the horizontal.</p>
+
 <p><table border="0" align="center"><tr><td align="left">Example as it looks in the seed file (case is important):</td></tr><tr><td><code>N:XAAACCM<br/>n:Xlqrari<br/>n:Xbuepel<br/>O:.T.LA&F<br/>C:.T.LA&A<br/>H:.T.LN..<br/>F:0000000</code><code></tr></table></p>
+
+
 <p><table border="0" align="center"><tr><td align="left" colspan="4">And as it would look if transposed and somewhat pretty printed:</td></tr><tr>
 <td><code>Nnn<br/>XXX<br/>Alb<br/>Aqu<br/>Are<br/>Cap<br/>Cre<br/>Mil</code></td>
 <td><code>OCT<br/>...<br/>TTT<br/>...<br/>LLL<br/>AAN<br/>&&.<br/>FA.</code></td>
@@ -90,29 +151,36 @@ The judge keeps the files for each game mostly in its own directory, with the di
 (No home, F unit in prov, A garrison in city)<br/>
 </code></td>
 </tr></table></p>
+
 <p>Sometimes there are double O and C lines O: and o:, and C: and c:. The second lines keeps track of pending ownership changes.</p>
+
 <p>After the sections of N: et al, comes a set of lines that are pairs of D: and A: lines. The D: lists the treasury of the power, then 12 more numbers I assume they have something to do with debt. The A: line lists the power and the assassination chits owned by that power. (Note that while most of the information in the game data file is visible to all players, the assassination chit data is not.)</p>
+
 <p>The next sections are player lists of the normal sort from dip.master, fairly similar to what you'd find in a normal <b>Diplomacy</b> game. You shouldn't need to mess with them, except perhaps the cash and unit count entries, when directly editing the file. Note that these are the sections which duplicate info in dip.master, so if you want to change them you'll want to notify the JK to modify the appropriate part of dip.master as well putting them back in (the last section [between the "-2" and "-" tags]is the dip.master entry minus the passwords, so how to do that should be obvious once he has the fixed DXXX file).</p>
-<p>For more on the nJudge map and seed/status files see <a href="http://medlem.spray.se/machsite/MachHelpers/nJudgeMapFileHOWTO.htm">Sergio‚Äôs technical article</a>.</p>
+
+<p>For more on the nJudge map and seed/status files see <a href="http://medlem.spray.se/machsite/MachHelpers/nJudgeMapFileHOWTO.htm">Sergioís technical article</a>.</p>
+
 <BR/><BR/><TABLE>
-<TBODY>
-<TR vAlign=bottom>
-<TD><A href="mailto:beduewer@gmail.com"><IMG
-src="/Zine/Common/letter.gif" border=0></A> </TD>
-<TD><STRONG>Bruce Duewer<BR/>(<a href="mailto:beduewer@gmail.com">beduewer@gmail.com</a>)</STRONG><td valign="center"><strong><i>or</i>
-<TD><A href="mailto:sigge@lidsell.com"><IMG
-src="/Zine/Common/letter.gif" border=0></A> </TD>
-<TD><STRONG>Sergio Lidsell<BR/>(<a href="mailto:sigge@lidsell.com">sigge@lidsell.com</a>)</STRONG>
-</TD></TR></TBODY></TABLE>
+  <TBODY>
+  <TR vAlign=bottom>
+    <TD><A href="mailto:beduewer@gmail.com"><IMG 
+      src="../../Common/letter.gif" border=0></A> </TD>
+    <TD><STRONG>Bruce Duewer<BR/>(<a href="mailto:beduewer@gmail.com">beduewer@gmail.com</a>)</STRONG><td valign="center"><strong><i>or</i>
+<TD><A href="mailto:sigge@lidsell.com"><IMG 
+      src="../../Common/letter.gif" border=0></A> </TD>
+    <TD><STRONG>Sergio Lidsell<BR/>(<a href="mailto:sigge@lidsell.com">sigge@lidsell.com</a>)</STRONG>  
+  </TD></TR></TBODY></TABLE>
 <P>
-<I>If you wish to e-mail feedback on this article to the author, and clicking
-on the envelope above does not work for you, feel free to use the <A
-href="/Zine/F2013R/Common/DearDP.html">"<B>Dear
-DP...</B>"</A> mail interface.</I>
+<I>If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the <A 
+href="../Common/DearDP.html">"<B>Dear 
+DP...</B>"</A> mail interface.</I> 
 </table><P>
 <HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton2.gif" align="left" border="0"></a>
-<a href="/Zine/F2013R/"><img src="/Zine/Common/toF2013R.gif" align="right" border="0"></a>
+
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
+<a href="../"><img src="../../Common/toF2013R.gif" align="right" border="0"></a>
+
+
 </BODY></HTML>
-<!--
--->
+

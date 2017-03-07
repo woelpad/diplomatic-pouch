@@ -1,0 +1,6 @@
+for file in *.html
+do
+	sed 's///g' $file > $file.2
+	# 72 < $file > $file.2
+	mv $file.2 $file
+done

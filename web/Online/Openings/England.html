@@ -1,0 +1,496 @@
+<title>DP Online: The Diplomacy Openings Library</title>
+
+<BODY BGCOLOR="#ffffff">
+<script language=javascript>
+<!--
+	power = 'England'
+	var varName = new Array()
+	var varDesc = new Array()
+	var u0 = new Array()
+	var u1 = new Array()
+	var u2 = new Array()
+	if (power == 'Russia') var u3 = new Array()
+	
+varName[0] = "eng-north"
+u0[0] = 1
+u1[0] = 1
+u2[0] = 2
+varName[1] = "eng-york"
+u0[1] = 1
+u1[1] = 1
+u2[1] = 2
+varName[2] = "eng-push"
+u0[2] = 1
+u1[2] = 1
+u2[2] = 2
+varName[3] = "eng-magde"
+u0[3] = 1
+u1[3] = 1
+u2[3] = 2
+varName[4] = "eng-northsea"
+u0[4] = 0
+u1[4] = 2
+u2[4] = 2
+varName[5] = "eng-north"
+u0[5] = 1
+u1[5] = 1
+u2[5] = 1
+varName[6] = "eng-magde"
+u0[6] = 1
+u1[6] = 1
+u2[6] = 1
+varName[7] = "eng-splits"
+u0[7] = 1
+u1[7] = 0
+u2[7] = 0
+varName[8] = "eng-northsea"
+u0[8] = 0
+u1[8] = 3
+u2[8] = 2
+varName[9] = "eng-south"
+u0[9] = 0
+u1[9] = 0
+u2[9] = 2
+varName[10] = "eng-atlbind"
+u0[10] = 0
+u1[10] = 0
+u2[10] = 2
+varName[11] = "eng-north"
+u0[11] = 1
+u1[11] = 1
+u2[11] = 3
+varName[12] = "eng-push"
+u0[12] = 1
+u1[12] = 1
+u2[12] = 3
+varName[13] = "eng-magde"
+u0[13] = 1
+u1[13] = 1
+u2[13] = 3
+varName[14] = "eng-yorkpud"
+u0[14] = 3
+u1[14] = 4
+u2[14] = 2
+varName[15] = "eng-south"
+u0[15] = 0
+u1[15] = 0
+u2[15] = 1
+varName[16] = "eng-wales"
+u0[16] = 0
+u1[16] = 0
+u2[16] = 1
+varName[17] = "eng-church"
+u0[17] = 1
+u1[17] = 1
+u2[17] = 0
+varName[18] = "eng-bohas"
+u0[18] = 1
+u1[18] = 1
+u2[18] = 0
+varName[19] = "eng-push"
+u0[19] = 1
+u1[19] = 1
+u2[19] = 0
+varName[20] = "eng-magde"
+u0[20] = 1
+u1[20] = 1
+u2[20] = 0
+varName[21] = "eng-splits"
+u0[21] = 1
+u1[21] = 0
+u2[21] = 1
+varName[22] = "eng-northsea"
+u0[22] = 2
+u1[22] = 1
+u2[22] = 2
+varName[23] = "eng-splits"
+u0[23] = 1
+u1[23] = 0
+u2[23] = 2
+varName[24] = "eng-west"
+u0[24] = 2
+u1[24] = 0
+u2[24] = 1
+varName[25] = "eng-south"
+u0[25] = 0
+u1[25] = 0
+u2[25] = 0
+varName[26] = "eng-atlbind"
+u0[26] = 0
+u1[26] = 0
+u2[26] = 0
+varDesc['comment'] = "--ABOUT THE ENGLISH OPENINGS--</b><dd>"
+varDesc['comment'] += 'English openings are categorized by the orders given to the two fleets, '
+varDesc['comment'] += 'as follows: '
+varDesc['comment'] += '<ul> '
+varDesc['comment'] += '<li>Northern Openings   (F Edi-NWG, F Lon-NTH) '
+varDesc['comment'] += '<li>Southern Openings   (F Edi-NTH, F Lon-ENG) '
+varDesc['comment'] += '<li>Western Opening     (F Edi-Cly, F Lon-ENG) '
+varDesc['comment'] += '<li>The Splits Openings (F Edi-NWG, F Lon-ENG) '
+varDesc['comment'] += '</ul> '
+varDesc['comment'] += '<P> '
+varDesc['comment'] += 'A few other Spring 1901 order sets are named, but these others are usually '
+varDesc['comment'] += 'categorized as "silly" (such as the famous "Yorkshire Pudding" opening). '
+varDesc['comment'] += '<P> '
+varDesc['comment'] += 'Two variants of the Northern Opening, the Yorkshire and the Churchill, '
+varDesc['comment'] += 'are far and away the most common of the English openings. '
+varDesc['comment'] += ' '
+varDesc['eng-splits'] = "THE SPLITS</b><dd>"
+varDesc['eng-splits'] += "Richard Sharp's name for the opening F Lon-ENG and F Edi-NWG. "
+varDesc['eng-splits'] += 'There are three named variations: the Edinburgh, the Wales and '
+varDesc['eng-splits'] += 'the Yorkshire, each named after the army destination. '
+varDesc['eng-splits'] += ' '
+varDesc['eng-south'] = "SOUTHERN OPENING</b><dd>"
+varDesc['eng-south'] += "Richard Sharp's name for the opening F Lon-ENG, F Edi-NTH. There "
+varDesc['eng-south'] += 'are three named variations: '
+varDesc['eng-south'] += '<ul> '
+varDesc['eng-south'] += '<li>the Edinburgh variation, '
+varDesc['eng-south'] += '<li>the Welsh Opening, and '
+varDesc['eng-south'] += '<li>the Yorkshire Opening. '
+varDesc['eng-south'] += '</ul> '
+varDesc['eng-south'] += ' '
+varDesc['eng-wales'] = "SOUTHERN OPENING, WELSH VARIANT</b><dd>"
+varDesc['eng-wales'] += 'Known as the Welsh Opening, this opening is normally attempted when England '
+varDesc['eng-wales'] += 'is quite sure of '
+varDesc['eng-wales'] += 'taking the Channel, a fact seen by its high success rate compared with other '
+varDesc['eng-wales'] += 'Southern openings. Because England only commits to Wales with the surety of '
+varDesc['eng-wales'] += 'a Channel entry, French cooperation is often assumed by the board, and the '
+varDesc['eng-wales'] += 'most common target for the English army is Belgium. As a result, however, the '
+varDesc['eng-wales'] += 'success rate for taking Brest with this opening is extraordinarily high, '
+varDesc['eng-wales'] += 'and any French trust in the English will be tested. '
+varDesc['eng-wales'] += '<P> '
+varDesc['eng-wales'] += 'The <i>Gamer\'s Guide to Diplomacy</i> calls this opening "blatantly '
+varDesc['eng-wales'] += 'anti-French." If France opened to the Mid-Atlantic, she is probably faced '
+varDesc['eng-wales'] += 'with the choice of giving up either Spain or Portugal in order to protect '
+varDesc['eng-wales'] += 'Brest. England may also allow her to slip back in the home center while '
+varDesc['eng-wales'] += 'convoying the army to Belgium instead.  Meanwhile, the North Sea fleet can '
+varDesc['eng-wales'] += 'either support the army into Belgium or take Norway. '
+varDesc['eng-wales'] += ' '
+varDesc['eng-magde'] = "[MAGDEBURG]</b><dd>"
+varDesc['eng-magde'] += 'Named after the German ship wrecked during WWI in the Baltic, which gave Great '
+varDesc['eng-magde'] += 'Britain and Russia access to German naval codes for the remainder of the war, '
+varDesc['eng-magde'] += "this is Manus Hand's Anglo-Russian Northern Opening continuation.  England's "
+varDesc['eng-magde'] += 'task is to convince Germany to open to Denmark and then move to stand Russia '
+varDesc['eng-magde'] += 'out of Sweden.  Russia opens to the Gulf of Bothnia, and, in cahoots with '
+varDesc['eng-magde'] += 'his English ally, assists '
+varDesc['eng-magde'] += 'in isolating the German for a strong 1902 attack.  Russia avoids Sweden in Fall '
+varDesc['eng-magde'] += 'of 1901 and instead sails to the Baltic.  Simultaneously, England takes the '
+varDesc['eng-magde'] += 'vacated Denmark.  Norway can go to either England (the "Prince Louis '
+varDesc['eng-magde'] += 'Madgeburg") or Russia (if Russia opens with a Northern System; this is the '
+varDesc['eng-magde'] += '"Benckendorff Magdeburg").  The Prince Louis (F NWG-Nor in Fall 1901) has '
+varDesc['eng-magde'] += 'the diplomatic advantage of allowing England to claim shock and continued '
+varDesc['eng-magde'] += 'friendship with Germany, but the Benckendorff can be used to force a Spring '
+varDesc['eng-magde'] += 'disband of the German fleet (NWG HOLD in Fall 1901, then NWG-Nor and NTH-SKA '
+varDesc['eng-magde'] += 'in Spring 1902 while Russia moves her Norway army to Finland and send a newly '
+varDesc['eng-magde'] += 'built fleet into the Gulf of Bothnia), forcing the German to play a unit '
+varDesc['eng-magde'] += 'short in Fall of 1902. '
+varDesc['eng-magde'] += ' '
+varDesc['eng-northsea'] = "NORTH SEA OPENING</b><dd>"
+varDesc['eng-northsea'] += "Richard Sharp's name for the opening in which England orders A Lvp-Yor, "
+varDesc['eng-northsea'] += 'sends one fleet to the North Sea and does something &quot;silly&quot; with '
+varDesc['eng-northsea'] += 'the other fleet (usually F Lon H, which provides the opportunity for a '
+varDesc['eng-northsea'] += "supported attack on the English Channel, at the cost of England's 1901 build). "
+varDesc['eng-northsea'] += 'There are two variations: the Clyde (involving Edi-Cly) and the Thames '
+varDesc['eng-northsea'] += '(Lon-Wal). '
+varDesc['eng-northsea'] += ' '
+varDesc['eng-push'] = "[EASTERN PUSH]</b><dd>"
+varDesc['eng-push'] += "Manus Hand's name for the anti-Russian continuation of the Northern opening. "
+varDesc['eng-push'] += 'In Fall of 1901, the Norwegian sea fleet is sent to the Barents Sea while '
+varDesc['eng-push'] += "England's other two units take Norway.  Especially if Russia has opened to the "
+varDesc['eng-push'] += 'south, this opening puts heavy pressure on St. Petersburg, and can thus be '
+varDesc['eng-push'] += 'used to relieve England\'s fellow "witch," the Turk, from Russian aggression.  '
+varDesc['eng-push'] += "If Germany prevents Russia from gaining Sweden, the attack on Russia's north "
+varDesc['eng-push'] += 'can be swift and final, often ending with Russia conceding St. Petersburg to '
+varDesc['eng-push'] += 'the English in return for a promise that only fleets will occupy it.  If '
+varDesc['eng-push'] += "Russia opens Mos-StP, England's better choice is a supported attack on "
+varDesc['eng-push'] += 'Norway, but the threat of a Barents invasion in 1902 (with an occupied '
+varDesc['eng-push'] += 'Norway) remains a strong argument for a Northern Opening. '
+varDesc['eng-push'] += ' '
+varDesc['eng-atlbind'] = "[ATLANTIC BIND]</b><dd>"
+varDesc['eng-atlbind'] += 'In this Fall 1901 continuation of a Southern opening, England sends '
+varDesc['eng-atlbind'] += 'the Channel fleet into the Mid-Atlantic Ocean while convoying to Norway. '
+varDesc['eng-atlbind'] += 'England passes up the slim chance of Brest in exchange for the forward '
+varDesc['eng-atlbind'] += 'position. (The MAO is much harder for England to take once France builds '
+varDesc['eng-atlbind'] += 'a second fleet.) If expelled from MAO, the English fleet can move to the '
+varDesc['eng-atlbind'] += 'Western Mediterranean, threatening Spain, Tunis, and the Gulf of Lyon. '
+varDesc['eng-atlbind'] += ' '
+varDesc['eng-bohas'] = "[BOHAS]</b><dd>"
+varDesc['eng-bohas'] += 'This Fall continuation of the Churchill Opening has the English army '
+varDesc['eng-bohas'] += 'convoying to Norway while the North Sea fleet is sent to Skagerrak. '
+varDesc['eng-bohas'] += 'At the risk of leaving the North Sea open, England gains the ability to '
+varDesc['eng-bohas'] += "start quickly on Russia's Scandinavian holdings, beginning in the south, or "
+varDesc['eng-bohas'] += 'to conduct a surprise attack on a German Denmark. '
+varDesc['eng-bohas'] += ' '
+varDesc['eng-church'] = "NORTHERN OPENING, CHURCHILL VARIANT</b><dd>"
+varDesc['eng-church'] += 'In this Northern Opening variant, known simply as the Churchill Opening, and '
+varDesc['eng-church'] += "named after after Sir Winston's plan to invade Norway in World War II, the "
+varDesc['eng-church'] += 'English army is sent to Edinburgh.  This '
+varDesc['eng-church'] += 'is a little more risky than the pure Northern Opening, as England cannot '
+varDesc['eng-church'] += 'guarantee securing a build in 1901, but it offers more flexibility, since '
+varDesc['eng-church'] += 'England can follow with a Bohas in the Fall, if desired, to exert pressure on '
+varDesc['eng-church'] += 'Sweden in Spring of 1902. The Churchill is usually seen a sign that England is '
+varDesc['eng-church'] += 'more interested in securing a presence in Scandinavia than in worrying about '
+varDesc['eng-church'] += 'the Franco-German relationship, and hence provides an early hint of a triple '
+varDesc['eng-church'] += 'alliance.  Because of this, the Fall destination of the English army is equally '
+varDesc['eng-church'] += 'likely to be Belgium as Norway. '
+varDesc['eng-church'] += '<P> '
+varDesc['eng-church'] += 'The <i>Gamer\'s Guide to Diplomacy</i> calls this "England\'s best opening," '
+varDesc['eng-church'] += 'From Edinburgh rather than Yorkshire, the army can be convoyed by either '
+varDesc['eng-church'] += 'fleet. It thus has the choice of going to Norway or to the Continent. It can '
+varDesc['eng-church'] += 'also be convoyed to Norway by one fleet with support from the other. '
+varDesc['eng-church'] += 'This opening is viewed as primarily anti-Russian. It can also '
+varDesc['eng-church'] += 'be anti-German. One powerful Fall move is A Edi-Nor, F NTH C '
+varDesc['eng-church'] += 'F Edi-Nor, F NWG-BAR, threatening Russia even more directly. '
+varDesc['eng-church'] += ' '
+varDesc['eng-yorkpud'] = "YORKSHIRE PUDDING</b><dd>"
+varDesc['eng-yorkpud'] += 'A joke opening where all the English units are ordered to Yorkshire '
+varDesc['eng-yorkpud'] += 'in Spring 1901. Devised by Denis Jones and used by him in a postal '
+varDesc['eng-yorkpud'] += "game. Strange character, Denis Jones. Needless to say, he didn't "
+varDesc['eng-yorkpud'] += 'do too well in that game. '
+varDesc['eng-yorkpud'] += ' '
+varDesc['eng-west'] = "WESTERN OPENING</b><dd>"
+varDesc['eng-west'] += 'In this opening, England leaves Scandinavia for Russia and Germany to divide, '
+varDesc['eng-west'] += 'and commits all forces to an advance into the Atlantic.  Followed in Fall by '
+varDesc['eng-west'] += 'Cly-NAO and a convoy to Belgium with German support, the Englishman builds a '
+varDesc['eng-west'] += 'fleet in Liverpool and overwhelms France with seapower.  The Western opening '
+varDesc['eng-west'] += 'is extremely risky, and only undertaken with complete trust in the German, '
+varDesc['eng-west'] += 'both for his support into Belgium and his restraint in taking the North Sea. '
+varDesc['eng-west'] += 'If Russia is warned off Norway and commits three units to the south, the German '
+varDesc['eng-west'] += 'can usually conquer all of Scandinavia, his reward for assisting the English. '
+varDesc['eng-west'] += "By the time Germany consolidates Scandinavia, England's defenses against any "
+varDesc['eng-west'] += 'temptation the German may be feeling should be firmed up. '
+varDesc['eng-west'] += ' '
+varDesc['eng-north'] = "NORTHERN OPENING (THE YORKSHIRE OPENING)</b><dd>"
+varDesc['eng-north'] += "Richard Sharp's name for the opening F Lon-NTH and F Edi-NWG. "
+varDesc['eng-north'] += 'There are four named variations: '
+varDesc['eng-north'] += '<ul> '
+varDesc['eng-north'] += '<li>the Yorkshire Opening (the pure Northern Opening), '
+varDesc['eng-north'] += '<li>the Churchill Opening, '
+varDesc['eng-north'] += '<li>the Wales variant, and '
+varDesc['eng-north'] += '<li>the Clyde variant, '
+varDesc['eng-north'] += '</ul> '
+varDesc['eng-north'] += 'In his book, "The Game of Diplomacy," Richard Sharp applied the '
+varDesc['eng-north'] += 'term "Yorkshire Opening" to the pure Northern Opening (A Lvp-Yor). '
+varDesc['eng-north'] += 'Although the offensive role of the English army is limited, this '
+varDesc['eng-north'] += 'opening is the only move to guarantee England a build in 1901, since Yorkshire '
+varDesc['eng-north'] += 'can guard London against a sneaky French assault through the Channel, and one '
+varDesc['eng-north'] += 'fleet can support the other into Norway if Russia opens with A Mos-StP. The '
+varDesc['eng-north'] += 'opening vies in popularity with the "Churchill Opening." Note that it <i>may</i> '
+varDesc['eng-north'] += 'be important which England supports himself into Norway. If Russia orders '
+varDesc['eng-north'] += 'A Mos-StP in Spring of 1901 and A StP-Nor in Fall of 1901 then to achieve '
+varDesc['eng-north'] += 'Norway, the English will need to support a move by the fleet in the North '
+varDesc['eng-north'] += 'Sea, in case Germany orders an attack on the North Sea to cut support. '
+varDesc['eng-north'] += ' '
+
+// -->
+</script>
+	
+
+<BODY BGCOLOR="#ffffff">
+<p align=center>
+<A TARGET=_parent HREF="/DipPouch">
+<IMG SRC="/DipPouch/Common/DPLogo.gif"
+	ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A TARGET=_parent HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="/DipPouch/Common/DPLinks.gif"
+	ALT="Shortcuts" HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
+<BR clear=both>
+<img src="/DipPouch/Common/reddot.gif" height=2 width=100%%>
+<br clear=all>
+<center><H2>The Library of Diplomacy Openings</H2>
+<script language=JavaScript>
+<!--
+function newPower()
+{
+	window.parent.body.document.write('<H3 align=center><font color=red>')
+	window.parent.body.document.write('<blink>...Loading Data For ')
+	window.parent.body.document.write(document.forms[0].power.options[document.forms[0].power.selectedIndex].value)
+	window.parent.body.document.write('...Please Wait...</blink></font>')
+	window.parent.body.document.close()
+	window.location.replace(document.forms[0].power.options[document.forms[0].power.selectedIndex].value + '.html')
+	// document.forms[0].submit()
+}
+// -->
+</script>
+<table>
+<tr><th valign=right>
+	<form name=powerForm method=post action=openings>
+	Openings for&nbsp;<select name=power onChange=newPower()>
+
+<option value=Austria
+>Austria
+<option value=England
+ selected
+>England
+<option value=France
+>France
+<option value=Germany
+>Germany
+<option value=Italy
+>Italy
+<option value=Russia
+>Russia
+<option value=Turkey
+>Turkey
+
+	</select></form>
+	<script language=javascript>
+	<!--
+	function showDesc(key)
+	{
+		window.parent.body.document.write('<dl><dt><b>')
+		window.parent.body.document.write(varDesc[key] + '<p></dl>')
+	}
+	function updateOrder()
+	{
+		openg = document.forms[1].opening
+		key = openg.options[openg.selectedIndex].value
+		if (key == '') return
+		if (key != 'comment')
+		{
+			for (i in varName)
+			{
+				if (varName[i] == key)
+				{
+					document.forms[2].unit0.selectedIndex = u0[i] + 1
+					document.forms[2].unit1.selectedIndex = u1[i] + 1
+					document.forms[2].unit2.selectedIndex = u2[i] + 1
+					if (power == 'Russia')
+						document.forms[2].unit3.selectedIndex = u3[i] + 1
+					break
+				}
+			}
+		}
+		showDesc(key)
+		window.parent.body.document.close()
+	}
+	// -->
+	</script>
+	<th valign=left>
+	<form name=nameForm method=post action=openings target=body>
+	<select name=opening onchange=updateOrder()>
+	<option>--Choose or order an opening--
+
+<option value=comment
+ selected
+>--ABOUT THE ENGLISH OPENINGS--
+<option value=eng-northsea
+>NORTH SEA OPENING
+<option value=eng-north
+>NORTHERN OPENING (THE YORKSHIRE OPENING)
+<option value=eng-church
+>NORTHERN OPENING, CHURCHILL VARIANT
+<option value=eng-south
+>SOUTHERN OPENING
+<option value=eng-wales
+>SOUTHERN OPENING, WELSH VARIANT
+<option value=eng-splits
+>THE SPLITS
+<option value=eng-west
+>WESTERN OPENING
+<option value=eng-yorkpud
+>YORKSHIRE PUDDING
+<option value=eng-atlbind
+>[ATLANTIC BIND]
+<option value=eng-bohas
+>[BOHAS]
+<option value=eng-push
+>[EASTERN PUSH]
+<option value=eng-magde
+>[MAGDEBURG]
+</select><input type=hidden name=power value=England></form>
+
+</table><table><tr><td>
+<script language=javascript>
+<!--
+function setChoice()
+{
+	leform = document.forms[2]
+	un0 = leform.unit0.options[leform.unit0.options.selectedIndex].value
+	un1 = leform.unit1.options[leform.unit1.options.selectedIndex].value
+	un2 = leform.unit2.options[leform.unit2.options.selectedIndex].value
+	if (power == 'Russia')
+		un3 = leform.unit3.options[leform.unit3.options.selectedIndex].value
+	shown = 0
+	for (i in varName)
+	{
+		if (u0[i] == un0 && u1[i] == un1 && u2[i] == un2
+		&& (power != 'Russia' || u3[i] == un3))
+		{
+			if (shown == 0)
+			{
+				shown = 1
+				for (j = 0; j < document.forms[1].opening.options.length; ++j)
+					if (document.forms[1].opening.options[j].value == varName[i])
+					{
+						document.forms[1].opening.selectedIndex = j
+						break
+					}
+			}
+			showDesc(varName[i])
+		}
+	}
+	if (shown == 0)
+	{
+		window.parent.body.document.write('<h3 align=center><font color=red>')
+		if (un0 == -1 || un1 == -1 || un2 == -1
+		|| (power == 'Russia' && un3 == -1))
+		{
+			window.parent.body.document.write('...Fill in Orders for All ' +
+				'Units to Look Up An Opening....')
+		}
+		else
+		{
+			window.parent.body.document.write('This Opening Is Unnamed ' +
+				'and No Information Exists For It!')
+		}
+		window.parent.body.document.write('</h3>')
+		document.forms[1].opening.selectedIndex = 0;
+	}
+	window.parent.body.document.close()
+}
+// -->
+</script>
+<form name=openForm method=post action=openings target=body>
+
+
+		<th valign=top>F Edi <select name=unit0 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-NTH
+<option value=1>-NWG
+<option value=2>-Cly
+<option value=3>-Yor
+</select>
+
+		<th valign=top>F Lon <select name=unit1 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-ENG
+<option value=1>-NTH
+<option value=2>HOLD
+<option value=3>-Wal
+<option value=4>-Yor
+</select>
+
+		<th valign=top>A Lvp <select name=unit2 onchange=setChoice()>
+		
+<option value=-1>??
+<option value=0>-Edi
+<option value=1>-Wal
+<option value=2>-Yor
+<option value=3>-Cly
+</select>
+
+</table>
+<input type=hidden name=power value=England>
+<input type=hidden name=opening value="byOrder">
+<HR>
+</form>
+<script language=JavaScript>
+<!--
+	showDesc('comment')
+	window.parent.body.document.close()
+// -->
+</script>
+

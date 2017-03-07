@@ -1,0 +1,5 @@
+#!/home/dippouch/bin/python
+
+from rating import *
+
+storeGame()

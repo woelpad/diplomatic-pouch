@@ -1,36 +1,44 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head>
 <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+
+
 <title>DP S2009M: The Math of Adjudication</title>
+
 <!-- Authored by Lucas B. Kruijswijk -->
 <!-- Published on the Pouch Zine with permissions -->
 <!-- Created on March 6, 2008 -->
+
 </head><body style="background-color: rgb(255, 255, 255);">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toS2009M.gif" align="right" border="0"></a>
 <br clear="all">
 <hr size="1" width="100%" align="center" style="color: GRAY">
+
 <center>
 <h1>The Math of Adjudication</h1>
 <h2>by Lucas Kruijswijk</h2>
 <hr size="1" width="100%" align="center" style="color: GRAY; margin-bottom: 15px">
 </center>
-<table width="95%" align="center" border="0">
-<tbody><tr>
-<td align="justify">
+  <table width="95%" align="center" border="0">
+      <tbody><tr>
+	      <td align="justify">
 <h2>Two proofs about the Diplomacy rules</h2>
 <p>As said earlier, the interpretation of the official rulebook is encoded in the
 equations, while any follow up is a matter of mathematics. In this chapter we will
 prove two properties of the rules.</p>
 <p>But first, I have to introduce the notion of a &#x201c;dependency graph&#x201d;. If
 we look again at figure 9:</p>
+
 <table align="center">
 <tr><td align="right" width="50%"><img src="figure9.png" width="159" height="263" alt="Figure 9" style="margin-right: 15px"/></td>
 <td align="left"><pre style="margin-left: 15px; font-size: 15px">England:
 F nwg -> nth
+
 Germany:
 F ska Supports F nth -> nwy
 F nth -> nwy
+
 Russia:
 F nwy -> nwg</pre>
 </td></tr></table>
@@ -50,11 +58,13 @@ of the simple recursive algorithm, recursion is entered in the direction of the 
 <i>attack strength</i>, <i>hold strength</i>, and so on &#x2014; but those are shortcut in
 the graph.</p>
 <p>In case of the convoy paradox of figure 7:</p>
+
 <table align="center">
 <tr><td align="right" width="50%"><img src="figure7.png" width="352" height="146" alt="Figure 7" style="margin-right: 15px"/></td>
 <td align="left"><pre style="margin-left: 15px; font-size: 15px">Turkey:
 F aeg -> ion
 F gre Supports F aeg -> ion
+
 Italy:
 A tun -> gre
 F ion Convoys A tun -> gre</pre>
@@ -75,13 +85,16 @@ existence of the Tunis order may cut the support in Greece as a result, but the
 resolution of the Tunis order is of no importance for that matter.</p>
 <p>This subtle difference occurs also in much simpler situations. Consider
 the bounce situation of figure 6:</p>
+
 <table align="center">
 <tr><td align="right" width="50%"><img src="figure6.png" width="270" height="155" alt="Figure 6" style="margin-right: 15px"/></td>
 <td align="left"><pre style="margin-left: 15px;  font-size: 15px">Germany:
 A ber -> sil
 A mun Supports ber -> sil
+
 Russia:
 A war -> sil
+
 Austria:
 A boh -> sil</pre>
 </td></tr></table>
@@ -97,6 +110,7 @@ of both the army in Berlin and the army in Warsaw. The <i>prevent strength</i> o
 Berlin unit is dependent on the success of the <i>support</i> of Munich. For those
 calculations we do not need to know the success or failure of any <i>move</i>. As a
 result, the dependency graph is (surprisingly) as follows:</p>
+
 <center><img src="figure13.png" alt="Figure 13"/></center>
 <center><i>Figure 13.</i></center>
 <p>The dependency graph indicates (correctly) that after resolving Munich, any of the
@@ -254,20 +268,22 @@ must also be a resolution respecting the equations. But this contradicts the ass
 that there is a single resolution. And this proves Theorem II.</p>
 <p>Theorems I and II together prove that an algorithm that can make decisions based
 on partial information will find the unique resolution for a cyclic dependency.</p>
+
 <p><a href="DipMath_Chp4.htm">PREV</a> - <a href="DipMath_Chp6.htm">NEXT</a></p>
 <br><br><table>
-<tbody>
-<tr valign="bottom">
-<td><a href="mailto:editor@diplom.org"><img src="/Zine/Common/letter.gif" border="0"></a> </td>
-<td><strong>Lucas Kruijswijk<br>(<a href="mailto:L.B.Kruijswijk@inter.nl.net">L.B.Kruijswijk@inter.nl.net</a>)</strong>
-</td></tr></tbody></table>
+  <tbody>
+  <tr valign="bottom">
+    <td><a href="mailto:editor@diplom.org"><img src="../../Common/letter.gif" border="0"></a> </td>
+    <td><strong>Lucas Kruijswijk<br>(<a href="mailto:L.B.Kruijswijk@inter.nl.net">L.B.Kruijswijk@inter.nl.net</a>)</strong>
+  </td></tr></tbody></table>
+
 <i>If you wish to e-mail feedback on this article to the author, and clicking
-on the envelope above does not work for you, feel free to use the <a href="/Zine/S2009M/Common/DearDP.html">"<b>Dear
-DP...</b>"</a> mail interface.</i>
+on the envelope above does not work for you, feel free to use the <a href="../Common/DearDP.html">"<b>Dear
+DP...</b>"</a> mail interface.</i> 
 </td></tr></tbody></table>
 <hr size="1" width="100%" align="center" style="color: GRAY; margin-top: 15px">
-<a href="/Zine/"><img src="/Zine/Common/DPbutton.gif" align="left" border="0"></a>
-<a href="/Zine/S2009M/"><img src="/Zine/Common/toS2009M.gif" align="right" border="0"></a>
+
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href="../"><img src="../../Common/toS2009M.gif" align="right" border="0"></a>
+
 </body></html>
-<!--
--->

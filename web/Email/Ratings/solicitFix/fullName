@@ -1,0 +1,23 @@
+#!/home/dippouch/bin/python
+
+import os, sys
+
+for addr in sys.argv[1:]:
+	file = os.popen('/usr/lib/sendmail -t %s' % addr, 'w')
+	file.write('Subject: Your name and the PBEM Ratings\n')
+	file.write("""
+I may very well have asked before and misplaced your reply.
+If so, I apologize, but....
+
+Your full name does not show up in The Diplomatic Pouch's new
+PBEM Player Ratings system -- which can be found at
+   http://www.diplom.org/DipPouch/Email/Ratings
+(only part of your name is showing).
+
+If you would, please let me know your full name so that I may
+use it to update the rankings.
+
+Stab you soon,
+Manus
+	""")
+	file.close()

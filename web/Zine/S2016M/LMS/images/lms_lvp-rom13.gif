@@ -1,0 +1,11 @@
+--2016-04-01 11:29:02--  http://uk.diplom.org/maps/lms_lvp-rom.gif
+Resolving uk.diplom.org... 85.116.189.56, 2a01:348:1f1:10::2
+Connecting to uk.diplom.org|85.116.189.56|:80... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 24229 (24K) [image/gif]
+Saving to: “lms_lvp-rom.gif”
+
+     0K .......... .......... ...                             100%  187K=0.1s
+
+2016-04-01 11:29:03 (187 KB/s) - “lms_lvp-rom.gif” saved [24229/24229]
+

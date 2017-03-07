@@ -1,0 +1,336 @@
+F Nap|A Rom|A Ven
+-ION|-Ven|-Pie|itl-alpine,itl-shuffle,itl-koniggratz
+-TYS|-Ven|-Pie|itl-alpine
+
+-ION|-Ven|-Tyr|itl-tyrolia,itl-boh,itl-okt
+-TYS|-Ven|-Tyr|itl-mcgivern,itl-boh
+
+-ION|-Ven|-Tri|itl-stablep,itl-key
+-ION|-Ven|-Apu|itl-antihedlep,itl-ill
+
+-ION|-Apu|HOLD|itl-lepanto,itl-ill,itl-bwl
+-ION|-Apu|-Tyr|itl-tyrlep
+-ION|-Apu|-Pie|itl-swilep,itl-ill,itl-panther,itl-bwl
+-ION|-Apu|-Tri|itl-keylep,itl-3fleets,itl-ill
+-ION|-Nap|-Tri|itl-keylep,itl-3fleets,itl-ill
+-ION|HOLD|-Apu|itl-lepanto,itl-ill
+-ION|-Nap|HOLD|itl-naplep,itl-ill,itl-bwl
+-ION|-Nap|-Apu|itl-lepanto
+-ION|-Nap|-Pie|itl-lepanto,itl-ill
+-ION|-Nap|-Tyr|itl-tyrlep
+
+-TYS|-Tus|-Pie|itl-westlep
+-TYS|HOLD|-Tri|itl-westlep,itl-3fleets
+
+comment|--ABOUT THE ITALIAN OPENINGS--
+Italian openings are categorized as follows:
+<ul>
+<li>Lepanto Openings        (A Rom-Apu/Nap,   F Nap-ION)
+<li>The Western Lepanto     (A Rom-Nap/Tus/H, F Nap-TYS)
+<li>Austrian Attack Opening (A Rom-Ven,       A Ven-Tri)
+<li>Obriani Openings        (A Rom-Ven,       A Ven-Tyr)
+<li>Alpine Chicken Openings (A Rom-Ven,       A Ven-Pie)
+</ul>
+END
+
+itl-alpine|ALPINE CHICKEN
+This is a somewhat temporizing opening, generally
+seen as pro-Turkey and anti-France. Both east and west options are preserved.
+Often followed in Fall by a Koniggratz Freakout.   Stephen Agar describes
+this opening more completely in his article,
+<a target=_parent href=http://www.spoff.demon.co.uk/articles/alpine.htm><i>Is The Alpine
+Chicken A Tasty Bird?</i></a>
+END
+
+itl-antihedlep|LEPANTO, ANTI-HEDGEHOG VARIATION
+Named by Richard Sharp, the Anti-Hedgeog Lepanto was devised to combat the
+popularity of the Austrian Hedgehog openings, which send Trieste into Venice.
+END
+
+itl-bwl|[BLUE WATER LEPANTO]
+Manus Hand's Fall 1901 continuation of the traditional Lepanto has the
+Italian covering a threatened Venice and feeling forced to take Tunis
+with the Ionian fleet.  The Austrian (who opened to the Adriatic) sails
+to the vacated Ionian to be dislodged by F Nap and F Tun, retreating
+eastward to form part of the convoy chain that carries the Italian army
+to Anatolia.  Described in <a target=_parent href=/Zine/W1999A/Hand/bwl.html>an article
+in The Pouch Zine</a> by Manus Hand and in
+<a target=_parent href=/Zine/F2000M/Pillie/bluewater.html>a follow-up article</a> by
+Derek Pillie.
+END
+
+itl-ill|[ILLYRIAN OPENING]
+A Spring 1902 continuation of the Lepanto that sends F ION-ADR, F Nap-ION,
+and A Ven-Tri. Even
+if A Ven-Tri fails, Fall 1902 provides the choice of either F ADR S Ven-Tri
+with F ION C Tun-Alb, the less aggressive A Ven S Tun-ION-ADR-Tri,
+or the primarily positional F ADR S F ION C Tun-Alb (if Tri looks too secure).
+The point here is that a Lepanto start in 1901 does not preclude an attack on
+Austria as early as Spring of 1902.
+END
+
+itl-shuffle|[ITALIAN SHUFFLE]
+A fall continuation of the Alpine Chicken opening.  With Pie-Tyr and Ven-Tri,
+the point is to confuse or delay France, while delaying the attack on
+Austria for a season, allowing Italy the chance to see if the diplomatic
+and tactical position is right, and to persuade Austria that he is friendly.
+The risks are that the failure to attack Austria right off may antagonize
+Russia or Turkey, and that by violating Piedmont without disabling France
+Italy may have stirred the hornet's nest without setting it afire.
+END
+
+itl-koniggratz|[KONIGGRATZ FREAKOUT]
+Edi Birsan's offbeat German-Italian continuation to the Alpine Chicken,
+A Ven S Pie-Tyr, dislodging
+the German army in Tyrolia, allowing it to retreat to whichever of Vienna
+or Trieste Austria leaves open. Piedmont provides some assurance to
+Germany that the French army in Burgundy will not be tempted to go for Munich,
+especially if Germany announces that he will open A Mun-Tyr.
+END
+
+itl-lepanto|LEPANTO
+Lepanto openings in general feature
+the Spring 1901 moves F Nap-ION and A Rom-Nap, followed by F
+ION C Nap-Tun in autumn, to secure a build of F Nap). The full
+Lepanto would then be pursued with the moves F Nap-ION, F ION-EAS
+and then F EAS C Tun-Syr (or Smy), thus embodying a four season
+strategy directed against Turkey (Italy's traditional rival for
+naval supremacy in the Mediterranean). Indeed, the Lepanto takes
+its name from the Sixteenth Century Battle of Lepanto in which
+an Austro-Italian fleet defeated the Turks. In practice, however,
+the Lepanto is rarely pursued beyond Autumn 1901, after which
+Italian players usually prefer to develop a more flexible strategy.
+As an answer to the Juggernaut, the Lepanto may be the best Italian
+opening, assuming as it does no grave threat from Austria.
+<P>
+Alliance with Austria is essential, with a standoff
+in the Black Sea in Spring 1901 very desirable. Devised and
+popularized by Edi Birsan
+<a target=_parent href=/DipPouch/Zine/S1998M/Birsan/Lepanto.html>read
+the original article on the subject</a>),
+it is probably the best-known named opening.  The Lepanto
+can be turned from anti-Turk to anti-Austrian in 1902 using the
+Illyrian Opening. 
+<P>
+The Lepanto is designed to carry Italian power into the east rapidly.
+This was the first opening ever to be discussed in depth in an
+article. Edi Birsan's work on the subject is still considered
+a model effort.
+<p>This attack on Turkey
+in alliance with Austria, is often enormously effective. Turkey
+can block it by building F Smy and ordering F Smy-EAS. However,
+Italy can order F ION-AEG instead, threatening a convoy into
+Bul, Con, or Smy.
+<P>
+There are a number of variants to the Lepanto Opening:
+<ul>
+<li>Classical Lepanto (A Ven H)
+<li>Tyrolian Lepanto (A Ven-Tyr)
+<li>Key Lepanto (A Ven-Tri)
+<li>Swiss Lepanto (A Ven-Tyr)
+<li>Neopolitan Lepanto (A Rom-Nap)
+<li>Anti-Hedgehog Lepanto (A Ven-Apu, A Rom-Ven)
+</ul>
+<P>
+The Classical Lepanto is often considered too passive, indicative of a distrust
+of Austria; it does, however, have the advantage that A Ven H,
+A Apu S A Ven, F ION-Tun in Fall 1901 saves Venice and still allows Italy
+to build if Austria puts two units against Venice.
+END
+
+itl-tyrlep|LEPANTO, TYROLIAN VARIATION
+The order A Ven-Tyr is favored in many quarters, as it is 
+is positive and powerful. It allows
+A Tyr-Mun if there is an Anglo-German alliance threatening France.
+This will bolster the French defense and help keep the West stalemated.
+A Ven-Tyr may also stand off a German sneak attack from Munich.
+It also gives the possibility of A Tyr-Boh (and thence to Gal),
+adding to Austria's defensive line if this is necessary. 
+<P>
+Common wisdom is that on no account should Italy stab Austria. The
+short-term gains may be all right, but the long-term price is not
+something Italy would wish to pay. On the other hand, Leif Bergman
+advocates just that, stabbing Austria, in his Diplomatic Pouch article
+"<A
+HREF=http://devel.diplom.org/DipPouch/Zine/F1997M/Bergman/Italy.html
+TARGET=_top>Go Fasta Go Fasta</A>."
+END
+
+itl-swilep|LEPANTO, SWISS VARIATION
+The Swiss Lepanto, named by Manus Hand, often unnnecessarily antagonizes
+France. It can be used,
+however, if there is an Anglo-French alliance for sure and Italy wants to
+help Germany.
+END
+
+itl-keylep|LEPANTO, KEY VARIATION
+A Key Opening without the camoflauge (and risk to Austria)
+of Rom-Ven.
+Named by Jeff Key, the inventor, the Key Lepanto is an Italian-Austrian opening
+with A Ven-Tri-Ser (usually with Austrian support to foil A Bul-Ser),
+A Bud-Ser-Gre (latter with support from F Alb). Since Italy gets
+his build in Serbia, he can send his fleet forward to AEG or EAS in Fall
+of 1901. This opening is particularly
+valuable if Turkey opens F Ank-Con, since the traditional Lepanto
+is almost certain to be foiled. If A Bul-Gre is believed unlikely,
+Austria can step up the naval pressure on Turkey with F Alb-ION.
+Italy can readily stab Austria with A Tri-Vie, A Ven-Tri, or
+by gaining Turkish support for A Apu/F ION-Gre, plus A Tri-Alb
+to cut support.
+<P>
+The Lepanto is followed in the south as before. But in the
+north by A Tri-Ser or A Tri-Alb. The purpose here is to get another
+army into the Balkans against Turkey. If Italy holds Serbia at
+the end of 1901, the purpose is to allow her to build two fleets.
+The second fleet is used to help France against England/Germany
+or to challenge England/France. Austria has got to have enormous
+trust in Italy to allow this movement, but that's Diplomacy.
+<P>
+As with the non-Lepanto Key Opening, the temptation to stay in Trieste
+is often too great for an Italian to resist. Consequently, despite the
+overwhelming popularity of the Lepanto as an opening, the Key Lepanto itself
+is rarely seen.
+END
+
+itl-key|[KEY OPENING]
+Jeff Key's Fall continuation to the Austrian Attack which sends the Italian
+army in Trieste to Serbia, revealing a strong Italy/Austria alliance, and
+putting an extra army into the fight against Turkey in the Balkans.
+Austria agrees to give A Ven passage
+through Trieste to attack Serbia (or Greece, through Albania).
+Unfortunately for agreeable Austrian players, most Italians allowed
+into Trieste refuse to move out in Autumn, with horrific consequences
+for beleaguered Austria.
+<P>
+Tony Swinnerton's Diplomatic Pouch article, "<A
+HREF=http://devel.diplom.org/DipPouch/Zine/W1997A/Swinnerton/Key.html
+TARGET=_top>Playing the Key</A>," has a more encouraging view.
+END
+
+itl-mcgivern|OBRIANI OPENING, McGIVERN'S VARIATION
+Also known as McGivern's Opening, this is Richard Sharp's name for the
+less frequently used Obriani opening that does not put Italian pressure
+on Greece in 1901.
+END
+
+itl-naplep|LEPANTO, NEOPOLITAN VARIATION
+The Lepanto opening with the Roman army moving to Naples rather than the
+standard Apulia. There is basically no difference between the two destinations
+for the army, but Apulia is generally regarded as standard Lepanto, with
+Naples being the variant. 
+END
+
+itl-stablep|AUSTRIAN ATTACK (a.k.a. STAB LEPANTO)
+This opening puts maximum pressure on Austria (assuming Ven-Tri succeeds).
+Since it is rarely tried unless success is known beforehand, this opening is
+usually preceded by negotiation for a Lepanto, and thus the name "Stab
+Lepanto."
+END
+
+itl-3fleets|[THREE FLEETS OPENING]
+Edi Birsan's Fall continuation in which Italy allows his Trieste
+army to to be annihilated in Fall of 1901, and then builds two fleets. This
+avoids the superfluous army that occurs when Italy selects France
+and Turkey as his first two victims.
+END
+
+itl-tyrolia|OBRIANI OPENING (a.k.a. TYROLIA ATTACK)
+This opening is the single most popular
+Italian Opening.  It gives the player the option of attacking Vie, supporting
+into Tri or going for Munich, in addition to helping Russia take Vienna.
+<P>
+A classic Italian opening, one of the most enduring and popular combination of
+moves for Italy in Spring 1901, it is traditionally regarded
+as an attack on Austria, although it can also be turned against
+Germany if (perhaps with French support or encouragement) A Tyr
+attacks Munich in the Autumn. Indeed, this is very often an option,
+since most Austrian players have better things to do with A Vienna
+than order to Tyrolia and A Mun-Tyr is hardly a common opening
+for Germany. But if the A Ven move can usually be expected to
+work, the popularity of F Tri-Ven with Austria has risen so dramatically
+with the Hedgehog Opening that A Rom will usually be stood off
+in the Tyrolia Attack. No matter: it protects Venice, and if
+by chance the move succeeds, Trieste or Vienna could be there
+for the taking. Providing as it does an option on up to three
+centres, this opening is clearly Italy's best chance of securing
+five centres in the first year.
+<P>
+The <i>Gamer's Guide to Diplomacy</i> calls this "best anti-Austrian
+opening.  It concentrates two armies
+on Trieste and creates a guessing game around Vienna. The fleet
+can pick up Tunis or even move to Greece or the Adriatic. Getting
+Tunis is better; Italy needs a build."
+<P>
+The opening can also be developed into a surprise attack on the French
+using the Italian Oktoberfest continuation.
+END
+
+itl-westlep|WESTERN LEPANTO
+The very anti-French opening of A Rom H/-Tus, then to Tunis via
+F TYS, with A Ven-Pie-Mar/S French A Spa-Mar. In Spring of 1902, F TYS can
+move to WES to convoy to Spain, or is in a position to directly
+block F Mar-LYO. If there are no eastern commitments, this will
+be a rare circumstance when building F Rom is superior to F Nap,
+as F Rom-Tus permits the piece to be used directly in F02.
+<P>
+This opening keeps powerful forces poised against Spain. France
+must also play a guessing game. If she moves A Mar-Spa but not
+A Par-Bur, she must now decide whether to order A Spa-Mar. If
+Italy then orders A Pie-Mar, the center is saved; if not, Spain
+is lost, and a fleet can't be built in Marseilles.
+END
+
+itl-panther|[PANTHER]
+This Fall Austro-Italo-German continuation of the Swiss Lepanto
+Opening was named by Dan Abbott after Kaiser Wilhelm II's sending the German
+gunboat <i>Panther</i> to Africa in 1911.  The opening presents a combined
+front by the Central Powers (A/G/I) in an attempt to guarantee control of
+Africa and the Gibraltar block by controlling the Mediterranean.  To do this,
+the rival Mediterranean powers (France and Turkey) must be taught a lesson.
+<P>
+In Spring, Austria opens to pressure the Ionian, while 
+Germany opens to Burgundy and Holland.  The pure Panther sees
+occupation of Serbia and Kiel in Spring 1901, but other variations are
+possible, which also put pressure on Russia.
+<P>
+In Fall, the Italian army in Apulia is convoyed to Albania by the Austrian
+fleet, while Italy takes Tunis, and both Germany and Italy continue to
+harass France in Marseilles, Burgundy, and Belgium.  While France is
+occupied by pressure on his entire eastern border, Turkey sees two hostile
+fleets coming at him.  The remaining two powers, England and Russia, should
+be pleased by the opening. Russia is able to not only get in on the
+Turkish party but also appeased by Germany's lack of Scandinavian force.
+England is also satisfied with the Scandinavian lines and can help out with
+France.
+END
+
+itl-okt|[ITALIAN OKTOBERFEST]
+Jim Burgess's name for the German-Italian continuation of the Obriani
+in which Italy's opening to Tyrolia is followed by  a
+Fall 1901 advance into Munich, at which time the army in Venice
+proceeds to Piedmont, and Tunis is taken.  After building a fleet in Naples
+and an army in Venice or Rome, Italy's Spring 1902 moves are Tun-ION, Pie-Mar,
+Mun-Bur, Nap-TYS, and the new army holds or moves to Tuscany.  This opening is
+discussed in <a target=new href=/Zine/S2003M/Burgess/Rome.html>an article in the Pouch
+Zine</a>.
+END
+
+itl-boh|[BOHEMIAN CRUSHER]
+Aron Ambrosiani's name for the Obriani opening follow-up which sees
+Tyrolia move to Bohemia, while Venice is sent to Tyrolia.  A third
+army is added in Rome (for Tunis) at the end of the year.
+<P>
+This opening banks on the probability that the Austrian army in
+Vienna or Trieste will cover supply centers and not guard against
+the surrounding action.  If Russia moves into Gal and/or Rum at the
+same time, Austria is doomed.
+<P>
+The problem with this opening is, of course, the lack of fleets. It
+can't be carried through if Turkey moves straight west. However,
+combined with a Turkish attack on Russia, Italy should be the leader
+entering the mid-game.
+<p>
+The opening was
+<a target=_top href=/Zine/F2008M/Hunt/crusher.htm>discussed and advocated by
+David Hunt</a> in The Pouch Zine's fiftieth issue.
+END

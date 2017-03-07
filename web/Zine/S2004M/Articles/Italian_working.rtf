@@ -1,0 +1,177 @@
+{\rtf1\ansi\ansicpg1252\uc1 \deff0\deflang1033\deflangfe1033{\fonttbl{\f0\froman\fcharset0\fprq2{\*\panose 02020603050405020304}Times New Roman;}{\f28\froman\fcharset77\fprq0{\*\panose 00000000000000000000}Times-Bold;}
+{\f29\froman\fcharset77\fprq0{\*\panose 00000000000000000000}Times-Italic;}{\f30\froman\fcharset77\fprq0{\*\panose 00000000000000000000}Times-Roman;}{\f88\froman\fcharset238\fprq2 Times New Roman CE;}{\f89\froman\fcharset204\fprq2 Times New Roman Cyr;}
+{\f91\froman\fcharset161\fprq2 Times New Roman Greek;}{\f92\froman\fcharset162\fprq2 Times New Roman Tur;}{\f93\froman\fcharset177\fprq2 Times New Roman (Hebrew);}{\f94\froman\fcharset178\fprq2 Times New Roman (Arabic);}
+{\f95\froman\fcharset186\fprq2 Times New Roman Baltic;}}{\colortbl;\red0\green0\blue0;\red0\green0\blue255;\red0\green255\blue255;\red0\green255\blue0;\red255\green0\blue255;\red255\green0\blue0;\red255\green255\blue0;\red255\green255\blue255;
+\red0\green0\blue128;\red0\green128\blue128;\red0\green128\blue0;\red128\green0\blue128;\red128\green0\blue0;\red128\green128\blue0;\red128\green128\blue128;\red192\green192\blue192;}{\stylesheet{
+\ql \li0\ri0\widctlpar\aspalpha\aspnum\faauto\adjustright\rin0\lin0\itap0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 \snext0 Normal;}{\*\cs10 \additive Default Paragraph Font;}}{\info{\title More News From The Italian Front }
+{\author Scott Webster}{\operator Scott Webster}{\creatim\yr2004\mo11\dy11\hr16\min19}{\revtim\yr2004\mo11\dy11\hr16\min19}{\version2}{\edmins10}{\nofpages8}{\nofwords1603}{\nofchars9141}{\*\company  }{\nofcharsws11225}{\vern8283}}\margl1440\margr1440 
+\widowctrl\ftnbj\aenddoc\noxlattoyen\expshrtn\noultrlspc\dntblnsbdb\nospaceforul\hyphcaps0\horzdoc\dghspace120\dgvspace120\dghorigin1701\dgvorigin1984\dghshow0\dgvshow3\jcompress\viewkind1\viewscale114\viewzk2\nolnhtadjtbl \fet0\sectd 
+\linex0\sectdefaultcl {\*\pnseclvl1\pnucrm\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl2\pnucltr\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl3\pndec\pnstart1\pnindent720\pnhang{\pntxta .}}{\*\pnseclvl4\pnlcltr\pnstart1\pnindent720\pnhang
+{\pntxta )}}{\*\pnseclvl5\pndec\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl6\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl7\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl8
+\pnlcltr\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}{\*\pnseclvl9\pnlcrm\pnstart1\pnindent720\pnhang{\pntxtb (}{\pntxta )}}\pard\plain \ql \li0\ri0\nowidctlpar
+\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\faauto\rin0\lin0\itap0 \fs24\lang1033\langfe1033\cgrid\langnp1033\langfenp1033 {\b\f28\fs64 More News From The Italian Front 
+\par 
+\par }{\b\f28\fs38 Extended variant support in nJudge version 1.7.2. 
+\par 
+\par By Sergio Lidsell 
+\par 
+\par }{\i\f29\fs32 
+While we're all still waiting for Bruce Duewers article on the Machiavelli endgame play ;-), I am proud to present some of all the great work to extend variant support on the nJudge that has been done since the year 2000 by the kind and untiring coder ext
+ra-ordinaire Millis Miller. (A clear cut candidate for the }{\f30\fs32 Don Miller Award for Meritorious Service, }{\i\f29\fs32 in my opinion.) 
+\par 
+\par This article will focus on the work to release a bugfree (yes, it sure looks like we covered all the bases) Machiavelli implementation and the additional work that has been done to create unambiguous and clear rules. 
+\par 
+\par For a wealth of information about Machiavelli I unashamedly recommend }{\i\f29\fs32\cf2 The Machiavelli Boardgame Site}{\i\f29\fs32 .
+\par 
+\par Judges that are known to run nJudge version 1.7.2 at the time of this writing are: USTV, PLTX, NZMB and DEDO. CABC and UFIE will probably follow soon. If you want to see which version of the code a judge runs, send the 'version' command to it. 
+\par 
+\par The following may be a bit rambling as it was jotted down in all haste. 
+\par 
+\par }{\b\f28\fs38 Major new features 
+\par 
+\par }{\f30\fs32 Notice that some of the fixes and features began appearing in 0.8.9. This is a "cumulative" description. The }{\f30\fs32\cf2 Diplomacy Judge Users Manual }{\f30\fs32 contains version info for the new commands. You can also get a }{
+\f30\fs32\cf2 detailed version history }{\f30\fs32 for versions newer than 1.1.1. 
+\par New improved Machiavelli rules. 
+\par Fix of all bugs described in Bruce Duewers article in the }{\f30\fs32\cf2 DPZ F1999M }{\f30\fs32 issue. 
+\par Support of 19 Machiavelli scenarios/variants for four (4) to nine (9) players. 
+\par Standard map available for Machiavelli play. 
+\par Support of Machiavelli 2nd edition with Diplomacy-style control changes. 
+\par Support of Basic Classic Machiavelli. 
+\par Support of Basic Machiavelli 2nd edition (essentially Diplomacy with a summer season and garrisons). 
+\par Possibility to inhibit the use of garrisons in Machiavelli games. 
+\par Possibility to remove the summer season from Machiavelli games. 
+\par Possibility to add a summer season to Diplomacy games. 
+\par Possibility to add coastal convoys to Diplomacy games. 
+\par Possibility to disband a unit at any time in Diplomacy games. 
+\par Addition of the Diary function. 
+\par Machiavelli Game Queue soon available on The Diplomatic Pouch 
+\par 
+\par }{\b\f28\fs38 Playing Standard Diplomacy with the Machiavelli Maps 
+\par 
+\par }{\f30\fs32 This is truly one of the most intriguing 
+features of the new judge version. Some versions henceforward allow you to disable all Machiavelli features and use the map and setup to play with the standard diplomacy rules. How did this came about? Well as support for Basic and Mach2 was added, the id
+ea of adding control of the usage of garrisons and the summer seasons cropped up. And, lo and behold, suddenly you could use the Machiavelli maps for Standard Diplomacy play. 
+\par 
+\par There is currently a game called "}{\f30\fs32\cf2 Italian}{\f30\fs32 " on }{\f30\fs32\cf2 NZMB }{\f30\fs32 that is awaiting eager playtesters! 
+\par 
+\par To set up a game this way use these settings: set Mach2, set NoSummer, set NoGarrison, set NoMoney, set NoDice, set NoStorm, set NoDisband, set NoCoastalConvoys. 
+\par 
+\par }{\b\f28\fs38 Playing "Machiavelli Light" with Diplomacy Style control changes 
+\par 
+\par }{\f30\fs32 As a way to get 
+acquainted with garrison units and an additional summer season this is the way to go. No money, no disasters. In fact none of the much maligned real world simulation features of Mach, just the safe old unchanging Diplomacy tactics. "Me-god" I am beginning
+ to hyper-rant, quick, the paper bag... Calm down now, yes calm down, yes. Oomph, that was close. 
+\par 
+\par To set up a game this way use these settings: set Mach2, set NoMoney, set NoDice, set NoStorm, set Disband, set CoastalConvoys. 
+\par 
+\par }{\b\f28\fs38 Playing "Machiavelli Light Classic" with continuous control changes 
+\par 
+\par }{\f30\fs32 And if you feel more daring I recommend you try to master the art of surviving despite your ally suddenly being able to blitz you. 
+\par 
+\par To set up a game this way use these settings: set NoMach2, set NoMoney, set NoDice, set NoStorm, set Disband, set CoastalConvoys. 
+\par 
+\par }{\b\f28\fs38 The supported Machiavelli scenarios and variants 
+\par 
+\par }{\f30\fs32 All, except MachFive, are supported on the Floc mapping server. 
+\par 
+\par }{\b\f28\fs26 Variants and non-standard scenarios 
+\par }{\f30\fs32 Dipmach: played on the standard Diplomacy european map. 7 powers. 
+\par Mach_aoc: Age of Communes. 9 powers. 
+\par Machfive: penta-symmetrical map rotated around Florence. 5 powers. 
+\par Machho: map mirrored through Rome. 4 powers. 
+\par Mach_este: Expansion of States with d\rquote Este power added, classic map. 5 powers. 
+\par 
+\par }{\b\f28\fs26 Avalon Hill scenarios using Classic Machiavelli map 
+\par }{\f30\fs32 Mach_eos: Expansion of States, classic map. 4 powers. 
+\par Machiavelli: Balance of Power scenario. The standard judge scenario. 8 powers.}{\i\f29\fs32  
+\par }{\f30\fs32 Mach_sfd1: Struggle for Dominance part 1, classic map. 
+\par Mach_sfd2: Struggle for Dominance part 2, classic map. 
+\par Mach_span: Spanish Preponderance, classic map. 
+\par 
+\par }{\b\f28\fs26 Avalon Hill scenarios using Machiavelli 2nd edition map 
+\par }{\f30\fs32 Machiavelli2: Balance of Power (I) scenario. 8 powers. 
+\par Mach2_sfd1: Struggle for Dominance part 1 (II), mach2 map. 
+\par Mach2_sfd2: Struggle for Dominance part 2 (III), mach2 map. 
+\par Mach2_span: Spanish Preponderance (IV), mach2 map. 
+\par 
+\par }{\b\f28\fs26 Avalon Hill scenarios using Machiavelli 2nd edition map published in "The General". 
+\par }{\f30\fs32 Mach2_fotl: Fall of the Lombards (V), mach2 map. 
+\par Mach2_eai: Empire and Invaders (VI), mach2 map. 
+\par Mach2_pamt: Papal Ascendancy and Mongol Threat (VIIa), mach2 map. 
+\par Mach2_pa: Papal Ascendancy and Mongol Threat for 4 players (VIIb), mach2 map. 
+\par Mach2_ttr: To the Renaissance (VIII), mach2 map. 
+\par 
+\par }{\b\f28\fs38 The new, improved, and unambiguous rules 
+\par 
+\par }{\f30\fs32 Major work with the rules interpretation was made by Bruce Duewer, with additional work by Sergio Lidsell, who also codified the changes. Other contributors have been Rick Desper, Robert Rehbold, Neil Barr and Fernando Blesa. 
+\par 
+\par As I am lazy, I will quote Bruce Duewer (source: }{\f30\fs32\cf2 DPZ S2002M }{\f30\fs32 ) right off. The "new and improved rules document has been heavily revised by the MachFix crew in order to provide clear and detailed descrip
+tions of how judge PBEM should work. Make sure to read the credits at the end; special thanks especially to Sergio for rearranging, compiling and editing the revisions in more rounds than anyone thought would be needed to achieve a final document." (Ahh y
+es, wonder why I quoted this?) 
+\par 
+\par "In the new version of the rules, a variety of issues that were unclear, and varied depending on GM ruling, were clarified. In addition, the document was completely reorganized, several of the more obscure points were stated
+ more obviously, and additional technical information and examples      were included.\~
+ In a few cases, we made rulings contrary to the original Battleline rules. These were intended to codify where current practice was superior to the original and improved game play." 
+\par 
+\par Support for Machivelli2 rules and the new rules was added with version 0.8.9. Support For Basic rules with version 1.0.0. 
+\par 
+\par }{\b\f28\fs26 Questions clarified or solved in the rules 
+\par }{\f30\fs32 How sieges can lapse and what happens with them at assassinations. 
+\par How control and ownership changes occur. 
+\par How straits control affect moves, support and retreats. 
+\par How the Venice province affects moves, support and retreats. 
+\par How rebellions affect play. 
+\par 
+\par }{\b\f28\fs38 Diaries 
+\par 
+\par }{\f30\fs32 The }{\f30\fs32\cf2 diary }{\f30\fs32 function allows you to record your thoughts durin
+g the game for broadcasting it after the game ends. Sort of a running EOG. Actually some of the ideas implemented herein began as a suggestion for a PressEOG command. 
+\par 
+\par }{\b\f28\fs38 Overview of fixed Machiavelli bugs 
+\par 
+\par }{\f30\fs32 Below follows an extensive list of the more important known and identified bugs that have been fixed by 1.7.2. 
+\par 
+\par      First major bugfix was actually version 0.8.7. Support for Machivelli2 rules was added in 0.8.9.
+\par      Support for Basic rules in 1.0.0. Fortress support in 1.3.0. Bi-coastal province support (definitively) in 1.5.2. 
+\par      Same disaster rolls repeated year after year (Some versions of the judge-such as that still in use on 
+\par USEF-got stuck in a pattern where the same famine, plague, etc. rolls occur year after year. Fixed by 0.8.9.) 
+\par      Negative or out of bounds rolls (This occurred in some versions of the judge code and usually affected income. Often resulted in a power getting a much larger income than it should have. Fixed by 0.8.9.) 
+\par      Extra special units (Sometimes a player could enter a state where it had more than one special unit. Most often it happened as a result of a bribe. Fixed by 0.8.9.) 
+\par      Frankenstein's autonomous unit (When unit was made autonomous by a bribe, it would retain the last order given it instead of holding. Fixed by 0.8.9.) 
+\par      Retreat into city ownership error (This usually occurred when a unit was dislodged and retreated into a garrison. City ownership was erroneously awarded to the power controlling the province and not the garrisoning power. Fixed by 0.8.9.) 
+\par      3-ducat counter-bribe multiples rule (The player was allowed to enter counter-bribes that were not multiples of three ducats and thus erroneously causing bribes to fail. Fixed by 0.8.9.) 
+\par      C
+onvoy dislodgment (In one case where there was a standoff between an elite fleet and a pair of normal fleets over an area containing a fleet doing a convoy, the convoying fleet was flagged as dislodged (and the convoy thus disrupted) but not listed to ret
+reat. The elite and convoying fleets          were owned by the same power. Fixed by 0.8.9.) 
+\par      Missing disband order (fixed in 0.8.9) 
+\par      Missing units at setup\~ (fixed in 1.2.0) 
+\par      Truncated e-mails (this bug also affected non-machiavelli games). 
+\par      Victory not detected (}{\f30\fs32\cf2 #3}{\f30\fs32 , definitively fixed in 1.3.0) 
+\par      Besieged garrison not eliminated on assassination of owner\~(}{\f30\fs32\cf2 #28}{\f30\fs32 , fixed in 1.3.0) 
+\par      Maintenance phase ownership\~(}{\f30\fs32\cf2 #43}{\f30\fs32 , fixed in 1.3.0) 
+\par      Conversion retreat into rebelling city (}{\f30\fs32\cf2 #54}{\f30\fs32 , fixed in 1.3.0) 
+\par      Conversion into garrison retreat (Similar to the above. Sometimes a unit was allowed to retreat into the city where the attacker came from.) 
+\par      Conversion retreat into Venice city (Similar to the above, but with the added complication of being able to result into two units occupying the same space.) 
+\par      Fortress support (added in 1.3.0) 
+\par      Straits blocking rules ambiguous and code implementation not correct (}{\f30\fs32\cf2 #195}{\f30\fs32 , fixed in 1.5.0). 
+\par      Missing city income within bounds check (}{\f30\fs32\cf2 #209}{\f30\fs32 , fixed in 1.5.1) 
+\par      Coastal restrictions not enforced (}{\f30\fs32\cf2 #225}{\f30\fs32 , fixed in 1.5.2) 
+\par      Underscore and space in power names problem (}{\f30\fs32\cf2 #246}{\f30\fs32 , }{\f30\fs32\cf2 #248}{\f30\fs32 , fixed in 1.5.4) 
+\par      Mastr_pt array sizing causing judge crash (}{\f30\fs32\cf2 #303}{\f30\fs32 , fixed in 1.7.0) 
+\par 
+\par In addition to the above there were a couple of bugs that were introduced in the versions between 0.8.9 and 1.7.1. But all of those have been fixed.  Those that may cause some problems are (introduction version may differ): 
+\par 
+\par Siege never lifted if disband order is used (}{\f30\fs32\cf2 #2}{\f30\fs32 , in 0.8.9, fixed in 1.3.0). 
+\par 
+\par Use of disband order does not clear siege flag (}{\f30\fs32\cf2 #249}{\f30\fs32 , in 0.8.9, fixed in 1.5.4). 
+\par 
+\par Storms remove famines (}{\f30\fs32\cf2 #56}{\f30\fs32 , in 1.3.0, fixed in 1.4.0). 
+\par 
+\par Unit offered to retreat to the space it was dislodged from (}{\f30\fs32\cf2 #155}{\f30\fs32 , in 1.4.0, fixed in 1.4.1). 
+\par 
+\par Units not marked as dislodged in Mach2 game (}{\f30\fs32\cf2 #213}{\f30\fs32 , in 1.5.0, fixed in 1.5.1). 
+\par 
+\par }{\b\f28\fs32 May your ally support you! 
+\par 
+\par Sergio Lidsell }{
+\par }}

@@ -1,0 +1,6 @@
+#!/bin/ksh
+
+cat > data.py << END
+data = {}
+END
+chmod 777 data.py

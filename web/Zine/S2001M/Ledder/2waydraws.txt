@@ -1,0 +1,181 @@
+<HTML><FONT  SIZE=3 PTSIZE=10>Subj:	<B> Re: Dip Pouch</FONT><FONT  SIZE=3 PTSIZE=10></B><BR>
+Date:	3/6/01 3:47:42 PM Pacific Standard Time<BR>
+From:	gledder@math.unl.edu (Glenn Ledder)<BR>
+Sender:	manus@devel.diplom.org<BR>
+To:	manus@devel.diplom.org<BR>
+</FONT><FONT  SIZE=3 PTSIZE=10><BR>
+</FONT><FONT  SIZE=3 PTSIZE=10>------=_NextPart_000_0007_01C0A168.646E6100<BR>
+Content-Type: text/plain;<BR>
+	charset="iso-8859-1"<BR>
+Content-Transfer-Encoding: 7bit<BR>
+<BR>
+Well, here it is.  Hopefully there aren't any typos, but it wouldn't hurt to<BR>
+look.  In particular, we recently changed the voice from "I" to "We", and I<BR>
+may have missed some of these.  Also, feel free to tinker with the html<BR>
+markups.  I'm not an html whiz.  I wrote the thing with Word Perfect, saved<BR>
+it as html, and then made some minor changes using a text editor.<BR>
+<BR>
+We hope to have part 2 done by the first of May for the next issue.<BR>
+<BR>
+Glenn<BR>
+<BR>
+----- Original Message -----<BR>
+From: "Manus Hand" <manus@devel.diplom.org><BR>
+To: "Glenn Ledder" <gledder@math.unl.edu><BR>
+Sent: Tuesday, February 27, 2001 1:41 PM<BR>
+Subject: Re: Dip Pouch<BR>
+<BR>
+<BR>
+> >   Are you the publisher to whom articles for the Dip Pouch should be =<BR>
+> > submitted?<BR>
+> ><BR>
+> I sure am.<BR>
+><BR>
+> > My friend Karlis Povisils and I have just finished an =<BR>
+> > article.<BR>
+> ><BR>
+> Excellent!<BR>
+><BR>
+> > Owing to a long run of good luck, we are #1 and #2 in JDPR at =<BR>
+> > present.<BR>
+> ><BR>
+> Congratulations!<BR>
+><BR>
+> > Recently our efforts have been less successful and we are on =<BR>
+> > our way back down into the pack.<BR>
+> ><BR>
+> :-)<BR>
+><BR>
+> > So we thought we had better turn the =<BR>
+> > thing in before our ratings fall too far.<BR>
+> ><BR>
+> Good plan.  Send me what you have and I will make sure it's in the<BR>
+> next issue.<BR>
+><BR>
+> THANKS!!!<BR>
+><BR>
+> Stab you soon,<BR>
+> Manus<BR>
+><BR>
+<BR>
+------=_NextPart_000_0007_01C0A168.646E6100<BR>
+Content-Type: text/html;<BR>
+	name="2wayDraws.htm"<BR>
+Content-Transfer-Encoding: quoted-printable<BR>
+Content-Disposition: attachment;<BR>
+	filename="2wayDraws.htm"<BR>
+<BR>
+</FONT><FONT  SIZE=3 PTSIZE=10><BR>
+<HEAD><BR>
+<META NAME=3D"Generator" CONTENT=3D"Corel WordPerfect 8"><BR>
+<TITLE></TITLE><BR>
+</HEAD><BR>
+<BR>
+<BR>
+<BR>
+<STRONG>Stable Two-Way Draws in Standard =<BR>
+Diplomacy</STRONG><BR>
+<BR>
+by Helmuth Karl Bernhard von Moltke (Glenn Ledder)<BR>
+<BR>
+with Otto von Bismarck (Karlis Povisils)<BR>
+Many Diplomacy games end in a 3-way draw.  Often such games end that = way because the surviving players=20 do not feel that their position is strong enough for a solo attempt.  A = 3-way draw is seldom satisfying to the ambitious Diplomat, however, because it includes 42% = of the players who began the game!=20 Between a solo that may be out of reach and a 3-way that is not = ambitious, there is another possibility: a 2-way draw.  The 2-way draw = can be a noble result in Diplomacy, owing to the requirement that draws = must include all survivors.  The need to split Europe evenly between the = victors leaves no room for error, especially given the tendency among the losing players to prefer giving = up a solo over being eliminated.=20 There is no accounting for taste!  The consequence of these difficulties = is that a 2-way draw can be harder to engineer than a solo win, and this gives the owner of a 2-way draw = sufficient satisfaction to compensate for having to share the victory.  In a subsequent article, we will = discuss the diplomatic aspects of the 2-way draw.  In this article, we focus our comments on the strategic aspects = of 2-way draws.<BR>
+<STRONG>Stable 2-way draw positions</STRONG><BR>
+Let us assume that all players in a Diplomacy game are playing to = achieve the best result they can get for their country.  It is important to note that we are not considering = "care-bear" alliances, but only alliances between two ambitious players who want to win.  How does one build a = 2-way draw between two players who would take a win if they could and who do not trust their ally to = stand by an unenforceable agreement?=20The answer is based on the concept of the <EM>stable 2-way draw =position</EM>, by which we mean a position in which each player has control of an unbreakable line that encompasses 17 = centers.  Once a player has his side of a stable 2-way draw position, he is guaranteed a place in the = final result of the game.  He can hold the position for the draw, or he can try to get one more center for the =win.<BR>
+There are but five stable 2-way draw positions as far as we have = determined, plus a few minor variations.=20 In order to make the positions more memorable, we have given them = appropriate names based on the geography of the lines, sometimes with historical references.  Beginning = with lines that divide north fromsouth and rotating counterclockwise, we have these lines:<BR>
+1) the <STRONG>Juggernaut</STRONG> line, separating a northern power =(G,R) and a southern power (A,I,T), named after thefamed Russo-Turkish alliance<BR>
+2) the <STRONG>Saragossa</STRONG> line, separating a northern power = (E,G) and a southern power (I,T), named after the treaty of 1529 that established for two centuries the division of =colonial lands between Portugal and Spain<BR>
+3) the <STRONG>Versailles</STRONG> line, separating a western power =(E,F,G) and an eastern power (A,I,R,T), named after the treaty that ended World War I and detached from Germany the provinces of = Prussia and Silesia<BR>
+4) the <STRONG>Berlin Wall</STRONG>, separating a western power (E,F) =and an eastern power (A,R,T), named after the post-World War II split of =East and West Germany<BR>
+5) the <STRONG>Stockholm</STRONG> line, separating France and Russia, = named after the massacre of 1520, after which the Swedes revolted and gained independence from Denmark<BR>
+The first four of these form a natural progression of centers.  In = each, the southern or eastern power controls Austria, Italy, Turkey, and the Balkans, along with 4 other =centers as noted in the table:<TABLE BORDER=3D"1" WIDTH=3D"100%"><TR VALIGN=3D"TOP"><TD ALIGN=3D"CENTER">center(s)</TD><TD ALIGN=3D"CENTER"><STRONG>Juggernaut</STRONG> line</TD><TD ALIGN=3D"CENTER"><STRONG>Saragossa</STRONG> line</TD><TD ALIGN=3D"CENTER"><STRONG>Versailles</STRONG> line</TD><TD ALIGN=3D"CENTER"><STRONG>Berlin Wall</STRONG></TD></TR><TR VALIGN=3D"TOP"><TD>Portugal</TD><TD ALIGN=3D"CENTER">southern</TD><TD ALIGN=3D"CENTER"></TD><TD ALIGN=3D"CENTER"></TD><TD ALIGN=3D"CENTER"></TD></TR><TR VALIGN=3D"TOP"><TD>Marseilles and Spain</TD><TD ALIGN=3D"CENTER">southern</TD><TD ALIGN=3D"CENTER">southern</TD><TD ALIGN=3D"CENTER"></TD><TD ALIGN=3D"CENTER"></TD></TR><TR VALIGN=3D"TOP"><TD>Tunis</TD><TD ALIGN=3D"CENTER">southern</TD><TD ALIGN=3D"CENTER">southern</TD><TD ALIGN=3D"CENTER">eastern</TD><TD ALIGN=3D"CENTER"></TD></TR><TR VALIGN=3D"TOP"><TD>Sevastopol</TD><TD ALIGN=3D"CENTER"></TD><TD ALIGN=3D"CENTER">southern</TD><TD ALIGN=3D"CENTER">eastern</TD><TD ALIGN=3D"CENTER">eastern</TD></TR><TR VALIGN=3D"TOP"><TD>Moscow and Warsaw</TD><TD ALIGN=3D"CENTER"></TD><TD ALIGN=3D"CENTER"></TD><TD ALIGN=3D"CENTER">eastern</TD><TD ALIGN=3D"CENTER">eastern</TD></TR><TR VALIGN=3D"TOP"><TD>Berlin</TD><TD ALIGN=3D"CENTER"></TD><TD ALIGN=3D"CENTER"></TD><TD ALIGN=3D"CENTER"></TD><TD ALIGN=3D"CENTER">eastern</TD></TR></TABLE><BR>
+The <STRONG>Stockholm</STRONG> line, as compared to the BerlinWall, =includes Sweden, St. Petersburg and Munich as eastern centers in exchange for Italy.  The Saragossa line also works = with Portugal traded for Marseilles, but the given version seems easier to manage.<BR>
+We now present the details of the unit positions, along with some =discussion.  Only the front-line units of the minimal positions are given, along with the number of backups needed = for each unit.  Unit types are included only when there is a possibility of error.  A maximal list of = DMZ spaces is also given.  The idea here is that each player agrees to observe the DMZ's, but nevertheless = anticipates a DMZ violation by the ally.  The DMZ spaces provide needed security.  Each player needs to be = prepared to form the stalemate line after the first DMZ violation, but does not need to fully occupy =the position otherwise.<BR>
+<STRONG>the Juggernaut line</STRONG><BR>
+south (14 units): Arm, Bla, Rum (1), Bud, Vie, Trl (1), Mar (1), Spa, =Por, Wes, F Tun<BR>
+north (14 units): Sev (1), Ukr, Gal (1), Boh (1), Mun, Bur, Par, =Bre, Eng, Iri, Nat<BR>
+DMZ: MAO, Gas, Naf<BR>
+This line works best for RT and GI, and it can be used for AR and IR = as well.  When the final centers are in the west, the southern power must be careful to secure Spain with = significant backups before thenorthern power has a chance to capture Portugal.<BR>
+<STRONG>the Saragossa line</STRONG><BR>
+south (14 units): Sev (1), Rum (1), Bud, Vie, Trl (1), Mar (1), Spa =(1), Wes, Naf<BR>
+north (13 units): Mos (1), War (1), Sil (1), Mun (1), Bur, Par, Bre, =Mid, F Por<BR>
+DMZ: Ukr, Gal, Boh, Gas  <BR>
+This line is ideal for EI and is also good for GI and GT.  The line = is easy to achieve, particularly when the final centers are in the east.  The DMZ's in Ukr, Gal, and Boh give both =sides a good chance to secure theirfinal centers.<BR>
+<STRONG>the Versailles line</STRONG><BR>
+east (16 units): Mos (1), War (1), Gal, Boh (1), Trl (1), Ven (1), F =Rom, Tyn (1), Tun(1)<BR>
+west (15 unit): Stp, Bot, Bal (1), Ber (1), Mun (2), Mar (1), Spa =(1), Mid (1)<BR>
+DMZ: Lvn, Pru, Sil, Pie, Tus, Lyo, Wes, Naf<BR>
+If the eastern power lacks northern fleets, the western power need =not occupy the Baltic Sea and can get by with only 13 units.  The number of units can also be reduced by reducing = the number of DMZ spaces.  For example, the eastern position needs fewer fleets if Tuscany is occupied =by an eastern army.<BR>
+The Versailles line is by far the most important 2-way draw line, = being practical for fully 11 of the 21 possible 2-way alliance pairs.  It is ideal for AE, AF, AG, ET, GI, GT, = and can also work for EI, ER, FI, FT, GR.  The extensive set of DMZ's make the Versailles line the most = stable of the two-way draw positions.  The western power must be most careful about Stp and Mun, = while the eastern power needs to be most concerned about Mos, War, and Tun.  Russia may have a difficult = time securing Tunis, as this requires fleets in Rome, Tyn, and Nap, as well as Ion.  France may have = difficulty securing St. Petersburg, while Italy may have trouble with Moscow.<BR>
+<STRONG>the Berlin Wall</STRONG><BR>
+east (15 units): Mos, Lvn (1), Pru, Ber, Sil, Boh, Trl, Ven (2), Rom, =Nap, Ion (1)<BR>
+west (15 units): Stp (1), Bot, Bal (1), Kie, Mun (2), Mar, Spa, Wes =(1), Tun (1)<BR>
+DMZ: Pie, Tus, Lyo, Tyn<BR>
+This line is primarily available for ER, although it could be used = for AF or FR as well.  If the eastern power has no northern fleets, then the western power needs fewer units.  = As given, the unit in Spain supports Marseilles; however, it could support Western Mediterranean = instead, in which case Marseilles would need an extra support and Western Mediterranean would not.<BR>
+Possibilities for treachery are great with the Berlin Wall, with the = advantage generally belonging to the eastern power.  The western power must be careful to secure Tunis and St = Petersburg, as well as Munich, while the eastern power need only be concerned about Berlin.<BR>
+<STRONG>the Stockholm line</STRONG>  <BR>
+east (17 units): Stp (1), Fin, Swe (1), Bal (1), Ber, Mun (1), Trl, A =Tri, Adr, F Alb, Gre, Aeg, Eas<BR>
+west (17 units): Nrg, Nwy (1), Ska, Den (1), Kie (1), Ruh, Bur, A =Pie, Ven (1), A Rom, Nap, Tyn, Tun<BR>
+DMZ: Bar, Ion, Apu<BR>
+This is an extremely difficult position, at best possible for FR, and = perhaps only theoretical.  We would appreciate any information indicating that it has ever actually been = achieved.  Russia needs 3 fleets in the north and 4 in the south.  Even then, the Russian position is not quite = a stalemate line.  The Adriatic Sea is not adequately defended if the unit in Venice is a fleet.  (We assume = that the unit in Trieste is an army, since it is needed to support Trl.)  However, it would be extremely = unlikely that the western power would manage to get a fleet through a DMZ to Venice, given that the western =position requires a full 17 units tosecure.<BR>
+<STRONG>Stable positions that ought to be</STRONG><BR>
+The five stable 2-way draw positions listed above appear to exhaust = the possibilities except for some minor variations, such as trading Portugal for Marseilles in the Saragossa = line.  There is an apparent gap in the list that must be surprising to those who have not studied the stalemate = lines in detail: there is no stable 2-way draw position suitable for an = EF or FG alliance.  In principle, we might begin with the Juggernaut = line and attempt to trade Brest and Paris for a pair of southern centers.  No = such line is possible.  In fact, no combination of Vienna, Budapest, and Rumania can be held from the north = against a determined attack from the south.  Implications of this observation will be discussed =later when specific alliances areconsidered.<BR>
+<STRONG>Approaching a 2-way draw</STRONG><BR>
+The stable 2-way draw position is the theoretical basis for a 2-way = draw.  In practice, it is generally neither necessary nor even desirable to occupy very much of the position.  It is = necessary only to be prepared to occupy it in the event of treachery.  The player who is attempting a = 2-way draw needs to be able to evaluate the risk of loss as the position develops.  It is necessary to insist on = restrictions on the ally's movements and to agree to reasonable restrictions.  This is more properly the topic of = our second article on the diplomatic aspects=20 of 2-way draws.  One strategic point is worth noting here.  The = stability of a position can be increased by having certain=20 spaces occupied by units suited only to defense. In the Versailles = position, for example, armies in Spain and Tunis fill in the=20 stalemate positions but are not the offensive threats that fleets would =pose.<BR>
+<STRONG>Turning a 2-way draw attempt into a solo</STRONG><BR>
+Of course the ambitious Diplomat may well see a 2-way draw as an = outcome only half as good as a solo.  It is quite reasonable to think of a 2-way draw alliance as primarily a = means to a solo, with the 2-way draw as a backup.  Two conditions allow a 2-way draw to be converted to a = win.  One is when the ally fails to insist on reasonable restrictions and the other is when you are lucky = enough to get help from a minor power.  In the absence of either of these conditions, the player who = tries to convert a 2-way draw attempt into a solo is far more likely to be stuck with a large draw.  In = particular, we maintain that a solo cannot bestolen from a 2-way draw without 3rd party help, given proper =strategy and diplomacy by the 2-way=20draw ally. <BR>
+<STRONG>Implications for the various alliances</STRONG><BR>
+There are 7 countries, each of which can have 6 alliance partners.  =The 42 permutations of these countries include 21 redundant pairs; thus, there are 21 possible 2-way alliances. =  We consider these in groups.  In our view, there are 9 alliance pairs for which a stable 2-way draw is = not difficult, 3 pairs that can easily turn into solo wins for one of the players, 3 pairs for which extensive = center swaps are needed to achieve a stable 2-way draw, and 6 pairs for which a stable 2-way draw is clearly = impossible.<BR>
+<STRONG>Smooth sailing: RT</STRONG>, <STRONG>GI, EI, AE, AG, ET, GT, =AF, GR</STRONG><BR>
+These 9 alliance pairs have stable 2-way draw positions that do not =favor either side and do not require extensive center swaps.  The Juggernaut line is ideal for the RT = alliance.  Both the Juggernaut and Saragossa lines work well for GI and EI, with the Juggernaut probably = the better choice for GI and the Saragossa for EI.  The remaining pairs in this group are well suited for = the Versailles line, with the Berlin Wall also possible for AF.  Of course the GR alliance can achieve the = Berlin Wall only if Russia allows the Germans to take St. Petersburg.  These alliance pairs can even yield = 2-way draws in no-press Diplomacy.=20 The 2000 Vermont Group no-press tournament included 4 2-way draws out of = just over 80 games, and these were achieved by AE, AG, GT, and AF pairs.<BR>
+<STRONG>Unbalanced opportunities: ER, FI, FT</STRONG><BR>
+The ER alliance is a particularly interesting case study.  Of the = four stable 2-way draw positions, only the Berlin Wall and the Versailles line are reasonable for ER.  The Berlin = Wall is a difficult position for England to achieve.  The trouble is that Russia can often get to Munich = before England can.  This gives Russia a tremendous advantage, should he decide to use it.  He can then = appear to be playing for a 2-way draw with England (unless England appreciates the necessity of = controlling Munich), when in reality he is trying to win the race to Italy for the solo.  (Von Moltke's ghost = writer, Mr. Ledder, owes his top-10 JDPR rating in significant part to two solo wins earned in exactly this = manner.  Now that this information is being released to the public, he will probably have to stop playing Russia!)  = The Versailles line is equally difficult for Russia, as he must manage to penetrate the Mediterranean enough to =control Tunis.<BR>
+The FI and FT alliances are unbalanced to a lesser degree.  Both = alliances can easily achieve the Versailles line.  However, it can be difficult for France to secure St Petersburg = in either case and it may be difficult for Turkey to secure Tunis or for Italy to secure Moscow and Warsaw.  = The demonstration game OVER1201 provided an example of these risks.  The game ended as an FI = draw, but the final approach to the draw was marked by two Italian stabs followed by a position in which = France chose to bypass a stabopportunity.  <BR>
+<STRONG>Careful negotiation needed: AR, IR, FR</STRONG><BR>
+The AR alliance can achieve the Juggernaut position, but only with =careful negotiation.  Normally, this alliance will lead to Austrian control of Munich and Russian control of = Rumania and Ankara and possibly also Bulgaria or Constantinople.  In order to achieve a stable 2-way = draw, they must work out an agreement to give all of Turkey and the Balkans to Austria while the = Russian takes all of Germany.  Most likely, the allies will need to have Russia take some of the southern = centers at first, with Austria taking them over after Russia begins to move across Germany and Scandinavia.  = Given the necessary center split, the Russian will have better solo opportunities than the Austrian.  A = Russian solo strategy would be to try to hold Rumania or Ankara long enough to take the entire northern = position.  <BR>
+Similarly, the IR alliance can be steered into the Juggernaut with =extensive center swaps.  Russia has significant winning chances if he can talk Italy into a center split = that allows him to keep Rumania, for thenthe remainder of the northern line gives him 18.<BR>
+The FR alliance is even more difficult to steer into a 2-way draw.  =The Berlin Wall is a possibility, but the position seems to favor France because of the difficulty Russia will = have in capturing Italy.  The Stockholm line is a more natural split for the FR alliance, but it is extremely = difficult to achieve, owing to the small number of DMZ's and the need for 17 units to secure the stalemate =positions.<BR>
+<STRONG>No reasonable 2-way draw positions: AI, AT, IT, EG, EF, =FG</STRONG><BR>
+There is nothing even approaching a stable way for these 6 alliances = to divide the world.  Two-way draws can be achieved with these pairs only if both players are absolutely = committed to the draw.  These 2-way draws are reserved for "carebear" types.<BR>
+What is interesting about this list is that it is fairly obvious that = AT and IT alliances cannot lead to a stable 2-way draw run.  The other four pairs are not obvious.  We spent several = hours trying to find a position for an AI draw before reluctantly concluding that no such position exists.  = We tried for several days for EG, EF, and FG.  All four of these alliance pairs are common in the early = game and can persist into the middle game, in part because both parties can grow indefinitely without boxing = in the other.  They cannot, however, lead to a 2-way draw among players out to win.  Inevitably, = these alliances end with a stab, a race to a solo, or a care-bear draw.<BR>
+<STRONG>General discussion of alliances</STRONG><BR>
+Compare the list of the 6 unstable alliance pairs with the list of 9 = particularly stable pairs.  There is a very clear pattern.  Stability is generally possible only for pairs that do = not have home centers very close to each other.  In particular, the 6 unstable pairs include 3 pairs of western = powers and 3 pairs of eastern powers.=20 The only stable 2-way draw pairings involving powers from the same half = of the board are the RT, AR, and IR alliances.  Of these, only RT can be achieved without extensive = center swaps.<BR>
+Obviously, the criteria for a good end-game alliance are completely =different from the criteria for a good opening-game alliance.  In the opening, one wants an ally with whom = quick collaboration against a common enemy is possible.  In the ending, one wants an ally whose center of = power is on the opposite side of the board.  It should now be quite clear why the RT Juggernaut alliance = deserves its reputation as the most feared alliance on the board.  It is the only alliance of the 21 that is = ideal in the opening and remains ideal for the whole game.  Personally, we believe that the AR and IR alliances = are as good or better than the RT.=20 Both have clear opening targets, but without the need for immediate = trust that the RT requires.  Both have a stable 2-way draw option that can be managed with careful negotiation.  = It is interesting that few players recognize the power of either of these alliances, although the AR = alliance is promoted in an excellent article by Marc St. Rose and Marcel van Vliet <A HREF="3D">The Russian/Austrian Alliance.</A><BR>
+All of the other alliances that are considered good in the opening = suffer from the defect of being unsuitable for a possible 2-way draw attempt.  Some of the other alliances that are = good in the end-game deserve a closer look.  For example, the GI alliance can be quite effective.  If = France and England are at odds, the resulting struggle gives Germany and Italy opportunities to cooperate in = France and in Austria.  Similarly, the AG alliance offers an opportunity for early cooperation against = Russia, provided Germany is not under significant pressure from the west.  One other strong possibility is the = GR alliance.  This alliance is generally considered untenable.  However, it is possible for Germany and = Russia to work together in Scandinavia and Austria from the beginning.  Giving the northern gains = to Germany and the southern gains to Russia sets up the possibility of a 2-way draw based on the =Versailles line.<BR>
+The expert Diplomat needs to understand that what makes a good = opening alliance is different from what makes a good ending alliance.  At the beginning of the game, one should = communicate with all players and seek out alliances for the future as well as the present.  The authors = became acquainted in the game nanook, with von Moltke as Germany (natch!) and Bismarck as Turkey.  In the = opening, Germany allied with France and Turkey with Austria, but they also formed a mutual alliance = behind the scenes.  The early alliances produced early gains, but the GT alliance produced a = devastating AGT attack against Russia, followed by an easy run to a 2-way draw with the Versailles line.  This = article grew out of our post-game reflections on the strategic and diplomatic considerations that led to = the final outcome of that game.  Except for rare pairs, such as RT and GI, that can easily cooperate from = opening to ending, 2-way draws generally are shared by players whose alliance had no direct bearing on the = opening.  The player who wants to beopen to a 2-way draw needs to have this in mind from the outset of the =game.<BR>
+------=_NextPart_000_0007_01C0A168.646E6100--<BR>
+<BR>
+<BR>
+<BR>
+</XMP></FONT><FONT  COLOR="#0f0f0f" BACK="#fffffe" SIZE=3 PTSIZE=10><BR>
+<BR>
+----------------------- Headers --------------------------------<BR>
+Return-Path: <dippouch@devel.diplom.org><BR>
+Received: from  rly-yd02.mx.aol.com (rly-yd02.mail.aol.com [172.18.150.2]) by air-yd03.mail.aol.com (v77_r1.21) with ESMTP; Tue, 06 Mar 2001 18:47:42 -0500<BR>
+Received: from  devel.diplom.org (devel.igo.org [209.140.225.18]) by rly-yd02.mx.aol.com (v77_r1.21) with ESMTP; Tue, 06 Mar 2001 18:45:59 -0500<BR>
+Received: by devel.diplom.org (8.9.3/8.9.3) id PAA17014<BR>
+	for mchirchill@cs.com; Tue, 6 Mar 2001 15:46:04 -0800 (PST)<BR>
+Received: (from manus@localhost)<BR>
+	by devel.diplom.org (8.9.3/8.9.3) id HAA04697<BR>
+	for dippouch@diplom.org; Wed, 28 Feb 2001 07:46:09 -0800 (PST)<BR>
+Received: from mathstat.unl.edu (IDENT:root@mathstat.unl.edu [129.93.48.14])<BR>
+	by devel.diplom.org (8.9.3/8.9.3) with ESMTP id HAA03599<BR>
+	for <manus@devel.diplom.org>; Wed, 28 Feb 2001 07:22:47 -0800 (PST)<BR>
+Received: from compaq1670 (pcp018816pcs.unl.edu [129.93.51.104])<BR>
+	by mathstat.unl.edu (8.9.3/8.9.3) with SMTP id JAA31111<BR>
+	for <manus@devel.diplom.org>; Wed, 28 Feb 2001 09:18:10 -0600<BR>
+Message-ID: <000a01c0a19a$af6d8640$68335d81@unl.edu><BR>
+From: "Glenn Ledder" <gledder@math.unl.edu><BR>
+To: <manus@devel.diplom.org><BR>
+References: <200102271941.LAA28609@devel.diplom.org><BR>
+Subject: Re: Dip Pouch<BR>
+Date: Wed, 28 Feb 2001 09:25:29 -0600<BR>
+MIME-Version: 1.0<BR>
+X-Priority: 3<BR>
+X-MSMail-Priority: Normal<BR>
+X-Mailer: Microsoft Outlook Express 5.00.2919.6600<BR>
+X-MimeOLE: Produced By Microsoft MimeOLE V5.00.2919.6600<BR>
+Content-Type: multipart/mixed;<BR>
+Sender: manus@devel.diplom.org<BR>
+<BR>
+</HTML>

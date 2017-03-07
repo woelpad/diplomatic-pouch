@@ -1,0 +1,60 @@
+#!/home/dippouch/bin/python
+
+import sys, string
+
+outfile = open('output.db', 'w')
+
+def addOn(upline, arg, ender = '<', sep = '|', skip = 0):
+	output = ''
+	col = string.find(string.upper(upline), arg)
+	while col >= 0:
+		if output: output = output + sep
+		end = string.find(string.upper(upline[col + len(arg):]), ender)
+		end = end + col + len(arg)
+		output, upline = output + upline[col + len(arg):end], upline[end:]
+		if skip or ender == arg: upline = upline[1:]
+		col = string.find(string.upper(upline), arg)
+	return upline, output
+	
+def handleVarMoves(line):
+	upline, output = addOn(line, '<TT>')
+	if 1:
+		outfile.write(output + '|')
+		upline, output = addOn(upline, '#', '"', ',')
+	outfile.write(output + '\n')
+
+def handleVarName(line):
+	upline, output = addOn(line, '"', '"', '|')
+	outfile.write(output + '|')
+	upline, output = addOn(upline, '<B>')
+	outfile.write(output + '\n')
+
+def handleVarDesc(line):
+	upline, output = addOn(line, '">', '</DD>')
+	while len(output) > 70:
+		for i in range(60, 100):
+			if output[i] in ' \n\t':
+				outfile.write(output[:i] + '\n')
+				output = output[i+1:]
+				break
+	outfile.write('%s\nEND\n' % output)
+
+def handleLine(line):
+	upline = string.upper(line)
+	if upline[:4] == '<TR>': handleVarMoves(line)
+	elif upline[:4] == '<DT>': handleVarName(line)
+	elif upline[:4] == '<DD>': handleVarDesc(line)
+	
+for i in sys.argv[1:]:
+	infile = open(i)
+	power = string.upper(i[:-5])
+	line = ''
+	for next in infile.readlines():
+		upnext = string.upper(next)
+		start = upnext[:4] in ['<TR>', '<DT>', '<DD>']
+		if line:
+			if start: handleLine(line)
+			else: line = line[:-1] + next
+		if start: line = next
+	if line: handleLine(line)
+

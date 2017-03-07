@@ -1,0 +1,296 @@
+#!/home/dippouch/bin/python
+
+from rating import *
+from gamecount import *
+
+resigners = 0
+cutoff = 0.0
+
+def describe(file, fileName, rowspan):
+	file.write(
+	"""
+		<th valign=top align=left rowspan=%d bgcolor=yellow>
+		<p align=justify>
+	"""	% rowspan)
+	if fileName != 'index.html':
+		file.write(
+		"""
+			Listed to the left are the PBEM Diplomacy players with a ranking of
+			%.1f points or lower, according to the YARS system described
+			on the previous page, and calculating all <i>standard</i> games
+			(and <i>only</i> standard games) entered into this system after
+			their completion.
+			<p align=justify>
+			It is important to note that no player appears on this list
+			unless the player has completed at least one <i>standard</i>
+			PBEM Diplomacy game.
+			<p align=justify>
+			There are <!--%d--> many people who have played in the rated PBEM Diplomacy
+			games either without
+			completing them (having resigned or otherwise lost their position
+			before their power's fate was determined) or only as replacement
+			players who finished games without gaining points but without
+			having lost any ante.  All such people do not
+			appear here.  When each such player either achieves a victory or
+			draw, or completes a game for which he has paid an ante, any
+			current (but not presently displayed) score that he has will be
+			factored into his ranking.
+		""" % (cutoff, resigners))
+	elif system == 'YARS':
+		file.write(
+		"""
+			Listed to the left are the top %d PBEM Diplomacy players, as ranked
+			using the YARS system (created by Bruce Duewer) and calculating all
+			games entered into this
+			system after their completion.  Under this system, each player who
+			begins a game contributes one point from his rating to make up the
+			game "pool."
+			This seven-point pool (or a portion of it) is awarded to the victor
+			or drawing players as follows:
+			<ul>
+			<li>For a solo victor:  7 points
+			<li>For each power in a two-way draw:  3 points
+			<li>For each power in a three-way draw: 
+				1<img align=top src=../tiny_2.gif>/<font size=-2>3</font> points
+			<li>For each power in a four-way draw:  1 point (break-even)
+			<li>For each power in a five-way draw:  0.6 points
+			<li>For each power in a six-way draw:
+				<img align=top src=../tiny_1.gif>/<font size=-2>3</font> point
+			<li>For each power in a seven-way draw:
+				<img align=top src=../tiny_1.gif>/<font size=-2>7</font> point
+			<li>For each eliminated power: 0 points
+			</ul>
+			<p align=justify>
+			Notice that seven points go into the "pool," but (except in the
+			case of a solo victory), fewer than seven come out of it.  The
+			number of points that come out -- and are then distributed to the
+			drawing powers in equal shares -- is one point greater than the
+			number of players <i>not</i> sharing in the draw.
+			<p align=justify>
+			Note also that replacement players <i>never</i> put up a one point
+			<i>ante</i>.  This is done <i>only</i> by the first player to play
+			a power in the game.  If a power is abandoned and then eliminated,
+			<i>only</i> the player who <i>first</i> played the power is
+			penalized (by losing his full one-point <i>ante</i>).
+			<P align=justify>
+			If a power is abandoned and later wins or shares in a draw
+			under a replacement player, the points earned by that power are
+			shared among <i>all</i> persons who played the power, pro-rated by
+			the number of movement phases played by each
+			(the original player loses the full ante, of course).
+			However, no replacement player may earn more than any person who
+			would have played the power from gamestart to completion.
+		""" % rowspan)
+	elif system == 'YARS2':
+		file.write(
+		"""
+			Listed to the left are the top %d PBEM Diplomacy players, as ranked
+			using the modified YARS system (created by Bruce Duewer, modified
+			by Brahm Dorst) and calculating all games entered into this
+			system after their completion.  Under this system, each player who
+			begins a game but whose power does not take a solo victory or
+			participate in a draw contributes one point from his rating to
+			ithe victorious player or players.
+			The point pool is therefore awarded to the victor
+			or drawing players as follows:
+			<ul>
+			<li>For a solo victor:  6 points
+			<li>For each power in a two-way draw: 2.5 points
+<!-- 2<img align=top src=../tiny_1.gif>/<font size=-2>2</font> points -->
+			<li>For each power in a three-way draw: 
+				1<img align=top src=../tiny_1.gif>/<font size=-2>3</font> points
+			<li>For each power in a four-way draw:  0.75 points
+			<li>For each power in a five-way draw:  0.4 points
+			<li>For each power in a six-way draw:
+				<img align=top src=../tiny_1.gif>/<font size=-2>6</font> point
+			<li>For each power in a seven-way draw: 0 points
+			<li>For each eliminated power: -1 point
+			</ul>
+			<p align=justify>
+			Note also that replacement players <i>never</i> put up a one point
+			<i>ante</i>.  This is done <i>only</i> by the first player to play
+			a power in the game.  If a power is abandoned and then eliminated,
+			<i>only</i> the player who <i>first</i> played the power is
+			penalized (by losing his full one-point <i>ante</i>).
+			<P align=justify>
+			If a power is abandoned and later wins or shares in a draw
+			under a replacement player, the points earned by that power are
+			shared among <i>all</i> persons who played the power, pro-rated by
+			the number of movement phases played by each.
+		""" % rowspan)
+	return 1
+
+def display(fileName, place = 1):
+	file = open(fileName + '.new', 'w')
+	file.write(
+	"""
+<HTML><HEAD><TITLE>DP: E-Mail Ratings</TITLE></HEAD>
+<BODY BGCOLOR=white LINK=black VLINK=black>
+<p align=center><A HREF="../../.."><IMG SRC="../../../Common/DPLogo.gif"
+ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="../../../Common/DPLinks.gif" ALT="Shortcuts"
+HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A><br clear=all>
+<img src="../../../Common/reddot.gif" height=2 width=100%%>
+<H1 align=center>PBEM Player Ratings</H1>
+<H3 align=center>Total Games Included: %d<BR>
+Participating Auto-Reporting Judges:  CAMA, FROG, SEPO, USBR, USCA, USCH, USEF, USIN, USPA, USVG</H3>
+<b>Note that only <i>standard</i> games are used to determine the player
+rankings shown here (variant rankings will be made available later).  However,
+<i>all</i> games with "Standard" as their primary variant are counted,
+regardless of any irregular press or player anonymity settings.
+<P>
+Although the database contains %s total players (and you may look up the
+rating details for any of these, by e-mail address),
+players are <!-- font color=red>listed in red</font -->
+<u>not listed</u> on these rankings pages
+until seven games they
+have finished are reported.  Help yourself and your fellow players <!-- earn
+"men in black" status -->
+by reporting any games you see missing from your detail.
+</b>
+""" % (gameCount, len(scores)))
+	if system == 'YARS2': file.write("""
+	<!--
+	<H3 align=center><i>
+	You can also <a href=indexA.html>see point per game ratings
+	for the men in black.</a></i></H3>
+	-->
+	""")
+	file.write("""
+<center><form method=post action=../addGame.cgi>
+<input type=submit value="Manually Add a Completed Game To The Ratings">
+</form>
+<H3 align=center><font color=red><i>...Click On Any Name in the Table For Rating Details...
+<form method=post action=../player.cgi>
+<input type=hidden name=system value=%s>
+...Or look at the ratings data for this e-mail address:
+<input size=30 name=email>
+<input type=submit value="Get Data">
+</form>
+<P>If you or someone else is listed twice,<br>
+or if you notice an incomplete name that you can correct,
+<a href=mailto:"elladan@hotmail.com?subject=PBEM-Ratings-Update">please
+let us know....</a></i></font></H3>
+
+<form name=postForm method=post action=../player.cgi>
+<input type=hidden name=system value=%s>
+<input type=hidden name=email>
+</form>
+<script>
+function postIt(who)
+{ document.postForm.email.value = who; document.postForm.submit(); }
+</script>
+
+<table cellpadding=5 border=5>
+<tr><th bgcolor=red><font color=yellow>Rank
+	<th bgcolor=red><font color=yellow>Points
+	<th bgcolor=red><font color=yellow>Name (Games)
+	<th bgcolor=red><font color=yellow>About the Rating System
+	""" % (system, system))
+	list = {}
+	for score in scores.keys():
+		val = round(scores[score][0], precision)
+		scores[score] = (val, scores[score][1], scores[score][2])
+		if not list.has_key(val): list[val] = []
+		list[val].append(score)
+	keys = list.keys()
+	keys.sort()
+	keys.reverse()
+	rowspan = described = 0
+	for score in keys:
+		if fileName == 'index.html':
+			if score <= cutoff: break
+		elif score > cutoff: continue
+		allGuys = 0
+		for email in list[score]:
+			allGuys = allGuys + (scores[email][2] >= 7)
+		# allGuys = len(list[score])
+		rowspan = rowspan + allGuys
+	for score in keys:
+		if fileName == 'index.html':
+			if score <= cutoff: break
+		elif score > cutoff: continue
+		guys = 0
+		for email in list[score]: guys = guys + (scores[email][2] >= 7)
+		# guys = len(list[score])
+		if not guys: continue
+		file.write ((
+			"""
+			<tr><td valign=top bgcolor=ltgreen rowspan=%d align=right>%d.
+			<th bgcolor=ltgreen valign=top align=right nowrap rowspan=%d>%.""" +
+			`precision` + 'f') % (guys, place, guys, score))
+		place = place + guys
+		multi = 0
+		for email in list[score]:
+			junk, name, games = scores[email]
+			if not name: name = '<blink>Name Unknown!</blink>'
+			if games < 7: continue
+				# start, end = '<font color=red>', '</font>'
+			else: start = end = ''
+			if multi: file.write('<tr>')
+			multi = 1
+			file.write (
+				"""
+				<td valign=top bgcolor=ltgreen>
+				<a href=javascript:postIt("%s")>%s%s%s</a> (%d)
+				""" % (email, start, name, end, games))
+			if not described: described = describe(file, fileName, rowspan)
+	if fileName == 'index.html': (which, str) = ('Other', 'submit')
+	else: (which, str) = ('Top', 'button onClick=window.history.back()')
+	file.write(
+		"""
+			<tr><th bgcolor=red colspan=4><form action=allrated.html method=get>
+			<br>&nbsp;<input type=%s value="See The %s Ranked Players"></form>
+			</table>
+			<P><HR><!img src="../../../Common/reddot.gif" height=2 width=100%%>
+			<H5>
+			<p align=center>
+			[       <a href="../../../Zine">The Zine</a> |
+			        <a href="../../../Online">Online Resources</a> |
+			        <a href="../../../Showcase">Showcase</a> |
+			        <a href="../../../Postal">Postal</a> |
+			        <a href=../..>Email</a> |
+			        <a href="../../../Face">Face to Face</a>
+			]
+			<br>
+			<i>The Diplomatic Pouch is brought to you by
+			<a href="../../../Council.html">the DP Council</a>.
+			<br>
+			The Email Diplomacy section is maintained by <a href="mailto:masseyd@valhalla.btv.ibm.com">Doug Massey</a>.
+			<br>
+			The PBEM Ratings are maintained by <a href="mailto:Elladan@hotmail.com">Eric Hunter</a>.
+			</i>
+		\n""" % (str, which))
+	file.close()
+	os.chmod(fileName + '.new', 0644)
+	os.rename(fileName + '.new', system + os.sep + fileName)
+	return place
+
+def loadscores():
+	global player
+	scores = {}
+	dirlist = os.listdir(playerDir)
+	for dir in dirlist:
+		if os.path.isdir(playerDir + os.sep + dir):
+			filelist = os.listdir(playerDir + os.sep + dir)
+			for file in filelist:
+				player = load(file, playerDir)
+				if type(player) == type({}) and not player.has_key(CHEAT):
+					scores[file] = (player[SCORE], player[NAME], player[FINISH])
+	return scores
+
+def refresh():
+	global resigners
+	global scores
+	scores = loadscores()
+	vals = {}
+	place = display('index.html')
+	display('allrated.html', place)
+
+if __name__ == '__main__':
+	for sysName in sysList:
+		system = sysName
+		playerDir = '/home/dippouch/public_html/Email/Ratings/%s/players/' \
+			% system
+		refresh()

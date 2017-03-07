@@ -1,0 +1,215 @@
+F Edi|F Lon|A Lvp
+# -Cly|-Wal|-Yor|Kayla
+#	--------------------------------------
+#	SOUTHERN OPENINGS:  F Edi-NTH, Lon-ENG
+#	--------------------------------------
+-NTH|-ENG|-Edi|eng-south,eng-atlbind
+-NTH|-ENG|-Wal|eng-south,eng-wales
+-NTH|-ENG|-Yor|eng-south,eng-atlbind
+#	--------------------------------------
+#	NORTHERN OPENINGS:  F Edi-NWG, Lon-NTH
+#	--------------------------------------
+-NWG|-NTH|-Edi|eng-church,eng-bohas,eng-push,eng-magde
+-NWG|-NTH|-Cly|eng-north,eng-push,eng-magde
+-NWG|-NTH|-Wal|eng-north,eng-magde
+-NWG|-NTH|-Yor|eng-north,eng-york,eng-push,eng-magde
+#	----------------------------------------
+#	THE SPLITS OPENINGS:  F Edi-NWG, Lon-ENG
+#	----------------------------------------
+-NWG|-ENG|-Edi|eng-splits
+-NWG|-ENG|-Wal|eng-splits
+-NWG|-ENG|-Yor|eng-splits
+#	-------------------------------------
+#	WESTERN OPENINGS:  F Edi-Cly, Lon-ENG
+#	-------------------------------------
+-Cly|-ENG|-Wal|eng-west
+#	--------------
+#	SILLY OPENINGS
+#	--------------
+-NTH|HOLD|-Yor|eng-northsea
+-Cly|-NTH|-Yor|eng-northsea
+-NTH|-Wal|-Yor|eng-northsea
+-Yor|-Yor|-Yor|eng-yorkpud
+
+comment|--ABOUT THE ENGLISH OPENINGS--
+English openings are categorized by the orders given to the two fleets,
+as follows:
+<ul>
+<li>Northern Openings   (F Edi-NWG, F Lon-NTH)
+<li>Southern Openings   (F Edi-NTH, F Lon-ENG)
+<li>Western Opening     (F Edi-Cly, F Lon-ENG)
+<li>The Splits Openings (F Edi-NWG, F Lon-ENG)
+</ul>
+<P>
+A few other Spring 1901 order sets are named, but these others are usually
+categorized as "silly" (such as the famous "Yorkshire Pudding" opening).
+<P>
+Two variants of the Northern Opening, the Yorkshire and the Churchill,
+are far and away the most common of the English openings.
+END
+
+eng-church|NORTHERN OPENING, CHURCHILL VARIANT
+In this Northern Opening variant, known simply as the Churchill Opening, and
+named after after Sir Winston's plan to invade Norway in World War II, the
+English army is sent to Edinburgh.  This
+is a little more risky than the pure Northern Opening, as England cannot
+guarantee securing a build in 1901, but it offers more flexibility, since
+England can follow with a Bohas in the Fall, if desired, to exert pressure on
+Sweden in Spring of 1902. The Churchill is usually seen a sign that England is
+more interested in securing a presence in Scandinavia than in worrying about
+the Franco-German relationship, and hence provides an early hint of a triple
+alliance.  Because of this, the Fall destination of the English army is equally
+likely to be Belgium as Norway.
+<P>
+The <i>Gamer's Guide to Diplomacy</i> calls this "England's best opening,"
+From Edinburgh rather than Yorkshire, the army can be convoyed by either
+fleet. It thus has the choice of going to Norway or to the Continent. It can
+also be convoyed to Norway by one fleet with support from the other.
+This opening is viewed as primarily anti-Russian. It can also
+be anti-German. One powerful Fall move is A Edi-Nor, F NTH C
+F Edi-Nor, F NWG-BAR, threatening Russia even more directly.
+END
+
+eng-bohas|[BOHAS]
+This Fall continuation of the Churchill Opening has the English army
+convoying to Norway while the North Sea fleet is sent to Skagerrak.
+At the risk of leaving the North Sea open, England gains the ability to
+start quickly on Russia's Scandinavian holdings, beginning in the south, or
+to conduct a surprise attack on a German Denmark.
+END
+
+eng-north|NORTHERN OPENING (THE YORKSHIRE OPENING)
+Richard Sharp's name for the opening F Lon-NTH and F Edi-NWG.
+There are four named variations:
+<ul>
+<li>the Yorkshire Opening (the pure Northern Opening),
+<li>the Churchill Opening,
+<li>the Wales variant, and
+<li>the Clyde variant,
+</ul>
+In his book, "The Game of Diplomacy," Richard Sharp applied the
+term "Yorkshire Opening" to the pure Northern Opening (A Lvp-Yor).
+Although the offensive role of the English army is limited, this
+opening is the only move to guarantee England a build in 1901, since Yorkshire
+can guard London against a sneaky French assault through the Channel, and one
+fleet can support the other into Norway if Russia opens with A Mos-StP. The
+opening vies in popularity with the "Churchill Opening." Note that it <i>may</i>
+be important which England supports himself into Norway. If Russia orders
+A Mos-StP in Spring of 1901 and A StP-Nor in Fall of 1901 then to achieve
+Norway, the English will need to support a move by the fleet in the North
+Sea, in case Germany orders an attack on the North Sea to cut support.
+END
+
+eng-northsea|NORTH SEA OPENING
+Richard Sharp's name for the opening in which England orders A Lvp-Yor,
+sends one fleet to the North Sea and does something &quot;silly&quot; with
+the other fleet (usually F Lon H, which provides the opportunity for a
+supported attack on the English Channel, at the cost of England's 1901 build).
+There are two variations: the Clyde (involving Edi-Cly) and the Thames
+(Lon-Wal).
+END
+
+eng-south|SOUTHERN OPENING
+Richard Sharp's name for the opening F Lon-ENG, F Edi-NTH. There
+are three named variations:
+<ul>
+<li>the Edinburgh variation,
+<li>the Welsh Opening, and
+<li>the Yorkshire Opening.
+</ul>
+END
+
+eng-atlbind|[ATLANTIC BIND]
+In this Fall 1901 continuation of a Southern opening, England sends
+the Channel fleet into the Mid-Atlantic Ocean while convoying to Norway.
+England passes up the slim chance of Brest in exchange for the forward
+position. (The MAO is much harder for England to take once France builds
+a second fleet.) If expelled from MAO, the English fleet can move to the
+Western Mediterranean, threatening Spain, Tunis, and the Gulf of Lyon.
+END
+
+eng-splits|THE SPLITS
+Richard Sharp's name for the opening F Lon-ENG and F Edi-NWG.
+There are three named variations: the Edinburgh, the Wales and
+the Yorkshire, each named after the army destination.
+END
+
+eng-wales|SOUTHERN OPENING, WELSH VARIANT
+Known as the Welsh Opening, this opening is normally attempted when England
+is quite sure of
+taking the Channel, a fact seen by its high success rate compared with other
+Southern openings. Because England only commits to Wales with the surety of
+a Channel entry, French cooperation is often assumed by the board, and the
+most common target for the English army is Belgium. As a result, however, the
+success rate for taking Brest with this opening is extraordinarily high,
+and any French trust in the English will be tested.
+<P>
+The <i>Gamer's Guide to Diplomacy</i> calls this opening "blatantly
+anti-French." If France opened to the Mid-Atlantic, she is probably faced
+with the choice of giving up either Spain or Portugal in order to protect
+Brest. England may also allow her to slip back in the home center while
+convoying the army to Belgium instead.  Meanwhile, the North Sea fleet can
+either support the army into Belgium or take Norway.
+END
+
+eng-yorkpud|YORKSHIRE PUDDING
+A joke opening where all the English units are ordered to Yorkshire
+in Spring 1901. Devised by Denis Jones and used by him in a postal
+game. Strange character, Denis Jones. Needless to say, he didn't
+do too well in that game.
+END
+
+eng-west|WESTERN OPENING
+In this opening, England leaves Scandinavia for Russia and Germany to divide,
+and commits all forces to an advance into the Atlantic.  Followed in Fall by
+Cly-NAO and a convoy to Belgium with German support, the Englishman builds a
+fleet in Liverpool and overwhelms France with seapower.  The Western opening
+is extremely risky, and only undertaken with complete trust in the German,
+both for his support into Belgium and his restraint in taking the North Sea.
+If Russia is warned off Norway and commits three units to the south, the German
+can usually conquer all of Scandinavia, his reward for assisting the English.
+By the time Germany consolidates Scandinavia, England's defenses against any
+temptation the German may be feeling should be firmed up.
+END
+
+eng-push|[EASTERN PUSH]
+Manus Hand's name for the anti-Russian continuation of the Northern opening.
+In Fall of 1901, the Norwegian sea fleet is sent to the Barents Sea while
+England's other two units take Norway.  Especially if Russia has opened to the
+south, this opening puts heavy pressure on St. Petersburg, and can thus be
+used to relieve England's fellow "witch," the Turk, from Russian aggression. 
+If Germany prevents Russia from gaining Sweden, the attack on Russia's north
+can be swift and final, often ending with Russia conceding St. Petersburg to
+the English in return for a promise that only fleets will occupy it.  If
+Russia opens Mos-StP, England's better choice is a supported attack on
+Norway, but the threat of a Barents invasion in 1902 (with an occupied
+Norway) remains a strong argument for a Northern Opening.
+END
+
+eng-magde|[MAGDEBURG]
+Named after the German ship wrecked during WWI in the Baltic, which gave Great
+Britain and Russia access to German naval codes for the remainder of the war,
+this is Manus Hand's Anglo-Russian Northern Opening continuation.  England's
+task is to convince Germany to open to Denmark and then move to stand Russia
+out of Sweden.  Russia opens to the Gulf of Bothnia, and, in cahoots with
+his English ally, assists
+in isolating the German for a strong 1902 attack.  Russia avoids Sweden in Fall
+of 1901 and instead sails to the Baltic.  Simultaneously, England takes the
+vacated Denmark.  Norway can go to either England (the "Prince Louis
+Madgeburg") or Russia (if Russia opens with a Northern System; this is the
+"Benckendorff Magdeburg").  The Prince Louis (F NWG-Nor in Fall 1901) has
+the diplomatic advantage of allowing England to claim shock and continued
+friendship with Germany, but the Benckendorff can be used to force a Spring
+disband of the German fleet (NWG HOLD in Fall 1901, then NWG-Nor and NTH-SKA
+in Spring 1902 while Russia moves her Norway army to Finland and send a newly
+built fleet into the Gulf of Bothnia), forcing the German to play a unit
+short in Fall of 1902.
+END
+
+# Kayla|ACCORDION MYSTERY
+# Kayla says you should do this opening in case people need to find clues in
+# there and there are much  things you could do like there might be games
+# to have.  Maybe it can give you stuff that you can take home.  And that
+# you might see animal games and you could find clues in it.
+# END
+

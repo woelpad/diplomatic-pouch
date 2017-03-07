@@ -1,0 +1,194 @@
+<HTML><FONT  SIZE=3 PTSIZE=10>Subj:	<B> DP judge/zine - Ancient Med</FONT><FONT  SIZE=3 PTSIZE=10></B><BR>
+Date:	3/6/01 3:50:50 PM Pacific Standard Time<BR>
+From:	DonHessong@Rockford.com (Don Hessong)<BR>
+Sender:	manus@devel.diplom.org<BR>
+To:	manus@devel.diplom.org<BR>
+</FONT><FONT  SIZE=3 PTSIZE=10><BR>
+</FONT><FONT  SIZE=3 PTSIZE=10>Manus<BR>
+<BR>
+Below are two articles about my variant for the next issue of the DP zine.<BR>
+The first one is a general introduction of the variant. The second one is<BR>
+about strategy for the variant. I make mention of the notion that the<BR>
+variant can be played on the DPjudge - so I do hope that's true by now or<BR>
+will be by the time these articles are published. Please let me know when<BR>
+that happens so I can update my web site and make announcements etc.<BR>
+<BR>
+Thanks<BR>
+Don<BR>
+<BR>
+<BR>
+-------------------------------------------<BR>
+Introducing "The Ancient Mediterranean" a five-player Diplomacy variant<BR>
+based on the empires that dominated the Mediterranean area during ancient<BR>
+history. The powers are Rome, Carthage, Greece, Egypt and Persia. This<BR>
+variant has some similarities to the variant "Classical" but one look at the<BR>
+map will tell you that it will play much differently. The Ancient Med is a<BR>
+design of my own creation which I have been working on for over three years.<BR>
+But still it is a relatively new variant to the Diplomacy community. I first<BR>
+made it available on the web in May 2000 and it has had some signifigant<BR>
+revisions since then. I consider the game very close to, if not completed. I<BR>
+may make some more minor changes after a period of solid play-testing.<BR>
+<BR>
+I set out to create a variant for five players since I play Diplomacy<BR>
+strictly face to face. It is often very difficult to get seven people for a<BR>
+game. The ancient period of history is well suited to games of conquest and<BR>
+expansion and the added naval emphasis caused by the middle of the board<BR>
+consisting of the sea is very interesting. During the design of the game,<BR>
+emphasis has been placed on its playability. The game does not depict a<BR>
+historical setting at a single point in time, although the overall<BR>
+historical theme is accurate. History has been 'collaged' - if not preserved<BR>
+as much as possible. The rules are consistent with the normal rules of<BR>
+Diplomacy, the only exceptions being due to the geography of the area. And<BR>
+the map is very appealling - if I do say so myself.<BR>
+<BR>
+The most interesting aspect of the game is that it is more or less<BR>
+'circular'. Each power has a neighbor on (at least) two sides. Each set of<BR>
+two powers has a small cluster of supply centers between them. Each of the<BR>
+two powers will want to lay claim to some of those supply centers - so they<BR>
+will meet in the middle. But both of the powers in each pair have the same<BR>
+situation on the other front. So all five powers are faced with the early<BR>
+game possibility of having to expand in two directions and with the<BR>
+possibility of having to fight a two front war. Also see the other Ancient<BR>
+Med article in this issue of the zine entitled THE STRATEGIES OF THE ANCIENT<BR>
+MEDITERRANEAN.<BR>
+<BR>
+The Ancient Med is available to play on The DPjudge as well as USTR. It has<BR>
+also been added to Realpolitik - an awesome Diplomacy adjudication program.<BR>
+I have set up a web page which contains lots of resources including maps,<BR>
+icons, links to Ancient Med games in progress and other Diplomacy related<BR>
+resources - not to mention links to ancient history related sites. I hope<BR>
+you like what you see when you go to the web site and if you decide to play<BR>
+a game on-line, I'd be delighted to hear about it. I'd also be glad to hear<BR>
+any comments or suggestions. Be sure to use the latest revision of the<BR>
+variant which is Rev. 8. Also, if you use Realpolitik, be sure to use it's<BR>
+latest version which as of this writing is 1.5.1.<BR>
+<BR>
+e-mail me Don Hessong, the designer of the Ancient Med:<BR>
+DonHessong@Rockford.com<BR>
+The Ancient Med website: http://www.rockford.com/donhesso/ancient.htm<BR>
+The Ancient Med mirror website:<BR>
+http://www.geocities.com/donhessong/ancient.htm<BR>
+Realpolitik: http://home.nc.rr.com/starfury/realpol/<BR>
+The DPjudge: http://devel.diplom.org/~dpjudge/dpjudge/<BR>
+A Dip Pouch article about the USTR type judges:<BR>
+http://devel.diplom.org/DipPouch/Email/newintro.html<BR>
+USTR: ustr@diplom.org<BR>
+<BR>
+Diplomacy Copyright Hasbro Inc.<BR>
+The Ancient Mediterranean rule variations and map Copyright 2001 Don Hessong<BR>
+<BR>
+<BR>
+----------------------------------------------------------------------<BR>
+THE STRATEGIES OF THE ANCIENT MEDITERRANEAN<BR>
+<BR>
+At first glance The Ancient Mediterranean board looks like it's divided into<BR>
+two halves. In the east there's Greece, Egypt and Persia, while in the west<BR>
+are Rome and Carthage. It's easy to assume that in this game there will be<BR>
+two sub-campaigns, one in the east and the other in the west, which may or<BR>
+may not spill over into each other during the game's early stages. Then the<BR>
+winners of each half will start fighting in the later stages of the game.<BR>
+This situation would be similar to the original game of Diplomacy.<BR>
+<BR>
+On the other hand, many people assume that Rome and Carthage would make<BR>
+great allies and steam-roll across the board. However, there is at least one<BR>
+problem with this alliance. They have no common enemy. They can't attack a<BR>
+mutually accessible victim and carve it up between them because no such<BR>
+target exists. There is an area in the middle of the board where they can<BR>
+provide some degree of mutual support, but this area is small.<BR>
+<BR>
+This does not necessarily mean that Rome and Carthage will always be at war.<BR>
+Most players are aware that to fight one against one without an ally is<BR>
+futile and self-destructive. What happens in the west depends, to a great<BR>
+extent, on events in the east.<BR>
+<BR>
+With three powers in the east one might assume that two of them will ally<BR>
+against the third. This does happen often enough, but there are<BR>
+complications. If either Egypt or Greece ally with Persia against the other,<BR>
+the gains in the early game are good, assuming Persia's ally is not getting<BR>
+pressure from one of the western powers. But the problem is that whoever<BR>
+Persia's ally is, cuts Persia off from the rest of the board once the first<BR>
+victim has been eliminated. This leaves Persia in the position of having<BR>
+only one possible avenue for expansion, the original ally. And it leaves the<BR>
+original ally in the position of being sandwiched between Persia and the<BR>
+remaining western powers, which will usually prove to be detrimental. Egypt<BR>
+and Greece may decide to ally against Persia, but this alliance has its<BR>
+difficulties too, in that both powers have to turn their backs to the<BR>
+western half of the board.<BR>
+<BR>
+The Triple Alliance Strategy<BR>
+<BR>
+One way to avoid these pitfalls (not that it's possible to avoid pitfalls in<BR>
+Diplomacy) is to arrange an alliance structure that accounts for the fact<BR>
+that not all enemies or allies will be on the same half of the board. In The<BR>
+Ancient Mediterranean this includes any three-way alliance where one of the<BR>
+allies is not adjacent to the other two partner powers. For example, in a<BR>
+Greek-Carthaginian-Egyptian alliance, Greece is not adjacent to either of<BR>
+the other two allies. Greece would aid Carthage in an attack on Rome and aid<BR>
+Egypt against Persia. Naturally, the Carthaginian-Egyptian border would be a<BR>
+neutral zone.<BR>
+<BR>
+Rotating your perspective for each power one spot to the right will create a<BR>
+new triple alliance consisting of Persia, Rome and Carthage. In this<BR>
+alliance Persia would support Rome in an attack on Greece and at the same<BR>
+time help Carthage against Egypt. Again the two powers that are adjacent<BR>
+would require a neutral border between them (in this example I consider Rome<BR>
+and Carthage adjacent).<BR>
+<BR>
+There are a total of five combinations of this triple alliance structure and<BR>
+any given power can be a member of three of them. This can make for some<BR>
+interesting games given that different players will negotiate for different<BR>
+alliance combinations.<BR>
+<BR>
+Of course this only describes the beginning game. In the middle game, the<BR>
+other two powers will have been eliminated and the triple alliance will have<BR>
+to sort itself out.<BR>
+<BR>
+A Word About Armies<BR>
+<BR>
+In The Ancient Mediterranean there is a lot of fleet action that happens in<BR>
+the middle of the board. But don't forget the flanks. Every power has two<BR>
+flanks, however narrow, which can be attacked by land. Usually at least one,<BR>
+if not both, of these land areas is either under attack or being used to<BR>
+attack. So don't neglect the armies. Greece and Persia especially, have a<BR>
+larger land-space to sea-space ratio than it appears and if you are stuck<BR>
+with too many fleets bottled up behind the lines, those enemy armies can<BR>
+roll around the flanks before you know it.<BR>
+<BR>
+Diplomacy Copyright Hasbro Inc.<BR>
+The Ancient Mediterranean rule variations and map Copyright 2001 Don Hessong<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</XMP></FONT><FONT  COLOR="#0f0f0f" BACK="#fffffe" SIZE=3 PTSIZE=10><BR>
+<BR>
+----------------------- Headers --------------------------------<BR>
+Return-Path: <dippouch@devel.diplom.org><BR>
+Received: from  rly-xb04.mx.aol.com (rly-xb04.mail.aol.com [172.20.105.105]) by air-xb01.mail.aol.com (v77_r1.21) with ESMTP; Tue, 06 Mar 2001 18:50:50 -0500<BR>
+Received: from  devel.diplom.org (devel.igo.org [209.140.225.18]) by rly-xb04.mx.aol.com (v77_r1.21) with ESMTP; Tue, 06 Mar 2001 18:49:41 -0500<BR>
+Received: by devel.diplom.org (8.9.3/8.9.3) id PAA17557<BR>
+	for mchirchill@cs.com; Tue, 6 Mar 2001 15:49:52 -0800 (PST)<BR>
+Received: (from manus@localhost)<BR>
+	by devel.diplom.org (8.9.3/8.9.3) id HAA10588<BR>
+	for dippouch@diplom.org; Sun, 4 Mar 2001 07:46:32 -0800 (PST)<BR>
+Received: from rockford.com (rockford.com [198.63.202.2])<BR>
+	by devel.diplom.org (8.9.3/8.9.3) with SMTP id XAA12905<BR>
+	for <manus@devel.diplom.org>; Sat, 3 Mar 2001 23:05:56 -0800 (PST)<BR>
+Received: from [198.63.202.53] [198.63.202.53] by rockford.com with smtp<BR>
+	id 06195B00 ; Sun, 4 Mar 2001 01:05:28 -0500<BR>
+X-ROUTED: Sun, 4 Mar 2001 01:05:50 -0500<BR>
+X-TCP-IDENTITY: DonHessong<BR>
+User-Agent: Microsoft-Outlook-Express-Macintosh-Edition/5.02.2022<BR>
+Date: Sun, 04 Mar 2001 01:07:58 -0600<BR>
+Subject: DP judge/zine - Ancient Med<BR>
+From: Don Hessong <DonHessong@Rockford.com><BR>
+To: <manus@devel.diplom.org><BR>
+Message-ID: <B6C745EE.C465%DonHessong@Rockford.com><BR>
+In-Reply-To: <200102281444.GAA02636@devel.diplom.org><BR>
+Mime-version: 1.0<BR>
+Content-transfer-encoding: 7bit<BR>
+Content-Type: text/plain; charset="US-ASCII"<BR>
+Sender: manus@devel.diplom.org<BR>
+<BR>
+</HTML>

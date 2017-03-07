@@ -1,0 +1,31 @@
+#!/home/dippouch/bin/python
+
+import sys
+
+import rating
+
+signal = None
+while len(sys.argv) > 1 and sys.argv[1][0] == '-':
+	if sys.argv[1][:2] == '-f':
+		signal = sys.argv[1][2:]
+		del sys.argv[1]
+		if not signal and len(sys.argv) > 1:
+			signal = sys.argv[1]
+			del sys.argv[1]
+	elif sys.argv[1][:2] == '-s':
+		system = sys.argv[1][2:]
+		del sys.argv[1]
+		if not system and len(sys.argv) > 1:
+			system = sys.argv[1]
+			del sys.argv[1]
+		rating.system = system
+		rating.playerDir = '/home/dippouch/public_html/Email/Ratings/%s/players/' % rating.system
+
+if len(sys.argv) > 1: list = sys.argv[1:]
+else: list = sys.stdin.readlines()
+
+if signal in list: list = list[list.index(signal) + 1:]
+
+map(rating.figureGame, list)
+rating.save(1)
+print '. . . . complete'

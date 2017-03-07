@@ -1,0 +1,29 @@
+Traceback (innermost last):
+  File "refresh", line 3, in ?
+    from rating import *
+  File "rating.py", line 127
+    elif addr != guy and type(player[addr]) != type(''):
+       ^
+SyntaxError: invalid syntax
+
+Traceback (innermost last):
+  File "refresh", line 296, in ?
+    refresh()
+  File "refresh", line 286, in refresh
+    scores = loadscores()
+  File "refresh", line 278, in loadscores
+    player = load(file, playerDir)
+  File "rating.py", line 33, in load
+    execfile(playerDir + fileName[0] + os.sep + fileName)
+  File "/home/dippouch/public_html/Email/Ratings/YARS2/players/r/romackw@erols.com", line 2
+    2 (USIN)': {7: 0, 6: 'France', 5: 0, 4: 1, 3: 0, 2: 6}}, 0: 'William Romack'}
+                         ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "refresh", line 296, in ?
+    refresh()
+  File "refresh", line 288, in refresh
+    place = display('index.html')
+  File "refresh", line 233, in display
+    file.write (
+IOError: [Errno 28] No space left on device

@@ -1,0 +1,34 @@
+#!/home/dippouch/bin/python
+
+import sys, os, string
+
+def check(file):
+	reader = open(file)
+	text = reader.read()
+	reader.close()
+	return '{' in text
+
+topDir = '/home/dippouch/public_html/Email/Ratings/YARS/players'
+
+dirs, dupes, lastName, old1 = os.listdir(topDir), [], '', 0
+dirs.sort()
+for dir in dirs:
+	if not os.path.isdir('%s/%s' % (topDir, dir)): continue
+	files = os.listdir('%s/%s' % (topDir, dir))
+	files.sort()
+	for file in files:
+		uname = string.split(file, '@')[0]
+		if uname == lastName:
+			if not check('%s/%s/%s' % (topDir, dir, file)): continue
+			if not old1:
+				old1 = check('%s/%s/%s' % (topDir, dir, lastFile))
+				if not old1:
+					old1, lastFile = 1, file
+					continue
+			if not dupes: dupes.append(lastFile)
+			dupes.append(file)
+		else:
+			if dupes:
+				print dupes
+				sys.stdout.flush()
+			dupes, lastName, lastFile, old1 = [], uname, file, 0

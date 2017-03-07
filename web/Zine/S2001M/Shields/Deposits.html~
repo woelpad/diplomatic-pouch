@@ -1,0 +1,169 @@
+<html>
+<head>
+   <title>DP S2001M: Pouch Deposits</title>
+</head>
+<body bgcolor=white>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toS2001M.gif" border=0></A>
+<BR clear=both>
+<center><table>
+<tr>
+<td><img SRC="../../Common/deposits.gif" ></td>
+
+<th>
+<h1>
+Pouch Deposits</h1>
+
+<center>
+<h3>
+<i>The Editor and the Readership</i></h3></center>
+</th>
+
+<td><img SRC="../../Common/deposits.gif" ></td>
+</tr>
+</table></center>
+
+<hr WIDTH="100%">
+
+<p>Well, here we have enother Diplomatic Pouch mail bag. Once again, there were lots of letters waiting for me when I took this assignment on. I've tried to pick out some of the more interesting ones for publication.
+
+<p>However, before we get to that, in the last issue David Cohen tossed out
+this trivia question: 
+<blockquote><i>
+In Standard Diplomacy, what province on the board could possibly be occupied by
+more different units than any other in 1901?</i></blockquote>
+<p>We got a whole bunch of responces to this question, including quite a few wrong answers. Among the respondants who answered correctly were: John Troiano, Michael Zalar, Robert Cochran, Jason Whitby, Eugene Hung, Geoff Baker, Steve Araps, Gary Waines, Brendan Gau and Kevin Kacmarynski.
+
+<P>The correct answer is:
+<blockquote><i>
+Denmark can be reached by ten different units. Kiel, Berlin, Munich, London, Edinburgh, Liverpool, Paris, Marseilles, Warsaw and Moscow.
+</i></blockquote>
+<p>About half the answers we received were correct. The most common wrong answer was "Belgium with 9". Which is a pretty reasonable guess. 
+
+<P>And as this is becoming a regular feature, here's a new one for you:
+
+<P><blockquote><i>In Standard Diplomacy, what province on the board could possibly be occupied by
+more different units than any other in 1901?</i></blockquote>
+
+<P><blockquote><i>As an example, Tun could be occupied by units originating in Bud, Nap, Rom, Ven
+and Vie.</i></blockquote>
+
+<P>Think you know the answer? Send your responses to <a href=mailto:dippouch@devel.diplom.org>dippouch@devel.diplom.org</a>!
+
+
+<!-- Begin Template: article 
+<p><hr size=5>
+<h3 align=center>
+Mail Received Concerning<br>
+<a href=/Zine/S2000M/TODO_URL>TODO_TITLE</a></h3>
+</h3>
+<hr>
+End Template: article -->
+
+<!-- Begin Template: letter
+<p><H4>From TODO_NAME (<a href=mailto:TODO_EMAIL>TODO_EMAIL</a>):</H4>
+<p>TODO_TEXT
+End Template: letter -->
+
+<!-- Begin letters -->
+
+
+
+<p><hr size=5>
+<h3 align=center>
+General Mail</h3>
+</h3>
+<hr>
+
+<p><H4>From Jeroen Bruyns (<a href=mailto:jbruyns@btinternet.com>jbruyns@btinternet.com</a>):</H4>
+
+<p>I've been playing diplomacy with the same group of friends for several years
+by telehone (a variant not mentioned on your website, but very plesent,
+although expensive). We we were wondering about a certain adjustment to the
+map, and if somebody got any experience with it.
+<p>We thought about extendending the map to the south, joining the north coast
+of Africa to the board. Gibraltar would be passable for an army (which could
+walk from Spa-NAf-Tun and from Tun to Lybia to Egypt (SC) to Syr. It
+disturbes the balances a little bit,
+gives Italy more offensive power, makes Turkey a little bit more vunarable
+an threatens France dominance in Spain and Portugal. Anybody ever tried it?
+Any good or bad experiencs?
+
+- Jeroen
+
+
+<p><hr size=5>
+<h3 align=center>
+Mail Received Concerning<br>
+<a href=http://devel.diplom.org/Zine/W2000A/Shields/DPTR.html>Introducing the Diplomatic Pouch Player Ratings
+</a></h3>
+</h3>
+<hr>
+
+<p><H4>From Tarzan (<a href=mailto:Tarzan@Austin.RR.com>Tarzan@Austin.RR.com</a>):</H4>
+
+
+<p>I found your approach interesting.  I have one question/comment.  On
+choosing the amount of pts a player's rating can change (you use the
+5-15% range based on tournament size), I was curious if you
+considered a more complex approach.  Such as, weighing the average
+rating of all players in the tournament with/without taking into
+account the standard deviation, etc...
+
+<p>I currenlty have a rating system for the Sail Ho! variant which,
+unlike your system, is based on individual games.  Nevertheless, the
+system weighs each game based on the ratings (i.e. abilities) of the
+players in the game.  Thus, winning a game among players who are
+rated much better than you increases your rating more than winning a
+game among players much weaker than you.  I wonder if you could
+adapt this approach based on the abilities (i.e. ratings) of the
+actual players in the tournament?
+
+<p><blockquote><i><b>Matt Shields' response:</b>
+Again, I'm interested in this, although I'll bet that it won't effect the 
+tournaments as much as you think it will. Tournaments usually are pretty 
+balanced in terms of the numbers of good/average/poor (or new) players, but 
+clearly such a change wouldn't hurt anything.
+</i></blockquote>
+
+<P>Lastly, I wonder if the Sail Ho! Tournament would qualify for the
+Tournament Ratings system.
+
+<P>- Tarzan
+
+<p><blockquote><i><b>Matt Shields' response:</b>
+Well, not right now, because this rating system is only intended for Face 
+to Face Diplomacy events. I'm not including any email in there. Having 
+played alot of FTF and Email both (and enjoying both) I believe that they 
+are very different games, and I think rating the two together is comparing 
+apples and oranges.
+
+<P>I'm also rating only tournaments and not individual games (although I 
+do intend to eventually develop a database of games, I probably won't 
+rate them). The reason for this is that because each tournament is scored 
+differently, it rewards different kinds of play. When you rate Diplomacy 
+games, you are imposing one scoring system on all games, even though they 
+might have been played under a different one. The North American Diplomacy 
+Federation's Rating system gets away with this because it only looks at 
+North American games, and ours all fairly similar. But many European games 
+are played VERY differently, and again you just can't compare the two.
+
+<P>- Matt
+</i></blockquote>
+
+
+
+
+<!-- End letters -->
+
+<p><hr size=5><center>
+<h3>As always, please feel free to comment on any of the articles in the Pouch, and we'll be glad to include you comments in the next issue.
+</h3></center>
+
+<p><center>Matt Shields signing off as guest editor, and heading back to work on the Tournament Ratings.....</center>
+
+<p>
+<A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
+<A HREF=".."><IMG align=right SRC="../../Common/toW2000A.gif" border=0></A>
+<BR clear=both>
+

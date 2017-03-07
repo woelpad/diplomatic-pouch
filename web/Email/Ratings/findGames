@@ -1,0 +1,5 @@
+#!/bin/ksh
+
+old=$1
+
+find data -exec grep -l "$old" {} \;

@@ -1,0 +1,13 @@
+#!/home/dippouch/bin/python
+
+import sys, os, string
+
+if len(sys.argv) > 1: file = open(sys.argv[1])
+else: file = os.popen('findDupes | tee findDupes.out')
+
+for line in file.readlines():
+	exec ("list = %s" % line[:-1])
+	list2 = []
+	for i in list: list2.append('YARS/players/%s/%s' % (i[0], i))
+	os.system("vi %s" % string.join(list2))
+file.close()

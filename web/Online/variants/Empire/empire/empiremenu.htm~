@@ -1,0 +1,37 @@
+<HTML>
+
+<HEAD>
+
+  <BASE TARGET="empire">
+
+</HEAD>
+
+<BODY BGCOLOR=#FFFFFF>
+
+  <font size=-1>
+  <b>General</b>
+    <br><a href="empiremain.htm#intro">Intro</a>
+    <br><a href="empiremain.htm#where">Where to Play</a>
+    <br><a href="empiremain.htm#toolsite">Tools and Sites</a>
+    <br>&nbsp;&nbsp;Mapit support!<img width=28 height=11 src="pictures/new.gif">
+
+  <font size=1><br><br></font>
+  <b>Latest Version</b>
+    <br><a href="pictures/empire4.gif" target="map">Map</a>
+    <br><a href="pictures/empire4a.gif" target="map">Abb. Map</a>
+    <br><a href="empirelatest.htm#intro">Intro</a>
+    <br><a href="empirelatest.htm#start">Starting Positions</a>
+    <br><a href="empirelatest.htm#notes">Map Notes</a>
+
+  <font size=1><br><br></font>
+  <b>Previous Versions</b>
+    <br><a href="empiretest.htm#intro">Intro</a>
+    <br><a href="empiretest.htm#maps">Maps</a>
+    <br><a href="empiretest.htm#changes">Change History</a>
+    <br><a href="empiretest.htm#games">Test Games</a>
+    <br><a href="empiretest.htm#thanks">Thanks</a>
+  </font>
+
+</BODY>
+
+</HTML>

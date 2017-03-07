@@ -1,0 +1,227 @@
+#!/home/dippouch/bin/python
+
+import string, sys
+from DipPouch import *
+
+form = FieldStorage()
+
+def loadFile(power):
+	fileName = '/home/dippouch/public_html/Online/Openings/db/' + power + '.db'
+	(units, moves, openings, file) = ([], {}, {}, open(fileName))
+	(description, mode) = ({}, 0)
+	for line in file.readlines():
+		if not line or len(line) == 1 or line[0] == '#': continue
+		if mode:
+			if line[:3] == 'END': mode = 0
+			else: description[name][1] = description[name][1] + line
+			continue
+		field = split(line[:-1], '|')
+		if not units:
+			units = field[:]
+			for i in units: moves[i] = []
+		elif line[0] in string.lowercase:
+			(name, description[field[0]], mode) = (field[0], [field[1], ''], 1)
+		else:
+			for i in range(len(field) - 1):
+				if field[i] not in moves[units[i]]:
+					moves[units[i]].append(field[i])
+			if len(field) == (4 + (power == 'Russia')):
+				openings[tuple(field[:-1])] = string.split(field[-1], ',')
+	file.close()
+	return units, moves, openings, description
+
+if form.has_key('power'): power = form['power'].value
+# elif sys.argc > 1: power = sys.argv[1]
+else: power = sys.argv[1] # 'Austria'
+
+# print 'Content-type: text/html\n'
+print '<title>DP Online: The Diplomacy Openings Library</title>'
+
+units, moves, openings, description = loadFile(power)
+print ("""
+<BODY BGCOLOR="#ffffff">
+<script language=javascript>
+<!--
+	power = '%s'
+	var varName = new Array()
+	var varDesc = new Array()
+	var u0 = new Array()
+	var u1 = new Array()
+	var u2 = new Array()
+	if (power == 'Russia') var u3 = new Array()
+	""" % power)
+count = 0
+for i in openings.keys():
+	for k in range(len(openings[i])):
+		print 'varName[%d] = "%s"' % (count, openings[i][k])
+		for j in range(len(i)):
+			print "u%d[%d] = %d" % (j, count, moves[units[j]].index(i[j]))
+		count = count + 1
+for i in description.keys():
+	print 'varDesc[%s] = "%s</b><dd>"' % (`i`, description[i][0])
+	for j in string.split(description[i][1], '\012'):
+		print 'varDesc[%s] += %s' % (`i`, `j + ' '`)
+print ("""
+// -->
+</script>
+	""")
+print ("""
+<BODY BGCOLOR="#ffffff">
+<p align=center>
+<A TARGET=_parent HREF="/DipPouch">
+<IMG SRC="/DipPouch/Common/DPLogo.gif"
+	ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A TARGET=_parent HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="/DipPouch/Common/DPLinks.gif"
+	ALT="Shortcuts" HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
+<BR clear=both>
+<img src="/DipPouch/Common/reddot.gif" height=2 width=100%%>
+<br clear=all>
+<center><H2>The Library of Diplomacy Openings</H2>
+<script language=JavaScript>
+<!--
+function newPower()
+{
+	window.parent.body.document.write('<H3 align=center><font color=red>')
+	window.parent.body.document.write('<blink>...Loading Data For ')
+	window.parent.body.document.write(document.forms[0].power.options[document.forms[0].power.selectedIndex].value)
+	window.parent.body.document.write('...Please Wait...</blink></font>')
+	window.parent.body.document.close()
+	window.location.replace(document.forms[0].power.options[document.forms[0].power.selectedIndex].value + '.html')
+	// document.forms[0].submit()
+}
+// -->
+</script>
+<table>
+<tr><th valign=right>
+	<form name=powerForm method=post action=openings>
+	Openings for&nbsp;<select name=power onChange=newPower()>
+""")
+for i in ['Austria', 'England', 'France', 'Germany', 'Italy',
+		  'Russia', 'Turkey']:
+	print '<option value=%s' % i
+	if power == i: print ' selected'
+	print '>%s' % i
+print ("""
+	</select></form>
+	<script language=javascript>
+	<!--
+	function showDesc(key)
+	{
+		window.parent.body.document.write('<dl><dt><b>')
+		window.parent.body.document.write(varDesc[key] + '<p></dl>')
+	}
+	function updateOrder()
+	{
+		openg = document.forms[1].opening
+		key = openg.options[openg.selectedIndex].value
+		if (key == '') return
+		if (key != 'comment')
+		{
+			for (i in varName)
+			{
+				if (varName[i] == key)
+				{
+					document.forms[2].unit0.selectedIndex = u0[i] + 1
+					document.forms[2].unit1.selectedIndex = u1[i] + 1
+					document.forms[2].unit2.selectedIndex = u2[i] + 1
+					if (power == 'Russia')
+						document.forms[2].unit3.selectedIndex = u3[i] + 1
+					break
+				}
+			}
+		}
+		showDesc(key)
+		window.parent.body.document.close()
+	}
+	// -->
+	</script>
+	<th valign=left>
+	<form name=nameForm method=post action=openings target=body>
+	<select name=opening onchange=updateOrder()>
+	<option>--Choose or order an opening--
+""")
+descrev = {}
+for i in description.keys(): descrev[description[i][0]] = i
+descs = descrev.keys()
+descs.sort()
+for i in descs:
+	print "<option value=%s" % descrev[i]
+	if i[0] == '-': print ' selected'
+	print ">%s" % i
+print '</select><input type=hidden name=power value=%s></form>' % power
+print ("""
+</table><table><tr><td>
+<script language=javascript>
+<!--
+function setChoice()
+{
+	leform = document.forms[2]
+	un0 = leform.unit0.options[leform.unit0.options.selectedIndex].value
+	un1 = leform.unit1.options[leform.unit1.options.selectedIndex].value
+	un2 = leform.unit2.options[leform.unit2.options.selectedIndex].value
+	if (power == 'Russia')
+		un3 = leform.unit3.options[leform.unit3.options.selectedIndex].value
+	shown = 0
+	for (i in varName)
+	{
+		if (u0[i] == un0 && u1[i] == un1 && u2[i] == un2
+		&& (power != 'Russia' || u3[i] == un3))
+		{
+			if (shown == 0)
+			{
+				shown = 1
+				for (j = 0; j < document.forms[1].opening.options.length; ++j)
+					if (document.forms[1].opening.options[j].value == varName[i])
+					{
+						document.forms[1].opening.selectedIndex = j
+						break
+					}
+			}
+			showDesc(varName[i])
+		}
+	}
+	if (shown == 0)
+	{
+		window.parent.body.document.write('<h3 align=center><font color=red>')
+		if (un0 == -1 || un1 == -1 || un2 == -1
+		|| (power == 'Russia' && un3 == -1))
+		{
+			window.parent.body.document.write('...Fill in Orders for All ' +
+				'Units to Look Up An Opening....')
+		}
+		else
+		{
+			window.parent.body.document.write('This Opening Is Unnamed ' +
+				'and No Information Exists For It!')
+		}
+		window.parent.body.document.write('</h3>')
+		document.forms[1].opening.selectedIndex = 0;
+	}
+	window.parent.body.document.close()
+}
+// -->
+</script>
+<form name=openForm method=post action=openings target=body>
+""")
+for i in range(len(units)):
+	print ("""
+		<th valign=top>%s <select name=unit%d onchange=setChoice()>
+		""" % (units[i], i))
+	print '<option value=-1>??'
+	for j in range(len(moves[units[i]])):
+		print '<option value=%d>%s' % (j, moves[units[i]][j])
+	print '</select>'
+print ("""
+</table>
+<input type=hidden name=power value=%s>
+<input type=hidden name=opening value="byOrder">
+<HR>
+</form>
+<script language=JavaScript>
+<!--
+	showDesc('comment')
+	window.parent.body.document.close()
+// -->
+</script>
+""" % power)

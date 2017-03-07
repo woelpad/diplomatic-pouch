@@ -1,0 +1,17 @@
+#!/home/dippouch/bin/python
+
+from data import data
+
+file = open('sheet.dat', 'w')
+for IP in data.keys():
+	q1, q2, q3, q4, q5, q6 = data[IP]
+	comments = ''
+	if q6 == None: q6 = ''
+	for ch in q6:
+		if ch not in '\r\n\t': comments = comments + ch
+		else: comments = comments + ' '
+	map = ['map.gif', 'MAP.GIF'][IP[-1] in '02468']
+	file.write('%s\t%s\t%s\t%s\t%s\t%s\t%s\n' %
+		(map, q1, q2, q3, q4, q5, comments))
+file.close()
+os.system('sort sheet.dat > sheet.sort')

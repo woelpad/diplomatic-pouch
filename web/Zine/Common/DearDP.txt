@@ -1,0 +1,10 @@
+From: [email]
+To: [sendto]
+Subject: Dip Pouch Feedback
+Errors-To: manus@diplom.org
+
+[body]
+----
+NOTE: This message was sent using a WWW form.
+The address [email] was typed manually,
+and may easily be incorrect.

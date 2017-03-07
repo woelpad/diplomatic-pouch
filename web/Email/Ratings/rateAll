@@ -1,0 +1,44 @@
+#!/bin/ksh
+
+# if it stops on you, fix the error, then use
+# rateAll -f/game/where/it/stopped
+
+for system in YARS YARS2
+do
+
+cat << END > $system/index.html
+<HTML><HEAD><TITLE>DP: E-Mail Ratings</TITLE></HEAD>
+<BODY BGCOLOR=white LINK=black VLINK=black>
+<p align=center><A HREF="../../.."><IMG SRC="../../../Common/DPLogo.gif"
+ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
+<A HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<IMG SRC="../../../Common/DPLinks.gif" ALT="Shortcuts"
+HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A><br clear=all>
+<img src="../../../Common/reddot.gif" height=2 width=100%>
+<H1 align=center>PBEM Player Ratings</H1>
+<H3 align=center><font color=red>Currently Undergoing Update Process<P>
+...Check Back In A Few Minutes...</font></H3>
+<HR>
+END
+cp $system/index.html $system/allrated.html
+
+mv $system/players $system/oldplayers
+mkdir $system/players
+chmod 777 $system/players
+nohup rm -rf $system/oldplayers &
+
+cat << END > gamecount.py
+gameCount = 0
+END
+
+find data -type f -print | rateGame -s$system $*
+
+done
+
+# The refresh script cycles through all rating systems automatically
+#
+echo Rebuilding Pages . . . . .
+refresh
+echo Listing possible dupes . .
+findDupes > findDupes.out
+echo . . . . . . . . . complete
