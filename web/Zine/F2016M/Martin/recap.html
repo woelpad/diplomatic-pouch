@@ -1,13 +1,62 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
 
-<HTML><HEAD><TITLE>DP F2016M: World Diplomacy Championship Recap</TITLE>
+<html><head><title>DP F2016M: World Diplomacy Championship Recap</title>
 
 <!-- ---------------------Header---------------------------------- -->
 <!-- ------------------------------------------------------------- -->
 
 <!---- Authored by  ---->
 <!---- Published on the Pouch Zine with permissions ---->
-<!---- Created on September 23, 2006 ---->
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+}
+iframe, img {
+	display: block;
+	margin: auto;
+}
+div.check {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+div.blurb {
+	display: inline;
+	font-style: italic;
+	padding: 10;
+}
+div.video {
+	display: inline;
+}
+iframe.video {
+	border: 0;
+	padding: 10;
+}
+img.video {
+	height: 315;
+	padding: 10;
+}
+div.map {
+	display: none;
+}
+img.map {
+	width: 560;
+	padding: 10;
+}
+</style>
+<script>
+function toggleLayer(layer, checked) {
+	try {
+		document.getElementById(layer).style.display = checked ? 'inline' : 'none';
+		document.getElementById('r' + layer).checked = checked;
+	} catch (e) {}
+}
+function toggleAllLayers(kind, checked) {
+	for (var i = 0; i <= 20; i++) {
+		toggleLayer(kind + i, checked);
+	}
+}
+</script>
 
 </head>
 
@@ -15,111 +64,535 @@
 <a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
 <a href=".."><img src="../toIssue.gif" align="right" border="0"></a>
 <br clear="all">
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<hr align="center" width=100% size="-1" color="gray">
 
-
-
-<CENTER>
-<H1>WORLD DIPLOMACY CHAMPIONSHIP RECAP</H1>
+<center>
+<h1>WORLD DIPLOMACY CHAMPIONSHIP RECAP</h1>
 <h2>On the Top Board of WDC 2016 at the Weasel Moot in Chicago</h2> 
 <h2>by "Dancing Queen" Chris Martin</h2>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
-</CENTER>
+<hr align="center" width=100% size="-1" color="gray">
+</center>
 <p>
-  <TABLE WIDTH="95%" BORDER="0" ALIGN="CENTER">
-      <TR>
-	      <TD ALIGN="JUSTIFY">
+<table width="960" border="0" align="center">
+<tr><td align="justify">
 
-<blockquote><i>Chris Martin, the 1998 world champion, recounts in detail and with ample video footage the events of the WDC 2016 top board that would crown the 2016 World Champion. Be patient, the videos may take their time to load. Note that this is still very much a work in progress. New seasons will be added as soon as they are available.</i></blockquote>
+<blockquote><i>
+Chris Martin, the 1998 world champion, recounts in detail and with ample video footage the events of the WDC 2016 top board that would crown the 2016 World Champion. Be patient, the videos may take their time to load. Note that this is still very much a work in progress. New seasons will be added as soon as they are available.
+</i></blockquote>
 
+<div class="check" style="font-size:normal;">
+Toggle:
+<ul style="list-style:none;"><li>
+<input type="checkbox" id="rb" onclick="toggleAllLayers('b', this.checked)" checked>All Blurbs
+</li><li>
+<input type="checkbox" id="rv" onclick="toggleAllLayers('v', this.checked)" checked>All Videos
+</li><li>
+<input type="checkbox" id="rs" onclick="toggleAllLayers('s', this.checked)">All Spring/Fall Maps
+</li><li>
+<input type="checkbox" id="rp" onclick="toggleAllLayers('p', this.checked)">All Summer/Winter Maps
+</li></ul>
+</div>
+
+
+<table width="100%"><tr><td>
 <h3>The Paris Method</h3>
-<p><i>In which each player chooses his country in orderly fashion.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/zPlUuvIV7ws" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check">
+<input type="checkbox" id="rb0" onclick="toggleLayer('b0', this.checked)" checked>Blurb
+<input type="checkbox" id="rv0" onclick="toggleLayer('v0', this.checked)" checked>Video
+<input type="checkbox" id="rp0" onclick="toggleLayer('p0', this.checked)">Starting Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b0">
+In which each player chooses his country in orderly fashion.
+</div>
+<div class="video" id="v0">
+<iframe class="video" src="https://www.youtube.com/embed/zPlUuvIV7ws" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="p0">
+<img class="map" src="images/wdc2016top1.gif" alt="Game Start">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Spring 1901</h3>
-<p><i>In which players gauge their opponents for the first time and Peter Yeargin (Austria) does some seed planting.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Mm1et-Kvsw8" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb1" onclick="toggleLayer('b1', this.checked)" checked>Blurb
+<input type="checkbox" id="rv1" onclick="toggleLayer('v1', this.checked)" checked>Video
+<input type="checkbox" id="rs1" onclick="toggleLayer('s1', this.checked)">Spring Map
+<input type="checkbox" id="rp1" onclick="toggleLayer('p1', this.checked)">Summer Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b1">
+In which players gauge their opponents for the first time and Peter Yeargin (Austria) does some seed planting.
+</div>
+<div class="video" id="v1">
+<iframe class="video" src="https://www.youtube.com/embed/Mm1et-Kvsw8" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="map" id="s1">
+<img class="map" src="images/wdc2016top2.gif" alt="Spring 1901">
+</div>
+<div class="map" id="p1">
+<img class="map" src="images/wdc2016top3.gif" alt="Summer 1901">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Fall 1901</h3>
-<p><i>In which Chris Brand (Italy) has to explain the bounce on Trieste to Peter Yeargin (Austria) and no one and everyone wants Belgium.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/3kOHJNWShRc" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb2" onclick="toggleLayer('b2', this.checked)" checked>Blurb
+<input type="checkbox" id="rv2" onclick="toggleLayer('v2', this.checked)" checked>Video
+<input type="checkbox" id="rs2" onclick="toggleLayer('s2', this.checked)">Fall Map
+<input type="checkbox" id="rp2" onclick="toggleLayer('p2', this.checked)">Winter Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b2">
+In which Chris Brand (Italy) has to explain the bounce on Trieste to Peter Yeargin (Austria) and no one and everyone wants Belgium.
+</div>
+<div class="video" id="v2">
+<iframe class="video" src="https://www.youtube.com/embed/3kOHJNWShRc" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s2">
+<img class="map" src="images/wdc2016top4.gif" alt="Fall 1901">
+</div>
+<div class="map" id="p2">
+<img class="map" src="images/wdc2016top5.gif" alt="Winter 1901">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Spring 1902</h3>
-<p><i>In which Nathan Barnes (France) and Adam Silverman (England) waffle over the Channel, while Andrew Goff (Russia) plants a bomb.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/4IccxxA68aA" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb3" onclick="toggleLayer('b3', this.checked)" checked>Blurb
+<input type="checkbox" id="rv3" onclick="toggleLayer('v3', this.checked)" checked>Video
+<input type="checkbox" id="rs3" onclick="toggleLayer('s3', this.checked)">Spring Map
+<input type="checkbox" id="rp3" onclick="toggleLayer('p3', this.checked)">Summer Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b3">
+In which Nathan Barnes (France) and Adam Silverman (England) waffle over the Channel, while Andrew Goff (Russia) plants a bomb.
+</div>
+<div class="video" id="v3">
+<iframe class="video" src="https://www.youtube.com/embed/4IccxxA68aA" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s3">
+<img class="map" src="images/wdc2016top6.gif" alt="Spring 1902">
+</div>
+<div class="map" id="p3">
+<img class="map" src="images/wdc2016top7.gif" alt="Summer 1902">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Fall 1902</h3>
-<p><i>In which Peter Yeargin (Austria) creates enough confusion to weather out a botched attack from all three sides.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/SZBXyisbKzE" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb4" onclick="toggleLayer('b4', this.checked)" checked>Blurb
+<input type="checkbox" id="rv4" onclick="toggleLayer('v4', this.checked)" checked>Video
+<input type="checkbox" id="rs4" onclick="toggleLayer('s4', this.checked)">Fall Map
+<input type="checkbox" id="rp4" onclick="toggleLayer('p4', this.checked)">Winter Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b4">
+In which Peter Yeargin (Austria) creates enough confusion to weather out a botched attack from all three sides.
+</div>
+<div class="video" id="v4">
+<iframe class="video" src="https://www.youtube.com/embed/SZBXyisbKzE" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s4">
+<img class="map" src="images/wdc2016top8.gif" alt="Fall 1902">
+</div>
+<div class="map" id="p4">
+<img class="map" src="images/wdc2016top9.gif" alt="Winter 1902">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Spring 1903</h3>
-<p><i>In which Andrew Goff (Russia) tries to reestablish trust with Peter Yeargin (Austria) by letting him dictate his orders.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/S_CJOzWoGno" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb5" onclick="toggleLayer('b5', this.checked)" checked>Blurb
+<input type="checkbox" id="rv5" onclick="toggleLayer('v5', this.checked)" checked>Video
+<input type="checkbox" id="rs5" onclick="toggleLayer('s5', this.checked)">Spring Map
+<input type="checkbox" id="rp5" onclick="toggleLayer('p5', this.checked)">Summer Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b5">
+In which Andrew Goff (Russia) tries to reestablish trust with Peter Yeargin (Austria) by letting him dictate his orders.
+</div>
+<div class="video" id="v5">
+<iframe class="video" src="https://www.youtube.com/embed/S_CJOzWoGno" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s5">
+<img class="map" src="images/wdc2016top10.gif" alt="Spring 1903">
+</div>
+<div class="map" id="p5">
+<img class="map" src="images/wdc2016top11.gif" alt="Summer 1903">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Fall 1903</h3>
-<p><i>In which Doug Moore (Germany) tries to talk Adam Silverman (England) out of Denmark by invoking the curse of the puppet master and a first misadjudication happens in the Balkans.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Fp1p4VGZ0mY" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb6" onclick="toggleLayer('b6', this.checked)" checked>Blurb
+<input type="checkbox" id="rv6" onclick="toggleLayer('v6', this.checked)" checked>Video
+<input type="checkbox" id="rs6" onclick="toggleLayer('s6', this.checked)">Fall Map
+<input type="checkbox" id="rp6" onclick="toggleLayer('p6', this.checked)">Winter Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b6">
+In which Doug Moore (Germany) tries to talk Adam Silverman (England) out of Denmark by invoking the curse of the puppet master and a first misadjudication happens in the Balkans.
+</div>
+<div class="video" id="v6">
+<iframe class="video" src="https://www.youtube.com/embed/Fp1p4VGZ0mY" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s6">
+<img class="map" src="images/wdc2016top12.gif" alt="Fall 1903">
+</div>
+<div class="map" id="p6">
+<img class="map" src="images/wdc2016top13.gif" alt="Winter 1903">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Spring 1904</h3>
-<p><i>In which Peter Yeargin (Austria) plays the AIR card and Nathan Barnes (France) sells out Adam Silverman (England) over Holland.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/0aZVumhLHMg" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb7" onclick="toggleLayer('b7', this.checked)" checked>Blurb
+<input type="checkbox" id="rv7" onclick="toggleLayer('v7', this.checked)" checked>Video
+<input type="checkbox" id="rs7" onclick="toggleLayer('s7', this.checked)">Spring Map
+<input type="checkbox" id="rp7" onclick="toggleLayer('p7', this.checked)">Summer Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b7">
+In which Peter Yeargin (Austria) plays the AIR card and Nathan Barnes (France) sells out Adam Silverman (England) over Holland.
+</div>
+<div class="video" id="v7">
+<iframe class="video" src="https://www.youtube.com/embed/0aZVumhLHMg" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s7">
+<img class="map" src="images/wdc2016top14.gif" alt="Spring 1904">
+</div>
+<div class="map" id="p7">
+<img class="map" src="images/wdc2016top15.gif" alt="Summer 1904">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Fall 1904</h3>
-<p><i>In which what was planted in Spring gets reapt in Fall.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/sVJ0ZOIoiWM" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb8" onclick="toggleLayer('b8', this.checked)" checked>Blurb
+<input type="checkbox" id="rv8" onclick="toggleLayer('v8', this.checked)" checked>Video
+<input type="checkbox" id="rs8" onclick="toggleLayer('s8', this.checked)">Fall Map
+<input type="checkbox" id="rp8" onclick="toggleLayer('p8', this.checked)">Winter Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b8">
+In which what was planted in Fall gets reapt in Fall.
+</div>
+<div class="video" id="v8">
+<iframe class="video" src="https://www.youtube.com/embed/sVJ0ZOIoiWM" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s8">
+<img class="map" src="images/wdc2016top16.gif" alt="Fall 1904">
+</div>
+<div class="map" id="p8">
+<img class="map" src="images/wdc2016top17.gif" alt="Winter 1904">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Spring 1905</h3>
-<p><i>In which Chris Brand (Italy) finally resolves to take up Dave Maletsky (Turkey) on his offer, incidentally breaking the Black Sea deadlock.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/_h3MYufR3Ps" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb9" onclick="toggleLayer('b9', this.checked)" checked>Blurb
+<input type="checkbox" id="rv9" onclick="toggleLayer('v9', this.checked)" checked>Video
+<input type="checkbox" id="rs9" onclick="toggleLayer('s9', this.checked)">Spring Map
+<input type="checkbox" id="rp9" onclick="toggleLayer('p9', this.checked)">Summer Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b9">
+In which Chris Brand (Italy) finally resolves to take up Dave Maletsky (Turkey) on his offer, incidentally breaking the Black Sea deadlock.
+</div>
+<div class="video" id="v9">
+<iframe class="video" src="https://www.youtube.com/embed/_h3MYufR3Ps" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s9">
+<img class="map" src="images/wdc2016top18.gif" alt="Spring 1905">
+</div>
+<div class="map" id="p9">
+<img class="map" src="images/wdc2016top19.gif" alt="Summer 1905">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Fall 1905</h3>
-<p><i>In which Nathan Barnes (France) reaches super power status.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/rmWbC9jruBE" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb10" onclick="toggleLayer('b10', this.checked)" checked>Blurb
+<input type="checkbox" id="rv10" onclick="toggleLayer('v10', this.checked)" checked>Video
+<input type="checkbox" id="rs10" onclick="toggleLayer('s10', this.checked)">Fall Map
+<input type="checkbox" id="rp10" onclick="toggleLayer('p10', this.checked)">Winter Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b10">
+In which Nathan Barnes (France) reaches super power status.
+</div>
+<div class="video" id="v10">
+<iframe class="video" src="https://www.youtube.com/embed/rmWbC9jruBE" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s10">
+<img class="map" src="images/wdc2016top20.gif" alt="Fall 1905">
+</div>
+<div class="map" id="p10">
+<img class="map" src="images/wdc2016top21.gif" alt="Winter 1905">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Spring 1906</h3>
-<p><i>In which tactics take the upperhand over strategy in the player negotiations.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/Gl9AuGvTGew" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb11" onclick="toggleLayer('b11', this.checked)" checked>Blurb
+<input type="checkbox" id="rv11" onclick="toggleLayer('v11', this.checked)" checked>Video
+<input type="checkbox" id="rs11" onclick="toggleLayer('s11', this.checked)">Spring Map
+<input type="checkbox" id="rp11" onclick="toggleLayer('p11', this.checked)">Summer Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b11">
+In which tactics take the upperhand over strategy in the player negotiations.
+</div>
+<div class="video" id="v11">
+<iframe class="video" src="https://www.youtube.com/embed/Gl9AuGvTGew" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s11">
+<img class="map" src="images/wdc2016top22.gif" alt="Spring 1906">
+</div>
+<div class="map" id="p11">
+<img class="map" src="images/wdc2016top23.gif" alt="Summer 1906">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Fall 1906</h3>
-<p><i>In which the AIR is back on to stop Nathan Barnes (France).</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/WiehMBwI0p8" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb12" onclick="toggleLayer('b12', this.checked)" checked>Blurb
+<input type="checkbox" id="rv12" onclick="toggleLayer('v12', this.checked)" checked>Video
+<input type="checkbox" id="rs12" onclick="toggleLayer('s12', this.checked)">Fall Map
+<input type="checkbox" id="rp12" onclick="toggleLayer('p12', this.checked)">Winter Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b12">
+In which the AIR is back on to stop Nathan Barnes (France).
+</div>
+<div class="video" id="v12">
+<iframe class="video" src="https://www.youtube.com/embed/WiehMBwI0p8" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s12">
+<img class="map" src="images/wdc2016top24.gif" alt="Fall 1906">
+</div>
+<div class="map" id="p12">
+<img class="map" src="images/wdc2016top25.gif" alt="Winter 1906">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Spring 1907</h3>
-<p><i>In which the clock surprises a lot of people.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/H9-8hMdf8BY" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb13" onclick="toggleLayer('b13', this.checked)" checked>Blurb
+<input type="checkbox" id="rv13" onclick="toggleLayer('v13', this.checked)" checked>Video
+<input type="checkbox" id="rs13" onclick="toggleLayer('s13', this.checked)">Spring Map
+<input type="checkbox" id="rp13" onclick="toggleLayer('p13', this.checked)">Summer Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b13">
+In which the clock surprises a lot of people.
+</div>
+<div class="video" id="v13">
+<iframe class="video" src="https://www.youtube.com/embed/H9-8hMdf8BY" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s13">
+<img class="map" src="images/wdc2016top26.gif" alt="Spring 1907">
+</div>
+<div class="map" id="p13">
+<img class="map" src="images/wdc2016top27.gif" alt="Summer 1907">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Fall 1907</h3>
-<p><i>In which Dave Maletsky (Turkey) is the first to pack his bags.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/BYw0qNXPAyw" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb14" onclick="toggleLayer('b14', this.checked)" checked>Blurb
+<input type="checkbox" id="rv14" onclick="toggleLayer('v14', this.checked)" checked>Video
+<input type="checkbox" id="rs14" onclick="toggleLayer('s14', this.checked)">Fall Map
+<input type="checkbox" id="rp14" onclick="toggleLayer('p14', this.checked)">Winter Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b14">
+In which Dave Maletsky (Turkey) is the first to pack his bags.
+</div>
+<div class="video" id="v14">
+<iframe class="video" src="https://www.youtube.com/embed/BYw0qNXPAyw" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s14">
+<img class="map" src="images/wdc2016top28.gif" alt="Fall 1907">
+</div>
+<div class="map" id="p14">
+<img class="map" src="images/wdc2016top29.gif" alt="Winter 1907">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Spring 1908</h3>
-<p><i>In which Nathan Barnes (France) threatens to throw the game to Chris Brand (Italy) if Adam Silverman (England) doesn't back off.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/FJ6s7G12yFs" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb15" onclick="toggleLayer('b15', this.checked)" checked>Blurb
+<input type="checkbox" id="rv15" onclick="toggleLayer('v15', this.checked)" checked>Video
+<input type="checkbox" id="rs15" onclick="toggleLayer('s15', this.checked)">Spring Map
+<input type="checkbox" id="rp15" onclick="toggleLayer('p15', this.checked)">Summer Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b15">
+In which Nathan Barnes (France) threatens to throw the game to Chris Brand (Italy) if Adam Silverman (England) doesn't back off.
+</div>
+<div class="video" id="v15">
+<iframe class="video" src="https://www.youtube.com/embed/FJ6s7G12yFs" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s15">
+<img class="map" src="images/wdc2016top30.gif" alt="Spring 1908">
+</div>
+<div class="map" id="p15">
+<img class="map" src="images/wdc2016top31.gif" alt="Summer 1908">
+</div>
 
+<table width="100%"><tr><td>
 <h3>Fall 1908</h3>
-<p><i>In which Nathan Barnes (France) feigns anger towards Adam Silverman (England), but gets held up for an interview when he should have been writing his orders.</i></p>
-<center><iframe width="560" height="315" src="https://www.youtube.com/embed/ttRc2HjZH6E" frameborder="0" allowfullscreen></iframe></center>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb16" onclick="toggleLayer('b16', this.checked)" checked>Blurb
+<input type="checkbox" id="rv16" onclick="toggleLayer('v16', this.checked)" checked>Video
+<input type="checkbox" id="rs16" onclick="toggleLayer('s16', this.checked)">Fall Map
+<input type="checkbox" id="rp16" onclick="toggleLayer('p16', this.checked)">Winter Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b16">
+In which Nathan Barnes (France) feigns anger towards Adam Silverman (England), but gets held up for an interview when he should have been writing his orders.
+</div>
+<div class="video" id="v16">
+<iframe class="video" src="https://www.youtube.com/embed/ttRc2HjZH6E" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s16">
+<img class="map" src="images/wdc2016top32.gif" alt="Fall 1908">
+</div>
+<div class="map" id="p16">
+<img class="map" src="images/wdc2016top33.gif" alt="Winter 1908">
+</div>
 
-<p>That's it for now. You can browse through the maps for the whole game history up to this point <a href="wdc2016top.pdf">here</a>.
+<table width="100%"><tr><td>
+<h3>Spring 1909</h3>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb17" onclick="toggleLayer('b17', this.checked)" checked>Blurb
+<input type="checkbox" id="rv17" onclick="toggleLayer('v17', this.checked)" checked>Video
+<input type="checkbox" id="rs17" onclick="toggleLayer('s17', this.checked)">Spring Map
+<input type="checkbox" id="rp17" onclick="toggleLayer('p17', this.checked)">Summer Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b17">
+In which technical problems temporarily obstruct recording, while the players continue off-screen and Adam Silverman (England) repositions himself.
+</div>
+<div class="video" id="v17">
+<img class="video" src="../../Common/no-video.jpg" alt="No Video">
+</div>
+<div class="map" id="s17">
+<img class="map" src="images/wdc2016top34.gif" alt="Spring 1909">
+</div>
+<div class="map" id="p17">
+<img class="map" src="images/wdc2016top35.gif" alt="Summer 1909">
+</div>
 
-<BR/><BR/><TABLE>
-  <TBODY>
-  <TR vAlign=bottom>
-    <TD><A href="mailto:dance.scholar@gmail.com"><IMG 
-      src="../../Common/letter.gif" border=0></A> </TD>
-    <TD><STRONG>Chris Martin<BR/>(<a href="mailto:dance.scholar@gmail.com">dance.scholar@gmail.com</a>)</STRONG> 
-  </TD></TR></TBODY></TABLE>
-<P>
-<I>If you wish to e-mail feedback on this article to the author, and clicking 
-on the envelope above does not work for you, feel free to use the <A 
-href="../Common/DearDP.html
-<view-source:file:///C:/Users/Kevin/Desktop/DPZine/Common/DearDP.html>">"<B>Dear 
-DP...</B>"</A> mail interface.</I> 
-</table><P>
-<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+<table width="100%"><tr><td>
+<h3>Fall 1909</h3>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb18" onclick="toggleLayer('b18', this.checked)" checked>Blurb
+<input type="checkbox" id="rv18" onclick="toggleLayer('v18', this.checked)" checked>Video
+<input type="checkbox" id="rs18" onclick="toggleLayer('s18', this.checked)">Fall Map
+<input type="checkbox" id="rp18" onclick="toggleLayer('p18', this.checked)">Winter Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b18">
+In which Peter Yeargin (Austria), invisibly, finds an ally in Nathan Barnes (France), but misses a chance to whack Andrew Goff (Russia) out of Moscow.
+</div>
+<div class="video" id="v18">
+<img class="video" src="../../Common/no-video.jpg" alt="No Video">
+</div>
+<div class="map" id="s18">
+<img class="map" src="images/wdc2016top36.gif" alt="Fall 1909">
+</div>
+<div class="map" id="p18">
+<img class="map" src="images/wdc2016top37.gif" alt="Winter 1909">
+</div>
+
+<table width="100%"><tr><td>
+<h3>Spring 1910</h3>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb19" onclick="toggleLayer('b19', this.checked)" checked>Blurb
+<input type="checkbox" id="rv19" onclick="toggleLayer('v19', this.checked)" checked>Video
+<input type="checkbox" id="rs19" onclick="toggleLayer('s19', this.checked)">Spring Map
+<input type="checkbox" id="rp19" onclick="toggleLayer('p19', this.checked)">Summer Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b19">
+In which Adam Silverman (England), still off-screen, messes up his convoy to Denmark by bouncing with his Swedish fleet.
+</div>
+<div class="video" id="v19">
+<img class="video" src="../../Common/no-video.jpg" alt="No Video">
+</div>
+<div class="map" id="s19">
+<img class="map" src="images/wdc2016top38.gif" alt="Spring 1910">
+</div>
+<div class="map" id="p19">
+<img class="map" src="images/wdc2016top39.gif" alt="Summer 1910">
+</div>
+
+<table width="100%"><tr><td>
+<h3>Fall 1910</h3>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb20" onclick="toggleLayer('b20', this.checked)" checked>Blurb
+<input type="checkbox" id="rv20" onclick="toggleLayer('v20', this.checked)" checked>Video
+<input type="checkbox" id="rs20" onclick="toggleLayer('s20', this.checked)">Fall Map
+<input type="checkbox" id="rp20" onclick="toggleLayer('p20', this.checked)">Winter Map
+</div>
+</td></tr></table>
+<div class="blurb" id="b20">
+In which the video starts again, just in time to see Doug Moore (Germany) and Peter Yeargin (Austria) bow out, while Chris Brand (Italy) braces himself to maintain his lead until Kingdom comes.
+</div>
+<div class="video" id="v20">
+<iframe class="video" src="https://www.youtube.com/embed/MMucjk4ljaE" width="560" height="315" allowfullscreen></iframe>
+</div>
+<div class="map" id="s20">
+<img class="map" src="images/wdc2016top40.gif" alt="Fall 1910">
+</div>
+<div class="map" id="p20">
+<img class="map" src="images/wdc2016top41.gif" alt="Winter 1910">
+</div>
+
+<blockquote><i>
+That's it for now, in anticipation of the promised wrap-up video. You can browse through the maps for the whole game history <a href="wdc2016top.pdf">here</a>.
+</i></blockquote>
+
+<br/><br/>
+<table><tbody><tr valign=bottom><td>
+<a href="mailto:dance.scholar@gmail.com"><img src="../../Common/letter.gif" border=0></a>
+</td><td>
+<strong>Chris Martin<br/>(<a href="mailto:dance.scholar@gmail.com">dance.scholar@gmail.com</a>)</strong>
+</td></tr></tbody></table>
+<!-- <p>
+<i>If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the 
+<a href="../Common/DearDP.html">"<b>Dear DP...</b>"</a> mail interface.</i> -->
+</td></tr></table>
+<p>
+<hr align="center" width=100% size="-1" color="gray">
 
 <a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
 <a href="../"><img src="../toIssue.gif" align="right" border="0"></a>
 
-</BODY></HTML>
+</body></html>
 
