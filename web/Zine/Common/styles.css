@@ -3,6 +3,11 @@
  */
 body {margin-bottom: 0px;}
 
+/* Removes bullets from an unordered list
+ * 
+ */
+.no_bullets {list-style: none;}
+
 /* Outer most body Divs should use this class when 
  * they require padding to the left and right.
  */
