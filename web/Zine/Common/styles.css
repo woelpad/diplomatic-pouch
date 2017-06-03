@@ -33,6 +33,8 @@ body {margin-bottom: 0px;}
  */
 .no_border {border: 0px;}
 
+.image {border: solid 3px; margin: 4px;}
+
 /* Styles the block containing the navigation links on
  * the top and bottom of the page.
  */
