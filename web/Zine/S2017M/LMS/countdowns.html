@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title> DP S2017M: Last Man Standing Uppercuts and Countdowns </title>
+<title> DP S2017M: Last Man Standing Countdowns </title>
 <meta charset="utf-8"/> 
 <!-- Point to whereever this stylesheet will exist-->
 <link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
@@ -36,8 +36,10 @@ if (!String.prototype.format) {
 function changeMap(selector, reference, content) {
 	var selected = selector.options[selector.selectedIndex];
 	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
 	var text = document.getElementById(selector.name + '.text');
 	image.src = reference.format(selected.value);
+	if (anchor) anchor.href = image.src;
 	image.alt = text.innerHTML = content.format(selected.text);
 }
 function toggleLayer(whichLayer)
@@ -68,7 +70,7 @@ function toggleLayer(whichLayer)
 </div>
 <div class="centered">
 <!-- Insert Author Name -->
-<h1>LAST MAN STANDING UPPERCUTS AND COUNTDOWNS</h1>
+<h1>LAST MAN STANDING COUNTDOWNS</h1>
 <h2>by Mario Huys </h2>
 <hr class="hr_rule">
 </div>
@@ -90,8 +92,11 @@ You can browse through each season using the pulldown boxes. Check the Synchroni
 <h3>Turkey</h3>
 
 <div class="game_img">
+<a href="lms-upper.pdf" target="_blank">
 <img class="map_img" id="lms-upper.1901.image" src="images/lms-upper9.gif" width="50%" alt="Army Constantinople to Holland, After Winter 1901"/><br/>
-<i id="lms-upper.1901.text">Army Constantinople to Holland, After Winter 1902</i><br/>
+<b id="lms-upper.1901.text">Army Constantinople to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in separate window</small></i></b>
+</a><br/>
 <b>Season:</b>
 <select name="lms-upper.1901" class="inputBox" onchange="changeMap(this, 'images/lms-upper{0}.gif', 'Army Constantinople to Holland, {0}')">
 <option value="1">Game Start</option>
@@ -121,8 +126,11 @@ Not much to add here to what Holmes had already discovered. Using Bulgaria as a 
 <h3>Austria</h3>
 
 <div class="game_img">
+<a href="lms_vie-hol.pdf" target="_blank">
 <img class="map_img" id="lms_vie-hol.1901.image" src="images/lms_vie-hol9.gif" width="50%" alt="Army Vienna to Holland, After Winter 1901"/><br/>
-<i id="lms_vie-hol.1901.text">Army Vienna to Holland, After Winter 1902</i><br/>
+<b id="lms_vie-hol.1901.text">Army Vienna to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in separate window</small></i></b>
+</a><br/>
 <b>Season:</b>
 <select name="lms_vie-hol.1901" class="inputBox" onchange="changeMap(this, 'images/lms_vie-hol{0}.gif', 'Army Vienna to Holland, {0}')">
 <option value="1">Game Start</option>
@@ -156,8 +164,11 @@ Let's scroll back one year, to the situation at the end of 1901. Not only are al
 <h3>England</h3>
 
 <div class="game_img">
+<a href="lms_lon-hol.pdf" target="_blank">
 <img class="map_img" id="lms_lon-hol.1901.image" src="images/lms_lon-hol9.gif" width="50%" alt="Fleet London to Holland, After Winter 1901"/><br/>
-<i id="lms_lon-hol.1901.text">Fleet London to Holland, After Winter 1902</i><br/>
+<b id="lms_lon-hol.1901.text">Fleet London to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in separate window</small></i></b>
+</a><br/>
 <b>Season:</b>
 <select name="lms_lon-hol.1901" class="inputBox" onchange="changeMap(this, 'images/lms_lon-hol{0}.gif', 'Fleet London to Holland, {0}')">
 <option value="1">Game Start</option>
@@ -187,8 +198,11 @@ By now the trend should be clear. The surviving unit is the one occupying Berlin
 <h3>Russia</h3>
 
 <div class="game_img">
+<a href="lms_stp-hol.pdf" target="_blank">
 <img class="map_img" id="lms_stp-hol.1901.image" src="images/lms_stp-hol9.gif" width="50%" alt="Fleet St. Petersburg to Holland, After Winter 1901"/><br/>
-<i id="lms_stp-hol.1901.text">Fleet St. Petersburg to Holland, After Winter 1902</i><br/>
+<b id="lms_stp-hol.1901.text">Fleet St. Petersburg to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in separate window</small></i></b>
+</a><br/>
 <b>Season:</b>
 <select name="lms_stp-hol.1901" class="inputBox" onchange="changeMap(this, 'images/lms_stp-hol{0}.gif', 'Fleet St. Petersburg to Holland, {0}')">
 <option value="1">Game Start</option>
@@ -218,8 +232,11 @@ Russia gets bolder and takes Sweden. Nothing wrong there. The consequence is tha
 <h3>Italy</h3>
 
 <div class="game_img">
+<a href="lms_nap-kie.pdf" target="_blank">
 <img class="map_img" id="lms_nap-kie.1901.image" src="images/lms_nap-kie9.gif" width="50%" alt="Fleet Naples to Kiel, After Winter 1901"/><br/>
-<i id="lms_nap-kie.1901.text">Fleet Naples to Kiel, After Winter 1902</i><br/>
+<b id="lms_nap-kie.1901.text">Fleet Naples to Kiel, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in separate window</small></i></b>
+</a><br/>
 <b>Season:</b>
 <select name="lms_nap-kie.1901" class="inputBox" onchange="changeMap(this, 'images/lms_nap-kie{0}.gif', 'Fleet Naples to Kiel, {0}')">
 <option value="1">Game Start</option>
@@ -253,8 +270,11 @@ But what if you wanted to end with an Italian army in Holland instead of the Ita
 <h3>France</h3>
 
 <div class="game_img">
+<a href="lms_mar-hol.pdf" target="_blank">
 <img class="map_img" id="lms_mar-hol.1901.image" src="images/lms_mar-hol9.gif" width="50%" alt="Army Marseilles to Holland, After Winter 1901"/><br/>
-<i id="lms_mar-hol.1901.text">Army Marseilles to Holland, After Winter 1902</i><br/>
+<b id="lms_mar-hol.1901.text">Army Marseilles to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in separate window</small></i></b>
+</a><br/>
 <b>Season:</b>
 <select name="lms_mar-hol.1901" class="inputBox" onchange="changeMap(this, 'images/lms_mar-hol{0}.gif', 'Army Marseilles to Holland, {0}')">
 <option value="1">Game Start</option>
@@ -308,7 +328,7 @@ As could be witnessed, several new ideas needed to be engendered to get to this 
 <h3>Army Venice to Holland</h3>
 
 <div class="game_img">
-<a href="./images/lms_ven-hol.gif" target="_blank">
+<a href="./images/lms_ven-hol17.gif" target="_blank">
 <img src="./images/lms_ven-hol17.gif" class="map_img" alt="Army Venice to Holland, After Winter 1904">
 <br /><i>Army Venice to Holland, After Winter 1904</i>
 <br /><b><i><small>Click to enlarge in separate window</small></i></b></a>
@@ -332,6 +352,7 @@ More awesomeness: With Munich becoming English, it's partial proof of the claim 
 </p>
 
 <p>
+<div id="q1" name="q1" style="display:inline">
 <p align="right">
 <table width="70%"><tbody><tr><td>
 <img hspace=5 src="../../Common/stopsign.jpg" align="left" border="0" />
@@ -342,7 +363,6 @@ The seventh gate. Guide England to Munich and Italy to Holland. Need a hint? Kno
 </i></b></p>
 </td></tr></tbody></table>
 </p>
-<div id="q1" name="q1" style="display:inline">
 <h2 align="left"><b><font color="red">
 <i>...and when you're ready to compare your solution,
 <a href="#" onclick="toggleLayer('a1');return false;"><font color="red">click here</font></a>....
@@ -355,8 +375,11 @@ The seventh gate. Guide England to Munich and Italy to Holland. Need a hint? Kno
 <h3>Italy revisited</h3>
 
 <div class="game_img">
+<a href="lms_ven-hol.pdf" target="_blank">
 <img class="map_img" id="lms_ven-hol.1901.image" src="images/lms_ven-hol9.gif" width="50%" alt="Army Venice to Holland, After Winter 1901"/><br/>
-<i id="lms_ven-hol.1901.text">Army Venice to Holland, After Winter 1902</i><br/>
+<b id="lms_ven-hol.1901.text">Army Venice to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in separate window</small></i></b>
+</a><br/>
 <b>Season:</b>
 <select name="lms_ven-hol.1901" class="inputBox" onchange="changeMap(this, 'images/lms_ven-hol{0}.gif', 'Army Venice to Holland, {0}')">
 <option value="1">Game Start</option>
@@ -384,7 +407,7 @@ As stated in the first Italy solution, the biggest obstacle facing an Italian vi
 </p>
 
 <p>
-The second tactic that we can lend from the French solution is to move army Warsaw west of Munich. But how quick? Indeed, if we let it wait in Silesia, it would come into conflict with army Rome, which is also trying to get into Munich. Well then, let's have the Russian army capture Munich in 1901. Together with Sweden and Bulgaria and with the loss of Sevastopol this puts Russia at 5 centers. Doesn't that put the sweeper operation in the Black Sea at risk by ending up with too many centers to guarantee the disbands? Not if we lose that center again (or build another unit, but that just delays the problem).
+The second tactic that we can lend from the French solution is to move army Warsaw west of Munich. But how quickly? Indeed, if we let it wait in Silesia, it would come into conflict with army Rome, which is also trying to get into Munich. Well then, let's have the Russian army capture Munich in 1901. Together with Sweden and Bulgaria and with the loss of Sevastopol this puts Russia at 5 centers. Doesn't that put the sweeper operation in the Black Sea at risk by ending up with too many centers to guarantee the disbands? Not if we lose that center again (or build another unit, but that just delays the problem).
 </p>
 
 <p>
