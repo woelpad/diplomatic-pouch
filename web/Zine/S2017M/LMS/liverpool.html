@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> DP S2017M: Last Man Standing: Operation Liverpool</title>
+<meta charset="utf-8"/> 
+<!-- Point to whereever this stylesheet will exist-->
+<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+<style type="text/css">
+/*
+* Insert styles for the content_body here
+*/
+.game_img {text-align: center; text-decoration: italic;}
+.map_img {width: 60%;}
+.content_body {}
+.inputBox {
+	color:			#000000;
+	background:		#FFFFFF;
+	border-color:	#000000;
+	border-top:		1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-right:	1px solid;
+	font-family:	verdana;
+	font-size:		14px;
+}
+</style>
+<script>
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+		var args = arguments;
+		return this.replace(/{(\d)}/g, function(match, number) {
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+}
+function changeMap(selector, reference, content) {
+	var selected = selector.options[selector.selectedIndex];
+	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
+	var text = document.getElementById(selector.name + '.text');
+	image.src = reference.format(selected.value);
+	if (anchor) anchor.href = image.src;
+	image.alt = text.innerHTML = content.format(selected.text);
+}
+</script>
+</head>
+<body>
+<div class="req_link_container">
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<hr class="hr_rule top_hr">
+</div>
+<div class="centered">
+<!-- Insert Author Name -->
+<h1>LAST MAN STANDING: OPERATION LIVERPOOL</h1>
+<h2>by Mario Huys </h2>
+<hr class="hr_rule">
+</div>
+<div class="content_body justified padded_body">
+<!-- Content Body -->
+
+<h3>
+Army Constantinople to Liverpool
+</h3>
+
+<p>
+Today we're going to attack Great-Britain. But not in a Manchester concert hall, God forbids. Ours will be a bloodless conquest, played out on a harmless board or its electronic equivalent. 
+</p>
+
+<p>
+For once we're not going to start off with the industrious army Liverpool coming out on top. I think we've seen enough of him. Instead we're reversing the trend by making Liverpool the final destination. And not once, but twice, because when blue collar workers take a holiday, they don't quibble on the length.
+</p>
+
+<p>
+As is traditional, the first map shows the situation after the Winter of 1903. The starting position is still the same as always.
+</p>
+
+<div class="game_img">
+<img src="./images/lms_con-lvp.gif" class="map_img" alt="Army Constantinople to Liverpool, After Winter 1903">
+<br /><i>Army Constantinople to Liverpool, After Winter 1903</i>
+</div>
+
+<pre class="centered">
+Austria (0/5)         Ber Bud Tri Vie War    
+England (1/1) F Wal / Kie                    
+France  (0/5)         Bre Mar Mun Par Ven    
+Germany (1/1) F Nth / Lvp                    
+Italy   (1/3) F Lon / Lon Nap Rom            
+Russia  (0/1)         Mos                    
+Turkey  (1/6) A Edi / Ank Con Edi Sev Smy Stp
+</pre>
+
+<p>
+Ok, so, Liverpool is already no longer English? Leave it to the Germans to mess with the British world view as the preeminent nation on the world stage.
+</p>
+
+<h3>
+Italian army to Liverpool
+</h3>
+
+<div class="game_img">
+<img src="./images/lms_IA-lvp.gif" class="map_img" alt="Italian army to Liverpool, After Winter 1904">
+<br /><i>Italian army to Liverpool, After Winter 1904</i>
+</div>
+
+<pre class="centered">
+Austria (0/6)         Bud Mun Stp Tri Vie War
+France  (0/4)         Bre Lon Mar Par        
+Germany (0/1)         Ven                    
+Italy   (1/5) A Lvp / Edi Kie Lvp Nap Rom    
+Russia  (0/1)         Ber                    
+Turkey  (0/5)         Ank Con Mos Sev Smy    
+</pre>
+
+<p>
+Rome launches another successful invasion of Britain, together with their Gaul subjects. No need for a Hadrian wall this time, as Scotland is equally hospitable to the Roman phalanx. The only distraction is again those bloody Germans, who couldn't resist invading the North of Italy. Wipe them out, Caesar!</p>
+
+<h3>
+Army Liverpool to Ankara
+</h3>
+
+<div class="game_img">
+<img src="./images/lms_lvp-ank13.gif" class="map_img" alt="Army Liverpool to Ankara, After Winter 1903">
+<br /><i>Army Liverpool to Ankara, After Winter 1903</i>
+</div>
+
+<p>
+England may be a true island, but Turkey on this map is pretty much a peninsula. The thickness of the Balkan centers makes it impossible to let an army traverse them on its own without gaining a neutral center in the process, a big no-no in the standard LMS setting. That means that the only useful land connection between Turkey and Europe is the border between Armenia and Sevastopol. It's this connection that we exploit to guide army Liverpool in 1904 to Ankara.
+</p>
+
+<p>
+Who else crossed this border? Not the French army in Armenia. France owns Smyrna, which it must have taken in 1902. The only way to accomplish that is to move through Italy, either departing Venice in Spring through Adriatic, Ionian and Aegean or Eastern Med, or Apulia in Fall, which would only require two fleets. Since fleet Ankara needs to appear in the Black Sea at some point, the two fleet solution looks more convenient. Especially since it allows to roll over an Italian army strolling around the Apulian countryside.
+</p>
+
+<p>
+Turning our attention North, we see that France did not take Munich. But it did conquer Edinburgh and not the more accessible London. There's always the possibility that France also took London and later lost it again to England, but let's go with the premise that only Edinburgh was taken. This could either be done with fleet Brest or army Paris. An easy choice, given that the army can take the dot already in the first year by way of a convoy through the Channel and the North Sea, resulting in one English fleet to disband.
+</p>
+
+<p>
+Where does that leave army Liverpool? The first center to reach is St. Petersburg. But this can't be accomplished in 1901, at least not without a fleet on St. Petersburg's north coast. Landing in Norway is forbidden until Spring to prevent taking a neutral center. The army could move to Clyde or Yorkshire to prepare for the Spring convoy. But since it can be directly convoyed into St. Petersburg once the fleets are in place, it might as well take the opportunity in Spring 1902 to attack and get rid of the French army in Edinburgh before convoying in Fall. 
+</p>
+
+<p>
+We still have a massive number of Northern fleets to take care of. Most of them are starting out too far away to reach Ankara within the allotted timeframe. We need to assign or raise two snipers to do the culling operation. One could be the Turkish fleet Ankara. But that fleet has the opposite problem. It's better to use local resources and these are available in the form of the Russians, the assistant sniper power. By building a second fleet on St. Pete's north coast, when its south coast fleet is already heading for the North Sea we can drive the flock from both ends and meet somewhere in the middle. 
+</p>
+
+<p>
+There are two conditions for this plan to succeed. The first one is to be able to build that second fleet. This may be harder than it sounds, because Russia is actually going to lose Warsaw in the first year, as Germany aims to be in Moscow in the second year and you definitely don't want two Germans in the middle of the board with few snipers in sight. The second condition is that the two centers captured in 1903, Sevastopol and Constantinople, are both Russian. To satisfy both conditions we use the Turkish fleet to convoy army Moscow to Constantinople, while at the same time the two Turkish armies dislodge fleet Sevastopol in Armenia. Russia stays thereby at four centers with only three units left and is thus entitled to a build. 
+</p>
+
+<p>
+Now it's merely a question of executing the grand strategy, filling in the details as we go.
+</p>
+
+<div class="game_img">
+<a href="lms_lvp-ank.pdf#page=2" target="_blank">
+<img class="map_img" id="lms_lvp-ank.1901.image" src="images/lms_lvp-ank5.gif" width="50%" alt="Army Liverpool to Ankara, After Winter 1901"/><br/>
+<b id="lms_lvp-ank.1901.text">Army Liverpool to Ankara, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-ank.1901" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-ank{0}.gif', 'Army Liverpool to Ankara, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5" selected>After Winter 1901</option>
+</select>
+</div>
+
+<p>
+<b>1901.</b> While the British still deliberate on a possible Gallipoli campaign, the Russians are invited to a treaty in the Ottoman capital on condition that they scuttle their Black Sea fleet, which they promptly do. Italy proposes a Lepanto and when no-one wants to listen ambushes a German army in Bohemia.
+</p>
+
+<div class="game_img">
+<a href="lms_lvp-ank.pdf#page=6" target="_blank">
+<img class="map_img" id="lms_lvp-ank.1902.image" src="images/lms_lvp-ank9.gif" width="50%" alt="Army Liverpool to Ankara, After Winter 1902"/><br/>
+<b id="lms_lvp-ank.1902.text">Army Liverpool to Ankara, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-ank.1902" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-ank{0}.gif', 'Army Liverpool to Ankara, {0}')">
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+</select>
+</div>
+
+<p>
+<b>1902.</b> After disposing of the French invader, army Liverpool glides through Arctic waters to meet up with the German Barbarossa campaign, while Russia harasses the invaders from behind. Meanwhile newly minted French Crusaders visit the Citadel of Antioch on their way to the Promised Land.
+</p>
+
+<div class="game_img">
+<a href="lms_lvp-ank.pdf#page=10" target="_blank">
+<img class="map_img" id="lms_lvp-ank.1903.image" src="images/lms_lvp-ank13.gif" width="50%" alt="Army Liverpool to Ankara, After Winter 1903"/><br/>
+<b id="lms_lvp-ank.1903.text">Army Liverpool to Ankara, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-ank.1903" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-ank{0}.gif', 'Army Liverpool to Ankara, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
+
+<p>
+<b>1903.</b> The Neapolitan fleet, like the Venetians and Genovese before them, find themselves not welcome in Constantinople. They merely came to visit the Topkapi Palace, they lament, not to be stowed away in its cellars.
+</p>
+
+<div class="game_img">
+<a href="lms_lvp-ank.pdf#page=14" target="_blank">
+<img class="map_img" id="lms_lvp-ank.1904.image" src="images/lms_lvp-ank17.gif" width="50%" alt="Army Liverpool to Ankara, After Winter 1904"/><br/>
+<b id="lms_lvp-ank.1904.text">Army Liverpool to Ankara, After Winter 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lvp-ank.1904" class="inputBox" onchange="changeMap(this, 'images/lms_lvp-ank{0}.gif', 'Army Liverpool to Ankara, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
+
+<p>
+<b>1904.</b> Glory to the British flag, once more. You can hear "God save the King" being played in front of a statue of Atat&uuml;rk. Perhaps for the last time?
+
+</p>
+
+<h3>
+Fleet Sevastopol to Smyrna
+</h3>
+
+<div class="game_img">
+<img src="./images/lms_sev-smy17.gif" class="map_img" alt="Fleet Sevastopol to Smyrna, After Winter 1904">
+<br /><i>Fleet Sevastopol to Smyrna, After Winter 1904</i>
+</div>
+
+<p>
+Turkey gets lots of assistant snipers in the first two years on this map. Russia, Austria and England, they all end up with one or two centers left and most of their home centers taken. In fact they're so plentiful that we won't even need any of the Turkish armies.
+</p>
+
+<p>
+With so many dots colored, you would think that the solution is as straightforward as can be. Still, it would do well to reason back from the end to see if we can determine the positions a year earlier. Two centers were occupied to account for the two Russian fleets that we can suspect to have executed the culling operation up North, among Ankara, Constantinople and Sevastopol. We can exclude Sevastopol, because an army there would move to Armenia first, where fleet Sevastopol would not be able to support an attack on. The two other raiders were therefore a German army in Constantinople and an Austrian army or fleet in Ankara.
+</p>
+
+<p>
+Where was fleet Sevastopol at that time? Clearly for Turkey to be able to guide fleet Sevastopol to Smyrna it must either be in the Aegean or Armenia. Notice now that the German army moved from Moscow to Constantinople in just one year. That can only be done if it was convoyed through the Black Sea. The fleet that executed the convoy could not be a sniper, like a second Turkish fleet, that got disbanded, because only two centers get taken in 1903 and these serve exclusively to remove the sniper fleets up North. You guessed it, that Black Sea fleet can only be fleet Sevastopol. To bring this fleet from the Black Sea to Smyrna requires Turkey to have a fleet in the Aegean. Which means the map needs to look like this:
+</p>
+
+<div class="game_img">
+<img src="./images/lms_sev-smy13.gif" class="map_img" alt="Fleet Sevastopol to Smyrna, After Winter 1903">
+<br /><i>Fleet Sevastopol to Smyrna, After Winter 1903</i>
+</div>
+
+<p>
+The most pertinent question now is: In which order should the Turkish centers be taken and by whom? Clearly it would be preferable if Russia could claim both centers in 1901, as it can do by moving the fleet through Armenia and convoying the army across the Black Sea. Five centers would allow to build the fleet on St. Petersburg's north coast without needing to get rid of another unit first. The problem is though that we need sweepers, two of them, to clean up and remove the German army in Vienna and the French army in Venice. If army Warsaw is the first sweeper, the one remaining Austrian army should be the assistant. But how then will this Austrian unit be able to come over to Ankara when it's still stuck in Tyrolia? It can't, which is why Austria should capture one forward center (Constantinople) and lose it to Russia in 1902. This allows it to disband that Tyrolian army, while its remaining army is already in Turkey. Russia meanwhile sacrifices one army in Warsaw, while positioning its other army for the 1902 sweep.
+</p>
+
+<p>
+Let's see this through.
+</p>
+
+<div class="game_img">
+<a href="lms_sev-smy.pdf#page=2" target="_blank">
+<img class="map_img" id="lms_sev-smy.1901.image" src="images/lms_sev-smy5.gif" width="50%" alt="Fleet Sevastopol to Smyrna, After Winter 1901"/><br/>
+<b id="lms_sev-smy.1901.text">Fleet Sevastopol to Smyrna, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_sev-smy.1901" class="inputBox" onchange="changeMap(this, 'images/lms_sev-smy{0}.gif', 'Fleet Sevastopol to Smyrna, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5" selected>After Winter 1901</option>
+</select>
+</div>
+
+<p>
+<b>1901.</b> Home, sweet home. No less than seven home centers in five different nations change hands.</i>
+</p>
+
+<div class="game_img">
+<a href="lms_sev-smy.pdf#page=6" target="_blank">
+<img class="map_img" id="lms_sev-smy.1902.image" src="images/lms_sev-smy9.gif" width="50%" alt="Fleet Sevastopol to Smyrna, After Winter 1902"/><br/>
+<b id="lms_sev-smy.1902.text">Fleet Sevastopol to Smyrna, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_sev-smy.1902" class="inputBox" onchange="changeMap(this, 'images/lms_sev-smy{0}.gif', 'Fleet Sevastopol to Smyrna, {0}')">
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+</select>
+</div>
+
+<p>
+<b>1902.</b> The dance of the dervish. The Austrian army flicks through Anatolia in search of evidence of the Armenian genocide.
+</p>
+
+<div class="game_img">
+<a href="lms_sev-smy.pdf#page=10" target="_blank">
+<img class="map_img" id="lms_sev-smy.1903.image" src="images/lms_sev-smy13.gif" width="50%" alt="Fleet Sevastopol to Smyrna, After Winter 1903"/><br/>
+<b id="lms_sev-smy.1903.text">Fleet Sevastopol to Smyrna, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_sev-smy.1903" class="inputBox" onchange="changeMap(this, 'images/lms_sev-smy{0}.gif', 'Fleet Sevastopol to Smyrna, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
+
+<p>
+<b>1903.</b> The Cossacks' last dance. With a convoy to Constantinople to chase down the Cossacks, the Bolsheviks repay their debt to Germany for repatriating Lenin in a boxed car to start the Revolution. They promptly turn St. Petersburg into Leningrad.
+</p>
+
+<div class="game_img">
+<a href="lms_sev-smy.pdf#page=14" target="_blank">
+<img class="map_img" id="lms_sev-smy.1904.image" src="images/lms_sev-smy17.gif" width="50%" alt="Fleet Sevastopol to Smyrna, After Winter 1904"/><br/>
+<b id="lms_sev-smy.1904.text">Fleet Sevastopol to Smyrna, After Winter 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_sev-smy.1904" class="inputBox" onchange="changeMap(this, 'images/lms_sev-smy{0}.gif', 'Fleet Sevastopol to Smyrna, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
+
+<p>
+<b>1904.</b> The triumphant arrival of a Sevastopol fleet in Smyrna prompts the Greek inhabitants to invent a new line dance and call it the Sirtaki.
+</p>
+
+<h3>Uppercuts and countdowns</h3>
+
+<p>
+The variations on Sherlock Holmes' Last Man Standing Up (all neutral centers captured) solution deserves its own <a href="countdowns.html">countdowns</a> page. Complete with a surprise extra.
+</p>
+
+<!-- Content Body End -->
+</div>
+
+<div class="info_block padded_body">
+<div>
+<br/>
+<br/>
+</div>
+
+<div>
+<table>
+<tbody>
+<tr>
+<td>
+<!-- Insert Contact Information! -->
+<a href="mailto:woelpad@gmail.com">
+<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+</a> 
+</td>
+<td>
+<strong>
+Mario Huys <br/>
+(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+</strong> 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="dear_dp">
+<p>
+<i>
+If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the 
+
+<a href="../Common/DearDP.html">
+<q><strong>Dear DP...</strong></q>
+</a> 
+
+mail interface.
+</i> 
+</p>
+</div>
+
+</div>
+
+<div class="req_link_container">
+<hr class="hr_rule bot_hr">
+
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+</div>
+
+</body>
+</html>

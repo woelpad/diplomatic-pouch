@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> DP S2017M: Last Man Standing Countdowns </title>
+<meta charset="utf-8"/> 
+<!-- Point to whereever this stylesheet will exist-->
+<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+<style type="text/css">
+/*
+* Insert styles for the content_body here
+*/
+.game_img {text-align: center; text-decoration: italic;}
+.map_img {width: 60%;}
+.content_body {}
+.inputBox {
+	color:			#000000;
+	background:		#FFFFFF;
+	border-color:	#000000;
+	border-top:		1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-right:	1px solid;
+	font-family:	verdana;
+	font-size:		14px;
+}
+</style>
+<script>
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+		var args = arguments;
+		return this.replace(/{(\d)}/g, function(match, number) {
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+}
+function changeMap(selector, reference, content) {
+	var selected = selector.options[selector.selectedIndex];
+	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
+	var text = document.getElementById(selector.name + '.text');
+	image.src = reference.format(selected.value);
+	if (anchor) anchor.href = image.src;
+	image.alt = text.innerHTML = content.format(selected.text);
+}
+function toggleLayer(whichLayer)
+{	var elem, vis;
+	elem = document.getElementById(whichLayer);
+	vis = elem.style;
+	if (vis.display==''&&elem.offsetWidth!=undefined&&elem.offsetHeight!=undefined)
+		vis.display = (elem.offsetWidth!=0&&elem.offsetHeight!=0)?'inline':'none';
+	vis.display = (vis.display==''||vis.display!='none')?'none':'inline';
+	if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
+}
+</script>
+</style>
+</head>
+<body>
+<div class="req_link_container">
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<hr class="hr_rule top_hr">
+</div>
+<div class="centered">
+<!-- Insert Author Name -->
+<h1>LAST MAN STANDING COUNTDOWNS</h1>
+<h2>by Mario Huys </h2>
+<hr class="hr_rule">
+</div>
+<div class="content_body justified padded_body">
+<!-- Content Body -->
+
+<p>
+In the previous issue you were challenged to come up with ways to make a unit of each Great Power except Germany the last unit on the board. All are variations of the final solution to the Case of the Last Man Standing, where not a single center remains neutral at the end of the game. The solution to the first of these, with a Turkish army standing alone in Holland, was already solved by Holmes himself. We'll include it here as a point of reference.
+</p>
+
+<p>
+When visiting this page for the first time, or after reloading, all maps show each game at its halfway point, after the Winter of 1902. If there's any situation map that you want to see most, this is probably it. This is the point where reasoning back from the end and forward from the start meet each other. You could of course apply the same process now to derive the situation at the end of 1901 and 1903. Just focus on the maps and ignore the text. Otherwise, read on.
+</p>
+
+<p>
+You can browse through each season using the pulldown boxes. Check the Synchronize check mark to change all maps at the same time.
+</p>
+
+<h3>Turkey</h3>
+
+<div class="game_img">
+<a href="lms-upper.pdf" target="_blank">
+<img class="map_img" id="lms-upper.1901.image" src="images/lms-upper9.gif" width="50%" alt="Army Constantinople to Holland, After Winter 1901"/><br/>
+<b id="lms-upper.1901.text">Army Constantinople to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms-upper.1901" class="inputBox" onchange="changeMap(this, 'images/lms-upper{0}.gif', 'Army Constantinople to Holland, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5">After Winter 1901</option>
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13">After Winter 1903</option>
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17">After Winter 1904</option>
+</select>
+</div>
+
+<p>
+Not much to add here to what Holmes had already discovered. Using Bulgaria as a platform to eliminate the Turkish and Austrian fleets was the breakthrough needed to enable the capture of all centers. Also no convoys after 1902 to squeeze in that extra dislodgement, but is that an absolute must?
+</p>
+
+<h3>Austria</h3>
+
+<div class="game_img">
+<a href="lms_vie-hol.pdf" target="_blank">
+<img class="map_img" id="lms_vie-hol.1901.image" src="images/lms_vie-hol9.gif" width="50%" alt="Army Vienna to Holland, After Winter 1901"/><br/>
+<b id="lms_vie-hol.1901.text">Army Vienna to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_vie-hol.1901" class="inputBox" onchange="changeMap(this, 'images/lms_vie-hol{0}.gif', 'Army Vienna to Holland, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5">After Winter 1901</option>
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13">After Winter 1903</option>
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17">After Winter 1904</option>
+</select>
+</div>
+
+<p>
+Switching around the units taking Serbia and Rumania enables Austria to take Turkey's spot. There are still two Turks left in Russia, but that's no problem for the two German sweepers. But what to do with the second Austrian army in Sweden? Clearly we don't want it to take Kiel, because then there would be two Austrians after 1903, something the single German army in Ruhr can't resolve. The solution is to convoy from Sweden to Kiel and then dislodge with the Russian fleet, thereby letting Russia gain its second center. This Spring 1903 convoy can be applied to the Turkish solution as well, resulting in convoys in 4 successive movement seasons instead of 3. Only one less than what the Baron accomplished in his Rumania neutral solution. You see, nothing is absolute.
+</p>
+
+<p>
+Let's scroll back one year, to the situation at the end of 1901. Not only are all neutral centers already occupied, there are also 5 home centers that changed hands instead of the traditional two in Russia. The two Italian captures simply add some variation, but capturing Munich looks premature. To compensate Germany takes Sweden, so that it still can build two.
+</p>
+
+<h3>England</h3>
+
+<div class="game_img">
+<a href="lms_lon-hol.pdf" target="_blank">
+<img class="map_img" id="lms_lon-hol.1901.image" src="images/lms_lon-hol9.gif" width="50%" alt="Fleet London to Holland, After Winter 1901"/><br/>
+<b id="lms_lon-hol.1901.text">Fleet London to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_lon-hol.1901" class="inputBox" onchange="changeMap(this, 'images/lms_lon-hol{0}.gif', 'Fleet London to Holland, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5">After Winter 1901</option>
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13">After Winter 1903</option>
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17">After Winter 1904</option>
+</select>
+</div>
+
+<p>
+By now the trend should be clear. The surviving unit is the one occupying Berlin at the end of 1903. Instead of moving the unit in Tyrolia, which is in this case Italian, through Munich to Berlin, we send it on to Kiel, paving the way for fleet London to become the first fleet to triumph. In the finale it has to deal with two Italians, after Italy captures Serbia with its Venetian army, while Austria takes Munich. Munich is an easy center to change color, as it's here that the armies from the East, West and South meet. Here we limited ourselves to Austria, France and Italy, but with a little creativity it's conceivable that the three other non-German powers are able to claim it too.
+</p>
+
+<h3>Russia</h3>
+
+<div class="game_img">
+<a href="lms_stp-hol.pdf" target="_blank">
+<img class="map_img" id="lms_stp-hol.1901.image" src="images/lms_stp-hol9.gif" width="50%" alt="Fleet St. Petersburg to Holland, After Winter 1901"/><br/>
+<b id="lms_stp-hol.1901.text">Fleet St. Petersburg to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_stp-hol.1901" class="inputBox" onchange="changeMap(this, 'images/lms_stp-hol{0}.gif', 'Fleet St. Petersburg to Holland, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5">After Winter 1901</option>
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13">After Winter 1903</option>
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17">After Winter 1904</option>
+</select>
+</div>
+
+<p>
+Russia gets bolder and takes Sweden. Nothing wrong there. The consequence is that army Warsaw is still in the game, but outside of any center in order for the Russian sweepers in and around Bulgaria to disband. A quick convoy through the Baltic to Kiel brings it into the crosshairs of the charging Italian, who again becomes the first one eliminated in the final year.
+</p>
+
+<h3>Italy</h3>
+
+<div class="game_img">
+<a href="lms_nap-kie.pdf" target="_blank">
+<img class="map_img" id="lms_nap-kie.1901.image" src="images/lms_nap-kie9.gif" width="50%" alt="Fleet Naples to Kiel, After Winter 1901"/><br/>
+<b id="lms_nap-kie.1901.text">Fleet Naples to Kiel, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_nap-kie.1901" class="inputBox" onchange="changeMap(this, 'images/lms_nap-kie{0}.gif', 'Fleet Naples to Kiel, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5">After Winter 1901</option>
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13">After Winter 1903</option>
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17">After Winter 1904</option>
+</select>
+</div>
+
+<p>
+Things become more interesting when the destination gets changed to Kiel. Suddenly we need to get a unit in Holland in 1903. There are more French and English in the area, but the honor goes to Russia. Even better, this fleet St. Petersburg actually takes over the role of the German fleet in the North Sea, supporting fleet Naples to the English Channel, before docking in Holland. This allows Germany to keep a unit in Kiel, either an army or a fleet, for the sole purpose of supporting army Warsaw to Berlin.
+</p>
+
+<p>
+But what if you wanted to end with an Italian army in Holland instead of the Italian fleet in Kiel? In that case the Italian fleet should be eliminated before the start of 1904. The first and only opportunity is in the Fall of 1903, when it's in the English Channel. A fleet in Belgium could then support the German fleet in the North Sea to the English Channel. The problem is that this doesn't allow the German fleet to dislodge anything in Spring 1903. Which means there can at most be 12 units at the start of 1903, not 13. One less unit might seem like a small thing, but in fact it's extremely hard to accomplish. But perhaps the next solution will give some new ideas to overcome this hurdle.
+</p>
+
+<h3>France</h3>
+
+<div class="game_img">
+<a href="lms_mar-hol.pdf" target="_blank">
+<img class="map_img" id="lms_mar-hol.1901.image" src="images/lms_mar-hol9.gif" width="50%" alt="Army Marseilles to Holland, After Winter 1901"/><br/>
+<b id="lms_mar-hol.1901.text">Army Marseilles to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mar-hol.1901" class="inputBox" onchange="changeMap(this, 'images/lms_mar-hol{0}.gif', 'Army Marseilles to Holland, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5">After Winter 1901</option>
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13">After Winter 1903</option>
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17">After Winter 1904</option>
+</select>
+</div>
+
+<p>
+If you studied the final map, you must have noticed an oddity. Whereas the other solutions had the last survivor start 1904 in Berlin when the final destination was Holland, and even the Kiel solution had an army in Berlin, in this case Berlin is Austrian, while the survivor is French. Looking more closely, the dot in Munich is French, hence it's safe to conclude that that's where army Marseilles spent the Winter. Well, that's quite novel. Or is it? Did not the Baron himself had his victorious Austrian army in Munich at the start of 1904? Yes, he did, because that army came from Greece, which is one move further away than Serbia and therefore could never make a detour to Berlin. 
+</p>
+
+<p>
+With that historical precedent in mind, let's take a look at the After Winter 1902 map. We find the Austrian in Berlin, as could be expected, and the French army back in Marseilles, facing off a Russian in Burgundy no less. And what's that? A German army in Finland. How curious.
+</p>
+
+<p>
+The endgame is quite straightforward if you consider the three clusters around Livonia, Munich and Kiel. In each case there are four units that get reduced to two with one ending on the aforementioned spaces. This is the same movement that can be witnessed in the final season. When that unit is a sniper, we have a sweep (Livonia), otherwise it's a raider claiming a sniper center (Munich and Kiel). The thirteenth unit, fleet Naples, just moves on to claim the remaining sniper center, Belgium, without a fight. If you check previous solutions, you'll notice that the same routine plays out in each of them, with some small variations.
+</p>
+
+<p>
+We can now choose to either keep the German army in Ruhr or the German fleet in the Heligoland Bight alive, because both are adjacent to Kiel and Holland, the scenes of the final dislodgements. We choose the fleet of course, because it's different.
+</p>
+
+<p>
+Let's go back to the After Winter 1902 map. Do you see that gap in the English Channel? Previous solutions all had a fleet in there, usually French or English. The English fleet may well have perished in the North Sea, which is why we have a Russian fleet there. But how did the French fleet disappear? After taking Portugal it moves into the Mid-Atlantic, pursued by the Italian fleet. Unless it didn't take Portugal. Indeed, army Marseilles could have gone there and then back to its hometown, with army Paris taking Spain. But this shifts the question to how army Paris disappeared. The only plausible option there is to move it back to Gascony, where a German army might have struck with support from the Russian. But then Russia should have moved from Munich to Burgundy in Spring, requiring Munich to be Russian, which it's not.
+</p>
+
+<p>
+It's clear then that fleet Brest moved to the Iberian peninsula and back. The gap is caused by a German fleet moving in there in Spring, supporting in Fall and disbanding in Winter 1902. That fleet is of course fleet Kiel, having moved West, instead of into the Baltic. The two fleets currently on the map were built in Winter 1901, along with an army in Munich needed to remove army Rome. To get to three builds army Berlin was sent to Denmark, which explains why it's now in Finland, not in Livonia; and also why army Liverpool is in St. Petersburg, to help dislodge army Smyrna from Moscow in the absence of any German unit. Russia moved its army through Munich in Spring of 1902, attacking army Paris in Fall, after it had supported its fellow army to dislodge army Venice and recapture Marseiles. The shades fall off.
+</p>
+
+<p>
+As could be witnessed, several new ideas needed to be engendered to get to this solution. Never be afraid to try things out. With so many new ideas, let's see if we can put an Italian army in Holland. That's right, a bonus problem, because seven beats six, at least in Diplomacy. 
+</p>
+
+<h3>Army Venice to Holland</h3>
+
+<div class="game_img">
+<a href="./images/lms_ven-hol17.gif" target="_blank">
+<img src="./images/lms_ven-hol17.gif" class="map_img" alt="Army Venice to Holland, After Winter 1904">
+<br /><i>Army Venice to Holland, After Winter 1904</i>
+<br /><b><i><small>Click to enlarge in a separate window</small></i></b></a>
+</div>
+
+<pre class="centered">
+Austria (0/7)         Bud Gre Rum Stp Tri Vie War
+England (0/7)         Den Edi Kie Lon Lvp Mun Nwy
+France  (0/5)         Bre Mar Par Por Spa        
+Italy   (1/7) F Kie / Ber Hol Nap Rom Ser Tun Ven
+Russia  (0/3)         Bel Bul Swe                
+Turkey  (0/5)         Ank Con Mos Sev Smy        
+</pre>
+
+<p>
+There it is, the final map. The solution is only one click away, but the challenge is as always to find out the game history for yourself. You will undoubtedly immediately have noticed that Berlin is green, while Munich is blue. This looks like a step back, but don't be fooled, as several key tactics were borrowed from the French solution. But the most important one is to try out different things. 
+</p>
+
+<p>
+More awesomeness: With Munich becoming English, it's partial proof of the claim that Munich could be any power except German. The rest of the proof I leave to you.
+</p>
+
+<p>
+To make it even more clever, perhaps I should give you <a href="javascript:alert('There should be no army in Tyrolia after Winter 1902.')">this hint</a>?
+</p>
+
+<p>
+<div id="q1" name="q1" style="display:inline">
+<p align="right">
+<table width="70%"><tbody><tr><td>
+<img hspace=5 src="../../Common/stopsign.jpg" align="left" border="0" />
+</td><td>
+<p align="justify"><b><i>
+The seventh gate. Guide England to Munich and Italy to Holland.
+
+</i></b></p>
+</td></tr></tbody></table>
+</p>
+<h2 align="left"><b><font color="red">
+<i>...and when you're ready to compare your solution,
+<a href="#" onclick="toggleLayer('a1');return false;"><font color="red">click here</font></a>....
+</i></font></b>
+</h2>
+</div>
+<div id="a1" name="a1" style="display:none">
+<hr width="50%" color="gray"/>
+
+<h3>Italy revisited</h3>
+
+<div class="game_img">
+<a href="lms_ven-hol.pdf" target="_blank">
+<img class="map_img" id="lms_ven-hol.1901.image" src="images/lms_ven-hol9.gif" width="50%" alt="Army Venice to Holland, After Winter 1901"/><br/>
+<b id="lms_ven-hol.1901.text">Army Venice to Holland, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_ven-hol.1901" class="inputBox" onchange="changeMap(this, 'images/lms_ven-hol{0}.gif', 'Army Venice to Holland, {0}')">
+<option value="1">Game Start</option>
+<option value="2">Spring 1901</option>
+<option value="3">Fall 1901</option>
+<option value="4">Winter 1901</option>
+<option value="5">After Winter 1901</option>
+<option value="6">Spring 1902</option>
+<option value="7">Fall 1902</option>
+<option value="8">Winter 1902</option>
+<option value="9" selected>After Winter 1902</option>
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13">After Winter 1903</option>
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17">After Winter 1904</option>
+</select>
+</div>
+
+<p>
+As stated in the first Italy solution, the biggest obstacle facing an Italian victory lap in Holland is eliminating the Italian fleet before the end of 1903. A German fleet in the North Sea that spends the Spring of 1903 twiddling its thumbs is not good enough. To make it more efficient we need to put it in Picardy, leaving the North Sea open to fleet St. Pete. The latter then moves to Belgium while the former supports fleet Naples to the Channel, where it will be dislodged in Fall. That's two dislodgements instead of one, but the premise is that fleet Kiel is in Picardy by the end of 1902, for which it should start by moving West, not into the Baltic.
+</p>
+
+<p>
+The second tactic that we can lend from the French solution is to move army Warsaw west of Munich. But how quickly? Indeed, if we let it wait in Silesia, it would come into conflict with army Rome, which is also trying to get into Munich. Well then, let's have the Russian army capture Munich in 1901. Together with Sweden and Bulgaria and with the loss of Sevastopol this puts Russia at 5 centers. Doesn't that put the sweeper operation in the Black Sea at risk by ending up with too many centers to guarantee the disbands? Not if we lose that center again (or build another unit, but that just delays the problem).
+</p>
+
+<p>
+The third tactic is to let the 13th unit, which is army Venice, walk all alone towards the German center it needs to capture. Instead of moving through Trieste, Tyrolia and Munich, it bends east to Rumania, where it dislodges army Budapest, reaching Berlin in exactly  the same timeframe. In fact we're so efficient that we only need to build one unit, the German fleet serving in the Gulf of Bothnia. We could have built another Russian unit and disband it a year later, but what use would it be to us?
+</p>
+
+<p>
+And with that the curtain falls. It's been a long voyage, the longest Holmes story in the annals of the Pouch. Thank you for your perseverance. I hope you enjoyed it.
+</p>
+
+</div>
+
+<!-- Content Body End -->
+</div>
+
+<div class="info_block padded_body">
+<div>
+<br/>
+<br/>
+</div>
+
+<div>
+<table>
+<tbody>
+<tr>
+<td>
+<!-- Insert Contact Information! -->
+<a href="mailto:woelpad@gmail.com">
+<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+</a> 
+</td>
+<td>
+<strong>
+Mario Huys <br/>
+(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+</strong> 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="dear_dp">
+<p>
+<i>
+If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the 
+
+<a href="../Common/DearDP.html">
+<q><strong>Dear DP...</strong></q>
+</a> 
+
+mail interface.
+</i> 
+</p>
+</div>
+
+</div>
+
+<div class="req_link_container">
+<hr class="hr_rule bot_hr">
+
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+</div>
+
+</body>
+</html>
