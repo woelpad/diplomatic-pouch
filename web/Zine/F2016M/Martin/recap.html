@@ -76,7 +76,7 @@ function toggleLayer(layer, checked) {
 	} catch (e) {}
 }
 function toggleAllLayers(kind, checked) {
-	for (var i = 0; i <= 20; i++) {
+	for (var i = 0; i <= 21; i++) {
 		toggleLayer(kind + i, checked);
 	}
 }
@@ -609,8 +609,23 @@ In which the video starts again, just in time to see <b class="Germany">Doug Moo
 <img class="map" src="images/wdc2016top41.gif" alt="Winter 1910">
 </div>
 
+<table width="100%"><tr><td>
+<h3>Wrap-up</h3>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb21" onclick="toggleLayer('b21', this.checked)" checked>Blurb
+<input type="checkbox" id="rv21" onclick="toggleLayer('v21', this.checked)" checked>Video
+</div>
+</td></tr></table>
+<div class="blurb" id="b21">
+In which all the players with the exception of <b class="Turkey">Dave Maletsky</b> sit together during the <b>Diplomacy</b> tournament <b>Whipping 2017</b> in San Jose, to discuss the key points in the game and drink a refreshing glass of wine.
+</div>
+<div class="video" id="v21">
+<iframe class="video" src="https://www.youtube.com/embed/WUDUDJMue40" width="560" height="315" allowfullscreen></iframe>
+</div>
+
 <p>
-That's it for now, in anticipation of the promised wrap-up video.
+That's it. Hope you enjoyed it and hope for more this year or the next.
 </p>
 
 <br/><br/>
