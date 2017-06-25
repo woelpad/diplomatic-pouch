@@ -36,12 +36,36 @@ img.video {
 	height: 315;
 	padding: 10;
 }
+div.comment {
+	display: none;
+}
 div.map {
 	display: none;
 }
 img.map {
 	width: 560;
 	padding: 10;
+}
+.Austria {
+	color: red;
+}
+.England {
+	color: blue;
+}
+.France {
+	color: aqua;
+}
+.Germany {
+	color: navy;
+}
+.Italy {
+	color: green;
+}
+.Russia {
+	color: gray;
+}
+.Turkey {
+	color: orange;
 }
 </style>
 <script>
@@ -52,7 +76,7 @@ function toggleLayer(layer, checked) {
 	} catch (e) {}
 }
 function toggleAllLayers(kind, checked) {
-	for (var i = 0; i <= 20; i++) {
+	for (var i = 0; i <= 21; i++) {
 		toggleLayer(kind + i, checked);
 	}
 }
@@ -87,6 +111,8 @@ Toggle:
 </li><li>
 <input type="checkbox" id="rv" onclick="toggleAllLayers('v', this.checked)" checked>All Videos
 </li><li>
+<input type="checkbox" id="rc" onclick="toggleAllLayers('c', this.checked)">All Comments
+</li><li>
 <input type="checkbox" id="rs" onclick="toggleAllLayers('s', this.checked)">All Spring/Fall Maps
 </li><li>
 <input type="checkbox" id="rp" onclick="toggleAllLayers('p', this.checked)">All Summer/Winter Maps
@@ -119,15 +145,25 @@ In which each player chooses his country in orderly fashion.
 <div class="check" align="right">
 <input type="checkbox" id="rb1" onclick="toggleLayer('b1', this.checked)" checked>Blurb
 <input type="checkbox" id="rv1" onclick="toggleLayer('v1', this.checked)" checked>Video
+<input type="checkbox" id="rc1" onclick="toggleLayer('c1', this.checked)">Comments
 <input type="checkbox" id="rs1" onclick="toggleLayer('s1', this.checked)">Spring Map
 <input type="checkbox" id="rp1" onclick="toggleLayer('p1', this.checked)">Summer Map
 </div>
 </td></tr></table>
 <div class="blurb" id="b1">
-In which players gauge their opponents for the first time and Peter Yeargin (Austria) does some seed planting.
+In which players gauge their opponents for the first time and <b class="Austria">Peter Yeargin</b> does some seed planting.
 </div>
 <div class="video" id="v1">
 <iframe class="video" src="https://www.youtube.com/embed/Mm1et-Kvsw8" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+</div>
+<div class="comment" id="c1">
+<blockquote><p>
+<b class="Russia">Andrew Goff</b>:
+As you watch my negotiations, consider what I was trying to achieve in the west. It's almost the opposite of Yeargin! And yet we rapidly agreed on our collective orders and first target. I think this gives some great insight into the difference between strategy and tactics.
+</p><p>
+<b class="Germany">Doug Moore</b>:
+I spent my time in '01 working to set the stage. I'm playing Germany, which I love, but both Adam and Nathan will be leery (to be fair, we're all leery of each other). So, I want to talk to Andrew, because as former World Champs, we are targets. If we can work together, and we can be on the same page, that's critical for my position -- more so than anything that happens with EF. Otherwise: I like working with Nathan, will France go north, or is he conservative? What does Adam want to do with England? How fast? Can I get Chris to go west?
+</p></blockquote>
 </div>
 <div class="map" id="s1">
 <img class="map" src="images/wdc2016top2.gif" alt="Spring 1901">
@@ -147,7 +183,7 @@ In which players gauge their opponents for the first time and Peter Yeargin (Aus
 </div>
 </td></tr></table>
 <div class="blurb" id="b2">
-In which Chris Brand (Italy) has to explain the bounce on Trieste to Peter Yeargin (Austria) and no one and everyone wants Belgium.
+In which <b class="Italy">Chris Brand</b> has to explain the bounce on Trieste to <b class="Austria">Peter Yeargin</b> and no one and everyone wants Belgium.
 </div>
 <div class="video" id="v2">
 <iframe class="video" src="https://www.youtube.com/embed/3kOHJNWShRc" width="560" height="315" allowfullscreen></iframe>
@@ -170,7 +206,7 @@ In which Chris Brand (Italy) has to explain the bounce on Trieste to Peter Yearg
 </div>
 </td></tr></table>
 <div class="blurb" id="b3">
-In which Nathan Barnes (France) and Adam Silverman (England) waffle over the Channel, while Andrew Goff (Russia) plants a bomb.
+In which <b class="France">Nathan Barnes</b> and <b class="England">Adam Silverman</b> waffle over the Channel, while <b class="Russia">Andrew Goff</b> plants a bomb.
 </div>
 <div class="video" id="v3">
 <iframe class="video" src="https://www.youtube.com/embed/4IccxxA68aA" width="560" height="315" allowfullscreen></iframe>
@@ -193,7 +229,7 @@ In which Nathan Barnes (France) and Adam Silverman (England) waffle over the Cha
 </div>
 </td></tr></table>
 <div class="blurb" id="b4">
-In which Peter Yeargin (Austria) creates enough confusion to weather out a botched attack from all three sides.
+In which <b class="Austria">Peter Yeargin</b> creates enough confusion to weather out a botched attack from all three sides.
 </div>
 <div class="video" id="v4">
 <iframe class="video" src="https://www.youtube.com/embed/SZBXyisbKzE" width="560" height="315" allowfullscreen></iframe>
@@ -216,7 +252,7 @@ In which Peter Yeargin (Austria) creates enough confusion to weather out a botch
 </div>
 </td></tr></table>
 <div class="blurb" id="b5">
-In which Andrew Goff (Russia) tries to reestablish trust with Peter Yeargin (Austria) by letting him dictate his orders.
+In which <b class="Russia">Andrew Goff</b> tries to reestablish trust with <b class="Austria">Peter Yeargin</b> by letting him dictate his orders.
 </div>
 <div class="video" id="v5">
 <iframe class="video" src="https://www.youtube.com/embed/S_CJOzWoGno" width="560" height="315" allowfullscreen></iframe>
@@ -239,7 +275,7 @@ In which Andrew Goff (Russia) tries to reestablish trust with Peter Yeargin (Aus
 </div>
 </td></tr></table>
 <div class="blurb" id="b6">
-In which Doug Moore (Germany) tries to talk Adam Silverman (England) out of Denmark by invoking the curse of the puppet master and a first misadjudication happens in the Balkans.
+In which <b class="Germany">Doug Moore</b> tries to talk <b class="England">Adam Silverman</b> out of Denmark by invoking the curse of the puppet master and a first misadjudication happens in the Balkans.
 </div>
 <div class="video" id="v6">
 <iframe class="video" src="https://www.youtube.com/embed/Fp1p4VGZ0mY" width="560" height="315" allowfullscreen></iframe>
@@ -262,7 +298,7 @@ In which Doug Moore (Germany) tries to talk Adam Silverman (England) out of Denm
 </div>
 </td></tr></table>
 <div class="blurb" id="b7">
-In which Peter Yeargin (Austria) plays the AIR card and Nathan Barnes (France) sells out Adam Silverman (England) over Holland.
+In which <b class="Austria">Peter Yeargin</b> plays the AIR card and <b class="France">Nathan Barnes</b> sells out <b class="England">Adam Silverman</b> over Holland.
 </div>
 <div class="video" id="v7">
 <iframe class="video" src="https://www.youtube.com/embed/0aZVumhLHMg" width="560" height="315" allowfullscreen></iframe>
@@ -285,7 +321,7 @@ In which Peter Yeargin (Austria) plays the AIR card and Nathan Barnes (France) s
 </div>
 </td></tr></table>
 <div class="blurb" id="b8">
-In which what was planted in Fall gets reapt in Fall.
+In which what was planted in Spring gets reapt in Fall.
 </div>
 <div class="video" id="v8">
 <iframe class="video" src="https://www.youtube.com/embed/sVJ0ZOIoiWM" width="560" height="315" allowfullscreen></iframe>
@@ -308,7 +344,7 @@ In which what was planted in Fall gets reapt in Fall.
 </div>
 </td></tr></table>
 <div class="blurb" id="b9">
-In which Chris Brand (Italy) finally resolves to take up Dave Maletsky (Turkey) on his offer, incidentally breaking the Black Sea deadlock.
+In which <b class="Italy">Chris Brand</b> finally resolves to take up <b class="Turkey">Dave Maletsky</b> on his offer, incidentally breaking the Black Sea deadlock.
 </div>
 <div class="video" id="v9">
 <iframe class="video" src="https://www.youtube.com/embed/_h3MYufR3Ps" width="560" height="315" allowfullscreen></iframe>
@@ -331,7 +367,7 @@ In which Chris Brand (Italy) finally resolves to take up Dave Maletsky (Turkey) 
 </div>
 </td></tr></table>
 <div class="blurb" id="b10">
-In which Nathan Barnes (France) reaches super power status.
+In which <b class="France">Nathan Barnes</b> reaches super power status.
 </div>
 <div class="video" id="v10">
 <iframe class="video" src="https://www.youtube.com/embed/rmWbC9jruBE" width="560" height="315" allowfullscreen></iframe>
@@ -377,7 +413,7 @@ In which tactics take the upperhand over strategy in the player negotiations.
 </div>
 </td></tr></table>
 <div class="blurb" id="b12">
-In which the AIR is back on to stop Nathan Barnes (France).
+In which the AIR is back on to stop <b class="France">Nathan Barnes</b>.
 </div>
 <div class="video" id="v12">
 <iframe class="video" src="https://www.youtube.com/embed/WiehMBwI0p8" width="560" height="315" allowfullscreen></iframe>
@@ -423,7 +459,7 @@ In which the clock surprises a lot of people.
 </div>
 </td></tr></table>
 <div class="blurb" id="b14">
-In which Dave Maletsky (Turkey) is the first to pack his bags.
+In which <b class="Turkey">Dave Maletsky</b> is the first to pack his bags.
 </div>
 <div class="video" id="v14">
 <iframe class="video" src="https://www.youtube.com/embed/BYw0qNXPAyw" width="560" height="315" allowfullscreen></iframe>
@@ -446,7 +482,7 @@ In which Dave Maletsky (Turkey) is the first to pack his bags.
 </div>
 </td></tr></table>
 <div class="blurb" id="b15">
-In which Nathan Barnes (France) threatens to throw the game to Chris Brand (Italy) if Adam Silverman (England) doesn't back off.
+In which <b class="France">Nathan Barnes</b> threatens to throw the game to <b class="Italy">Chris Brand</b> if <b class="England">Adam Silverman</b> doesn't back off.
 </div>
 <div class="video" id="v15">
 <iframe class="video" src="https://www.youtube.com/embed/FJ6s7G12yFs" width="560" height="315" allowfullscreen></iframe>
@@ -469,7 +505,7 @@ In which Nathan Barnes (France) threatens to throw the game to Chris Brand (Ital
 </div>
 </td></tr></table>
 <div class="blurb" id="b16">
-In which Nathan Barnes (France) feigns anger towards Adam Silverman (England), but gets held up for an interview when he should have been writing his orders.
+In which <b class="France">Nathan Barnes</b> feigns anger towards <b class="England">Adam Silverman</b>, but gets held up for an interview when he should have been writing his orders.
 </div>
 <div class="video" id="v16">
 <iframe class="video" src="https://www.youtube.com/embed/ttRc2HjZH6E" width="560" height="315" allowfullscreen></iframe>
@@ -515,7 +551,7 @@ In which technical problems temporarily obstruct recording, while the players co
 </div>
 </td></tr></table>
 <div class="blurb" id="b18">
-In which Peter Yeargin (Austria) finds an ally in Nathan Barnes (France), but misses a chance to whack Andrew Goff (Russia) out of Moscow.
+In which <b class="Austria">Peter Yeargin</b> finds an ally in <b class="France">Nathan Barnes</b>, but misses a chance to whack <b class="Russia">Andrew Goff</b> out of Moscow.
 </div>
 <div class="video" id="v18">
 <img class="video" src="../../Common/no-video.jpg" alt="No Video">
@@ -538,7 +574,7 @@ In which Peter Yeargin (Austria) finds an ally in Nathan Barnes (France), but mi
 </div>
 </td></tr></table>
 <div class="blurb" id="b19">
-In which Adam Silverman (England), still off-screen, messes up his convoy to Denmark by bouncing with his Swedish fleet.
+In which <b class="England">Adam Silverman</b>, still off-screen, messes up his convoy to Denmark by bouncing with his Swedish fleet.
 </div>
 <div class="video" id="v19">
 <img class="video" src="../../Common/no-video.jpg" alt="No Video">
@@ -561,7 +597,7 @@ In which Adam Silverman (England), still off-screen, messes up his convoy to Den
 </div>
 </td></tr></table>
 <div class="blurb" id="b20">
-In which the video starts again, just in time to see Doug Moore (Germany) and Peter Yeargin (Austria) bow out, while Chris Brand (Italy) braces himself to maintain his lead until Kingdom comes.
+In which the video starts again, just in time to see <b class="Germany">Doug Moore</b> and <b class="Austria">Peter Yeargin</b> bow out, while <b class="Italy">Chris Brand</b> braces himself to maintain his lead until Kingdom comes.
 </div>
 <div class="video" id="v20">
 <iframe class="video" src="https://www.youtube.com/embed/MMucjk4ljaE" width="560" height="315" allowfullscreen></iframe>
@@ -573,8 +609,23 @@ In which the video starts again, just in time to see Doug Moore (Germany) and Pe
 <img class="map" src="images/wdc2016top41.gif" alt="Winter 1910">
 </div>
 
+<table width="100%"><tr><td>
+<h3>Wrap-up</h3>
+</td><td align="right">
+<div class="check" align="right">
+<input type="checkbox" id="rb21" onclick="toggleLayer('b21', this.checked)" checked>Blurb
+<input type="checkbox" id="rv21" onclick="toggleLayer('v21', this.checked)" checked>Video
+</div>
+</td></tr></table>
+<div class="blurb" id="b21">
+In which all the players with the exception of <b class="Turkey">Dave Maletsky</b> sit together during the <b>Diplomacy</b> tournament <b>Whipping 2017</b> in San Jose, to discuss the key points in the game and drink a refreshing glass of wine.
+</div>
+<div class="video" id="v21">
+<iframe class="video" src="https://www.youtube.com/embed/WUDUDJMue40" width="560" height="315" allowfullscreen></iframe>
+</div>
+
 <p>
-That's it for now, in anticipation of the promised wrap-up video.
+That's it. Hope you enjoyed it and hope for more this year or the next.
 </p>
 
 <br/><br/>
