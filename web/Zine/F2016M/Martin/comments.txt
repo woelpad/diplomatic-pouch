@@ -1,330 +1,29 @@
-<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
 
-<html><head><title>DP F2016M: World Diplomacy Championship Recap</title>
-
-<!-- ---------------------Header---------------------------------- -->
-<!-- ------------------------------------------------------------- -->
-
-<!---- Authored by  ---->
-<!---- Published on the Pouch Zine with permissions ---->
-<style type="text/css">
-body {
-	margin: 0;
-	padding: 0;
-}
-iframe, img {
-	display: block;
-	margin: auto;
-}
-div.check {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: small;
-}
-div.blurb {
-	display: inline;
-	font-style: italic;
-	padding: 10;
-}
-div.video {
-	display: inline;
-}
-iframe.video {
-	border: 0;
-	padding: 10;
-}
-img.video {
-	height: 315;
-	padding: 10;
-}
-div.comment {
-	display: none;
-}
-p.comment {
-	text-indent: -30;
-}
-div.map {
-	display: none;
-}
-img.map {
-	width: 560;
-	padding: 10;
-}
-.master {
-	color: brown;
-}
-.austria {
-	color: red;
-}
-.england {
-	color: blue;
-}
-.france {
-	color: aqua;
-}
-.germany {
-	color: navy;
-}
-.italy {
-	color: green;
-}
-.russia {
-	color: gray;
-}
-.turkey {
-	color: orange;
-}
-</style>
-<script>
-function toggleLayer(layer, checked) {
-	try {
-		document.getElementById(layer).style.display = checked ? 'inline' : 'none';
-		document.getElementById('r' + layer).checked = checked;
-	} catch (e) {}
-}
-function toggleAllLayers(kind, checked) {
-	for (var i = 0; i <= 21; i++) {
-		toggleLayer(kind + i, checked);
-	}
-}
-</script>
-
-</head>
-
-<body style="background-color: rgb(255, 255, 255);">
-<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
-<a href=".."><img src="../toIssue.gif" align="right" border="0"></a>
-<br clear="all">
-<hr align="center" width=100% size="-1" color="gray">
-
-<center>
-<h1>WORLD DIPLOMACY CHAMPIONSHIP RECAP</h1>
-<h2>On the Top Board of WDC 2016 at the Weasel Moot in Chicago</h2> 
-<h2>by "Dancing Queen" Chris Martin</h2>
-<hr align="center" width=100% size="-1" color="gray">
-</center>
-<p>
-<table width="960" border="0" align="center">
-<tr><td align="justify">
-
-<blockquote><i>
-Chris Martin, the 1998 world champion, recounts in detail and with ample video footage the events of the WDC 2016 top board that would crown the 2016 World Champion. Be patient, the videos may take their time to load. You can browse through the maps for the whole game history either by using the toggles below or by clicking this <a href="wdc2016top.pdf" target="_blank">PDF file</a> link, which will open in a different tab.
-</i></blockquote>
-
-<div class="check" style="font-size:normal;">
-Toggle:
-<ul style="list-style:none;"><li>
-<input type="checkbox" id="rb" onclick="toggleAllLayers('b', this.checked)" checked>All Blurbs
-</li><li>
-<input type="checkbox" id="rv" onclick="toggleAllLayers('v', this.checked)" checked>All Videos
-</li><li>
-<input type="checkbox" id="rs" onclick="toggleAllLayers('s', this.checked)">All Suggestions on Production, etc.
-</li><li>
-<input type="checkbox" id="rm" onclick="toggleAllLayers('m', this.checked)">All Spring/Fall Maps
-</li><li>
-<input type="checkbox" id="rc" onclick="toggleAllLayers('c', this.checked)">All Comments on Play
-</li><li>
-<input type="checkbox" id="rp" onclick="toggleAllLayers('p', this.checked)">All Summer/Winter Maps
-</li></ul>
-</div>
-
-
-<table width="100%"><tr><td>
-<h3>The Paris Method</h3>
-</td><td align="right">
-<div class="check">
-<input type="checkbox" id="rb0" onclick="toggleLayer('b0', this.checked)" checked>Blurb
-<input type="checkbox" id="rv0" onclick="toggleLayer('v0', this.checked)" checked>Video
-<input type="checkbox" id="rs0" onclick="toggleLayer('s0', this.checked)">Suggestions
-<input type="checkbox" id="rp0" onclick="toggleLayer('p0', this.checked)">Starting Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b0">
-In which each player chooses his country in orderly fashion.
-</div>
-<div class="video" id="v0">
-<iframe class="video" src="https://www.youtube.com/embed/zPlUuvIV7ws" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s0">
-<p><b><i>Suggestions</i></b></p>
+<h3>WDC Recap The Paris Method</h3>
+<div class="comment" id="c0">
+<p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
-<b>Peter J McNamara</b>
-Great video, Chris Martin. I'm loving the recap so far. Thank you so much.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-My pleasure! I hope <b class="italy">Chris Brand</b>, <b class="germany">Douglas Moore</b>, <b class="austria">Peter Yeargin</b>, <b class="france">Nathan Barnes</b>, <b class="russia">Andrew Goff</b>, <b class="england">Adam Silverman</b> and <b class="turkey">Dave Maletksky</b> feel the same way!  :)
-</p></blockquote>
-</div>
-<div class="map" id="p0">
-<img class="map" src="images/wdc2016top1.gif" alt="Game Start">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Spring 1901</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb1" onclick="toggleLayer('b1', this.checked)" checked>Blurb
-<input type="checkbox" id="rv1" onclick="toggleLayer('v1', this.checked)" checked>Video
-<input type="checkbox" id="rc1" onclick="toggleLayer('s1', this.checked)">Suggestions
-<input type="checkbox" id="rm1" onclick="toggleLayer('m1', this.checked)">Spring Map
-<input type="checkbox" id="rc1" onclick="toggleLayer('c1', this.checked)">Comments
-<input type="checkbox" id="rp1" onclick="toggleLayer('p1', this.checked)">Summer Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b1">
-In which players gauge their opponents for the first time and <b class="austria">Peter Yeargin</b> does some seed planting.
-</div>
-<div class="video" id="v1">
-<iframe class="video" src="https://www.youtube.com/embed/Mm1et-Kvsw8" width="560" height="315" frameborder="0" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s1">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Jay Heumann</b>
-Very cool! Are you planning one video per season or will it eventually get down to one per year?
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-I was recording for the full negotiation time each season, so probably one per? I think 16 minutes is on the long side for this, but even so I cut out some really juicy stuff!
-</p><p class="comment">
-<b>Bryan Pravel</b>
-Oh man, commentary along with the videos will be amazing!
-</p><p class="comment">
-<b>Roland Cooke</b>
-Fascinating stuff, your commentary is brilliant.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Glad you like it! Trying to help tell the story - I wonder if I am not giving enough background for an outsider, though they really aren't my intended audience.
-</p><p class="comment">
-<b>Roland Cooke</b>
-You could do a separate 'prequel' episode maybe. Explain the basics, and the personalities involved (brief bios).
-</p><p class="comment">
-<b>Bryan Pravel</b>
-Chris Martin: I think if you are enjoying it, others will pick up on that and enjoy it as well. One of the things that encouraged me to start online play was reading the <a href="http://diplom.org/Showcase/ghodstoo/">showcase game "ghodstoo"</a> on the Diplomatic Pouch . I didn't understand half of what I was reading at the time but I knew I liked it and it encouraged me to dig deeper into the hobby. I suspect this could have that same impact for face-to-face games.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Ugh was I in that game?  :) I remember that - haha, I wasn't! Winning. But truly some masters there.
-</p><p class="comment">
-<b>Jay Heumann</b>
-I think that outsiders should be your intended audience, but I think you probably are giving enough background.
-</p><p class="comment">
-<b class="italy">Chris Brand</b>
-Good stuff!
-</p><p class="comment">
-<b>Chowder Sergeant Rufus</b>
-You are the best!
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Captions applied to Spring 1901. Man, that's almost as much work as creating a new video. <br>
-Doug Massey: You did a great job correcting all my transcription mistakes.  :-) I didn't know anything about the tie-breaker rules so I had a hard time making sense about what they were saying -- but now I get it!
-</p></blockquote>
-</div>
-<div class="map" id="m1">
-<img class="map" src="images/wdc2016top2.gif" alt="Spring 1901">
-</div>
+<h3>WDC Recap Spring 1901</h3>
 <div class="comment" id="c1">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
-<b class="russia">Andrew Goff</b> 
+<b class="russia">Andrew Goff</b>
 Want some thoughts shared?
 </p><p class="comment">
-<b class="master">Chris Martin</b> 
+<b class="master">Chris Martin</b>
 Oh my stars and garters yes! But maybe no spoilers?  :D
 </p><p class="comment">
-<b class="russia">Andrew Goff</b> 
+<b class="russia">Andrew Goff</b>
 Ok. Maybe a "consider as you watch..." Approach :) <br>
 As you watch my negotiations, consider what I was trying to achieve in the west. It's almost the opposite of Yeargin! And yet we rapidly agreed on our collective orders and first target. I think this gives some great insight into the difference between strategy and tactics.
 </p><p class="comment">
-<b class="germany">Douglas Moore</b> 
+<b class="germany">Douglas Moore</b>
 Likewise to what Andrew said (no spoilers)... I spent my time in '01 working to set the stage. I'm playing Germany, which I love, but both Adam and Nathan will be leery (to be fair, we're all leery of each other). So, I want to talk to Andrew, because as former World Champs, we are targets. If we can work together, and we can be on the same page, that's critical for my position -- more so than anything that happens with EF. Otherwise: I like working with Nathan, will France go north, or is he conservative? What does Adam want to do with England? How fast? Can I get Chris to go west?
 </p></blockquote>
 </div>
-<div class="map" id="p1">
-<img class="map" src="images/wdc2016top3.gif" alt="Summer 1901">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Fall 1901</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb2" onclick="toggleLayer('b2', this.checked)" checked>Blurb
-<input type="checkbox" id="rv2" onclick="toggleLayer('v2', this.checked)" checked>Video
-<input type="checkbox" id="rs2" onclick="toggleLayer('s2', this.checked)">Suggestions
-<input type="checkbox" id="rm2" onclick="toggleLayer('m2', this.checked)">Fall Map
-<input type="checkbox" id="rc2" onclick="toggleLayer('c2', this.checked)">Comments
-<input type="checkbox" id="rp2" onclick="toggleLayer('p2', this.checked)">Winter Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b2">
-In which <b class="italy">Chris Brand</b> has to explain the bounce on Trieste to <b class="austria">Peter Yeargin</b> and no one and everyone wants Belgium.
-</div>
-<div class="video" id="v2">
-<iframe class="video" src="https://www.youtube.com/embed/3kOHJNWShRc" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s2">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Steve Cooley</b>
-All I can say is: MORE! <br>
-Would it even be better if you could have recorded every conversation and chosen which were key/critical? Sure, but given that you were one dude doing all that one dude could do (channeling Robert Downey Jr. from that movie about Vietnam I never saw), it's fantastic. <br>
-I'm basing this on Spring 1901 only. Haven't watched this one yet. However, I'm confident I'll feel the same. You are a master, analyzing and drawing out other expert players.
-</p><p class="comment">
-<b>Jay Heumann</b>
-Very nice! Especially like the way (if memory serves) every clip featured one of the players from the previous clip.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-I was definitely doing that this time.  :D
-</p><p class="comment">
-<b>Jay Heumann</b>
-It worked really well, I thought.
-</p><p class="comment">
-<b>Doug Massey</b>
-This is good stuff -- it's the first time I've ever seen someone try to cover a game of Diplomacy this way. I tried watching with closed captions (automatically generated by Google) on, but it's a mess. Legit captions for the negotiations would be sooooo helpful.
-</p><p class="comment">
-<b class="russia">Andrew Goff</b>
-I think they're hilarious :)
-</p><p class="comment">
-<b>James Burgess</b>
-They really are great and there's not much else you can do about the background noise (which is the only difficult part). As Mr. Cooley notes, you are only one person, so you got what you got. I like the basic style of your commentary and BECAUSE the background noise is so bad, you might do better to tell us more of what they just said that we are having trouble hearing.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Ok, I have heard a lot about closed captioning - its a lot of work but maybe I can try something for the next one.
-</p><p class="comment">
-<b>Doug Massey</b>
-I might-could help with that (might-could = my new NC accent!). I could first-draft something for you if you have a way to add in the captions?
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-It would involve a re-edit, but a pretty simple one. If you want to take a crack at it, please be my guest!
-</p><p class="comment">
-<b>Doug Massey</b>
-If you have an advance copy of S1902 you want to send me, just email me a link.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Unfortunately, I just have raw footage. But if you want to take a run at S or F 01, I could re-edit them to incorporate CC.
-</p><p class="comment">
-<b>Peter J McNamara</b>
-These are great videos. Really well done and love the commentary. Your commentary is what makes it great.
-</p><p class="comment">
-<b>Steve Cooley</b>
-The only thing that stops them from being even better, well, two things: 1) Money; 2) Time. <br>
-I was talking to someone today about mobile microphones. Less than $400 for one that is "okay." So, putting one on each player . . . $2700? Then you need a sound board, digital recorders, and, oh yeah, more cameras and camera people. So, until ESPN sees the light . . . <br>
-And, if it's tough editing now, imagine what it would be like with MORE video/audio. <br>
-Anyway, with the limits you are working under, these are remarkable.
-</p><p class="comment">
-<b class="master">Jim O'Kelley</b>
-I'm late on this, but I just started binging. Looks great, and the sound is good on my iPhone with ear buds. Chris, how do you not comment on the Colonial Dip board in the foreground during the negotiations with Doug and Adam? #Sloppy
-</p><p class="comment">
-<b>Steve Cooley</b>
-That . . . is the funniest thing I've read all day. Well done!
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-I don't see variants.
-</p><p class="comment">
-<b>Steve Cooley</b>
-^That was also world-class. Thank you!
-</p></blockquote>
-</div>
-<div class="map" id="m2">
-<img class="map" src="images/wdc2016top4.gif" alt="Fall 1901">
-</div>
+<h3>WDC Recap Fall 1901</h3>
 <div class="comment" id="c2">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -353,65 +52,8 @@ You get a little more insight into this in the Fall 1902 I think - but my sense 
 Chris Martin: Yes, indeed. Adam isn't on facebook, so he can't reply. But, if you go back, you'll see that when those opportunities were there, we couldn't/wouldn't make it happen. Believe me, I made the case more than once.
 </p></blockquote>
 </div>
-<div class="map" id="p2">
-<img class="map" src="images/wdc2016top5.gif" alt="Winter 1901">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Spring 1902</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb3" onclick="toggleLayer('b3', this.checked)" checked>Blurb
-<input type="checkbox" id="rv3" onclick="toggleLayer('v3', this.checked)" checked>Video
-<input type="checkbox" id="rs3" onclick="toggleLayer('s3', this.checked)">Suggestions
-<input type="checkbox" id="rm3" onclick="toggleLayer('m3', this.checked)">Spring Map
-<input type="checkbox" id="rc3" onclick="toggleLayer('c3', this.checked)">Comments
-<input type="checkbox" id="rp3" onclick="toggleLayer('p3', this.checked)">Summer Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b3">
-In which <b class="france">Nathan Barnes</b> and <b class="england">Adam Silverman</b> waffle over the Channel, while <b class="russia">Andrew Goff</b> plants a bomb.
-</div>
-<div class="video" id="v3">
-<iframe class="video" src="https://www.youtube.com/embed/4IccxxA68aA" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s3">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Peter J McNamara</b>
-Best one yet!
-</p><p class="comment">
-<b>Laurence Peery</b>
-Chris Martin: Please, please, please make sure that somwhere where we find it is a complete list of this series locations easily. I dream the thought of months from now having to scroll through miles of messages to be able read them all in a coherent manner. I think this is going to be the hobby's Downton Abbey and once hooked, one stays hooked. I do have one assign comment on that opening photo above. It's the quintessential Adam Silverman (on the right) body english shot, but more on that later.
-</p><p class="comment">
-<b class="germany">Douglas Moore</b>
-I think it is fun and instructive to analyze a game, see some of the other diplomacy, and not be in a "post-game" mode, in which we are all tired, emotional, and sometimes defensive. Thanks again for undertaking this, Chris Martin! If we could figure out the logistics, I'd love to be in a game where all 7 players are mic'ed up / camera'd up.
-</p><p class="comment">
-<b>Steve Cooley</b>
-That would be ideal.
-</p><p class="comment">
-<b class="france">Nathan Barnes</b>
-But do it soon before we forget everything!
-</p><p class="comment">
-<b class="germany">Douglas Moore</b>
-Nathan Barnes: What? Who are you again?
-</p><p class="comment">
-<b class="france">Nathan Barnes</b>
-Oh! Excuse me! I am an actor looking for new projects. Would you mind reading my screenplay?
-</p><p class="comment">
-<b>Nicholas DeLateur</b>
-Pretty sure Nathan Barnes is just a guy who wants to go drink with his friends.
-</p><p class="comment">
-<b>Roland Cooke</b>
-Minor suggestion, if you are able to put graphics on top the videos. Put a country flag on the left and right of the screens, for each player in the negotiation. Ideally also include a list of each player's current units and their locations.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Good idea Roland! I've thought about that - Name, country. Will try for next time.
-</p></blockquote>
-</div>
-<div class="map" id="m3">
-<img class="map" src="images/wdc2016top6.gif" alt="Spring 1902">
-</div>
+<h3>WDC Recap Spring 1902</h3>
 <div class="comment" id="c3">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -463,120 +105,8 @@ SO awesome to have so many players commenting on this. Wish Silverman and Malets
 It's simple: Maletsky guards his words like he guards his dots. Silverman prefers to bury your dots under his words.
 </p></blockquote>
 </div>
-<div class="map" id="p3">
-<img class="map" src="images/wdc2016top7.gif" alt="Summer 1902">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Fall 1902</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb4" onclick="toggleLayer('b4', this.checked)" checked>Blurb
-<input type="checkbox" id="rv4" onclick="toggleLayer('v4', this.checked)" checked>Video
-<input type="checkbox" id="rs4" onclick="toggleLayer('s4', this.checked)">Suggestions
-<input type="checkbox" id="rm4" onclick="toggleLayer('m4', this.checked)">Fall Map
-<input type="checkbox" id="rc4" onclick="toggleLayer('c4', this.checked)">Comments
-<input type="checkbox" id="rp4" onclick="toggleLayer('p4', this.checked)">Winter Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b4">
-In which <b class="austria">Peter Yeargin</b> creates enough confusion to weather out a botched attack from all three sides.
-</div>
-<div class="video" id="v4">
-<iframe class="video" src="https://www.youtube.com/embed/SZBXyisbKzE" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s4">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Steve Cooley</b>
-Thank you very much for the captioning. <br>
-However, I do think the captioning of the players names/countries is unnecessary. If someone has gotten this far into the game and can't sort that out, well . . . they need to work harder. ;) <br>
-Very nice analysis. If there was a pro league, you could do this for a living (but, I think you know that).
-</p><p class="comment">
-<b>Doug Massey</b>
-Keep the names and countries for people who have been out of the hobby for ten years!
-</p><p class="comment">
-<b>Steve Cooley</b>
-Oh, please don't misunderstand me. I think it's fine. However, if it adds to the workload substantially, I'm saying that by the end of '02 anyone who is working through the videos ought to be able to keep it straight by that time. Plus, Chris' commentary shows the players positions, so I am just offering the opinion that (after an hour of video between the four turns) it doesn't add that much. <br>
-On the other hand, the closed-captioning is invaluable.
-</p><p class="comment">
-<b>Bryan Pravel</b>
-Best episode yet. The captions and overlays really help and you have a very nice narrative that tells the story. This is great stuff!
-</p><p class="comment">
-<b>Doug Massey</b>
-Love love love the captions!
-</p><p class="comment">
-<b>John Jamieson</b>
-Did someone use a profanity, that appeared in the captions as 'mucked' ?
-</p><p class="comment">
-<b>Steve Cooley</b>
-I thought that was rather well done. ;)
-</p><p class="comment">
-<b>John Jamieson</b>
-I can only agree, excellent work by Chris Martin
-</p><p class="comment">
-<b>Marc Peters</b>
-The subtitles are key; too much is unheard otherwise. Thanks for the effort.
-</p><p class="comment">
-<b>Chris Barfield</b>
-This is awesome!
-</p><p class="comment">
-<b>Laurence Peery</b>
-CM: As my dear Norwegian grandmother told me, "Remember, the best ice cubes come from the bottom of the berg." It's the same with captions and such. We, at least some of us, may not need them today but in 50 years they'll be a big help to future hobbyists.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-That's a good point, Laurence - and fair. if someone wants to do the transcriptions for the first 4 vids, I will go back and re-edit them to include captions.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Doug Massey!
-</p><p class="comment">
-<b>Doug Massey</b>
-Chris Martin: S1901 emailed to you.
-</p><p class="comment">
-<b class="italy">Chris Brand</b>
-The captions are awesome - thanks.
-</p><p class="comment">
-<b>Steve Cooley</b>
-Okay, crazy idea time (then again, it IS me!) <br>
-So, with all the tech that you can (masterfully) pull off, what about letting the players review the moves of every turn, watch the vids, then give you "what I was thinking" videos that you could also edit in? These would be recorded before you released the videos. <br>
-Am I making sense? Inow, yes, great to have Yeargin's insights, but how much better to splice them in during your analysis of the turn? <br>
-Clearly, that would not work for this year. And, again, I think you should get some kind of award for this series. It is spectacular. I will be posting them--are they all at a singular youtube address?
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Yep, you can get the playlist <a href="https://www.youtube.com/playlist?list=PLbwng27eI0e3O9rIFcXp_Bvr97TNgAsQw">here</a> - and that link will work for all the videos I add in the series
-</p><p class="comment">
-<b>Roland Cooke</b>
-Captions are fantastic. Suggest try to use country colours for the text boxes where you can.
-</p><p class="comment">
-<b>Chuck Spiekerman</b>
-Closed captioning great. I was going to suggest some sort of help to understand the audio, but thought it would be a big ask, since so much work. It's fantastic. Thanks for these videos. They are great. Looking forward to next one.
-</p><p class="comment">
-<b>Philipp Weissert</b>
-Just watched now, awesome! Thank you so much for doing this!!! <br>
-And do keep the captions. Great stuff!
-</p><p class="comment">
-<b>Laurence Peery</b>
-I don't expect there to be many K-POP drama fans out there but I was just thinking that their system for handling prepping domestic series for foreign markets might work. In brief: each project has a team captain who puts together (from a list of volunteers) a team of timers, translators, caption writers, etc. who work together on a project from beginning to end. That way no one person has to try to do it all and the risk of burn out drops. Just an idea.
-</p><p class="comment">
-<b>Marc Peters</b>
-Did the recording end after F'02, or is there more to come? Inquiring minds want to know!!!
-</p><p class="comment">
-<b class="master">Jim O'Kelley</b>
-He filmed right up through the end of the game, so I'm sure more will be coming as time permits.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-More coming! Just have to do the commentary, and the transcriptions.  :)
-</p><p class="comment">
-<b class="master">Jim O'Kelley</b>
-I'm waiting till the whole thing is done. Then I'll binge-watch it.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Next one is up!
-</p></blockquote>
-</div>
-<div class="map" id="m4">
-<img class="map" src="images/wdc2016top8.gif" alt="Fall 1902">
-</div>
+<h3>WDC Recap Fall 1902</h3>
 <div class="comment" id="c4">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -625,83 +155,8 @@ Adam NMRing, Peter inventing a land bridge between Tyrolia and Bohemia. Makes me
 So... I will decline much comment here, waiting for the next one. Other than to say, sometimes when it is 2v1, the right move is to make it 3v1. Nathan Barnes was in the driver's seat in the west. I thought putting that army down was a strong move at the time, and I still think it. I wish he'd put a fleet down. :-)
 </p></blockquote>
 </div>
-<div class="map" id="p4">
-<img class="map" src="images/wdc2016top9.gif" alt="Winter 1902">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Spring 1903</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb5" onclick="toggleLayer('b5', this.checked)" checked>Blurb
-<input type="checkbox" id="rv5" onclick="toggleLayer('v5', this.checked)" checked>Video
-<input type="checkbox" id="rs5" onclick="toggleLayer('s5', this.checked)">Suggestions
-<input type="checkbox" id="rm5" onclick="toggleLayer('m5', this.checked)">Spring Map
-<input type="checkbox" id="rc5" onclick="toggleLayer('c5', this.checked)">Comments
-<input type="checkbox" id="rp5" onclick="toggleLayer('p5', this.checked)">Summer Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b5">
-In which <b class="russia">Andrew Goff</b> tries to reestablish trust with <b class="austria">Peter Yeargin</b> by letting him dictate his orders.
-</div>
-<div class="video" id="v5">
-<iframe class="video" src="https://www.youtube.com/embed/S_CJOzWoGno" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s5">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b class="master">Chris Martin</b>
-Tried a few new things, feedback as always appreciated!
-</p><p class="comment">
-<b>Bryan Pravel</b>
-They keep getting better and better. Thanks Chris Martin!
-</p><p class="comment">
-<b class="germany">Douglas Moore</b>
-Showing the moves graphically as they are being read was a great addition!
-</p><p class="comment">
-<b>Jay Heumann</b>
-Completely agree! Very nice.
-</p><p class="comment">
-<b class="france">Nathan Barnes</b>
-Trying to fill in the gaps a little for viewers. Still like your idea of somehow getting everyone together for some sort of EOG interview.
-</p><p class="comment">
-<b class="russia">Andrew Goff</b>
-Diplomacy Cast conference call? Cisco must have a product ;)
-</p><p class="comment">
-<b class="germany">Douglas Moore</b>
-I was gonna say -- that would make an awesome Diplomacy Cast.
-</p><p class="comment">
-<b class="france">Nathan Barnes</b>
-Ok, I am into this. Gonna make it happen before Sept.
-</p><p class="comment">
-<b class="germany">Douglas Moore</b>
-Nathan Barnes: Count me in.
-</p><p class="comment">
-<b class="russia">Andrew Goff</b>
-I'll be in Vancouver for a few days after a work meet-up end of sept. We could just about do it in person.
-</p><p class="comment">
-<b class="germany">Douglas Moore</b>
-Andrew Goff It's possible to wrangle up 4/7. What are your dates? Maybe we can get a game together.
-</p><p class="comment">
-<b class="russia">Andrew Goff</b>
-Who's missing? Dave? Peter?
-</p><p class="comment">
-<b class="germany">Douglas Moore</b>
-Also Adam, who is in the Bay area (and not on Facebook).
-</p><p class="comment">
-<b class="russia">Andrew Goff</b>
-Maybe remote then to get everyone. Plus I hear there are things to do in vancouver? Like... drink craft beer? Grow a beard? IDK :/
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Andrew Goff: Vegan strip clubs, I'm told.
-</p><p class="comment">
-<b>Roland Cooke</b>
-Best episode yet, and one that I would definitely consider showing to a newbie. Thirty seconds explaining the core mechanics, then show this video which clearly demonstrates how the game is about building relationships, and re-building relationships, not so much about stabby-stabby all the time.
-</p></blockquote>
-</div>
-<div class="map" id="m5">
-<img class="map" src="images/wdc2016top10.gif" alt="Spring 1903">
-</div>
+<h3>WDC Recap Spring 1903</h3>
 <div class="comment" id="c5">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -730,57 +185,8 @@ The way I read the move was: you had just cut deals with Austria and England to 
 He wants to stop me from convoying.
 </p></blockquote>
 </div>
-<div class="map" id="p5">
-<img class="map" src="images/wdc2016top11.gif" alt="Summer 1903">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Fall 1903</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb6" onclick="toggleLayer('b6', this.checked)" checked>Blurb
-<input type="checkbox" id="rv6" onclick="toggleLayer('v6', this.checked)" checked>Video
-<input type="checkbox" id="rs6" onclick="toggleLayer('s6', this.checked)">Suggestions
-<input type="checkbox" id="rm6" onclick="toggleLayer('m6', this.checked)">Fall Map
-<input type="checkbox" id="rc6" onclick="toggleLayer('c6', this.checked)">Comments
-<input type="checkbox" id="rp6" onclick="toggleLayer('p6', this.checked)">Winter Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b6">
-In which <b class="germany">Doug Moore</b> tries to talk <b class="england">Adam Silverman</b> out of Denmark by invoking the curse of the puppet master and a first misadjudication happens in the Balkans.
-</div>
-<div class="video" id="v6">
-<iframe class="video" src="https://www.youtube.com/embed/Fp1p4VGZ0mY" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s6">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Steve Cooley</b>
-May as well say this: my wife has been listening. She says Chris could make a living doing this--he puts so much excitement into the game. And, she doesn't even know what Chris is talking about! <br>
-Great stuff, sir!
-</p><p class="comment">
-<b>Will Black</b>
-One feedback on dialogue, it is hard to read the cyan on white dialogue. Firstly Nathan, then Adam later.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Ok, I tried black text on the Cyan background in S03, and found that hard to read, but you're the second person to say so - I'll go back to black text for F/E
-</p><p class="comment">
-<b>Will Black</b>
-Dark background with white. So England could be dark blue with white. France could be dark cyan with white.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Ah, you're saying the _background_ should be darker for this to work. OK, will try.
-</p><p class="comment">
-<b>Roland Cooke</b>
-I loved the mini-interviews with Chris and Peter. A future match could maybe include one of those every season, pausing the clock if necessary. :)
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Yeah, I wanted to get more of those, but those guys were on the clock, so I didn't want to interfere!
-</p></blockquote>
-</div>
-<div class="map" id="m6">
-<img class="map" src="images/wdc2016top12.gif" alt="Fall 1903">
-</div>
+<h3>WDC Recap Fall 1903</h3>
 <div class="comment" id="c6">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -866,38 +272,8 @@ I think the only time I suggested we discuss it was when Douglas Moore mentioned
 Fair enough. It was definitely in the context of "well we can't get you Gre as we'd agreed, so...", but it's also entirely possible that I'm mis-remembering
 </p></blockquote>
 </div>
-<div class="map" id="p6">
-<img class="map" src="images/wdc2016top13.gif" alt="Winter 1903">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Spring 1904</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb7" onclick="toggleLayer('b7', this.checked)" checked>Blurb
-<input type="checkbox" id="rv7" onclick="toggleLayer('v7', this.checked)" checked>Video
-<input type="checkbox" id="rs7" onclick="toggleLayer('s7', this.checked)">Suggestions
-<input type="checkbox" id="rm7" onclick="toggleLayer('m7', this.checked)">Spring Map
-<input type="checkbox" id="rc7" onclick="toggleLayer('c7', this.checked)">Comments
-<input type="checkbox" id="rp7" onclick="toggleLayer('p7', this.checked)">Summer Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b7">
-In which <b class="austria">Peter Yeargin</b> plays the AIR card and <b class="france">Nathan Barnes</b> sells out <b class="england">Adam Silverman</b> over Holland.
-</div>
-<div class="video" id="v7">
-<iframe class="video" src="https://www.youtube.com/embed/0aZVumhLHMg" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s7">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Roland Cooke</b>
-Great stuff, thanks Chris!
-</p></blockquote>
-</div>
-<div class="map" id="m7">
-<img class="map" src="images/wdc2016top14.gif" alt="Spring 1904">
-</div>
+<h3>WDC Recap Spring 1904</h3>
 <div class="comment" id="c7">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -957,59 +333,8 @@ We're both realists; we were both direct and honest - but it wasn't exactly cham
 Likewise. :-) Next time, maybe we can kick some butt together and sort it out at the end, a la c-diplo.
 </p></blockquote>
 </div>
-<div class="map" id="p7">
-<img class="map" src="images/wdc2016top15.gif" alt="Summer 1904">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Fall 1904</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb8" onclick="toggleLayer('b8', this.checked)" checked>Blurb
-<input type="checkbox" id="rv8" onclick="toggleLayer('v8', this.checked)" checked>Video
-<input type="checkbox" id="rs8" onclick="toggleLayer('s8', this.checked)">Suggestions
-<input type="checkbox" id="rm8" onclick="toggleLayer('m8', this.checked)">Fall Map
-<input type="checkbox" id="rc8" onclick="toggleLayer('c8', this.checked)">Comments
-<input type="checkbox" id="rp8" onclick="toggleLayer('p8', this.checked)">Winter Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b8">
-In which what was planted in Spring gets reapt in Fall.
-</div>
-<div class="video" id="v8">
-<iframe class="video" src="https://www.youtube.com/embed/sVJ0ZOIoiWM" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s8">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Nicholas DeLateur</b>
-It's OK, you get one mulligan on uploading a late video each tournament.
-</p><p class="comment">
-<b>Bryan Pravel</b>
-Really enjoying these Chris.
-</p><p class="comment">
-<b>Roland Cooke</b>
-Chris Martin: You could do an Appendix to each season / year, where you sum up the thinking of each of the players, at the least repeat what is being documented "live" on FaceBook. :)
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Just wanted to drop by and say I brought some of the S05 videos with me to transcribe while on travel for work, and hoo boy theres some good stuff here. Aiming for saturday!
-</p><p class="comment">
-<b class="germany">Douglas Moore</b>
-Thanks again, for taking this on.
-</p><p class="comment">
-<b>Doug Massey</b>
-Chris -- do I still owe you F1902M or did someone else come through?
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-You do.
-</p><p class="comment">
-<b>Doug Massey</b>
-Life is all about follow-through, and I will.
-</p></blockquote>
-</div>
-<div class="map" id="m8">
-<img class="map" src="images/wdc2016top16.gif" alt="Fall 1904">
-</div>
+<h3>WDC Recap Fall 1904</h3>
 <div class="comment" id="c8">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -1149,89 +474,8 @@ I should note that my approach would be far less tolerated on a normal tournamen
 Yeah, put the same players in the same powers in round 1 of the tournament and it's very unlikely that the game would have developed the same way.
 </p></blockquote>
 </div>
-<div class="map" id="p8">
-<img class="map" src="images/wdc2016top17.gif" alt="Winter 1904">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Spring 1905</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb9" onclick="toggleLayer('b9', this.checked)" checked>Blurb
-<input type="checkbox" id="rv9" onclick="toggleLayer('v9', this.checked)" checked>Video
-<input type="checkbox" id="rs9" onclick="toggleLayer('s9', this.checked)">Suggestions
-<input type="checkbox" id="rm9" onclick="toggleLayer('m9', this.checked)">Spring Map
-<input type="checkbox" id="rc9" onclick="toggleLayer('c9', this.checked)">Comments
-<input type="checkbox" id="rp9" onclick="toggleLayer('p9', this.checked)">Summer Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b9">
-In which <b class="italy">Chris Brand</b> finally resolves to take up <b class="turkey">Dave Maletsky</b> on his offer, incidentally breaking the Black Sea deadlock.
-</div>
-<div class="video" id="v9">
-<iframe class="video" src="https://www.youtube.com/embed/_h3MYufR3Ps" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s9">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Jay Heumann</b>
-Ohhhh, the twist at the end. I love it.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-I originally had that at the top of the episode, but I thought - you know what? That belongs at the end.  :D
-</p><p class="comment">
-<b>Peter J McNamara</b>
-GREAT Video!
-</p><p class="comment">
-<b class="italy">Chris Brand</b>
-I have a minor suggestion. Given the importance of the timed end to this game, it would be nice if you could mention where we are relative to that clock (I can probably figure it out, but I don't know that everyone watching it would be able to). Timing is such a huge factor in this game...
-</p><p class="comment">
-<b class="france">Nathan Barnes</b>
-I think it gets really bad starting in 1907...? Maybe? There's only one or two more seasons that I can remember, after that it's kind of a blur.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Hmmm. I do have time stamps from the videos, but, I don't know exactly how I'd work that in, Chris
-</p><p class="comment">
-<b>Jay Heumann</b>
-I don't think you need time stamps--I just think you'd need to, at some point in the video, remark on how far away we are from the cutoff where the game could have been called at any point. If memory serves that started at either 1pm or 2pm...
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Ah, right, ok, I can definitely do that.
-</p><p class="comment">
-<b>Steve Cooley</b>
-You're like the Vin Scully of Dipcon.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Vin Diesel and Dana Scully had a child?
-</p><p class="comment">
-<b>Steve Cooley</b>
-Dude. That's just so sad. <br>
-Vin Scully? Really? Greatest announcer of all time. 67 seasons with the Dodgers, plus the awesome World Series call of Kirk Gibson's home run vs. Eckersley. <br>
-He's even been trending on FB! <br>
-Yes, you're that good.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Does he call Hockey games?
-</p><p class="comment">
-<b>Steve Cooley</b>
-If he did, the NHL would be worth 10X more than it is. He's the best. He is to baseball announcing what Astaire was to dancing, Obama is to reading a teleprompter, and Bill Clinton is to feeling everyone's pain. He is a master of his craft.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Now you know I'm just trolling you, right?  :D But, that being said - Basesball? The American Cricket?
-</p><p class="comment">
-<b>Steve Cooley</b>
-What's Cricket? Or, do you mean croquet?
-</p><p class="comment">
-<b>Jared Martin</b>
-Do you know when the clock was? You could have an annotation that says "<#> minutes to deadline"
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Interesting Idea - I have time stamps, and I could guess, but I don't _know_ how much negotiation was left. I also don't do them in the order they happened, fairly often. But highlighting that the game could end starting in 190X is definitely something I will do.
-</p></blockquote>
-</div>
-<div class="map" id="m9">
-<img class="map" src="images/wdc2016top18.gif" alt="Spring 1905">
-</div>
+<h3>WDC Recap Spring 1905</h3>
 <div class="comment" id="c9">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -1308,75 +552,8 @@ I thought that left Peter in a position to take 4 of my centres, one or two of C
 So my thinking was heading toward a showdown over War/Mos/Mun/Rom/Ven/Bel/Hol/Lon. No spoilers :)
 </p></blockquote>
 </div>
-<div class="map" id="p9">
-<img class="map" src="images/wdc2016top19.gif" alt="Summer 1905">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Fall 1905</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb10" onclick="toggleLayer('b10', this.checked)" checked>Blurb
-<input type="checkbox" id="rv10" onclick="toggleLayer('v10', this.checked)" checked>Video
-<input type="checkbox" id="rs10" onclick="toggleLayer('s10', this.checked)">Suggestions
-<input type="checkbox" id="rm10" onclick="toggleLayer('m10', this.checked)">Fall Map
-<input type="checkbox" id="rc10" onclick="toggleLayer('c10', this.checked)">Comments
-<input type="checkbox" id="rp10" onclick="toggleLayer('p10', this.checked)">Winter Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b10">
-In which <b class="france">Nathan Barnes</b> reaches super power status.
-</div>
-<div class="video" id="v10">
-<iframe class="video" src="https://www.youtube.com/embed/rmWbC9jruBE" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s10">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Jay Heumann</b>
-So many things to say about this, but I'll just stick with this one: you know Diplomacy is a great game because the analysis video takes roughly twice as long as the actual turn and still doesn't feel long.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-I worried about this going too long, glad to hear you enjoyed it!
-</p><p class="comment">
-<b class="master">Jim O'Kelley</b>
-Agreed. I was surprised when the 26 minutes were up. Nearly flawless reporting. My only criticism, and it's minor--a nitpick, really--is that you didn't mention the tournament director by name at 8:49.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Who was the tournament director again?  :D
-</p><p class="comment">
-<b class="germany">Douglas Moore</b>
-<b>Chuck Spiekerman</b>
-Not that I don't know what happened, but what would happen if two (or more) powers ended up tied in centers after time called?
-</p><p class="comment">
-<b>Jay Heumann</b>
-That was covered in the Paris Method video that Chris put up before any of the turn videos. Tiebreaker is whoever picked their country latest in the order.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Warning! Gives away the final result in the <a href="https://www.youtube.com/watch?v=zPlUuvIV7ws">first 30 seconds</a>!
-</p><p class="comment">
-<b>Joseph Wheeler</b>
-Chris Martin: Perhaps a spoiler alert before that link?
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Joseph Wheeler: Oh, damn, I haven't watched it since I recorded it.
-</p><p class="comment">
-<b>Will Black</b>
-Best video in the series yet !
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Any feedback on what ought to be included in the last few would be greatly appreciated. I _almost_ cut Dave's tactical planning and the analysis of the plan in the Balkans, but I thought it was worth the time. I always have more footage than I use!
-</p><p class="comment">
-<b>Jay Heumann</b>
-I'm glad you didn't cut that. We got very little of Dave in the last few videos before this when he was just sitting in his position not doing much, so it's good to include him now.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Cool, that was my thinking. He definitely had a tough game.
-</p></blockquote>
-</div>
-<div class="map" id="m10">
-<img class="map" src="images/wdc2016top20.gif" alt="Fall 1905">
-</div>
+<h3>WDC Recap Fall 1905</h3>
 <div class="comment" id="c10">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -1451,83 +628,8 @@ I haven't watched the video yet, but I do remember that turn fairly well :-/ It 
 Wow. That was a huge turn. I did enjoy Andrew's "I want to shout at Chris for a moment". And yes, this is where I started to actually talk more rather than mostly listening, because rather than just picking which of other people's plans suit me best, I'm instead pushing them to accept (and support) my worldview. You do see some of the time aspect here, too. It was really difficult to keep track of time out in the hallway where most of negotiations were happening.
 </p></blockquote>
 </div>
-<div class="map" id="p10">
-<img class="map" src="images/wdc2016top21.gif" alt="Winter 1905">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Spring 1906</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb11" onclick="toggleLayer('b11', this.checked)" checked>Blurb
-<input type="checkbox" id="rv11" onclick="toggleLayer('v11', this.checked)" checked>Video
-<input type="checkbox" id="rs11" onclick="toggleLayer('s11', this.checked)">Suggestions
-<input type="checkbox" id="rm11" onclick="toggleLayer('m11', this.checked)">Spring Map
-<input type="checkbox" id="rc11" onclick="toggleLayer('c11', this.checked)">Comments
-<input type="checkbox" id="rp11" onclick="toggleLayer('p11', this.checked)">Summer Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b11">
-In which tactics take the upperhand over strategy in the player negotiations.
-</div>
-<div class="video" id="v11">
-<iframe class="video" src="https://www.youtube.com/embed/Gl9AuGvTGew" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s11">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Chris Barfield</b>
-Chris, the videos are awesome; thanks so much for putting in the time to put these together! More videos with those who are attending Tempest so I can analyze the players' tells, please.
-</p><p class="comment">
-<b class="master">Jim O'Kelley</b>
-Now we're talking!
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-You're welcome. :)
-</p><p class="comment">
-<b>Bryan Pravel</b>
-The mid-game is my favorite phase of most Diplomacy games. Balancing the tightrope of helping others while still giving yourself chances becomes *so* difficult. This is where understanding the motivations of other players becomes so important. I think the video captures all of this quite well. Thanks Chris!
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Fall 1906 rendering now!
-</p><p class="comment">
-<b>Doug Massey</b>
-Am I wrong to think that the Facebook commentary on the game should somehow be saved with the YouTube videos? This feels like it's becoming one of the more important events in recent Diplomacy history . . .
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-The Diplomatic Pouch wants to do a feature on this, so yeah, I think collecting all of this commentary into some sort of narrative form would be an important part of this!
-</p><p class="comment">
-<b>Doug Massey</b>
-You've done a terrific job, Chris. I have to ask, though: does your voice *really* sound like that in real life?
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Ugh. J suggests I get a better microphone ASAP.
-</p><p class="comment">
-<b>Doug Massey</b>
-<img src="http://i3.kym-cdn.com/photos/images/facebook/000/039/078/1257.jpg">
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-<img src="https://www.facebook.com/photo.php?fbid=10153977448951464&set=p.10153977448951464&type=3">
-</p><p class="comment">
-<b>Doug Massey</b>
-Image of a "Like" button. You exist on a meta-level that I cannot comprehend.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Hehehehehe. You need to get on my level!
-</p><p class="comment">
-<b>Alex Amann</b>
-<img src="https://www.facebook.com/photo.php?fbid=10100569894738269&set=p.10100569894738269&type=3">
-</p><p class="comment">
-<b>Mario Huys</b>
-Correction, the Diplomatic Pouch would like to do so. Diplomacy World isn't into multimedia projects AFAIK (preferring a printable magazine), whereas we've been including videos in almost every issue for the past year.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Fixed!
-</p></blockquote>
-</div>
-<div class="map" id="m11">
-<img class="map" src="images/wdc2016top22.gif" alt="Spring 1906">
-</div>
+<h3>WDC Recap Spring 1906 Recap</h3>
 <div class="comment" id="c11">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -1569,120 +671,8 @@ I don't know as barging into a conversation between AIR is awkward so much as a 
 Oh, yes. Not awkward for YOU.  :)
 </p></blockquote>
 </div>
-<div class="map" id="p11">
-<img class="map" src="images/wdc2016top23.gif" alt="Summer 1906">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Fall 1906</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb12" onclick="toggleLayer('b12', this.checked)" checked>Blurb
-<input type="checkbox" id="rv12" onclick="toggleLayer('v12', this.checked)" checked>Video
-<input type="checkbox" id="rs12" onclick="toggleLayer('s12', this.checked)">Suggestions
-<input type="checkbox" id="rm12" onclick="toggleLayer('m12', this.checked)">Fall Map
-<input type="checkbox" id="rc12" onclick="toggleLayer('c12', this.checked)">Comments
-<input type="checkbox" id="rp12" onclick="toggleLayer('p12', this.checked)">Winter Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b12">
-In which the AIR is back on to stop <b class="france">Nathan Barnes</b>.
-</div>
-<div class="video" id="v12">
-<iframe class="video" src="https://www.youtube.com/embed/WiehMBwI0p8" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s12">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Jared Martin</b>
-Chris Martin: Is Peter on the Facebooks?
-</p><p class="comment">
-<b class="italy">Chris Brand</b>
-Peter Yeargin is.
-</p><p class="comment">
-<b>Markus Zijlstra</b>
-Thanks again for making these, Chris. Fascinating to watch.
-</p><p class="comment">
-<b>Laurence Peery</b>
-Does anybody have an idea of how long it will take to watch all of these so far? I'm thinking seriously about having a marathon session to watch them all at once. If I can do it with 54, 45 min Korean historical dramas I can sure do it for something important like this? Chris, any predictions on how long the whole series will run?
-</p><p class="comment">
-<b>John Jamieson</b>
-#NoSpoilersPleaseWeAreBritish
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-I guarantee the series will not run past 1909. <br>
-I'm going to try to put together a master edit, that could be shown at a film festival, maybe, once they are all in the bag.
-</p><p class="comment">
-<b>John Jamieson</b>
-#GoingToSundance?
-</p><p class="comment">
-<b>Markus Zijlstra</b>
-All the ones released so far amount to about 4h20
-</p><p class="comment">
-<b>Chris Barfield</b>
-Each is around 30 min, so a bit less than 6 hours.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Early ones a bit shorter, and I really really try to keep them under 20 minutes.
-</p><p class="comment">
-<b>Chris Barfield</b>
-Probably the only weak point of the series so far...
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Chris Barfield: What is?
-</p><p class="comment">
-<b>Chris Barfield</b>
-They're too short - take a look at what the NFL is doing with instant replay and ads, we could easily stretch each season to an hour!
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-My initial thought was that no one would watch them if they were longer than 15 minutes. You know I don't have a problem with talking more.  :D I could definitely see Siobhan and I doing a Video Podcast where we broke things down in greater detail.
-</p><p class="comment">
-<b>Siobhan Nolen</b>
-Chris Martin: That sounds like fun! I'm game if you are!
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Siobhan Nolen: Lets talk ... Soon! #ImposibleAstronaut
-</p><p class="comment">
-<b>Siobhan Nolen</b>
-Chris Martin: Yes! It just so happens I might be in your hood soon. :)
-</p><p class="comment">
-<b>Jared Martin</b>
-I'd love to see that Chris and Siobhan. I should do some Diplomacy commentary with Jay Heumann, either remotely or if we ever happen to be in the same city again
-</p><p class="comment">
-<b>Chris Barfield</b>
-*Doug and me... unless of course you guys have different grammar down south.
-</p><p class="comment">
-<b class="russia">Andrew Goff</b>
-Depends on whether the subject is cut off as [interesting discussions] or the full [[interesting discussions between Doug and I]. I'd probably argue it's a compound subject... but I'd probably argue more strongly that it doesn't matter. ;)
-</p><p class="comment">
-<b>Jared Martin</b>
-It's Yoda-speak anyway. "Missed are interesting discussions" vs "interesting discussions are missed". Anyway, relevant XKCD: <a href="http://xkcd.com/1735/">Fashion Police and Grammar Police</a>.
-</p><p class="comment">
-<b>Chris Barfield</b>
-Well played, I'll go back to to trolling my less competent friends.
-</p><p class="comment">
-<b>Jared Martin</b>
-Chris Barfield: Trolling competent friends are the most fun, you don't get witty comebacks otherwise. Similarly, the only reason it's fun (for me anyway) to comment on Andrew and Peter's play like I did this turn is because I respect them and am interested in their response. Wouldn't bother to take the time or think about the board if they were bad at the game.
-</p><p class="comment">
-<b class="russia">Andrew Goff</b>
-Shucks. FWIW I think you're offering some fine thoughts, Jared. And Chris... I'd stop and listen to what you're saying any day - it's been way too long!
-</p><p class="comment">
-<b>Jared Martin</b>
-Andrew Goff: I felt obligated to make that clear because otherwise it's just a nonstop flurry of criticism from a guy who's never been on a top board
-</p><p class="comment">
-<b>Jay Heumann</b>
-One small point--Ruh supported Tyr-Mun, not Mun-Kie. (You said it wrong but looks like you got it right in the interface.) Either that, or all 7 players missed that there should be a French army in Kie but not Mun.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Yeah, that was my bad on the narration - caught it later but too much trouble to go back and fix. We'll get it in Post!
-</p><p class="comment">
-<b>Jay Heumann</b>
-Haha, I hope "we'll get it in post" is a reference to what I think it is...
-</p></blockquote>
-</div>
-<div class="map" id="m12">
-<img class="map" src="images/wdc2016top24.gif" alt="Fall 1906">
-</div>
+<h3>WDC Recap Fall 1906 Recap</h3>
 <div class="comment" id="c12">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -1868,30 +858,8 @@ I was going to ask you in the other comment thread if he was expecting Sil S Ber
 Yes, I was expecting Sil s Ber-Mun, and not expecting support for Adam into Den. I wanted to take a crack at what was a pretty chaotic situation to get back into the mix, and it would also have helped Andrew Goff as well.
 </p></blockquote>
 </div>
-<div class="map" id="p12">
-<img class="map" src="images/wdc2016top25.gif" alt="Winter 1906">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Spring 1907</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb13" onclick="toggleLayer('b13', this.checked)" checked>Blurb
-<input type="checkbox" id="rv13" onclick="toggleLayer('v13', this.checked)" checked>Video
-<input type="checkbox" id="rm13" onclick="toggleLayer('m13', this.checked)">Spring Map
-<input type="checkbox" id="rc13" onclick="toggleLayer('c13', this.checked)">Comments
-<input type="checkbox" id="rp13" onclick="toggleLayer('p13', this.checked)">Summer Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b13">
-In which the clock surprises a lot of people.
-</div>
-<div class="video" id="v13">
-<iframe class="video" src="https://www.youtube.com/embed/H9-8hMdf8BY" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="map" id="m13">
-<img class="map" src="images/wdc2016top26.gif" alt="Spring 1907">
-</div>
+<h3>WDC Recap Spring 1907</h3>
 <div class="comment" id="c13">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -1977,50 +945,8 @@ No spoilers. But at the end of S1907 I was not on board with it. Why? Because th
 Also, remember my theory: 8 or 9 centres is plenty: 5+Ank+Ber+StP... Austria on 6; Italy on 7; France on 7; England on 6. That's my narrow path as I see it at this point.
 </p></blockquote>
 </div>
-<div class="map" id="p13">
-<img class="map" src="images/wdc2016top27.gif" alt="Summer 1907">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Fall 1907</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb14" onclick="toggleLayer('b14', this.checked)" checked>Blurb
-<input type="checkbox" id="rv14" onclick="toggleLayer('v14', this.checked)" checked>Video
-<input type="checkbox" id="rs14" onclick="toggleLayer('s14', this.checked)">Suggestions
-<input type="checkbox" id="rm14" onclick="toggleLayer('m14', this.checked)">Fall Map
-<input type="checkbox" id="rc14" onclick="toggleLayer('c14', this.checked)">Comments
-<input type="checkbox" id="rp14" onclick="toggleLayer('p14', this.checked)">Winter Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b14">
-In which <b class="turkey">Dave Maletsky</b> is the first to pack his bags.
-</div>
-<div class="video" id="v14">
-<iframe class="video" src="https://www.youtube.com/embed/BYw0qNXPAyw" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s14">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Jared Martin</b>
-Good video, though Austria + Bul / Rum / Gre is 6, Austria + all Balkans is 7 (you said in video it's 7 & 8, respectively)
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Good catch, thanks.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-A lot less conversation about this episode. On to 1908!
-</p><p class="comment">
-<b>Jared Martin</b>
-I forgot to mention, I really appreciate you including Winter in the fall turn this time, even though it was super straightforward.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Sure - I happened to record it this time.  :)
-</p></blockquote>
-</div>
-<div class="map" id="m14">
-<img class="map" src="images/wdc2016top28.gif" alt="Fall 1907">
-</div>
+<h3>WDC Recap Fall 1907</h3>
 <div class="comment" id="c14">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -2090,62 +1016,8 @@ What you needed to do was shortsightedly take the easy dots from Adam so I could
 Spoilers!!!
 </p></blockquote>
 </div>
-<div class="map" id="p14">
-<img class="map" src="images/wdc2016top29.gif" alt="Winter 1907">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Spring 1908</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb15" onclick="toggleLayer('b15', this.checked)" checked>Blurb
-<input type="checkbox" id="rv15" onclick="toggleLayer('v15', this.checked)" checked>Video
-<input type="checkbox" id="rs15" onclick="toggleLayer('s15', this.checked)">Suggestions
-<input type="checkbox" id="rm15" onclick="toggleLayer('m15', this.checked)">Spring Map
-<input type="checkbox" id="rc15" onclick="toggleLayer('c15', this.checked)">Comments
-<input type="checkbox" id="rp15" onclick="toggleLayer('p15', this.checked)">Summer Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b15">
-In which <b class="france">Nathan Barnes</b> threatens to throw the game to <b class="italy">Chris Brand</b> if <b class="england">Adam Silverman</b> doesn't back off.
-</div>
-<div class="video" id="v15">
-<iframe class="video" src="https://www.youtube.com/embed/FJ6s7G12yFs" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s15">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Will J Abbott</b>
-Seems an appropriate year.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-I timed it that way on purpose.
-</p><p class="comment">
-<b>Kevin O'Kelly</b>
-Off by a season, but i like your thought process. #GoCubsGo
-</p><p class="comment">
-<b>Steve Cooley</b>
-Great commentary. You edited that turn very, very well. I was getting antsy just watching.
-</p><p class="comment">
-<b class="russia">Andrew Goff</b>
-This game might not be finished before Fall 1908 is up.
-</p><p class="comment">
-<b class="master">Jim O'Kelley</b>
-Best captioning yet.
-</p><p class="comment">
-<b class="russia">Andrew Goff</b>
-In the movie, that's the Hitchcock walk on :)
-</p><p class="comment">
-<b>Chuck Spiekerman</b>
-Bump! Do we get to see the end of the story?
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Soon. Been busy.
-</p></blockquote>
-</div>
-<div class="map" id="m15">
-<img class="map" src="images/wdc2016top30.gif" alt="Spring 1908">
-</div>
+<h3>WDC Recap Spring 1908</h3>
 <div class="comment" id="c15">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -2206,85 +1078,8 @@ I really think Adam's price for backing off needed to be something like Hol / Ki
 Instead, Adam simply went away.
 </p></blockquote>
 </div>
-<div class="map" id="p15">
-<img class="map" src="images/wdc2016top31.gif" alt="Summer 1908">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Fall 1908</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb16" onclick="toggleLayer('b16', this.checked)" checked>Blurb
-<input type="checkbox" id="rv16" onclick="toggleLayer('v16', this.checked)" checked>Video
-<input type="checkbox" id="rs16" onclick="toggleLayer('s16', this.checked)">Suggestions
-<input type="checkbox" id="rm16" onclick="toggleLayer('m16', this.checked)">Fall Map
-<input type="checkbox" id="rc16" onclick="toggleLayer('c16', this.checked)">Comments
-<input type="checkbox" id="rp16" onclick="toggleLayer('p16', this.checked)">Winter Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b16">
-In which <b class="france">Nathan Barnes</b> feigns anger towards <b class="england">Adam Silverman</b>, but gets held up for an interview when he should have been writing his orders.
-</div>
-<div class="video" id="v16">
-<iframe class="video" src="https://www.youtube.com/embed/ttRc2HjZH6E" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s16">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b class="master">Chris Martin</b>
-Seeing people from all over the world watch these is pretty awesome.
-<img src="https://www.facebook.com/photo.php?fbid=10154141568346464&set=p.10154141568346464&type=3">
-</p><p class="comment">
-<b>Doug Massey</b>
-I assume most of the highlighted views are Conrad Woodring.
-</p><p class="comment">
-<b>Conrad Woodring</b>
-Huh? I wasn't there.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-Those views being the ones from the bottom half of the global list - you rascally world traveler you.
-</p><p class="comment">
-<b>Conrad Woodring</b>
-Ah. I see. I am grounded in the UK waiting for my new visa at the moment, but I'll give you a view from Sierra Leone next time I am there.
-</p><p class="comment">
-<b>Joseph Wheeler</b>
-You're really not very popular with the Irish.
-</p><p class="comment">
-<b class="master">Chris Martin</b>
-I'm liked, but not well-liked.
-</p><p class="comment">
-<b>Bernard Andrioli</b>
-Also, more popular in Ethiopia than in France. 🤔
-</p><p class="comment">
-<b>Joseph Wheeler</b>
-And surprisingly popular in Jersey
-</p><p class="comment">
-<b>Chris Barfield</b>
-Bernard, we have a big online Diplomacy following in Ethiopia, when the internet isn't blocked...
-</p><p class="comment">
-<b>Markus Zijlstra</b>
-Fantastic episode - great to see these being made again :)
-</p><p class="comment">
-<b>Siobhan Nolen</b>
-Andrew Goff: This might be the card you were looking for.
-<img src="https://www.facebook.com/photo.php?fbid=10100876570363023&set=p.10100876570363023&type=3">
-</p><p class="comment">
-<b class="russia">Andrew Goff</b>
-At least I [spoiler alert] with all the blood from the [spoiler alert] and dismembered bodies.
-</p><p class="comment">
-<b class="france">Nathan Barnes</b>
-You know the Cards Against Humanity people don't play Diplomacy when they write 6 instead of 16.
-</p><p class="comment">
-<b>Siobhan Nolen</b>
-It's from Wil Wheaton's Tabletop expansion. I reckon it's about all he could take. Rumor has it he is not a fan.
-</p><p class="comment">
-<b class="france">Nathan Barnes</b>
-You can only sorta <a href="https://youtu.be/lMLP0gn4I6k?t=18s">tell</a>...
-</p></blockquote>
-</div>
-<div class="map" id="m16">
-<img class="map" src="images/wdc2016top32.gif" alt="Fall 1908">
-</div>
+<h3>WDC Recap Fall 1908</h3>
 <div class="comment" id="c16">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -2391,116 +1186,8 @@ I guess that's true, Andrew. But even the biggest blackest tiara is a little dis
 I would love to know why Nathan supported Chris into Vienna vs tapping Trieste. Is this shown in the next episode? I can't wait - the drama is killing me!
 </p></blockquote>
 </div>
-<div class="map" id="p16">
-<img class="map" src="images/wdc2016top33.gif" alt="Winter 1908">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Spring 1909</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb17" onclick="toggleLayer('b17', this.checked)" checked>Blurb
-<input type="checkbox" id="rv17" onclick="toggleLayer('v17', this.checked)" checked>Video
-<input type="checkbox" id="rm17" onclick="toggleLayer('m17', this.checked)">Spring Map
-<input type="checkbox" id="rp17" onclick="toggleLayer('p17', this.checked)">Summer Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b17">
-In which technical problems temporarily obstruct recording, while the players continue off-screen, leaving us with nothing but the recorded orders for the next three seasons.
-</div>
-<div class="video" id="v17">
-<img class="video" src="../../Common/no-video.jpg" alt="No Video">
-</div>
-<div class="map" id="m17">
-<img class="map" src="images/wdc2016top34.gif" alt="Spring 1909">
-</div>
-<div class="map" id="p17">
-<img class="map" src="images/wdc2016top35.gif" alt="Summer 1909">
-</div>
-
-<table width="100%"><tr><td>
-<h3>Fall 1909</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb18" onclick="toggleLayer('b18', this.checked)" checked>Blurb
-<input type="checkbox" id="rv18" onclick="toggleLayer('v18', this.checked)" checked>Video
-<input type="checkbox" id="rm18" onclick="toggleLayer('m18', this.checked)">Fall Map
-<input type="checkbox" id="rp18" onclick="toggleLayer('p18', this.checked)">Winter Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b18">
-In which <b class="austria">Peter Yeargin</b> finds an ally in <b class="france">Nathan Barnes</b>, but misses a chance to whack <b class="russia">Andrew Goff</b> out of Moscow.
-</div>
-<div class="video" id="v18">
-<img class="video" src="../../Common/no-video.jpg" alt="No Video">
-</div>
-<div class="map" id="m18">
-<img class="map" src="images/wdc2016top36.gif" alt="Fall 1909">
-</div>
-<div class="map" id="p18">
-<img class="map" src="images/wdc2016top37.gif" alt="Winter 1909">
-</div>
-
-<table width="100%"><tr><td>
-<h3>Spring 1910</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb19" onclick="toggleLayer('b19', this.checked)" checked>Blurb
-<input type="checkbox" id="rv19" onclick="toggleLayer('v19', this.checked)" checked>Video
-<input type="checkbox" id="rm19" onclick="toggleLayer('m19', this.checked)">Spring Map
-<input type="checkbox" id="rp19" onclick="toggleLayer('p19', this.checked)">Summer Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b19">
-In which <b class="england">Adam Silverman</b>, still off-screen, messes up his convoy to Denmark by bouncing with his Swedish fleet.
-</div>
-<div class="video" id="v19">
-<img class="video" src="../../Common/no-video.jpg" alt="No Video">
-</div>
-<div class="map" id="m19">
-<img class="map" src="images/wdc2016top38.gif" alt="Spring 1910">
-</div>
-<div class="map" id="p19">
-<img class="map" src="images/wdc2016top39.gif" alt="Summer 1910">
-</div>
-
-<table width="100%"><tr><td>
-<h3>Fall 1910</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb20" onclick="toggleLayer('b20', this.checked)" checked>Blurb
-<input type="checkbox" id="rv20" onclick="toggleLayer('v20', this.checked)" checked>Video
-<input type="checkbox" id="rs20" onclick="toggleLayer('s20', this.checked)">Suggestions
-<input type="checkbox" id="rm20" onclick="toggleLayer('m20', this.checked)">Fall Map
-<input type="checkbox" id="rc20" onclick="toggleLayer('c20', this.checked)">Comments
-<input type="checkbox" id="rp20" onclick="toggleLayer('p20', this.checked)">Winter Map
-</div>
-</td></tr></table>
-<div class="blurb" id="b20">
-In which the video starts again, just in time to see <b class="germany">Doug Moore</b> and <b class="austria">Peter Yeargin</b> bow out, while <b class="italy">Chris Brand</b> braces himself to maintain his lead until Kingdom comes.
-</div>
-<div class="video" id="v20">
-<iframe class="video" src="https://www.youtube.com/embed/MMucjk4ljaE" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s20">
-<p><b><i>Suggestions</i></b></p>
-<blockquote><p class="comment">
-<b>Siobhan Nolen</b>
-I mean...I like that its been posted. But my ire is real. :P
-</p><p class="comment">
-<b>Mario Huys</b>
-Does anyone happen to know the moves for the missing three seasons? It looks like even Chris would have problems recalling them if they're not on film. This is for the Zine article update.
-</p><p class="comment">
-<b class="italy">Chris Brand</b>
-Somebody was entering them into some system live - Matt Shields or Eric Mead, perhaps ?
-</p><p class="comment">
-<b class="italy">Chris Brand</b>
-Apparently L'australien Peter McNamara has those missing moves (as does Chris Martin now)
-</p></blockquote>
-</div>
-<div class="map" id="m20">
-<img class="map" src="images/wdc2016top40.gif" alt="Fall 1910">
-</div>
+<h3>WDC Recap Fall 1910 Final</h3>
 <div class="comment" id="c20">
 <p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
@@ -2514,56 +1201,8 @@ The key factor is that we didn't know the game was ending at this point (in fact
 Oh, sure... that's something Chris didn't mention, was how early you were in the window. Anyway GG!
 </p></blockquote>
 </div>
-<div class="map" id="p20">
-<img class="map" src="images/wdc2016top41.gif" alt="Winter 1910">
-</div>
 
-<table width="100%"><tr><td>
-<h3>Wrap-up</h3>
-</td><td align="right">
-<div class="check" align="right">
-<input type="checkbox" id="rb21" onclick="toggleLayer('b21', this.checked)" checked>Blurb
-<input type="checkbox" id="rv21" onclick="toggleLayer('v21', this.checked)" checked>Video
-<input type="checkbox" id="rs21" onclick="toggleLayer('s21', this.checked)">Suggestions
-</div>
-</td></tr></table>
-<div class="blurb" id="b21">
-In which all the players with the exception of <b class="turkey">Dave Maletsky</b> sit together during the <b>Diplomacy</b> tournament <b>Whipping 2017</b> in San Jose, to discuss the key points in the game and drink a refreshing glass of wine.
-</div>
-<div class="video" id="v21">
-<iframe class="video" src="https://www.youtube.com/embed/WUDUDJMue40" width="560" height="315" allowfullscreen></iframe>
-</div>
-<div class="comment" id="s21">
-<p><b><i>Suggestions</i></b></p>
+<h3>AAR7: Chris Brand, World Champion</h3>
+<div class="comment" id="c21">
+<p><b><i>Comments</i></b></p>
 <blockquote><p class="comment">
-<b class="italy">Chris Brand</b>
-I haven't watched it yet, but I like the title!
-</p><p class="comment">
-<b>Don Del Grande</b>
-I know I'm bringing my video camera to Oxford.
-</p></blockquote>
-</div>
-
-<p>
-That's it. Hope you enjoyed it and hope for more this year or the next.
-</p>
-
-<br/><br/>
-<table><tbody><tr valign=bottom><td>
-<a href="mailto:dance.scholar@gmail.com"><img src="../../Common/letter.gif" border=0></a>
-</td><td>
-<strong>Chris Martin<br/>(<a href="mailto:dance.scholar@gmail.com">dance.scholar@gmail.com</a>)</strong>
-</td></tr></tbody></table>
-<!-- <p>
-<i>If you wish to e-mail feedback on this article to the author, and clicking 
-on the envelope above does not work for you, feel free to use the 
-<a href="../Common/DearDP.html">"<b>Dear DP...</b>"</a> mail interface.</i> -->
-</td></tr></table>
-<p>
-<hr align="center" width=100% size="-1" color="gray">
-
-<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0"></a>
-<a href="../"><img src="../toIssue.gif" align="right" border="0"></a>
-
-</body></html>
-
