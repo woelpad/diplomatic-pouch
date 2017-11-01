@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> DP F2017M: Zero Sum Games </title>
+		<meta charset="utf-8"/> 
+		<!-- Point to whereever this stylesheet will exist-->
+		<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+		<style type="text/css">
+			/*
+			 * Insert styles for the content_body here
+			 */
+			 .content_body {
+			 	max-width: 2000px
+			 }
+		</style>
+	</head>
+	<body>
+		<div class="req_link_container">
+			<div class="req_link left_link">
+				<a href="../..">
+					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+			<div class="req_link right_link">
+				<a href="..">
+					<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+			<hr class="hr_rule top_hr">
+		</div>
+		<div class="centered">
+			<!-- Insert Author Name -->
+			<h1>ON PROGRESSING FROM A SIMPLE ZERO-SUM GAME TO A CLASSIC VICTORY TO THE GREATEST FACE-TO-FACE DIPLOMACY GAME EVER PLAYED</h1>
+			<h2>by Larry Peery</h2>
+			<hr class="hr_rule">
+		</div>
+		<div class="content_body justified padded_body">
+		<!-- Content Body -->
+			<h3>INTRODUCTION</h3>
+			<p>
+				From a simple thing like game theory to defining just what a “classic victory” in Diplomacy is to a great, but little known, moment in hobby history might seem a bit of a reach but it just might make you raise your own personal performance bar in your next Diplomacy game. 
+			</p>
+
+			<h3>1) A SIMPLETON LOOKS AT A NOT-SO-SIMPLE SUBJECT</h3>
+			<p>
+				Back in the late 1960s and early 1970s when I was becoming more and more interested in serious war games and simulations I spent a lot of time trying to figure out what a war “game” and a war “simulation” were.  The two terms seemed to be fairly interchangeable and their use often depended on the writer’s personal preferences as much as anything else. After a lot of reading I finally bit the bullet and went up to RAND in Santa Monica where I spent several days with Garry Brewer and some of his gaming co-workers in the social sciences department and sought out their views on the topic.  I discovered I wasn’t the only one struggling to deal with the rapidly changing vocabulary of games and simulations.  Time passed.
+			</p>
+			<p>
+				Today Dr. Brewer is a Professor Emeritus at the Yale School of Management and when I contacted him he actually remembered our long ago common interest in games and simulations.  I told him I had a new question and he started laughing.  I’ll tell you why he was laughing later. I asked him if he could define zero-sum games and non-zero-sum games in simple terms.  He tried. He really did.  And I tried really hard to understand what he was saying. I really did.  Basically what I took away from what he said was “zero-sum games and non-zero-sum games” are like “games and simulations” or any professional’s lingo --- much more complicated than they need to be.  On that hopeful note I turned to my two favorite back-up sources: Cortina and Wiki; and naturally Cortina took me right to wiki.  
+			</p>
+
+			<h4><strong>Zero-sum game</strong></h4>
+			<p>
+				In game theory a zero-sum game is a mathematical representation of a situation in which each player’s gain or loss of supply centers is exactly balanced by the losses or gains of the supply centers of the other players. If the total gains of the players are added up and the total losses are subtracted, they will sum to zero. Thus, dividing up a Diplomacy board, where taking a larger share of the supply centers reduces the amount of the board available for others, is a zero-sum game if all participants value each unit equally.
+			</p>
+			<p>
+				In contrast, non-zero-sum describes a situation in which the players’ aggregate gains and losses can be less than or more than zero, as during the open turns of a Diplomacy game. A zero-sum game is also called a strictly competitive game while non-zero-sum games can be either competitive or non-competitive. 
+			</p>
+			<p>
+				In psychology, which plays an important role in Diplomacy, zero-sum thinking refers to the perception that a situation is like a zero-sum game, where one person’s gain is another’s loss.
+			</p>
+			<p>
+				Adapted from Wikipedia, the free encyclopedia
+			</p>
+
+			<h4>Non-zero-sum game</h4>
+			<p>
+				The theory of zero-sum games is vastly different from that of non-zero-sum games because an optimal solution can always be found. However, this hardly represents the conflicts faced in the everyday world. Problems in the real world do not usually have straightforward results. The branch of Game Theory that better represents the dynamics of the world we live in is called the theory of non-zero-sum games. Non-zero-sum games differ from zero-sum games in that there is no universally accepted solution. That is, there is no single optimal strategy that is preferable to all others, nor is there a predictable outcome. Non-zero-sum games are also non-strictly competitive, as opposed to the completely competitive zero-sum games, because such games generally have both competitive and cooperative elements. Players engaged in a non-zero sum conflict have some complementary interests and some interests that are completely opposed.
+			</p>
+			<p>
+				From Stanford University
+			</p>
+
+			<h4>On Diplomacy</h4>
+			<p>
+				A zero-sum game, in any context, is one where the players can only win by taking from other players. An election is a simple example: I can only win if my opponent loses.  The same goes for a chess match or a football game.
+			</p>
+			<p>
+				<u>Multi-player zero-sum games are not so trivial.  Think of an election with multiple candidates, or a board game like Diplomacy.  Again there can only be one winner, but now some subset of the players can cooperate (doing things which are positive-sum for them).  </u>
+			</p>
+			<p>
+				A huge mistake people make is seeing zero-sum games everywhere, even where they do not exist.  For instance, a nominating contest is not zero-sum, if the payout is only to the winner of the later election.  This is why politicians tend to attack those within their own party less harshly. 
+			</p>
+			<p>
+				The worst mistake is to think of the economy as zero-sum.  It is the opposite:  every voluntary transaction is an exchange benefiting both the buyer (who got what he wanted at a price he was willing to pay) and the seller.
+			</p>
+			<p>
+				From Quora
+			</p>
+			<p>
+				<a href="https://www.quora.com/profile/Tom-Hyer-1">Tom Hyer</a>, B.A. in Mathematics, Rice University <br>
+				<a href="https://www.quora.com/What-is-zero-sum-game-in-politics/answer/Tom-Hyer-1">Answered Jan 15, 2016</a>
+			</p>
+
+			<p>
+				So much for zero-sum and non-zero sum game theory, but what of the real world?  Old time Dippers or amateur historians may remember, if they think back to the fall of 1962, that while the world’s attention was focused on events in Cuba and the Cuban Missile Crisis (15 October to 28 October) China had launched an attack on India in the Himalayas on 20 October that began a War that lasted one month and one day (until 1 November). What we know now that we didn’t know then was that China was fully aware of what was going on in Cuba and decided to take advantage of that distraction to deal with a particularly irritating neighbor, India.  I mention this because something very similar is going on right now in Korea, where the US is distracted by events there, and India, where the Chinese and their old nemesis India have once again gone from name-calling to fisticuffs. The potential for another Sino-Indian War is great and the possibility of one is strong. 
+			</p>
+			<p>
+				Dr. Chansoria discusses all this real world diplomacy with gaming overtones in a non-zero-sum game context and bridges the gap between game theory and Diplomacy.
+			</p>
+
+			<h4>US, China and the non-zero sum game</h4>
+			<p>
+				China is likely to become confrontational post the US’ strategic readjustments in the Asia-Pacific region.
+			</p>
+			<p>
+				<q>As the US makes strategic re-adjustments in reference to its role and re-oriented focus in the Asia-Pacific, numerous mechanisms under which China and the US operate mutually are proving inept to offset China's budding politico-military ambitions in Asia. The Pentagon's strategic-guidance defence document released in January 2012 seeks a "strategic pivot" to the Asia-Pacific — witnessing fierce competition in terms of trade and energy routes. Landing of the US Marines in Darwin, Australia last month signals beginning of the initial phase of America's "strategic pivot". Could these recent developments be placed in a framework which argues that Washington and Beijing are competing for greater strategic primacy in the Asia-Pacific? This necessitates engagement, although not entirely discounting potential frictions, thus representing a classic case of the game theory in international relations. Essentially put into practice in order to examine the strategic behaviour between economic, political, and social players, the game theory leads to a decision-making process that is based on patterns/assumptions about the goals that an actor sets forth, based on the knowledge/inputs available with the actor in reference to the objectives of the other player.</q>
+			</p>
+			<p>
+				<a href="http://www.sunday-guardian.com/analysis/us-china-and-the-non-zero-sum-game">http://www.sunday-guardian.com/analysis/us-china-and-the-non-zero-sum-game</a> (used with permission of the author)
+			</p>
+			<p>
+				Dr. Monika Chansoria is a Senior Fellow at the Centre for Land Warfare Studies, New Delhi
+			</p>
+
+			<p>
+				Why was Dr. Garry Brewer laughing?  Because he had just realized, as he reminded me, that I had persuaded him to try a new game called Diplomacy when he was working on his MS at SDSU in 1966. It was that and my interest in politico-military war games that had led him to contact me in the early 1970s when he was at RAND and working on a major Air Force project to study PMW related games and simulations. He included a mention of Diplomacy in his work and sent me a copy of it. I still have it out in my personal Diplomacy Archives... 
+			</p>
+			<p>
+				To summarize what we’ve learned so far: Diplomacy begins as a non-zero-sum game and remains one until the last of the unoccupied centers is occupied. Then it becomes a zero-sum game.
+			</p>
+
+			<h3>2)  A CLASS VICTORY BY ANY OTHER DEFINITION IS NOT</h3>
+			<p>
+				Because many of the early Diplomacy players were also chess players it was only natural that much chess terminology would come to be used in Diplomacy. We often talked and wrote about the Opening Game, the Mid Game, and the End Game; but rarely was the term Pre Game used. More common was a referral to the Winter 1900 season. 
+			</p>
+			<p>
+				In Diplomacy players do not always make the best decisions, the most rational decisions, or the most timely decisions --- and that is the human variable element that makes the game so interesting.
+			</p>
+			<p>
+				During The Golden Age Diplomacy games FTF or DipCon games were played   very differently than they are today.  The main difference was that then games were played without an artificial time limit or arbitrary cut-off time, such as 1907. Games were played to their conclusion (e.g. an eighteen center win or a win by concession of the other players). Electronic timing devices were not used. Often the tournament director would establish a standardized time limit for each move, but more often individual games moved at their own pace.  It was Diplomacy in a gentler time and a more civilized manner, or so I believe.
+			</p>
+			<p>
+				To me ending a Diplomacy game in 1907 makes no more sense than ending a baseball game after six innings or a football game after one period. 
+			</p>
+			<p>
+				Using a clock makes the clock, not the number of specified centers, the determinant of who the winner is. In the first case the players are playing against the clock, not to achieve the mandated victory criteria. 
+			</p>
+			<p>
+				Combining what we’ve learned about zero-sum games and non-zero-sum games and Diplomacy as it was played then and now it seems to me that we can best think of a Diplomacy game as a hybrid that consists of a first part, what we traditionally called the Opening Game, during which the ten unoccupied supply centers are being occupied and brought into play  that is a non-zero-sum game; and a second part, the Mid or End Game, when all the supply centers are in play that is a zero-sum game. 
+			</p>
+			<p>
+				So far we’ve looked at zero-sum and non-zero-sum game theory and practice in a real historical example (India, China, and the USA).  We’ve considered how “winning” in zero-sum and non-zero-sum games translates into a classic Diplomacy game “victory”, at least in theory.  Now let’s consider how theory works in reality in one classic example drawn from FTF Diplomacy history. I’m sure Jack wasn’t thinking about zero-sum and non-zero-sum game theory during his brilliantly played game but in fact that’s what was happening --- his game of Diplomacy was a classic example of how theory can and does become reality.  
+			</p>
+
+			<h3>3 GREAT MOMENTS IN DIPLOMACY HISTORY a/k/a  GREENE’S VICTORY</h3>
+			<p>
+				Can you recall the greatest FTF Diplomacy game you’ve ever played in?  Does one game stand out or do you have to scratch your head and search your memory for The One That Was Best?  For me it’s no problem: one FTF game played in the mid-1960s in Concord, California ranks not only as the best I’ve ever played in, but, in my opinion, as the greatest FTF Diplomacy victory in the history of the hobby. 
+			</p>
+			<p>
+				Ironically that game was played at 24 Boyd Ct. Pleasanton CA, the home of Charles Turner, one of the founders of the LTA (Lafayette Tactics Association);  and only 3.6 miles from 950 Alla Ct.  in Concord, long-time home of hobby legend Edi Birsan, although Edi hadn’t moved into the area at the time the game was played. 
+			</p>
+			<p>
+				The game is most memorable for me not for its brilliant tactics and strategies or its dynamic human inter-relations (e.g. negotiations) but for its length!  It was the shortest game I can recall that ended in a solo victory for an eighteen center Russia that went 4/8/12/16/18 centers in 1904. It was won by Jack Greene, Jr.  against the determined opposition of other members of the LTA including Charles Turner, Brian Bailey, James Justin Dygert, Anders Swenson, Dick Gadsden  and myself. The amazing thing about the game is that Jack, who was from Hillsborough (located  just above San Francisco’s airport) and I (who had flown up from San Diego for the weekend) took on the other five player-LTA members. While I tried to hold off two of them; Jack immediately went after the other three simultaneously. In fact, I can’t remember a single move during the game when he got a support from his only ally, me. How did he do it?  These were all good Diplomacy players but Jack played on their personal rivalries and took advantage of every mistake they made.  Most importantly, I think, he really believed he could win it and they didn’t believe they could stop him.  And so it happened.
+			</p>
+			<p>
+				I managed to survive only because I was on the other side of the board hiding in France.
+			</p>
+			<p>
+				To show that his brilliant victory in a local FTF game was no fluke, Jack went on to duplicate his success in a PBM game that was published in ARMAGEDDONIA or EREHWON as I recall. 
+			</p>
+			<p>
+				Jack’s passion for the British Navy led him to a successful professional career as a board game designer, focusing on a more sophisticated hex sheet, counters and dice formula than Avalon Hill or S&T used that included elements of both traditional board games and miniatures. 
+			</p>
+			
+			<img src="./mustacheMan.jpg" height="" width="">
+
+			<p>
+				Quarterdeck Game at Origins 1977
+			</p>
+			
+			<img src="./beardMan.jpg" height="" width="">
+			
+			<p>
+				Jack, still publishing games in 2015.
+			</p>
+			<p>
+				QUARTERDECK GAMES
+			</p>
+		
+			<p>
+				Most of his games dated from the 1980s and included games with titles like:
+			</p>
+			<p>
+				The Royal Navy: Follow-up to Iron Bottom Sound <strong>The Royal Navy</strong> in action against Germany & Italy in WWI & II. Also has US, French & Soviet ships
+			</p>
+			<p>
+				Norway 1940: The game recreates the invasion of Norway in 1940 by the German, mostly by the simulation of the naval battles.
+			</p>
+			<p>
+				Rommel’s War: Operational game on the war in North Africa.
+			</p>
+			<p>
+				Fleet Admiral: a tactical naval game simulating the battles that were fought in WWI and that era. It includes portions of German, Russian, British, French, Turkish, Austro-Hungarian, Japanese, Spanish, Dutch, Italian, and US navies.
+			</p>
+			<p>
+				1660: a strategic game in which the players take the roles of European powers (Spain, France, the United Provinces, and the English Commonwealth) and try to extract wealth from their colonies and conquer those of other players.
+			</p>
+			<p>
+				Destroyer Captain: Hex-based simultaneous-move wargame based on destroyer (and an occasional light cruiser) actions in the 20th century. By the same designer and uses the same system as Ironbottom Sound.
+			</p>
+			<p>
+				Bitter End: A Relief of the Besieged City, 1945: a operational level game on the attempted relief of Budapest, Hungary in 1945.
+			</p>
+			<p>
+				Grand Moves South: Early in 1862, a little known General named U.S. Grant overran West Tennessee, taking two river forts and the largest bag of prisoners captured up to that time by an American army. But as the Union troops advanced on Corinth, the Confederates hit back, staking everything on a furious battle in the woods around Shiloh Church.
+			</p>
+			<p>
+				Incredible Victory: A hidden movement (double-blind) game on the Battle of Midway, June, 1942.
+			</p>
+			<p>
+				Ironbottom Sound: Simultaneous-plotting hex-based naval game based on actions near Guadalcanal during WWI
+			</p>
+			<p>
+				More recently he’s been importing games from Japan developed in conjunction with his partners there. 
+			</p>
+
+			<h3>CONCLUSION</h3>
+			<p>
+				The fun part of writing this was that it allowed me to answer two of those “What ever happened to?” questions that come more and more frequently with old age.  It’s always good to catch up with an old Dipper friend and find out what they’ve been up to for the last fifty years.  Somehow it makes me feel young again! 
+			</p>
+			<p>
+				Hopefully, after reading this, the next time you’re playing a game of Diplomacy you’ll keep in mind some of that zero-sum and non-zero-sum game theory. I can’t guarantee you the kind of results Jack got, but it can’t hurt --- can it? 
+			</p>
+		<!-- Content Body End -->
+		</div>
+
+		<div class="info_block padded_body">
+			<div>
+				<br/>
+				<br/>
+			</div>
+
+			<div>
+				<table>
+	  				<tbody>
+						<tr>
+						    <td>
+						    	<!-- Insert Contact Information! -->
+						    	<a href="mailto:peery@ix.netcom.com">
+						    		<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+						    	</a> 
+						    </td>
+						    <td>
+						    	<strong>
+						    		Larry Peery <br/>
+						    		[{Function}] <br/>
+						    		(<a href="mailto:peery@ix.netcom.com">peery@ix.netcom.com</a>)
+						    	</strong> 
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="dear_dp">
+				<p>
+					<i>
+						If you wish to e-mail feedback on this article to the author, and clicking 
+						on the envelope above does not work for you, feel free to use the 
+						
+						<a href="../Common/DearDP.html">
+							<q><strong>Dear DP...</strong></q>
+						</a> 
+
+						mail interface.
+					</i> 
+				</p>
+			</div>
+
+		</div>
+
+		<div class="req_link_container">
+			<hr class="hr_rule bot_hr">
+
+			<div class="req_link left_link">
+				<a href="../..">
+					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+
+			<div class="req_link right_link">
+				<a href="..">
+					<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+		</div>
+
+	</body>
+</html>
