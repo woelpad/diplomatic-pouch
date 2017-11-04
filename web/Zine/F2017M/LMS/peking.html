@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> DP F2017M: Last Man Standing: Operation Peking</title>
+<meta charset="utf-8"/> 
+<!-- Point to whereever this stylesheet will exist-->
+<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+<style type="text/css">
+/*
+* Insert styles for the content_body here
+*/
+.game_img {text-align: center; text-decoration: italic;}
+.map_img {width: 60%;}
+.content_body {}
+.inputBox {
+	color:			#000000;
+	background:		#FFFFFF;
+	border-color:	#000000;
+	border-top:		1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-right:	1px solid;
+	font-family:	verdana;
+	font-size:		14px;
+}
+</style>
+<script>
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+		var args = arguments;
+		return this.replace(/{(\d)}/g, function(match, number) {
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+}
+function changeMap(selector, reference, content) {
+	var selected = selector.options[selector.selectedIndex];
+	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
+	var text = document.getElementById(selector.name + '.text');
+	image.src = reference.format(selected.value);
+	if (anchor) anchor.href = image.src;
+	image.alt = text.innerHTML = content.format(selected.text);
+}
+</script>
+</head>
+<body>
+<div class="req_link_container">
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<hr class="hr_rule top_hr">
+</div>
+<div class="centered">
+<!-- Insert Author Name -->
+<h1>LAST MAN STANDING: OPERATION PEKING</h1>
+<h2>by Mario Huys </h2>
+<hr class="hr_rule">
+</div>
+<div class="content_body justified padded_body">
+<table width="960" border="0" cellpadding="10" align="center">
+<tr>
+<td align="justify">
+<!-- Content Body -->
+
+<blockquote><b><i>
+Last Man Standing is a puzzle on the Diplomacy board, whereby the whole board gets reduced to a single unit. This unit must reach its final destination in a mere four game years, without any power capturing any neutral centers and with all powers still possessing at least one unit at the end of the second year. Your goal is to reconstruct the complete game history from the map given. For more details, read the <a href="../../S2017M/LMS/rollcall.html">LMS Roll Call</a>.
+</i></b></blockquote>
+
+<h3>
+Theater: Asia
+</h3>
+
+<p>
+After having visited every country twice or more, it's time to widen our horizons. Can there be a Last Man Standing on a different map? In principle the formula can be applied to any map if we vary the time scale. Bigger maps will likely require more years to finish, smaller maps less. But if we want to do it in the same timeframe of exactly 4 game years, it's best to search for maps with a similar size and density as Standard. One such map is Canton, taking Asia as its subject, which was developed exactly with the purpose to bring Hasbro's Colonial down to the scale and feel of Standard. Let's find out how well this accommodates LMS.
+</p>
+
+<div class="game_img">
+<a href="canton.pdf" target="_blank">
+<img src="./images/canton.gif" class="map_img" alt="Canton, Before Spring 1901">
+<br /><i>Canton, Before Spring 1901</i><br/>
+<b><i><small>Click to view a readable version in a separate window</small></i></b>
+</a>
+</div>
+
+<p>
+Canton is composed of a host of imperial and colonial powers at the start of the 20th century. Clockwise from the top there is Russia, Japan, Holland (in Indonesia), Turkey and in the center are China, France (in Indochina) and Britain (in India). China and Russia both start with 4 units and there are 36 centers in total, but for the purpose of a no-neutral LMS puzzle, only the first fact matters. Interestingly there are two island powers, Japan and Holland, with the Dutch military completely composed of fleets. 
+</p>
+
+<h3>
+Mission: The Silk Road
+</h3>
+
+<div class="game_img">
+<img src="./images/lms_dam-pek.gif" class="map_img" alt="Army Damascus to Peking, After Winter 1903">
+<br /><i>Army Damascus to Peking, After Winter 1903</i>
+</div>
+
+<pre class="centered">
+Britain (1/4) A Chu / Cal Chu Del Mad    
+China   (1/1) A Kan / Pek                
+France  (1/5) F Sha / Bor Han Hue Sai Sha
+Holland (0/2)         Jav Sum            
+Japan   (0/4)         Kha Kyo Sas Tok    
+Russia  (0/3)         Irk Mos Sev        
+Turkey  (1/4) A Tib / Bag Con Dam Tib    
+</pre>
+
+<p>
+A bridge between the old and new. We're retracing Marco Polo's footsteps as we travel from Syria's capital to China's. It took Il Milione three and a half years to travel from Acre on the Syrian (now Israelite) coast to the summer palace of Kublai Khan in legendary Xanadu. You have four years to replicate the feat.
+</p>
+
+<p>
+Kublai Khan was the descendant of Genghis Khan and Mongol ruler of Cathay (Northern China), founder of the Yuan dynasty. His winter capital was Khanbaliq, present-day Peking, not too far south from Xanadu and frequently visited by the Polo's in their nearly 20 years stay in the Middle Kingdom. Can you make history repeats itself?
+</p>
+
+<h3>
+Mission: The Bengal Tiger
+</h3>
+
+<div class="game_img">
+<img src="./images/lms_FA-cal.gif" class="map_img" alt="French Army to Calcutta, After Winter 1904">
+<br /><i>French Army to Calcutta, After Winter 1904</i>
+</div>
+
+<pre class="centered">
+China   (0/1)         Bag                                
+France  (1/4) A Cal / Cal Del Hue Mad                    
+Holland (0/5)         Bor Han Jav Sai Sum                
+Japan   (0/3)         Kyo Sha Tok                        
+Russia  (0/9)         Chu Con Irk Kha Mos Pek Sas Sev Tib
+Turkey  (0/1)         Dam                                
+</pre>
+
+<p>
+The French <i>colon</i> makes his way through the overcrowded cities of the Indian subcontinent when he notices a strange thing. All of a sudden the street is quiet. Turning around he notices that he's all alone. That can only mean one thing. The tiger walks tonight...
+</p>
+
+<h3>
+Report: The Industrial Revolution &mdash; Army Constantinople to Liverpool
+</h3>
+
+<div class="game_img">
+<img src="./images/lms_con-lvp13.gif" class="map_img" alt="Army Constantinople to Liverpool, After Winter 1903">
+<br /><i>Army Constantinople to Liverpool, After Winter 1903</i>
+</div>
+
+<p>
+In conquering an island with so many armies to start with, you might expect a solid number of convoys. And there are indeed quite a few in this solution, but perhaps not the ones you expect. Equally surprising is that in a puzzle that aims for a far corner of the map there would be time for changing the color of the destination twice, first to German black, then to Turkish yellow. But stranger things have happened.
+</p>
+
+<p>
+Who else crossed this border? Not the French army in Armenia. France owns Smyrna, which it must have taken in 1902. The only way to accomplish that is to move through Italy, either departing Venice in Spring through Adriatic, Ionian and Aegean or Eastern Med, or Apulia in Fall, which would only require two fleets. Since fleet Ankara needs to appear in the Black Sea at some point, the two fleet solution looks more convenient. Especially since it allows to roll over an Italian army strolling around the Apulian countryside.
+</p>
+
+<p>
+If Germany is going to take Liverpool, it should do so in 1902 with an army, because F Kie cannot get there in 4 turns. That army could either be convoyed in the Fall of 1901 or the Spring of 1902. Kie would be the jump-off point for a first year convoy, but for the next Spring there's also Pic. Moreover this would allow the dislodgement of a French unit (presumably A Par) in the previous Fall. As such my money would be on the second year Spring convoy. But that would be a mistake. As will become clear later, Germany cannot afford to lose a unit in the first year. And it's bound to lose a home center. 
+</p>
+
+<p>
+Take a look at Turkey. Its home centers are in pristine condition, a sign that the usual Black Sea sweep has been executed to remove two Turkish units. Its remaining army marched through Sev and Stp, leaving Mos in Russian hands. As Russia is obliged to lose two centers in 1902 in order to disband its two sweepers, and assuming that War was already lost in 1901 to the Austrian army that then continued to Ber, that second center apart from Stp must necessarily be a German home center. In other words in order to stay even Germany needs to capture some other home center, and England offers plenty. A first year convoy to Edi or Lon is therefore the correct path to take.
+</p>
+
+<p>
+But then we notice that Kie itself is English on the After Winter 1903 map. If a German army was convoyed to the British island in 1901, it stands to reason that the same fleets in Nth and Hel were used to convoy A Lvp to Kie in Spring 1902. Why not in Fall? Because Russia still needs to have a unit around in 1903 to account for Mos, and it's easier to deal with a fleet in the North Sea than an army on the continent that should stay out of any home center. And that F Stp as usual arrives in the Nth in Fall 1902, 4 turns after departing from the south coast.
+</p>
+
+<p>
+But what is A Lvp doing on the continent? If it is actually the army and not one of the fleets that took Kie? Finally we arrive at the heart of the matter. As mentioned at the start, there are a great many armies to deal with, more than there are fleets. And yet on the problem map, after the Winter of 1903, only one army is left versus three fleets. Where are the Italian armies, the Austrians, the French?
+</p>
+
+<p>
+Let me not hold you in suspicion any longer. They got culled in the center of the map by way of A Lvp and A Mun. Contrast this to the usual culling that occurs in the North Sea or the Med, and it becomes clear that the originality of this solution lies in the fact that this is almost entirely an army operation, no fleets involved. Except then for F Tri, who receives its usual treatment of a quick visit to Venice and dislodgement at the hands of the French and Italian armies. A year later only 4 are left. With A Lvp in Kie, A Mun in Boh, A Mar in Mun and A Bud in Ber, we have a classic 2 snipers versus 2 raiders position that's going to end bad for all. The raiders because they will get dislodged, the snipers because they will lose their centers of Lon and Edi.
+</p>
+
+<p>
+What's left then is to figure out the fleet action around English Channel and the fate of A Par. The latter, I can tell you, died in Kie in Fall 1902. Another victim of the culling operation. Note that this requires A Lvp to be convoyed in Spring 1902 to Hol, not Kie, and F Kie to support him to Kie, making this another instance of fleet involvement. But with 10 units disbanded in the land corridor between Rome and Kiel, 9 of which are armies, this is quite the killing field.
+</p>
+
+<p>
+For the fleet action it's better to look at the solution.
+</p>
+
+<div class="game_img">
+<a href="lms_con-lvp.pdf#page=2" target="_blank">
+<img class="map_img" id="lms_con-lvp.1901.image" src="images/lms_con-lvp05.gif" width="50%" alt="Army Constantinople to Liverpool, After Winter 1901"/><br/>
+<b id="lms_con-lvp.1901.text">Army Constantinople to Liverpool, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_con-lvp.1901" class="inputBox" onchange="changeMap(this, 'images/lms_con-lvp{0}.gif', 'Army Constantinople to Liverpool, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05" selected>After Winter 1901</option>
+</select>
+</div>
+
+<p>
+<b>1901.</b> Rise up. Scores of workers march across the land, armed with sticks and pitch forks.
+</p>
+
+<div class="game_img">
+<a href="lms_con-lvp.pdf#page=6" target="_blank">
+<img class="map_img" id="lms_con-lvp.1902.image" src="images/lms_con-lvp09.gif" width="50%" alt="Army Constantinople to Liverpool, After Winter 1902"/><br/>
+<b id="lms_con-lvp.1902.text">Army Constantinople to Liverpool, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_con-lvp.1902" class="inputBox" onchange="changeMap(this, 'images/lms_con-lvp{0}.gif', 'Army Constantinople to Liverpool, {0}')">
+<option value="06">Spring 1902</option>
+<option value="07">Fall 1902</option>
+<option value="08">Winter 1902</option>
+<option value="09" selected>After Winter 1902</option>
+</select>
+</div>
+
+<p>
+<b>1902.</b> Battle on. The different clans clash violently, leaving some dead in the mud.
+</p>
+
+<div class="game_img">
+<a href="lms_con-lvp.pdf#page=10" target="_blank">
+<img class="map_img" id="lms_con-lvp.1903.image" src="images/lms_con-lvp13.gif" width="50%" alt="Army Constantinople to Liverpool, After Winter 1903"/><br/>
+<b id="lms_con-lvp.1903.text">Army Constantinople to Liverpool, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_con-lvp.1903" class="inputBox" onchange="changeMap(this, 'images/lms_con-lvp{0}.gif', 'Army Constantinople to Liverpool, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
+
+<p>
+<b>1903.</b> Knock them down. The industrialists try to stem the protests, but get caught in the crossfire. Down with the <i>bourgeoisie</i>.
+</p>
+
+<div class="game_img">
+<a href="lms_con-lvp.pdf#page=14" target="_blank">
+<img class="map_img" id="lms_con-lvp.1904.image" src="images/lms_con-lvp17.gif" width="50%" alt="Army Constantinople to Liverpool, After Winter 1904"/><br/>
+<b id="lms_con-lvp.1904.text">Army Constantinople to Liverpool, After Winter 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_con-lvp.1904" class="inputBox" onchange="changeMap(this, 'images/lms_con-lvp{0}.gif', 'Army Constantinople to Liverpool, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
+
+<p>
+<b>1904.</b> The battle is over. All bourgeois fleets defeated by a single Turkish blue collar worker. The socialist utopia can begin now.
+</p>
+
+<h3>
+Report: Conquest of Britain &mdash; Italian Army to Liverpool
+</h3>
+
+<div class="game_img">
+<img src="./images/lms_ven-lvp17.gif" class="map_img" alt="Italian Army to Liverpool, After Winter 1904">
+<br /><i>Italian Army to Liverpool, After Winter 1904</i>
+</div>
+
+<p>
+Italians basically have two paths that lead to a coast from where they can be convoyed to the British island, either through France or through Germany. Checking center ownership we see that France retained all its centers and Germany lost them all and, more significantly, that Kiel is green. It's fair to conclude then that that's where the army spent its second Winter. But which one?
+</p>
+
+<p>
+Army Rome can reach Kiel in 4 turns if it moves through Venice, Tyrolia and Munich. But this is problematic, because Venice is a black dot and if we assume that it was involved in the elimination of the Austrian fleet in 1901, the Roman army would get blocked. Instead it's army Venice, cleverly sidestepping to Piedmont, that finds itself in Tyrolia at the end of 1901, on track to reach Kiel. Army Rome, as usual, disbands to compensate for the loss of the Venetian home center.
+</p>
+
+<p>
+Imagine the scene at the end of 1902. There's the lone Italian army in Kiel. It has to be alone, because an army in Munich or Berlin would not be able to get convoyed to Britain unless there are fleets in the North Sea and the Bight. And if there were, then the first action they'd take would be to support the army furthest away into Kiel, dislodging the Italian army. A corollary of this is that Munich and Berlin were both captured in 1901, by A Vie and A War respectively, leaving Germany with just two centers, Kiel and Venice, and thus two units in 1902, one of which will disband at the end of the year when Kiel gets taken.
+</p>
+
+<p>
+There are also armies in St. Petersburg and Moscow at the end of 1902, because those centers cannot be captured in the first year. Just as with the first solution, we'll eliminate the two armies by culling them with two snipers, one stationed in the Gulf of Bothnia, the other in either Finland or Livonia. Sounds familiar? Indeed, this is the same set-up as in the all-neutrals-captured solution with which Sherlock Holmes bested the Baron (see also Uppercuts and Countdowns). But instead of the Germans, we'll let the English do the sniping. F Edi needs 4 turns to get to the Gulf, while A Lvp will wait for a Spring convoy to Norway before proceeding to Finland. Note that F Edi and F Stp/sc, which is moving in the opposite direction, do not hinder each other, as F Edi will be moving through Skagerrak and Sweden, while F Stp/sc takes the usual Baltic Sea-Denmark route.
+</p>
+
+<p>
+Now we come to the tricky part. With two German units still in play in 1902, one of these an army, we know how to deal with the Austrian in Munich when there's an Italian behind him in Tyrolia. But how can we get rid of the two French armies? And the Italian fleet? Because between them and the French fleet, the latter is the most useful to keep around. No need for a convoy and no conflict with countryman A Ven in the final year. 
+</p>
+
+<p>
+With A Mun heading for Venice, there's no opportunity to dislodge a French army in 1901. And getting rid of both in 1902 is a bit of a stretch. Well then, let's capture a home center to force a disband. Brest can be taken by F Lon or even A Lvp, who then has a 2-station convoy through the Channel and the North Sea to reach Norway the next Spring. Capturing Brest not only allows to disband A Mar, but also to build another English fleet... in Liverpool! With the help of this fleet F Nap can be lifted out of the Mid-Atlantic while at the same time F Bre recaptures its own home port. Which explains why all French home centers remain French on the final map. Meanwhile F Lon and A Ber team up to eliminate A Par in Picardy. 
+</p>
+
+<p>
+Let's see this in action.
+</p>
+
+<div class="game_img">
+<a href="lms_ven-lvp.pdf#page=2" target="_blank">
+<img class="map_img" id="lms_ven-lvp.1901.image" src="images/lms_ven-lvp05.gif" width="50%" alt="Army Venice to Liverpool, After Winter 1901"/><br/>
+<b id="lms_ven-lvp.1901.text">Army Venice to Liverpool, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_ven-lvp.1901" class="inputBox" onchange="changeMap(this, 'images/lms_ven-lvp{0}.gif', 'Army Venice to Liverpool, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05" selected>After Winter 1901</option>
+</select>
+</div>
+
+<p>
+<b>1901.</b> Caesar crosses the Rubicon in the opposite direction, assuming he started out in Venice.
+</p>
+
+<div class="game_img">
+<a href="lms_ven-lvp.pdf#page=6" target="_blank">
+<img class="map_img" id="lms_ven-lvp.1902.image" src="images/lms_ven-lvp09.gif" width="50%" alt="Army Venice to Liverpool, After Winter 1902"/><br/>
+<b id="lms_ven-lvp.1902.text">Army Venice to Liverpool, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_ven-lvp.1902" class="inputBox" onchange="changeMap(this, 'images/lms_ven-lvp{0}.gif', 'Army Venice to Liverpool, {0}')">
+<option value="06">Spring 1902</option>
+<option value="07">Fall 1902</option>
+<option value="08">Winter 1902</option>
+<option value="09" selected>After Winter 1902</option>
+</select>
+</div>
+
+<p>
+<b>1902.</b> He ploughs through Germania to reach the North Sea shore.
+</p>
+
+<div class="game_img">
+<a href="lms_ven-lvp.pdf#page=10" target="_blank">
+<img class="map_img" id="lms_ven-lvp.1903.image" src="images/lms_ven-lvp13.gif" width="50%" alt="Army Venice to Liverpool, After Winter 1903"/><br/>
+<b id="lms_ven-lvp.1903.text">Army Venice to Liverpool, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_ven-lvp.1903" class="inputBox" onchange="changeMap(this, 'images/lms_ven-lvp{0}.gif', 'Army Venice to Liverpool, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
+
+<p>
+<b>1903.</b> Summoning a convoy fleet the Romans cross to Britain, landing far to the North in good old Edinburgh.
+</p>
+
+<div class="game_img">
+<a href="lms_ven-lvp.pdf#page=14" target="_blank">
+<img class="map_img" id="lms_ven-lvp.1904.image" src="images/lms_ven-lvp17.gif" width="50%" alt="Army Venice to Liverpool, After Winter 1904"/><br/>
+<b id="lms_ven-lvp.1904.text">Army Venice to Liverpool, After Winter 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_ven-lvp.1904" class="inputBox" onchange="changeMap(this, 'images/lms_ven-lvp{0}.gif', 'Army Venice to Liverpool, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
+
+<p>
+<b>1904.</b> The Barbarians all fall to their knees. No need for a Hadrian wall just yet. Let them enjoy the benefits of Roman civilization first. Bread and games.
+</p>
+
+<!-- Content Body End -->
+</div>
+
+<div class="info_block padded_body">
+<div>
+<br/>
+<br/>
+</div>
+
+<div>
+<table>
+<tbody>
+<tr>
+<td>
+<!-- Insert Contact Information! -->
+<a href="mailto:woelpad@gmail.com">
+<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+</a> 
+</td>
+<td>
+<strong>
+Mario Huys <br/>
+(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+</strong> 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!--
+<div class="dear_dp">
+<p>
+<i>
+If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the 
+
+<a href="../Common/DearDP.html">
+<q><strong>Dear DP...</strong></q>
+</a> 
+
+mail interface.
+</i> 
+</p>
+</div>
+-->
+
+</td>
+</tr>
+</table>
+</div>
+
+<div class="req_link_container">
+<hr class="hr_rule bot_hr">
+
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+</div>
+
+</body>
+</html>
