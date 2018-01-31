@@ -28,6 +28,10 @@ body {margin-bottom: 0px;}
  */
 .justified {text-align: justify;}
 
+/* Makes all text italic. Used in songs and poems.
+ */
+.italic {font-style: italic;}
+
 /* Removes the border of a div.
  * 
  */
