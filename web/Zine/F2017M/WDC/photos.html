@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title> DP F2017M: WDC 2017 Photos</title>
+		<title> DP F2017M: WDC 2017 Photos </title>
 		<meta charset="utf-8"/> 
 		<!-- Point to whereever this stylesheet will exist-->
 		<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
@@ -9,17 +9,153 @@
 			/*
 			 * Insert styles for the content_body here
 			 */
-			 .content_body {
-			 	max-width: 2000px
-			 }
-			 .content_body div div div img {
-			 	max-width: 240px;
-			 	max-height: 240px;
-			 }
+			.album {
+				width: 960px;
+			}
+			.album td {
+				width: 50%;
+			}
+			.photo {
+				max-width: 360px;
+				max-height: 360px;
+			}
+			.content_body h3, .content_body h4 {
+				text-align: center;
+			}
+			.frame {
+				overflow: auto;
+			}
+			.img1 {
+				float: left;
+				text-align: center;
+				margin-right: 8px;
+			}
+			.comm1 {
+				overflow: hidden;
+				text-align: left;
+			}
+			.img2 {
+				float: right;
+				text-align: center;
+				margin-left: 8px;
+			}
+			.comm2 {
+				overflow: hidden;
+				text-align: right;
+			}
+			.comm1 textarea, .comm2 textarea {
+				min-width: 540px;
+			}
+			#identity {
+				margin: 0 auto;
+			}
 		</style>
 		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+			function enlargePhotos() {
+				$('.photo').each(function (idx, el) {
+					$(el).parent().parent().attr('class', 'frame');
+					var comm = $(el).parent().next();
+					if (idx % 2) {
+						$(el).parent().attr('class', 'img2');
+						comm.attr('class', 'comm2').prepend($('<h4>').html('&nbsp;'));
+					} else {
+						$(el).parent().attr('class', 'img1');
+						comm.attr('class', 'comm1').prepend($('<h4>').html('&nbsp;'));
+					}
+					$(el).wrap($('<a>').attr('href', $(el).attr('src')).attr('target', '_blank'));
+					var para = $('<p>');
+					var form = $('<form>').attr('method', 'post').attr('action', 'mail.php');
+					var foto = $('<input>').attr('type', 'hidden').attr('name', 'photo').attr('value', $(this).attr('src').split('/')[2].split('.')[0]);
+					var author = $('<input>').attr('type', 'hidden').attr('name', 'author');
+					var init = $('<input>').attr('type', 'hidden').attr('name', 'initials');
+					var mail = $('<input>').attr('type', 'hidden').attr('name', 'email');
+					var part = $('<input>').attr('type', 'hidden').attr('name', 'participant').val('no');
+					var area = $('<textarea>').attr('name', 'comment').attr('rows', '3').prop('required', true);
+					form.append(foto).append(author).append(init).append(mail).append(part).append(area)
+						.append($('<br>')).append($('<button>').attr('type', 'submit').attr('name', 'send').prop('disabled', true).html('Submit'));
+					comm.append(para).append(form);
+					form.submit(function() {
+						$.ajax({
+							type: 'POST',
+							url: 'mail.php',
+							data: $(this).serialize(),
+							success: function() {
+								var quote = area.val();
+								para.text(quote);
+								if (init.val()) {
+									para.append($('<i>').text(init.val()).prepend(' &mdash;'));
+								}
+								area.val('');
+							},
+							error: function(data, status, err) {
+								if (data.responseText != '') {
+									alert(data.responseText);
+								} else if (err != '') {
+									alert(err + " Please contact woelpad@gmail.com separately with your submissions.");
+								} else {
+									alert("An unexpected error of type " + status + " occurred. Please contact woelpad@gmail.com separately with your submissions.");
+								}
+							}
+						});
+						return false;
+					});
+				});
+				$('[initials]').each(function (idx, el) {
+					$(el).append($('<i>').html(' &mdash;' + $(el).attr('initials')));
+				});
+			}
+			$(function() {
+				$('#identity').submit(function() {
+					return false;
+				});
+				$('#author').change(function() {
+					var author = $(this).val().trim();
+					if (author) {
+						var names = author.match(/[a-zA-Z]+/g), initials = '';
+						var idx, len = names.length;
+						for (idx = 0; idx < len; ++idx) {
+							initials += names[idx].substr(0, 1).toUpperCase();
+						}
+						$('#initials').val(initials).trigger('change');
+					}
+					activate($(this).attr('id'), author);
+				});
+				$('#initials').change(function() {
+					activate($(this).attr('id'), $(this).val());
+				});
+				$('#email').change(function() {
+					var email = $(this).val().trim();
+					if (email && !isEmail(email)) {
+						alert('Please enter a valid e-mail address.');
+					} else {
+						activate($(this).attr('id'), email);
+					}
+				});
+				$('#participant').click(function() {
+					var value = $(this).prop('checked') ? 'yes' : 'no';
+					$('input[name=participant]').each(function (idx, el) {
+						$(el).val(value);
+					});
+				});
+			});
+			function activate(label, value) {
+				var value = value.trim();
+				$('input[name=' + label + ']').each(function (idx, el) {
+					$(el).val(value);
+				});
+				var active = $('#author').val().trim() && $('#initials').val().trim() && isEmail($('#email').val().trim());
+				$('button[name=send]').each(function (idx, el) {
+					$(el).prop('disabled', !active);
+				});
+			}
+			function isEmail(value) {
+				return /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(value);
+			}
+		</script>
 	</head>
-	<body>
+	</head>
+	<body onload="enlargePhotos()">
 		<div class="req_link_container">
 			<div class="req_link left_link">
 				<a href="../..">
@@ -36,1217 +172,1420 @@
 		<div class="centered">
 			<!-- Insert Author Name -->
 			<h1>WDC 2017 PHOTOS</h1>
-			<h2>by James Brooks</h2>
+			<h2>by James Brooks
+			<br>and Mario Huys</h2>
 			<hr class="hr_rule">
 		</div>
 		<div class="content_body justified padded_body">
 		<!-- Content Body -->
-			<div align="center">
-			<h3> Friday </h3>
-			<div>
-				 <div>
-					 <div align="center">
-						 <h4> 001 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/001.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 002 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/002.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 003 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/003.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 004 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/004.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 005 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/005.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 006 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/006.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 007 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/007.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 008 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/008.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 009 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/009.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 010 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/010.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 011 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/011.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 012 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/012.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 013 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/013.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 014 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/014.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 015 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/015.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 016 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/016.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 017 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/017.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 018 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/018.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 019 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/019.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 020 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/020.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 021 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/021.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 022 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/022.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 023 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/023.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 024 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/024.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 025 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/025.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 026 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/026.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 027 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/027.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 028 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/028.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 029 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/029.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 030 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/030.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 031 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/031.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 032 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/032.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 033 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/033.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 034 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/034.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 035 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/035.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 036 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/036.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 037 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/037.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 038 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/038.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 039 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/039.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 040 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/040.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 041 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/041.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 042 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/042.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 043 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/043.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 044 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/044.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 045 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/045.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 046 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/046.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 047 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/047.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 048 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/048.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 049 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/049.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 050 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/050.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 051 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/051.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 052 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/052.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 053 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/053.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 054 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/054.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 055 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/055.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 056 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/056.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 057 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/057.jpg">
-					 </div>
-				 </div>
-				 <div>
-					 <div align="center">
-						 <h4> 058 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/058.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div>
-				 <div>
-					 <div align="center">
-						 <h4> 059 </h4>
-					 </div>
-					 <div align="center">
-						 <img src="./Friday/059.jpg">
-					 </div>
-				 </div>
-			 </div>
-			 <div align="center">
+			<p>
+				Dan Lester had invited his friend James Brooks to come to the WDC in Oxford and take pictures of the event. James went well beyond expectations and composed a stunning album, which you can admire on his site, <a href="http://www.thesearemyphotos.com/wdc-2017">thesearemyphotos.com</a>. He gave me permission to reproduce them for the Zine, and as such you will find many of his pictures throughout this issue.
+			</p>
+			<p>
+				But wouldn't it be great if we could put names on the faces, give context to the actions, or simply convey our impressions of what the pictures evoke in each of us? Well, here's your chance. 
+			</p>
+			<p>
+				Fill in the details below, then browse to any picture, write a comment in the textbox next to it and submit. Your comment will appear, but will be gone when you refresh the page. Don't let that worry you. A team of experts (that's me and my dog) will scrutinize your submission, scrub it, occasionally ask for clarification, decide on its worthiness, then add it or scrap it, after which you'll get a notification. Your email address is just needed for this purpose, it will not be included in the comment or anywhere else on this page. As for the number of comments you can submit, the more, the better.
+			</p>
+			<p>
+				<b>Your details:</b>
+				<form id='identity'>
+					<label for='id-author'>Name:</label>
+					<input type='text' id='author' name='id-author' size='30'>
+					<label for='id-initials'>Initials:</label>
+					<input type='text' id='initials' name='id-initials' size='6'>
+					<br><label for='id-email'>E-mail:</label>
+					<input type='email' id='email' name='id-email' size='50'>
+					<br><label><input type='checkbox' id='participant' name='id-participant'> Participant</label> (either as a player, organizer, ...)
+				</form>
+			</p>
+			<p>
+				<b>Days:</b>
+				<ul>
+					<li><a href="#friday">Friday</a>, July 7</li>
+					<li><a href="#saturday">Saturday</a>, July 8</li>
+					<li><a href="#sunday">Sunday</a>, July 9</li>
+				</ul>
+			</p>
+			<p>
+				<b>Contributors:</b> <i>(non-participants in italics)</i>
+				<ul>
+					<li><i>Brian Lovelace (BL)</i></li>
+					<li><i>Kevin Burt (KJB)</i></li>
+					<li><i>Mario "Domus" Huys (DH)</i></li>
+				</ul>
+			</p>
+			<p>
+				<i>You can click on any photo to enlarge it in a separate window.</i>
+			</p>
+			<div id="friday" align="center">
+				<h3> Friday </h3>
+				<table class="album">
+					<tr>
+						<td>
+							<div>
+								<h4> fri001 </h4>
+								<img class="photo" src="./images/fri001.jpg">
+							</div>
+							<div>
+								<p author="Mario Huys" initials="DH">
+									A happy chap, as happy as the man on the moon, twinkling and mingling with the stars as companion.
+								</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri002 </h4>
+								<img class="photo" src="./images/fri002.jpg">
+							</div>
+							<div>
+								<p author="Mario Huys" initials="DH">Tipping the hat, Matt?</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri003 </h4>
+								<img class="photo" src="./images/fri003.jpg">
+							</div>
+							<div>
+								<p author="Mario Huys" initials="DH">
+									Vivid colors hiding dark clouds, or the beauty of betrayal.
+								</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri004 </h4>
+								<img class="photo" src="./images/fri004.jpg">
+							</div>
+							<div>
+								<p author="Mario Huys" initials="DH">
+									Dan Lester, evil finger puppetmaster.
+								</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri005 </h4>
+								<img class="photo" src="./images/fri005.jpg">
+							</div>
+							<div>
+								<p author="Mario Huys" initials="DH">
+									Is that a wink?
+								</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri006 </h4>
+								<img class="photo" src="./images/fri006.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri007 </h4>
+								<img class="photo" src="./images/fri007.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri008 </h4>
+								<img class="photo" src="./images/fri008.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri009 </h4>
+								<img class="photo" src="./images/fri009.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri010 </h4>
+								<img class="photo" src="./images/fri010.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri011 </h4>
+								<img class="photo" src="./images/fri011.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri012 </h4>
+								<img class="photo" src="./images/fri012.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri013 </h4>
+								<img class="photo" src="./images/fri013.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri014 </h4>
+								<img class="photo" src="./images/fri014.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri015 </h4>
+								<img class="photo" src="./images/fri015.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri016 </h4>
+								<img class="photo" src="./images/fri016.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri017 </h4>
+								<img class="photo" src="./images/fri017.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri018 </h4>
+								<img class="photo" src="./images/fri018.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri019 </h4>
+								<img class="photo" src="./images/fri019.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri020 </h4>
+								<img class="photo" src="./images/fri020.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri021 </h4>
+								<img class="photo" src="./images/fri021.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri022 </h4>
+								<img class="photo" src="./images/fri022.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri023 </h4>
+								<img class="photo" src="./images/fri023.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri024 </h4>
+								<img class="photo" src="./images/fri024.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri025 </h4>
+								<img class="photo" src="./images/fri025.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri026 </h4>
+								<img class="photo" src="./images/fri026.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri027 </h4>
+								<img class="photo" src="./images/fri027.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri028 </h4>
+								<img class="photo" src="./images/fri028.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri029 </h4>
+								<img class="photo" src="./images/fri029.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri030 </h4>
+								<img class="photo" src="./images/fri030.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri031 </h4>
+								<img class="photo" src="./images/fri031.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri032 </h4>
+								<img class="photo" src="./images/fri032.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri033 </h4>
+								<img class="photo" src="./images/fri033.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri034 </h4>
+								<img class="photo" src="./images/fri034.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri035 </h4>
+								<img class="photo" src="./images/fri035.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri036 </h4>
+								<img class="photo" src="./images/fri036.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri037 </h4>
+								<img class="photo" src="./images/fri037.jpg">
+							</div>
+							<div>
+								<p author="Brian Lovelace" initials="BL">Hiding his orders...</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri038 </h4>
+								<img class="photo" src="./images/fri038.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri039 </h4>
+								<img class="photo" src="./images/fri039.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri040 </h4>
+								<img class="photo" src="./images/fri040.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri041 </h4>
+								<img class="photo" src="./images/fri041.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri042 </h4>
+								<img class="photo" src="./images/fri042.jpg">
+							</div>
+							<div>
+								<p author="Mario Huys" initials="DH">As if these walls haven't seen enough treachery yet.</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri043 </h4>
+								<img class="photo" src="./images/fri043.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri044 </h4>
+								<img class="photo" src="./images/fri044.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri045 </h4>
+								<img class="photo" src="./images/fri045.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri046 </h4>
+								<img class="photo" src="./images/fri046.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri047 </h4>
+								<img class="photo" src="./images/fri047.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri048 </h4>
+								<img class="photo" src="./images/fri048.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri049 </h4>
+								<img class="photo" src="./images/fri049.jpg">
+							</div>
+							<div>
+								<p author="Brian Lovelace" initials="BL">They look like they're having a great time!</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri050 </h4>
+								<img class="photo" src="./images/fri050.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri051 </h4>
+								<img class="photo" src="./images/fri051.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri052 </h4>
+								<img class="photo" src="./images/fri052.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri053 </h4>
+								<img class="photo" src="./images/fri053.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri054 </h4>
+								<img class="photo" src="./images/fri054.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri055 </h4>
+								<img class="photo" src="./images/fri055.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri056 </h4>
+								<img class="photo" src="./images/fri056.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri057 </h4>
+								<img class="photo" src="./images/fri057.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri058 </h4>
+								<img class="photo" src="./images/fri058.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> fri059 </h4>
+								<img class="photo" src="./images/fri059.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="saturday" align="center">
+				<hr>
 				<h3> Saturday </h3>
-				<div>
-					 <div>
-						 <div align="center">
-							 <h4> 001 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/001.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 002 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/002.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 003 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/003.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 004 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/004.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 005 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/005.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 006 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/006.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 007 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/007.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 008 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/008.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 009 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/009.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 010 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/010.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 011 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/011.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 012 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/012.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 013 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/013.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 014 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/014.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 015 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/015.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 016 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/016.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 017 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/017.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 018 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/018.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 019 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/019.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 020 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/020.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 021 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/021.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 022 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/022.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 023 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/023.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 024 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/024.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 025 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/025.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 026 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/026.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 027 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/027.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 028 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/028.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 029 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/029.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 030 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/030.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 031 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/031.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 032 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/032.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 033 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/033.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 034 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/034.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 035 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/035.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 036 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/036.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 037 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/037.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 038 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/038.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 039 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/039.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 040 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/040.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 041 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/041.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 042 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/042.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 043 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/043.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 044 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/044.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 045 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/045.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 046 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/046.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 047 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/047.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 048 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/048.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 049 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/049.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 050 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/050.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 051 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/051.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 052 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Saturday/052.jpg">
-						 </div>
-					 </div>
-				 </div>
-			 </div>
-			 <div align="center">
+				<table class="album">
+					<tr>
+						<td>
+							<div>
+								<h4> sat001 </h4>
+								<img class="photo" src="./images/sat001.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat002 </h4>
+								<img class="photo" src="./images/sat002.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat003 </h4>
+								<img class="photo" src="./images/sat003.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat004 </h4>
+								<img class="photo" src="./images/sat004.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat005 </h4>
+								<img class="photo" src="./images/sat005.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat006 </h4>
+								<img class="photo" src="./images/sat006.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat007 </h4>
+								<img class="photo" src="./images/sat007.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat008 </h4>
+								<img class="photo" src="./images/sat008.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat009 </h4>
+								<img class="photo" src="./images/sat009.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat010 </h4>
+								<img class="photo" src="./images/sat010.jpg">
+							</div>
+							<div>
+								<p author="Brian Lovelace" initials="BL">I'd bet someone's planning a stab.</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat011 </h4>
+								<img class="photo" src="./images/sat011.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat012 </h4>
+								<img class="photo" src="./images/sat012.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat013 </h4>
+								<img class="photo" src="./images/sat013.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat014 </h4>
+								<img class="photo" src="./images/sat014.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat015 </h4>
+								<img class="photo" src="./images/sat015.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat016 </h4>
+								<img class="photo" src="./images/sat016.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat017 </h4>
+								<img class="photo" src="./images/sat017.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat018 </h4>
+								<img class="photo" src="./images/sat018.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat019 </h4>
+								<img class="photo" src="./images/sat019.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat020 </h4>
+								<img class="photo" src="./images/sat020.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat021 </h4>
+								<img class="photo" src="./images/sat021.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat022 </h4>
+								<img class="photo" src="./images/sat022.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat023 </h4>
+								<img class="photo" src="./images/sat023.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat024 </h4>
+								<img class="photo" src="./images/sat024.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat025 </h4>
+								<img class="photo" src="./images/sat025.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat026 </h4>
+								<img class="photo" src="./images/sat026.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat027 </h4>
+								<img class="photo" src="./images/sat027.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat028 </h4>
+								<img class="photo" src="./images/sat028.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat029 </h4>
+								<img class="photo" src="./images/sat029.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat030 </h4>
+								<img class="photo" src="./images/sat030.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat031 </h4>
+								<img class="photo" src="./images/sat031.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat032 </h4>
+								<img class="photo" src="./images/sat032.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat033 </h4>
+								<img class="photo" src="./images/sat033.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat034 </h4>
+								<img class="photo" src="./images/sat034.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat035 </h4>
+								<img class="photo" src="./images/sat035.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat036 </h4>
+								<img class="photo" src="./images/sat036.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat037 </h4>
+								<img class="photo" src="./images/sat037.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat038 </h4>
+								<img class="photo" src="./images/sat038.jpg">
+							</div>
+							<div>
+								<p author="Kevin Burt" initials="KJB">Paper, rock, scissors veteran.</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat039 </h4>
+								<img class="photo" src="./images/sat039.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat040 </h4>
+								<img class="photo" src="./images/sat040.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat041 </h4>
+								<img class="photo" src="./images/sat041.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat042 </h4>
+								<img class="photo" src="./images/sat042.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat043 </h4>
+								<img class="photo" src="./images/sat043.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat044 </h4>
+								<img class="photo" src="./images/sat044.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat045 </h4>
+								<img class="photo" src="./images/sat045.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat046 </h4>
+								<img class="photo" src="./images/sat046.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat047 </h4>
+								<img class="photo" src="./images/sat047.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat048 </h4>
+								<img class="photo" src="./images/sat048.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat049 </h4>
+								<img class="photo" src="./images/sat049.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat050 </h4>
+								<img class="photo" src="./images/sat050.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat051 </h4>
+								<img class="photo" src="./images/sat051.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sat052 </h4>
+								<img class="photo" src="./images/sat052.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="sunday" align="center">
+				<hr>
 				<h3> Sunday </h3>
-				<div>
-					 <div>
-						 <div align="center">
-							 <h4> 001 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/001.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 002 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/002.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 003 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/003.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 004 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/004.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 005 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/005.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 006 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/006.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 007 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/007.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 008 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/008.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 009 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/009.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 010 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/010.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 011 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/011.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 012 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/012.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 013 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/013.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 014 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/014.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 015 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/015.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 016 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/016.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 017 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/017.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 018 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/018.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 019 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/019.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 020 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/020.jpg">
-						 </div>
-					 </div>
-				 </div>
-				 <div>
-					 <div>
-						 <div align="center">
-							 <h4> 021 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/021.jpg">
-						 </div>
-					 </div>
-					 <div>
-						 <div align="center">
-							 <h4> 022 </h4>
-						 </div>
-						 <div align="center">
-							 <img src="./Sunday/022.jpg">
-						 </div>
-					 </div>
-				 </div>
-			 </div>
+				<table class="album">
+					<tr>
+						<td>
+							<div>
+								<h4> sun001 </h4>
+								<img class="photo" src="./images/sun001.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun002 </h4>
+								<img class="photo" src="./images/sun002.jpg">
+							</div>
+							<div>
+								<p author="Kevin Burt" initials="KJB">Let it go, mate... Let it go.</p>
+								<p author="Kevin Burt" initials="KJB">&quot;Sir, sorry, we're going to have to ask you to move along.  We have a Rumanian wedding booked for the hall.&quot;</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun003 </h4>
+								<img class="photo" src="./images/sun003.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun004 </h4>
+								<img class="photo" src="./images/sun004.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun005 </h4>
+								<img class="photo" src="./images/sun005.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun006 </h4>
+								<img class="photo" src="./images/sun006.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun007 </h4>
+								<img class="photo" src="./images/sun007.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun008 </h4>
+								<img class="photo" src="./images/sun008.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun009 </h4>
+								<img class="photo" src="./images/sun009.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun010 </h4>
+								<img class="photo" src="./images/sun010.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun011 </h4>
+								<img class="photo" src="./images/sun011.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun012 </h4>
+								<img class="photo" src="./images/sun012.jpg">
+							</div>
+							<div>
+								<p author="Brian Lovelace" initials="BL">Almost like a family picture!</p>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun013 </h4>
+								<img class="photo" src="./images/sun013.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun014 </h4>
+								<img class="photo" src="./images/sun014.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun015 </h4>
+								<img class="photo" src="./images/sun015.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun016 </h4>
+								<img class="photo" src="./images/sun016.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun017 </h4>
+								<img class="photo" src="./images/sun017.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun018 </h4>
+								<img class="photo" src="./images/sun018.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun019 </h4>
+								<img class="photo" src="./images/sun019.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun020 </h4>
+								<img class="photo" src="./images/sun020.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun021 </h4>
+								<img class="photo" src="./images/sun021.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<div>
+								<h4> sun022 </h4>
+								<img class="photo" src="./images/sun022.jpg">
+							</div>
+							<div>
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
 		<!-- Content Body End -->
 		</div>
 
@@ -1258,19 +1597,19 @@
 
 			<div>
 				<table>
-	  				<tbody>
+					<tbody>
 						<tr>
-						    <td>
-						    	<!-- Insert Contact Information! -->
-						    	<a href="mailto:woelpad@gmail.com">
-						    		<img src="../../Common/letter.gif" alt="Email writer thumbnail">
-						    	</a> 
-						    </td>
-						    <td>
-						    	<strong>
-						    		Mario Huys <br/>
-						    		(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
-						    	</strong> 
+						<td>
+							<!-- Insert Contact Information! -->
+							<a href="mailto:woelpad@gmail.com">
+								<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+							</a> 
+						</td>
+						<td>
+							<strong>
+								Mario Huys <br/>
+								(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+							</strong> 
 							</td>
 						</tr>
 					</tbody>
