@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> DP F2017M: WDC 2017 Photos</title>
+		<meta charset="utf-8"/> 
+		<!-- Point to whereever this stylesheet will exist-->
+		<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+		<style type="text/css">
+			/*
+			* Insert styles for the content_body here
+			*/
+			.content_body {
+				max-width: 2000px;
+			}
+			.photo {
+				height: 160px;
+			}
+			.content_body td {
+				text-align: center;
+			}
+			.content_body textarea {
+				text-align: left;
+			}
+			.comm1 {
+				width: 60%;
+				text-align: left;
+			}
+			.comm2 {
+				width: 60%;
+				text-align: right;
+			}
+		</style>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script>
+			function enlargePhotos() {
+				$('.photo').each(function (idx, el) {
+					var comm = $('<td>').attr('colspan', '2')
+					if (idx % 2)
+						$(el).parent().before(comm.attr('class', 'comm2'));
+					else
+						$(el).parent().after(comm.attr('class', 'comm1'));
+					$(el).wrap($('<a>').attr('href', $(el).attr('src')).attr('target', '_blank'));
+					var para = $('<p>');
+					var form = $('<form>').attr('method', 'post').attr('action', 'track.php');
+					var foto = $('<input>').attr('type', 'hidden').attr('name', 'photo').attr('value', $(this).attr('src').split('/')[2].split('.')[0]);
+					var author = $('<input>').attr('type', 'hidden').attr('name', 'author');
+					var init = $('<input>').attr('type', 'hidden').attr('name', 'initials');
+					var email = $('<input>').attr('type', 'hidden').attr('name', 'email');
+					var area = $('<textarea>').attr('name', 'comment').attr('cols', '60').attr('rows', '3').prop('required', true);
+					form.append(foto).append(author).append(init).append(email).append(area)
+						.append($('<br>')).append($('<button>').attr('type', 'submit').attr('name', 'send').prop('disabled', true).html('Submit'));
+					comm.append(para).append(form);
+					form.submit(function() {
+						$.ajax({
+							type: 'POST',
+							url: 'track.php',
+							data: $(this).serialize(),
+							success: function() {
+								var quote = area.val();
+								para.text(quote);
+								if (init.val()) {
+									para.append($('<i>').text(init.val()).prepend(' &mdash;'));
+								}
+								area.val('');
+							},
+							error: function(data, status, err) {
+								if (data.responseText != '') {
+									alert(data.responseText);
+								} else if (err != '') {
+									alert(err);
+								} else {
+									alert("An unexpected error of type " + status + " occurred. Please contact the author separately with your submissions.");
+								}
+							}
+						});
+						return false;
+					});
+				});
+			}
+			$(function() {
+				$('#identity').submit(function() {
+					return false;
+				});
+				$('#author').change(function() {
+					var author = $(this).val().trim();
+					if (author) {
+						var names = author.match(/[a-zA-Z]+/g), initials = '';
+						var idx, len = names.length;
+						for (idx = 0; idx < len; ++idx) {
+							initials += names[idx].substr(0, 1).toUpperCase();
+						}
+						$('#initials').val(initials).trigger('change');
+					}
+					activate($(this).attr('id'), author);
+				});
+				$('#initials').change(function() {
+					activate($(this).attr('id'), $(this).val());
+				});
+				$('#email').change(function() {
+					var email = $(this).val().trim();
+					if (email && !isEmail(email)) {
+						alert('Please enter a valid e-mail address.');
+					} else {
+						activate($(this).attr('id'), email);
+					}
+				});
+			});
+			function activate(label, value) {
+				var value = value.trim();
+				$('input[name=' + label + ']').each(function (idx, el) {
+					$(el).val(value);
+				});
+				var active = $('#author').val().trim() && $('#initials').val().trim() && isEmail($('#email').val().trim());
+				$('button[name=send]').each(function (idx, el) {
+					$(el).prop('disabled', !active);
+				});
+			}
+			function isEmail(value) {
+				return /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/.test(value);
+			}
+		</script>
+	</head>
+	<body onload="enlargePhotos()">
+		<div class="req_link_container">
+			<div class="req_link left_link">
+				<a href="../..">
+					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+			<div class="req_link right_link">
+				<a href="..">
+					<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+			<hr class="hr_rule top_hr">
+		</div>
+		<div class="centered">
+			<!-- Insert Author Name -->
+			<h1>WDC 2017 PHOTOS</h1>
+			<h2>by James Brooks</h2>
+			<hr class="hr_rule">
+		</div>
+		<div class="content_body justified padded_body">
+		<!-- Content Body -->
+			<div align="center">
+			<form id='identity'>
+				<label for='id-author'>Name:</label>
+				<input type='text' id='author' name='id-author' size='30'>
+				<label for='id-initials'>Initials:</label>
+				<input type='text' id='initials' name='id-initials' size='6'>
+				<br><label for='id-email'>E-mail:</label>
+				<input type='email' id='email' name='id-email' size='50'>
+			</form>
+			<h3> Friday </h3>
+			<table>
+				<tr>
+					<td>
+						<h4> 001 </h4>
+						<img class="photo" src="../images/fri001.jpg">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<h4> 002 </h4>
+						<img class="photo" src="../images/fri002.jpg">
+					</td>
+				</tr>
+			</table>
+		<!-- Content Body End -->
+		</div>
+
+		<div class="info_block padded_body">
+			<div>
+				<br/>
+				<br/>
+			</div>
+
+			<div>
+				<table>
+					<tbody>
+						<tr>
+						<td>
+							<!-- Insert Contact Information! -->
+							<a href="mailto:woelpad@gmail.com">
+								<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+							</a> 
+						</td>
+						<td>
+							<strong>
+								Mario Huys <br/>
+								(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+							</strong> 
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="dear_dp">
+				<p>
+					<i>
+						If you wish to e-mail feedback on this article to the author, and clicking 
+						on the envelope above does not work for you, feel free to use the 
+						
+						<a href="../Common/DearDP.html">
+							<q><strong>Dear DP...</strong></q>
+						</a> 
+
+						mail interface.
+					</i> 
+				</p>
+			</div>
+
+		</div>
+
+		<div class="req_link_container">
+			<hr class="hr_rule bot_hr">
+
+			<div class="req_link left_link">
+				<a href="../..">
+					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+
+			<div class="req_link right_link">
+				<a href="..">
+					<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+		</div>
+
+	</body>
+</html>
+
