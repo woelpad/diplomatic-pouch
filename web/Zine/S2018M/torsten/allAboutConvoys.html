@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> DP S2018M: Convoy Paradoxes </title>
+		<meta charset="utf-8"/> 
+		<!-- Point to whereever this stylesheet will exist-->
+		<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+		<style type="text/css">
+			/*
+			 * Insert styles for the content_body here
+			 */
+			 .content_body {
+			 	max-width: 2000px
+			 }
+		</style>
+	</head>
+	<body>
+		<div class="req_link_container">
+			<div class="req_link left_link">
+				<a href="../..">
+					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+			<div class="req_link right_link">
+				<a href="..">
+					<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+			<hr class="hr_rule top_hr">
+		</div>
+		<div class="centered">
+			<!-- Insert Author Name -->
+			<h1>MORE ABOUT THE CONVOY PARADOX THAN YOU COULD POSSIBLY WANT TO KNOW</h1>
+			<h2>by Torsten Bille</h2>
+			<hr class="hr_rule">
+		</div>
+		<div class="content_body justified padded_body">
+		<!-- Content Body -->
+			<p>
+				The basic fact about the convoy paradox in <span class="game_name">Diplomacy</span> is that it only happens when a convoyed attack tries to cut a support in or into a water province that contains a convoying fleet. You have two slightly different kinds of paradoxes: one where the support is given to an attack on the convoy that tries to cut the support, and one where the support is given towards another convoy.
+			</p>
+			<p>
+				The rule that is added to partly prevent paradoxes is this:
+			</p>
+			<div class="centered">
+				<p>
+					<strong>A convoyed army does not cut the support from a unit given to a fleet attacking the convoying fleet.</strong>
+				</p>
+			</div>
+			<p>
+				This rule unfortunately only prevents paradoxes of the first kind and only some of them, so it is necessary to add some more. The following additions have been suggested:
+			</p>
+			<div>
+				<strong>
+					<ol>
+						<li>
+							A convoyed army does not cut the support from a unit given in or into a water province that contains a convoying fleet, not even if the supporting unit is dislodged.
+						</li>
+						<li>
+							If one or more convoying fleets are attacked, the convoys are suspended, and the other moves are carried out first. Then the possible convoys are added, and the results are determined.
+						</li>
+						<li>
+							If a convoyed army is attacked, it is first determined if the convoy is possible without taking the convoyed attack into consideration. If there are several attacks of this kind, the possibility of these convoys	are determined without any of these attacks. Afterwards, the possible convoyed attacks are added, and the results are determined as usual. The final results do not change the possibility of the convoys.
+						</li>
+						<li>
+							If a convoying fleet is attacked from two sides causing a standoff, but each of the attacks regarded separately would dislodge the fleet, then the fleet keeps its position, but the convoy cannot be made.
+						</li>
+					</ol>
+				</strong>
+			</div>
+			<p>
+				Rule no. 1 – 3 focus on the problematic cutting of support. Rule no. 1 simply states that the support is not cut. Rule no. 2 postpones the cutting so much that it doesn't have any effect. Rule no. 3 allows the possible convoys to take place and make the cutting afterwards.
+			</p>
+			<p>
+				Rule no. 1 has been implemented in the DPjudge as a standard solution. There is no doubt that it prevents all the different paradoxes, but it violates the basic rules about cutting support.
+			</p>
+			<p>
+				Rule no. 2 is in fact the same rule as no. 1, just expressed differently.
+			</p>
+			<p>
+				Rule no. 3 also prevents all kinds of  paradoxes, but it in certain cases violates the rule that a dislodged fleet cannot make a convoy. You may also have a case where a convoy is first ruled impossible, and then when the results are determined the convoy may have been possible after all.  A corollary of this rule is that it is possible for a fleet to make a convoy and be dislodged afterwards. If this happens, and the convoyed attack bounces, then the army is destroyed and must be removed. This rule is going to be implemented in the DPjudge as BURN_CONVOYS.
+			</p>
+			<p>
+				Rule no. 4 does not focus on the paradox, even if it was originally suggested to eliminate a particular paradox. It is implemented in the DPjudge as SAFE_CONVOYS.
+			</p>
+			<p>
+				The challenge is to make an addition that eliminates the different kinds of paradoxes and also can be used generally when there isn't a paradox. My opinion is that when rule no. 1 is used generally, it has some (to me) unacceptable consequences, mainly because it allows a dislodged unit to give support. The consequences of rule no. 3 are more acceptable, though they are not perfect. Rule no. 4 is a good rule that should always be used, but it is not a general solution to the paradox problem.
+			</p>
+			<p>
+				Here is a (fairly complicated) example to illustrate the consequences of the different options:
+			</p>
+			<div>
+				<img class="image" src="../../Common/convoy_paradox/S2018M_torsten_board1.jpg">
+				<p>
+					<small>
+						English Fleet Edinburgh – North Sea </br>
+						English Fleet London supports Edinburgh – North Sea </br>
+						</br>
+
+						French Army Brest – London </br>
+						French Fleet English Channel convoys Brest – London </br>
+						French Fleet Belgium supports English Channel </br>
+						French Army Wales supports Brest – London </br>
+						</br>
+						Russian Army Norway – Belgium </br>
+						Russian Fleet North Sea  convoys Norway – Belgium </br>
+						</br>
+
+						Italian Fleet Mid-Atlantic Ocean – English Channel </br>
+						Italian Fleet Irish Sea supports Mid-Atlantic Ocean – English Channel </br>
+						</br>
+
+						German Fleet Denmark – North Sea </br>
+						German Fleet Helgoland Bight supports Denmark – North Sea
+					</small>
+				</p>
+			</div>
+			<p>
+				If you start with the North Sea, there is a standoff. So the Russian attack on Belgium bounces, but it cuts the support, the Italian attack on the English Channel succeeds, and the French Fleet is dislodged. The convoyed attack on London does not take place. Fine. But if you start with the English Channel, there is a standoff there as well. So the French attack on London succeeds, and the English Fleet is dislodged. The support for the attack from Edinburgh is cut, so the German attack from Denmark succeeds, and the Russian Fleet is dislodged. The convoyed attack on Belgium does not take place. A completely different result, and a very nice paradox.
+			</p>
+			<p>
+				If you use Rule no. 1 (or Rule no. 2), none of the supports from London and from Belgium are cut, so the result is: The Russian attack on Belgium bounces, and the Russian army stays in Norway. The French attack on London succeeds, and the English Fleet is dislodged. There is a standoff in both the North Sea and the English Channel.
+			</p>
+			<p>
+				If you use Rule no. 3, there is a standoff in both the North Sea and the English Channel, so both convoys are possible. The French attack on London succeeds, and the English Fleet is dislodged. The support for the attack from Edinburgh is cut, so the German attack from Denmark succeeds, and the Russian Fleet is dislodged behind the army's back. The Russian attack on Belgium bounces, but it cuts the support, and so the Italian attack on the English Channel succeeds, and the French Fleet is dislodged behind the army's back as well. This does not influence the French attack on London, because it succeeds, but the Russian Army can't get back from Belgium as the convoying fleet is dislodged, and so it is destroyed.
+			</p>
+			<p>
+				If you use Rule no. 4, the convoy in the North Sea is impossible because of the standoff there. The convoy in the English Channel is made, because the standoff there is not between competing attacks, so the result is: The French attack on London succeeds, and the English Fleet is dislodged. The support for the attack from Edinburgh is cut, so the German attack from Denmark succeeds, and the Russian Fleet is dislodged. There is a standoff in the English Channel.
+			</p>
+			<p>
+				So all the rules eliminate the paradox, but the resulting situations are very different. In this case I prefer the solution made by using Rule no. 4, because it doesn't violate any of the basic rules about cutting of support, and neither the one that a dislodged fleet cannot make a convoy.
+			</p>
+			<p>
+				The result of using Rule no.1:
+			</p>
+			<div>
+				<img class="image" src="../../Common/convoy_paradox/S2018M_torsten_board2.jpg">
+				<p>
+					<small>
+						French Army Brest goes to London. </br>
+						English Fleet London retreats to Yorkshire.
+					</small>
+				</p>
+			</div>
+			<p>
+				The result of using Rule no. 3:
+			</p>
+			<div>
+				<img class="image" src="../../Common/convoy_paradox/S2018M_torsten_board3.jpg">
+				<p>
+					<small>
+						Italian Fleet Mid-Atlantic Ocean goes to English Channel.</br>
+						</br>
+						French Fleet English Channel retreats to Brest.</br>
+						French Army Brest goes to London.</br>
+						</br>
+						English Fleet London retreats to Yorkshire.</br>
+						</br>
+						German Fleet Denmark goes to North Sea.</br>
+						</br>
+						Russian Fleet North Sea retreats to Skagerrak.</br>
+						Russian Army Norway is destroyed after unsuccessfully attacking Belgium.</br>
+					</small>
+				</p>
+			</div>
+			<p>
+				The result of using Rule no. 4:
+			</p>
+			<div>
+				<img class="image" src="../../Common/convoy_paradox/S2018M_torsten_board4.jpg">
+				<small>
+					<p>
+						French Army Brest goes to London.</br>
+						English Fleet London retreats to Yorkshire. </br>
+						German Fleet Denmark goes to North Sea. </br>
+						Russian Fleet North Sea retreats to Skagerrak.
+					</p>
+				</small>
+			</div>
+			<p>
+				The rules do not contradict each other, so you may look at the combinations of the rules. 
+				If you use Rule no. 1 together with Rule no. 3, all you get from Rule no. 3 is that the convoys are possible which is also the case using just Rule no. 1, so the result is the same as when using Rule no.1 alone. 
+			</p>
+			<p>
+				If you use Rule no. 1 together with Rule no. 4, the attack on Belgium is impossible, but as the support is not cut when using Rule no. 1, the result is again the same as when using Rule no. 1 alone. 
+			</p>
+			<p>
+				If you use Rule no. 3 together with Rule no. 4, the attack on Belgium is impossible, but the attack on London is possible, so you get the same result as when using Rule no. 4 alone.
+			</p>
+			<p>
+				And finally, if you use all three rules, you get the same result as when using Rule no. 1 alone.
+			</p>
+			<p>
+				The important change in result when you use Rule no. 1 is due to the fact that it allows violations of the basic rules about cutting support, and though it eliminates the paradox it is in my opinion too artificial, as I have stated earlier. Rule no. 3 allows a fleet to convoy first and be dislodged afterwards, and though it also violates the basic rule about making a convoy, it is more acceptable (at least to me).
+			</p>
+			<p>
+				To illustrate another aspect of Rule no. 3, you may make a slight change to the example: The German Fleet Helgoland Bight – Denmark (instead of supporting the attack from Denmark). Now you still have a paradox. The English attack on North Sea succeeds, and the Russian Fleet is dislodged. There is a standoff in English Channel, and so the convoyed attack on London succeeds and cuts the support. Now there is a standoff in  North Sea, and so the convoyed attack on Belgium is made and cuts the support. The Italian attack on English Channel succeeds and dislodges the French Fleet. The attack on London is not made, and the support is not cut. Now the English attack on North Sea succeeds, and so on.
+			</p>
+			<p>
+				If you use Rule no. 1, the support from London is not cut. The Russian Fleet in North Sea is dislodged, and the English Fleet from Edinburgh goes to North Sea. The convoyed attack on Belgium is not made, and there is a standoff in English Channel. The convoyed attack on London succeeds, and the French Army from Brest goes to London dislodging the English Fleet.
+			</p>
+			<p>
+				If you use Rule no. 3, the convoy to London is possible, but the convoy to Belgium is not, as the convoying fleet is apparently dislodged. There is a standoff in English Channel, the attack on London succeeds, and the French Army from Brest goes to London dislodging the English Fleet and cutting the support. This means that there is a standoff  in North Sea, and so the convoy would have been possible after all.
+			</p>
+			<p>
+				Rule no. 4 is not relevant in this case.
+			</p>
+			<p>
+				If you have the energy, you may also look at an example where there isn't a paradox, a modification of example no. 3 in my earlier article.
+			</p>
+			<div>
+				<img class="image" src="../../Common/convoy_paradox/S2018M_torsten_board5.jpg">
+				<p>
+					<small>
+						English Fleet North Atlantic Ocean – Mid Atlantic Ocean </br>
+						English Fleet Irish Sea supports North Atlantic Ocean – Mid Atlantic Ocean </br>
+						English Fleet English Channel – Brest </br>
+						</br>
+
+						French Fleet Gascony – Mid Atlantic Ocean </br>
+						French Fleet Spain (nc) supports Gascony – Mid Atlantic Ocean </br>
+						</br>				
+						Italian Army Portugal – Brest </br>
+						Italian Fleet Mid Atlantic Ocean convoys Portugal – Brest </br>
+						Italian Army Tuscany – Spain </br>
+						Italian Fleet Gulf of Lyon convoys Tuscany – Spain </br>
+						Italian Army Marseille supports Tuscany – Spain </br>
+						</br>
+						Austrian Fleet Western Mediterranean – Gulf of Lyon
+					</small>
+				</p>
+			</div>
+			<p>
+				Using the basic rules you get this result: The convoyed attack on Spain dislodges and destroys the French Fleet and cuts the support, and the Italian Army from Tuscany goes to Spain. The Italian Fleet in Mid Atlantic Ocean is dislodged and destroyed, and the English Fleet from North Atlantic Ocean goes to Mid Atlantic Ocean. The convoyed attack on Brest does not take place, and the English Fleet from English Channel goes to Brest.
+			</p>
+			<p>
+				If you use Rule no. 1, the result is: The convoyed attack on Spain dislodges and destroys the French Fleet, and the Italian Army in Tuscany goes to Spain, but the support is not cut. So there is a standoff in Mid Atlantic Ocean, and the convoyed attack on Brest is made. The attack bounces,  the Italian Army stays in Portugal, and the English Fleet stays in English Channel.
+			</p>
+			<p>
+				If you use Rule no. 3, the result is: Both convoys are possible, because there is a standoff in Mid Atlantic Ocean, and the attack on Gulf of Lyon is irrelevant. So the convoyed attack on Brest is made. The convoyed attack on Spain dislodges and destroys the French Fleet and cuts the support, and the Italian Army from Tuscany goes to Spain. The Italian Fleet in Mid Atlantic Ocean is dislodged and destroyed behind the army's back, and the English Fleet from North Atlantic Ocean goes to Mid Atlantic Ocean. The convoyed attack on Brest bounces, and as the convoying fleet is dislodged, the Italian Army is destroyed, but because of the bounce the English Fleet stays in English Channel.
+			</p>
+			<p>
+				If you use Rule no. 4, the result is the same as when just using the basic rules, because the only effect of this rule is that the convoyed attack on Brest is impossible, which it would have been in any case.
+			</p>
+			<p>
+				My opinion is that Rule no. 4 about beleaguered fleets is realistic and doesn't have any unacceptable side effects, and so it should be included in the general rules, if and when a new edition is made. Until then, just set the SAFE_CONVOYS option in the DPjudge as a habit.
+			</p>
+			<p>
+				About the use of Rule no. 1, I have earlier said that I am against any violations of the basic rules about cutting support. The Hasbro 2000 rule, that a convoyed attack does not cut the support given to an attack on the convoying fleet (unless the supporting fleet is dislodged), is acceptable because it is a part of the situation around the convoy, but as said before I think that Rule no. 1 is too artificial, and it should only be used if there isn't a better way of eliminating a paradox. I believe that I have shown that Rule no 3 is a better option, also when it comes to general use.
+			</p>
+		<!-- Content Body End -->
+		</div>
+
+		<div class="info_block padded_body">
+			<div>
+				<br/>
+				<br/>
+			</div>
+
+			<div>
+				<table>
+	  				<tbody>
+						<tr>
+						    <td>
+						    	<!-- Insert Contact Information! -->
+						    	<a href="mailto:itbille@fasttvnet.dk ">
+						    		<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+						    	</a> 
+						    </td>
+						    <td>
+						    	<strong>
+						    		Torsten Bille <br/>
+						    		[{Function}] <br/>
+						    		(<a href="mailto:itbille@fasttvnet.dk ">itbille@fasttvnet.dk </a>)
+						    	</strong> 
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="dear_dp">
+				<p>
+					<i>
+						If you wish to e-mail feedback on this article to the author, and clicking 
+						on the envelope above does not work for you, feel free to use the 
+						
+						<a href="../Common/DearDP.html">
+							<q><strong>Dear DP...</strong></q>
+						</a> 
+
+						mail interface.
+					</i> 
+				</p>
+			</div>
+
+		</div>
+
+		<div class="req_link_container">
+			<hr class="hr_rule bot_hr">
+
+			<div class="req_link left_link">
+				<a href="../..">
+					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+
+			<div class="req_link right_link">
+				<a href="..">
+					<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+		</div>
+
+	</body>
+</html>
