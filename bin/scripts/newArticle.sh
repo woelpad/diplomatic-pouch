@@ -22,6 +22,9 @@ if [ ! -d "./images" ]; then
   mkdir images
 fi
 
-mkdir $AUTHOR;
-cp ../Work/Template/template.html $AUTHOR/$ARTICLE
+if [ ! -d "$AUTHOR" ]; then
+  mkdir $AUTHOR;
+fi
+
+cp ../Work/Template/template.html $AUTHOR/$ARTICLE.html
 mkdir images/$ARTICLE
