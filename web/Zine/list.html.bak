@@ -17,7 +17,7 @@
 <A HREF="../..">
 <IMG SRC="../Common/DPLogo.gif"
 	ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
-<A HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<A HREF="../cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
 <IMG SRC="../Common/DPLinks.gif"
 	ALT="Shortcuts" HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
 <BR clear=both>
@@ -683,7 +683,7 @@ Some Comparisons with Diplomacy</b></a> (Frank Mayer)</LI></DD>
 <TR><TD align="right">Search the Zine for
 <INPUT NAME="search" VALUE="" size=30>
 
-<INPUT TYPE="image" SRC="/Excite/pictures/AT-search_button.gif" NAME="searchButton"
+<INPUT TYPE="image" SRC="../Excite/pictures/AT-search_button.gif" NAME="searchButton"
 HEIGHT=20 WIDTH=75 ALT="Search" BORDER=0></TD></TR>
 <INPUT TYPE="hidden" NAME="sp" VALUE="sp"
 <INPUT TYPE="hidden" NAME="smode" VALUE="subject">

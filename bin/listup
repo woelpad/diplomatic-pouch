@@ -64,7 +64,12 @@ do
 		echo "Section $anchor not found in $list."
 		continue
 	fi
-	topic=$(echo $section | sed -n 's/.*<i>\(.*\)<\/i>.*/\1/I p')
+	topic=$(echo $section | sed -n 's/.*<[bi]>\([^<>]*\)<\/[bi]>.*/\1/I p')
+	if [ -z "$topic" ]
+	then
+		echo "Topic not found in section $section."
+		continue
+	fi
 	author=$(echo $section | sed -n 's/.*<\/b> *\( (.*)\) *$/\1/I p')
 	# Remove topic if title starts with topic followed by a punctuation mark, or replace it with the name of the issue if the title is the topic.
 	if [[ "$title" == "$topic"* ]]
@@ -89,21 +94,54 @@ do
 			fi
 		fi
 	fi
-	preseason=
-	# Don't pipe the grep to while, otherwise the preseason variable will not be retained after it ends.
+	# Check if the article has appeared before in the current section.
+	prelink=
+	# Don't pipe the grep to while, otherwise the prelink variable will not be retained after it ends.
 	while read match
 	do
 		if [[ "$title" == $(echo $match | sed -n 's/.*<b>\(.*\)<\/b>.*/\1/I p') ]]
 		then
-			preseason=$(echo $match | sed -n 's/.*<a href="*\([^\">]*\)"*>.*/\1/I p')
-			if [ -n "$preseason" ]
+			prelink=$(echo $match | sed -n 's/.*<a href="*\([^\">]*\)"*>.*/\1/I p')
+			if [ -n "$prelink" ]
 			then
-				echo "\"$title\" already appeared in $preseason"
+				preseason="$(echo $prelink | sed -n 's/^\([^/]*\)\/.*$/\1/ p')"
+				if [[ "$preseason" != "$season" ]]
+				then
+					echo "\"$title\" already appeared in $preseason."
+				else
+					echo "\"$title\" already added."
+				fi
 				break
 			fi
 		fi
-	done <<< "$(sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{p}}' $list | grep "$title")"
-	if [ -n "$preseason" ]
+	done <<< "$(sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{/<a name=\"*'$anchor'\"*>/I,/^ *$/ p}}' $list | grep "$title")"
+	if [ -n "$prelink" ]
+	then
+		continue
+	fi
+	# Check if the article has appeared before in any section, unless the title is generic.
+	if [[ "$title" != "$issue" ]]
+	then
+		while read match
+		do
+			if [[ "$title" == $(echo $match | sed -n 's/.*<b>\(.*\)<\/b>.*/\1/I p') ]]
+			then
+				prelink=$(echo $match | sed -n 's/.*<a href="*\([^\">]*\)"*>.*/\1/I p')
+				if [ -n "$prelink" ]
+				then
+					preseason="$(echo $prelink | sed -n 's/^\([^/]*\)\/.*$/\1/ p')"
+					if [[ "$preseason" != "$season" ]]
+					then
+						echo "\"$title\" already appeared in $preseason under a different section."
+					else
+						echo "\"$title\" already appeared under a different section."
+					fi
+					break
+				fi
+			fi
+		done <<< "$(sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{p}}' $list | grep "$title")"
+	fi
+	if [ -n "$prelink" ]
 	then
 		continue
 	fi
@@ -113,7 +151,6 @@ do
 	fi
 	# Check if there's an article written in a later issue under this topic.
 	postseason=
-	# Don't pipe the grep to while, otherwise the preseason variable will not be retained after it ends.
 	while read match
 	do
 		if [[ $(norm $season) < $(norm $match) ]]

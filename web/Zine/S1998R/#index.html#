@@ -7,7 +7,7 @@
 <A HREF="../..">
 <IMG border=0 SRC="../../Common/DPLogo.gif"
 	ALT="The Diplomatic Pouch" HEIGHT=45 WIDTH=164 BORDER=0></A>
-<A HREF="/cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
+<A HREF="../../cgi-bin/imagemap/DipPouch/Common/DPLinks.map">
 <IMG border=0 SRC="../../Common/DPLinks.gif"
 	ALT="Shortcuts" HEIGHT=45 WIDTH=423 BORDER=0 ISMAP></A>
 <BR clear=both>
