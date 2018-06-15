@@ -53,11 +53,19 @@ do
 		continue
 	fi
 	info=$(echo "$info" | sed 's/[^^]*^//')
-	writer=$(echo "$info" | sed 's/^/ (/;s/\^.*/)/')
+	writer=$(echo "$info" | sed 's/\^.*//')
 	info=$(echo "$info" | sed 's/[^^]*^//')
 	path=$(echo "$info" | sed 's/\^.*//')
 	info=$(echo "$info" | sed 's/[^^]*^//')
 	title=$info
+	# Remove colon from writer.
+	if [[ "$writer" =~ :$ ]]
+	then
+		writer=$(echo "$writer" | sed 's/ *:$//')
+	else
+		echo "No colon after \"$writer\" for \"$title\""
+	fi
+	writer=' ('$writer')'
 	# Delete previous links to this article.
 	sed -i '/<!--.*-->/ !{/<!--/,/-->/ !{/<li>[ \t]*<a[ \t][ \t]*href=\"*'$(echo $path | sed 's/[/.]/\\\0/g')'\"*>/I d}}' $list
 	for anchor in $(echo $anchors | sed 's/[?&]/ i/g;s/#/ b/g')
@@ -181,7 +189,7 @@ do
 	done
 done <<< "$(cat $index | sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{
 	s/.*<h2.*>\(.*\)<\/h2>.*/\1/I p
-	/list.html[?#]/{s/[^?#]*//;s/".*//;N;s/[ \t]*\n[ \t]*/^/;s/<.>//g;s/:.*=\"*/^'$season'\//;s/\"*>/^/;s/<\/a>.*//I;p;}
+	/list.html[?#]/{s/[^?#]*//;s/".*//;N;s/[ \t]*\n[ \t]*/^/;s/<.>//g;s/ *<\/.*=\"*/^'$season'\//;s/\"*>/^/;s/<\/a>.*//I;p;}
 }}')"
 
 # Update the Pouch index.
