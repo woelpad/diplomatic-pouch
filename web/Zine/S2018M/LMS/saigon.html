@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> DP S2018M: Last Man Standing: Operation Saigon</title>
+<meta charset="utf-8"/> 
+<!-- Point to whereever this stylesheet will exist-->
+<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+<style type="text/css">
+/*
+* Insert styles for the content_body here
+*/
+.game_img {text-align: center; text-decoration: italic;}
+.map_img {width: 60%;}
+.content_body {}
+.inputBox {
+	color:			#000000;
+	background:		#FFFFFF;
+	border-color:	#000000;
+	border-top:		1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-right:	1px solid;
+	font-family:	verdana;
+	font-size:		14px;
+}
+</style>
+<script>
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+		var args = arguments;
+		return this.replace(/{(\d)}/g, function(match, number) {
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+}
+function changeMap(selector, reference, content) {
+	var selected = selector.options[selector.selectedIndex];
+	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
+	var text = document.getElementById(selector.name + '.text');
+	image.src = reference.format(selected.value);
+	if (anchor) anchor.href = image.src;
+	image.alt = text.innerHTML = content.format(selected.text);
+}
+</script>
+</head>
+<body>
+<div class="req_link_container">
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<hr class="hr_rule top_hr">
+</div>
+<div class="centered">
+<!-- Insert Author Name -->
+<h1>LAST MAN STANDING: OPERATION SAIGON</h1>
+<h2>by Mario Huys </h2>
+<hr class="hr_rule">
+</div>
+<div class="content_body justified padded_body">
+<table width="960" border="0" cellpadding="10" align="center">
+<tr>
+<td align="justify">
+<!-- Content Body -->
+
+<blockquote><b><i>
+Last Man Standing is a puzzle on the Diplomacy board, whereby the whole board gets reduced to a single unit. This unit must reach its final destination in a mere four game years, without any power capturing any neutral centers and with all powers still possessing at least one unit at the end of the second year. Your goal is to reconstruct the complete game history from the map given. For more details, read the <a href="../../S2017M/LMS/rollcall.html">LMS Roll Call</a>.
+</i></b></blockquote>
+
+<h3>
+Theater: Asia
+</h3>
+
+<p>
+After having visited every country twice or more, it's time to widen our horizons. Can there be a Last Man Standing on a different map? In principle the formula can be applied to any map if we vary the time scale. Bigger maps will likely require more years to finish, smaller maps less. But if we want to do it in the same timeframe of exactly 4 game years, it's best to search for maps with a similar size and density as Standard. One such map is Canton, taking Asia as its subject, which was developed exactly with the purpose to bring Hasbro's Colonial down to the scale and feel of Standard. Let's find out how well this accommodates LMS.
+</p>
+
+<div class="game_img">
+<a href="canton.pdf" target="_blank">
+<img src="../images/canton.gif" class="map_img" alt="Canton, Before Spring 1901">
+<br /><i>Canton, Before Spring 1901</i><br/>
+<b><i><small>Click to view a readable version in a separate window</small></i></b>
+</a>
+</div>
+
+<p>
+Canton is composed of a host of imperial and colonial powers at the start of the 20th century. Clockwise from the top there is Russia, Japan, Holland (in Indonesia), Turkey and in the center are China, France (in Indochina) and Britain (in India). China and Russia both start with 4 units and there are 36 centers in total, but for the purpose of a no-neutral LMS puzzle, only the first fact matters. Interestingly there are two island powers, Japan and Holland, with the Dutch military completely composed of fleets. 
+</p>
+
+<h3 id="JF-sai">
+Mission: The Fall of Saigon
+</h3>
+
+<div class="game_img">
+<img src="../images/lms_JF-sai.gif" class="map_img" alt="Japanese Fleet to Saigon, After Winter 1904">
+<br /><i>Japanese Fleet to Saigon, After Winter 1904</i>
+</div>
+
+<pre class="centered">
+Britain (0/6) Cal Chu Dam Del Mad Sum        
+China   (0/3) Han Sha Tib                    
+Japan   (1/5) Bor Jav Kyo Sai Tok            
+Russia  (0/8) Con Hue Irk Kha Mos Pek Sas Sev
+Turkey  (0/1) Bag                            
+</pre>
+
+<p>
+When France started to colonize Indochina, they first established themselves in South-Vietnam, making Saigon the capital of the region they called Cochinchina. But things never went easy. From the Siege of Saigon in 1860-1861 by the Vietnamese after the capture of the city by France only a year earlier, to the Fall of Saigon in 1975 at the hands of the North-Vietnamese Viet Cong, little over a century had passed of great suffering and greater humiliation. You have a mere four years to repeat the communists' greatest victory of the Cold War.
+</p>
+
+<h3 id="mad-kha">
+Mission: The Beringian Standstill
+</h3>
+
+<div class="game_img">
+<img src="../images/lms_mad-kha.gif" class="map_img" alt="Fleet Madras to Khabarovsk, After Winter 1904">
+<br /><i>Fleet Madras to Khabarovsk, After Winter 1904</i>
+</div>
+
+<pre class="centered">
+Britain (1/5) Cal Del Kha Mad Tib    
+China   (0/1) Pek                    
+France  (0/6) Bor Chu Han Hue Sai Sha
+Holland (0/2) Jav Sum                
+Japan   (0/3) Kyo Sas Tok            
+Turkey  (0/6) Bag Con Dam Irk Mos Sev
+</pre>
+
+<p>
+11,000 years ago, during the last ice age, humans crossed over to America from Asia using the land bridge that existed across the Bering Strait. But it's not like the people in China and Siberia just packed their bags one day and the next day walked across a bridge of sorts to discover a new continent waiting to be populated. Current research indicates that a number of tribes lived on the "bridge", in reality a stretch of steppe land as wide as Alaska, for thousands of years, blocked by a large ice shelf that stretched all the way down to Wisconsin. It's only when that ice shelf started to melt and inundate their land that they were able (or forced) to move on and spread throughout the American continent.
+</p>
+
+<p>
+Your task is to lead a single tribe, the survivors of a nuclear apocalypse that threw civilization back to the Stone Age, to Russia's Pacific Coast, where they can wait for the next ice age to end in order to cross over. With water levels retreating due to the ice buildup they might even discover a lost continent. Who knows?
+</p>
+
+<h3 id="lms_dam-pek">
+Report: The Silk Road &mdash; Army Damascus to Peking
+</h3>
+
+<div class="game_img">
+<img src="../images/lms_dam-pek13.gif" class="map_img" alt="Army Damascus to Peking, After Winter 1903">
+<br /><i>Army Damascus to Peking, After Winter 1903</i>
+</div>
+
+<p>
+When confronted with a new map for the first time, the first task is to familiarize yourself with the layout, the lay of the land so to say. Or more to the point, the lay of the land and sea.
+</p>
+
+<p>
+On the surface the Canton map mirrors the Standard map along a vertical axis. Left becomes right, right becomes left. Britain becomes Japan, the Mediterranean becomes the Indian Ocean and the Black Sea just stays the same. There's even an impassable Himalaya region in the center to mimic Switzerland and a supply center province for Hong Kong with just two neighbors just like Portugal. The eponymous province of Canton plays the role of Spain for the latter.
+</p>
+
+<p>
+But there are significant differences as well, most notably Holland, a multi-island nation centered on Indonesia that guards the passage between the Pacific and the Indian Ocean. As if to compensate for this increase in water provinces there's no equivalent for the Baltic Sea up North. This means that armies and fleets have more freedom to move in their own theaters, but less places to meet and interact with each other. 
+</p>
+
+<p>
+There are also now two powers with four home centers, Russia and China, and one extra neutral center. The extra Chinese home center in particular is relevant to this puzzle, especially since these four Chinese home centers are connected. Indeed on the problem map the three surviving raiders are each on a home center, with the Chinese sniper able to support the Turkish army first to Chunking and then to Peking. Three home centers captured means there can be four snipers in 1903 and thus plenty of opportunity to dislodge units late in the game.
+</p>
+
+<p>
+China proves itself worth of its Middle Kingdom label, as it's pretty central. But its coastline is exclusively eastward looking, so fleets from the western theater will have difficulty reaching it. This is particularly true for the Turkish and Russian fleets staring each other down across the Black Sea. An early removal is preferable. Either one can move to Armenia and get dislodged there in Fall 01. But only Russia is in a position to lose enough home centres to allow disbanding its Black Sea fleet. Both Khabarovsk and Irkutsk, its centers in the east, are vulnerable. Of these Khabarovsk is colored red (Japanese) on the problem map and in reach of Japanese troops (either by fleet or convoyed army), so as long as no Russian unit captures a center in the first year, this should be sufficient.
+</p>
+
+<p>
+Of note in the Turkish corner is that, with Armenia blocked and Persia a supply center, army Dam (Damascus) can only move once in the first year and needs to hold  in Fall either in Constantinople or Baghdad. Which one is irrelevant, as we'll be moving through Persia the next Spring to reach the supply center free Turkmenistan on our way to Tibet.
+</p>
+
+<p>
+The next fleet to consider is the British fleet in Madras on the Indian subcontinent. The distance to Peking is exactly 8, so in theory it could attempt to undertake that trip, if not for the fact that it would still be 2 provinces away from Peking at the start of 1904. Only one unit is allowed to be that far out, which we know to be the army in Tibet, not some fleet bordering on Shanghai. It's quite easy though to force an early disband by taking a center with a Chinese army. Just be careful to retake that center the next year and make it British again. Calcutta is ideal for the purpose, as the British army can move on to the Chinese home center of Chunking in the third year, which is where we find it on the problem map.
+</p>
+
+<p>
+We see further that France is taking the Dutch center of Borneo to get rid of one Dutch fleet. That still leaves two Dutch, two Japanese and one Russian fleet on the board in addition to the French fleet that ends up in Shanghai and the Chinese Peking fleet. With the British center gained in the first year it would be wise to build a second Chinese fleet to help in cleaning up the seas. The remaining Chinese armies can be employed to attack all the French, Russian and other armies coming their way. With some clever positioning, three prove to be sufficient. Let's see how this works.
+</p>
+
+<div class="game_img">
+<a href="lms_dam-pek.pdf#page=2" target="_blank">
+<img class="map_img" id="lms_dam-pek.1901.image" src="../images/lms_dam-pek05.gif" width="50%" alt="Army Damascus to Peking, After Winter 1901"/><br/>
+<b id="lms_dam-pek.1901.text">Army Damascus to Peking, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_dam-pek.1901" class="inputBox" onchange="changeMap(this, '../images/lms_dam-pek{0}.gif', 'Army Damascus to Peking, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05" selected>After Winter 1901</option>
+</select>
+</div>
+
+<p>
+<b>1901.</b> Marco Polo and his father and uncle set off from Damascus to reach Baghdad. They intend to travel further by ship, but seeing the deplorable state of the available vessels, they decide to go by land instead. The Indian Ocean is indeed a quiet place compared to the Pacific.
+</p>
+
+<div class="game_img">
+<a href="lms_dam-pek.pdf#page=6" target="_blank">
+<img class="map_img" id="lms_dam-pek.1902.image" src="../images/lms_dam-pek09.gif" width="50%" alt="Army Damascus to Peking, After Winter 1902"/><br/>
+<b id="lms_dam-pek.1902.text">Army Damascus to Peking, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_dam-pek.1902" class="inputBox" onchange="changeMap(this, '../images/lms_dam-pek{0}.gif', 'Army Damascus to Peking, {0}')">
+<option value="06">Spring 1902</option>
+<option value="07">Fall 1902</option>
+<option value="08">Winter 1902</option>
+<option value="09" selected>After Winter 1902</option>
+</select>
+</div>
+
+<p>
+<b>1902.</b> After traveling through Persia, the Silk Road should take them through Turkmenistan and Uzbekistan, through legendary cities such as Bokhara and Samarkand. Warfare however makes this a dangerous trip and they take a more southerly course, linking up with the Silk Road close to the Chinese border. Elsewhere battles rage throughout the continent.
+</p>
+
+<div class="game_img">
+<a href="lms_dam-pek.pdf#page=10" target="_blank">
+<img class="map_img" id="lms_dam-pek.1903.image" src="../images/lms_dam-pek13.gif" width="50%" alt="Army Damascus to Peking, After Winter 1903"/><br/>
+<b id="lms_dam-pek.1903.text">Army Damascus to Peking, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_dam-pek.1903" class="inputBox" onchange="changeMap(this, '../images/lms_dam-pek{0}.gif', 'Army Damascus to Peking, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
+
+<p>
+<b>1903.</b> After recovering from an illness Marco Polo continues his journey with his guardians. They skirt the Gobi desert and the Tibetan plateau. Life is harsh here. Population declines.
+</p>
+
+<div class="game_img">
+<a href="lms_dam-pek.pdf#page=14" target="_blank">
+<img class="map_img" id="lms_dam-pek.1904.image" src="../images/lms_dam-pek17.gif" width="50%" alt="Army Damascus to Peking, After Winter 1904"/><br/>
+<b id="lms_dam-pek.1904.text">Army Damascus to Peking, After Winter 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_dam-pek.1904" class="inputBox" onchange="changeMap(this, '../images/lms_dam-pek{0}.gif', 'Army Damascus to Peking, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
+
+<p>
+<b>1904.</b> Kublai Khan welcomes the European merchants in his summer palace in Xanadu. The long trip is over. Peace seems to have settled over the region, but that is very relative in the vast Chinese Mongolian Empire, where dynastic struggles, uprisings and external threats are a fact of life. But for the Polo's it's a time of trading and diplomatic missions in the service of the Emperor. Returning home is another matter altogether. The emperor is fond of young Marco, and only lets them go 17 years later, when his death is near and succession struggles are building up.
+</p>
+
+<h3 id="lms_han-cal">
+Report: The Bengal Tiger &mdash; French Army to Calcutta
+</h3>
+
+<div class="game_img">
+<img src="../images/lms_han-cal17.gif" class="map_img" alt="French Army to Calcutta, After Winter 1904">
+<br /><i>Italian Army to Liverpool, After Winter 1904</i>
+</div>
+
+<p>
+Our second puzzle centers on the colonial powers Britain and France. The French army leaves Indochina and seemingly singlehandedly conquers the whole Indian subcontinent, completely wiping the British competitor from the area. Meanwhile it loses most of its home centers to that other colonial super power, Holland. Alternate history, or what?
+</p>
+
+<p>
+This game is going to play out mostly on the wings. Although India is located pretty central in the Indian Ocean, very few fleets will visit its shores. The most prominent clues for this phenomenon are the captures of Baghdad and Hanoi, respectively by China and Holland, as can be attested on the final map. Neither center is within close reach of those powers. It takes three seasons for the Dutch fleet Borneo to reach Hanoi (four if it stops in Saigon on the way up) and four seasons for Chinese army Tibet to get to Baghdad. For what purpose?
+</p>
+
+<p>
+The answer is bound to the faith of the Russian fleets. As in the first puzzle you would expect Russia to lose a few centers in the first year to allow disbanding its faraway fleets. But instead Russia is clearly expanding, as Sasebo in Japan, Constantinople and even Peking, which it can capture with army Irkutsk, are all Russian. As with the British fleet in the first puzzle it's not possible to sail from Khabarovsk on Russia's Pacific coast (no, not Vladivostok, quite original, not?) to Calcutta in the give time span. And if it survives 1901, we need to eliminate it, the two Japanese fleets and the Dutch fleet with whatever is available. Which means China must become a second sniper country, at least until the second or third year (since it keeps Baghdad until the end). Two Chinese fleets would be best, but we'll make do with one and the proximity of the Chinese coast, allowing for the second sweeper to be an army.
+</p>
+
+<p>
+Meanwhile Fleet Sevastopol is in similar straits. Traveling through both the Bosporus and the Suez Canal it would take 8 turns to get to Calcutta, which means it would be out in the open ocean the year before, instead of on a supply center. That might still work out, but the Chinese capture of Baghdad gives us a better option. We can employ Turkey as a third sniper country, disbanding a sniper unit when Baghdad gets taken. Yes, it gets a little crazy when sniper countries attack each other, but the main concern is that each of them loses centers gradually, not that they lose all their centers. In fact Turkey will retain Damascus and just like China be spared from complete elimination.
+</p>
+
+<p>
+It's a pretty complicated dance, but if you pay close attention, it will all start to make sense. Let's check the solution.
+</p>
+
+<div class="game_img">
+<a href="lms_han-cal.pdf#page=2" target="_blank">
+<img class="map_img" id="lms_han-cal.1901.image" src="../images/lms_han-cal05.gif" width="50%" alt="Army Hanoi to Calcutta, After Winter 1901"/><br/>
+<b id="lms_han-cal.1901.text">Army Hanoi to Calcutta, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_han-cal.1901" class="inputBox" onchange="changeMap(this, '../images/lms_han-cal{0}.gif', 'Army Hanoi to Calcutta, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05" selected>After Winter 1901</option>
+</select>
+</div>
+
+<p>
+<b>1901.</b> Riding her tiger Durga, the Hindu goddess of war, spreads her eight arms in all directions with the aim of achieving peace through war (rulers love it when it's heavenly sanctioned). China picks a center from France, but loses one to Britain who decides to build a fleet. Meanwhile fleet Madras sails towards Egypt, followed by the Dutch. Setting up a convoy, perhaps?
+</p>
+
+<div class="game_img">
+<a href="lms_han-cal.pdf#page=6" target="_blank">
+<img class="map_img" id="lms_han-cal.1902.image" src="../images/lms_han-cal09.gif" width="50%" alt="Army Hanoi to Calcutta, After Winter 1902"/><br/>
+<b id="lms_han-cal.1902.text">Army Hanoi to Calcutta, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_han-cal.1902" class="inputBox" onchange="changeMap(this, '../images/lms_han-cal{0}.gif', 'Army Hanoi to Calcutta, {0}')">
+<option value="06">Spring 1902</option>
+<option value="07">Fall 1902</option>
+<option value="08">Winter 1902</option>
+<option value="09" selected>After Winter 1902</option>
+</select>
+</div>
+
+<p>
+<b>1902.</b> Ganesha, the elephant god, dances on the board. Army Baghdad gets a convoy, but not to a center. His hometown is captured by the Chinese who quickly disappear. Enough to make your head spin.
+</p>
+
+<div class="game_img">
+<a href="lms_han-cal.pdf#page=10" target="_blank">
+<img class="map_img" id="lms_han-cal.1903.image" src="../images/lms_han-cal13.gif" width="50%" alt="Army Hanoi to Calcutta, After Winter 1903"/><br/>
+<b id="lms_han-cal.1903.text">Army Hanoi to Calcutta, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_han-cal.1903" class="inputBox" onchange="changeMap(this, '../images/lms_han-cal{0}.gif', 'Army Hanoi to Calcutta, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
+
+<p>
+<b>1903.</b> Hanuman, the Monkey God, displays his excellent mastery of the martial arts to reduce the battlefield to a handful of heroes that will decide the final battle. Notice that the remaining blue army is now in Canton, three moves away from Calcutta, the end destination.
+</p>
+
+<div class="game_img">
+<a href="lms_han-cal.pdf#page=14" target="_blank">
+<img class="map_img" id="lms_han-cal.1904.image" src="../images/lms_han-cal17.gif" width="50%" alt="Army Hanoi to Calcutta, After Winter 1904"/><br/>
+<b id="lms_han-cal.1904.text">Army Hanoi to Calcutta, After Winter 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_han-cal.1904" class="inputBox" onchange="changeMap(this, '../images/lms_han-cal{0}.gif', 'Army Hanoi to Calcutta, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
+
+<p>
+<b>1904.</b> With studied calmness Kali, the black goddess of time and death and protector of Calcutta ("field of Kali"), lures her prey into her trap, then steps on it. Lord Shivu lies calm and prostrate beneath her, as only gods who have reached the ultimate dharma can.
+</p>
+
+<!-- Content Body End -->
+</div>
+
+<div class="info_block padded_body">
+<div>
+<br/>
+<br/>
+</div>
+
+<div>
+<table>
+<tbody>
+<tr>
+<td>
+<!-- Insert Contact Information! -->
+<a href="mailto:woelpad@gmail.com">
+<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+</a> 
+</td>
+<td>
+<strong>
+Mario Huys <br/>
+(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+</strong> 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!--
+<div class="dear_dp">
+<p>
+<i>
+If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the 
+
+<a href="../Common/DearDP.html">
+<q><strong>Dear DP...</strong></q>
+</a> 
+
+mail interface.
+</i> 
+</p>
+</div>
+-->
+
+</td>
+</tr>
+</table>
+</div>
+
+<div class="req_link_container">
+<hr class="hr_rule bot_hr">
+
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+</div>
+
+</body>
+</html>
