@@ -22,21 +22,21 @@
 </HEAD>
 
 <BODY LANG="en-US" TEXT="#000000" BGCOLOR="#ffffff" DIR="LTR">
-<P ALIGN=CENTER><A HREF="/"><IMG SRC="/Common/DPLogo.gif" NAME="Graphic1" ALT="The Diplomatic Pouch" ALIGN=BOTTOM WIDTH=164 HEIGHT=45 BORDER=0></A>
-<img border=0 src="/Common/DPLinks.gif" width="423"
+<P ALIGN=CENTER><A HREF="../../"><IMG SRC="../../Common/DPLogo.gif" NAME="Graphic1" ALT="The Diplomatic Pouch" ALIGN=BOTTOM WIDTH=164 HEIGHT=45 BORDER=0></A>
+<img border=0 src="../../Common/DPLinks.gif" width="423"
               height="45" alt="DPLinks" ismap usemap="#DPLinks">
 <map name="DPLinks">
-<area shape="rect" href="/Zine" alt="Zine" coords="0,0,55,45">
-<area shape="rect" href="/dpjudge" alt="DPjudge" coords="56,0,104,45">
-<area shape="rect" href="/Online" alt="Online" coords="105,0,177,45">
-<area shape="rect" href="/Face" alt="Face to Face" coords="178,0,234,45">
-<area shape="rect" href="/Email" alt="Email" coords="235,0,274,45">
-<area shape="rect" href="/Postal" alt="Postal" coords="275,0,320,45">
-<area shape="rect" href="/Showcase" alt="Showcase" coords="320,0,378,45">
-<area shape="rect" href="/shirts" alt="Shirts" coords="379,0,420,45">
-<area shape="rect" href="/" alt="HomePage" coords="0,0,423,45>
+<area shape="rect" href="../../Zine" alt="Zine" coords="0,0,55,45">
+<area shape="rect" href="../../dpjudge" alt="DPjudge" coords="56,0,104,45">
+<area shape="rect" href="../../Online" alt="Online" coords="105,0,177,45">
+<area shape="rect" href="../../Face" alt="Face to Face" coords="178,0,234,45">
+<area shape="rect" href="../../Email" alt="Email" coords="235,0,274,45">
+<area shape="rect" href="../../Postal" alt="Postal" coords="275,0,320,45">
+<area shape="rect" href="../../Showcase" alt="Showcase" coords="320,0,378,45">
+<area shape="rect" href="../../shirts" alt="Shirts" coords="379,0,420,45">
+<area shape="rect" href="../../" alt="HomePage" coords="0,0,423,45>
 </map>
-<BR clear="all"><IMG SRC="/Common/reddot.gif" NAME="Graphic3" ALIGN=BOTTOM WIDTH="100%" alt="" HEIGHT=2 BORDER=0>
+<BR clear="all"><IMG SRC="../../Common/reddot.gif" NAME="Graphic3" ALIGN=BOTTOM WIDTH="100%" alt="" HEIGHT=2 BORDER=0>
 </MAP>
 </P>
 
@@ -51,7 +51,7 @@
 <tr>
 <td align="justify">
 <dl><dt>
-<a href="../list.html#About"><img src="../Common/Info.gif" name="Graphic4" align="bottom" hspace="5" width="45" height="45" border="2"></a>
+<a href="../list.html#About"><img src="../Common/About.gif" name="Graphic4" align="bottom" hspace="5" width="45" height="45" border="2"></a>
 <b><i>The Editor:</i> <a href="Editor/about.html">About The Diplomatic Pouch</a></b>
 </dt><dd style="margin-bottom: 0.2in">
 Beware the First of April, and we're not fooling!
@@ -65,7 +65,7 @@ Chris Hughes, who's going to lead the new Mobile section of the Pouch, presents 
 </dd></dl>
 
 <dl><dt>
-<a href="../list.html#Peeriblah"><img src="../Common/Article.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
+<a href="../list.html#Peeriblah"><img src="../Common/History.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
 <b><i>Larry Peery:</i> <a href="Peery/BadassEgghead.html">The Badass and the Egghead: LeMay and Schriever</a></b>
 </dt><dd style="margin-bottom: 0.2in;">
 An examination of two distinct leadership styles of men who may have <em>said</em> 'Peace is Our Profession', but whose hands hovered over the red button of Armageddon.
@@ -86,21 +86,21 @@ A <em>Gegenpunkt</em> to Toby's article. Norm's experience clearly goes beyond c
 </dd></dl>
 
 <dl><dt>
-<a href="../list.html#Peeriblah"><img src="../Common/Article.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
+<a href="../list.html#Peeriblah"><img src="../Common/History.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
 <b><i>Larry Peery:</i> <a href="Peery/LittleFries.html">The Congress of Vienna &mdash; The Little Fries Get Fried</a></b>
 </dt><dd style="margin-bottom: 0.2in;">
 The much-anticipated continuation of the Congress of Vienna saga.  
 </dd></dl>
 
 <dl><dt>
-<a href="../list.html#Humor"><img src="../Common/Music.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
+<a href="../list.html#Humor"><img src="../Common/Song.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
 <b><i>Harold Reynolds:</i> <a href="Reynolds/haiku.html">A Diplomacy Haiku</a></b>
 </dt><dd style="margin-bottom: 0.2in;">
 <em>The Zine's</em> Poet Laureate presents something completely different and served it with <em>sushi</em> and <em>sake</em>.
 </dd></dl>
 
 <dl><dt>
-<a href="../list.html#History"><img src="../Common/Article.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
+<a href="../list.html#History"><img src="../Common/History.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
 <b><i>Kevin Burt:</i> <a href="Burt/zimmermann.html">The Zimmermann Telegram</a></b>
 </dt><dd style="margin-bottom: 0.2in;">
 <em>What if</em> we wonder... Are you supposed to tip the delivery boy?
@@ -128,7 +128,7 @@ The author opines on ducks and kingmakers [sic].
 </dd></dl>
 
 <dl><dt>
-<a href="../list.html#History"><img src="../Common/Article.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
+<a href="../list.html#History"><img src="../Common/History.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
 <b><i>Kevin Burt:</i> <a href="Burt/crypto.html">Crypto: The Alchemy of Diplomacy</a></b>
 </dt><dd style="margin-bottom: 0.2in;">
 If espionage is the second oldest profession, then it needs its own jargon.
@@ -141,7 +141,7 @@ If espionage is the second oldest profession, then it needs its own jargon.
 </dd></dl> -->
 
 <dl><dt>
-<a href="../list.html#LMS"><img src="../Common/soldier.png" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
+<a href="../list.html#LMS"><img src="../Common/LMS.png" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
 <b><i>Mario Huys:</i> <a href="LMS/lms_rome.html">Last Man Standing: Operation Rome</a></b>
 </dt><dd style="margin-bottom: 0.2in;">
 Order a pizza, and solve a puzzle fit for any <em>piazza.</em>
@@ -155,7 +155,7 @@ Surely he can't be referring to "Old Nick" &#8212; the Devil himself!
 </dd></dl>
 
 <dl><dt>
-<a href="../list.html#Peeriblah"><img src="../Common/Article.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
+<a href="../list.html#Peeriblah"><img src="../Common/History.gif" name="Graphic4" align="bottom" border="2" height="45" hspace="5" width="45"></a>
 <b><i>Larry Peery:</i> <a href="Peery/defeat.html">Peeriblah Goes Down to Defeat</a></b>
 </dt><dd style="margin-bottom: 0.2in;">
 Another course of Szechuan-American diplomacy is served.  Will we be hungry again in an hour?
@@ -200,7 +200,7 @@ I thought it appropriate to reprint an article from the man himself as a Blast f
 <font size="-2">
 Email Website admin <a href="mailto:webmaster@diplom.org">here</a><br>
 <br><a href="http://validator.w3.org/check/referer"><img border="0"
-      src="/images/valid-html401.gif"
+      src="../../images/valid-html401.gif"
 	        alt="Valid HTML 4.01!" height="31" width="88"></a>
 
 

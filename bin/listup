@@ -46,94 +46,150 @@ issue=
 shopt -s nocasematch
 while read info
 do
-	anchor=$(echo "$info" | sed 's/\^.*//')
-	if [[ "$anchor" == "$info" ]]
+	anchors=$(echo "$info" | sed 's/\^.*//')
+	if [[ "$anchors" == "$info" ]]
 	then
-		issue=$anchor
+		issue=$anchors
 		continue
 	fi
 	info=$(echo "$info" | sed 's/[^^]*^//')
-	writer=$(echo "$info" | sed 's/^/ (/;s/\^.*/)/')
+	writer=$(echo "$info" | sed 's/\^.*//')
 	info=$(echo "$info" | sed 's/[^^]*^//')
 	path=$(echo "$info" | sed 's/\^.*//')
 	info=$(echo "$info" | sed 's/[^^]*^//')
 	title=$info
-	section=$(cat $list | sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{/<a name=\"*'$anchor'\"*>/I p}}')
-	if [ -z "$section" ]
+	# Remove colon from writer.
+	if [[ "$writer" =~ :$ ]]
 	then
-		echo "Section $anchor not found in $list."
-		continue
+		writer=$(echo "$writer" | sed 's/ *:$//')
+	else
+		echo "No colon after \"$writer\" for \"$title\""
 	fi
-	topic=$(echo $section | sed -n 's/.*<i>\(.*\)<\/i>.*/\1/I p')
-	author=$(echo $section | sed -n 's/.*<\/b> *\( (.*)\) *$/\1/I p')
-	# Remove topic if title starts with topic followed by a punctuation mark, or replace it with the name of the issue if the title is the topic.
-	if [[ "$title" == "$topic"* ]]
-	then
-		trunk=$(echo "$title" | sed 's/'$(echo "$topic" | sed 's/././g')'//')
-		if [ -z "$trunk" ]
+	writer=' ('$writer')'
+	# Delete previous links to this article.
+	sed -i '/<!--.*-->/ !{/<!--/,/-->/ !{/<li>[ \t]*<a[ \t][ \t]*href=\"*'$(echo $path | sed 's/[/.]/\\\0/g')'\"*>/I d}}' $list
+	for anchor in $(echo $anchors | sed 's/[?&]/ i/g;s/#/ b/g')
+	do
+		emphasis=$(echo $anchor | sed 's/^\(.\).*/\1/')
+		anchor=$(echo $anchor | sed 's/^.\(.*\)/\1/')
+		if [ -z "$anchor" ]
 		then
-			if [ -z "$issue" ]
+			continue
+		fi
+		section=$(cat $list | sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{/<a name=\"*'$anchor'\"*>/I p}}')
+		if [ -z "$section" ]
+		then
+			echo "Section $anchor not found in $list."
+			continue
+		fi
+		topic=$(echo $section | sed -n 's/.*<[bi]>\([^<>]*\)<\/[bi]>.*/\1/I p')
+		if [ -z "$topic" ]
+		then
+			echo "Topic not found in section $section."
+			continue
+		fi
+		author=$(echo $section | sed -n 's/.*<\/b> *\( (.*)\) *$/\1/I p')
+		# Remove topic if title starts with topic followed by a punctuation mark, or replace it with the name of the issue if the title is the topic.
+		if [[ "$title" == "$topic"* ]]
+		then
+			trunk=$(echo "$title" | sed 's/'$(echo "$topic" | sed 's/././g')'//')
+			if [ -z "$trunk" ]
 			then
-				echo "No issue name found for topic \"$topic\""
-				continue
-			fi
-			title=$issue
-		else
-			tail=$(echo "$trunk" | sed '/^ *.  */ {s/^ *.  *//;q};s/^ *\&[^;][^;]*;  *//')
-			if [ -n "$tail" ]
-			then
-				if [[ "$trunk" != "$tail" ]]
+				if [ -z "$issue" ]
 				then
-					title=$tail
+					echo "No issue name found for topic \"$topic\""
+					continue
+				fi
+				title=$issue
+			else
+				tail=$(echo "$trunk" | sed '/^ *.  */ {s/^ *.  *//;q};s/^ *\&[^;][^;]*;  *//')
+				if [ -n "$tail" ]
+				then
+					if [[ "$trunk" != "$tail" ]]
+					then
+						title=$tail
+					fi
 				fi
 			fi
 		fi
-	fi
-	preseason=
-	# Don't pipe the grep to while, otherwise the preseason variable will not be retained after it ends.
-	while read match
-	do
-		if [[ "$title" == $(echo $match | sed -n 's/.*<b>\(.*\)<\/b>.*/\1/I p') ]]
-		then
-			preseason=$(echo $match | sed -n 's/.*<a href="*\([^\">]*\)"*>.*/\1/I p')
-			if [ -n "$preseason" ]
+		# Check if the article has appeared before in the current section.
+		prelink=
+		# Don't pipe the grep to while, otherwise the prelink variable will not be retained after it ends.
+		while read match
+		do
+			if [[ "$title" == $(echo $match | sed -n 's/.*<b>\(.*\)<\/b>.*/\1/I p') ]]
 			then
-				echo "\"$title\" already appeared in $preseason"
+				prelink=$(echo $match | sed -n 's/.*<a href="*\([^\">]*\)"*>.*/\1/I p')
+				if [ -n "$prelink" ]
+				then
+					preseason="$(echo $prelink | sed -n 's/^\([^/]*\)\/.*$/\1/ p')"
+					if [[ "$preseason" != "$season" ]]
+					then
+						echo "\"$title\" already appeared in $preseason."
+					else
+						echo "\"$title\" already added."
+					fi
+					break
+				fi
+			fi
+		done <<< "$(sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{/<a name=\"*'$anchor'\"*>/I,/^ *$/ p}}' $list | grep "$title")"
+		if [ -n "$prelink" ]
+		then
+			continue
+		fi
+		# Check if the article has appeared before in any section, unless the title is generic.
+		if [[ "$emphasis" == "b" && "$title" != "$issue" ]]
+		then
+			while read match
+			do
+				if [[ "$title" == $(echo $match | sed -n 's/.*<b>\(.*\)<\/b>.*/\1/I p') ]]
+				then
+					prelink=$(echo $match | sed -n 's/.*<a href="*\([^\">]*\)"*>.*/\1/I p')
+					if [ -n "$prelink" ]
+					then
+						preseason="$(echo $prelink | sed -n 's/^\([^/]*\)\/.*$/\1/ p')"
+						if [[ "$preseason" != "$season" ]]
+						then
+							echo "\"$title\" already appeared in $preseason under a different section."
+						else
+							echo "\"$title\" already appeared under a different section."
+						fi
+						break
+					fi
+				fi
+			done <<< "$(sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{p}}' $list | grep "$title")"
+		fi
+		if [ -n "$prelink" ]
+		then
+			continue
+		fi
+		if [[ "$writer" == "$author" ]]
+		then
+			writer=
+		fi
+		# Check if there's an article written in a later issue under this topic.
+		postseason=
+		while read match
+		do
+			if [[ $(norm $season) < $(norm $match) ]]
+			then
+				postseason=$match
 				break
 			fi
-		fi
-	done <<< "$(sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{p}}' $list | grep "$title")"
-	if [ -n "$preseason" ]
-	then
-		continue
-	fi
-	if [[ "$writer" == "$author" ]]
-	then
-		writer=
-	fi
-	# Check if there's an article written in a later issue under this topic.
-	postseason=
-	# Don't pipe the grep to while, otherwise the preseason variable will not be retained after it ends.
-	while read match
-	do
-		if [[ $(norm $season) < $(norm $match) ]]
+		done <<< "$(sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{/<a name=\"*'$anchor'\"*>/I,/^ *$/ {s/.*<a href=\"*\([SFW][0-9][0-9]*[MRAB]\)\/.*/\1/I p}}}' $list)"
+		entry=$(echo "<dd><li><a href=\"$path\"><$emphasis>$title</$emphasis></a>$writer</li></dd>")
+		if [ -z "$postseason" ]
 		then
-			postseason=$match
-			break
+			sed -i '/<!--.*-->/ !{/<!--/,/-->/ !{/<a name=\"*'$anchor'\"*>/I,/^ *$/ {/^ *$/ i'"$entry"'
+			}}}' $list
+		else
+			sed -i '/<!--.*-->/ !{/<!--/,/-->/ !{/<a name=\"*'$anchor'\"*>/I,/<a href=\"*'$postseason'\//I {/<a href=\"*'$postseason'\//I i'"$entry"'
+			}}}' $list
 		fi
-	done <<< "$(sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{/<a name=\"*'$anchor'\"*>/I,/^ *$/ {s/.*<a href=\"*\([SFW][0-9][0-9]*[MRAB]\)\/.*/\1/I p}}}' $list)"
-	entry=$(echo "<dd><li><a href=\"$path\"><b>$title</b></a>$writer</li></dd>")
-	if [ -z "$postseason" ]
-	then
-		sed -i '/<!--.*-->/ !{/<!--/,/-->/ !{/<a name=\"*'$anchor'\"*>/I,/^ *$/ {/^ *$/ i'"$entry"'
-		}}}' $list
-	else
-		sed -i '/<!--.*-->/ !{/<!--/,/-->/ !{/<a name=\"*'$anchor'\"*>/I,/<a href=\"*'$postseason'\//I {/<a href=\"*'$postseason'\//I i'"$entry"'
-		}}}' $list
-	fi
+	done
 done <<< "$(cat $index | sed -n '/<!--.*-->/ !{/<!--/,/-->/ !{
 	s/.*<h2.*>\(.*\)<\/h2>.*/\1/I p
-	/list.html#/{s/[^#]*#//;s/".*//;N;s/[ \t]*\n[ \t]*/^/;s/<.>//g;s/:.*=\"*/^'$season'\//;s/\"*>/^/;s/<\/a>.*//I;p;}
+	/list.html[?#]/{s/[^?#]*//;s/".*//;N;s/[ \t]*\n[ \t]*/^/;s/<.>//g;s/ *<\/.*=\"*/^'$season'\//;s/\"*>/^/;s/<\/a>.*//I;p;}
 }}')"
 
 # Update the Pouch index.
