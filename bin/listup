@@ -219,7 +219,6 @@ do
 	}}')"
 done
 
-exit
 # Update the Pouch index.
 pouch=$(operate ../index.html)
 if [ ! -f $pouch ]

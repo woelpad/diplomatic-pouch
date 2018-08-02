@@ -7,13 +7,20 @@
 	<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1" />
 	<script>
 	function toggleLayer(whichLayer)
-	{	var elem, vis;
+	{
+		var elem, vis;
 		elem = document.getElementById(whichLayer);
 		vis = elem.style;
 		if (vis.display==''&&elem.offsetWidth!=undefined&&elem.offsetHeight!=undefined)
 			vis.display = (elem.offsetWidth!=0&&elem.offsetHeight!=0)?'inline':'none';
 		vis.display = (vis.display==''||vis.display!='none')?'none':'inline';
 		if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
+	}
+	var first = true;
+	function tip()
+	{
+		alert(first ? 'Double check the title.' : 'A second tip? That will cost you double.');
+		first = !first;
 	}
 	</script>
 </head>
@@ -178,15 +185,19 @@ But Holmes refused to be excused. "The best riddles, like the best traps, have m
 </p>
 
 <p>
-Unfortunately she did not show up on our next appointment. I was at my fourth straight coffee, when suddenly a boy came in with a letter. He looked around, then came straight to my table. "A letter for you, sir. That will be 50 cents." I gave him 1 franc and he happily took off. I opened the envelope, which scented like the lady I was with the day before, and in it I found a map and a note, written in her exquisite handwriting. There could be no doubt about it. The note said: <i>"For a true Double French, meet me in a fortnight in the restaurant car of the 17:34 train departing from the central station in the city where the first army from Paris has arrived and bound for the same final destination as army London on the accompanying map."</i>
+Unfortunately she did not show up on our next appointment. I was at my fourth straight coffee, when suddenly a boy came in with a letter. He looked around, then came straight to my table. "A letter for you, sir. That will be 50 cents." I gave him 1 franc and he happily took off. I opened the envelope, which scented like the lady I was with the day before, and in it I found a map and a note, written in her exquisite handwriting. There could be no doubt about it."
 </p>
 
 <p>
-I looked at the map and I was stunned. It was a Diplomacy map, so much was clear. But there were no units on it and the colors of the dots were all over the place. Here, take a look."
+He reached inside his jacket for an envelope from which he took out the note and started reading it aloud. The note said: <i>"For a true Double French, meet me in a fortnight in the restaurant car of the 17:34 train departing from the central station in the city where the first army from Paris has arrived and bound for the same final destination as army London on the accompanying map."</i>
 </p>
 
 <p>
-He reached inside his jacket for an envelope from which he produced both the letter and the map. 
+He gave Holmes the note and said: "I looked at the map and I was stunned. It was a Diplomacy map, so much was clear. But there were no units on it and the colors of the dots were all over the place. Here, take a look."
+</p>
+
+<p>
+Taking the folded map out of the envelope, he unfolded it and laid it out on the table. 
 </p>
 
 <p align="center">
@@ -223,7 +234,7 @@ Are you able to peel away the layers and solve the riddle? What train should the
 
 <h2 align="left"><b><font color="red">
 <i>...and for the price of a coffee, here's one more
-<a href="#" onclick="alert('Double check the title.');return false;"><font color="red">tip here</font></a>....
+<a href="#" onclick="tip(); return false;"><font color="red">tip here</font></a>....
 </i></font></b>
 </h2>
 
