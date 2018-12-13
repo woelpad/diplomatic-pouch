@@ -13,6 +13,27 @@
 	  gtag('config', 'UA-123251121-1');
 	</script>
 	<meta http-equiv=Content-Type content="text/html; charset=iso-8859-1" />
+	<!-- Point to whereever this stylesheet will exist-->
+	<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+	<style type="text/css">
+	/*
+	* Insert styles for the content_body here
+	*/
+	.game_img {text-align: center; text-decoration: italic;}
+	.map_img {width: 60%;}
+	.content_body {}
+	.inputBox {
+		color:			#000000;
+		background:		#FFFFFF;
+		border-color:	#000000;
+		border-top:		1px solid;
+		border-bottom:	1px solid;
+		border-left:	1px solid;
+		border-right:	1px solid;
+		font-family:	verdana;
+		font-size:		14px;
+	}
+	</style>
 	<script>
 	function toggleLayer(whichLayer)
 	{
@@ -23,6 +44,23 @@
 			vis.display = (elem.offsetWidth!=0&&elem.offsetHeight!=0)?'inline':'none';
 		vis.display = (vis.display==''||vis.display!='none')?'none':'inline';
 		if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
+	}
+	if (!String.prototype.format) {
+		String.prototype.format = function() {
+			var args = arguments;
+			return this.replace(/{(\d)}/g, function(match, number) {
+				return typeof args[number] != 'undefined' ? args[number] : match;
+			});
+		};
+	}
+	function changeMap(selector, reference, content) {
+		var selected = selector.options[selector.selectedIndex];
+		var image = document.getElementById(selector.name + '.image');
+		var anchor = document.getElementById(selector.name + '.anchor');
+		var text = document.getElementById(selector.name + '.text');
+		image.src = reference.format(selected.value);
+		if (anchor) anchor.href = image.src;
+		image.alt = text.innerHTML = content.format(selected.text);
 	}
 	</script>
 </head>
@@ -67,6 +105,11 @@
 <table width="90%" border="0" align="center">
 <tbody>	<tr>	<td align="justify">
 <! ------------------------------------------------------------- >
+
+<div class="game_img">
+<img src="../images/DoubleFrench.gif" class="map_img" alt="Double French">
+</div>
+
 <p>
 The three of us looked together at the map. Holmes took a sip of his Turkish coffee, then looked up at me. "Watson, where are my manners? Let me make you a cup. Sugar?"
 </p>
@@ -255,6 +298,22 @@ Seeing us nodding, he continued: "We'll build a fleet in Brest to take London. A
 "You both have a point. But looking at the Austrian centers, more specifically the Austrian home centers that get captured in the third year, Vienna and Budapest, our more pressing need is to have a unit in the center. I'll opt for an army in Marseilles."
 </p>
 
+<div class="game_img">
+<a href="DoubleFrench.pdf#page=2" target="_blank">
+<img class="map_img" id="DoubleFrench.1901.image" src="../images/DoubleFrench05.gif" width="50%" alt="Double French, After Winter 1901"/><br/>
+<b id="DoubleFrench.1901.text">Double French, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="DoubleFrench.1901" class="inputBox" onchange="changeMap(this, '../images/DoubleFrench{0}.gif', 'Double French, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05" selected>After Winter 1901</option>
+</select>
+</div>
+
 <p>
 The five units were moved to their English spots: Munich to Denmark, Venice to Serbia, Western Med to Naples, Brest to London and Marseilles to Tyrolia. Four extra units could be built now in five centers, thanks to the freeing up of the German centers captured in the first year. Armies in Munich and Venice were definitely needed, but the two builds in the French home centers again posed challenges.
 </p>
@@ -271,9 +330,39 @@ The five units were moved to their English spots: Munich to Denmark, Venice to S
 "I agree with the fleet in Marseilles," said Holmes. "But an army in Paris can only move so far. There's no use in sending it to Munich, as we'll be building another army there anyway. And from Ruhr it can only capture adjacent centers in the final year, as both Berlin and Denmark are already conquered by then. There's much more mileage in having a fleet in the North Sea, which can reach both Sweden and St. Petersburg. Let us add another fleet in Brest."
 </p>
 
+<div class="game_img">
+<a href="DoubleFrench.pdf#page=6" target="_blank">
+<img class="map_img" id="DoubleFrench.1902.image" src="../images/DoubleFrench09.gif" width="50%" alt="Double French, After Winter 1902"/><br/>
+<b id="DoubleFrench.1902.text">Double French, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="DoubleFrench.1902" class="inputBox" onchange="changeMap(this, '../images/DoubleFrench{0}.gif', 'Double French, {0}')">
+<option value="06">Spring 1902</option>
+<option value="07">Fall 1902</option>
+<option value="08">Winter 1902</option>
+<option value="09" selected>After Winter 1902</option>
+</select>
+</div>
+
 <p>
 Nine units were sent on to their Austrian targets: Marseilles to the Spanish south coast, Naples to Greece, Serbia to Bulgaria, Venice to Budapest, Tyrolia to Vienna, Munich to Berlin, Denmark to Norway, London to Liverpool and Brest to the North Sea. Eight more could be built in nine places with the addition of the English centers. We chose fleets for Naples and Denmark, armies for Serbia, Munich and Venice for maximum flexibility, and of course an army for London. As for the two remaining units, "Army Paris," I said with confidence, "Fleet Marseilles?" Sir Tinder asked hesitatingly. With a shrug Holmes approved both of them.
 </p>
+
+<div class="game_img">
+<a href="DoubleFrench.pdf#page=10" target="_blank">
+<img class="map_img" id="DoubleFrench.1903.image" src="../images/DoubleFrench13.gif" width="50%" alt="Double French, After Winter 1903"/><br/>
+<b id="DoubleFrench.1903.text">Double French, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="DoubleFrench.1903" class="inputBox" onchange="changeMap(this, '../images/DoubleFrench{0}.gif', 'Double French, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
 
 <p>
 "Let's start in the South," Holmes said. "Sir Tinder, you were worried about the Turkish homeland. I'll let you do the honor."
@@ -327,6 +416,20 @@ Encouraged by how easy this went, I searched for units that only had one possibl
 He ignored the compliment, relieved as he was that a solution was found. 
 </p>
 
+<div class="game_img">
+<a href="DoubleFrench.pdf#page=14" target="_blank">
+<img class="map_img" id="DoubleFrench.1904.image" src="../images/DoubleFrench16.gif" width="50%" alt="Double French, After Fall 1904"/><br/>
+<b id="DoubleFrench.1904.text">Double French, After Fall 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="DoubleFrench.1904" class="inputBox" onchange="changeMap(this, '../images/DoubleFrench{0}.gif', 'Double French, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16" selected>After Fall 1904</option>
+</select>
+</div>
+
 <p>
 Holmes wrapped it up for us. "So then, gentlemen, if we agree that this is what the map meant to tell, then the question of which train to take is now easily answered. The first army in Paris went up to Norway and on to Moscow, while army London traveled to St. Petersburg. You go meet your lady in the Central Station in Moscow on a train bound for St. Petersburg. Can I suggest you look for her in the dining car? If she's as Russian as her hometown suggests, she might be offering more than just a coffee."
 </p>
@@ -338,6 +441,8 @@ This brought some color on the cheeks of the young man, but he quickly changed t
 <p>
 "Coming up!"
 </p>
+
+<center><img src="../images/double-french-coffee.png" width="240"></center>
 
 </div>
 
