@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> DP F2018M: Convoy Paradox </title>
+		<meta charset="utf-8"/> 
+		<!-- Point to whereever this stylesheet will exist-->
+		<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+		<style type="text/css">
+			/*
+			 * Insert styles for the content_body here
+			 */
+			 .content_body {
+			 	max-width: 2000px
+			 }
+		</style>
+	</head>
+	<body>
+		<div class="req_link_container">
+			<div class="req_link left_link">
+				<a href="../..">
+					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+			<div class="req_link right_link">
+				<a href="..">
+					<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+			<hr class="hr_rule top_hr">
+		</div>
+		<div class="centered">
+			<!-- Insert Author Name -->
+			<h1>Convoy Paradoxes: Szykman's rule has won</h1>
+			<h2>by Lucas Kruijswijk </h2>
+			<hr class="hr_rule">
+		</div>
+		<div class="content_body justified padded_body">
+		<!-- Content Body -->
+			<p>
+				In recent Diplomatic Pouch Zine Torsten Bille discusses the convoy paradox. This is a very old discussion and he refers to the famous discussion between Simon Szykman and Manus Hand in the <a href="http://uk.diplom.org/pouch/Zine/F1999R/Debate/paradox.html">fall retreat 1999 article</a> of the Diplomatic Pouch Zine. 
+			</p>
+			<p>
+				Note, that there is a long follow up in the <a href="http://uk.diplom.org/pouch/Zine/W1999A/Clarke/paradox_response.html">winter adjustment issue of 1999</a>. It also gives the outcome of the voting that was present in the first article. The Szykman rule was a clear winner.
+			</p>
+			<p>
+				The article was a battle between two proposals. The rule as it was in the 1982 rulebook and defended by Manus Hand:
+			</p>
+			<p style="margin-left: 45px; margin-right: 45px;">
+				<i>If a convoyed army attacks a fleet which is supporting an action in a body of water; and that body of water contains a convoying fleet, that support is not cut.</i>
+			</p>
+			<p>
+				And the rule invented by Szykman:
+			</p>
+			<p style="margin-left: 25px; margin-right: 45px;">
+				<i>If a situation arises in which an army's convoy order results in a paradoxical adjudication, the turn is adjudicated as if the convoying army had been ordered to hold.</i>
+			</p>
+			<p>
+				Unfortunately the article could not be read entirely, due to the voting buttons (that do not work anymore) and the Szykman rule could not be read. The editor has repaired this.
+			</p>
+			<p>
+				Since hold orders can receive support in holding, the rule was fixed in:
+			</p>
+			<p style="margin-left: 25px; margin-right: 45px;">
+				<i>If a situation arises in which an army's convoy order results in a paradoxical adjudication, the turn is adjudicated as if the convoying army had been ordered to hold, except that that army may not receive support to hold.</i>
+			</p>
+			<p>
+				I prefer a slightly different formulation (with the same result):
+			</p>
+			<p style="margin-left: 25px; margin-right: 45px;">
+				<i>If a situation arises in which a convoy order results in a paradoxical adjudication, the turn is adjudicated as if the convoying fleet had been ordered to hold.</i>
+			</p>
+			<p>
+				Since there is often no other fleet convoying, referring to the convoying fleet is more distinctive and  rules out any misinterpretation. Also, from very technical point of view, the order of the convoying army is part of the paradox, but the resolution of the army isn't, because for cutting a support it is not necessary that a move succeeds.
+			</p>
+			<p>
+				There are two recurring arguments that solely look to the outcome. People don't like that a paradox rule has effect beyond paradoxes (side effects) and people don't like that a dislodged unit still can give support (also firmly advocated by Torsten Bille). The 1982 rule does both.
+			</p>
+
+			<h4>Automated adjudicators</h4>
+			<p>
+				The Szykman/Hand articles were published in a time that the World Wide Web was in its infancy. It started to develop but pages were still very static and browser compatibility was very bad. In that time several stand alone adjudication programs existed that people could download and install on there Windows PC or Mac. In addition to the automated njudge and Dpjudge there were Game Masters that collected the orders by email to give them as input to the adjudicator program. The results were then distributed again by email.
+			</p>
+			<p>
+				Unfortunately those program contained lot of bugs, some of them more than others. And even worse, it was not clear which programs were reasonable good and which were bad. New adjudicator programs were not trusted, hampering innovation.
+			</p>
+			<p>
+				Add that time I had some ideas about adjudicator algorithms. But for implementing I needed to test the program, so, I wrote the <a href="http://web.inter.nl.net/users/L.B.Kruijswijk/">Diplomacy Adjudicator Test Cases (DATC)</a>. Later I wrote the article for the 2009 spring issue of the Zine The <a href="http://uk.diplom.org/pouch/Zine/S2009M/Kruijswijk/DipMath_Chp1.htm">Math of Adjuciation</a>. This article sets out how to write an adjudicator by turning the rules into equations instead of the traditional way by programming a sequence.
+			</p>
+			<p>
+				With the description of the algorithm and the test cases it became possible for people to write a high quality adjudicator. And indeed several adjudicators after 2001 were written that were (almost) flawless. Although the older adjudicators such as the njudge and DPjudge have probably ironed out most bugs, there is a good possibility that a newer adjudicator will still outperform them in adjudication quality if rigorously tested. 
+			</p>
+			<p>
+				The DATC also lists all ambiguities in the rules and gives recommendations how to deal with them. For the convoy paradoxes it suggests the Szykman rule. And I am not aware of any adjudicator written after the creation of the DATC that doesn't follow the Szykman rule (on other rule issues there are small differences).
+			</p>
+			<p>
+				So, given the newer adjudicators and the voting in the original article the Szykman rule has won.
+			</p>
+			<p>
+				There was some concern whether the Szykman rule could actually be implemented in an adjudicator. The equation based algorithm is perfectly able to detect which orders are part of the paradox. The code is the same as for detecting circular movement, only the resolution is different. So, there is not much additional code to implement the Szykman rule.
+			</p>
+			<p>
+				Note, as explained in The Math of Adjudication, the tricky situations are not the actual paradoxes, but the situations that are almost a paradox. A circular dependency between the orders with still one unique solution.
+			</p>
+
+			<h4>Why is Szykman's rule a good rule?</h4>
+			<p>
+				There all kinds of different arguments. Participants in such discussion should realize that winning an argument in a certain category, doesn't imply that the whole discussion is won. The argument, although right, can be very light weighted. I consider the following categories of arguments in decreasing priority:
+			</p>
+			<p>
+				<ol>
+					<li>Players should not be able to take advantage in an unfair way.</li>
+					<li>The rule must be unambiguous and avoiding misinterpretation.</li>
+					<li>It must respect the history of <span class="game_name">Diplomacy</span>.</li>
+					<li>It must work well with all modes of play (Face to Face, online etc.).</li>
+					<li>It must not be unnecessary complex.</li>
+					<li>It must follow the principle of least surprise.</li>
+				</ol>
+			</p>
+
+			<h4>Players should not be able to take advantage in an unfair way</h4>
+			<p>
+				Discussions about rules often focus on <q>mechanics</q>. Those arguments have the risk that they are just a matter of taste and I prefer to leave them as the sacred domain of the creator of the game. Without his or her decision the discussion becomes endless without any conclusion. At least it is best to try to box in the possible alternatives, before talking mechanics.
+			</p>
+			<p>
+				Still, there is a general principle in games that rules should avoid that players can play in a certain way that is consider <q>unfair</q>, whatever that means. If a board game is plagued by that, then it is considered <q>broken</q>.
+			</p>
+			<p>
+				Although any ruling will favor one player over another, to make a valid argument in this category a player must be able to <i>take</i> advantage and in such way that it is <i>unfair</i>.
+			</p>
+			<p>
+				To give an example not related to convoy paradoxes, the 1971 rulebook stated that a multi-route convoy is disrupted when one of the possible routes is disrupted. With this rule a power could order one of his fleets to join a convoy of a foreign power to disrupt it in the knowledge that his own fleet is likely dislodged. This is considered unfair, although you could argue how realistic it is to play on it. Anyways, in later rulebooks this was changed that a multi-route convoy is only disrupted when all routes are disrupted.  
+			</p>
+			<p>
+				For any ruling of the convoy paradox one can say that is very hard to play on it and if one can then it isn't unfair (it is just a decision, because a decision must be made).
+			</p>
+			<p>
+				This is not entirely true for any side effects of a paradox rule. The 1982 rule makes it possible to order a convoy to avoid dislodgement even in the case there is no paradox and one can say that it is unfair. The Szykman rule doesn't have this issue, because by definition it only applies when there is a paradox.
+			</p>
+			<p>
+				So, the Szykman rule scores best on this category.
+			</p>
+			<p>
+				The rule of Torsten Bille has side effect, but you can't play on it. 
+			</p>
+
+			<h4>Unambiguous and avoiding misinterpretation</h4>
+			<p>
+				If one tries to fix a rule, it is important that the rule is actually fixed. It must unambiguous and must avoid any further confusion.
+			</p>
+			<p>
+				The Szykman rule scores very well on this point. Although one might think that 'paradox' is not very well defined, but in practice people and adjudicators can identify them. With the wording targeting the 'convoying fleet' instead of 'convoying army', there is not much room of misinterpretation. Often there is only one convoying fleet, and if so, one can not make any mistake.
+			</p>
+			<p>
+				The same does not count for the 1982 rule defended by Manus Hand. The problematic part of the rule is:
+			</p>
+			<p style="margin-left: 25px; margin-right: 45px;">
+				<i>… and that body of water contains a convoying fleet ...</i>
+			</p>
+			<p>
+				In case there is indeed a paradox the rule is quite clear, because in that situation we know that there is a convoy order with matching orders. However, the rule is also active when there is no paradox and then the question is when is a fleet actually convoying? When it is ordered to convoy, when it there is also a matching move for an army, when there is full matching convoy route? And is it still convoying when another convoy in the route is disrupted? So, the rule introduces a new set of rule issues, something that was missed in the original discussion in the 1999 Zine articles.
+			</p>
+			<p>
+				Before the Szykman rule the 'All Hold' rule was proposed in addition to official paradox rule. All units hold that are part of the paradox (this includes the fleet attacking the convoy). This somewhat better than the 1982 rule, but with this rule one can start discussing which orders are actually part of the paradox. I can imagine that a just betrayed player, may argue that all orders on the board should be held.
+			</p>
+			<p>
+				The rule of Torsten Bille at least needs some rewording. I only could figure out some of the things by the additional text in his article. His rule:
+			</p>
+			<p style="margin-left: 25px; margin-right: 45px;">
+				<i>If a convoying fleet is attacked, it is first determined if the convoy is possible without taking the convoyed attack into consideration. If there are several attacks of this kind, the possibility of these convoys are determined without any of these attacks. Afterwards, the possible convoyed attacks are added, and the results are determined as usual.</i>
+			</p>
+			<p>
+				First of all I think the word 'possible' should be avoided. A convoying fleet is dislodged or not and if it is the convoy is disrupted. 'possible' is a new term and in technical writing one should avoid that if not necessary.
+			</p>
+			<p>
+				As far I understand, we should first do an adjudication with the convoying armies that convoy via an attacked convoying fleet be adjudicated as hold. But the text is not precise what to do with this adjudication. Keep the resolutions of most orders or throw it mostly away? Based on the examples of Torsten Bille the adjudication is thrown away almost entirely, except for the convoying fleets. Those are kept for the second adjudication and the second adjudication can't change those (the convoying fleets can be dislodged, but that will not change the success of the convoying operations of the fleets). 
+			</p>
+			<p>
+				Somewhat confusing is that in the first and second adjudication a whole chain of orders may get an opposite resolution. It is also better to only set the attacked convoying fleets on hold, rather than the convoying army, to avoid discussion about an attacked convoying fleet that is unnecessary for the convoy.
+			</p>
+			<p>
+				Anyways the (reworded) Szykman rule scores good.
+			</p>
+
+			<h4>It must respect the history of Diplomacy</h4>
+			<p>
+				In my opinion in rule fix discussions we should avoid that we break with the older rulebooks or with general accepted interpretations.
+			</p>
+			<p>
+				To judge a fix on the convoy paradox issue in this category we can look at:
+			</p>
+			<p>
+				<ol>
+					<li>The paradoxical situations</li>
+					<li>The side effects</li>
+				</ol>
+			</p>
+			<p>
+				Regarding point (1) I think any rule will do that respects the outcome for the most simple paradox. Changing the adjudication for the more complex paradoxes (that are theoretical or at least very rare) is acceptable. Of course, only with good argumentation.
+			</p>
+			<p>
+				Both Szykman and 1982 rule won't change the outcome of the most simple paradox. However, the 'All Hold' rule does if it completely replaces any other paradox rule (note, that this was never the case, the rule was proposed as addition).
+			</p>
+			<p>
+				For point (2) the 1971 rulebook didn't have side effect, the 1982 did, but the 2000 rule undid the 1982 change, probably due to the side effects. In the tradition of <span class="game_name">Diplomacy</span> one can say that side effects are unwanted.
+			</p>
+			<p>
+				So, also from this perspective the Szykman rule scores.
+			</p>
+			<p>
+				The rule of Torsten Bille has side effect, but those are rather small. If it replaces the official paradox rule, then it has a different outcome for some rather simple paradoxes. However, Torsten Bille proposed his rule in addition of the existing rule, which makes the compatibility better. So, the rule neither scores good or bad.
+			</p>
+
+			<h4>It must work well with all modes of play</h4>
+			<p>
+				A rule that may work well for online play, may not work in Face to Face and vice versa.
+			</p>
+			<p>
+				For instance the njudge and the DPjudge require that the full path for a convoying army is specified. In computer adjudicated games this can be enforced, however if one would try that in a Face to Face game, one would run in troubles. If the submitted paper contains a move order for an army without the convoy path, but (not knowing any other orders yet) there is only one possible convoy route, one can say that it is a poorly written order with only one possible interpretation. Such order should be followed. And the issue comes back with a vengeance.
+			</p>
+			<p>
+				For the convoy paradoxes there is not much difference between the different modes of play.
+			</p>
+			<p>
+				But some thoughts must go how well the rule can be implemented in adjudicators. The 1982 rule can easily be programmed. The modern equation based adjudicators can determine which orders are part of the paradox (this code is the same as for circular movement and doesn't add much to the code). So, the Szykman rule and also the 'All Hold' rule can be implemented.
+			</p>
+			<p>
+				However, as far I understand the rule of Torsten Bille, it means that adjudication must happen in two phases. First without some move orders using convoy, and the adjudication should be restarted with the orders in. This will certainly add a fair amount of code to the equation based adjudicators.
+			</p>
+
+			<h4>It must not be unnecessary complex</h4>
+			<p>
+				An elegant game has simple rules. Complexity should only be introduced when it is worth it.
+			</p>
+			<p>
+				Having said that, I think it is horror if fixing the convoy paradox consists of more than one rule. Since only the simplest paradox will actually occur, it would be highly preferable that the fix for that situation can also be applied for the theoretical (or very rare) complex paradoxes.
+			</p>
+			<p>
+				The Szykman rule and the 1982 rule are reasonable simple. The 'All Hold' rule was proposed in addition to the paradox rule of the 1971 rulebook. So, resulting in two rules.
+			</p>
+			<p>
+				Also the rule of Torsten Bille is proposed in addition, so resulting in two rules. This can however left out at the price of slightly less compatibility with the existing rules.
+			</p>
+			<p>
+				One can discuss what is easier for the players, comparing the Szykman and Bille rule. Recognizing a paradox and act on it, or do a two-phase adjudication also when there is no paradox.
+			</p>
+
+			<h4>It must follow the principle of least surprise</h4>
+			<p>
+				Again I want try to avoid an endless discussion about <q>mechanics</q>, but the principle of <q>least surprise</q> is maybe an argument that leads to some conclusions. The idea is that the rules in exceptional cases should not be a surprise for a player that only knows the core rules. The player should know what he or she knows, and be able to guess what he or she doesn't know.
+			</p>
+			<p>
+				Again this an argument against a rule with side effects. For the real paradoxical situations the player doesn't have an expectation and will lookup the situation in the rule book or ask the Game Master.
+			</p>
+			<p>
+				However side effects may lead to surprises. Such rule need to be taught to a new player, because it may become relevant. While a rule without side effects can be explained when it is necessary.
+			</p>
+			<p>
+				So, this favors against rules without side effects, such as the Szykman rule and the 'All Hold' rule and disfavors the 1982 rule and the rule of Torsten Bille.
+			</p>
+
+			<h4>Variant with convoying coastal areas</h4>
+			<p>
+				Having listed all arguments, the Szykman rule scores well in the different categories. But there is another small argument that can be taken in consideration. It is not about the standard game, so, one can argue that it should not count.
+			</p>
+			<p>
+				There are variants that allow some or all coastal areas to convoy. In such variant a slightly different convoy paradox is possible. The convoying army tries to disrupt the convoy directly instead of cutting a crucial support (B and D coastal areas that can convoy):
+			</p>
+			<div style="margin-left: 25px;">
+				<p style="margin-bottom: 4px;">
+					Power X orders:
+				</p>
+				<div style="padding-left: 10px;">
+					Army A moves to D </br>
+					Fleet B convoys A to D </br>
+					Army C supports A to D </br>
+				</div>
+
+				<p style="margin-bottom: 4px;">
+					Power Y orders:
+				</p>
+				<div style="padding-left: 10px;">
+					Army E moves to B </br> 
+					Fleet D convoys E to B </br>
+					Army F supports E to B </br>
+				</div>
+			</div>
+			<p>
+				Any paradox rule (including the 1982 rule) that targets the support instead of the convoying fleet doesn't have a resolution for this, because there is not a supporting unit that is attacked. The Szykman rule can be applied, the convoying fleets will fail and so will the convoying armies.				
+			</p>
+			<p>
+				The positive thing about the Torsten Bille rule is that it has a resolution. All orders succeed.
+			</p>
+
+			<h4>Fixing the rules</h4>
+			<p>
+				It would be great if a new version of <span class="game_name">Diplomacy</span> has some of the rule issues fixed. For the convoy paradox the Szykman rule is a clear winner to my opinion and it is also implemented that way by modern adjudicators. Hasbro might not like the word 'paradox' in the rule (too nerdy), but one can formulate it without the word. 
+			</p>
+			<p>
+				However, fixing the rules might also end up in a disaster. In the classical board game <q>Acquire</q> Hasbro fixed some theoretical situations, but in such way that some non-theoretical situations were altered for the worse. It also altered the game in other ways. I hope <span class="game_name">Diplomacy</span> will not have the same fate and the current status quo isn't too bad. 
+			</p>
+			<p>
+				The rules need fixing, the game does not. Having said this, fixing can only be done a by a person without much ambition.
+			</p>
+		<!-- Content Body End -->
+		</div>
+
+		<div class="info_block padded_body">
+			<div>
+				<br/>
+				<br/>
+			</div>
+
+			<div>
+				<table>
+	  				<tbody>
+						<tr>
+						    <td>
+						    	<!-- Insert Contact Information! -->
+						    	<a href="mailto:L.B.Kruijswijk@inter.nl.net">
+						    		<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+						    	</a> 
+						    </td>
+						    <td>
+						    	<strong>
+						    		Lucas Kruijswijk <br/>
+						    		(<a href="mailto:L.B.Kruijswijk@inter.nl.net">L.B.Kruijswijk@inter.nl.net</a>)
+						    	</strong> 
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="dear_dp">
+				<p>
+					<i>
+						If you wish to e-mail feedback on this article to the author, and clicking 
+						on the envelope above does not work for you, feel free to use the 
+						
+						<a href="../Common/DearDP.html">
+							<q><strong>Dear DP...</strong></q>
+						</a> 
+
+						mail interface.
+					</i> 
+				</p>
+			</div>
+
+		</div>
+
+		<div class="req_link_container">
+			<hr class="hr_rule bot_hr">
+
+			<div class="req_link left_link">
+				<a href="../..">
+					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+
+			<div class="req_link right_link">
+				<a href="..">
+					<img class="no_border" src="../toIssue.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+		</div>
+
+	</body>
+</html>
