@@ -1,4 +1,4 @@
-#!/home/dippouch/bin/python
+#!/usr/bin/python -O
 
 print 'Content-type: text/html\n'
 

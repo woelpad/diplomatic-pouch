@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> DP F2018M: Last Man Standing: Operation Munich</title>
+<meta charset="utf-8"/> 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123251121-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-123251121-1');
+</script>
+<!-- Point to whereever this stylesheet will exist-->
+<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+<style type="text/css">
+/*
+* Insert styles for the content_body here
+*/
+.game_img {text-align: center; text-decoration: italic;}
+.map_img {width: 60%;}
+.content_body {}
+.inputBox {
+	color:			#000000;
+	background:		#FFFFFF;
+	border-color:	#000000;
+	border-top:		1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-right:	1px solid;
+	font-family:	verdana;
+	font-size:		14px;
+}
+</style>
+<script>
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+		var args = arguments;
+		return this.replace(/{(\d)}/g, function(match, number) {
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+}
+function changeMap(selector, reference, content) {
+	var selected = selector.options[selector.selectedIndex];
+	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
+	var text = document.getElementById(selector.name + '.text');
+	image.src = reference.format(selected.value);
+	if (anchor) anchor.href = image.src;
+	image.alt = text.innerHTML = content.format(selected.text);
+}
+</script>
+</head>
+<body>
+<div class="req_link_container">
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../images/toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<hr class="hr_rule top_hr">
+</div>
+<div class="centered">
+<!-- Insert Author Name -->
+<h1>LAST MAN STANDING: OPERATION MUNICH</h1>
+<h2>by Mario Huys </h2>
+<hr class="hr_rule">
+</div>
+<div class="content_body justified padded_body">
+<table width="960" border="0" cellpadding="10" align="center">
+<tr>
+<td align="justify">
+<!-- Content Body -->
+
+<blockquote><b><i>
+Last Man Standing is a puzzle on the Diplomacy board, whereby the whole board gets reduced to a single unit. This unit must reach its final destination in a mere four game years, without any power capturing any neutral centers and with all powers still possessing at least one unit at the end of the second year. Your goal is to reconstruct the complete game history from the map given. For more details, read the <a href="../../S2017M/LMS/rollcall.html">LMS Roll Call</a>.
+</i></b></blockquote>
+
+<p>
+After our Asian adventures we're coming back to the original <b>Diplomacy</b> map. If you'd thought you'd seen the last of it, you will be disappointed. Don't be. Better still, for the remaining unvisited home centers we're going to ramp up the awesomeness factor by making some wild claim each time and then of course proving it as part of the solution.</p>
+
+<h3 id="smy-mun">
+Mission: Oktoberfest
+</h3>
+
+<div class="game_img">
+<img src="../images/lms_smy-mun.gif" class="map_img" alt="Army Smyrna to Munich, After Winter 1904">
+<br /><i>Army Smyrna to Munich, After Winter 1904</i>
+</div>
+
+<pre class="centered">
+Austria (0/2)         Bud Vie                    
+England (0/5)         Bre Edi Lon Lvp Par        
+Italy   (0/5)         Mar Nap Rom Tri Ven        
+Russia  (1/3)         Ber Mos War                
+Turkey  (1/7) A Mun / Ank Con Kie Mun Sev Smy Stp
+</pre>
+
+<p>
+We'll immediately start off with a very tall order for an extremely central center. Final destination Munich will change hands every year, always by a different power than any of the previous owners. That means that at the end of 1904 there will be only two powers left that never owned Munich.
+</pre>
+
+<p>
+"The more, the merrier" is a motto that certainly applies to the world renowned Oktoberfest, instituted over 200 years ago to celebrate the marriage of Prince (later King) Ludwig of Bavaria. Traditionally starting with the Mayor of Munich opening the first beer keg and shouting "O'zapft is!" ("It's tapped!")
+</p>
+
+<h3 id="RA-kie">
+Mission: Kieler Woche
+</h3>
+
+<div class="game_img">
+<img src="../images/lms_RA-kie.gif" class="map_img" alt="Russian Army to Kiel, After Winter 1904">
+<br /><i>Russian Army to Kiel, After Winter 1904</i>
+</div>
+
+<pre class="centered">
+Austria (0/1)         Bud                                
+England (0/5)         Bre Edi Lon Lvp Par                
+Italy   (0/6)         Ber Mar Nap Rom Smy Tri            
+Russia  (1/9)         Con Kie Mos Mun Sev Stp Ven Vie War
+Turkey  (0/1)         Ank                                
+</pre>
+
+<p>
+Another exhausting mission. The triumphant Russian army is going to make a trip that will take her trough the lands of five different powers, taking boat trips where possible to speed up travel. Which ties in neatly with the fact that the Kieler Woche is best known for its week-long boat regatta. I wish you smooth sailing.
+</p>
+
+<h3 id="lms_tok-sai">
+Report: The Fall of Saigon &mdash; Japanese Fleet to Saigon
+</h3>
+
+<div class="game_img">
+<img src="../images/lms_tok-sai17.gif" class="map_img" alt="Japanese Fleet to Saigon, After Winter 1903">
+<br /><i>Japanese Fleet to Saigon, After Winter 1904</i>
+</div>
+
+<p>
+Looking at the color of the dots, this is a game where Russia and Britain expand, but Japan prevails; where China and Turkey hang on by a thread and France goes down together with Holland. These dots are your map to the solution. That and the distance between starting provinces and these supply spaces can tell a ton about the order in which each was captured.
+</p>
+
+<p>
+Take the Russians for example. They can capture Con, Pek and Sas on the first turn and Hue on the second if fleet Kha sails straight for this port. But if it does that, it will bypass Sas and there's no other unit to go in its stead. A convoy from Pek to Hue in 02 is another possibility, but for now let's assume that Hue is only taken in 03. The fact that it's right next to Sai, the end destination, makes this all the more likely.
+</p>
+
+<p>
+Japan's target centers are further away and close together. It can reach all three of them in two, but of course there's an order to them. Sai is obviously the last center to conquer. Bor is attractive as the next to last center, given its two-space distance to Sai. That makes Jav the first one to be visited, assuming that all of them are conquered by the same fleet that graces the final map. Since it loses Sas in 01 and doesn't gain centers that year, it can get rid of one unit. After that it's just a matter of setting the other one up for dislodgement. With both China and Russia in the area, that shouldn't be too difficult.
+</p>
+
+<p>
+Before we get to China, let's take a look at Britain. Britain is all over the place, with centers in Turkey (Dam), China (Chu) and Holland (Sum). Chu is a no-brainer, just hit it with A Cal. Dam is furthest away from both Britain and France. Since Britain isn't losing any centers, the unit sent there must be chased after and dislodged, together with Russian F Sev.
+</p>
+
+<p>
+Who better than the Dutch to initiate this chase, as they are excellent snipers and have fleets to spare. Two fleets would suffice to clean out Turkey and whatever is floating around there. But two fleets far from home in 1903 means Holland needs to own two of the centers captured that year. Apart from Bor the only other supply center close enough is Hue, the French home center, which the Dutch need to capture in 1901.
+</p>
+
+<p>
+But then there's one more mystery to solve. If the British fleet is moving West, how does he capture an island like Sum? F Mad can't just go there and head back, that would be too slow. The answer is a convoy, which can already be accomplished in the first year, notwithstanding that Sum is three moves away by sea. An army isn't going to move much on a single space island, but it could be crushed there or even do some island hopping. The latter would be pretty cool, don't you think?
+</p>
+
+<p>
+How is Turkey faring in all this? It loses Con in the first year, disbanding a unit. Then in the second year it loses Dam and disbands a second. And in the third year the Dutch fleets can sweep the last unit. In other words, Turkey can play like a sniper country for most of the game. That's interesting, because it can lend a hand in removing A Mos from the board if another sniper, either Chinese or French, is available in the second year.
+</p>
+
+<p>
+We already remarked that the Chinese survive with three centers. Of these Han is the closest to the target. But because the victorious Japanese fleet is coming in from the South, Han must be captured in the second year at the latest. That makes China a bad choice for a sniper, and so we need to look for a French replacement to go North of the Himalayas. Luckily for us A Han can get to Sin in just four turns.
+</p>
+
+<p>
+We now know enough about the general direction of play. Let's cut to the chase.
+</p>
+
+<div class="game_img">
+<a href="lms_tok-sai.pdf#page=2" target="_blank">
+<img class="map_img" id="lms_tok-sai.1901.image" src="../images/lms_tok-sai05.gif" width="50%" alt="Fleet Tokyo to Saigon, After Winter 1901"/><br/>
+<b id="lms_tok-sai.1901.text">Fleet Tokyo to Saigon, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_tok-sai.1901" class="inputBox" onchange="changeMap(this, '../images/lms_tok-sai{0}.gif', 'Fleet Tokyo to Saigon, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05" selected>After Winter 1901</option>
+</select>
+</div>
+
+<p>
+<b>1901.</b> Drilling for war starts in boot camp, but continues on the field, as Oliver Stone showed in his movie <i>Platoon</i>.
+</p>
+
+<div class="game_img">
+<a href="lms_tok-sai.pdf#page=6" target="_blank">
+<img class="map_img" id="lms_tok-sai.1902.image" src="../images/lms_tok-sai09.gif" width="50%" alt="Fleet Tokyo to Saigon, After Winter 1902"/><br/>
+<b id="lms_tok-sai.1902.text">Fleet Tokyo to Saigon, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_tok-sai.1902" class="inputBox" onchange="changeMap(this, '../images/lms_tok-sai{0}.gif', 'Fleet Tokyo to Saigon, {0}')">
+<option value="06">Spring 1902</option>
+<option value="07">Fall 1902</option>
+<option value="08">Winter 1902</option>
+<option value="09" selected>After Winter 1902</option>
+</select>
+</div>
+
+<p>
+<b>1902.</b> An island-hopping army and units moving further and further away from Vietnam. Utter madness, or <i>Apocalypse Now</i>, as Francis Ford Coppola paints it.
+</p>
+
+<div class="game_img">
+<a href="lms_tok-sai.pdf#page=10" target="_blank">
+<img class="map_img" id="lms_tok-sai.1903.image" src="../images/lms_tok-sai13.gif" width="50%" alt="Fleet Tokyo to Saigon, After Winter 1903"/><br/>
+<b id="lms_tok-sai.1903.text">Fleet Tokyo to Saigon, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_tok-sai.1903" class="inputBox" onchange="changeMap(this, '../images/lms_tok-sai{0}.gif', 'Fleet Tokyo to Saigon, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
+
+<p>
+<b>1903.</b> Two Russians make it to the last four, a rarity, but an apt metaphor for the Communist victory some 70 years later. Get ready for the battle of Hue, the old royal capital, as depicted in <i>Full Metal Jacket</i> by Stanley Kubrick.
+</p>
+
+<div class="game_img">
+<a href="lms_tok-sai.pdf#page=14" target="_blank">
+<img class="map_img" id="lms_tok-sai.1904.image" src="../images/lms_tok-sai17.gif" width="50%" alt="Fleet Tokyo to Saigon, After Winter 1904"/><br/>
+<b id="lms_tok-sai.1904.text">Fleet Tokyo to Saigon, After Winter 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_tok-sai.1904" class="inputBox" onchange="changeMap(this, '../images/lms_tok-sai{0}.gif', 'Fleet Tokyo to Saigon, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
+
+<p>
+<b>1904.</b> There can only be one to get out alive from burning Saigon. The prototype of a Last Man Standing is pictured in Michael Cimino's <i>The Deer Hunter</i>.
+</p>
+
+<h3 id="lms_mad-kha">
+Report: The Beringian Standstill &mdash; Fleet Madras to Khabarovsk
+</h3>
+
+<div class="game_img">
+<img src="../images/lms_mad-kha17.gif" class="map_img" alt="Fleet Madras to Khabarovsk, After Winter 1904">
+<br /><i>Fleet Madras to Khabarovsk, After Winter 1904</i>
+</div>
+
+<p>
+Recall that the Beringian Standstill is a theory that the people that crossed the Bering Strait in prehistoric times to settle America, lived on this land bridge for a thousand years before the ice wall in front of them started to melt. We only have four and that forces us to do some meticulous counting.
+</p>
+
+<p>
+By now you should have grown accustomed to the typical Winter 1903 position. The previous "Fall of Saigon" presents an excellent example. There's one sniper and three raiders. Two, sometimes all three raiders, are on supply centres that were previously owned by sniper powers, while the raider is on a non-supply center space. Only one raider is two spaces away, the others are in a province adjacent to the target. Moreover one of them is exactly between the raider furthest away and the target, with the sniper next to both his space and the target (although there are variations where the sniper starts at the outside of the furthest away raider).
+</p>
+
+<p>
+This map apparently presents the same ingredients: Irk is next to Kha and both Kyo and Sas are two spaces away. The problem is that Mad cannot reach these centers in time. It takes seven turns to get to Sas, eight to Kyo, and we have only six available. The only Japanese home center that can be reached is Tok, but that center is three spaces away from Kha. Interestingly enough, by traveling on the edge of the board, the most northern sea, SOO (Sea of Okhotsk) can be reached in exactly 6 turns, but as it borders neither Kyo nor Sas, it won't allow for the standard configuration.
+</p>
+
+<p>
+Thus, the only way to have F Mad still around in 1904 is by capturing just one center, Irk. This means that there's only one sniper more in 1903, which precludes any culling, such as what we did to the two Dutch fleets in the previous solution that went East to drive out some fleets in Turkey before they were disbanded when their last owned centers were taken. It's a step more difficult to accomplish, but it's not impossible. Furthermore, there will be a lot more units streaming towards the target, which simplifies choosing the direction that units should take.
+</p>
+
+<p>
+We can distinguish three streams or "migrations", if we keep to our pre-historical script. The first is the aforementioned movement of F Mad along the edge of the map, where other fleets insert themselves in its path such that they can be conveniently dislodged. The second is the Turkish army along the northern edge, gradually capturing Russian home centers in such a way that Russian units have time to battle and remove the remaining Turks. The third is in the center, where A Del captures Chinese Tib on its way up. But unlike the other streams this one meets a counter current that drives it away from Kha and towards the Chinese coast. Check it out.
+</p>
+
+<div class="game_img">
+<a href="lms_mad-kha.pdf#page=2" target="_blank">
+<img class="map_img" id="lms_mad-kha.1901.image" src="../images/lms_mad-kha05.gif" width="50%" alt="Fleet Madras to Khabarovsk, After Winter 1901"/><br/>
+<b id="lms_mad-kha.1901.text">Fleet Madras to Khabarovsk, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mad-kha.1901" class="inputBox" onchange="changeMap(this, '../images/lms_mad-kha{0}.gif', 'Fleet Madras to Khabarovsk, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05" selected>After Winter 1901</option>
+</select>
+</div>
+
+<p>
+<b>1901.</b> Driven by climate change the southern tribes start to migrate northwards. Russians and Chinese brace themselves to fend off the invasions. The temporary capture of Kyo in the East provides the supplies for a battle around Sev in the West.
+</p>
+
+<div class="game_img">
+<a href="lms_mad-kha.pdf#page=6" target="_blank">
+<img class="map_img" id="lms_mad-kha.1902.image" src="../images/lms_mad-kha09.gif" width="50%" alt="Fleet Madras to Khabarovsk, After Winter 1902"/><br/>
+<b id="lms_mad-kha.1902.text">Fleet Madras to Khabarovsk, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mad-kha.1902" class="inputBox" onchange="changeMap(this, '../images/lms_mad-kha{0}.gif', 'Fleet Madras to Khabarovsk, {0}')">
+<option value="06">Spring 1902</option>
+<option value="07">Fall 1902</option>
+<option value="08">Winter 1902</option>
+<option value="09" selected>After Winter 1902</option>
+</select>
+</div>
+
+<p>
+<b>1902.</b> Strife among the invaders temporarily compensates for the lack of force of the weakened northern empires, but their decline is unavoidable. The trek north of the British A Del gets halted in Kan, reversing the direction of the central migratory stream.
+</p>
+
+<div class="game_img">
+<a href="lms_mad-kha.pdf#page=10" target="_blank">
+<img class="map_img" id="lms_mad-kha.1903.image" src="../images/lms_mad-kha13.gif" width="50%" alt="Fleet Madras to Khabarovsk, After Winter 1903"/><br/>
+<b id="lms_mad-kha.1903.text">Fleet Madras to Khabarovsk, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mad-kha.1903" class="inputBox" onchange="changeMap(this, '../images/lms_mad-kha{0}.gif', 'Fleet Madras to Khabarovsk, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
+
+<p>
+<b>1903.</b> The hordes push on relentlessly. China barely escapes annihilation by skillfully luring the enemy away from its capital, thereby sacrificing their last fighting force. Russia is now on its own.
+</p>
+
+<div class="game_img">
+<a href="lms_mad-kha.pdf#page=14" target="_blank">
+<img class="map_img" id="lms_mad-kha.1904.image" src="../images/lms_mad-kha17.gif" width="50%" alt="Fleet Madras to Khabarovsk, After Winter 1904"/><br/>
+<b id="lms_mad-kha.1904.text">Fleet Madras to Khabarovsk, After Winter 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mad-kha.1904" class="inputBox" onchange="changeMap(this, '../images/lms_mad-kha{0}.gif', 'Fleet Madras to Khabarovsk, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
+
+<p>
+<b>1904.</b> The Indo-Britons, an offshoot branch of the Indo-Germans that colonized Europe, reach their new Shangri-la on the Bering Strait. It's a bridge to the promised land, which one day will again be called the land of the Indians.
+</p>
+
+<!-- Content Body End -->
+</div>
+
+<div class="info_block padded_body">
+<div>
+<br/>
+<br/>
+</div>
+
+<div>
+<table>
+<tbody>
+<tr>
+<td>
+<!-- Insert Contact Information! -->
+<a href="mailto:woelpad@gmail.com">
+<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+</a> 
+</td>
+<td>
+<strong>
+Mario Huys <br/>
+(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+</strong> 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!--
+<div class="dear_dp">
+<p>
+<i>
+If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the 
+
+<a href="../Common/DearDP.html">
+<q><strong>Dear DP...</strong></q>
+</a> 
+
+mail interface.
+</i> 
+</p>
+</div>
+-->
+
+</td>
+</tr>
+</table>
+</div>
+
+<div class="req_link_container">
+<hr class="hr_rule bot_hr">
+
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../images/toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+</div>
+
+</body>
+</html>
