@@ -1,24 +1,6 @@
-#!/usr/bin/python -O
-
-print 'Content-type: text/html\n'
-
-##import cgi, os
-##try: from data import data
-##except: data = {}
-##form = cgi.FieldStorage()
-##answer = form.has_key('vote') and form['vote'].value or None
-##if answer != None:
-##	list = data.get(os.environ['REMOTE_ADDR'], [])
-##	list.append(answer)
-##	data[os.environ['REMOTE_ADDR']] = list
-##	file = open('data.py', 'w')
-##	file.write('data = %s\n' % `data`)
-##	file.close()
-##
-print (
-"""
 <HEAD>
    <TITLE>DP F1999R: Paradox Resolution Rules</TITLE>
+<!-- Original file that did store survey results: resolve.cgi -->
 </HEAD>
 <BODY bgcolor=white>
 <A HREF="../.."><IMG align=left SRC="../../Common/DPbutton.gif" border=0></A>
@@ -142,17 +124,17 @@ rule 1 over rule 2, and the other making a case for rule 2 over rule 1.
 <table>
 <tr>
 <th>
-<form method=post action=finish.cgi>
+<form method=post action=finish.html>
 <input type=hidden value=1 name=vote>
 <input type=submit value="I Like Rule 1">
 </form>
 <th>
-<form method=post action=finish.cgi>
+<form method=post action=finish.html>
 <input type=hidden value=2 name=vote>
 <input type=submit value="I Like Rule 2">
 </form>
 <th>
-<form method=post action=finish.cgi>
+<form method=post action=finish.html>
 <input type=hidden value=3 name=vote>
 <input type=submit value="I Prefer the Current Situation">
 </form>
@@ -200,4 +182,3 @@ on the envelope above does not work for you, feel free to use the
 
 </BODY>
 </HTML>
-""")
