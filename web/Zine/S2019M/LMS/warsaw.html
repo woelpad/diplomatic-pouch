@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title> DP S2019M: Last Man Standing: Operation Warsaw</title>
+<meta charset="utf-8"/> 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123251121-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-123251121-1');
+</script>
+<!-- Point to whereever this stylesheet will exist-->
+<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+<style type="text/css">
+/*
+* Insert styles for the content_body here
+*/
+.game_img {text-align: center; text-decoration: italic;}
+.map_img {width: 60%;}
+.content_body {}
+.inputBox {
+	color:			#000000;
+	background:		#FFFFFF;
+	border-color:	#000000;
+	border-top:		1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-right:	1px solid;
+	font-family:	verdana;
+	font-size:		14px;
+}
+</style>
+<script>
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+		var args = arguments;
+		return this.replace(/{(\d)}/g, function(match, number) {
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+}
+function changeMap(selector, reference, content) {
+	var selected = selector.options[selector.selectedIndex];
+	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
+	var text = document.getElementById(selector.name + '.text');
+	image.src = reference.format(selected.value);
+	if (anchor) anchor.href = image.src;
+	image.alt = text.innerHTML = content.format(selected.text);
+}
+function toggleLayer(whichLayer) {
+	var elem, vis;
+	elem = document.getElementById(whichLayer);
+	vis = elem.style;
+	if (vis.display==''&&elem.offsetWidth!=undefined&&elem.offsetHeight!=undefined)
+		vis.display = (elem.offsetWidth!=0&&elem.offsetHeight!=0)?'inline':'none';
+	vis.display = (vis.display==''||vis.display!='none')?'none':'inline';
+	if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
+}
+</script>
+</head>
+<body>
+<div class="req_link_container">
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../images/toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+<hr class="hr_rule top_hr">
+</div>
+<div class="centered">
+<!-- Insert Author Name -->
+<h1>LAST MAN STANDING: OPERATION WARSAW</h1>
+<h2>by Mario Huys </h2>
+<hr class="hr_rule">
+</div>
+<div class="content_body justified padded_body">
+<table width="960" border="0" cellpadding="10" align="center">
+<tr>
+<td align="justify">
+<!-- Content Body -->
+
+<blockquote><b><i>
+Last Man Standing is a puzzle on the Diplomacy board, whereby the whole board gets reduced to a single unit. This unit must reach its final destination in a mere four game years, without any power capturing any neutral centers and with all powers still possessing at least one unit at the end of the second year. Your goal is to reconstruct the complete game history from the map given. For more details, read the <a href="../../S2017M/LMS/rollcall.html">LMS Roll Call</a>.
+</i></b></blockquote>
+
+<p>
+Let's turn east to the great plains of Russia. Or rather of the former Polish-Lithuanian Commonwealth, an enormous country which at its peak stretched all the way from the Baltic to the Black Sea, encompassing modern day Poland, the Ukraine (minus the Crimea, Ottoman at the time), the Baltic States and some other territories. But Empires come to an end and in the case of the Commonwealth that end was pretty radical. Over the course of three partitions between 1772 and 1795 its former territory was completely split up between Russia, Prussia (the forebear of Germany) and Austria. Not even a romp state was left. This was more than a century before WWI, at the end of which each would obtain a short-lived independence as separate states.
+</p>
+
+<h3 id="con-war">
+Mission: The Deluge
+</h3>
+
+<p>
+With such a history you would say the Poles and Lithuanians have enough enemies to hold a grudge against. And yet when you ask them who they blame for their downfall, it's none of the big three, nor Ottoman Turkey, nor even the fickle Ukrainians who regularly revolted as if it were a national sport. It's Sweden, a country with a relatively small population. In the 17th century the time of the Vikings was long past, but the Swedes had a mighty army and they owned land south of the Baltic Sea. From there they campaigned against the Poles, the Russians and the Danes. In one of these campaigns, in 1655, they captured half the country, including the old capital of Krakow and the new capital Warsaw. Then before withdrawing they started to loot in such earnest that not a single silver platter was left. Historians called it "the Deluge". The Commonwealth's economy never fully recovered and with its coffers empty it gradually lost its status as a Great Power.</p>
+
+<div class="game_img">
+<img src="../images/lms_con-war.gif" class="map_img" alt="Army Constantinople to Warsaw, After Winter 1904">
+<br /><i>Army Constantinople to Warsaw, After Winter 1904</i>
+</div>
+
+<pre class="centered">
+Austria (0/3)         Bud Tri Vie                
+England (0/5)         Ber Edi Kie Lon Lvp        
+France  (0/5)         Bre Mar Mun Par Ven        
+Italy   (0/2)         Nap Rom                    
+Turkey  (1/7) A War / Ank Con Mos Sev Smy Stp War
+</pre>
+
+<p>
+Not the Swedes, but the Turks triumph in Poland's capital, Warsaw. The yellow color and the placement of the Russian home centers is reminiscent of the yellow cross in the Swedish flag. Moreover one of the Swedish kings found refuge in Constantinople after a disastrous campaign in the Ukraine. So there's more than one bond between the two people.
+</p>
+
+<p>
+The remarkable fact about this solution is that at the end of 1902, at the halfway mark, there are just 7 units left, all armies, all of course of a different color. Your task is to find out where each of them is located. To make sure that we all come up with the same solution, I will give you some hints, all concerning the nearby Austrian capital. You can choose to read them as a riddle or in plain words.
+</p>
+
+<div id="q1" name="q1" style="display:inline">
+<h2 align="left"><b><font color="red">
+<i>I prefer
+<a href="#" onclick="toggleLayer('a1');return false;"><font color="red">the riddle</font></a>....
+</i></font></b>
+</h2>
+</div>
+
+<div id="a1" name="a1" style="display:none">
+<p>
+An Austrian, a Frenchman and a German arrange to meet up in a bar in Vienna. The German arrives first, orders a beer and declares the bar his. The Frenchman comes in second, orders a coffee, pours milk on it and calls it a café au lait, which irritates the German. They get into a fight, the Frenchman knocks out the German and declares the café his. The Austrian enters, accuses the Frenchman of cultural imperialism and they too start to fight. The Austrian knocks the Frenchman unconscious, adds cream and chocolate powder on top, reclaims the bar and renames it the "Café Viennois". Thus was born a new tradition in coffee culture.
+</p>
+</div>
+
+<div id="q2" name="q2" style="display:inline">
+<h2 align="left"><b><font color="red">
+<i>Give it to me
+<a href="#" onclick="toggleLayer('a2');return false;"><font color="red">as plain as black coffee</font></a>....
+</i></font></b>
+</h2>
+</div>
+
+<div id="a2" name="a2" style="display:none">
+<p>
+To state it bluntly, Vienna is occupied in the first year by Germany. In the second year France takes over, dislodging the German army which retreats off the board. In the third year the French unit is dislodged in turn by the resurgent Austrian.
+</p>
+</div>
+
+<h3 id="I-sev">
+Mission: The Plague
+</h3>
+
+<p>
+Roll back a few hundred years to the year 1347 and the city of Kaffa, a Crimean port controlled by Genoa, but under attack by the Mongols who were suffering from a grueling disease. The Mongols, in an early form of biological warfare, catapulted dead bodies into the city, infecting the population within the walls. The Genovese then set sail to flee the city, carrying in their hulls the rats, furry hosts to the fleas that in turn transmitted the pest parasite everywhere they made landfall.
+</p>
+
+<p>
+From Sicily it spread to the rest of Italy and on to the other Mediterranean countries and then further along the Atlantic, North Sea and Baltic coasts back to Russia, making almost a full circle. On the way it killed nearly half the existing European population. But the Plague was not constricted to Europe, having previously ravaged China, India and the Muslim countries. In just under a decade it accounted for a sharp decline in the world population, from which it would take two centuries to recover.
+</p>
+
+<div class="game_img">
+<img src="../images/lms_I-sev.gif" class="map_img" alt="Italian to Sevastopol, After Winter 1904">
+<br /><i>Italian to Sevastopol, After Winter 1904</i>
+</div>
+
+<pre class="centered">
+Austria (0/5)         Bud Mos Stp Tri Vie    
+England (0/4)         Edi Kie Lon Lvp        
+France  (0/6)         Bre Mar Mun Par Smy Ven
+Germany (0/1)         Ber                    
+Italy   (1/6) ? Sev / Ank Con Nap Rom Sev War
+</pre>
+
+<p>
+On this map we're making a smaller circle in the reverse direction, from Italy to the Crimea and the port city of Sevastopol (to the west of Kaffa, as Kaffa was close to the entrance of the Sea of Azov). Both Warsaw and Ankara are Italian, obscuring the direction from which the surviving Italian came. Did it go by sea or by land? Is it an army or a fleet?
+</p>
+
+<p>
+By changing the color of just a single center it becomes possible to change the identity (but not the color) and reverse the direction from which the survivor comes. Which center is that and what color does it need to change to? The answer to the previous paragraph should give you the answer here and vice versa.
+</p>
+
+<h3 id="lms_smy-mun">
+Debriefing: Oktoberfest &mdash; Army Smyrna to Munich
+</h3>
+
+<div class="game_img">
+<img src="../images/lms_smy-mun17.gif" class="map_img" alt="Army Smyrna to Munich, After Winter 1904">
+<br /><i>Army Smyrna to Munich, After Winter 1904</i>
+</div>
+
+<p>
+This is a pretty fun puzzle. As an experiment I published this on a couple of Diplomacy forums, encouraging visitors to find a solution through a collective effort. Although the reaction was underwhelming, the problem statement was kind of innovative, so let me repeat it here. We'll pick in right after the introduction of an LMS puzzle in general.
+</p>
+
+<blockquote>
+	<p>
+	Sometimes the problem statement imposes some further conditions on how the game proceeds. One invariable condition is that at the halftime point, after Winter 1902 (at the start of 1903), all powers should still have at least one unit on the board. Furthermore in this game we're told that the supply center in Munich will change hands every single year and never to the same power as in any previous year, so that in the end only two powers will never have owned the center.
+	</p>
+
+	<p>
+	Normally you would be requested to reconstruct the entire game, but in order to make it a little more manageable, I will only ask you to answer the following two questions.
+	</p>
+
+	<ol>
+		<li>
+			List in order the power owning Munich at the end of each year.
+			<ul>
+				<li>W1900: Germany</li>
+				<li>W1901: </li>
+				<li>W1902: </li>
+				<li>W1903: </li>
+				<li>W1904: Turkey</li>
+			</ul>
+		</li>
+		
+		<li>
+			List all units (power, type, location) still on the board after Winter 1903, which is to say at the start of 1904. It can be proven that the maximum number of units in order to achieve the goal of a single remaining unit a year later, is 4. I'll gift you one of them.
+			<ul>
+				<li>Turkey: A Kie</li>
+			</ul>
+		</li>
+	</ol>
+</blockquote>
+
+<p>
+This type of questioning actually leads to a very specific approach to solving the puzzle. Namely, can we answer the questions without necessarily reproducing  the entire solution?
+</p>
+
+<p>
+Let's see how far we can get on the first question. Germany and Turkey are already on the Munich occupation list, in first  and last position. That necessarily means that the power owning Munich in 1903 is a sniper country other than Germany, because whoever owns Munich in 1903 must be eliminated in 1904 by losing its last center: Munich. The only candidate is France. Moreover France must capture Munich in 1903, as ownership changes every year. Therefore France has an army in Munich at the end of 1903, which at the same time gives us the second unit for the second question.
+</p>
+
+<p>
+The situation in 1902 is much harder to tell, so let's turn to the start instead and see if we can determine who owns Munich at the end of 1901. It immediately becomes clear how central Munich is, because no less than five foreign armies from four different nations can occupy Munich in the first year. Two of these are French, which we know won't capture the city until 1903. But that still leaves three to consider: the Italian army Venice, Austrian army Vienna and Russian army Warsaw.
+</p>
+
+<p>
+Russia seems poised to take Berlin and Italy Marseilles, so that leaves Austria, right? Well, wrong. And to understand why, let's return to 1903 and the battle that occurs in the final year. With a French sniper in Munich and a Turkish raider in Kiel and assuming two other not yet identified units (why there can't be just one, I'll explain later), where do we go from here? The French army can of course not stay in Munich. It needs to move out and make room for a raider moving in from behind. On the way out it needs to dislodge a second raider, supported by the remaining third raider. Turkey is either the first or third raider. If it's the first one it now needs to support the French sniper towards the first raider. If it's the third one it moves itself to Munich supported by the French sniper to dislodge the first raider there. In either case France must end the turn on a space without a supply center. This space is the location of either the first or second raider at the end of 1903.
+</p>
+
+<p>
+Moreover each of the raiders needs to be in a space neighboring Munich in this very tight dance. As it's preferable that as many sniper centers are captured in 1903 as possible, so as to allow for the maximum number of snipers in that year, it follows that the best configuration is to have a unit in Berlin. Since Berlin won't change hands in the last year, that unit is going to be Russian. We can also posit now that Berlin will be captured by Russia in 1903. Therefore there's no need to capture it in 1901.
+</p>
+
+<p>
+Is that Russian unit in Berlin in 1903 an army or a fleet? That depends. In the first scenario, where the French raider moves twice, it could first dislodge the Russian unit of whichever type in Berlin. For this to happen, the fourth unit needs to be in Silesia. In the second scenario France must move immediately to a non-supply center space, which can only be Ruhr, while Russia moves into Munich and therefore necessarily is an army.
+</p>
+
+<p>
+The answer to the second question has now been reduced to the following options: a Turkish army in Kiel, a French army in Munich, a Russian army or fleet in Berlin, and an army of unknown nationality (neither French nor German, nor Turkish for that matter, because it can't dislodge its own countryman) in Silesia or Ruhr.
+</p>
+
+<p>
+How do we know now who captured Munich in 1901? Berlin is not a likely first target for Russia. But Russia needs an extra center, because the standard sweep operation in Turkey, where Russia employs two units to remove two Turkish units before disbanding, requires Russia to lose two centers in 1902. One of these is St. Petersburg, but the other must be a non-home center, given that Warsaw and Moscow remain Russian and Sevastopol gets captured in 1901. This could be either a German or an Austrian center. Observe now that Italy captures two centers, Marseilles and Trieste, most probably in 1901. Austria loses a center, which is a good way to get rid of the fleet, but only if it captures no centers itself. This makes Russia the prime candidate to capture Munich. Sure, Austria could capture Munich and Russia Vienna to keep Austria at two centers. But that would force Austria to recapture Vienna, which is quite wasteful and unproductive.
+</p>
+
+<p>
+That leaves three powers for the 1902 capture, Austria, Italy and England. The last one however only has one army and that army is needed to capture Paris, which it can't do in 1901 (too far out of reach), nor in 1903 given how tight the final dance is. So England is out. The key to discern between the other two is the Italian fleet Naples. Whereas usually this fleet disbands when Venice gets captured in the first year, this time Italy grows by two centers. There's no use in sending the fleet around the Atlantic. Instead let's move it as close as possible to the final destination, Munich, in the shortest amount of time. Right, to Venice, which it can reach already in the Fall of 1901. In order to keep Venice Italian it's necessary that the dislodgement happens In Spring 1902, not in Fall.
+</p>
+
+<p>
+But we can do even better with a second dislodgement. Note that Italian army Rome has captured Trieste in 1901. In Spring 1902 an Austrian army dislodges the fleet with support from a French or German army in Piedmont, while army Rome moves to Tyrolia, where the same Austrian army dislodges it in Fall. That's two green birds caught and a red bird of prey in Tyrolia in Fall 1902. Since a red army in Munich at the same time would complicate later operations, it's clear that an Italian army would be the best option. As it happens army Venice, which had captured Marseilles in 1901, can move to Munich and secure an Italian presence after 1902. Answer to the first question: 1. Germany, 2. Russia, 3. Italy, 4. France, 5. Turkey.
+</p>
+
+<p>
+To complete the second question, we need to know the fate of the English army after entering Paris in 1902. With what we know about the position at the end of 1903, either it moves to Ruhr or it gets dislodged on the way, presumably by a French or German sniper attacking Burgundy.
+</p>
+
+<p>
+Now, observe that France loses all its home centers in the first two years, Brest and Paris to England, Marseilles to Italy. But it only captures Munich at the end of 1903. How does it sustain itself in 1903? For that it needs to own a center that gets captured during that year, which means either Kiel or Berlin. That means in turn that of the two sniper centers captured that year, only one results in a Winter disbandment, as the other merely sustains the remaining sniper.
+</p>
+
+<p>
+Which is that second sniper that gets disbanded in Winter 1903? Obviously it must be the German fleet Kiel, for how else will the Turkish army reach Kiel in a single year from St. Petersburg if not with a convoy through the Baltic Sea? As such we can be assured that there's no other sniper that could attack Burgundy in Fall 1903, proving that the English army survives and ends up in Ruhr. The Ruhr solution requires a Russian army in Berlin, so as to move it to Munich, and so we can answer the second question in full. The surviving units at the end of 1903 are: 1. Turkish army Kiel, 2. French army Munich, 3. Russian army Berlin, 4. English army Ruhr.
+</p>
+
+<div class="game_img">
+<img src="../images/lms_smy-mun13.gif" class="map_img" alt="Army Smyrna to Munich, After Winter 1903">
+<br /><i>Army Smyrna to Munich, After Winter 1903</i>
+</div>
+
+<p>
+If you were wondering, this dearth of snipers is one major reason why it would be hard to reduce the board to just three units going into the final year. But this is in no way conclusive, so if you think it possible, go ahead and explore the alternatives.
+</p>
+
+<p>
+Even with both questions answered there are still a number of things that might be unclear, like the fate of the second Austrian army, the English and Russian fleets up North, or which German home center the French army captures first. Most of these events take place in 1902, so a good way to frame this is to consider what the map might look like at the end of 1902.
+</p>
+
+<p>
+We already know that there's an Italian army in Munich, an Austrian in Tyrolia, an English in Paris and a Turkish in St. Petersburg. Furthermore a French army is in either Kiel or Berlin, while the German fleet is in or near the Baltic Sea, ready to convoy the Turkish army during the course of 1903. And then there's Russia. After losing St. Petersburg and Munich for the purpose of disbanding its two units around the Black Sea, it must still have two more units in play because it still owns Moscow and Warsaw. Neither is on a supply center other than perhaps the two home centers just mentioned. The fleet is probably in the vicinity of the Baltic, while the army is near Berlin, which it must capture in 1903.  Altogether that amounts to eight units of seven different countries. As such we've already fulfilled the rainbow condition of having at least one unit of each nation still on the board at the halfway point.
+</p>
+
+<p>
+The remaining units? We'll just throw them under the bus. Fleet Edinburgh travels to St. Petersburg as per normal procedure, where it gets dislodged by the Turkish army with support from either the German or Russian fleet. Fleet London can go to Kiel, where the French army attacks it with support from the other fleet, as both attacks occur in the Fall of 1902. As such we now can ascertain that the French army is in Kiel. To set up the Russian fleet for a quick takeout the next Spring, the best location is Livonia, so that the German fleet in the Baltic can support the Turkish army in there, before convoying it to Kiel.
+</p>
+
+<p>
+As for the second Austrian army, after the Russian army pulls out of Munich, the Austrian moves in and gets crushed by the Italian army moving towards Munich with help from the Russian. The ideal location for the latter is clearly Silesia, from where it can immediately move into Berlin and assist any action in Munich.
+</p>
+
+<p>
+Astoundingly we have now reasoned our way through the whole solution, apparently demonstrating that there's only one possible path. This needs to be taken with a grain of salt, but it's still impressive how a single extra condition (namely that Munich changes hands every turn) can thus apparently restrict the myriad of possible solutions to just this one. Quite likely, dear reader, I've lost you somewhere on the way, so let's get rid of all this text and illustrate the complete solution with a season-by-season rundown in pictures.
+</p>
+
+<div class="game_img">
+<a href="lms_smy-mun.pdf#page=2" target="_blank">
+<img class="map_img" id="lms_smy-mun.1901.image" src="../images/lms_smy-mun05.gif" width="50%" alt="Army Smyrna to Munich, After Winter 1901"/><br/>
+<b id="lms_smy-mun.1901.text">Army Smyrna to Munich, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_smy-mun.1901" class="inputBox" onchange="changeMap(this, '../images/lms_smy-mun{0}.gif', 'Army Smyrna to Munich, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05" selected>After Winter 1901</option>
+</select>
+</div>
+
+<p>
+<b>1901.</b> Russia is the first to arrive in Munich for the <i>Oktoberfest</i>. It spikes its beer with a shot of vodka.
+</p>
+
+<div class="game_img">
+<a href="lms_smy-mun.pdf#page=6" target="_blank">
+<img class="map_img" id="lms_smy-mun.1902.image" src="../images/lms_smy-mun09.gif" width="50%" alt="Army Smyrna to Munich, After Winter 1902"/><br/>
+<b id="lms_smy-mun.1902.text">Army Smyrna to Munich, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_smy-mun.1902" class="inputBox" onchange="changeMap(this, '../images/lms_smy-mun{0}.gif', 'Army Smyrna to Munich, {0}')">
+<option value="06">Spring 1902</option>
+<option value="07">Fall 1902</option>
+<option value="08">Winter 1902</option>
+<option value="09" selected>After Winter 1902</option>
+</select>
+</div>
+
+<p>
+<b>1902.</b> Italy crosses the Alps, bringing along a few bottles of wine to loosen the mood of the local <i>M&auml;dchen</i>.
+</p>
+
+<div class="game_img">
+<a href="lms_smy-mun.pdf#page=10" target="_blank">
+<img class="map_img" id="lms_smy-mun.1903.image" src="../images/lms_smy-mun13.gif" width="50%" alt="Army Smyrna to Munich, After Winter 1903"/><br/>
+<b id="lms_smy-mun.1903.text">Army Smyrna to Munich, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_smy-mun.1903" class="inputBox" onchange="changeMap(this, '../images/lms_smy-mun{0}.gif', 'Army Smyrna to Munich, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
+
+<p>
+<b>1903.</b> When France joins the festivities, champagne corks fly all over the <i>Festivalgel&auml;nde</i>.
+</p>
+
+<div class="game_img">
+<a href="lms_smy-mun.pdf#page=14" target="_blank">
+<img class="map_img" id="lms_smy-mun.1904.image" src="../images/lms_smy-mun17.gif" width="50%" alt="Army Smyrna to Munich, After Winter 1904"/><br/>
+<b id="lms_smy-mun.1904.text">Army Smyrna to Munich, After Winter 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_smy-mun.1904" class="inputBox" onchange="changeMap(this, '../images/lms_smy-mun{0}.gif', 'Army Smyrna to Munich, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
+
+<p>
+<b>1904.</b> Even Turkey gets high, not on <i>bira</i>, but on <i>rak&#305;</i>. The evening starts with belly dancing, but ends with everything off the table for some classic tabletop dancing. <i>Prost!</i>
+</p>
+
+<h3 id="lms_mos-kie">
+Debriefing: Kieler Woche &mdash; Russian Army to Kiel
+</h3>
+
+<div class="game_img">
+<img src="../images/lms_mos-kie17.gif" class="map_img" alt="Russian Army to Kiel, After Winter 1904">
+<br /><i>Russian Army to Kiel, After Winter 1904</i>
+</div>
+
+<p>
+Don't worry, we'll keep it short this time. The focus of this puzzle is the trip that the Russian survivor takes through five countries and various seas. Since raiders have a preponderance at leaving a trail by the centers they take, let's examine the centers captured by Russia. These are Constantinople, Kiel, Munich, Venice and Vienna.
+</p>
+
+<p>
+The Warsaw army could travel to Vienna in Austria, then Venice in Italy, then through France to end up in Germany, which would constitute five countries when including the starting country, Russia. The problem here is that Marseilles is not Russian. Moreover at no point did it cross a sea. A more likely course is for army Moscow to cross over to Turkish Constantinople, then a convoy to Italian Venice, moving on through Austria to get to German Munich before rounding off in Kiel. Given the time frame a diversion towards Vienna is not possible, as that would require five years to complete. The move through Austria is thus simply a short hop through Tyrolia. Five countries, two convoys, with only England and France left out. Charming, but not very helpful to solve this puzzle.
+</p>
+
+<p>
+Let's study the map in more detail. As in the previous puzzle France has been divided between Italy and England. Kiel and Munich end up with the same owner, which is Russia this time, while Italy took Berlin. Curiously Italy took a center off of each of its neighbors, mostly in tandem with Russia. As such both Austria and Turkey have only one home center left. But what does this tell us about the time frame needed to reach those centers?
+</p>
+
+<p>
+Like Berlin Smyrna cannot be captured before 1902. Which means that Italy at that point still has a unit in that theater that needs to be removed in 1903. For that we need two snipers on a culling mission. France can send fleet Brest to the Ionian Sea, but Germany would be hard pressed to deliver any troops for a Turkish expedition. The furthest an army could travel in the first two years is to Sevastopol, but a center this far removed from the goal can't be recaptured, effectively limiting the army to the Ukraine. The next year it could only reach Armenia, unable to aid the French fleet in any attack.
+</p>
+
+<p>
+We need a more local presence, which can be either Austria or Turkey. The problem is that they will retain a center until the end and therefore cannot completely be eliminated. In order to disband the unit they provide, they need not only to lose a center in 1903, but also keep a second unit alive into 1904 to account for the uncaptured home center. Since that unit cannot itself take a center, the conclusion is that there must be 4 units left after 1903, one of which (either Austrian or Turkish) occupies a space without a supply center (such as Ruhr), two of which are on supply centers (an Italian in Berlin, a Russian in Munich), and finally one sniper (either German or French) either in Kiel or likewise on a non-supply center space. The captured supply centers are used to remove the culling units and therefore must have previously been owned by these powers. One of these was thus French and, given the proximity to the German home centers, the other was most probably Austrian. Moreover, since we need to have all powers still present after 1902, the identity of the last remaining sniper cannot be other than German.
+</p>
+
+<p>
+There are still a few more riddles to solve, such as the destinations of the English fleets or the order in which Austria and France capture and lose centers, but these are not so tough to crack. The attentive reader might already have discovered a resemblance with one of the earlier puzzles. Indeed, Crackland, published in Operation Berlin and debriefed in Operation Moscow, the puzzle accredited to Graeme Ackland, served as a model. The choices there can be quite faithfully applied here. Let's discover them.
+</p>
+
+<div class="game_img">
+<a href="lms_mos-kie.pdf#page=2" target="_blank">
+<img class="map_img" id="lms_mos-kie.1901.image" src="../images/lms_mos-kie05.gif" width="50%" alt="Army Moscow to Kiel, After Winter 1901"/><br/>
+<b id="lms_mos-kie.1901.text">Army Moscow to Kiel, After Winter 1901</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mos-kie.1901" class="inputBox" onchange="changeMap(this, '../images/lms_mos-kie{0}.gif', 'Army Moscow to Kiel, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05" selected>After Winter 1901</option>
+</select>
+</div>
+
+<p>
+<b>1901.</b> Army Moscow gets off to a good start in the race, reaching Constantinople by way of the Black Sea.
+</p>
+
+<div class="game_img">
+<a href="lms_mos-kie.pdf#page=6" target="_blank">
+<img class="map_img" id="lms_mos-kie.1902.image" src="../images/lms_mos-kie09.gif" width="50%" alt="Army Moscow to Kiel, After Winter 1902"/><br/>
+<b id="lms_mos-kie.1902.text">Army Moscow to Kiel, After Winter 1902</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mos-kie.1902" class="inputBox" onchange="changeMap(this, '../images/lms_mos-kie{0}.gif', 'Army Moscow to Kiel, {0}')">
+<option value="06">Spring 1902</option>
+<option value="07">Fall 1902</option>
+<option value="08">Winter 1902</option>
+<option value="09" selected>After Winter 1902</option>
+</select>
+</div>
+
+<p>
+<b>1902.</b> A daring crossing of the Mediterranean Sea lands him at the entrance of the Piazzo San Marco in Venice, where he sails in at high tide.
+</p>
+
+<div class="game_img">
+<a href="lms_mos-kie.pdf#page=10" target="_blank">
+<img class="map_img" id="lms_mos-kie.1903.image" src="../images/lms_mos-kie13.gif" width="50%" alt="Army Moscow to Kiel, After Winter 1903"/><br/>
+<b id="lms_mos-kie.1903.text">Army Moscow to Kiel, After Winter 1903</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mos-kie.1903" class="inputBox" onchange="changeMap(this, '../images/lms_mos-kie{0}.gif', 'Army Moscow to Kiel, {0}')">
+<option value="10">Spring 1903</option>
+<option value="11">Fall 1903</option>
+<option value="12">Winter 1903</option>
+<option value="13" selected>After Winter 1903</option>
+</select>
+</div>
+
+<p>
+<b>1903.</b> To beat the competition the team elects to tow their boat over the Tyrolian Alps to Lake Constance for the last stretch over the Rhine. This gives them such a lead that they can happily spend a day in Munich, drinking the local beverage.
+</p>
+
+<div class="game_img">
+<a href="lms_mos-kie.pdf#page=14" target="_blank">
+<img class="map_img" id="lms_mos-kie.1904.image" src="../images/lms_mos-kie17.gif" width="50%" alt="Army Moscow to Kiel, After Winter 1904"/><br/>
+<b id="lms_mos-kie.1904.text">Army Moscow to Kiel, After Winter 1904</b><br/>
+<b><i><small>Click to view the complete history in a separate window</small></i></b>
+</a><br/>
+<b>Season:</b>
+<select name="lms_mos-kie.1904" class="inputBox" onchange="changeMap(this, '../images/lms_mos-kie{0}.gif', 'Army Moscow to Kiel, {0}')">
+<option value="14">Spring 1904</option>
+<option value="15">Fall 1904</option>
+<option value="16">Winter 1904</option>
+<option value="17" selected>After Winter 1904</option>
+</select>
+</div>
+
+<p>
+<b>1904.</b> The field suddenly gets crowded, but with a few risky steering maneuvers left and right their boat manages to cross the finish line first, while the competition is forced to retire.
+</p>
+
+<!-- Content Body End -->
+</div>
+
+<div class="info_block padded_body">
+<div>
+<br/>
+<br/>
+</div>
+
+<div>
+<table>
+<tbody>
+<tr>
+<td>
+<!-- Insert Contact Information! -->
+<a href="mailto:woelpad@gmail.com">
+<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+</a> 
+</td>
+<td>
+<strong>
+Mario Huys <br/>
+(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+</strong> 
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!--
+<div class="dear_dp">
+<p>
+<i>
+If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the 
+
+<a href="../Common/DearDP.html">
+<q><strong>Dear DP...</strong></q>
+</a> 
+
+mail interface.
+</i> 
+</p>
+</div>
+-->
+
+</td>
+</tr>
+</table>
+</div>
+
+<div class="req_link_container">
+<hr class="hr_rule bot_hr">
+
+<div class="req_link left_link">
+<a href="../..">
+<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+
+<div class="req_link right_link">
+<a href="..">
+<img class="no_border" src="../images/toIssue.gif" alt="Site navigation thumbnail">
+</a>
+</div>
+</div>
+
+</body>
+</html>
