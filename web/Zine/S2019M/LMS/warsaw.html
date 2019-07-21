@@ -50,14 +50,19 @@ function changeMap(selector, reference, content) {
 	if (anchor) anchor.href = image.src;
 	image.alt = text.innerHTML = content.format(selected.text);
 }
-function toggleLayer(whichLayer) {
+function toggleLayer(whichLayer, display) {
 	var elem, vis;
 	elem = document.getElementById(whichLayer);
 	vis = elem.style;
-	if (vis.display==''&&elem.offsetWidth!=undefined&&elem.offsetHeight!=undefined)
-		vis.display = (elem.offsetWidth!=0&&elem.offsetHeight!=0)?'inline':'none';
-	vis.display = (vis.display==''||vis.display!='none')?'none':'inline';
-	if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
+	if (vis.display == '' && elem.offsetWidth != undefined && elem.offsetHeight != undefined)
+		vis.display = (elem.offsetWidth != 0 && elem.offsetHeight != 0) ? 'inline' : 'none';
+	else if (vis.display != 'none') vis.display = 'inline';
+	if (display == undefined || display != vis.display) {
+		vis.display = vis.display != 'none' ? 'none' : 'inline';
+		if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
+		return 1;
+	}
+	return 0;
 }
 </script>
 </head>
@@ -120,27 +125,27 @@ Not the Swedes, but the Turks triumph in Poland's capital, Warsaw. The yellow co
 </p>
 
 <p>
-The remarkable fact about this solution is that at the end of 1902, at the halfway mark, there are just 7 units left, all armies, all of course of a different color. Your task is to find out where each of them is located. To make sure that we all come up with the same solution, I will give you some hints, all concerning the nearby Austrian capital. You can choose to read them as a riddle or in plain words.
+The remarkable fact about this solution is that at the end of 1902, at the halfway mark, there are just 7 units left, all armies, all of course of a different color. Your task is to find out where each of them is located. To make sure that we all come up with the same solution, I will give you some hints, all concerning the nearby Austrian capital. You can choose to read them as a riddle or straight up.
 </p>
 
 <div id="q1" name="q1" style="display:inline">
 <h2 align="left"><b><font color="red">
 <i>I prefer
-<a href="#" onclick="toggleLayer('a1');return false;"><font color="red">the riddle</font></a>....
+<a href="#" onclick="toggleLayer('a1'); return false;"><font color="red">the riddle</font></a>....
 </i></font></b>
 </h2>
 </div>
 
 <div id="a1" name="a1" style="display:none">
 <p>
-An Austrian, a Frenchman and a German arrange to meet up in a bar in Vienna. The German arrives first, orders a beer and declares the bar his. The Frenchman comes in second, orders a coffee, pours milk on it and calls it a café au lait, which irritates the German. They get into a fight, the Frenchman knocks out the German and declares the café his. The Austrian enters, accuses the Frenchman of cultural imperialism and they too start to fight. The Austrian knocks the Frenchman unconscious, adds cream and chocolate powder on top, reclaims the bar and renames it the "Café Viennois". Thus was born a new tradition in coffee culture.
+An Austrian, a Frenchman and a German arrange to meet up in a bar in Vienna. The German arrives first, orders a beer and declares the bar his. The Frenchman comes in second, orders a coffee, pours milk on it and calls it a <i>café au lait</i>, which irritates the German. They get into a fight, the Frenchman knocks out the German and declares the café his. The Austrian enters, accuses the Frenchman of cultural imperialism and they too start to fight. The Austrian knocks the Frenchman unconscious, adds cream and chocolate powder on top, reclaims the bar and renames it the "<i>Café Viennois</i>". Thus was born a new tradition in coffee culture.
 </p>
 </div>
 
 <div id="q2" name="q2" style="display:inline">
 <h2 align="left"><b><font color="red">
 <i>Give it to me
-<a href="#" onclick="toggleLayer('a2');return false;"><font color="red">as plain as black coffee</font></a>....
+<a href="#" onclick="toggleLayer('a2'); return false;"><font color="red">as straight as black coffee</font></a>....
 </i></font></b>
 </h2>
 </div>
@@ -150,6 +155,12 @@ An Austrian, a Frenchman and a German arrange to meet up in a bar in Vienna. The
 To state it bluntly, Vienna is occupied in the first year by Germany. In the second year France takes over, dislodging the German army which retreats off the board. In the third year the French unit is dislodged in turn by the resurgent Austrian.
 </p>
 </div>
+
+<h2 align="left"><b><font color="red">
+<i>Don't need
+<a href="#" onclick="if (toggleLayer('a1', 'none') + toggleLayer('a2', 'none') == 0) {alert('Then stop clicking on these links!')} return false;"><font color="red">any of these hints</font></a>....
+</i></font></b>
+</h2>
 
 <h3 id="I-sev">
 Mission: The Plague
