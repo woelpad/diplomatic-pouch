@@ -46,8 +46,8 @@ function changeMap(selector, reference, content) {
 	if (anchor) anchor.href = image.src;
 	image.alt = text.innerHTML = content.format(selected.text);
 }
-function toggleLayer(whichLayer)
-{	var elem, vis;
+function toggleLayer(whichLayer) {
+	var elem, vis;
 	elem = document.getElementById(whichLayer);
 	vis = elem.style;
 	if (vis.display==''&&elem.offsetWidth!=undefined&&elem.offsetHeight!=undefined)
