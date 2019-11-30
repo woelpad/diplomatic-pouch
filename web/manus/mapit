@@ -1,0 +1,157 @@
+<title>Manusized Mapit</title>
+<h1 align="center">Manusized Mapit</h1>
+<h3 align="center"><i>By Manus Hand (not surprisingly)</i></h3>
+<table cellpadding="8" cellspacing="8">
+<tr><td bgcolor="cyan">
+<h3 align="center">What Is It?</h3>
+What you can get here is the "Manusized" version of the mapit program,
+and "Manusized" <tt>.ps</tt> template files.
+<p>
+Manusized maps incorporate two improvements over non-Manusized version:
+<ol>
+<li>The color maps are, well, color.  Land is brown and sea is blue.
+    (The non-Manusized mapit version's color maps are black-and-white,
+	with only the units colored.)
+
+<li>The supply center dots are colored to reflect each one's current
+	owner.  That is, if England owns a center, it will be shown as dark
+	blue.
+</ol>
+
+<h3 align="center">How It Came To Be</h3>
+I originally created this version of mapit to assist in the display of
+the <a href="http://uk.diplom.org/?variant=payola">Payola variant</a> games
+that I run, since it is
+more common in those games to have unusual ownership situations (stuff
+like Turkey owning Liverpool,
+Paris, Ankara, and nothing else, despite his three units being in Ukraine,
+North Africa, and Prussia).
+<p>
+But of course, the colored supply center dot feature is very handy even in
+non-Payola games,
+and so I was often urged to "release" my version to the public.
+I resisted this at first because the code was kind of jammed into the
+released Mapit program code
+(more important, my Manusized mapit program had become incompatible with some of
+the existing mapit <tt>.ps</tt> files, attempting to color all SC's, even when
+it was fed <tt>.ps</tt>
+files that did not know how to do so).
+<p>
+Enter Thomas Kuhlmann, who begged me for the code, and then helped me
+make it backward compatible to the pre-existing (non-Manusized) <tt>.ps</tt> files.
+At that point, the code (thanks
+to Thomas) detected when you were using a Manusized map file, and only attempted
+to color the supply centers if you were indeed using such a Manusized file
+(the backward compatibility problem.
+<h3 align="center">And Then...</h3>
+Much later, as part of the development of the
+<a href="http://uk.diplom.org"><font color="blue">DPjudge</font></a>, I
+completely rewrote mapit (which was written in the C programming language)
+in Python as a separate but integrated module for the
+DPjudge.  This module, called <tt>dpmap</tt>, also serves as a standalone
+executable just as the mapit program did, and this is the Manusized map-maker
+program that I now have available for download here.  Over the years, with
+the DPjudge's mapmaking needs growing, the Python version was enhanced, and
+the C language one wasn't.  For this reason, the C code is no longer available
+for download here.
+<p>
+The <tt>dpmap</tt>
+program requires Manusized <tt>.ps</tt> files for input, so it lacks all the
+parameter bells and whistles added by Thomas to the C language mapit program.
+Even so, dpmap is now much more full-featured than mapit was.  I like
+it much much better and you probably will too.  If you do not have a Python
+interpreter to support your running it, let me know; I will put a compiled
+version up here for people like you.
+<!--P-->
+<h3 align="center">The Manusized Maps</h3>
+By now you have gotten the idea that there is not only new code that
+makes up the dpmap (Manusized mapit) program, but that (to take advantage of
+the new features) you also need to feed the program a Manusized <tt>.ps</tt>
+map file (that is, different from the version of the
+<tt>.ps</tt> file provided with the mapit distribution).
+So far, I have put together some of the Manusized color map files, and
+Mario Huys
+and Juho Snellman
+have contributed a great many more.
+For a couple of the ones I created, I just took the <tt>.ps</tt> file
+distributed with standard mapit and made changes to its PostScript code. 
+For some of
+the others, I used -- oh geez, what is it? mapper? mapmaker? one of
+those David Norman brand products -- to make a map, and then made changes to
+<i>its</i> PostScript output.
+<p>
+What I'm saying is that if you want to create a Manusized version of
+a map not listed below, one way to do so is to take the existing mapit map
+and go to town with its PostScript contents.  Going to town isn't all
+that hard anymore (and someday creating Manusized maps from scratch will
+be very easy, thanks to programming being created, but that is all I will say).
+Write me if you need to know how to Manusize a non-Manusized map, although
+I freely admit that I may just refer you to
+far more knowledgeable sources,
+<a href="mailto:woelpad@gmail.com"><font color="blue">Mario
+Huys</font></a>
+and <a href="mailto:jsnell@lyseo.edu.ouka.fi"><font color="blue">Juho
+Snellman</font></a>,
+who, as you will see, have created some <u>very beautiful</u> Manusized
+maps -- both from pre-existing mapit maps, and also from scratch.  Thanks,
+Mario and Juho!!
+<p>
+Okay, with no further ado, here is what you need to get yourself a
+Manusized mapit.  Hold down the Shift key while clicking to save each of
+these files to your disk.  Then they're all yours.  Enjoy!
+</td></th>
+<tr><th bgcolor="yellow"><font color="blue">
+<tt>
+<!--
+<a href=mapit.c>mapit.c</a> (C language version)<p>
+-->
+<a href="dpmap.py">dpmap.py</a> (Python language version)<p>
+<a name="#maps">
+<table>
+<th>PostScript File</th>
+<td width="20">&nbsp;</td>
+<td width="20">&nbsp;</td>
+<th><tt>Author</th>
+<td width="20">&nbsp;</td>
+<th><tt>Remarks</th>
+</tr>
+<tr><th><tt><a href="standard.ps">standard.ps</a></th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Manus Hand</th><td width="20">&nbsp;</td><th><i>Lowe Judge: regular</i>.  Supports 1898, etc.</tr>
+<tr><th><tt><a href="1900.ps">1900.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="aberration.ps">aberration.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="ancmed.ps">ancmed.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Juho Snellman</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="brazilian.ps">brazilian.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Manus Hand</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="britain.ps">britain.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Manus Hand</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="canton.ps">canton.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="chaos.ps">chaos.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="chromatic.ps">chromatic.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Juho Snellman</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="classical.ps">classical.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Juho Snellman</th><td width="20">&nbsp;</td><th><i>Lowe Judge: classicf</tr>
+<tr><th><tt><a href="crowded.ps">crowded.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Manus Hand</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="empire.ps">empire.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="fiveman.ps">fiveman.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Manus Hand</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="hundred.ps">hundred.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Juho Snellman</th><td width="20">&nbsp;</td><th><i>Lowe Judge: hundred3</i></tr>
+<tr><th><tt><a href="imperial.ps">imperial.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="loeb9.ps">loeb9.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="milan.ps">milan.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="minorpower.ps">minorpower.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Manus Hand</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="modern.ps">modern.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Manus Hand</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="pure.ps">pure.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="renaissance.ps">renaissance.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Manus Hand</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="sailho.ps">sailho.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Juho Snellman</th><td width="20">&nbsp;</td><th><i>Lowe Judge: sailho2</tr>
+<tr><th><tt><a href="v8.ps">v8.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Manus Hand</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="void.ps">void.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+<tr><th><tt><a href="youngstown.ps">youngstown.ps</a> </th><td width="20">&nbsp;</td><td width="20">&nbsp;</td><th>Mario Huys</th><td width="20">&nbsp;</td></tr>
+</table>
+</tt></th></tr>
+<tr><td bgcolor="ltgreen">
+<font color="red">
+<center><b><blink>What you can do if you appreciate this:</blink></b></center>
+<blockquote>
+Make me a new <tt>.ps</tt> file (or two, or three...) to add to the
+collection!
+</th></tr></table>
+
+<p>
+<center>
+<i>
+Mail me about Manusized Mapit at
+<a href="mailto:manus2hand@gmail.com?subject=mapit">manus2hand@gmail.com</a>
