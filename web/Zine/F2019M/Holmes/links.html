@@ -34,33 +34,33 @@
 		}
 		</style>
 		<script>
-		function toggleLayer(whichLayer)
-		{
-			var elem, vis;
-			elem = document.getElementById(whichLayer);
-			vis = elem.style;
-			if (vis.display==''&&elem.offsetWidth!=undefined&&elem.offsetHeight!=undefined)
-				vis.display = (elem.offsetWidth!=0&&elem.offsetHeight!=0)?'inline':'none';
-			vis.display = (vis.display==''||vis.display!='none')?'none':'inline';
-			if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
-		}
-		if (!String.prototype.format) {
-			String.prototype.format = function() {
-				var args = arguments;
-				return this.replace(/{(\d)}/g, function(match, number) {
-					return typeof args[number] != 'undefined' ? args[number] : match;
-				});
-			};
-		}
-		function changeMap(selector, reference, content) {
-			var selected = selector.options[selector.selectedIndex];
-			var image = document.getElementById(selector.name + '.image');
-			var anchor = document.getElementById(selector.name + '.anchor');
-			var text = document.getElementById(selector.name + '.text');
-			image.src = reference.format(selected.value);
-			if (anchor) anchor.href = image.src;
-			image.alt = text.innerHTML = content.format(selected.text);
-		}
+			function toggleLayer(whichLayer)
+			{
+				var elem, vis;
+				elem = document.getElementById(whichLayer);
+				vis = elem.style;
+				if (vis.display==''&&elem.offsetWidth!=undefined&&elem.offsetHeight!=undefined)
+					vis.display = (elem.offsetWidth!=0&&elem.offsetHeight!=0)?'inline':'none';
+				vis.display = (vis.display==''||vis.display!='none')?'none':'inline';
+				if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
+			}
+			if (!String.prototype.format) {
+				String.prototype.format = function() {
+					var args = arguments;
+					return this.replace(/{(\d)}/g, function(match, number) {
+						return typeof args[number] != 'undefined' ? args[number] : match;
+					});
+				};
+			}
+			function changeMap(selector, reference, content) {
+				var selected = selector.options[selector.selectedIndex];
+				var image = document.getElementById(selector.name + '.image');
+				var anchor = document.getElementById(selector.name + '.anchor');
+				var text = document.getElementById(selector.name + '.text');
+				image.src = reference.format(selected.value);
+				if (anchor) anchor.href = image.src;
+				image.alt = text.innerHTML = content.format(selected.text);
+			}
 		</script>
 	</head>
 	<body style="background-color: rgb(255, 255, 255);">
@@ -476,7 +476,21 @@
 						</p>
 
 						<div class="game_img">
-							<img src="../images/Chain16.gif" class="map_img" alt="16 unit chain">
+							<a href="Chain16.pdf#page=2" target="_blank">
+								<img class="map_img" id="Chain16.1901.image" src="../images/Chain1607.gif" width="50%" alt="Chain 16, After Fall 1902"/><br/>
+								<b id="Chain16.1901.text">Chain 16, After Fall 1902</b><br/>
+								<b><i><small>Click to view the complete history in a separate window</small></i></b>
+							</a><br/>
+							<b>Season:</b>
+							<select name="Chain16.1901" class="inputBox" onchange="changeMap(this, '../images/Chain16{0}.gif', 'Chain 16, {0}')">
+								<option value="01">Game Start</option>
+								<option value="02">Spring 1901</option>
+								<option value="03">Fall 1901</option>
+								<option value="04">Winter 1901</option>
+								<option value="05">Spring 1902</option>
+								<option value="06">Fall 1902</option>
+								<option value="07" selected>After Fall 1902</option>
+							</select>
 						</div>
 
 						<p>
@@ -554,7 +568,21 @@
 						<div id="a3" name="a3" style="display:none">
 
 						<div class="game_img">
-							<img src="../images/Chain20.gif" class="map_img" alt="20 unit chain">
+							<a href="Chain20.pdf#page=2" target="_blank">
+								<img class="map_img" id="Chain20.1901.image" src="../images/Chain2007.gif" width="50%" alt="Chain 20, After Fall 1902"/><br/>
+								<b id="Chain20.1901.text">Chain 20, After Fall 1902</b><br/>
+								<b><i><small>Click to view the complete history in a separate window</small></i></b>
+							</a><br/>
+							<b>Season:</b>
+							<select name="Chain20.1901" class="inputBox" onchange="changeMap(this, '../images/Chain20{0}.gif', 'Chain 20, {0}')">
+								<option value="01">Game Start</option>
+								<option value="02">Spring 1901</option>
+								<option value="03">Fall 1901</option>
+								<option value="04">Winter 1901</option>
+								<option value="05">Spring 1902</option>
+								<option value="06">Fall 1902</option>
+								<option value="07" selected>After Fall 1902</option>
+							</select>
 						</div>
 
 						<p>
@@ -606,7 +634,21 @@
 						<div id="a4" name="a4" style="display:none">
 
 						<div class="game_img">
-							<img src="../images/Chain23.gif" class="map_img" alt="23 unit chain">
+							<a href="Chain23.pdf#page=2" target="_blank">
+								<img class="map_img" id="Chain23.1901.image" src="../images/Chain2307.gif" width="50%" alt="Chain 23, After Fall 1902"/><br/>
+								<b id="Chain23.1901.text">Chain 23, After Fall 1902</b><br/>
+								<b><i><small>Click to view the complete history in a separate window</small></i></b>
+							</a><br/>
+							<b>Season:</b>
+							<select name="Chain23.1901" class="inputBox" onchange="changeMap(this, '../images/Chain23{0}.gif', 'Chain 23, {0}')">
+								<option value="01">Game Start</option>
+								<option value="02">Spring 1901</option>
+								<option value="03">Fall 1901</option>
+								<option value="04">Winter 1901</option>
+								<option value="05">Spring 1902</option>
+								<option value="06">Fall 1902</option>
+								<option value="07" selected>After Fall 1902</option>
+							</select>
 						</div>
 
 						<p>
@@ -759,7 +801,21 @@
 						</p>
 
 						<div class="game_img">
-							<img src="../images/Chain25.gif" class="map_img" alt="25 unit chain">
+							<a href="Chain25.pdf#page=2" target="_blank">
+								<img class="map_img" id="Chain25.1901.image" src="../images/Chain2507.gif" width="50%" alt="Chain 25, After Fall 1902"/><br/>
+								<b id="Chain25.1901.text">Chain 25, After Fall 1902</b><br/>
+								<b><i><small>Click to view the complete history in a separate window</small></i></b>
+							</a><br/>
+							<b>Season:</b>
+							<select name="Chain25.1901" class="inputBox" onchange="changeMap(this, '../images/Chain25{0}.gif', 'Chain 25, {0}')">
+								<option value="01">Game Start</option>
+								<option value="02">Spring 1901</option>
+								<option value="03">Fall 1901</option>
+								<option value="04">Winter 1901</option>
+								<option value="05">Spring 1902</option>
+								<option value="06">Fall 1902</option>
+								<option value="07" selected>After Fall 1902</option>
+							</select>
 						</div>
 
 						<p>
