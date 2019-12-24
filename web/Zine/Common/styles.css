@@ -51,9 +51,9 @@ body {margin-bottom: 0px;}
 .right_link {float: right; text-align: right;}
 
 /* Styles the dividing <hr/> tags. Every <hr/> should
- * should utilize .hr_rule. top_hr should be used on the
- * upper most <hr/> tag and bot_hr should be used on the
- * lower most <hr/> tag.
+ * utilize .hr_rule. top_hr should be used on the upper
+ * most <hr/> tag and bot_hr should be used on the lower
+ * most <hr/> tag.
  */
 .hr_rule {width: 100%; border: none;
 		  height: 1px; background-color: gray;
