@@ -20,6 +20,7 @@ gtag('config', 'UA-123251121-1');
 */
 .game_img {text-align: center; text-decoration: italic;}
 .map_img {width: 60%;}
+.soft_anchor {color: darkblue; text-decoration: italic;}
 .content_body {}
 .inputBox {
 	color:			#000000;
@@ -34,14 +35,21 @@ gtag('config', 'UA-123251121-1');
 }
 </style>
 <script>
-function toggleLayer(whichLayer) {
+function toggleLayer(whichLayer, state) {
 	var elem, vis;
 	elem = document.getElementById(whichLayer);
 	vis = elem.style;
-	if (vis.display==''&&elem.offsetWidth!=undefined&&elem.offsetHeight!=undefined)
-		vis.display = (elem.offsetWidth!=0&&elem.offsetHeight!=0)?'inline':'none';
-	vis.display = (vis.display==''||vis.display!='none')?'none':'inline';
-	if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
+	if (vis.display == '' && elem.offsetWidth != undefined && elem.offsetHeight != undefined)
+		vis.display = (elem.offsetWidth != 0 && elem.offsetHeight != 0) ? 'inline' : 'none';
+	else if (vis.display != 'none') vis.display = 'inline';
+	if (state == null || state != vis.display) {
+		vis.display = (vis.display != 'none') ? 'none' : 'inline';
+		if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
+	}
+}
+function toggleAllLayers(whichLayers, number) {
+	for (var i = 1; i <= number; i++)
+		toggleLayer(whichLayers + i, 'inline');
 }
 if (!String.prototype.format) {
 	String.prototype.format = function() {
@@ -482,12 +490,18 @@ progress; after twenty minutes, I was truly overjoyed as I watched him position 
 in a 16-unit chain.
 </p>
 
+<div class="game_img" id="qm1" name="qm1">
+<img class="map_img" src="../images/Chain1607.gif" width="50%" alt="Chain 16, After Fall 1902"/><br/>
+<b>Chain 16, After Fall 1902</b><br/>
+<i><small>Need seasons? Read until the end<a class="soft_anchor" onclick="toggleLayer('am1'); return false;">&hellip;</a></small></i>
+</div>
+
+<div id="am1" name="am1" style="display:none">
 <div class="game_img">
-<a href="Chain16.pdf#page=2" target="_blank">
 <img class="map_img" id="Chain16.1901.image" src="../images/Chain1607.gif" width="50%" alt="Chain 16, After Fall 1902"/><br/>
 <b id="Chain16.1901.text">Chain 16, After Fall 1902</b><br/>
-<b><i><small>Click to view the complete history in a separate window</small></i></b>
-</a><br/>
+<i><small>Click the dots for the complete history in a separate window<a class="soft_anchor" href="Chain16.pdf#page=2" target="_blank">&hellip;</a></small></i>
+<br/>
 <b>Season:</b>
 <select name="Chain16.1901" class="inputBox" onchange="changeMap(this, '../images/Chain16{0}.gif', 'Chain 16, {0}')">
 <option value="01">Game Start</option>
@@ -498,6 +512,7 @@ in a 16-unit chain.
 <option value="06">Fall 1902</option>
 <option value="07" selected>After Fall 1902</option>
 </select>
+</div>
 </div>
 
 <p>
@@ -578,12 +593,18 @@ Bending the chain around Venice proved to have some further consequences that ri
 But after some effort we came up with a chain that was already considerably longer.
 </p>
 
+<div class="game_img" id="qm2" name="qm2">
+<img class="map_img" src="../images/Chain2007.gif" width="50%" alt="Chain 20, After Fall 1902"/><br/>
+<b>Chain 20, After Fall 1902</b><br/>
+<i><small>Need seasons? Read until the end<a class="soft_anchor" onclick="toggleLayer('am2'); return false;">&hellip;</a></small></i>
+</div>
+
+<div id="am2" name="am2" style="display:none">
 <div class="game_img">
-<a href="Chain20.pdf#page=2" target="_blank">
 <img class="map_img" id="Chain20.1901.image" src="../images/Chain2007.gif" width="50%" alt="Chain 20, After Fall 1902"/><br/>
 <b id="Chain20.1901.text">Chain 20, After Fall 1902</b><br/>
-<b><i><small>Click to view the complete history in a separate window</small></i></b>
-</a><br/>
+<i><small>Click the dots for the complete history in a separate window<a class="soft_anchor" href="Chain20.pdf#page=2" target="_blank">&hellip;</a></small></i>
+<br/>
 <b>Season:</b>
 <select name="Chain20.1901" class="inputBox" onchange="changeMap(this, '../images/Chain20{0}.gif', 'Chain 20, {0}')">
 <option value="01">Game Start</option>
@@ -594,6 +615,7 @@ But after some effort we came up with a chain that was already considerably long
 <option value="06">Fall 1902</option>
 <option value="07" selected>After Fall 1902</option>
 </select>
+</div>
 </div>
 
 <p>
@@ -644,12 +666,18 @@ Is Holmes' hunch correct? Where should the missing army appear?
 
 <div id="a4" name="a4" style="display:none">
 
+<div class="game_img" id="qm3" name="qm3">
+<img class="map_img" src="../images/Chain2307.gif" width="50%" alt="Chain 23, After Fall 1902"/><br/>
+<b>Chain 23, After Fall 1902</b><br/>
+<i><small>Need seasons? Read until the end<a class="soft_anchor" onclick="toggleLayer('am3'); return false;">&hellip;</a></small></i>
+</div>
+
+<div id="am3" name="am3" style="display:none">
 <div class="game_img">
-<a href="Chain23.pdf#page=2" target="_blank">
 <img class="map_img" id="Chain23.1901.image" src="../images/Chain2307.gif" width="50%" alt="Chain 23, After Fall 1902"/><br/>
 <b id="Chain23.1901.text">Chain 23, After Fall 1902</b><br/>
-<b><i><small>Click to view the complete history in a separate window</small></i></b>
-</a><br/>
+<i><small>Click the dots for the complete history in a separate window<a class="soft_anchor" href="Chain23.pdf#page=2" target="_blank">&hellip;</a></small></i>
+<br/>
 <b>Season:</b>
 <select name="Chain23.1901" class="inputBox" onchange="changeMap(this, '../images/Chain23{0}.gif', 'Chain 23, {0}')">
 <option value="01">Game Start</option>
@@ -660,6 +688,7 @@ Is Holmes' hunch correct? Where should the missing army appear?
 <option value="06">Fall 1902</option>
 <option value="07" selected>After Fall 1902</option>
 </select>
+</div>
 </div>
 
 <p>
@@ -827,12 +856,18 @@ saying, 'There, Watson! A twenty-five unit chain! This position may now be rathe
 which our friends in the dining room have contrived!'
 </p>
 
+<div class="game_img" id="qm4" name="qm4">
+<img class="map_img" src="../images/Chain2507.gif" width="50%" alt="Chain 25, After Fall 1902"/><br/>
+<b>Chain 25, After Fall 1902</b><br/>
+<i><small>Need seasons? Read until the end<a class="soft_anchor" onclick="toggleLayer('am4'); return false;">&hellip;</a></small></i>
+</div>
+
+<div id="am4" name="am4" style="display:none">
 <div class="game_img">
-<a href="Chain25.pdf#page=2" target="_blank">
 <img class="map_img" id="Chain25.1901.image" src="../images/Chain2507.gif" width="50%" alt="Chain 25, After Fall 1902"/><br/>
 <b id="Chain25.1901.text">Chain 25, After Fall 1902</b><br/>
-<b><i><small>Click to view the complete history in a separate window</small></i></b>
-</a><br/>
+<i><small>Click the dots for the complete history in a separate window<a class="soft_anchor" href="Chain25.pdf#page=2" target="_blank">&hellip;</a></small></i>
+<br/>
 <b>Season:</b>
 <select name="Chain25.1901" class="inputBox" onchange="changeMap(this, '../images/Chain25{0}.gif', 'Chain 25, {0}')">
 <option value="01">Game Start</option>
@@ -843,6 +878,7 @@ which our friends in the dining room have contrived!'
 <option value="06">Fall 1902</option>
 <option value="07" selected>After Fall 1902</option>
 </select>
+</div>
 </div>
 
 <p>
@@ -925,12 +961,18 @@ like had our intrepid duo built as many armies as possible in Winter of 1901?
 Holmes replaced two of the three fleets built after the first year with armies and moved some of the pieces around.
 </p>
 
+<div class="game_img" id="qm5" name="qm5">
+<img class="map_img" src="../images/Train2507.gif" width="50%" alt="Train 25, After Fall 1902"/><br/>
+<b>Train 25, After Fall 1902</b><br/>
+<i><small>Need seasons? Read until the end<a class="soft_anchor" onclick="toggleLayer('am5'); return false;">&hellip;</a></small></i>
+</div>
+
+<div id="am5" name="am5" style="display:none">
 <div class="game_img">
-<a href="Train25.pdf#page=2" target="_blank">
 <img class="map_img" id="Train25.1901.image" src="../images/Train2507.gif" width="50%" alt="Train 25, After Fall 1902"/><br/>
 <b id="Train25.1901.text">Train 25, After Fall 1902</b><br/>
-<b><i><small>Click to view the complete history in a separate window</small></i></b>
-</a><br/>
+<i><small>Click the dots for the complete history in a separate window<a class="soft_anchor" href="Train25.pdf#page=2" target="_blank">&hellip;</a></small></i>
+<br/>
 <b>Season:</b>
 <select name="Train25.1901" class="inputBox" onchange="changeMap(this, '../images/Train25{0}.gif', 'Train 25, {0}')">
 <option value="01">Game Start</option>
@@ -941,6 +983,7 @@ Holmes replaced two of the three fleets built after the first year with armies a
 <option value="06">Fall 1902</option>
 <option value="07" selected>After Fall 1902</option>
 </select>
+</div>
 </div>
 
 <p>
@@ -1098,12 +1141,18 @@ differently than Holmes's, and that's fine.)
 
 <div id="a8" name="a8" style="display:none">
 
+<div class="game_img" id="qm6" name="qm6">
+<img class="map_img" src="../images/Chain2607.gif" width="50%" alt="Chain 26, After Fall 1902"/><br/>
+<b>Chain 26, After Fall 1902</b><br/>
+<i><small>Need seasons? Read until the end<a class="soft_anchor" onclick="toggleLayer('am6'); return false;">&hellip;</a></small></i>
+</div>
+
+<div id="am6" name="am6" style="display:none">
 <div class="game_img">
-<a href="Chain26.pdf#page=2" target="_blank">
 <img class="map_img" id="Chain26.1901.image" src="../images/Chain2607.gif" width="50%" alt="Chain 26, After Fall 1902"/><br/>
 <b id="Chain26.1901.text">Chain 26, After Fall 1902</b><br/>
-<b><i><small>Click to view the complete history in a separate window</small></i></b>
-</a><br/>
+<i><small>Click the dots for the complete history in a separate window<a class="soft_anchor" href="Chain26.pdf#page=2" target="_blank">&hellip;</a></small></i>
+<br/>
 <b>Season:</b>
 <select name="Chain26.1901" class="inputBox" onchange="changeMap(this, '../images/Chain26{0}.gif', 'Chain 26, {0}')">
 <option value="01">Game Start</option>
@@ -1114,6 +1163,7 @@ differently than Holmes's, and that's fine.)
 <option value="06">Fall 1902</option>
 <option value="07" selected>After Fall 1902</option>
 </select>
+</div>
 </div>
 
 <p>
@@ -1223,6 +1273,16 @@ Holmes is as confident as ever that he will find it. Do you? Send your answer to
 </table>
 </p>
 
+<h2 align="left">
+<b>
+<font color="red">
+<i>
+To add season maps everywhere,
+<a href="#" onclick="toggleAllLayers('am', 6);return false;"><font color="red">click here</font></a>....
+</i>
+</font>
+</b>
+</h2>
 </div>
 
 </div>
