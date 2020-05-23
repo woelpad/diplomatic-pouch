@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title> DP F2020M: Dem World </title>
+		<meta charset="utf-8"/> 
+		<!-- Point to whereever this stylesheet will exist-->
+		<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+		<style type="text/css">
+			/*
+			 * Insert styles for the content_body here
+			 */
+			 .content_body {
+			 	max-width: 2000px
+			 }
+			.game_img {
+				text-align: center;
+				text-decoration: italic;
+			}
+			.map_img {
+				width: 60%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="req_link_container">
+			<div class="req_link left_link">
+				<a href="../..">
+					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+			<div class="req_link right_link">
+				<a href="..">
+					<img class="no_border" src="../images/toIssue.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+			<hr class="hr_rule top_hr">
+		</div>
+		<div class="centered">
+			<!-- Insert Author Name -->
+			<h1>DEM WORLD</h1>
+			<h2>by Mario Huys and Luiz Neto</h2>
+			<hr class="hr_rule">
+		</div>
+		<div class="content_body justified padded_body">
+		<table width="960" border="0" cellpadding="10" align="center">
+		<tr>
+		<td align="justify">
+		<!-- Content Body -->
+			<p>
+				This year is another election year in America, if you haven't noticed, to fill in just a single post, that of the President of the United Status (or POTUS), a.k.a. "the most powerful man in the world" (not to be confused with movie villains). As is traditional, the two big parties first hold their own candidate selection in the first half of the year. Since it's a re-election year, that process is usually swift and short for the ruling party (the Republican party), but long and drawn out for the opposition party (the Democratic party). And so it was this year, until Corona interfered and cut the process short. But just a few weeks before that happened, on February 25 in Charleston SC, there had been one final television debate with all of the remaining candidates. And just by coincidence, that field which at one point had over 20 people, had been reduced to seven. The exact number needed for a game of <b>Diplomacy</b>.
+			</p>
+			<h3>The cast</h3>
+			<p>
+				Here are the candidates in the same order as they appeared on the stage, along with their highest elected office.
+				<table cellspacing="20">
+					<!--
+					<tr>
+						<td align="center">
+							<b>Italy</b>
+						</td>
+						<td align="center">
+							<b>France</b>
+						</td>
+						<td align="center">
+							<b>England</b>
+						</td>
+						<td align="center">
+							<b>Russia</b>
+						</td>
+						<td align="center">
+							<b>Austria</b>
+						</td>
+						<td align="center">
+							<b>Germany</b>
+						</td>
+						<td align="center">
+							<b>Turkey</b>
+						</td>
+					</tr>
+					-->
+					<tr>
+						<td align="center">
+							<img height="144" src="../images/Michael.jpg" alt="Michael Bloomberg">
+						</td>
+						<td align="center">
+							<img height="144" src="../images/Pete.jpg" alt="Pete Buttigieg">
+						</td>
+						<td align="center">
+							<img height="144" src="../images/Elizabeth.jpg" alt="Elizabeth Warren">
+						</td>
+						<td align="center">
+							<img height="144" src="../images/Bernie.jpg" alt="Bernie Sanders">
+						</td>
+						<td align="center">
+							<img height="144" src="../images/Joe.jpg" alt="Joe Biden">
+						</td>
+						<td align="center">
+							<img height="144" src="../images/Amy.jpg" alt="Amy Klobuchar">
+						</td>
+						<td align="center">
+							<img height="144" src="../images/Tom.jpg" alt="Tom Steyer">
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							<b>Michael Bloomberg</b>
+						</td>
+						<td align="center">
+							<b>Pete Buttigieg</b>
+						</td>
+						<td align="center">
+							<b>Elizabeth Warren</b>
+						</td>
+						<td align="center">
+							<b>Bernie Sanders</b>
+						</td>
+						<td align="center">
+							<b>Joe Biden</b>
+						</td>
+						<td align="center">
+							<b>Amy Klobuchar</b>
+						</td>
+						<td align="center">
+							<b>Tom Steyer</b>
+						</td>
+					</tr>
+					<tr>
+						<td align="center">
+							Former Mayor of New York
+						</td>
+						<td align="center">
+							Former Mayor of Southbend
+						</td>
+						<td align="center">
+							Senator of Massachusetts
+						</td>
+						<td align="center">
+							Senator of Vermont
+						</td>
+						<td align="center">
+							Former US Vice-President
+						</td>
+						<td align="center">
+							Senator of Minnesota
+						</td>
+						<td align="center">
+							No office
+						</td>
+					</tr>
+				</table>
+			</p>
+			<h3>The power assignments</h3>
+			<p>
+				Watching the South-Carolina debate on TV, I started to see certain traits that would make each a perfect fit for a different power. Whether you agree with me, depends on your political views a.o., but at least I was able to convince Manus Hand, a staunch Republican. As a product of one of those reveled/reviled European social democracies, I naturally lean Democratic (not that as a foreigner I'll ever be able to vote), hence you could say we're covering the political spectrum.
+			</p>
+			<h4>
+				Michael Bloomberg: Italy
+			</h4>
+			<p>
+				Michael Bloomberg had not yet put himself on the ballot in any of the early contests (of which South-Carolina would be the last) and was only participating in his second debate after a massive advertisement campaign geared at Super Tuesday and paid out of his own pocket. A billionaire with his own media empire, just like Berlusconi, the Italian media tycoon who was Prime Minister several times just to stay out of prison.
+			</p>
+			<h4>
+				Pete Buttigieg: France
+			</h4>
+			<p>
+				As mayor of a small town Pete Buttigieg had somehow succeeded in propelling himself onto the national stage. Mr. Perfect, as Fox anchor Laura Ingram described him, was pointing to himself as the more eligible candidate. Young in a field where most are past the retirement age, moderate instead of progressive (considered by Americans as representing the far left), and diverse in the sense that he's gay. This might win him some LGBTQ votes, but how this was going to convince Evangelicals to change party is an open question. There are some parallels there with Macron, the French President, who himself came from obscurity and positioned himself as the most eligible candidate to beat the candidate from the extreme right. Plus the French are already considered by Americans as being the gayest people in the world.
+			</p>
+			<h4>
+				Elizabeth Warren: England
+			</h4>
+			<p>
+				Elizabeth Warren was the other face of the progressive movement, next to Sanders. She had already won many of the debates, but not yet turned that into contest victories. There she was again, attacking Bloomberg on his misogyny and recounting her humble beginnings, and the public loved it. The Queen of Boston, Massachussets, was ready to go up against the new Tea Party (a Republican movement) in the national elections. An Iron Lady, in the tradition of British Prime Ministers Margaret Thatcher and Theresa May, with a solid action plan to fix America's myriad of social problems.
+			</p>
+			<h4>
+				Bernie Sanders: Russia
+			</h4>
+			<p>
+				Bernie Sanders had emerged as the frontrunner after his clear victory in Nevada, but had come under fire for defending the Castro regime's education and healthcare implementations. Not a smart move in a country that already has severe problems distinguishing socialism from communism. With Russia still on everyone's mind after their interference in the 2016 election, anyone who sings the praises of the oldest communist regime should tread very carefully.
+			</p>
+			<h4>
+				Joe Biden: Austria
+			</h4>
+			<p>
+				Joe Biden, the favorite before the start of the contests, had not won a single one, but was likely to win South-Carolina, due to its large black vote. Maybe they're hoping that he'll make Obama (husband or wife) his vice-president? He played the gentleman, letting himself get interrupted by the debate MC's and owning it up to his Catholic upbringing. It brings to mind the Austrian Archduke, pretender to the throne, but destined to be murdered, plunging the world into the horrors of WWI. Let's hope I'm not too prescient.
+			</p>
+			<h4>
+				Amy Klobuchar: Germany
+			</h4>
+			<p>
+				The "butcher", pardon me the pun. With a name like that it's not too hard to portrait her as a hard working woman in a male dominated world. And indeed, she worked hard, producing lots of relevant bills with her name on it, from gun check laws to healthcare, which were just piling up dust on Mitch McConnell's desk. Industrious, with not an ounce of glamour, just like Angela Merkel, the German Chancellor. The Midwest meets Mitteleuropa (Central Europe).
+			</p>
+			<h4>
+				Tom Steyer: Turkey
+			</h4>
+			<p>
+				Tom Steyer is a billionaire businessman, a trust fund manager and philantropist. The only one in the pack with no elected mandate yet, it made him the odd man out. Ignored for most of the evening, he's best remembered for trying to gain black votes by promising to compensate descendants of slaves to right the wrongs of the past. Some appeared to take that pretty literally and asked for an advance check. It didn't go well and he would end up being the first to drop out of the race after his loss in South-Carolina. On the night of debate however, his odd man out status made him a natural fit for the role of Turkey, the Sick Man of Europe. Add to that his pale complexion, a remarkable feat in an all-white field, and one wondered if he truly was sick. Sick of the pressure, perhaps?
+			</p>
+			<h3>The opening</h3>
+			<p>
+				I asked Luiz Neto, who regularly writes on openings and is a keen user of the <a href="../../../Online/Openings">Openings Library</a>, to suggest openings for each of the candidates that would suit their style. Luckily for me he duly obliged.
+			</p>
+			<div class="game_img">
+				<a href="demworld.pdf" target="_blank">
+					<img src="../images/demworld.gif" class="map_img" alt="DemWorld, Spring 2020">
+					<br /><i>DemWorld, Spring 2020</i><br/>
+					<b><i><small>Click to view a readable version in a separate window</small></i></b>
+				</a>
+			</div>
+			<h4>
+				Michael Bloomberg: Italy
+			</h4>
+			<p>
+				The little that I heard of Bloomberg's campaign translates best with Italy's Western Lepanto/French Attack (F NAP-TYN, A VEN-PIE, A ROM-TUS): a flamboyant effort that looks awe-inspiring yet most likely will achieve very little, with a high likelihood of disaster after major (tactical) expenses.
+			</p>
+			<h4>
+				Pete Buttigieg: France
+			</h4>
+			<p>
+				Buttigieg would think ahead: as France, the use of the Manche Opening (F BRE-ENG, A PAR-BUR, A MAR-SPA) would keep those nasty conservative monarchists in England and Germany from making any fancy gambits, while the move to Spain shows one's attention to the national rearguard.
+			</p>
+			<h4>
+				Elizabeth Warren: England
+			</h4>
+			<p>
+				Warren would lead England to action: a Welsh Opening (F LON-ENG, F EDI-NTH, A LVP-WAL) would most likely scare French and German lobbyists across all diplomatic circles to its fullest... and finish with a supported convoy to Belgium just for the heck of it.
+			</p>
+			<h4>
+				Bernie Sanders: Russia
+			</h4>
+			<p>
+				If Sanders had Russia he would play the Octopus (F SEV-BLA, F STP-BOT, A MOS-STP, A WAR-GAL), no doubt. Like a proper national healthcare system, the arms of mother Russia would seek to embrace the whole of the map as quickly as possible.
+			</p>
+			<h4>
+				Joe Biden: Austria
+			</h4>
+			<p>
+				Biden as Austria? That one would, above anything else, play cool with the Hungarian Houseboat Opening (F TRI H, A VIE-GAL, A BUD-SER). Why mess up with the political status quo of the board if the establishment already works wonders?
+			</p>
+			<h4>
+				Amy Klobuchar: Germany
+			</h4>
+			<p>
+				Klobuchar plays safe, perhaps too safe: a Danish Blitzkrieg (F KIE-DEN, A BER-KIE, A MUN-RUH) secures the right spots, doesn't annoy anyone else, and keeps Germany in the race... for a while, at least. The biggest downside is that the opening is conventionally boring and might drive supporters to sleep.
+			</p>
+			<h4>
+				Tom Steyer: Turkey
+			</h4>
+			<p>
+				I never heard of Steyer in my life. Perhaps the Astonishingly Arrogant Ankara Assault (A CON-ANK, F ANK-BLA, A SMY-ARM) would interrogatively raise the same eyebrows as it did mine when I saw that name. Seriously, who's that?
+			</p>
+		<!-- Content Body End -->
+		</div>
+
+		<div class="info_block padded_body">
+			<div>
+				<br/>
+				<br/>
+			</div>
+
+			<div>
+				<table>
+	  				<tbody>
+						<tr>
+						    <td>
+						    	<!-- Insert Contact Information! -->
+						    	<a href="mailto:woelpad@gmail.com">
+						    		<img src="../../Common/letter.gif" alt="Email writer thumbnail">
+						    	</a> 
+						    </td>
+						    <td>
+						    	<strong>
+						    		Mario Huys <br/>
+						    		(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+						    	</strong> 
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="dear_dp">
+				<p>
+					<i>
+						If you wish to e-mail feedback on this article to the author, and clicking 
+						on the envelope above does not work for you, feel free to use the 
+						
+						<a href="../Common/DearDP.html">
+							<q><strong>Dear DP...</strong></q>
+						</a> 
+
+						mail interface.
+					</i> 
+				</p>
+			</div>
+
+		</td>
+		</tr>
+		</table>
+		</div>
+
+		<div class="req_link_container">
+			<hr class="hr_rule bot_hr">
+
+			<div class="req_link left_link">
+				<a href="../..">
+					<img class="no_border" src="../../Common/DPbutton2.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+
+			<div class="req_link right_link">
+				<a href="..">
+					<img class="no_border" src="../images/toIssue.gif" alt="Site navigation thumbnail">
+				</a>
+			</div>
+		</div>
+
+	</body>
+</html>
