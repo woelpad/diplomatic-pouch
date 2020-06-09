@@ -12,8 +12,7 @@ DP W1995A: Annotations on Payola Diplomacy
 <HR size=5>
 
 <!--------------------------------------------------------------------->
-<center>
-<table cellpadding=3 width=95%>
+<table align=center cellpadding=10 width=95%>
 <A NAME=name>
 <tr><th bgcolor=gray style="font-size:14pt;color:white">
 <i>Payola Diplomacy...</i>
@@ -266,7 +265,7 @@ Classic, that Mastering a Payola game would be
 more difficult than Mastering a standard game of Diplomacy.
 <p align=justify>
 By the time the first playtest game had gotten underway, I had written
-a computer program to resolve the bids as they came in to the Master.
+a computer program to resolve the offers as they came in to the Master.
 This "Payola adjudicator" has been kept strictly up-to-date.  Indeed,
 it <i>leads</i> the continuing development of the variant, since new changes
 to Payola have never been considered official until the adjudicator properly
@@ -665,7 +664,7 @@ silver piece.
 After implementing this restriction in the Payola automated adjudicator, I
 decided that it deserved to be applied to all Payola games &mdash; not just 
 Blind Payola games.  I figured that in real life an army wouldn't really
-sell out for nothing, and the possibility of a zero silver piece bid deciding
+sell out for nothing, and the possibility of a zero silver piece offer deciding
 what a foreign unit would do was very remote anyway.
 
 <!--------------------------------------------------------------------->
@@ -763,7 +762,7 @@ move.  He doesn't care where the army moves, though, because Bul, Alb, and
 Ser are all vacant and will probably (or better yet assuredly) stay that way.
 So he puts in an
 offer like <tt>10 > A GRE - ALB</tt> ("ten to move to Albania or anywhere else
-for that matter").  All is well and good, and this ten silver piece bid is the
+for that matter").  All is well and good, and this ten silver piece offer is the
 best the Turkish army gets.  That is, until some joker on the other side of
 the board decides to spend one silver piece trying to play some malicious
 joke on Turkey, say by putting in the offer <tt>1 : A GRE - PAR</tt>.  Now
@@ -800,7 +799,7 @@ would be perfectly legal.  And they would, in fact, have valid,
 uncontestable interpretations, as well.  The example bribe given would be
 wholly equivalent to the three separate direct offers, and would differ
 from
-<center><table><tr><td><tt>8 : F TYS - WES<br> 4 : F TYS - TUN</table></center>
+<table align=center><tr><td><tt>8 : F TYS - WES<br> 4 : F TYS - TUN</table>
 in that the bribe amount for the move to <tt>WES</tt> would be reduced (in
 case of player overexpenditure) not from eight to seven, but from eight to
 six (subtracting one AgP from each of the four AgP offers).
@@ -949,8 +948,8 @@ of the shorthand is much more apparent in most other situations.
 
 Indeed, even in the situation chosen, many potential valid orders to
 the Yorkshire fleet were left unmentioned in this example, a full list
-would need to include:
-<center><tt>5 ! F YOR ... | S F ENG - WAL | S F NTH - LON | S A PIC - WAL</tt> (via convoy)<tt> | <i>etc., etc.</i></tt></center>
+of orders being forbidden by the <i>negative offer</i> also includes:
+<center><tt>F YOR S A PIC - LON</tt> (via convoy) <tt>| S F DEN - NTH | S F NTH - LON | <i>etc., etc.</i></tt></center>
 <p align=justify>
 The player who would rely entirely on <i>direct offers</i>
 is likely to find that when the orders go through, he has overlooked
@@ -972,7 +971,8 @@ We have been, in the notes above, planning a French attack on occupied
 London.  We've come up with three bribes that the Frenchman will
 be offering to assure the capture of London.  Indeed, these three
 bribes make the attack foolproof, but only if all three of the bribes
-are accepted by the units to which they are offered.
+are accepted by the units to which they are offered (and the North Sea
+fleet's support remains uncut).
 The Frenchman would be wise, however, to bulletproof his attack by
 offering a few more bribes in case one or more of the three we've
 written for him so far are not accepted.
@@ -1008,8 +1008,14 @@ prepared for it:
 Notice that once again, I have chosen the location of this situation so
 as to minimize the choices that the Frenchman would have to list.  Were
 we working elsewhere on the board, the French player would have had to
-list upwards of a dozen different possibilities.  In either case, the
-Frenchman would have at his disposal the useful shorthand of the <i>move
+list upwards of a dozen different possibilities.
+<!--
+(In fact, for this particular list to be truly complete, it should include
+orders to move via convoy through either or
+both English fleets, and to any and every possible destination on the board.)
+-->
+In either case, the
+Frenchman has at his disposal the useful shorthand of the <i>move
 offer</i>, which keeps him from listing (or even attempting to
 list) all the possible locations to which a unit could be ordered to
 move.  In this case, the offer to be issued to the London army is:
@@ -1018,7 +1024,7 @@ move.  In this case, the offer to be issued to the London army is:
 </tt></tr></table>
 <p align=justify>
 which means that the Frenchman will pay four silver pieces if London
-moves to Wales (which is his preferred site) or anywhere else
+is ordered to move to Wales (which is his preferred site) or to anywhere else
 for that matter.
 <p align=justify>
 The alert reader will note that Wales and Yorkshire,
@@ -1027,12 +1033,15 @@ London army.  To <b>properly</b> expand the <i>move bribe</i>
 offer we built ("<tt>4 > A LON - WAL</tt>"), we would need to list not only
 the <i>direct offers</i> to move to Wales and Yorkshire,
 but also to convoy to each and every possible location reachable
-<i>via</i> the North Sea and/or English Channel fleets.  In the case of
+<i>via</i> the North Sea and/or English Channel fleets.
+
+In the case of
 such convoy orders (since these orders, the Frenchman hopes, will fail due
 to lack of cooperation by his fleets), and also in the case of an order
 to move the London army to Yorkshire, 
 the army will remain in (or may bounce back to) London, and the French attack
-will fail should Yorkshire cuts the support in the North Sea.
+will fail if the fleet in Yorkshire does manage to cut the support offered
+by the North Sea fleet.
  So in this case, the Frenchman might
 be wise to avoid the move bribe and simply issue the direct bribe
 <tt>4&nbsp;:&nbsp;A&nbsp;LON&nbsp;-&nbsp;WAL</tt>.
@@ -1114,11 +1123,11 @@ need to be only those offers that either keep the unit in place (in
 a <i>hold offer</i>) or those that call for the unit to move
 elsewhere (in a <i>move offer</i>).  The offer above is a
 complete equivalent to the two offers:
-<center><table><tr><td><tt>
+<table align=center><tr><td><tt>
 	3 : A LON - ENG - BRE<br />
 	3 @ A LON H
 </tt>
-</tr></table></center>
+</tr></table>
 <p align=justify>
 As discussed above for the <i>move offer</i>, the <i>hold offer</i> is
 completely equivalent to a series of <i>direct offers</i> listing each
@@ -1274,7 +1283,7 @@ In fact, I'm not even proud of it.  I gave the thing its original name.
 I decided to call the list a "reference list" and immediately
 began a constant search for a new and better name.  I chose
 "reference list" to try and keep the "bank account" theme going, intending
-to draw a parallel between the list and a list of personal references kept
+to draw a parallel between the list and a list of credit references kept
 on file at the bank.  But from the beginning, "reference list" was understandably
 confused with "preference list" (a well-known term to Ken Lowe judge players), and many Payola players would submit "preference
 lists" to me.  Anyone familiar with the Ken Lowe Diplomacy judge knows that the
@@ -1306,7 +1315,7 @@ are most acceptable to the commanders.
 Another way to look at this concept is that, sure, commanders will take money
 to convoy enemy armies to the homeland, but they have a
 <strong>little</strong> bias for friendly countries as long as they're not
-too stingy to come up with an equal bid."
+too stingy to come up with an equal offer."
 <p align=justify>
 Thanks, Mike!
 <!--------------------------------------------------------------------->
@@ -1361,14 +1370,12 @@ the player(s) for one order than for any other.  In other words, there is no
 tie-break involved.  To illustrate this situation, consider the following
 offers:
 <p align=justify>
-<center>
 <table cellpadding=5 align=center border=2>
 <caption><B>Offers&nbsp;Made&nbsp;to&nbsp;the&nbsp;French&nbsp;Fleet&nbsp;in&nbsp;Brest</B></caption>
 <tr><th>French Offers<td><tt>5 : F BRE - ENG</tt></tr>
 <tr><th>English Offers<td><tt>4 ! F BRE - ENG</tt></tr>
 <tr><th>German Offers<td><tt>2 : F BRE - GAS</tt></tr>
 </table>
-</center>
 <p align=justify>
 In this case, the fleet in Brest would receive <b>five</b> silver pieces (from
 the French player) to move to the English Channel, but <b>six</b> silver pieces
@@ -1384,18 +1391,17 @@ acceptance list, will be accepted....</i>
 </th></tr><tr><td bgcolor=#ddd>
 <p align=justify>
 Occasions obviously arise when the bribes for more than one order to the same
-unit sum to the same total, and these outbid any other offers.  In this case,
+unit sum to the same total, and each of these amounts to more than any other
+of the offers.  In this case,
 the "acceptance list" must be consulted to determine which order should be
 issued.  Consider the following example:
 <p align=justify>
-<center>
 <table cellpadding=5 align=center border=2>
 <caption><b>Offers&nbsp;Made&nbsp;to&nbsp;the&nbsp;French&nbsp;Fleet&nbsp;in&nbsp;Brest</B></caption>
 <tr><th>French Offers<td><tt>5 : F BRE - ENG</tt></tr>
 <tr><th>English Offers<td><tt>4 ! F BRE - ENG</tt></tr>
 <tr><th>German Offers<td><tt>1 : F BRE - GAS</tt></tr>
 </table>
-</center>
 <p align=justify>
 In this case, the fleet in Brest is in a quandary, having received two
 offers that total five silver pieces each.  To break the tie, the <b>French</b>
@@ -1409,7 +1415,6 @@ the acceptance list) is involved in this order.
 <p align=justify>
 Consider now, by way of contrast, the following set of offers to the same unit.
 <p align=justify>
-<center>
 <table cellpadding=5 align=center border=2>
 <caption><B>Offers&nbsp;Made&nbsp;to&nbsp;the&nbsp;French&nbsp;Fleet&nbsp;in&nbsp;Brest</b></caption>
 <tr><th>French Offers<td><tt>1 : F BRE - MAO</tt></tr>
@@ -1417,7 +1422,6 @@ Consider now, by way of contrast, the following set of offers to the same unit.
 <tr><th>German Offers<td><tt>6 : F BRE - ENG</tt></tr>
 <tr><th>Italian Offers<td><tt>2 : F BRE - GAS</tt></tr>
 </table>
-</center>
 <p align=justify>
 This time, we see that the fleet is given four choices:  to <tt>HOLD</tt> (for
 four silver pieces of English money &mdash; this is the "hidden" order behind the
@@ -1449,12 +1453,10 @@ each power, the need to resort to any tie-breaker but the first is obviated.
 However, when this restriction was lifted, the single tie-breaker became
 insufficient.  Consider the following simple example.
 <p align=justify>
-<center>
 <table cellpadding=5 align=center border=2>
 <caption><b>Offers&nbsp;Made&nbsp;to&nbsp;the&nbsp;French&nbsp;Fleet&nbsp;in&nbsp;Brest</b></caption>
 <tr><th>French Offers<td><tt>5 : F BRE - ENG | - GAS</tt></tr>
 </table>
-</center>
 <p align=justify>
 Here, we see that the French fleet would be paid five silver pieces to move to
 either the English Channel or to Gascony, and that, since this money would be
@@ -1466,18 +1468,16 @@ given by each player is significant.  In this case, the fact that the order
 to move to the English Channel is mentioned <b>before</b> the order to move
 to Gascony decides the matter.  The unit is ordered to move to the Channel.
 <p align=justify>
-Note that this rule has no regard for the amount of the various bids offered
+Note that this rule has no regard for the amount of the various offers made
 by any particular player &mdash; <B>only</B> the position of the offers in the list.
 Consider the example below:
 <p align=justify>
-<center>
 <table cellpadding=5 align=center border=2>
 <caption><b>Offers&nbsp;Made&nbsp;to&nbsp;the&nbsp;French&nbsp;Fleet&nbsp;in&nbsp;Brest</b></caption>
 <tr><th>French Offers<td><tt>1 : F BRE - ENG<br />
 		3 : F BRE - MAO</tt></tr>
 <tr><th>German Offers<td><tt>2 : F BRE - ENG</tt></tr>
 </table>
-</center>
 <p align=justify>
 Here, the tie between the two choices (both of which would pay three
 silver pieces) is broken by this "position in the list" rule.  The fleet
@@ -1515,7 +1515,7 @@ other than move to the English Channel.
 Note that the reason this first offer is for zero silver pieces is that the
 offer to expend four silver pieces for a <tt>HOLD</tt> is implicit in the other
 part of the offer.  Note also that the prohibition against zero silver piece
-offers being made to foreign units does <b>not</b> extend to this case.
+offers being made to foreign units does <b>not</b> apply to this case.
 <p align=justify>
 Similarly, the <i>negative offer</i>
 "<tt>4 ! F BRE H</tt>." would be expanded into (first)
@@ -1558,14 +1558,12 @@ the <i>negative offer</i> type.
 Basically, the situation that calls for this final tie-breaker is
 exemplified by the following:
 <p align=justify>
-<center>
 <table cellpadding=5 align=center border=2>
 <caption><b>Offers&nbsp;Made&nbsp;to&nbsp;the&nbsp;French&nbsp;Fleet&nbsp;in&nbsp;Brest</b></caption>
 <tr><th>French Offers<td><tt>5 ! F BRE - GAS</tt></tr>
 <tr><th>English Offers<td><tt>1 : F BRE - PIC</tt></tr>
 <tr><th>German Offers<td><tt>1 : F BRE - ENG</tt></TR></tr>
 </table>
-</center>
 <p align=justify>
 Here, France (who is positioned at the top of his own "acceptance list")
 has offered five silver pieces to the Brest fleet to do anything other than
@@ -1611,13 +1609,12 @@ amount that could be offered to the amount on hand.  We considered both
 of these to be inferior solutions, and we knew that the ability to offer
 more money than you had was an important one &mdash; one that required that
 more unconstrained thought be put into each offer.  As I say, it seemed to
-me like John came up with this elegant solution ("reduce <b>all</b> bids by
+me like John came up with this elegant solution ("reduce <b>all</b> offers by
 the offending player by one silver piece and repeat if necessary") in the wink
 of an eye.
 <p align=justify>
 I can't imagine any better way to resolve this issue.  To illustrate the
 principle, consider the following set of offers:
-<center>
 <table cellpadding=5 align=center border=2>
 <caption><b>Offers&nbsp;Made&nbsp;to&nbsp;All&nbsp;Units</b></caption>
 <tr><th>French Offers<br />(Bank Balance: 20)
@@ -1625,7 +1622,6 @@ principle, consider the following set of offers:
 <tr><th>English Offers<br />(Bank Balance: 20)
 <td><tt>8 : F BRE - GAS</tt></tr>
 </table>
-</center>
 <p align=justify>
 Here, the Brest and Paris units initially jump at the ten and fifteen
 silver piece offers.  However, it becomes obvious that the French player cannot
@@ -1697,15 +1693,61 @@ own home country and the spaces adjacent to it.  That's simplified a bit,
 but it covers it.
 
 <!--------------------------------------------------------------------->
+<!-- -->
+<A NAME=blindTypes>
+</td></tr><tr><th bgcolor=gray style="font-size:14pt;color:white">
+<i>...An offer must include the type of unit (Army or Fleet) to which it is being offered....</i>
+<br />&mdash; Tying the Blinders Tightly &mdash;
+</th></tr><tr><td bgcolor=#ddd>
+<p align=justify>
+This rule was added during the 25th anniversary year of the publication of these
+rules, which goes to show that you really can never think of everything.
+A bug reported by a player in a (non-blind) Payola game being run on
+19 May 2020 was the cause for this rule.  The bug concerned the behavior
+of the order validator when a unit type was not given in a <tt>HOLD</tt>
+order that was (accidentally) offered to a unit that didn't exist.  In
+non-blind Payola, this is an error that must be corrected, and the
+adjudicator did indeed say so, but it reported a misleading (okay, flat-out
+wrong) cause for the rejection of the offer.
+While fixing the bug, it was realized that calling out the
+<i>proper</i> error (<i>i.e.,</i> "hey, there's no such unit there")
+would definitely not be good
+to do in Blind variant games, since this would allow a player to simply
+experiment with his offer sheet until he knew exactly which units existed
+on each location on the map.
+It seemed the best thing to do in cases where, for example, a non-existent
+<tt>TUN H</tt> was offered money (without any unit of either type in Tunis)
+would be to have the validator smile to itself and
+go on validating the offer without reporting any error to the player.
+However, it soon became clear that the orders in the offer could not be
+validated without knowing the unit type for which it is intended &mdash;
+for example, <tt>TUN&nbsp;-TYS</tt>
+will be ruled invalid if there actually is an Army in Tunis.
+<p align=justify>
+The solution, of course, was to require that Blind Payola players be
+explicit about the type of unit to which they are offering money.  If
+you want an unseen unit that may or may not be in Tunis to move to North
+Africa, you will need to issue two offers: one
+to <tt>A&nbsp;TUN</tt>
+and the other to <tt>F&nbsp;TUN</tt>.
+<p align=justify>
+Actually, a better solution was identified that would have allowed unit
+types to be omitted, but coding it in the DPjudge proved harder than I
+expected, and so until I get more energy, it stays this way.
+<!-- -->
+
+<!--------------------------------------------------------------------->
 <A NAME=mystery>
 </td></tr><tr><th bgcolor=gray style="font-size:14pt;color:white">
 <i>...players...are not told the order that the unit
 		  will issue in return for this compensation...</i>
 <br />&mdash; Keeping the Blinders On &mdash;
 </th></tr><tr><td bgcolor=#ddd>
+<p align=justify>
 In standard Payola, the message sent to each player upon payment of bribes
 from that player's account includes an itemized list of payments.  Each
 outgoing bribe is detailed down to what order the accepting unit will issue.
+</p>
 <p align=justify>
 In Blind ("Tin Cup") Payola games, this proved to be too much information.
 Consider the case of a French player who has no tangible information as to
@@ -1727,7 +1769,7 @@ following three offers would suffice:
 	1 & F BUL/ec H</tt>
 </td></tr></table>
 <p align=justify>
-With these three bids, the offering player will spend only a
+With these three offers, the offering player will spend only a
 maximum of one silver piece, and will be guaranteed to learn whether
 or not there is a unit in Bulgaria, and what type of unit and on which
 coast it began the turn if a fleet.  By this rule, though, the offering
@@ -1739,20 +1781,20 @@ To make up for a bit of what was seen as overcompensation, the
 power paying the bribe.  It just made sense that covert intelligence
 operatives would be able to send back a bit more than "Well, I see an
 army here, but I have no idea whose army it is."  So not only does the
-above set of three bids return the information about whether or not such
+above set of three offers return the information about whether or not such
 a unit exists, but also who owns that unit.
 <p align=justify>
 This rule does not make it <i>impossible</i> to also find out what order the
 unit actually issues; it only makes it more difficult and more expensive.
 This also makes real-world sense &mdash; a spy can be paid to look through a fence
-and obtain information about a unit's existence and ownership at far less
-cost than it would take to pay this spy to actually
+and obtain information about a unit's existence and type and ownership
+at far less cost than it would take to pay this spy to actually
 infiltrate the unit and learn its plans for the coming season.  For example,
 if a player having no knowledge of the Balkan situation wished to determine
 not only whether there is a unit in Serbia but also &mdash; if there is &mdash;
 something about what it is ordered to do, this player could enter something
 like the following hefty set of bribes.
-<center><table><tr><td><tt>
+<table align=center><tr><td><tt>
 1 @ A SER H<br />
 2 : A SER - TRI<br />
 3 : A SER - GRE<br />
@@ -1760,8 +1802,9 @@ like the following hefty set of bribes.
 5 : A SER - RUM<br />
 6 : A SER - BUL<br />
 7 : A SER - BUD</tt>
-</table></center><br />
-With this set of offers, the bidder will know whether there was an army in
+</table>
+<p align=justify>
+With this set of offers, the player will know whether there was an army in
 Serbia, and, if there is, he will also know (by cross-referencing the offers
 he made with the amount of his money accepted by the unit) whether the army
 was ordered to stay in place or, if not, the location to where it moved (or
@@ -1769,11 +1812,11 @@ attempted to move).
 <p align=justify>
 This is still incomplete information, since without issuing a similar &mdash;
 actually, an even more extensive &mdash; set of offers to everything else in the
-region, the bidder cannot know if the move succeeded or bounced, or even
+region, the player cannot know if the move succeeded or bounced, or even
 if the Serbian army itself was dislodged.  There is also the disadvantage
 not only of cost, but that these intelligence gathering offers would actually
 <i>decide</i> the order issued by the unit &mdash; perhaps to the detriment of the
-bidder.
+offering player.
 However, even the ability to get (purchase) this amount of guaranteed correct
 information is a unique addition to Blind games, and this rule seems to
 provide the proper mix between paid intelligence services and the
@@ -1797,8 +1840,8 @@ intrepid diplomacy, calculated risk-taking, and careful execution which
 </th></tr><tr><td bgcolor=#ddd>
 <p align=justify>
 In the tradition of the online auction, the idea here is that the amounts
-being offered are <i>maximum</i> offers.  The winning bid is automatically
-reduced to just a small amount (one AgP) above the highest non-winning bid.
+being offered are <i>maximum</i> offers.  The winning offer is automatically
+reduced to just a small amount (one AgP) above the highest non-winning offer.
 <p align=justify>
 For example, if England's offers include:
 <br><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10 : F LON - ENG</tt><br>
@@ -1842,7 +1885,7 @@ put it "at or below" the second-best bribe).
 <p align=justify>
 You can tell by looking at things, though, that England shouldn't pay the
 full ten.  If the only person he is "bidding against" is himself, that
-should not be held against him, keeping his bid high.  To avoid this,
+should not be held against him, keeping his offer high.  To avoid this,
 the following occurs:
 <ol>
 <li>The winning bribe is determined.
@@ -1852,6 +1895,7 @@ the following occurs:
 	bribe.
 <li><i>Then</i> the second-best bribe is determined.
 </ol>
+<p align=justify>
 In the example above (with <tt>F LON</tt> receiving only the two orders
 from England), the North Sea bribe is reduced to zero.  It is still the
 second-best bribe, of course, but the Channel bribe reduces down to
@@ -1868,7 +1912,7 @@ cost of seven (six offered by England, one offered by France).  Without the
 extra step, the "second-best" bribe is the Channel move (six AgP).  But
 before the "second-best" bribe is determined, all non-winning offers to
 <tt>F LON</tt> are reduced by (up to) six English AgP and one French AgP (the make-up
-of the winning bid).  After doing so, the second-best offer is found to
+of the winning offer).  After doing so, the second-best offer is found to
 be the <tt>YOR</tt> move, which totals 4 AgP.  Therefore, the cost assessed
 for the North Sea move is 5 AgP &mdash; four paid by England and one paid by
 France.
