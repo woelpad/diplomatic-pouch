@@ -1,0 +1,719 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>DP F2020M: Sherlock Holmes, Consulting Diplomat</title>
+<meta charset="utf-8"/> 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123251121-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-123251121-1');
+</script>
+<!-- Point to whereever this stylesheet will exist-->
+<link rel="stylesheet" type="text/css" href="../../Common/styles.css"> 
+<style type="text/css">
+/*
+* Insert styles for the content_body here
+*/
+.game_img {text-align: center; text-decoration: italic;}
+.map_img {width: 60%;}
+.soft_anchor {color: darkblue; text-decoration: none;}
+.content_body {}
+.inputBox {
+	color:			#000000;
+	background:		#FFFFFF;
+	border-color:	#000000;
+	border-top:		1px solid;
+	border-bottom:	1px solid;
+	border-left:	1px solid;
+	border-right:	1px solid;
+	font-family:	verdana;
+	font-size:		14px;
+}
+</style>
+<script>
+function toggleLayer(whichLayer, state) {
+	var elem, vis;
+	elem = document.getElementById(whichLayer);
+	vis = elem.style;
+	if (vis.display == '' && elem.offsetWidth != undefined && elem.offsetHeight != undefined)
+		vis.display = (elem.offsetWidth != 0 && elem.offsetHeight != 0) ? 'inline' : 'none';
+	else if (vis.display != 'none') vis.display = 'inline';
+	if (state == null || state != vis.display) {
+		vis.display = (vis.display != 'none') ? 'none' : 'inline';
+		if (whichLayer.slice(0, 1) == 'a') toggleLayer('q' + whichLayer.slice(1));
+	}
+}
+function toggleAllLayers(whichLayers, number) {
+	for (var i = 1; i <= number; i++)
+		toggleLayer(whichLayers + i, 'inline');
+}
+if (!String.prototype.format) {
+	String.prototype.format = function() {
+		var args = arguments;
+		return this.replace(/{(\d)}/g, function(match, number) {
+			return typeof args[number] != 'undefined' ? args[number] : match;
+		});
+	};
+}
+function changeMap(selector, reference, content) {
+	var selected = selector.options[selector.selectedIndex];
+	var image = document.getElementById(selector.name + '.image');
+	var anchor = document.getElementById(selector.name + '.anchor');
+	var text = document.getElementById(selector.name + '.text');
+	image.src = reference.format(selected.value);
+	if (anchor) anchor.href = image.src;
+	image.alt = text.innerHTML = content.format(selected.text);
+}
+</script>
+</head>
+<body style="background-color: rgb(255, 255, 255);">
+
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0" /></a>
+<a href=".."><img src="../images/toIssue.gif" align="right" border="0" /></a>
+<br clear="all" />
+<hr align="center" width="100%" size="-1" color="gray" />
+<! ------------------------------------------------------------- >
+
+<! ----------------------- M A S T H E A D --------------------- >
+<h2 align="center">
+<table cellspacing="5" width="90%" align="center">
+<tbody>
+<tr>
+<td width="120">
+<img src="../../Common/Holmes.gif" width="120" align="left" />
+</td>
+<td>
+<h2>
+Sherlock Holmes,
+<br />
+Consulting Diplomat 
+<p>
+<font size="4">
+<b>
+by Manus Hand &amp; Mario Huys,
+<br />
+Master &AElig;nigmatists
+</b>
+</font>
+</p>
+</h2>
+</td>
+</tr>
+</tbody>
+</table>
+<! ------------------------------------------------------------- >
+
+<! ------------------------ S U B H E A D ---------------------- >
+<hr align="center" width="100%" size="-1" color="gray" />
+The Chain-Links Case
+<hr align="center" width="100%" size="-1" color="gray" />
+</h2>
+<! ------------------------------------------------------------- >
+
+<! ------------------------ O P E N I N G ---------------------- >
+<table width="960" border="0" cellpadding="10" align="center">
+<tbody>
+<tr>
+<td align="justify">
+<! ------------------------------------------------------------- >
+
+<blockquote><i>
+In the <a href="../../F2019M/Holmes/links.html">previous episode</a> Holmes and Dr. Watson have taken it upon themselves to reconstruct a very particular game in order to save the face (and the employment) of the staff at the Calhamer Club, who had prematurely cleared the board while the players were taking a break. In this game all powers except two have been eliminated in a mere two game years. It is now the phase after the Fall 1902 retreats, with the pieces of the eliminated powers still on the board. All the pieces, both of the remaining and eliminated powers, are positioned such that they form a single chain, every piece adjacent to no more than two other pieces. While the players are celebrating the remarkable feat that they have accomplished so far, the room-attendants, a Mr. Fitchett and Mr. Clenshaw, have been eardropping on them to gather more clews with which Holmes and Watson have gradually gotten closer and closer to a full reconstruction. The chain itself has steadily become longer and longer, their last attempt containing 26 pieces, just 2 shy of the theoretical maximum. The final new clew however has left them stumped. The chain, which they so far had believed to have a start and end, is in fact unbroken. It loops upon itself, meaning every piece has exactly two neighbors. Time is pressing, as the players are ready to resume their game. Will they find their board back as they left it? The clock is ticking&hellip;
+</i></blockquote>
+
+<h3 align="center">
+VII
+</h3>
+
+<div class="game_img">
+<img class="map_img" id="Chain26.1901.image" src="../../F2019M/images/Chain2607.gif" width="50%" alt="Chain 26, After Fall 1902"/><br/>
+<b id="Chain26.1901.text">Chain 26, After Fall 1902</b><br/>
+<i><small><a href="Chain26.pdf#page=2" target="_blank">Click to view the complete history in a separate window</a></small></i>
+<br/>
+<b>Season:</b>
+<select name="Chain26.1901" class="inputBox" onchange="changeMap(this, '../../F2019M/images/Chain26{0}.gif', 'Chain 26, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05">Spring 1902</option>
+<option value="06">Fall 1902</option>
+<option value="07" selected>After Fall 1902</option>
+</select>
+</div>
+
+<p>
+We would, alas, never get the time to explore all our options. Before long Fitchett rushed back into the room, declaring that our time was nearly up. The Game Master had informed him that they would be returning to their seats before the clock struck again, because he had a schedule to keep. Some of the players had already gotten up from their chairs, eager to continue.
+</p>
+
+<p>
+My spirits low, I was ready to admit defeat.  Holmes, however, simply continued to pull from his pipe.  After a brief pause spent in thought, he began to chuckle.  After a short time, his chuckle grew into a full-throated laugh.  For a moment I thought that my friend had left his senses. 
+</p>
+
+<p>
+'Holmes!' I exclaimed, 'Why do you laugh so? These men's livelihood are in jeopardy if we fail. Which we are bound to do, since we did not fulfill all the conditions. There's still a gap in our chain, and even though it is a single space I see no way to fill this gap without letting at least one other power survive.' 
+</p>
+
+<p>
+Remaining fast in his seat, eventually Holmes reined in his laughter then said, 'Fitchett, my good man: the doctor and I are most grateful for the assistance that you and Mr Crenshaw have provided during our efforts this afternoon.  You may now safely wean the gentlemen in the dining room from the teat of complimentary cocktails.  They may return to this hall at their chosen time, for here they will find their game-board awaiting them, ready for the two survivors to continue play, their pieces properly positioned.' 
+</p>
+
+<p>
+When Fitchett had once again left the room, Holmes looked at me, still trembling, and spoke to me softly.
+</p>
+
+<p>
+'You see, my dear Watson, we may have assumed too much. We were informed that each piece neighbors exactly two other pieces. With that we have naturally sought to construct a single, continuous chain. But did we not perhaps jump to a false conclusion there? What if, indeed, there are <i>two</i> such loops, each in itself unbroken, each independent of the other, at least one space apart where they are closest to each other?'
+</p>
+
+<p>
+With that, Holmes rose and walked again to the table. Admiring the board, he again started rearranging the pieces, and quite soon a broad smile came to my face. 
+</p>
+
+<p align="right">
+<table width="70%">
+<tbody>
+<tr>
+<td>
+<img hspace=5 src="../../Common/stopsign.jpg" align="left" border="0" />
+</td>
+<td>
+<p align="justify">
+<b>
+<i>
+Try it for yourself. Make two loops by changing the position of just a few pieces. Of course, you must still be able to prove that this position can be reached in two game years using the normal rules of Diplomacy. You figured it out? Then smile.
+</i>
+</b>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<div id="q1" name="q1" style="display:inline">
+<h2 align="left">
+<b>
+<font color="red">
+<i>
+...and when you are ready to continue,
+<a href="#" onclick="toggleLayer('a1');return false;"><font color="red">click here</font></a>....
+</i>
+</font>
+</b>
+</h2>
+</div>
+
+<div id="a1" name="a1" style="display:none">
+
+<div class="game_img">
+<img class="map_img" id="Chains.1901.image" src="../images/Chains07.gif" width="50%" alt="Chains, After Fall 1902"/><br/>
+<b id="Chains.1901.text">Chains, After Fall 1902</b><br/>
+<i><small><a href="Chains.pdf#page=2" target="_blank">Click to view the complete history in a separate window</a></small></i>
+<br/>
+<b>Season:</b>
+<select name="Chains.1901" class="inputBox" onchange="changeMap(this, '../images/Chains{0}.gif', 'Chain 26, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05">Spring 1902</option>
+<option value="06">Fall 1902</option>
+<option value="07" selected>After Fall 1902</option>
+</select>
+</div>
+
+<p>
+'It's perfect, isn't it?' I said admiringly. 'Every unit has found in its own spot in either chain, as far away from home as possible, with neighbors of different colors all around. Is there even one that could trade places with another one?'
+</p>
+
+<p>
+'There is,' said Holmes. 'Take for example the Austrian and Italian fleets. Either could have moved to the Eastern Med if the other covered the Ionian. As we have discussed before, let us remove the units of the eliminated powers as per the club house rules.'
+</p>
+
+<div class="game_img">
+<img class="map_img" src="../images/Chains08.gif" width="50%" alt="Chains (stripped), After Fall 1902"/><br/>
+<b>Chains (stripped), After Fall 1902</b><br/>
+</div>
+
+<p>
+'Should we not leave the room now?' I urged my friend. 'The game has been restored to its original position. Our presence here is no longer warranted.'
+</p>
+
+<p>
+Holmes sat pensively for a moment before he replied. 'No, Watson. It is better that we stay here. I cannot convince myself that this solution isn't in a way too perfect. Where are the two units of the same power in succession? Even Kiel and Berlin are now different. Did they play suboptimally or was there some other detail that has escaped our or Crenshaw's attention? Let us stay around to find out, and take the blame if need be, before Fitchett does.'
+</p>
+
+<h3 align="center">
+VIII
+</h3>
+
+<p>
+The first person to enter the room was the Game Master, with Fitchett opening the door for him. He must have been as surprised to see us, as we were to see him, as we both immediately recognized him as Professor Newt Isacsson, professor of Mathematics at Cambridge University and current chair of the Royal Society, the esteemed institute that assembled the most brilliant scientific minds of the British Empire. His square, beardless face, surrounded by a crest of long curly hair, remained undisturbed however as he took us in.
+</p>
+
+<p>
+'Mr. Holmes, Dr. Watson, what a surprise to find you in this room. What brings you here?'
+</p>
+
+<p>
+'Prof. Isacsson, please excuse this little inconvenience. It had come to my attention that a most fascinating game was in progress with only two powers surviving after a mere two years. I could not help to invite Dr. Watson and satisfy my curiosity in the most direct way.'
+</p>
+
+<p>
+'I'm honored that you would be so interested in my little experiment. For a moment there though I thought I was in the wrong room. What happened to the pieces of the eliminated powers?' he asked, looking straight at Fitchett.
+</p>
+
+<p>
+The room attendant answered without hesitation. 'As per our Club rules, they were taken off the board while the gentlemen were taking their break.'
+</p>
+
+<p>
+'Ah, yes, so unfortunate. I should have informed you. We are intending to play on with all players keeping their units.'
+</p>
+
+<p>
+Fitchett and I looked puzzled, but Holmes immediately understood. 'Guerilla rules. Eliminated players do not need to disband their units, but they have no control over them for the time being. They hold in place and will retreat if attacked, even if the attack is under strength, but not if there's a stand-off. Note that they may even retreat in the direction of the attacker. If they retreat such that they have a unit in a center by the end of a Fall turn, they are revived and must disband any excess units as per standard rules.'
+</p>
+
+<p>
+'Holmes, but where&hellip;', I started.
+</p>
+
+<p>
+'My brother Mycroft happens to also be a member himself of the Royal Society. He had mentioned that such a variant was being discussed among members to simulate the typical conflicts that our Empire currently faces. Do you also play with Insurgency rules?'
+</p>
+
+<p>
+'Yes, we do. If after the Spring turn any home center is open, in Summer the guerilla player may choose to disband all his units and build new ones in any open home center, irrespective of the number of units he had before. A home center where he had just retreated his own unit into, is still considered open and thus that unit may be disbanded and replaced by another unit of different type or on another coast. The home centers however do not yet change hands. In Fall he may order his own units, but if they all end up outside his own home centers or any other centers, he immediately freezes his units again and reverts to guerilla play.'
+</p>
+
+<p>
+'I had no idea, Sir,' Fitchett lamented. 'You can be assured that we will update our Club rules to avoid such a future embarassment. Mr. Holmes, you have studied the board. Perhaps you could help to restore the missing pieces?'
+</p>
+
+<p>
+Prof. Isacsson however waived away the offer. 'No, it was my mistake for not informing you. I will ask my students to do it. Hopefully they are sober enough to remember the position.'
+</p>
+
+<p>
+And with that he left the room on his way back to the dining room, accompanied by an effusively apologizing Fitchett.
+</p>
+
+<h3 align="center">
+IX
+</h3>
+
+<p>
+Some time passed, but then finally the door opened and in came a disheveled young man with baggy eyes and a lipless smile, as if fighting back some bitter memories. He immediately took the chair that he was offered, and accepted the glass of water that I held out. He took a sip, but the taste must not have pleased him much. Still, it revived his senses sufficiently to address us.
+</p>
+
+<p>
+'The Professor needs to excuse himself for the moment,' Fitchett said. 'His students are, alas, in no proper condition to continue the game. He is now lecturing them on proper societal behavior. He has however sent his most vigorous student to assist in reconstituting the board to its proper position.'
+</p>
+
+<p>
+'Thank you, Mr. Fitchett. The name is Frank Bentler, physics student. I'm playing France. Let me see&hellip;'
+</p>
+
+<p>
+With some obvious effort he directed his gaze to the board. His eyes became greater as he studied the pieces on the board.
+</p>
+
+<p>
+'Messires, what happened to the board? Did it get a shaking? I will admit that I do not remember now the position of every single unit, but I am most positive that there had to be a French army in Spain. Yet on this board it has walked over to Belgium.'
+</p>
+
+<p>
+I was completely taken aback. The game was up. We would have to admit our failure. Holmes however played it diplomatically.
+</p>
+
+<p>
+'A shaking, yes. Tell me, how many armies did you build in 1901?'
+</p>
+
+<p>
+'Three, Sir.'
+</p>
+
+<p>
+'And how many armies did Russia build?'
+</p>
+
+<p>
+'Four, Sir.'
+</p>
+
+<p>
+'Then you will acknowledge that of the surviving powers all the right units are on the board, though perhaps not in the right places.'
+</p>
+
+<p>
+'Correct, Sir. The board was shaken up, right? Perhaps during the removal of the units of the eliminated powers? Such a shame, really. I was eager to come back and admire once more the single loop that the units drew on the map. But that is only possible if all units are put back.'
+</p>
+
+<p>
+Holmes whistled. 'A single loop, you said? Are you quite sure?'
+</p>
+
+<p>
+'It was the one topic that all players could agree on. But the board in its current state is too confusing. Mr. Fitchett, can you please call for Charlie Windale, our Russian player?'
+</p>
+
+<p>
+'I'm afraid I will have to escort you back to the dining room then. The Professor was quite explicit that only one student could assist at a time. If you would be so kind to stand up&hellip;'
+</p>
+
+<p>
+Fitchett had to support the young man by the elbow to prevent him from tilting over. He did it most professionally, accustomed as he was through years of service. As they left the room, we were alone again with a board that we knew yet so little about.
+</p>
+
+<p>
+'A French army in Spain? Holmes, at this rate it's going to take hours before the board gets reconstructed. Should we not just go over to the dining room and apologize to the Professor for having ruined his experiment?'
+</p>
+
+<p>
+'No, Watson, that would not do. Don't you see? The Professor is posing us a challenge. You could say we are now part of the experiment. Anyway, I have my reputation to defend. It's not a time to throw in the towel yet.'
+</p>
+
+<p>
+Even in the face of adversity Holmes kept his calm and good cheer. It's what makes him such a formidable opponent and terrific friend. He had already started to take out some pieces and putting them down on the board.
+</p>
+
+<p>
+'We have encountered an army in Spain before. Let me jog your memory by reconstructing that board.'
+</p>
+
+<div class="game_img">
+<img class="map_img" id="Train25.1901.image" src="../../F2019M/images/Train2507.gif" width="50%" alt="Train 25, After Fall 1902"/><br/>
+<b id="Train25.1901.text">Train 25, After Fall 1902</b><br/>
+<i><small><a href="Train25.pdf#page=2" target="_blank">Click to view the complete history in a separate window</a></small></i>
+<br/>
+<b>Season:</b>
+<select name="Train25.1901" class="inputBox" onchange="changeMap(this, '../../F2019M/images/Train25{0}.gif', 'Chain 26, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05">Spring 1902</option>
+<option value="06">Fall 1902</option>
+<option value="07" selected>After Fall 1902</option>
+</select>
+</div>
+
+<p>
+'Oh yes, I remember now. This is the map where you said it was impossible to avoid building a fleet in Sevastopol.'
+</p>
+
+<p>
+'I had been interrupted at the time by the news Fitchett had for us. There is a way, actually, to get a Turkish army into the center of the board without going through Sevastopol. Army Constantinople can move along the western shores of the Black Sea. This means that Turkey is going to capture a center in the first year which Russia will have to re-capture the next year. But this could actually be a blessing, as it gives us an extra center and thus an extra unit to close the loop.'
+</p>
+
+<p align="right">
+<table width="70%">
+<tbody>
+<tr>
+<td>
+<img hspace=5 src="../../Common/stopsign.jpg" align="left" border="0" />
+</td>
+<td>
+<p align="justify">
+<b>
+<i>
+Holmes got it wrong for once, but he's not giving up and neither should you. With the new tips given try to create a closed loop as best as you can.
+</i>
+</b>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<div id="q2" name="q2" style="display:inline">
+<h2 align="left">
+<b>
+<font color="red">
+<i>
+...and when you are ready to continue,
+<a href="#" onclick="toggleLayer('a2');return false;"><font color="red">click here</font></a>....
+</i>
+</font>
+</b>
+</h2>
+</div>
+
+<div id="a2" name="a2" style="display:none">
+
+<div class="game_img">
+<img class="map_img" id="Trained.1901.image" src="../images/Trained07.gif" width="50%" alt="Trained, After Fall 1902"/><br/>
+<b id="Trained.1901.text">Trained, After Fall 1902</b><br/>
+<i><small><a href="Trained.pdf#page=2" target="_blank">Click to view the complete history in a separate window</a></small></i>
+<br/>
+<b>Season:</b>
+<select name="Trained.1901" class="inputBox" onchange="changeMap(this, '../images/Trained{0}.gif', 'Chain 26, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05">Spring 1902</option>
+<option value="06">Fall 1902</option>
+<option value="07" selected>After Fall 1902</option>
+</select>
+</div>
+
+<p>
+Holmes clearly had some idea of where this was going to lead to, as he progressed rapidly through variations. But eventually he had to settle for a chain that still had a single space gap in it, as we could hear foot steps approaching our door.
+</p>
+
+<p>
+'It's of little consequence. We remove the units of the eliminated powers as before and the next student will have no clue that the current loop has a gap. I'm quite certain that we are getting closer. Let us hear what he has to say.'
+</p>
+
+<div class="game_img">
+<img class="map_img" src="../images/Trained08.gif" width="50%" alt="Trained (stripped), After Fall 1902"/><br/>
+<b>Trained (stripped), After Fall 1902</b><br/>
+</div>
+
+<p>
+Charlie Windall was in no better condition than his predecessor, but he refused categorically the chair offered to him. He was majoring in natural sciences, although his father would have liked him to be a medecin. Being contrarian appeared to be a natural streak of him, a fact that did not go unnoticed with my friend Holmes.
+</p>
+
+<p>
+'Here is the board with only the units of the surviving powers left. I'm sure you and I can agree that the units are all placed correctly.'
+</p>
+
+<p>
+'On the contrary, hardly any of them are. On a larger scale one might say they are close to where they ought to be. But take this Russian army in Edinburgh for example. I remember distinctly that none of my armies had convoyed to the British Isles, but I did have one convoyed to the Italian boot.'
+</p>
+
+<p>
+I saw him lift his arm and try to pick up the army in Edinburgh, but his legs gave out and he collapsed to the floor. 'Mr. Windall,' I yelled. 'Some quicksalt, quick.'
+</p>
+
+<p>
+'Fitchett, Watson, support the poor lad back to the dining room. And bring me the Austrian player.'
+</p>
+
+<p>
+We did as Holmes had asked. The Austrian player, a fellow called Bertrand Alstone, mathematician and physicist, proved more lucid than his companions, but Holmes had only one question for him: 'Eastern Mediterannean or Aegean Sea?'
+</p>
+
+<p>
+'Aegean Sea.'
+</p>
+
+<p>
+'Thank you, that will be it. You may call the Professor. Tell him that I'm ready to bring the board to its proper state.'
+</p>
+
+<p align="right">
+<table width="70%">
+<tbody>
+<tr>
+<td>
+<img hspace=5 src="../../Common/stopsign.jpg" align="left" border="0" />
+</td>
+<td>
+<p align="justify">
+<b>
+<i>
+Holmes has all the information he needed. And you? Do you know the solution? Here's your final chance to prove yourself worthy of the Royal Society.
+</i>
+</b>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+<div id="q3" name="q3" style="display:inline">
+<h2 align="left">
+<b>
+<font color="red">
+<i>
+...and when you are ready to continue,
+<a href="#" onclick="toggleLayer('a3');return false;"><font color="red">click here</font></a>....
+</i>
+</font>
+</b>
+</h2>
+</div>
+
+<div id="a3" name="a3" style="display:none">
+
+<h3 align="center">
+X
+</h3>
+
+<p>
+Prof. Newt Isacsson grinned when he saw the board in the same state as it had been for the Russian and Austrian players. 'It's different than first, but it's still not what I had expected.'
+</p>
+
+<p>
+Holmes begged him to sit down. He then proceeded to move the French and Russian pieces around until they were in the following position.
+</p>
+
+<div class="game_img">
+<img class="map_img" src="../images/Chained08.gif" width="50%" alt="Chained (stripped), After Fall 1902"/><br/>
+<b>Chained (stripped), After Fall 1902</b><br/>
+</div>
+
+<p>
+'Impressive,' Prof. Isacsson said approvingly. 'But what about the other units?'
+</p>
+
+<p>
+'Wait and see.'
+</p>
+
+<p>
+One for one the fleets and armies of the eliminated powers appeared on the board until they formed an uninterrupted chain, 27 spaces in length.
+</p>
+
+<div class="game_img">
+<img class="map_img" id="Chained.1901.image" src="../images/Chained07.gif" width="50%" alt="Chained, After Fall 1902"/><br/>
+<b id="Chained.1901.text">Chained, After Fall 1902</b><br/>
+<i><small><a href="Chained.pdf#page=2" target="_blank">Click to view the complete history in a separate window</a></small></i>
+<br/>
+<b>Season:</b>
+<select name="Chained.1901" class="inputBox" onchange="changeMap(this, '../images/Chained{0}.gif', 'Chain 26, {0}')">
+<option value="01">Game Start</option>
+<option value="02">Spring 1901</option>
+<option value="03">Fall 1901</option>
+<option value="04">Winter 1901</option>
+<option value="05">Spring 1902</option>
+<option value="06">Fall 1902</option>
+<option value="07" selected>After Fall 1902</option>
+</select>
+</div>
+
+<p>
+'Bravo, Mr. Holmes. But how did you arrive at the current board from the previous position?'
+</p>
+
+<p>
+'For that I need to thank that good boy Charlie Windall, the Russian player. How is he by the way?'
+</p>
+
+<p>
+'He's fast asleep and will no doubt wake up tomorrow with a heavy head and hardly a memory of the night before. But pray go on.'
+</p>
+
+<p>
+'Oh, good. A convoy to Italy instead of a convoy to Britain meant two things. First, that the French fleet needed to take an English center, leaving a gap that could only be filled by a German fleet. Next, that Russia already needed an army in Turkey in the first year in order to be able to convoy it to Italy in the second year. Since Russia was doubling in size fleet Sevastopol necessarily also needed to capture a center, the logical target being Ankara, allowing Turkey to move up to Rumania.
+</p>
+
+<p>
+'At the same time this meant that only one center in Germany could be captured in the first year, Munich, as army Warsaw is needed to capture an Austrian center. Since these two powers have their home centers tightly clustered together, each home center bordering both other home centers, it is imperative that at least one gets captured in the first year.
+</p>
+
+<p>
+'But even with the chain now moving through Armenia and Kiel instead of Constantinople and Baltic Sea, its total length is still 27, implying that one more center should be added to the chain, captured in the first year by one of the eliminated powers and overtaken in the second year by one of the surviving powers. That center could only be Serbia.
+</p>
+
+<p>
+'After that it was a question of acquiring enough fleets to fill all the sea spaces. One extra Italian and one extra German fleet was sufficient, provided that they could be built. This required both to capture a center and get one army dislodged.
+</p>
+
+<p>
+'All that was left to do was to move all units as far as possible from their starting space. Only the Austrian fleet had a choice as to which sea to move to, a choice which the Austrian player was so kind to reveal.'
+</p>
+
+<p>
+Holmes relaxed now, while Prof. Isacsson looked at him as if he considered to make him a peer.
+</p>
+
+<p>
+'Thank you, Mr. Holmes. You have saved my evening. I'm afraid my further plans will need to be postponed, given the state my pupils are in.'
+</p>
+
+<p>
+'Oh, but do tell what test you had prepared for them.'
+</p>
+
+<p>
+'A test indeed. I was going to let them play on for another year, starting from the current position. Using the Guerilla and Insurgency rules as explained before, the challenge is to find the longest possible chain loop obtainable after the Winter 1903 builds. I will give it as an assignment to them. We will come back to the Club next week. I hope you will do us the honor of your company.'
+</p>
+
+<p>
+'Dr. Watson and I will be glad to attend. One week, you say? Well, let's see who is going to be the brightest kid.'
+</p>
+
+<p>
+The twinkle in his eye and the grin on his face told me that he didn't consider himself too old for the challenge. For me, however, it was time to go home and get a well-deserved rest. Without the prospect of a headache or an upset stomach. Ah, the youth!
+</p>
+
+<p align="right">
+<table width="70%">
+<tbody>
+<tr>
+<td>
+<img hspace=5 src="../../Common/stopsign.jpg" align="left" border="0" />
+</td>
+<td>
+<p align="justify">
+<b>
+<i>
+The next challenge. Using the Guerilla and Insurgency rules, create the longest chain possible starting from the current position. Send your solutions to the Pouch for proper grading.
+</i>
+</b>
+</p>
+</td>
+</tr>
+</tbody>
+</table>
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<! ---------------------- S I G N A T U R E -------------------- >
+<b>&mdash; Dr John H. Watson</b>
+<table>
+<tbody>
+<tr valign="top">
+<td>
+<a href="mailto:woelpad@gmail.com"><img src="../../Common/letter.gif" border="0"></a>
+</td>
+<td align="left">
+<b>
+via Mario Huys
+(<a href="mailto:woelpad@gmail.com">woelpad@gmail.com</a>)
+</b> 
+</td>
+</tr>
+</tbody>
+</table>
+<div style="display:none">
+<p>
+<i>
+If you wish to e-mail feedback on this article to the author,
+and clicking on the envelope above does not work for you, feel free 
+to use the <a href="../../Working/Common/DearDP.html">"<b>Dear 
+DP...</b>"</a> mail interface.
+</i>
+</p>
+</div>
+
+<! ----------------------- C L O S U R E ---------------------- >
+</td>
+</tr>
+</tbody>
+</table>
+<p />
+<hr align="center" width="100%" size="-1" color="gray" />
+<a href="../.."><img src="../../Common/DPbutton2.gif" align="left" border="0" /></a>
+<a href=".."><img src="../images/toIssue.gif" align="right" border="0" /></a>
+</body>
+</html>
