@@ -1,0 +1,197 @@
+<html>
+
+<head>
+<title>Syntax for Orders</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1>Syntax for Orders</h1>
+
+Last revised: July 13, 1991
+<p>
+Send comments or corrections (only for the HTML version of this file) to Doug Massey (<a href="mailto:masseyd@valhalla.btv.ibm.com">masseyd@valhalla.btv.ibm.com</a>)
+<p>
+<hr>
+<p>
+You can receive a copy of this file via E-mail by sending your local Judge a message with &quot;get syntax&quot; in the body.
+<p>
+<hr>
+<p>
+<a name="Orders"><h3>Syntax for Orders</h3></a>
+<p>
+The format of your diplomacy orders depends on the phase of the game:
+Movement, Retreats or Adjustments.  Multiple orders can be entered on 
+one line by separating them with commas or semicolons.
+<p>
+
+Movement orders:
+<p>
+<samp>
+<ul>
+<li>&lt;type&gt; &lt;s_prov&gt; &lt;holds&gt; 
+<li>&lt;type&gt; &lt;s-prov&gt; &lt;moves&gt;   &lt;d-prov&gt;
+<li>&lt;type&gt; &lt;s-prov&gt; &lt;moves&gt;   &lt;c-prov&gt; &lt;moves&gt; &lt;c-prov&gt; ... &lt;moves&gt; &lt;d-prov&gt;
+<li>&lt;type&gt; &lt;s-prov&gt; &lt;support&gt; &lt;type&gt; &lt;s-prov&gt; 
+<li>&lt;type&gt; &lt;s-prov&gt; &lt;support&gt; &lt;type&gt; &lt;s-prov&gt; &lt;moves&gt; &lt;d-prov&gt;
+<li>&lt;type&gt; &lt;s-prov&gt; &lt;convoy&gt;  &lt;type&gt; &lt;s-prov&gt; &lt;moves&gt; &lt;d-prov&gt;
+<li>&lt;type&gt; &lt;s-prov&gt; &lt;proxy&gt;   &lt;power&gt;
+</ul>
+</samp>
+<p>
+Retreat orders:
+<p>
+<samp>
+<ul>
+<li>&lt;type&gt; &lt;s-prov&gt; &lt;moves&gt;   &lt;d-prov&gt;
+<li>&lt;type&gt; &lt;s-prov&gt; &lt;disband&gt;
+</ul>
+</samp>
+<p>
+Adjustment orders:
+<p>
+<samp>
+<ul>
+<li>&lt;build&gt;  &lt;type&gt; &lt;s-prov&gt;
+<li>&lt;remove&gt; &lt;type&gt; &lt;s-prov&gt;
+<li>&lt;waive&gt;
+</ul>
+</samp>
+<p>
+Where:
+<p>
+<samp>&lt;type&gt; </samp>= &quot;army&quot;, &quot;a&quot;, &quot;fleet&quot;, &quot;f&quot; or &lt;empty&gt;.<br>
+<samp>&lt;s-prov&gt; </samp>= Source province.<br>
+<samp>&lt;d-prov&gt; </samp>= Destination province.<br>
+<samp>&lt;c-prov&gt; </samp>= Intermediate water province in a convoy route.<br>
+<samp>&lt;power&gt;  </samp>= Power name or abbreviation of two or more characters.<br>
+<samp>&lt;holds&gt;  </samp>= &quot;h&quot;, &quot;hold&quot;, &quot;holds&quot;, &quot;stand&quot;, &quot;stands&quot;.<br>
+<samp>&lt;moves&gt; </samp>= &quot;-&quot;, &quot;-&gt;&quot;, &quot;m&quot;, &quot;move&quot;, &quot;moves&quot;, &quot;move to&quot;, &quot;moves to&quot;.<br>
+<samp>&lt;support&gt; </samp>= &quot;s&quot;, &quot;support&quot;, &quot;supports&quot;.<br>
+<samp>&lt;convoy&gt; </samp>= &quot;c&quot;, &quot;convoy&quot;, &quot;convoys&quot;.<br>
+<samp>&lt;proxy&gt; </samp>= &quot;p&quot;, &quot;proxy&quot;, &quot;proxy to&quot;.<br>
+<samp>&lt;disband&gt; </samp>= &quot;d&quot;, &quot;disband&quot;.<br>
+<samp>&lt;build&gt; </samp>= &quot;b&quot;, &quot;build&quot; or &lt;empty&gt;.<br>
+<samp>&lt;remove&gt; </samp>= &quot;r&quot;, &quot;remove&quot;, &quot;d&quot;, &quot;disband&quot; or &lt;empty&gt;.<br>
+<samp>&lt;waive&gt; </samp>= &quot;w&quot;, &quot;waive&quot;.<br>
+
+<p>
+Province names can be abbreviated or can be spelled out.  Coasts can be
+specified by following the province name with one of:
+<p>
+<samp> &lt;coast&gt; </samp>= &quot;/nc&quot;, &quot;(nc)&quot;, &quot;/north coast&quot;, &quot;(north coast)&quot;
+
+<p>
+or appropriate other directions instead of &quot;north&quot;.
+<p>
+<hr>
+<p>
+<a name="Revising"><h3>Revising Orders</h3></a>
+<p>
+Revisions to orders can be sent in anytime before the deadline occurs.
+The last valid order for a particular unit will be honored.  If no valid
+order is received for a particular unit it will be listed in the reports
+as &quot;No order processed&quot;.
+<p>
+<hr>
+<p>
+
+<a name="Conditional"><h3>Conditional Orders</h3></a>
+<p>
+Orders can be entered conditionally using the following syntax:
+<p>
+<samp>
+<dl>
+<dt>  if &lt;condition&gt; then 
+<dd>     &lt;orders&gt; 
+<dt>   else if &lt;condition&gt; then 
+<dd>     &lt;orders&gt; 
+<dt>   else 
+<dd>     &lt;orders&gt; 
+<dt>   endif
+</dl>
+</samp>
+<p>
+
+The &quot;then&quot;s are optional for old fortran programmers.  The conditions
+are of the form:
+<p>
+
+<samp>&lt;condition&gt; = [&quot;not&quot;] &lt;power&gt; &lt;type&gt; &lt;prov&gt;</samp>
+<p>
+
+and may be combined with the keywords &quot;and&quot; and &quot;or&quot; evaluated left
+to right.  You can use parentheses to change the precedence.  The 
+condition evaluates to &quot;true&quot; if a unit of the specified type belonging 
+to the specified power is present (or not) in the specified province.  
+The province must be specified, but the type and power are optional
+interpreted as &quot;any&quot; if not specified.  The power, type and province
+can be specified in any order.  Powers can be abbreviated to two or
+more characters or spelled out.  For example:
+<p>
+<samp>
+<dl>
+<dt>   phase Fall 1905 Movement
+<dt>   if not french army ruhr and (russian prussia or russian siliesia)
+<dd>     kiel -&gt; berlin
+<dd>     munich support kiel -&gt; berlin
+<dt>   else
+<dd>     kiel -&gt; ruhr
+<dd>     munich support kiel -&gt; ruhr
+<dt>   endif
+</dl>
+</samp>
+<p>
+Conditional statements can be nested with expected results.  The end of
+a line closes off all parenthesis and the end of the orders closes off
+all missing endifs without an error being reported.  Note, broadcast
+messages are not considered orders and thus cannot be sent out
+conditionally using this mechanism.
+<p>
+<hr>
+<p>
+<a name="Phase"><h3>Submitting Orders for Future Phases</h3></a>
+<p>
+Orders can be submitted for future phases using the following syntax:
+<p>
+
+<samp>    PHASE &lt;season&gt; &lt;year&gt; &lt;phase&gt;
+</samp>
+<p>
+
+Where the first letter of the season or phase are significant:
+<p>
+<samp>    &lt;season&gt; </samp>= &quot;Spring&quot;, &quot;Summer&quot;, &quot;Fall&quot; or &quot;Winter&quot;. <br>
+<samp>    &lt;phase&gt;  </samp>= &quot;Movement&quot;, &quot;Retreat&quot;, &quot;Adjustment&quot; or &quot;Build&quot;.
+
+<p>
+
+The orders following the<samp> PHASE </samp>directive will be collected and saved
+until the indicated phase occurs.  Some syntax checking will be done on
+the orders, but the full list of errors can't be determined until the
+actual phase occurs.  That error list will be mailed to you when the
+orders are processed.  If any pending orders are found for a particular
+phase, your power will get the &quot;orders have been received&quot; status
+automatically whether or not there were any errors or if the orders are
+incomplete.  All orders until the next<samp> PHASE </samp>directive or the end of
+the mail message will be saved for the specified phase.  Note that only
+orders are saved.  In particular, <strong>broadcast messages can not be delayed</strong>
+for later transmission.  An exception to this is that the<samp> set wait </samp>
+and</samp> set nowait </samp>directives will be propagated to the future phase.
+Your pending orders will be listed in replies to intervening order
+submissions.  To get rid of all your pending orders, use the<samp> CLEAR </samp>command.
+<p>
+
+As a special note, please be aware that subsequent build orders will
+override earlier ones if more build orders are received than you have
+supply centers.  Thus, when submitting orders for future build phases,
+you should list your builds in reverse order of preference in case you
+don't get as many supply centers as you were expecting.
+
+<hr>
+<i>
+* Diplomacy is a trademark of Hasbro, Inc.,
+  all rights reserved.  Used with permission.
+</i>
+</p>
+</html>

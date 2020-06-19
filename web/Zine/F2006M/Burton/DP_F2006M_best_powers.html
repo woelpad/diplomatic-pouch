@@ -1,0 +1,327 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML>
+<HEAD>
+<TITLE>DP F2006M: The Statistician: What are the best powers to play? </TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<!-- ---------------------Header---------------------------------- -->
+<!-- ------------------------------------------------------------- -->
+<!---- Authored by Josh Burton ---->
+<!---- Published on the Pouch Zine with permissions ---->
+<!---- Created on October 18, 2006 ---->
+</HEAD>
+
+
+<body style="background-color: rgb(255, 255, 255);">
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href=".."><img src="../../Common/toF2006M.gif" align="right" border="0"></a>
+<br clear="all">
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
+<body bgcolor="white">
+<div align="center">
+<H1 align=center>The Statistician: What are the best powers to play?</H1>
+<h2>by Josh Burton</h2>
+</div>
+<hr>
+<h2>Introduction</h2>
+<p>
+Diplomacy players are a shrewd bunch.  We pride ourselves on being hard-nosed and hard-headed; we don't let our emotions get in the way of our actions; we consider our possibilities rationally and decide on the best course of action.
+<p>
+In particular, there are many Dippers who appreciate the strategic and tactical aspects of the game as much as the diplomatic aspect.  We (I certainly include myself) enjoy playing the general as well as the diplomat.  We love nothing more than to size up a position, analyze a power's strengths and weaknesses, identify objectives, and formulate a short-term and long-term plan for success.  If terms like "<a href="http://www.diplom.org/Zine/W1995A/Stalemates/">stalemate line</a>" and "<a href="http://www.diplom.org/Zine/S1998R/Windsor/caissa.html">tempo gain</a>" bore you, you're probably more of a pure Diplomat.  But if they pique your interest, you're one of us.  A "general-diplomat".
+<p>
+A good general will study the wars of the past, so as to better understand the wars of the present.  Similarly, a general-diplomat should study games already played, in order to play new games better.  There have been thousands of games on the PBEM judges, yet very little effort has been put into performing thorough statistical analyses of those games.  (The last time The Zine published a statistical analysis was in <a href="http://www.diplom.org/Zine/S1998M/Anon/1901.html">1998</a>.)  Given the number of general-diplomats worldwide, I find this surprising.
+<p>
+<h3>No-press games</h3>
+<p>
+A <i>no-press</i> game is a game in which the players do not communicate at all, except through their orders.  By constrast, in a <i>press</i> game, the players communicate normally.  For the purposes of this article, I define "full press" to be any press settings in which the players can communicate directly to one another without any ambiguity as to who is talking (<i>i.e.</i>, at least White, Partial, with no regard to Fake) and "incomplete press" to be any press settings that are neither no-press nor full-press.  The term "no-press" is often conflated with the term "gunboat", which technically means that the players do not know each others' real-life identities.  (Games without full press must be gunboat, of course, or the players would be able to communicate as if they were in a press game; but full press games may also be gunboat.)
+<p>
+Lately I have been playing exclusively no-press games, which require a smaller time commitment.  Playing no-press also lets me play the role that I enjoy most: the general-diplomat.  No-press games are fundamentally different from press games: You can't manipulate other players as easily, you can't make them tell you their plans, and you can't convince everyone to be your best friend.  Make no mistake, there is still plenty of diplomacy going on -- there have been <a href="http://www.diplom.org/Zine/W1995A/Szykman/NoPress.html">many</a> <a href="http://www.diplom.org/Zine/S1999R/Windsor/caissa.html">articles</a> about communication in no-press games -- but the negotiations are subordinated to the tactical and strategic needs of each power.  Thus, tactics and strategy are paramount -- tactics for the short term, and strategy for the long term.  To do well in no-press, you must truly understand the unique geography of the Diplomacy board.  For these reasons, and because you have no <i>a priori</i> way to judge your opponents, statistical analysis of past games is very important to playing current ones.
+<p>
+<h2>FRIGATE</h2>
+<p>
+Although I have less time than I used to, I do have one skill I used to lack: I can program.  I have recently learned how to write <a href="http://www.perl.com/">Perl</a>.  You may suppose that the task of extracting useful information from thousands of games would be hopelessly dull, but it's a feasible task for a crack Perl programmer.  After many hours of work, I have written FRIGATE: a Perl-based program that produces useful game data.
+<p>
+Here's how FRIGATE works.  First, I download all the game summary files (available online at <a href="http://doug.obscurestuff.com/dip/jdpr.html">http://doug.obscurestuff.com/dip/jdpr.html</a> -- scroll to the bottom.)  Then I read those files into FRIGATE, which parses them to determine each game's outcome, press settings, variant type, <i>etc.</i>  All those games go into a big database.  Then I simply ask FRIGATE to examine the database and print out the results I'm interested in.  Thanks to the wonders of modern technology, all this happens in less than a minute.
+<p>
+As a side note, a small but significant portion of the games available are flagged as "irregular".  This may be for any number of reasons -- abandoned games, unusual win conditions (<i>e.g.</i>, tournament games with pre-set end years), player cheating, Payola rules, and so forth.  I usually exclude irregular games from the database, which allows me to assume that every game ends in either a clear victory (18 centers) or an evenly shared draw.
+<p>
+<h3>The Best Power To Play</h3>
+<p>
+FRIGATE can answer all sorts of questions, but I think the first question everyone wants to ask is: <i>"What are the best Diplomacy powers to play?"</i>  That's a surprisingly subtle question.  How do you judge "best": is it the power that gets the most solo victories, or the power that participates in wins/draws the most often?  Or is it the power with the most Calhamer Points?  (Calhamer Points are awarded as follows: The winning/drawing powers receive 1 CP split evenly among them.  This is the basis for Doug Massey's JDPR scores.)  What kind of press settings are you playing with?  And are you talking about Standard Diplomacy, or a variant?
+<p>
+All the results in this article will be devoted to answering that question.  For now I will deal only with Standard games on the PBEM judges, and I will look at wins, draws, and Calhamer Points.  I will examine separately the cases of full-press games, incomplete-press games (gray only, or broadcast only), and no-press games.  For each case I will give the "FRIGATE ranking" of the seven powers (so called because the powers' first letters spell out "FRIGATE", though the rankings are hardly in this order.)  Lastly, for each case I will give the "imbalance", which is a measure of the average inequality between any two powers' chances.  (Mathematically, the imbalance is the standard deviation of the set, divided by the mean.)
+<p>
+<h3>Results</h3>
+<p>
+
+<center>
+<table border="2">
+    <caption><i>Full-press games (at least White, Partial) (4516 in database)</i></caption>
+    <tr>
+        <th>Power</th>
+        <th>Wins</th>
+        <th>Wins/Draws</th>
+        <th>Calhamer Points</th>
+    <tr>
+        <th><font color="red">Austria</th>
+	<th><font color="red">5.92%</th>
+	<th><font color="red">27.28%</th>
+	<th><font color="red">12.43%</th>
+    </tr>
+    <tr>
+        <th><font color="blue">England</th>
+	<th><font color="blue">6.46%</th>
+	<th><font color="blue">35.09%</th>
+	<th><font color="blue">15.18%</th>
+    </tr>
+    <tr>
+        <th><font color="teal">France</th>
+	<th><font color="teal">7.48%</th>
+	<th><font color="teal">39.30%</th>
+	<th><font color="teal">17.09%</th>
+    </tr>
+    <tr>
+        <th><font color="black">Germany</th>
+	<th><font color="black">6.39%</th>
+	<th><font color="black">30.42%</th>
+	<th><font color="black">13.59%</th>
+    </tr>
+    <tr>
+        <th><font color="green">Italy</th>
+	<th><font color="green">4.56%</th>
+	<th><font color="green">28.35%</th>
+	<th><font color="green">11.57%</th>
+    </tr>
+    <tr>
+        <th><font color="gray">Russia</th>
+	<th><font color="gray">8.17%</th>
+	<th><font color="gray">31.75%</th>
+	<th><font color="gray">15.27%</th>
+    </tr>
+    <tr>
+        <th><font color="olive">Turkey</th>
+	<th><font color="olive">6.32%</th>
+	<th><font color="olive">34.31%</th>
+	<th><font color="olive">14.88%</th>
+    </tr>
+    <tr>
+	<th><u>Total:</u></th>
+	<th>45.31%</th>
+	<th>226.50%</th>
+	<th>100%</th>
+    </tr>
+    <tr>
+	<th><u>Ranking:</u></th>
+	<th>RFEGTAI</th>
+	<th>FETRGIA</th>
+	<th>FRETGAI</th>
+    </tr>
+    <tr>
+	<th><u>Imbalance:</u></th>
+	<th>17.44%</th>
+	<th>13.03%</th>
+	<th>13.22%</th>
+    </tr>
+</table>
+
+<p>
+<p>
+
+<table border="2">
+    <caption><i>Incomplete-press games (Gray only, or broadcast only) (1320 in database)</i></caption>
+    <tr>
+        <th>Power</th>
+        <th>Wins</th>
+        <th>Wins/Draws</th>
+        <th>Calhamer Points</th>
+    <tr>
+        <th><font color="red">Austria</th>
+	<th><font color="red">6.52%</th>
+	<th><font color="red">28.64%</th>
+	<th><font color="red">12.61%</th>
+    </tr>
+    <tr>
+        <th><font color="blue">England</th>
+	<th><font color="blue">6.89%</th>
+	<th><font color="blue">33.33%</th>
+	<th><font color="blue">14.36%</th>
+    </tr>
+    <tr>
+        <th><font color="teal">France</th>
+	<th><font color="teal">9.39%</th>
+	<th><font color="teal">38.86%</th>
+	<th><font color="teal">17.79%</th>
+    </tr>
+    <tr>
+        <th><font color="black">Germany</th>
+	<th><font color="black">7.12%</th>
+	<th><font color="black">32.05%</th>
+	<th><font color="black">14.24%</th>
+    </tr>
+    <tr>
+        <th><font color="green">Italy</th>
+	<th><font color="green">5.30%</th>
+	<th><font color="green">27.65%</th>
+	<th><font color="green">11.28%</th>
+    </tr>
+    <tr>
+        <th><font color="gray">Russia</th>
+	<th><font color="gray">7.42%</th>
+	<th><font color="gray">29.02%</th>
+	<th><font color="gray">13.39%</th>
+    </tr>
+    <tr>
+        <th><font color="olive">Turkey</th>
+	<th><font color="olive">8.71%</th>
+	<th><font color="olive">35.61%</th>
+	<th><font color="olive">16.33%</th>
+    </tr>
+    <tr>
+	<th><u>Total:</u></th>
+	<th>51.36%</th>
+	<th>225.15%</th>
+	<th>100%</th>
+    </tr>
+    <tr>
+	<th><u>Ranking:</u></th>
+	<th>FTRGEAI</th>
+	<th>FTEGRAI</th>
+	<th>FTEGRAI</th>
+    </tr>
+    <tr>
+	<th><u>Imbalance:</u></th>
+	<th>18.61%</th>
+	<th>12.75%</th>
+	<th>15.42%</th>
+    </tr>
+</table>
+
+<p>
+<p>
+
+<table border="2">
+    <caption><i>No-press games (4262 in database)</i></caption>
+    <tr>
+        <th>Power</th>
+        <th>Wins</th>
+        <th>Wins/Draws</th>
+        <th>Calhamer Points</th>
+    <tr>
+        <th><font color="red">Austria</th>
+	<th><font color="red">6.41%</th>
+	<th><font color="red">21.49%</th>
+	<th><font color="red">11.12%</th>
+    </tr>
+    <tr>
+        <th><font color="blue">England</th>
+	<th><font color="blue">7.34%</th>
+	<th><font color="blue">27.66%</th>
+	<th><font color="blue">13.76%</th>
+    </tr>
+    <tr>
+        <th><font color="teal">France</th>
+	<th><font color="teal">13.21%</th>
+	<th><font color="teal">38.41%</th>
+	<th><font color="teal">21.11%</th>
+    </tr>
+    <tr>
+        <th><font color="black">Germany</th>
+	<th><font color="black">9.76%</th>
+	<th><font color="black">29.73%</th>
+	<th><font color="black">15.98%</th>
+    </tr>
+    <tr>
+        <th><font color="green">Italy</th>
+	<th><font color="green">5.49%</th>
+	<th><font color="green">21.42%</th>
+	<th><font color="green">10.37%</th>
+    </tr>
+    <tr>
+        <th><font color="gray">Russia</th>
+	<th><font color="gray">6.99%</th>
+	<th><font color="gray">18.68%</th>
+	<th><font color="gray">10.50%</th>
+    </tr>
+    <tr>
+        <th><font color="olive">Turkey</th>
+	<th><font color="olive">10.11%</th>
+	<th><font color="olive">32.31%</th>
+	<th><font color="olive">17.16%</th>
+    </tr>
+    <tr>
+	<th><u>Total:</u></th>
+	<th>59.31%</th>
+	<th>189.70%</th>
+	<th>100%</th>
+    </tr>
+    <tr>
+	<th><u>Ranking:</u></th>
+	<th>FTGERAI</th>
+	<th>FTGEAIR</th>
+	<th>FTGEARI</th>
+    </tr>
+    <tr>
+	<th><u>Imbalance:</u></th>
+	<th>31.75%</th>
+	<th>25.96%</th>
+	<th>28.24%</th>
+    </tr>
+</table>
+</center>
+
+<p>
+<p>
+<h3>Analysis</h3>
+<p>
+What knowledge can we glean from all these numbers?  Several facts become readily apparent.  First of all, the conventional wisdom regarding France and Italy is true: France really <i>is</i> the best power to play, under almost any circumstances, while poor Italy is usually the worst.  Austria also has a consistently bad record, though not as bad as Italy's.  All the other powers can be strong or weak, depending on what kind of game you're in and what your goal is.
+<p>
+Secondly, there are some noticeable differences between press and no-press games.  The more that players can communicate, the more equal are their chances: the Frenchman is at less of an advantage, and the Italian less of a disadvantage, in full-press games.  (By the numbers, France's relative advantage over Italy is more than twice as big in no-press as it is in full-press.)  Full-press games are also drawish, while no-press games are more likely to lead to a solo victory: every power except Russia is more likely to solo in a no-press game than in a full-press game.  (This is undoubtedly because it's easier to organize a Stop-the-Leader alliance in a press game.)  If you want a fair and balanced game that's unlikely to end in a solo, play full press.  If experiencing the thrill of victory is more important to you than giving everyone a fair share, play no-press.  For a compromise, play incomplete press.
+<p>
+Interestingly, Russia fares much worse in games with less press.  This makes sense: Russia is the only power that cannot guarantee for itself any neutral supply centers in 1901; the Russian player therefore needs to negotiate just to get a build.  Russia also has a lot of nearby provinces that are usually declared DMZs in a press game, but cannot be agreed upon as such in no-press.  Unable to use diplomacy to secure any neutrals or DMZs, Russia often gets pushed back on all fronts (attacked in Galicia and the Black Sea; bounced out of Sweden; forced out of Rumania) by the kind of aggressive defensiveness that is quite common in no-press.  I suspect that many people like to attack Russia at the beginning of a no-press game, precisely because it is easy to find allies for such an attack.  Hence the Russian player is often doomed quickly in a no-press game.  And, apparently, Russia's loss is Germany's and Turkey's gain, since those powers are both stronger in games with less press.
+<p>
+Lastly, for all press types, the imbalance between powers is smaller for draws than for wins.  Your power assignment strongly affects your odds to win, but doesn't change your odds of survival quite as much.   So if you're stuck playing Italy and lamenting your lousy chances, just remember: if you aim for a draw instead of a win, you're not so far behind!
+<p>
+<h2>Further questions</h2>
+<p>
+The question explored in this article -- <i>"What are the best Diplomacy powers to play?"</i> -- is only one of many sensible questions that can be answered by good statistical analysis.  And it doesn't even begin to solve the general-diplomat's problem of finding a strategy, after the powers have been assigned.  Here are some other questions that might already have occurred to you:
+<ul>
+    <li>How many game-years do wins and draws take?
+    <li>Which supply centers does a power typically own when it wins the game?
+    <li>Are games with higher-ranked players more likely to end in draws?
+    <li>Are games with dropouts more likely to end in solo victories?
+    <li>To what extent are the rankings skewed by self-fulfilling prophesies?  (<i>e.g.</i>, Good players "know" that France does well, so they put <b>F</b> at the top of their preference lists.)
+    <li>Are there cultural differences between players in different countries?  Do games with American players end differently from games with European, Asian, <i>etc.</i> players?
+    <li>How often does each power make certain opening moves, and how well does a power fare if it makes those moves?
+    <li>How often does each power occupy certain supply centers in the first few years, and how well does a power fare if it does so?
+    <li>How is the game balance changed by minor variants, like Fleet Rome and Milan?
+    <li>What about major variants?  For example, which powers are best in Modern Diplomacy, or Youngstown?
+</ul>
+I'm not going to discuss these issues just yet; I've blathered on enough for now.  But I have already outfitted FRIGATE to answer some of these questions.  And since FRIGATE is a work in progress, I might eventually get around to answering them all.  If you're a general-diplomat and you'd like to hear some of these questions answered, or if you've got some ideas of your own, please don't hesitate to ask.
+<p>
+One final thought: The accuracy of any statistical analysis improves with more good data.  The more PBEM Diplomacy games are played, the better my results will get with time.  So do me a favor, and go play more Diplomacy!
+<p>
+
+<HR>
+<P align=justify>
+  <BR><BR><TABLE>
+    <TBODY>
+      <TR vAlign=bottom>
+          <TD><A href="mailto:editor@diplom.org"><IMG
+	        src="../../Common/letter.gif" border=0></A> </TD>
+		    <TD><STRONG>Josh Burton<BR>c/o The EDItor<BR>(<a href="mailto:editor@diplom.org">editor@diplom.org</a>)</STRONG>
+		    </TD></TR></TBODY></TABLE>
+<P>
+<I>If you wish to e-mail feedback on this article to the author, and clicking 
+on the envelope above does not work for you, feel free to use the <A 
+href="../../Common/DearDP.html">"<B>Dear 
+DP...</B>"</A> mail interface.</I> 
+<P>
+<HR ALIGN="CENTER" WIDTH=100% SIZE="-1" COLOR="GRAY">
+
+<a href="../.."><img src="../../Common/DPbutton.gif" align="left" border="0"></a>
+<a href="../"><img src="../../Common/toF2006M.gif" align="right" border="0"></a>
+
+
+</BODY>
+</HTML>

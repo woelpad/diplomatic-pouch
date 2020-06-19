@@ -1,0 +1,258 @@
+<html>
+
+<head>
+<title>Help Information</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1>Help Information</h1>
+
+Last revised: January 20, 1993
+<p>
+Send comments or corrections (only for the HTML version of this file) to Doug Massey (<a href="mailto:masseyd@valhalla.btv.ibm.com">masseyd@valhalla.btv.ibm.com</a>).
+<p>
+<hr>
+<p>
+You can receive a copy of this file via E-mail by sending your local Judge a message with &quot;get info&quot; in the body.
+<p>
+<hr>
+<p>
+To communicate with the Diplomacy Adjudicator you should send it a mail
+message in the following format:
+<p>
+<dl>
+    <samp>
+<dd>SIGNON <i>pxxxx password
+ <dd>   commands</i>
+</samp>
+</dl>
+<p>
+Where <samp><i>p</i></samp> is the identifier of the power you have been assigned and
+<samp><i>xxxx</i></samp> is the name of the game you are participating in.  The power
+identifier is usually the first letter of the power unless there are
+conflicts in which case it might be the second letter.  For example in
+the Youngstown variant, India's identifier is &quot;N&quot; since Italy uses &quot;I&quot;.
+<p>
+<a name="Signon">To</a> enter a game that is forming, use:
+<p>
+<dl>
+<dd>    <samp>SIGNON ? <i>password    </i> </samp>          To enter the next available game
+<dt>or 
+<dd><samp> SIGNON ?<i>xxxx password</i> [<i>variant</i>] </samp>Specifying the name of the game you want
+<dt>or
+<dd>  <samp>CREATE ?<i>xxxx password</i> [<i>variant</i>] </samp>To create a new game and sign on
+<dt>or
+<dd> <samp> SIGNON %<i>xxxx password      </i>     </samp>To sign on as an alternate standby
+<dt>or
+<dd> <samp> OBSERVE <i>xxxx password    </i>      </samp> To just get the reports for a game
+</dl>
+<p>
+your password will be set to the password you specify.  Note that if you
+use the third form above, other players wishing to enter that game will
+have to use the second form.  Before you can sign on to a game, you must
+register with the adjudicator.  See the information about the<samp> 
+<a href="#Register">REGISTER</a> </samp>command near the end of this text.
+<p>
+<a name="Preference">Immediately</a> after the initial signon you should specify your preference
+of what powers you would like to be assigned with the command:
+<p>
+<dl>
+<dd>    <samp>SET PREFERENCE <i>list</i></samp>
+</dl>
+<p>
+where the <i>list</i> is a sequence of the power identifier letters.  To give 
+a set of powers equal weighting, enclose them in parenthesis or square
+brackets.  Thus:<samp> <i>set preference f</i>[<i>ergti</i>]<i>a</i> </samp>would indicate that you 
+really want France and really don't want Austria, but you don't care 
+about which of the others you are assigned if you can't have France.
+<p>
+<hr>
+<p>
+<a name="Takeover">To</a> take over a power that has become abandoned, you merely sign on with:
+<p>
+<dl>
+<dd>    <samp>    SIGNON <i>pxxxx password </i>[<i>variant</i>]</samp>
+</dl>
+<p>
+where <samp><i>p</i></samp> is the identifier of the power you are attempting to take over.
+<p>
+<hr>
+<p>
+<a name="Resign">Other</a> commands that you can put after the <samp>SIGNON</samp> command are:
+<p>
+<dl>
+<dd>    <samp>    SET PASSWORD <i>new_password</i></samp>     To change your password
+<dd>    <samp>    SET ADDRESS  [<i>reply_address</i>] </samp> To change where your reports go
+ <dd>    <samp>   SET ACCESS   <i>same,any-site  </i></samp>  To change what users can sign on
+<dd>    <samp>    SET LEVEL    <i>novice,advanced </i></samp> To restrict to a particular class
+<dd>    <samp>    SET VARIANT  <i>variant    </i></samp>      To change the variant before starting
+<dd>    <samp>    SET <i>phase    parameters    </i></samp>   To change the deadline calculation
+<dd>    <samp>    PHASE <i>season year phase    </i></samp>   To specify future orders
+<dd>    <samp>    CLEAR        </samp>                 To clear pending orders
+<dd>    <samp>    RESIGN       </samp>                 To withdraw from the game
+ <dd>    <samp>   SIGNOFF      </samp>                 To indicate the end of useful text
+<dd>    <samp>    LIST            </samp>              To get a status of the game
+<dd>    <samp>    BROADCAST [<i>options</i>]    </samp>       To send rest of mail as press message.
+ <dd>    <samp>   PRESS [<i>options</i>]      </samp>         Ditto.  Use &quot;get press&quot; for options.
+ <dd>    <samp>   TERMINATE          </samp>           To declare the game over
+ <dd>    <samp>   RESUME          </samp>              To restart a completed or terminated game
+ <dd>    <samp>   WHOIS<i> user         </i></samp>           To list information about a player
+<dd>    or  diplomacy orders.
+</dl>
+<p>
+<hr>
+<p>
+<a name="Get">The</a> following commands can be sent to the adjudicator with or without a
+signon command:
+<p>
+<dl>
+<dd>
+    VERSION [<i>level</i>]   To see the current version and enhancements since level.<br>
+    REGISTER ... END  To register yourself (see below).<br>
+    IAMALSO <i>address</i>   To register a new email address (see below).<br>
+    LIST [<i>game</i>]       To get the status of the specified game or all games.<br>
+    HELP              To get this text (no other commands will be processed).<br>
+    MAP <i>game 	</i>      To get a postscript map of the game status.<br>
+    GET <i> file  </i>       To get a particular file.  The available files are:
+<p>
+      info:     This text.<br>
+      <a href="index.html">index</a>:
+		An alphabetical summary of all commands.<br>
+    % <a href="syntax.html">syntax</a>:
+		Syntax for submitting orders.<br>
+    % <a href="deadline.html">deadline</a>:
+		Policies on deadline computations and how to set them.<br>
+    % <a href="rules.html">rules</a>:
+		House rules for the standard variant of Diplomacy.<br>
+    % <a href="press.html">press</a>:
+		Information on sending broadcast/press messages.<br>
+      info.xxx: Additional information for nonstandard variant xxx.<br>
+      map:      The province abbreviations and connections (cryptic).<br>
+      map.xxx:  The same for nonstandard variant xxx.<br>
+      master:   
+		Information for people who are games masters/moderators.<br>
+      flist:    
+		A list of all files available with sizes.
+<p>
+</dl>
+The files marked with % above are &quot;must&quot; reading before you can really
+get started (the percent is a marker refering you to this footnote, don't
+include it in the GET command).  In addition to the standard variant, 
+supported nonstandard variants are:
+<p>
+<dl>
+<dd>
+    Youngstown:  A fairly common variant including Asia.<br>
+    Loeb9:       Danny Loeb's 9 player variant including Spain and Norway.<br>
+    Pure:        Each power starts with one army on a map of seven provinces.<br>
+    Chaos:       A 34 player variant in which each player gets one center.<br>
+    Britain:     England starts with six armies.<br>
+    1898:        Each player starts with only one of his home centers.<br>
+    Crowded:     Eleven players occupy all 35 centers at game start.<br>
+    Machiavelli: Uses money to support units and/or bribe others' units.<br>
+    Fleet_Rome:  Italy starts with a fleet rather than an army in Rome.<br>
+    Gunboat:     The identities of the other players are kept secret.<br>
+</dl>
+<p>
+Be sure to read the info file for these variants before signing on.  The
+Machiavelli variant is more complex than standard Diplomacy and has its
+own rules file &quot;rules.machiavelli&quot; which you must read before playing as 
+well.  There are PostScript maps available for some of the variants:
+<p>
+<dl>
+<dd>
+    map.ps:         The standard variant and many others.<br>
+    youngstown.ps:  Youngstown variant.<br>
+    loeb9.ps:       Loeb9 variant.<br>
+    machiavelli.ps  Machiavelli variant.<br>
+</dl>
+<p>
+These files are fairly large.  They are also available via anonymous ftp
+to ftp.u.washington.edu under the names 'public/misc/xxxx.ps'.  It is 
+preferred that you get them via anonymous ftp if you can.
+<p>
+To sign on to a nonstandard variant before it starts or to take over a
+power in a nonstandard variant you must specify the variant name on the
+signon command.  This is to ensure that you know what you're getting
+yourself into.  If anyone would like to see the judge support other
+variants, please send your suggestions to the judge-request address as
+listed below.
+<p>
+<hr>
+<p>
+<a name="Register">When</a> involved in a game of Diplomacy it is best if all the players in the
+game are unique.  Puppet powers tend to spoil the game for the other
+players.  Some games are designated as &quot;all players from different
+sites&quot; or &quot;all players from the same site&quot; to keep the balance from
+becoming too badly tipped if contact between two players is too easy or
+too hard.  It is important for the judge to know who you are in order
+to determine if you are right for a particular game.  Please fill out
+the following registration form by replacing the example text after the
+colons with proper information and return it to the judge.  Name, phone
+and site are required.  You should also list at least one email address
+that won't change.
+<p>
+<strong>Cut here</strong>  <br>
+<hr>
+<samp>
+REGISTER <br>
+Name:      Aretha Holly <br>
+Phone:     (505) 555-5555 <br>
+Site:      University of Hodunk <br>
+Address:   1515 St. Claws Lane, Kris Mass <br>
+Country:   USA <br>
+Timezone:  Eastern <br>
+Email:     user@host.domain.edu, user@host.bitnet, host2!host1!user <br>
+Level:     Novice, Amateur, Intermediate, Advanced or Expert<br>
+Birthdate: Dec 25, 1907 <br>
+Sex:       Female <br>
+Package:   Yes <br>
+END <br>
+</samp>
+<hr>
+<p>
+You can query the database of people by sending a<samp> WHOIS <i>user</i> </samp>request
+to the judge or you can get the entire database with<samp> get whois</samp>.  You
+may update this information at any time by sending in a new registration 
+form.  Note that you can use the information returned by the whois
+command as a template by throwing a<samp> REGISTER </samp>line in front, an<samp> END </samp>line
+on the end, changing the other information and sending it back to the
+judge.  Please try to spell your site name the same way other players
+may have spelled it.  Feel free to add additional information by making
+up your own keywords, but keep it under half a page.
+<p>
+The judge recognizes you by the return address in electronic mail that
+you send in.  If you use multiple accounts, you can tell the judge that
+another return address should be considered the same person by sending
+an<samp> IAMALSO <i>address</i> </samp>command from the new account, where<samp> <i>address</i> </samp>is
+one of the electronic mail addresses that you listed on your Email line
+when you last registered.
+<p>
+<hr>
+<p>
+Signing onto another player's power without his permission is a serious
+offense.  Punishable by being staked out in the hot sun with red ants
+placed in your ears and nostrils.  Although Diplomacy is based on treachery
+and lying, this falls under the category of &quot;spoofing the games master&quot;
+which is not allowed.  If another player accidently sends you his password, 
+you are required by honor to report this to the player and not take
+advantage of it.  By signing onto the other player's power, the judge
+will send you a copy of his submitted orders, but the other player will
+get a copy of this message and an alarm message will also be sent to
+the judge's administrator.
+<p>
+Thank you for your cooperation.
+<p>
+<hr>
+<p>
+Orders and other commands for the automated server should be sent to
+<i>judge@diplom.org</i>.  Question, comments and suggestions intended 
+for a human should be sent to <i>judge-request@diplom.org</i>.
+<p>
+<hr>
+<i>
+* Diplomacy is a trademark of Hasbro, Inc.
+  all rights reserved.  Used with permission.
+</i>
+</html>

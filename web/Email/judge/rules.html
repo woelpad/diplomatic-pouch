@@ -1,0 +1,145 @@
+<html>
+
+<head>
+<title>Rule Exceptions and Interpretations</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1>Rule Exceptions and Interpretations</h1>
+
+Last revised: May 19, 1990
+<p>
+Send comments or corrections (only for the HTML version of this file) to Doug Massey (<a href="mailto:masseyd@valhalla.btv.ibm.com">masseyd@valhalla.btv.ibm.com</a>).
+<p>
+<hr>
+<p>
+You can receive a copy of this file via E-mail by sending your local Judge a message with &quot;get rules&quot; in the body.
+<p>
+<hr>
+<p>
+Hasbro has not given me permission to distribute copies of the
+rules.  To get a set of rules contact Hasbro.
+<p>
+<hr>
+<p>
+The adjudicator follows The Rules of Diplomacy as specified by Hasbro
+with the following exceptions:
+<p>
+<b>VII.3.b </b><br>
+When a fleet can move to two coasts and the coast is not specified,
+the adjudicator will pick an arbitrary coast.  Actually not totally
+arbitrary, but the first one in its movement list. 
+<p>
+
+<b>VII.7:</b><br>
+   Abbreviations are the first three characters of the province name
+         except for provinces starting with &quot;gul&quot;, &quot;liv&quot;, &quot;nor&quot; and &quot;tyr&quot;.  
+         These are abbreviated as follows:
+<dl>
+<dd>
+           gob: Gulf of Bothnia<br>
+           gol: Gulf of Lyon<br>
+           lvp: Liverpool<br>
+           lvn: Livonia<br>
+           naf: North Africa<br>
+           nat: North Atlantic Ocean<br>
+           nrg: Norwegian Sea<br>
+           nth: North Sea<br>
+           nwy: Norway<br>
+           tyr: Tyrolia<br>
+           tys: Tyrrhenian Sea<br>
+<p>
+</dl>
+         Other reasonable abbreviations are also defined.  For a complete
+         list see the file available with the<samp> &quot;get map&quot; </samp>command.
+<p>
+
+<b>IX.1</b><br>
+Do not specify owners of units in support and convoy orders.  This
+redundant specification would unnecessarily complicate the parser. 
+The movement results will indicate the alternate power on support
+and convoy orders.
+<p>
+<b>IX.7</b><br>
+Based on the second statement after XIV.5, IX.7 does not apply if
+either or both of the dislodged or dislodging unit is convoyed. 
+<p>
+<b>XII</b><br>
+Armies intending to use a convoy must specify the convoy route
+in their movement orders as in the examples:
+<p>
+<dl>
+<samp>
+<dd>               A LON-ENG-BEL,
+   <dd>            F ENG C A LON-BEL.
+</samp>
+<dt>        or
+<samp>
+<dd>     A LON-ENG-MID-WES-TUN,
+<dd>     F ENG C A LON-TUN,
+ <dd>              F MID C A LON-TUN,
+ <dd>              F WES C A LON-TUN,
+<dd>               A NAF S A LON-TUN.
+</samp>
+</dl>
+<p>
+<b>XII.4</b><br>
+Since convoy routes must be specified, there will never be any ambiguity.
+<p>
+<b>XII.5</b><br>
+a) This rule when taken literally can have some unintended results.
+For example:
+<p>
+<dl>
+<dd>        England:<samp> F Iri-Mid, F Eng S F Iri-Mid</samp>
+ <dd>       France:<samp> F Spa(nc) S F Mid, F Mid Convoy A Por-Bre, A Por-Mid-Bre</samp>
+ <dd>       Italy:<samp> F Gulf of Lyon Convoy A Tus-Spa, A Tus-GoL-Spa</samp>
+</dl>
+<p>
+What happens in the Mid-Atlantic ocean?  What about if the additional order:
+ <p>
+<dl>
+<dd>              Italy:<samp> A Mar S A Tus-Spa</samp>
+</dl>
+<p>
+is entered?  With literal interpretation of the rules, the fleet
+in Spain would be dislodged, but its support to the fleet in the
+Mid-Atlantic Ocean (of an action in a body of water containing a
+convoying fleet) would not be cut.  This adjudicator makes five
+passes to determine what support gets cut:
+<p>
+<dl>
+ <dd>       a) Normal non-convoyed movement cuts support.
+ <dd>        b) Any armies being convoyed by fleets that would be dislodged
+           without further support cuts are flagged &quot;maybe no convoy&quot;.
+  <dd>       c) Any convoyed armies without the &quot;maybe no convoy&quot; status cut
+           support provided by units in their destination provinces.
+   <dd>      d) Any armies being convoyed by fleets that still would be
+           dislodged are flagged &quot;definitely no convoy&quot;.
+   <dd>      e) Any armies still flagged &quot;maybe no convoy&quot; status cut support
+           of units in their destination provinces.  The &quot;maybe no convoy&quot;
+           status is cleared.
+</dl>
+<p>
+Using this algorithm, Spain's support above would be cut in pass
+three.  The Mid-Atlantic Ocean's dislodgement would be detected
+in pass four.  Portugal would be given the &quot;no convoy&quot; status and
+thus would have no effect on any unit in Brest in pass five.
+<p>
+
+<b>XIV.4</b><br>
+If a power is required to remove a unit and no valid order is
+received, the least recently produced unit that is not at a supply
+center will be disbanded.  This is the first one listed on the
+reports which will be the one most likely to be furthest away from
+a home supply center. 
+<p>
+<hr>
+<i>
+
+* Diplomacy is a trademark of Hasbro, Inc.,
+  all rights reserved.  Used with permission.
+</i>
+
+</html>
