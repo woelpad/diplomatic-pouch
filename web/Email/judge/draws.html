@@ -1,0 +1,105 @@
+<html>
+
+<head>
+<title>Draws</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1>Draws</h1>
+
+Last revised: March 11, 1993
+<p>
+Send comments or corrections (only for the HTML version of this file) to Doug Massey (<a href="mailto:masseyd@valhalla.btv.ibm.com">masseyd@valhalla.btv.ibm.com</a>).
+<p>
+<hr>
+<p>
+You can receive a copy of this file via E-mail by sending your local Judge a message with &quot;get draws&quot; in the body.
+<p>
+<hr>
+<p>
+
+<a name="DIAS">Automated</a> drawing is a fairly new addition to the Diplomacy Adjudicator. It
+is facilitated with two commands:<samp> SET [NO]DIAS </samp>and<samp> SET [NO]DRAW</samp>.
+<p>
+The term &quot;DIAS&quot; means &quot;Draws Include All Survivors&quot;. In a game designated
+as DIAS, a surviving player cannot be excluded from a draw. In a NoDIAS
+game, a surviving player may give up his right to be included in a draw.
+In either case, unanimous approval of surviving players is required for
+a draw to be passed.
+<p>
+By default, all games are DIAS. The moderator can change this with the
+<samp> SET NODIAS </samp>or<samp> SET DIAS </samp>commands.
+<p>
+<a name="Algorithm">In</a> a DIAS game, a player may cast his vote for a draw by issuing the command
+<samp>SET DRAW</samp>. He may veto earlier approval by issuing the command<samp> SET NODRAW</samp>.
+If at any time all surviving players accede to a DIAS draw, the game will
+be immediately terminated, and all participants in the game will be
+informed of the result.
+<p>
+The situation for NoDIAS games is a bit more complex. To vote for a NoDIAS
+draw, a player issues the command<samp> SET DRAW </samp><i>[drawlist]</i>, where <i>[drawlist]</i>
+is a list of the identifiers for the powers he wishes included in the
+draw. When a player gives approval to <i>[drawlist]</i> and <i>[drawlist]</i> includes
+his own power, he is also implicitly approving any subset of <i>[drawlist]</i>
+that also includes his power. On the other hand, when a player gives
+approval to <i>[drawlist]</i> and <i>[drawlist]</i> does <strong>not</strong> include his own
+power, he
+is implicitly approving any subset of <i>[drawlist]</i>, <strong>and</strong> any subset of
+<i>[drawlist]</i> including his own power.
+<p>
+For example, if Austria issued the command<samp> SET DRAW AEG</samp>, he is approving the
+draws AEG, AG, AE, or A. Note that by including himself in his draw list,
+he is assuring that he cannot be excluded from a draw. If Austria issued
+the command<samp> SET DRAW FT</samp>, he is approving FT, F, T, AFT, AF, AT, or A.
+<p>
+If, under these rules, more than one draw is approved by all players, the
+draw including the most players passes.
+<p>
+In a NoDIAS game,<samp> SET NODRAW </samp>is equivalent to the command<samp> SET DRAW </samp>
+<i>x</i>, where
+<i>x</i> is the power issuing the command. This means that the player will only
+accept a concession to himself.
+<p>
+Here are a few examples of the draw mechanism in action. The players listed
+are assumed to be the only survivors.
+<p>
+    France:<samp> SET DRAW AEF</samp> <br>
+    England:<samp> SET DRAW AEF</samp> <br>
+    Austria:<samp> SET DRAW AEF</samp> <br>
+    Results in a three-way draw between Austria, England, and France.
+<p>
+    France:<samp> SET DRAW AE</samp> <br>
+    England:<samp> SET DRAW AEF</samp> <br>
+    Austria:<samp> SET DRAW AEF</samp> <br>
+    Results in a three-way draw between Austria, England, and France.
+<p>
+    France:<samp> SET DRAW AE</samp> <br>
+    England:<samp> SET DRAW AEF</samp> <br>
+    Austria:<samp> SET DRAW AE</samp> <br>
+    Results in a two-way draw between Austria and England.
+<p>
+    France:<samp> SET DRAW AEF</samp> <br>
+    England:<samp> SET DRAW AE</samp> <br>
+    Austria:<samp> SET DRAW AE</samp> <br>
+    This game does not end in a draw.
+<p>
+    France:<samp> SET DRAW A</samp> <br>
+    England:<samp> SET DRAW A</samp> <br>
+    Austria:<samp> SET NODRAW</samp> <br>
+    Results in a concession to Austria.
+<p>
+Any draw vote, DIAS or NoDIAS, is good for one phase only. All draw votes are cleared at
+the end of a phase. A drawn game may be restarted with the<samp> RESUME </samp>command.
+<p>
+Questions or comments about the draw system may be directed (for now) to its
+programmer, Jonathan Haas, at <i>positron@eecs.umich.edu.</i>
+
+<hr>
+<i>
+* Diplomacy is a trademark of the Hasbro, Inc.,
+  all rights reserved.  Used with permission.
+</i>
+
+
+</html>

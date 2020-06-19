@@ -1,0 +1,551 @@
+<html>
+
+<head>
+<title>Command Index</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<h1>Command Index</h1>
+
+Last revised: 9 June, 1994
+<p>
+Send comments or corrections (only for the HTML version of this file) to Doug Massey (<a href="mailto:masseyd@valhalla.btv.ibm.com">masseyd@valhalla.btv.ibm.com</a>).
+<p>
+<hr>
+<p>
+You can receive a copy of this file via E-mail by sending your local Judge a message with &quot;get index&quot; in the body.
+<p>
+<hr>
+<p>
+This is an alphabetical list of all the commands that the adjudicator will
+process with a brief description.  Each command is preceded by a <i>who</i>/<i>where</i>
+pair.  This indicates <i>who</i> can execute the command and <i>where</i> the command
+can appear.  The <i>who</i> options are:
+<p>
+<dl>
+<dd>any:  Anyone can execute the command.
+<dd>mod:  Only the moderator in moderated games, anyone in unmoderated games.
+<dd>adm:  Only the administrator.  These commands are listed to be complete,
+      but should <strong>not</strong> be executed by nonadministrators.  If there is any
+      doubt, you are not an administrator.
+</dl>
+<p>
+The <i>where</i> options are:
+<p>
+<dl>
+<dd>any:  Can appear either before or after a signon command.
+<dd>pre:  Must appear before a signon command.
+<dd>aft:  Can only appear after a signon command.
+<dd>mac:  Can only appear after a signon to a Machiavelli variant game.
+</dl>
+<p>
+Items in square brackets are optional, items in<samp> UPPERCASE </samp>are keywords
+and must be entered exactly as specified, items in<samp><i> lowercase italics </i></samp>are
+parameters and should have an appropriate value substituted in.  Words
+separated by vertical bars (|) indicate a choice of one of the words.
+<p>
+<hr>
+<p>
+<h1>Command Index</h1>
+<p>
+<dl>
+<dt>adm/pre<samp> ADJUST <i>userid increment</i></samp>
+<dd>        The increment is added to the player's dedication rating.
+<p>
+<dt>any/aft<samp> BECOME MASTER</samp>
+ <dd>       Allows the sole player signed onto a particular game to become
+        the master/moderator of that game.  See file <a href="master.html">master</a>.
+<p>
+<dt>mod/aft<samp> BECOME <i>power</i></samp>
+<dd>        Allows the master for a game to assume the identity of a particular
+        power.  See file <a href="master.html">master</a>.
+<p>
+<dt>any/aft<samp> BROADCAST [<i>options</i>] ... [ENDBROADCAST|ENDPRESS|SIGNOFF] </samp>         
+<dd>       To send a press message; options may or may not be specified, and the
+        message may be terminated by<samp> ENDBROADCAST</samp>,<samp> ENDPRESS</samp>,<samp> SIGNOFF</samp>,
+        or the end of the (incoming) mail message.  See file <a href="press.html">press</a>.
+<p>
+<a name="Clear"><dt>any/aft<samp> CLEAR</samp></a>
+ <dd>       To clear any pending orders entered with the<samp> <a href="#Phase">PHASE</a> </samp>command.
+<p>
+<dt>adm/pre<samp> FIXID <i>siteid site_name</i></samp>
+<dd>        Sets all players who have registered with the specified site name
+        to have a siteid as indicated.  By default all users get their
+        area code times 100 as a siteid and must be fixed to some non-
+        even multiple of 100.
+<p>
+<dt><a name="Get">any/any<samp> GET <i>file</i></samp></a>
+ <dd>       To get a particular file.  For a complete list of files see file
+        <a href="flist.html">flist</a>.  See file <a href="info.html">info</a> for a description of the more important
+        files.
+<p>
+<dt>any/any<samp> GET DEDICATION</samp>
+ <dd>       To determine the user's current dedication rating.
+<p>
+<dt>any/any<samp> GET PACKAGE</samp>
+ <dd>       To get the &quot;new user <a href="package.html">package</a>&quot; of files.  These files are generally
+        sent automatically to new users at the time they register with a
+        Judge (see<samp> <a href="#Register">REGISTER</a> </samp>command), but they can be specifically requested
+        with this command.  These files are the ones that all new users
+        should read before attempting any Judge Diplomacy games.
+<p>
+<dt>any/pre<samp> HELP</samp>
+<dd>        The general introduction text file is returned.  This is equivalent to
+        the<samp> <a href="#Get">GET INFO</a> </samp>command except that no other commands after the help 
+        command will be processed.   
+<p>
+<dt>any/aft<samp> HELP</samp>
+ <dd>       Equivalent to <samp> <a href="#Get">GET INFO</a></samp>.
+<p>
+<dt>any/any<samp> HISTORY [<i>game</i>] [FROM <i>date</i>] [TO <i>date</i>] [LINES <i>n</i>]</samp>
+<dd>        Retrieves the history information for the specified game for the
+	time specified time period (in real time rather than game time).
+	The history information is all the messages that an observer would 
+	have seen had he been signed on for the time period.  The default
+	period is 1 week ago to the present or 1000 lines whichever comes
+	first.
+<p>
+	Dates can be specified in the following forms (only spaces should
+	be used to separate parts of a date, except a comma is optionally
+	allowed after the day of the month):
+<dl>
+<dd>	    a)  Day of week (three-letter abbreviation)
+<dd>	    b)  Day and month (three-letter abbreviation), or month and day
+<dd>	    c)  Day, month, and year, or month, day, and year, where year
+		can be specified either as 80-99 (= 1980-1999) or four
+		digits.
+</dl>
+	Also, a time in hours and minutes (i.e., 'hh:mm' form, using a
+	24-hour clock) can be added after any of the above if desired;
+	otherwise, the time defaults to midnight (00:00) of the specified
+	day.
+<p>
+	To get the earliest part of the history (or the whole history), use
+	a date that is known to be earlier than the game start date; 1 Jan
+	1990 (or Jan 1, 1990) is usually sufficient for this purpose.
+<p>
+<dt>any/any<samp> IAMALSO <i>address</i></samp>
+ <dd>       To register a new email address.  If your return address changes
+        you can use the<samp> IAMALSO <i>address</i> </samp>command to tell the adjudicator that you
+        are the same person without having to resubmit a complete form.
+        The address specified must be one that was registered previously.
+<p>
+<dt>any/pre<samp> LIST [FULL|<i>name</i>]</samp>
+ <dd>       If no optional name or keyword is specified a short list of the
+        current games is generated.  If the<samp> FULL </samp>keyword is specified
+        a detailed report including the player list of each game is
+        generated.  If a name is specified, the full report for that game
+        is generated along with unit positions and supply center holdings.
+<p>
+<dt>any/aft<samp> LIST</samp>
+ <dd>       The detailed report of all players and units will be generated
+        for the currently signed on game.
+<p>
+<dt>any/pre<samp> MAP <i>name</i> [<i>n</i>]</samp>
+<dd>        Send a postscript map of the current status of the game. Not all
+        variants are supported. The <i>n</i> option sends the file in plain
+        postscript format instead of uuencoded, compressed ps format.
+	(This command may be disabled.)
+<p>
+<dt>any/pre<samp> MAP * [<i>n</i>]</samp>
+<dd>	This command must prefix a LIST output from any judge and will
+	produce a map based on that output. The &quot;*&quot; is real and is not
+	replaced. The <i>n</i> option is as above.
+	The <samp>LIST</samp> output supplied must <strong>not</strong> have any characters added to
+	the beginning of the line. e.g: The comment (&quot;&gt;&quot;) character.
+	(This command may be disabled)
+  <p>      
+<dt>adm/pre<samp> NOCONTROL</samp>
+<dd>        Prevents broadcast message from actually being sent.  For debugging.
+<p>
+<dt><a name="Observe">any/pre<samp> OBSERVE <i>xxxx password</i> </samp></a>    
+ <dd>       To become an observer.  This command is interpreted as a signon.
+<p>
+<dt><a name="Phase">any/aft<samp> PHASE <i>season year phase</i></samp></a>
+  <dd>      To specify that any following orders should be held until the
+        specified phase before processing. See the 
+		<a href="syntax.html#Conditional">Conditional Orders</a> and 
+		<a href="syntax.html#Phase">Submitting Orders for Future Phases</a> 
+		sections of the file <a href="syntax.html">syntax</a> for details.
+<p>
+<dt>any/aft<samp> PRESS <i>options</i> ... [ENDBROADCAST|ENDPRESS|SIGNOFF]</samp>
+ <dd>       To send a press message; options must be specified, and the message
+        may be terminated by<samp> ENDBROADCAST</samp>,<samp> ENDPRESS</samp>,<samp> SIGNOFF</samp>, or the
+        end of the (incoming) mail message.  See file <a href="press.html">press</a>.
+<p>
+<dt><a name="Register">any/any<samp> REGISTER ... END</samp></a>
+<dd>        To register yourself.  See file <a href="form.html">form</a>.
+<p>
+<dt><a name="Resign">any/aft<samp> RESIGN</samp></a>
+<dd>        To withdraw from the game.  This must be the <strong>last</strong> command in the
+        message to be effective; so if you want to broadcast a farewell
+        message, do so before you enter the<samp> RESIGN </samp>command.
+<p>
+<dt>mod/aft<samp> RESUME</samp>
+<dd>        To restart a completed or terminated game
+<p>
+<dt>mod/aft<samp> ROLLBACK <i>turn</i></samp>
+<dd>        Rolls the game back to the previously processed turn.  See file <a href="master.html">master</a>.
+<p>
+<dt>any/any<samp> SEND [ME] <i>file</i></samp>
+ <dd>       Equivalent to<samp> <a href="#Get">GET <i>file</i></a></samp>.
+<p>
+<a name="Set"><dt>mod/aft<samp> SET ACCESS ANY[-SITE]|SAME[-SITE]|DIFFERENT[-SITE]</samp></a>
+  <dd>      To change what users can sign on.  By default only people from
+        different sites can sign onto a game.
+<p>
+<dt>any/aft<samp> SET ADDRESS  [<i>reply_address</i>]  </samp>
+ <dd>       To change where your reports go.  If you don't specify an address
+        the address from the mail headers will be used.  If you signon and
+        your the address in the mail headers does not match the reporting
+        address you will get two replies, one to each address.  This can
+        be fixed by using<samp> SET ADDRESS </samp>with no reply address specified.
+<p>
+<dt><a name="SetAll">mod/aft<samp> SET ALL PRESS</samp></a>
+<dd>	To request that all partial press be sent to you as the moderator
+	of the game as well as to the intended recipients.  Use<samp> SET NORMAL
+	PRESS </samp>to disable this feature.
+<p>
+<dt><a name="SetAllowMaster">adm/aft<samp> SET ALLOW MASTER [-]<i>address</i></samp></a>
+ <dd>       Specifies the listed person as eligible to act as master on this
+	Judge.  The JudgeKeeper can specify a list of players who have
+	permission to act as Masters.  Using the '-' prepender will remove
+	the player from the file, thereby removing this permission.  See
+	also, <a href="#SetDenyMaster">SET DENY MASTER</a>.
+<p>
+<dt><a name="SetAllowPlayer">mod/aft<samp> SET ALLOW PLAYER [-]<i>address</i></samp></a>
+ <dd>       Allows access to the game to the player specified.  The Moderator
+	can specify a list of players which will be allowed access to
+	this particular game.  Using the '-' prepender will remove the
+	player from the file, thereby removing access to the game.  See
+	also, <a href="#SetDenyPlayer">SET DENY PLAYER</a>.
+<p>
+<dt>mod/mac<samp> SET [NO]ADJACENCY</samp>
+ <dd>       Disables/enables optional rule that allows bribes from nonadjacent
+        players.
+<p>
+<dt>mod/mac<samp> SET [NO]ASSASSINATIONS</samp>
+ <dd>       Disables/enables optional assassination rules.
+<p>
+<dt>mod/aft<samp> SET BN|BNC [NUMBER] <i>number</i></samp>
+ <dd>       Sets the Boardman number for a game.  This command should only be
+        issued after receiving a number from the Boardman Number Custodian
+        (BNC); at the time of this writing, the BNC for Internet games is
+        Nick Fitzpatrick <i>(nick@sunburn.uwaterloo.ca</i>).  The Boardman number
+        takes the form YYYYAA, where YYYY is the year, and AA are combinations
+        of letters between A and ZZ.  Boardman numbers are only assigned to
+        Standard games.  The BNC number appears in the game's listing and
+        summary.
+<p>
+<dt>mod/aft<samp> SET [NO]CD</samp>
+ <dd>       Same as <samp> <a href="#SetNMR">SET [NO]NMR</a></samp>.
+<p>
+<dt>mod/aft SET CENTERS <i>number</i></samp>
+ <dd>       Set the number of centers required to win the game to <i>number</i>.
+	This will cause the game to end when the first player reaches this
+	number of winning centers. If more than one player reaches this
+	value, then it is advanced to one more center than the top
+	players have. If a draw is acceptable then a vote is required
+	using the<samp> <a href="#SetDraw">SET DRAW</a> </samp>command.
+<p>
+<dt>mod/aft<samp> SET COMMENT <i>text</i></samp>
+<dd>	Sets the comment that appears in the brief listing format.  The
+	text string should be under 60 characters in length.
+<p>
+<dt>mod/aft<samp> SET COMMENT BEGIN</samp>
+<dd>	Sets the comment that appears in the full listing format.  The
+	full comment consists of the rest of the input mail message up
+	to (an optional)<samp> <a href="#Signoff">SIGNOFF</a> </samp>command.
+<p>
+<dt>mod/aft<samp> SET DEADLINE <i>date</i></samp>
+<dd>        Changes the deadline for the current phase.  See file <a href="deadline.html">deadlines</a>.
+<p>
+<dt>mod/aft<samp> SET DEDICATION <i>level</i></samp>
+ <dd>       Restricts access to the game to those people with a dedication
+        rating equal or greater than the indicated level.  The indicated
+	level can not be higher than the Moderator's current dedication
+	rating.  See file <a href="deadline.html">deadlines</a>.
+<p>
+<dt><a name="SetDenyMaster">adm/aft<samp> SET DENY MASTER [-]<i>address</i></samp></a>
+ <dd>       Denies the listed player the permission to create/moderate games
+	on this Judge.  The JudgeKeeper can specify a list of players that
+	are not allowed to act as Masters.  Using the '-' prepender will
+	remove the player from the file, thereby restoring this ability.  See
+	also, <a href="#SetAllowMaster">SET ALLOW MASTER</a>.
+<p>
+<dt><a name="SetDenyPlayer">mod/aft<samp> SET DENY PLAYER [-]<i>address</i></samp></a>
+ <dd>       Denies access to the game to the player specified.  The Moderator
+	can specify a list of players which will not be allowed access to
+	this particular game.  Using the '-' prepender will remove the
+	player from the file, thereby restoring access to the game.  See
+	also, <a href="#SetAllowPlayer">SET ALLOW PLAYER</a>.
+<p>
+<dt>mod/aft<samp> SET [NO]DIAS</samp>
+ <dd>       Disables/enables requirement that all draws must include all
+        survivors. See file <a href="draws.html">draws</a>.
+<p>
+<dt>mod/mac<samp> SET [NO]DICE</samp>
+ <dd>       Disables/enables optional rules that introduce random events into
+        the game: Variable income, bank loans, assassinations, famine and 
+        plague.
+<p>
+<dt><a name="SetDraw">any/aft<samp> SET [NO]DRAW [<i>powerlist</i>]</samp></a>
+<dd>        Cast a vote in an automated draw. See file <a href="draws.html">draws</a>.
+<p>
+<dt>mod/aft<samp> SET EP <i>number</i></samp>
+ <dd>       Sets the Electonic Protocol number for a game.  This command should
+        only be issued after receiving a number from the Electronic
+        Protocol Number Keeper (EPNK); at the time of this writing, the EPNK
+        is Sean Starkey <i>(starkey@netcom.com</i>).  The EP number takes the form
+        YY-NNN, where YY is the last two digits of the year the game started,
+        and NNN is the number of the game within that year (e.g., 94-1 is the
+        first EP game started in 1994).  EP numbers are only assigned to
+        games that follow the <a href="ep.house.rules.html">Electronic Protocol House Rules</a>
+	(send 'get house.rules' to any Judge to receive a copy).  The EP number appears
+        in the game's listing and summary.
+<p>
+<dt>mod/mac<samp> SET [NO]FAMINE</samp>
+ <dd>       Disables/enables optional famine rules.
+<p>
+<dt>mod/aft <samp>SET GRACE <i>date</i></samp>
+ <dd>       Changes the grace period for the current phase.  See file <a href="deadline.html">deadline</a>.
+<p>
+<dt><a name="SetGrey">mod/aft <samp>SET GREY [PRESS]</samp></a>
+  <dd>      Sets press option to grey only.  See file <a href="press.html">press</a>.
+<p>
+<dt>mod/aft<samp> SET GREY/WHITE [PRESS]</samp>
+ <dd>       Sets press option to grey by default with white allowed.  See file <a href="press.html">press</a>.
+<p>
+<dt>mod/aft<samp> SET LEVEL ANY|NOVICE|AMATEUR|INTERMEDIATE|ADVANCED|EXPERT</samp>
+<dd>        Restricts access to a particular class of player.  The three
+	official classes are <i>Novice</i>, <i>Intermediate</i>, and <i>Expert</i>.  Amateur 
+	means either Novice or Intermediate, and Advanced means either 
+	Intermediate or Expert.  Any of course means any class of player
+	may play.  Players can change their classification (if they feel 
+	their level has changed) by re-registering.  See file <a href="form.html">form</a>.
+<p>
+<dt><a name="SetList">mod/aft<samp> SET LIST</samp></a>
+ <dd>       Changes a game from unlisted to listed for generic list commands.
+<p>
+<dt>mod/mac<samp> SET [NO]LOANS</samp>
+  <dd>      Disables/enables optional rules allowing players to borrow money
+        from the bank.
+<p>
+<dt>mod/aft<samp> SET MN|MNC [NUMBER] <i>number</i></samp>
+<dd>        Sets the Miller number for a game.  This command should only be
+        issued after receiving a number from the Miller Number Custodian
+        (MNC); at the time of this writing, the MNC for Internet games is
+        Nick Fitzpatrick <i>(nick@sunburn.uwaterloo.ca</i>).  The Miller number
+        takes the form YYYYAAAbb00, where YYYY is the year, AAA are combi-
+        nations of letters between A and ZZZ, and bb00 is the designation
+        for a specific variant, which is set by the North American Variant
+        Bank (NAVB).  Miller numbers are only assigned to non-Standard games.
+        The MNC number appears in the game's listing and summary.
+<p>
+<dt>any/aft<samp> SET MODERATE</samp>
+ <dd>       Changes a game from unmoderated to moderated.
+<p>
+<dt>mod/aft<samp> SET MOVE|RETREAT|ADJUST CLOCK|MIN|NEXT|GRACE|DELAY|DAYS <i>value</i>       </samp>
+ <dd>       To change the deadline calculation.  See file <a href="deadline.html">deadline</a>.
+<p>
+<dt><a name="SetNMR">mod/aft<samp> SET NMR</samp></a>
+ <dd>       Allows orders to be processed even if all powers have not yet 
+        submitted complete ones.  See also<samp> <a href="#SetNONMR">SET NO NMR</a></samp>.
+<p>
+<dt>mod/aft<samp> SET NO FAKE [BROADCAST]</samp>
+<dd>        See file <a href="press.html">press</a>.
+<p>
+<dt>mod/aft<samp> SET NO GREY [PRESS]</samp>
+<dd>        Same as<samp> <a href="#SetWhite">SET WHITE</a></samp>.
+<p>
+<dt><a name="SetNoList">mod/aft<samp> SET NOLIST</samp></a>
+<dd>        If a game is set NOLIST then only people who know about it will
+        be able to see it.  Useful for &quot;by invitation only&quot; games.  See
+        also<samp> <a href="#SetList">SET LIST</a></samp>; and file <a href="master.html">master</a>.
+<p>
+<dt>any/aft<samp> SET NORMAL PRESS</samp>
+<dd>	Disables the<samp> <a href="#SetAll">SET ALL PRESS</a> </samp>option where all partial press is sent
+	to you as the moderator of a game.
+<p>
+<dt>mod/aft<samp> SET OBSERVER ANY [PRESS]</samp>
+<dd>        Permits observers and alternates to submit press with the same 
+        restrictions as regular players.
+<p>
+<dt>mod/aft<samp> SET OBSERVER NO [PRESS]</samp>
+<dd>        Disallows press from observers and alternates.
+<p>
+<dt>mod/aft<samp> SET OBSERVER WHITE [PRESS]</samp>
+ <dd>       Disallows observers and alternates from submitting grey press.
+<p>
+<dt>mod/aft<samp> SET [PRESS] NONE</samp>
+<dd>        Same as<samp> <a href="#SetNo">SET NOPRESS</a></samp>.
+<p>
+<dt><a name="SetNONMR">mod/aft<samp> SET NO NMR</samp></a>
+ <dd>       Opposite of<samp> <a href="#SetNMR">SET NMR</a></samp>.
+<p>
+<dt>mod/aft<samp> SET NO PARTIAL [PRESS]</samp>
+<dd>        Disables messages to individual powers.  See file <a href="press.html">press</a>.
+<p>
+<dt><a name="SetNo">mod/aft<samp> SET NO PRESS</samp></a>
+  <dd>      Disables all press/broadcast messages.  See file <a href="press.html">press</a>.
+<p>
+<dt><a name="SetNoWait">any/aft<samp> SET NO WAIT</samp></a>
+ <dd>       Clears the effect of<samp> <a href="#SetWait">SET WAIT</a></samp>.
+<p>
+<dt>mod/aft<samp> SET NO WHITE [PRESS]</samp>
+ <dd>       Same as<samp> <a href="#SetGrey">SET GREY</a></samp>.
+<p>
+<dt>mod/aft<samp> SET PARTIAL [PRESS]</samp>
+ <dd>       Allows messages to be sent to individual powers.  See file <a href="press.html">press</a>.
+<p>
+<dt>mod/aft<samp> SET PARTIAL [FAKES [BROADCAST]] [BY DEFAULT]</samp>
+ <dd>       See file <a href="press.html">press</a>.
+<p>
+<dt>mod/aft<samp> SET PARTIAL MAY [BE FAKED]</samp>
+ <dd>       See file <a href="press.html">press</a>.
+<p>
+<dt>any/aft<samp> SET PASSWORD <i>new_password</i></samp>
+<dd>        To change your password.
+<p>
+<dt>mod/mac<samp> SET [NO]PLAGUE</samp>
+ <dd>       Disables/enables optional plague rules.
+<p>
+<dt>any/aft<samp> SET PREFERENCE <i>list</i></samp>
+ <dd>       To establish a preference list for power assignment.  Should
+        appear immediately after an initial signon entering a forming
+        game.  Can be modified up until the powers are actually assigned.
+<p>
+<dt>mod/aft<samp> SET PRIVATE</samp>
+ <dd>       Equivalent to<samp> <a href="#SetNoList">SET NOLIST</a></samp>.
+<p>
+<dt>mod/aft<samp> SET PUBLIC</samp>
+ <dd>       Equivalent to<samp> <a href="#SetList">SET LIST</a></samp>.
+<p>
+<dt>mod/aft<samp> SET [NO]QUIET</samp>
+<dd>	Sets/unsets the<samp> QUIET</samp> flag.  This flag prevents announcements about
+	power abandonment, power takeovers and such from being broadcast
+	to the other players or observers.  Its purpose is to prevent
+	information from being disclosed in gunboat games, particularly
+	tournaments where multiple games may lose the same player.
+<p>
+<dt>mod/aft<samp> SET RATED</samp>
+<dd>	Changes a game to rated.  By default moderated games are rated
+	and unmoderated games are unrated.  Unrated games will not affect
+	the players' dedication rating.
+<p>
+<dt>mod/aft<samp> SET [NO]REVEAL</samp>
+<dd>	If a gunboat game is set<samp> NOREVEAL</samp>, the player list will not
+	be revealed in summary output after the game terminates.  This
+	flag is useful for gunboat tournaments where player lists may
+	be the same in multiple games.
+<p>
+<dt>mod/mac<samp> SET [NO]SPECIAL</samp>
+ <dd>       Disables/enables optional rules that allow double strength units.
+<p>
+<dt>mod/aft<samp> SET START <i>date</i></samp>
+ <dd>       Sets the earliest start date for the current phase.  See file <a href="deadline.html">deadline</a>.
+<p>
+<dt>mod/aft<samp> SET [NO]STRICTGRACE</samp>
+<dd>        Disables/enables enforcement of grace period as an <strong>absolute</strong> time
+        interval after the deadline.  If disabled (default), then grace
+        periods will always end on an appropriate order processing day.
+<p>
+<dt>mod/aft<samp> SET UNMODERATE</samp>
+ <dd>       Changes a game from moderated to unmoderated.
+<p>
+<dt>mod/aft<samp> SET UNRATED</samp>
+<dd>        Changes a game from rated to unrated.  Unrated games will not
+	affect the players' dedication rating.
+<p>
+<dt>mod/aft<samp> SET VARIANT <i>variant</i> [<i>options</i>] </samp>
+<dd>        To change the variant of a game.  This can only be done before the
+        powers are assigned and before the requisite number of players for
+        the new variant type have signed on.  For a complete list of valid
+        variants and options use the <samp>&quot;SIGNON ?<i>name password XXXX</i>&quot;</samp> command 
+        (where <i>XXXX</i> is any <strong>invalid</strong> variant name).
+<p>
+<dt><a name="SetWait">any/aft<samp> SET WAIT</samp></a>
+ <dd>       Specifies that orders should not be processed until the deadline.
+        See also<samp> <a href="#SetNoWait">SET NOWAIT</a></samp>.
+<p>
+<dt><a name="SetWhite">mod/aft<samp> SET WHITE [PRESS]</samp></a>
+ <dd>       Sets press option to white only.  See file <a href="press.html">press</a>.
+<p>
+<dt>mod/aft<samp> SET WHITE/GREY [PRESS]</samp>
+<dd>        Sets press option to white by default with grey allowed.  See file <a href="press.html">press</a>.
+<p>
+<dt><a name="Signoff">any/aft<samp> SIGNOFF </samp></a>
+<dd>        To indicate the end of useful text.  The<samp> SIGNOFF </samp>command is used
+        to prevent your signature file from being interpreted as orders
+        and/or being sent out as part of a press message.
+<p>
+<dt>any/pre<samp> SIGNON <i>pxxxx password</i></samp>
+ <dd>       To sign onto an existing power that you own or to take over an
+        abandoned power.
+<p>
+<dt>any/pre<samp> SIGNON ? <i>password</i></samp>
+ <dd>       To enter the next available game that is forming.
+<p>
+<dt>any/pre<samp> SIGNON ?<i>xxxx password</i> [<i>variant</i>] </samp>
+ <dd>       To enter a particular game that is forming.
+<p>
+<a name="Summary"><dt>any/pre<samp> SUMMARY <i>name</i></samp></a>
+ <dd>       To get an historical summary of the specified game indicating who
+        took what power over when and which supply centers each power owned
+        throughout the game.
+<p>
+<dt>any/aft<samp> SUMMARY</samp>
+<dd>        To get the summary report for the signed on game as above.  The
+        master in a gunboat game will get a slightly different summary
+        that includes the actual player names and addresses rather than
+        the generic &quot;someone@somewhere&quot;.
+<p>
+<dt>mod/aft<samp> TERMINATE</samp>
+<dd>        To declare the game over.
+<p>
+<dt>any/pre<samp> VERSION [<i>level</i>]   </samp>
+<dd>        To see the current version of the software.  If the optional level
+        is specified, the log of all enhancements since that level will be
+        retrieved.
+<p>
+<dt>any/pre<samp> WATCH <i>name password</i></samp>
+<dd>        Equivalent to<samp> <a href="#Observe">OBSERVE <i>xxxx password</i></a></samp>.
+<p>
+<dt>any/any<samp> WHO <i>user</i> [<i>user ...</i>]</samp>
+<dd>        Equivalent to<samp> <a href="#Whois">WHOIS <i>user</i> [<i>user ...</i>]</a></samp>.
+<p>
+<dt>any/pre<samp> WHOGAME <i>name </i>[<i>full</i>]</samp>
+<dd>	Retrieves<samp> WHOIS </samp>information for all players associated with game
+	<i>name</i>.  Note that this command can only be used by the master
+	(and only after he signs on) if the game is gunboat.  The optional<samp>
+	<i>full</i> </samp>argument will return information for observers and alternates
+	as well, while the default only returns information for the players
+	and the master.  See also<samp> <a href="#Whois">WHOIS <i>user</i> [<i>user ...</i>]</a></samp>.
+<p>
+<dt>any/aft<samp> WHOGAME [full]</samp>
+<dd>	Retrieves WHOIS information for all players associated with the
+	currently signed on game.  Note that if the game is gunboat, 
+	only the master can use this command.  The optional &quot;full&quot;
+	argument will return information for observers and alternates
+	as well, while the default only returns information for the 
+	players and the master.  See also<samp> <a href="#Whois">WHOIS <i>user</i> [<i>user ...</i>]</a></samp> below.
+<p>
+<dt><a name="Whois">any/any<samp> WHOIS <i>user</i> [<i>user ...</i>]</samp></a>
+ <dd>       To retrieve registration information for particular players.  All
+        registered people with mail addresses that start with a prefix that
+        matches any of the <i>user</i> words specified will be listed.  Thus the
+        command<samp> WHOIS </samp>will list all users who have an email address that
+        starts with a &quot;P&quot;.  The entire database can be retreived with
+        the<samp> GET WHOIS </samp>command.
+<p>
+<dt>any/aft</samp> WITHDRAW</samp>
+ <dd>       Equivalent to<samp> <a href="#Resign">RESIGN</a></samp>.
+<p>
+</dl>
+<hr>
+<i>
+* Diplomacy is a trademark of Hasbro, Inc.,
+  Used with permission.
+</i>
+</html>
