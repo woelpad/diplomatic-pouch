@@ -1,7 +1,7 @@
 From: [email]
 To: [sendto]
 Subject: Dip Pouch Feedback
-Errors-To: manus@diplom.org
+Errors-To: manus@manushand.com
 
 [body]
 ----

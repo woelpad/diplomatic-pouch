@@ -170,11 +170,11 @@ whichever you think is a better solution to the paradox situation.
 <P>
 <table>
 <tr valign="bottom">
-<td><A HREF="mailto:manus@diplom.org"><IMG src="../../Common/letter.gif" border="0"></A>
+<td><A HREF="mailto:manus@manushand.com"><IMG src="../../Common/letter.gif" border="0"></A>
 </td>
 <td>
 <strong>Manus Hand<br>
-(manus@diplom.org)</strong>
+(manus@manushand.com)</strong>
 </td>
 </tr>
 <tr valign="bottom">

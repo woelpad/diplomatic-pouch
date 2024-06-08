@@ -1,11 +1,11 @@
-From manus@diplom.org  Fri May 29 22:53:25 1998
+From manus@manushand.com  Fri May 29 22:53:25 1998
 Received: from starship.python.net (starship.python.net [209.67.56.18]) by devel.diplom.org (8.8.8/8.7.3) with ESMTP id PAA02896 for <dippouch@diplom.org>; Fri, 29 May 1998 15:53:23 -0700 (PDT)
 Received: (from manus@localhost)
 	by starship.python.net (8.8.8/8.8.8) id SAA14816
 	for dippouch@diplom.org; Fri, 29 May 1998 18:52:17 -0400
 Received: from post.mail.demon.net (post-12.mail.demon.net [194.217.242.41])
 	by starship.python.net (8.8.8/8.8.8) with SMTP id SAA14476
-	for <manus@diplom.org>; Fri, 29 May 1998 18:34:26 -0400
+	for <manus@manushand.com>; Fri, 29 May 1998 18:34:26 -0400
 Received: from (ellought.demon.co.uk) [158.152.204.105] 
 	by post.mail.demon.net with smtp (Exim 1.82 #2)
 	id 0yfXkE-0005cc-00; Fri, 29 May 1998 23:35:27 +0100
@@ -13,12 +13,12 @@ Date: Fri, 29 May 1998 23:34:42 GMT
 From: David@ellought.demon.co.uk (David Norman)
 Reply-To: David@ellought.demon.co.uk
 Message-Id: <10452@ellought.demon.co.uk>
-To: manus@diplom.org
+To: manus@manushand.com
 Subject: Articles for DipPouch
 X-Mailer: FIMail V0.9d
 X-User: Alpha Test Version Of FI-Mail, DisWin  1.5C:\INTERNET\WINDIS\WINDIS
 Lines: 107
-Sender: manus@diplom.org
+Sender: manus@manushand.com
 Status: RO
 
 Manus,

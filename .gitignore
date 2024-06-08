@@ -1,2 +1,7 @@
 # Swap files
 *.sw?
+/.vs/diplomatic-pouch/FileContentIndex
+/.vs/diplomatic-pouch/v17
+*.sqlite
+/.vs/VSWorkspaceState.json
+*.DotSettings

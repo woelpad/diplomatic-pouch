@@ -1,6 +1,6 @@
 From dippouch-owner@mars.ark.com  Wed Jan  8 07:53:41 1997
 Received: from mailman.sni.net (agent@mailman.sni.net [199.117.160.2]) by teal.sni.net (8.6.12/8.6.9) with ESMTP id HAA04950 for <mhand@teal.sni.net>; Wed, 8 Jan 1997 07:38:14 -0700
-Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id HAA31532 for <manus@diplom.org>; Wed, 8 Jan 1997 07:38:11 -0700
+Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id HAA31532 for <manus@manushand.com>; Wed, 8 Jan 1997 07:38:11 -0700
 Received: from mars.ark.com(204.50.2.7) by mailman.sni.net via smap (V1.3)
 	id sma031508; Wed Jan  8 07:38:02 1997
 Received: (from mail@localhost)
@@ -57,18 +57,18 @@ Give me ambiguity, or give me something else.       O-
 
 From vim2@rocketmail.com  Wed Jan  8 05:55:07 1997
 Received: from mailman.sni.net (agent@mailman.sni.net [199.117.160.2]) by teal.sni.net (8.6.12/8.6.9) with ESMTP id FAA29319 for <mhand@teal.sni.net>; Wed, 8 Jan 1997 05:44:51 -0700
-Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id FAA14294 for <manus@diplom.org>; Wed, 8 Jan 1997 05:44:51 -0700
+Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id FAA14294 for <manus@manushand.com>; Wed, 8 Jan 1997 05:44:51 -0700
 Received: from dknet-gw.idp.dk(193.88.45.74) by mailman.sni.net via smap (V1.3)
 	id sma014122; Wed Jan  8 05:44:39 1997
 Received: from vim.idp.dk by firewall.idp.dk with SMTP id AA00649
-  (5.67b/IDA-1.5 for <manus@diplom.org>); Wed, 8 Jan 1997 14:02:01 +0100
+  (5.67b/IDA-1.5 for <manus@manushand.com>); Wed, 8 Jan 1997 14:02:01 +0100
 Message-Id: <32D396A2.2ABC@idp.dk>
 Date: Wed, 08 Jan 1997 13:44:18 +0100
 From: Vincent Mous <vim2@rocketmail.com>
 Organization: International Data Post A/S
 X-Mailer: Mozilla 2.0 (Win95; I)
 Mime-Version: 1.0
-To: manus@diplom.org
+To: manus@manushand.com
 Subject: The Pouch/Awards
 X-Url: http://devel.diplom.org/DipPouch/Zine/W1996A/Hand/About.html
 Content-Type: text/plain; charset=us-ascii
@@ -252,19 +252,19 @@ the 'we're not in Kansas anymore' comes from the Wizard of Oz.
 
 From kjames1@ccgate.hac.com  Thu Jan  9 06:35:51 1997
 Received: from mailman.sni.net (agent@mailman.sni.net [199.117.160.2]) by teal.sni.net (8.6.12/8.6.9) with ESMTP id GAA24575 for <mhand@teal.sni.net>; Thu, 9 Jan 1997 06:33:13 -0700
-Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id GAA25572 for <manus@diplom.org>; Thu, 9 Jan 1997 06:33:11 -0700
+Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id GAA25572 for <manus@manushand.com>; Thu, 9 Jan 1997 06:33:11 -0700
 Received: from mailhost.worldnet.att.net(204.127.129.4) by mailman.sni.net via smap (V1.3)
 	id sma025563; Thu Jan  9 06:32:51 1997
 Received: from cecil ([207.146.220.209]) by mtigwc02.worldnet.att.net
           (post.office MTA v2.0 0613 ) with SMTP id AAA26100
-          for <manus@diplom.org>; Thu, 9 Jan 1997 07:25:10 +0000
+          for <manus@manushand.com>; Thu, 9 Jan 1997 07:25:10 +0000
 Message-ID: <32D49E0F.53F5@ccgate.hac.com>
 Date: Wed, 08 Jan 1997 23:28:15 -0800
 From: Kevin Ames <kjames1@ccgate.hac.com>
 Organization: Ames Enterprises
 X-Mailer: Mozilla 2.01E (Win95; U)
 MIME-Version: 1.0
-To: manus@diplom.org
+To: manus@manushand.com
 Subject: Spring Stabs
 X-URL: http://devel.diplom.org/DipPouch/Zine/W1996A/Hand/Deposits.html
 Content-Type: text/plain; charset=us-ascii
@@ -356,10 +356,10 @@ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/ _/
 
 From nfitz@sentex.ca  Sun Jan 12 02:05:11 1997
 Received: from mailman.sni.net (agent@mailman.sni.net [199.117.27.25]) by teal.sni.net (8.6.12/8.6.9) with ESMTP id BAA05513 for <mhand@teal.sni.net>; Sun, 12 Jan 1997 01:50:22 -0700
-Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id BAA09494 for <manus@diplom.org>; Sun, 12 Jan 1997 01:50:20 -0700
+Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id BAA09494 for <manus@manushand.com>; Sun, 12 Jan 1997 01:50:20 -0700
 Received: from granite.sentex.ca(199.212.134.1) by mailman.sni.net via smap (V1.3)
 	id sma009490; Sun Jan 12 01:49:51 1997
-Received: from p10.lithium.sentex.ca (p10.lithium.sentex.ca [199.212.135.90]) by granite.sentex.net (8.8.4/8.6.9) with SMTP id DAA11261 for <manus@diplom.org>; Sun, 12 Jan 1997 03:54:32 -0500 (EST)
+Received: from p10.lithium.sentex.ca (p10.lithium.sentex.ca [199.212.135.90]) by granite.sentex.net (8.8.4/8.6.9) with SMTP id DAA11261 for <manus@manushand.com>; Sun, 12 Jan 1997 03:54:32 -0500 (EST)
 Message-ID: <32D8E168.6954@sentex.ca>
 Date: Sun, 12 Jan 1997 05:04:41 -0800
 From: Nicholas Fitzpatrick <nfitz@sentex.ca>
@@ -367,7 +367,7 @@ Reply-To: nfitz@sentex.ca
 Organization: Me
 X-Mailer: Mozilla 3.0 (Win16; I)
 MIME-Version: 1.0
-To: manus@diplom.org
+To: manus@manushand.com
 Subject: Dip Pouch listing for me
 Content-Type: text/plain; charset=us-ascii
 Content-Transfer-Encoding: 7bit
@@ -395,7 +395,7 @@ Nick
 From loeb@sprynet.com  Sun Jan 12 07:54:00 1997
 Received: from mailman.sni.net (agent@mailman.sni.net [199.117.27.25]) by teal.sni.net (8.6.12/8.6.9) with ESMTP id HAA10686 for <mhand@teal.sni.net>; Sun, 12 Jan 1997 07:45:42 -0700
 From: loeb@sprynet.com
-Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id HAA19752 for <manus@diplom.org>; Sun, 12 Jan 1997 07:45:41 -0700
+Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id HAA19752 for <manus@manushand.com>; Sun, 12 Jan 1997 07:45:41 -0700
 Received: from m9.sprynet.com(165.121.1.209) by mailman.sni.net via smap (V1.3)
 	id sma019741; Sun Jan 12 07:45:27 1997
 Received: from [199.174.152.33] (dd10-033.compuserve.com [199.174.152.33]) by m9.sprynet.com (8.6.12/8.6.12) with SMTP id GAA09329; Sun, 12 Jan 1997 06:45:18 -0800
@@ -405,7 +405,7 @@ MIME-Version: 1.0
 Content-Type: text/plain
 Content-Transfer-Encoding: 7bit
 Subject: DP council
-To: hippo@mail.utexas.edu, manus@diplom.org, simon@diplom.org, lawyerted@prodigy.net,
+To: hippo@mail.utexas.edu, manus@manushand.com, simon@diplom.org, lawyerted@prodigy.net,
         mcquinn@data.lib.udayton
 X-Mailer: SPRY Mail Version: 04.10.06.22
 Status: RO
@@ -431,17 +431,17 @@ http://www.labri.u-bordeaux.fr/~loeb
 
 From Alexander.K.Woo@williams.edu  Mon Jan 13 09:25:56 1997
 Received: from mailman.sni.net (agent@mailman.sni.net [199.117.27.25]) by teal.sni.net (8.6.12/8.6.9) with ESMTP id JAA22716 for <mhand@teal.sni.net>; Mon, 13 Jan 1997 09:16:23 -0700
-Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id JAA05335 for <manus@diplom.org>; Mon, 13 Jan 1997 09:16:20 -0700
+Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id JAA05335 for <manus@manushand.com>; Mon, 13 Jan 1997 09:16:20 -0700
 Received: from goshen.williams.edu(137.165.4.3) by mailman.sni.net via smap (V1.3)
 	id sma005311; Mon Jan 13 09:16:16 1997
-Received: from colrain.williams.edu (colrain.williams.edu [137.165.4.4]) by goshen.williams.edu (8.7.3/8.7.3) with SMTP id LAA00924 for <manus@diplom.org>; Mon, 13 Jan 1997 11:16:10 -0500 (EST)
+Received: from colrain.williams.edu (colrain.williams.edu [137.165.4.4]) by goshen.williams.edu (8.7.3/8.7.3) with SMTP id LAA00924 for <manus@manushand.com>; Mon, 13 Jan 1997 11:16:10 -0500 (EST)
 From: Smiley <Alexander.K.Woo@williams.edu>
 Received: by colrain.williams.edu; (5.65v3.2/1.1.8.2/16Jul96-0543PM)
 	id AA06875; Mon, 13 Jan 1997 11:10:47 -0500
 Date: Mon, 13 Jan 1997 11:10:47 -0500
 Message-Id: <9701131610.AA06875@colrain.williams.edu>
 Subject: Stab story (Re: Spring vs. Fall stabs in DipPouch)
-Apparently-To: manus@diplom.org
+Apparently-To: manus@manushand.com
 Status: RO
 
 	This remains the only successful major stab I ever made, as well
@@ -573,7 +573,7 @@ Bruce
 
 From jmcquinn@delphi.com  Tue Jan 14 07:53:55 1997
 Received: from mailman.sni.net (agent@mailman.sni.net [199.117.27.25]) by teal.sni.net (8.6.12/8.6.9) with ESMTP id HAA13073 for <mhand@teal.sni.net>; Tue, 14 Jan 1997 07:48:10 -0700
-Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id HAA10814 for <manus@diplom.org>; Tue, 14 Jan 1997 07:48:07 -0700
+Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id HAA10814 for <manus@manushand.com>; Tue, 14 Jan 1997 07:48:07 -0700
 Received: from enterprise.udayton.edu(131.238.75.10) by mailman.sni.net via smap (V1.3)
 	id sma010784; Tue Jan 14 07:47:37 1997
 Received: from DATA.LIB.lib.udayton.edu by enterprise.udayton.edu (5.65v3.2/1.1.10.5/03Jan97-0700AM)
@@ -583,7 +583,7 @@ Received: from UDLIB1/SpoolDir by data.lib.udayton.edu (Mercury 1.21);
 Received: from SpoolDir by UDLIB1 (Mercury 1.30); 14 Jan 97 09:47:30 -0500
 From: "James McQuinn" <jmcquinn@delphi.com>
 Organization: University of Dayton
-To: manus@diplom.org
+To: manus@manushand.com
 Date: Tue, 14 Jan 1997 09:47:23 GMT-5
 Subject: DipPouch Looks Great!
 Reply-To: jmcquinn@delphi.com
@@ -1032,7 +1032,7 @@ Brendan
 
 From john.young@canada.cdev.com  Thu Jan 30 13:14:54 1997
 Received: from mailman.sni.net (agent@mailman.sni.net [199.117.27.25]) by teal.sni.net (8.6.12/8.6.9) with ESMTP id NAA11608 for <mhand@teal.sni.net>; Thu, 30 Jan 1997 13:14:54 -0700
-Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id NAA32568 for <manus@diplom.org>; Thu, 30 Jan 1997 13:14:51 -0700
+Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id NAA32568 for <manus@manushand.com>; Thu, 30 Jan 1997 13:14:51 -0700
 Received: from gpo.canada.cdev.com(160.207.145.60) by mailman.sni.net via smap (V1.3)
 	id sma032544; Thu Jan 30 13:14:40 1997
 Received: from smtp_gate.canada.cdev.com by gpo.canada.cdev.com with SMTP
@@ -1040,7 +1040,7 @@ Received: from smtp_gate.canada.cdev.com by gpo.canada.cdev.com with SMTP
 Received: by smtp_gate.canada.cdev.com with Microsoft Mail
 	id <32F100EA@smtp_gate.canada.cdev.com>; Thu, 30 Jan 97 15:13:30 est
 From: "Young, John" <john.young@canada.cdev.com>
-To: Manus Hand <manus@diplom.org>
+To: Manus Hand <manus@manushand.com>
 Subject: Dip Zine
 Date: Thu, 30 Jan 97 15:09:00 est
 Message-Id: <32F100EA@smtp_gate.canada.cdev.com>
@@ -1121,12 +1121,12 @@ should add this on my bookmarks!
 
 From darren@ncc.co.uk  Mon Feb  3 07:45:12 1997
 Received: from mailman.sni.net (agent@mailman.sni.net [199.117.27.25]) by teal.sni.net (8.6.12/8.6.9) with ESMTP id HAA09550 for <mhand@teal.sni.net>; Mon, 3 Feb 1997 07:45:11 -0700
-Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id HAA18233 for <manus@diplom.org>; Mon, 3 Feb 1997 07:44:54 -0700
+Received: (from agent@localhost) by mailman.sni.net (8.7.5/8.6.9) id HAA18233 for <manus@manushand.com>; Mon, 3 Feb 1997 07:44:54 -0700
 Received: from sys3.cambridge.uk.psi.net(154.32.106.10) by mailman.sni.net via smap (V1.3)
 	id sma018222; Mon Feb  3 07:44:31 1997
 Received: from ncc.co.uk (nccotd.ncc.co.uk [193.114.101.2])
 	by sys3.cambridge.uk.psi.net (8.8.4/) with SMTP
-	id OAA08313 for <manus@diplom.org>; Mon, 3 Feb 1997 14:44:27 GMT
+	id OAA08313 for <manus@manushand.com>; Mon, 3 Feb 1997 14:44:27 GMT
 Received: from cholet ([193.114.195.15]) by ncc.co.uk (4.1/SMI4.1.3_U1-SunMHS7.0)
 	id AA17021; Mon, 3 Feb 97 14:43:47 GMT
 Sender: darren@ncc.co.uk
@@ -1136,7 +1136,7 @@ From: Darren Capel <darren@ncc.co.uk>
 Organization: National Computing Centre Ltd
 X-Mailer: Mozilla 3.0 (X11; I; SunOS 5.5 sun4m)
 Mime-Version: 1.0
-To: manus@diplom.org
+To: manus@manushand.com
 Subject: Game queue comments
 Content-Type: text/plain; charset=us-ascii
 Content-Transfer-Encoding: 7bit

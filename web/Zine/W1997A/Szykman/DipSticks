@@ -15,14 +15,14 @@ __wbhack.init('http://web.archive.org/web');
 </head>
 <body bgcolor="#ffffff">
 
-<a href="/web/20110125113454/http://www.diplom.org/DipPouch/Zine"><img align="left" src="/web/20110125113454im_/http://www.diplom.org/DipPouch/Zine/Common/DPbutton.gif" border="0"></a>
-<a href="/web/20110125113454/http://www.diplom.org/DipPouch/Zine/W1997A"><img align="right" src="/web/20110125113454im_/http://www.diplom.org/DipPouch/Zine/Common/toW1997A.gif" border="0"></a>
+<a href="/web/20110125113454//Zine"><img align="left" src="/web/20110125113454im_//Zine/Common/DPbutton.gif" border="0"></a>
+<a href="/web/20110125113454//Zine/W1997A"><img align="right" src="/web/20110125113454im_//Zine/Common/toW1997A.gif" border="0"></a>
 <br clear="both">
 <hr>
 <body bgcolor="white">
 <center>
 <table><tr><td>
-<img src="/web/20110125113454im_/http://www.diplom.org/DipPouch/Zine/Common/DipSticks.gif">
+<img src="/web/20110125113454im_//Zine/Common/DipSticks.gif">
 <th><i>by Simon Szykman and Manus Hand
 </table>
 </center>
@@ -33,9 +33,9 @@ We're back with a couple more word puzzles -- this time two different
 "acrostic" grids for you to fit the 34 supply centers into.  But first,
 some unfinished business....
 <p align="justify">
-For those of you who took a shot at the <a href="/web/20110125113454/http://www.diplom.org/DipPouch/Zine/F1997R/Szykman/DipSearch.html">word
+For those of you who took a shot at the <a href="/web/20110125113454//Zine/F1997R/Szykman/DipSearch.html">word
 search puzzle</a> in the previous issue of the Zine, you can find the
-<a href="/web/20110125113454/http://www.diplom.org/DipPouch/Zine/W1997A/Szykman/solution.html">solution</a> here.  Many thanks to Dann Fuller (dannimal@umich.edu)
+<a href="/web/20110125113454//Zine/W1997A/Szykman/solution.html">solution</a> here.  Many thanks to Dann Fuller (dannimal@umich.edu)
 for taking the time to scan it in and send it to us.
 
 <p align="justify">
@@ -54,7 +54,7 @@ can you know which supply center goes into which spot!
 <b><font color="red">NOTE: If you prefer working on paper<br>
 or if your connection is
 too slow to solve the puzzle online,<br>we also provide
-<a href="/web/20110125113454/http://www.diplom.org/DipPouch/Zine/W1997A/Szykman/DipSticks.html">a version you can
+<a href="/web/20110125113454//Zine/W1997A/Szykman/DipSticks.html">a version you can
 print out</a> to solve with a pencil.</font></b>
 		
 
@@ -974,7 +974,7 @@ print out</a> to solve with a pencil.</font></b>
 
 	</table>
 	</center>
-	<form name="theform" method="post" action="/web/20110125113454/http://www.diplom.org/DP-cgi/DipSticks">
+	<form name="theform" method="post" action="/web/20110125113454//DP-cgi/DipSticks">
 	<table cellpadding="0" cellspacing="0" align="left" width="47%">
 	<tr><th><th align="left"><u>Across</u>
 	
@@ -1407,30 +1407,30 @@ see your name in electrons in the next issue of the Zine!
 <p>
 <table>
 <tr valign="bottom">
-<td><a href="http://web.archive.org/web/20110125113454/mailto:simon@diplom.org"><img src="/web/20110125113454im_/http://www.diplom.org/DipPouch/Zine/Common/letter.gif" border="0"></a>
+<td><a href="http://web.archive.org/web/20110125113454/mailto:simon@diplom.org"><img src="/web/20110125113454im_//Zine/Common/letter.gif" border="0"></a>
 </td>
 <td>
 <strong>Simon Szykman<br>
 (simon@diplom.org)</strong>
 </td>
 <td width="25%">
-<td><a href="http://web.archive.org/web/20110125113454/mailto:manus@diplom.org"><img src="/web/20110125113454im_/http://www.diplom.org/DipPouch/Zine/Common/letter.gif" border="0"></a>
+<td><a href="http://web.archive.org/web/20110125113454/mailto:manus@manushand.com"><img src="/web/20110125113454im_//Zine/Common/letter.gif" border="0"></a>
 </td>
 <td>
 <strong>Manus Hand<br>
-(manus@diplom.org)</strong>
+(manus@manushand.com)</strong>
 </td>
 </tr>
 </table>
 <p>
 <i>If you wish to e-mail feedback on this article to the authors, and clicking
 on the envelopes above does not work for you, feel free to use the
-<a href="/web/20110125113454/http://www.diplom.org/Common/DearDP.html">
+<a href="/web/20110125113454//Common/DearDP.html">
 "<b>Dear DP...</b>"</a> mail interface.</i>
 <p>
 <hr>
-<a href="/web/20110125113454/http://www.diplom.org/DipPouch/Zine"><img align="left" src="/web/20110125113454im_/http://www.diplom.org/DipPouch/Zine/Common/DPbutton.gif" border="0"></a>
-<a href="/web/20110125113454/http://www.diplom.org/DipPouch/Zine/W1997A"><img align="right" src="/web/20110125113454im_/http://www.diplom.org/DipPouch/Zine/Common/toW1997A.gif" border="0"></a>
+<a href="/web/20110125113454//Zine"><img align="left" src="/web/20110125113454im_//Zine/Common/DPbutton.gif" border="0"></a>
+<a href="/web/20110125113454//Zine/W1997A"><img align="right" src="/web/20110125113454im_//Zine/Common/toW1997A.gif" border="0"></a>
 <br clear="both">
 
 </body>

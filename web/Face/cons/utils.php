@@ -213,7 +213,7 @@
 		$subject = "Diplomatic Pouch Upcoming Conventions Page";
 		$body = "A modification to the Diplomatic Pouch Upcoming Conventions Page\r\n"
 			  . "is waiting for approval.\r\n\r\n"
-			  . "http://www.diplom.org/Face/cons/login.php\r\n";
+			  . "/Face/cons/login.php\r\n";
 
 		$sql = 'select * from user where id <> ' . $_SESSION[ 'user_id' ] 
 			 . ' and notifications < 3 and last_notification < subdate( current_date, 7 )'

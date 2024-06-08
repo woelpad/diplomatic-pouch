@@ -1,6 +1,6 @@
 :: Judge: USDP  Game: moriarty  Variant: standard payola
 :: Deadline: S1901M Mon 15 Sep 2008 19:40 GMT
-:: URL: http://www.diplom.org/dpjudge?game=moriarty
+:: URL: /dpjudge?game=moriarty
 
 Starting position for Spring of 1901.  (moriarty.S1901M)
 
@@ -54,7 +54,7 @@ Subject: Diplomacy results moriarty S1901M
 
 :: Judge: USDP  Game: moriarty  Variant: standard
 :: Deadline: S1901M Fri 5 Sep 2008 22:00 EDT
-:: URL: http://www.diplom.org/dpjudge?game=moriarty
+:: URL: /dpjudge?game=moriarty
 
 Movement results for Spring of 1901.  (moriarty.S1901M)
 
@@ -95,7 +95,7 @@ Subject: Diplomacy results moriarty F1901M
 
 :: Judge: USDP  Game: moriarty  Variant: standard
 :: Deadline: F1901M Fri 12 Sep 2008 23:59 EDT
-:: URL: http://www.diplom.org/dpjudge?game=moriarty
+:: URL: /dpjudge?game=moriarty
 
 Movement results for Fall of 1901.  (moriarty.F1901M)
 
@@ -157,7 +157,7 @@ Subject: Diplomacy results moriarty W1901A
 
 :: Judge: USDP  Game: moriarty  Variant: standard
 :: Deadline: F1901B Fri 18 Jul 2008 09:00 GMT
-:: URL: http://www.diplom.org/dpjudge?game=moriarty
+:: URL: /dpjudge?game=moriarty
 
 Adjustment orders for Winter of 1901.  (moriarty.W1901A)
 
@@ -179,7 +179,7 @@ Subject: Diplomacy results moriarty S1902M
 
 :: Judge: USDP  Game: moriarty  Variant: standard
 :: Deadline: S1902M Mon 21 Jul 2008 03:20 GMT
-:: URL: http://www.diplom.org/dpjudge?game=moriarty
+:: URL: /dpjudge?game=moriarty
 
 Movement results for Spring of 1902.  (moriarty.S1902M)
 

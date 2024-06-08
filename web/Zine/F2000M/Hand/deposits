@@ -1,14 +1,14 @@
 From berlioz@nic.fi  Thu May 18 11:26:44 2000
 Received: from jakorasia.nic.fi (jakorasia.nic.fi [212.38.224.80])
 	by devel.diplom.org (8.9.3/8.9.3) with ESMTP id EAA23415
-	for <manus@diplom.org>; Thu, 18 May 2000 04:26:42 -0700 (PDT)
+	for <manus@manushand.com>; Thu, 18 May 2000 04:26:42 -0700 (PDT)
 Received: from netti.nic.fi (netti.nic.fi [212.38.224.82])
 	by jakorasia.nic.fi (8.9.3/8.9.3) with ESMTP id OAA22881
-	for <manus@diplom.org>; Thu, 18 May 2000 14:16:24 +0300 (EET DST)
+	for <manus@manushand.com>; Thu, 18 May 2000 14:16:24 +0300 (EET DST)
 Date: Thu, 18 May 2000 14:26:14 +0300 (EET DST)
 From: Mikko Saari <berlioz@nic.fi>
 Reply-To: msaari@iki.fi
-To: manus@diplom.org
+To: manus@manushand.com
 Subject: Diplom.org website
 Message-ID: <Pine.GSO.4.21.0005181422270.28201-100000@netti.nic.fi>
 MIME-Version: 1.0
@@ -45,14 +45,14 @@ Received: from devel.igo.org (HELO devel.diplom.org) (209.140.225.18)
   by server.python.net with SMTP; 24 Jan 2000 04:37:05 -0000
 Received: from quartz.nbnet.nb.ca (mailserv.nbnet.nb.ca [198.164.200.18])
 	by devel.diplom.org (8.9.3/8.9.3) with ESMTP id UAA28901
-	for <manus@diplom.org>; Sun, 23 Jan 2000 20:36:40 -0800 (PST)
+	for <manus@manushand.com>; Sun, 23 Jan 2000 20:36:40 -0800 (PST)
 Received: from ip010162010002 ([142.166.192.17]) by quartz.nbnet.nb.ca
           (Post.Office MTA v3.5.3 release 223
           ID# 607-58282U90000L90000S0V35) with SMTP id ca
-          for <manus@diplom.org>; Mon, 24 Jan 2000 00:36:39 -0400
+          for <manus@manushand.com>; Mon, 24 Jan 2000 00:36:39 -0400
 Message-ID: <000801bf6625$59ca0c60$020aa20a@nbnet.nb.ca>
 From: "Frederic Leusch" <fred.leusch@unb.ca>
-To: <manus@diplom.org>
+To: <manus@manushand.com>
 Subject: The Convoy Paradox
 Date: Mon, 24 Jan 2000 00:41:58 -0400
 MIME-Version: 1.0
@@ -95,7 +95,7 @@ Received: from [203.59.62.7] (reggae-01-7.nv.iinet.net.au [203.59.62.7])
 Mime-Version: 1.0
 Message-Id: <a04310100b5516ce332ce@[203.59.62.158]>
 Date: Wed, 24 May 2000 19:38:02 +0800
-To: manus@diplom.org, simon@diplom.org
+To: manus@manushand.com, simon@diplom.org
 From: Anthony Briggs <abriggs@iinet.net.au>
 Subject: Eliminating the Paradox
 Content-Type: text/plain; charset="us-ascii" ; format="flowed"
@@ -240,7 +240,7 @@ Date: Sun, 11 Jun 2000 12:07:36 -0700 (PDT)
 Message-Id: <200006111907.MAA18516@devel.diplom.org>
 From: pjt33@cam.ac.uk
 To: simon@diplom.org,
-        manus@diplom.org (Szykman & Hand, "Eliminating the Paradox")
+        manus@manushand.com (Szykman & Hand, "Eliminating the Paradox")
 Subject: DipPouch article feedback
 Errors-To: manus@devel.diplom.org
 Status: OR
@@ -262,11 +262,11 @@ the sender manually through a Web form, so it may be incorrect.
 From nobody  Mon Jun 12 16:40:29 2000
 Received: (from nobody@localhost)
 	by devel.diplom.org (8.9.3/8.9.3) id JAA06422
-	for manus@diplom.org; Mon, 12 Jun 2000 09:40:27 -0700 (PDT)
+	for manus@manushand.com; Mon, 12 Jun 2000 09:40:27 -0700 (PDT)
 Date: Mon, 12 Jun 2000 09:40:27 -0700 (PDT)
 Message-Id: <200006121640.JAA06422@devel.diplom.org>
 From: Kapriool@knoware.nl
-To: manus@diplom.org (Manus Hand [Publisher], General Feedback)
+To: manus@manushand.com (Manus Hand [Publisher], General Feedback)
 Subject: DipPouch article feedback
 Errors-To: manus@devel.diplom.org
 Status: OR
@@ -281,14 +281,14 @@ the sender manually through a Web form, so it may be incorrect.
 From berlioz@nic.fi  Tue Jun 13 06:09:51 2000
 Received: from jakorasia.nic.fi (jakorasia.nic.fi [212.38.224.80])
 	by devel.diplom.org (8.9.3/8.9.3) with ESMTP id XAA10485
-	for <manus@diplom.org>; Mon, 12 Jun 2000 23:09:44 -0700 (PDT)
+	for <manus@manushand.com>; Mon, 12 Jun 2000 23:09:44 -0700 (PDT)
 Received: from netti.nic.fi (netti.nic.fi [212.38.224.82])
 	by jakorasia.nic.fi (8.9.3/8.9.3) with ESMTP id IAA06733
-	for <manus@diplom.org>; Tue, 13 Jun 2000 08:59:14 +0300 (EET DST)
+	for <manus@manushand.com>; Tue, 13 Jun 2000 08:59:14 +0300 (EET DST)
 Date: Tue, 13 Jun 2000 09:09:37 +0300 (EET DST)
 From: Mikko Saari <berlioz@nic.fi>
 Reply-To: msaari@iki.fi
-To: manus@diplom.org
+To: manus@manushand.com
 Subject: Submission for the Diplomatic Pouch
 Message-ID: <Pine.GSO.4.21.0006130908140.29206-100000@netti.nic.fi>
 MIME-Version: 1.0

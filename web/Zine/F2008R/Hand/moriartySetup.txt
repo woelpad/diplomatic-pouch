@@ -2,7 +2,7 @@
 
 :: Judge: USDP  Game: moriarty  Variant: standard payola
 :: Deadline: S1901M Mon 15 Sep 2008 19:40 GMT
-:: URL: http://www.diplom.org/dpjudge?game=goldenpouch
+:: URL: /dpjudge?game=goldenpouch
 
 Starting position for Spring of 1901.  (moriarty.S1901M)
 

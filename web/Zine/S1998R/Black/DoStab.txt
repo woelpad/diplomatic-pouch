@@ -1,22 +1,22 @@
-From manus@diplom.org  Wed Apr  1 18:41:16 1998
+From manus@manushand.com  Wed Apr  1 18:41:16 1998
 Received: from starship.python.net (starship.python.net [209.67.56.18]) by devel.diplom.org (8.8.8/8.7.3) with ESMTP id KAA06532 for <dippouch@diplom.org>; Wed, 1 Apr 1998 10:41:14 -0800 (PST)
 Received: (from manus@localhost)
 	by starship.python.net (8.8.8/8.8.8) id NAA14959
 	for dippouch@diplom.org; Wed, 1 Apr 1998 13:41:18 -0500
 Received: from reagan.tkblack.com (goloth@reagan.tkblack.com [204.188.48.103])
 	by starship.python.net (8.8.8/8.8.8) with ESMTP id NAA14901
-	for <manus@diplom.org>; Wed, 1 Apr 1998 13:39:05 -0500
+	for <manus@manushand.com>; Wed, 1 Apr 1998 13:39:05 -0500
 Received: from localhost (goloth@localhost)
 	by reagan.tkblack.com (8.8.5/8.8.5) with SMTP id KAA13160
-	for <manus@diplom.org>; Wed, 1 Apr 1998 10:38:41 -0800
+	for <manus@manushand.com>; Wed, 1 Apr 1998 10:38:41 -0800
 Date: Wed, 1 Apr 1998 10:38:41 -0800 (PST)
 From: Thaddeus <goloth@reagan.tkblack.com>
-To: Manus Hand <manus@diplom.org>
+To: Manus Hand <manus@manushand.com>
 Subject: DP article submission
 Message-ID: <Pine.LNX.3.95.980401103615.12036I-100000@reagan.tkblack.com>
 MIME-Version: 1.0
 Content-Type: TEXT/PLAIN; charset=US-ASCII
-Sender: manus@diplom.org
+Sender: manus@manushand.com
 Status: RO
 
 Every time you post up a call for DP articles, Manus, I get to thinking
@@ -83,26 +83,26 @@ feelings, or to damage his own sterling reputation for being a no-good
 stabless Diplomacy drawmonger, then, I ask you, what kind of Diplomacy is
 that?  No kind of Diplomacy I want to play. 
 
-From manus@diplom.org  Thu Apr  2 17:05:36 1998
+From manus@manushand.com  Thu Apr  2 17:05:36 1998
 Received: from starship.python.net (starship.python.net [209.67.56.18]) by devel.diplom.org (8.8.8/8.7.3) with ESMTP id JAA21628 for <dippouch@diplom.org>; Thu, 2 Apr 1998 09:05:34 -0800 (PST)
 Received: (from manus@localhost)
 	by starship.python.net (8.8.8/8.8.8) id MAA06509
 	for dippouch@diplom.org; Thu, 2 Apr 1998 12:05:35 -0500
 Received: from reagan.tkblack.com (goloth@reagan.tkblack.com [204.188.48.103])
 	by starship.python.net (8.8.8/8.8.8) with ESMTP id GAA22056
-	for <manus@diplom.org>; Thu, 2 Apr 1998 06:57:39 -0500
+	for <manus@manushand.com>; Thu, 2 Apr 1998 06:57:39 -0500
 Received: from localhost (goloth@localhost)
 	by reagan.tkblack.com (8.8.5/8.8.5) with SMTP id DAA09105
-	for <manus@diplom.org>; Thu, 2 Apr 1998 03:57:12 -0800
+	for <manus@manushand.com>; Thu, 2 Apr 1998 03:57:12 -0800
 Date: Thu, 2 Apr 1998 03:57:12 -0800 (PST)
 From: Thaddeus <goloth@reagan.tkblack.com>
-To: Manus Hand <manus@diplom.org>
+To: Manus Hand <manus@manushand.com>
 Subject: Re: DP article submission
 In-Reply-To: <199804011841.NAA14953@starship.python.net>
 Message-ID: <Pine.LNX.3.95.980402034809.20236H-100000@reagan.tkblack.com>
 MIME-Version: 1.0
 Content-Type: TEXT/PLAIN; charset=US-ASCII
-Sender: manus@diplom.org
+Sender: manus@manushand.com
 Status: RO
 
 If the text seems good to you, as an article, the way it is, then why fool

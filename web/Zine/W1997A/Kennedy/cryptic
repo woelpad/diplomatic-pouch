@@ -15,8 +15,8 @@ __wbhack.init('http://web.archive.org/web');
 </title>
 <body bgcolor="#ffffff">
 
-<a href="/web/20150621185619/http://diplom.org/DipPouch"><img align="left" src="/web/20150621185619im_/http://diplom.org/DipPouch/Zine/Common/DPbutton.gif" border="0"></a>
-<a href="/web/20150621185619/http://diplom.org/DipPouch/Zine"><img align="right" src="/web/20150621185619im_/http://diplom.org/DipPouch/Zine/Common/toW1997A.gif" border="0"></a>
+<a href="/web/20150621185619//DipPouch"><img align="left" src="/web/20150621185619im_//Zine/Common/DPbutton.gif" border="0"></a>
+<a href="/web/20150621185619//Zine"><img align="right" src="/web/20150621185619im_//Zine/Common/toW1997A.gif" border="0"></a>
 <br clear="both"><hr>
 <body bgcolor="white"><!-- text=white-->
 
@@ -722,7 +722,7 @@ an example puzzle (at the top of the page), and hints (on the bottom).
 </table>
 </center>
 <p>
-<form method="post" action="/web/20150621185619/http://diplom.org/DP-cgi/cryptic">
+<form method="post" action="/web/20150621185619//DP-cgi/cryptic">
 <table cellpadding="0" cellspacing="0" align="left" width="47%">
 <tr><th colspan="3" align="left">Across
 
@@ -849,7 +849,7 @@ an example puzzle (at the top of the page), and hints (on the bottom).
 <p>
 <table>
 <tr valign="bottom">
-<td><a href="http://web.archive.org/web/20150621185619/mailto:kennedy@math.ohio-state.edu"><img src="/web/20150621185619im_/http://diplom.org/DipPouch/Zine/Common/letter.gif" border="0"></a>
+<td><a href="http://web.archive.org/web/20150621185619/mailto:kennedy@math.ohio-state.edu"><img src="/web/20150621185619im_//Zine/Common/letter.gif" border="0"></a>
 </td>
 <td>
 <strong>Gary Kennedy<br>
@@ -860,12 +860,12 @@ an example puzzle (at the top of the page), and hints (on the bottom).
 <p>
 <i>If you wish to e-mail feedback on this article to the author, and clicking
 on the envelope above does not work for you, feel free to use the
-<a href="/web/20150621185619/http://diplom.org/DipPouch/Zine/Common/DearDP.html">
+<a href="/web/20150621185619//Zine/Common/DearDP.html">
 "<b>Dear DP...</b>"</a> mail interface.</i>
 <p>
 <hr>
-<a href="/web/20150621185619/http://diplom.org/DipPouch"><img align="left" src="/web/20150621185619im_/http://diplom.org/DipPouch/Zine/Common/DPbutton.gif" border="0"></a>
-<a href="/web/20150621185619/http://diplom.org/DipPouch/Zine"><img align="right" src="/web/20150621185619im_/http://diplom.org/DipPouch/Zine/Common/toW1997A.gif" border="0"></a>
+<a href="/web/20150621185619//DipPouch"><img align="left" src="/web/20150621185619im_//Zine/Common/DPbutton.gif" border="0"></a>
+<a href="/web/20150621185619//Zine"><img align="right" src="/web/20150621185619im_//Zine/Common/toW1997A.gif" border="0"></a>
 <br clear="both">
 
 </body>
